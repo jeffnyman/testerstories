@@ -1,0 +1,54 @@
+{
+  "name": "@jeffnyman/testerstories",
+  "author": "Jeff Nyman",
+  "version": "0.1.0",
+  "description": "Stories From a Software Tester",
+  "license": "CC BY-SA 4.0",
+  "keywords": [
+    "testing",
+    "quality"
+  ],
+  "main": "public/index.html",
+  "scripts": {
+    "build:js": "npx mkdirp public/js && uglifyjs \"./src/js/*.js\" -o public/js/script.min.js",
+    "build:sass": "sass --no-source-map --error-css src/sass:public/css",
+    "build:post": "postcss public/css/*.css -u autoprefixer cssnano -r --no-map",
+    "serve": "browser-sync start --server public --files public",
+    "watch:assets": "onchange \"./src/assets/**/*\" -- npm run copy:assets",
+    "watch:sass": "sass --no-source-map --error-css --watch src/sass:public/css",
+    "watch:js": "onchange \"./src/js/*.js\" -- npm run build:js",
+    "watch:html": "onchange \"./src/**/*.html\" -- npm run copy:html",
+    "watch": "npm-run-all --parallel watch:*",
+    "copy:js": "npm run build:js",
+    "copy:assets": "copyfiles -u 1 \"./src/assets/**/*\" public",
+    "copy:html": "copyfiles -u 1 \"./src/**/*.html\" \"./src/browserconfig.xml\" \"./src/site.webmanifest\" public",
+    "copy": "npm-run-all --parallel copy:*",
+    "build": "npm-run-all copy:* build:*",
+    "lint": "npx stylelint \"./src/sass/*.scss\"",
+    "start": "npm-run-all --parallel copy watch serve",
+    "delete": "rimraf public"
+  },
+  "homepage": "https://github.com/jeffnyman/testerstories#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jeffnyman/testerstories.git"
+  },
+  "bugs": {
+    "url": "https://github.com/jeffnyman/testerstories/issues"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.13",
+    "browser-sync": "^2.27.12",
+    "copyfiles": "^2.4.1",
+    "cssnano": "^5.1.15",
+    "mkdirp": "^2.1.4",
+    "npm-run-all": "^4.1.5",
+    "onchange": "^7.1.0",
+    "postcss-cli": "^10.1.0",
+    "rimraf": "^4.1.2",
+    "sass": "^1.58.3",
+    "stylelint": "^15.2.0",
+    "stylelint-config-standard-scss": "^7.0.1",
+    "uglify-js": "^3.17.4"
+  }
+}
