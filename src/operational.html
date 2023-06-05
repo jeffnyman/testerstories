@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Good Testers Think Operationally</title>
+</head>
+<body>
+  <p>When a professional discipline has a vocabulary for expressing the fundamental concepts on which it's based, then you have a means for how practitioners in the discipline can make sure they're talking about the same things. The problem with establishing such a vocabulary is that many people have come to use a variety of different terms or, even in those cases where the terms are the same, the definitions used are different. This is why I like to encourage people to think operationally.</p>
+
+<p>So why are so many testers I meet so bad at this? Is this just not something they're encouraged to do? Or am I just being too picky about how people use terms?</p>
+
+<!--more-->
+
+<p>In my professional life as a tester, I welcome any discussions that will help the test team identify and cope with the differences between living and working in reality and maintaining our (hopefully) naturally high standards in terms of wanting things to "be right." By the very nature of what drew us to testing or Quality Assurance as a career, we often tend to be very detail-oriented and we expect a certain level of attention to detail from others. The problem comes in when that same (perceived) level of attention to detail is not found. This is important because this dichotomous nature oftentimes puts testers in personally frustrating situations unless they can learn to make operational distinctions and help others do so as well.</p>
+
+<p>My belief, backed up with a lot of experience, is that when you look at things operationally, the frustration of the theoretical and the vague dissipates and you can maintain a certain optimism and effectiveness.</p>
+
+<p>In fact, I've always felt that discussions about "operationalism" are helpful to maintain a healthy sanity in a group of people who are in a very stressful career. I encourage people on teams to discuss terms -- like "quality", "regression testing", and so on --  that are often used but not so often defined. Having said all this, I should probably give some rationale of the "what" and the "why" to what I'm saying.</p>
+
+<p>So, first, what the heck is operationalism?</p>
+
+<p>A question, a concept, a statement, a definition: all of these are preferable when they are <strong>operational</strong> and that basically means <strong>resolvable in empirical terms</strong>. <strong>Operationalism</strong> is where you make sure that any of the concepts or terms used in some description are framed in terms of <strong>operations</strong> that can be <strong>unequivocally performed</strong>. This is what I advocate as part of any quality and/or test function. The reason is probably fairly obvious: it makes sure we all define the term, concept, or whatever else in the same way.</p>
+
+<p><strong>Keep this in mind...</strong> Operationalism is a principle that says that the meaning of a term or statement consists of the operations involved in proving or applying what the term or statement references.</p>
+
+<p>Now let's put this in context. If you mention a term to me ("regression testing", say), you should be able to define this term to me such that you could describe the operations involved in applying "regression testing." At the end of your explanation I would then know how to do it or, at the very least, I would understand what you are doing. Further, I should be able to distinguish it from other concepts that are also referred to as "testing."</p>
+
+<p>That's the principle but you have to apply to any term that gets used as a definition.</p>
+
+<p><strong>Keep this in mind...</strong> An operational definition is a way to guide what properties of a term or concept will be measured and how they will be measured.</p>
+
+<p>So if you tell me you are "doing a regression test", we should both agree on what that is, how we can measure that a regression test is what you are in fact doing, and how we can apply this measure such that "doing a regression test" is distinct from doing some other sort of test or even doing something that isn't a test at all.</p>
+
+<p>There's another way to think about this.</p>
+
+<p><strong>Keep this in mind...</strong> An operational definition must be defined as a clear and understandable description of what is to be observed and measured, such that different people collecting, using, and interpreting any relevant information will do so consistently.</p>
+
+<p>So if we're going to tell anyone outside of our team that we're "doing regression testing", that person should be able to ask any of us what that means and we should all come up with pretty much the same answer.</p>
+
+<p><strong>"Isn't this being a little too picky?"</strong></p>
+
+<p>I get asked that question a lot and it does make sense to ask it. Here's the answer I give: terms like "quality", "quality assurance", "testing", "metrics", "bugs", "requirements", "traceability" and many others can all be defined by people in different ways. That makes the concepts inherently prone to misunderstandings in any form of communication. There's usually not too much argument on <em>that</em> point at least. So, as part of a team, when I talk about operationally defining terms, what I'm talking about is letting people know how we define and use these terms such that everyone at the very least agrees that they know what <em>we mean</em> when we use those terms in some context. Whether they agree with our definition or not is another issue; but at least they know what they are agreeing or disagreeing with.</p>
+
+<p>As a bit of further clarification on the need I perceive for operationalism, consider that you're often given concepts described by words that are very open to interpretation. Often you'll hear that a given web site is moving "slowly," or that someone wants the performance of a database to be "fast," or that someone would like the AJAX on their web application to be "user-friendly." Okay, great -- but do we all agree with what "slowly", "fast" and "user-friendly" mean? A test team might be told that they only have to do a "quick smoke test." Okay, but what does "quick" encompass in this context? Do we all agree on what's meant by a "smoke test"? A test team may tell a product manager that they're doing a "regression test." Let's just hope the product manager has the same notion of what "regression test" means as does the test team, particularly if the product manager thought it meant a day's worth of testing but the test team meant <em>full</em> regression, which actually takes four days.</p>
+
+<p>Certainly you can see that saying a database should be "fast" does nothing for your average performance analyst, since it's not possible to discern what "fast" actually means in that case. The term has not been operationally defined. Likewise, a "quick smoke test" can mean very different things to different testers, not only in terms of how "quick" it should be but what, in fact, is entailed in a "smoke test". Again, the term has not been operationally defined. However, if we operationally define "fast" to be "pages fully load in the range of 8 to 12 seconds" (for a web site) or "100 updates can be committed every second" (for a database), then we have something that we can base some testing off of. In other words, the term "fast" has been operationally defined and that means it's now measurable and testable. Further, the results of those tests and measurements can be used for informed decision making.</p>
+
+<p>Another example would be if you told someone you were going to track all "important bugs" for the latter stages of a project. Here "important" is not operationally defined and that means two people could have very different ideas about what's being tracked. That means a statement like "There are ten important bugs that we're tracking" can mean very different things about the true state of the application. Now, if "important" is operationally defined to mean "all critical and high priority bugs", at least you (and others) now have a basis for knowing what types of bugs are being tracked and you know that there are potentially other bugs in the system, but they're not deemed critical or high priority and thus not important or, at the very least, not important <em>enough</em>.</p>
+
+<p>With all that being said, there are two challenges I find people come across with operational definitions.</p>
+
+<ul><li><strong>Challenge 1:</strong> Breaking abstract concepts (like "quality" or "fast") into observable and measurable parts.</li></ul>
+
+<p>As an example, let's say you are told that "the requirements for Project A must be understandable." The problem is that while we would all (I presume) agree that requirements should be understandable, not everyone may have the same idea of what "understandable" means. A business analyst may feel that "understandable" means that the requirements clearly delineate what the business users of the product have stated they need. A developer may feel that "understandable" means that the requirements give a clear focus of what needs to be implemented. A tester may feel that "understandable" means that the requirements must be written in a way that indicates <em>how</em> they are testable. All of these can be correct! What I just did here is operationally define a requirement such that various observers of that requirement will be able to measure what they want from that requirement and determine if what they need is present or absent.</p>
+
+<ul><li><strong>Challenge 2:</strong> Knowing where to draw the lines of demarcation when operationally defining terms.</li></ul>
+
+<p>This challenge is particularly an issue for those terms that are similar or, at least, on the surface seem very similar. Regarding this challenge, I can say that one thing I've found about definitions is that if I want to reduce at least one area of stress, I should only make distinctions where there is an <em>operational difference</em> to be reckoned with. I have two heuristics here and they go something like this:</p>
+
+<p>
+<strong>If</strong> I want people to react differently toward one word than toward another word,<br />
+<strong>then</strong> I use both words and use them both consistently.<br /><br />
+<strong>If</strong> I want people to <em>not</em> react differently toward one word than toward another word,<br />
+<strong>then</strong> I decide which word to use and use that one consistently.
+</p>
+
+<p>The first heuristic is basically just reminding me that I should not use one word for two if the distinction between the words is important. The second heuristic reminds me that I should not use two words for what amounts to saying or describing the exact same thing, when one word will do or when the difference is very far from practical applicability.</p>
+
+<p><strong>Had that happen?</strong> I have to believe most people reading this have sat in on meetings where one of the two above heuristics were not followed. Debates, discussions, and argument ensued and, in some cases, it ultimately boiled down to how people were using multiple terms to mean the same thing or using a single term to mean different things.</p>
+
+<p>Since the disciplines of quality assurance and testing, by their very nature, are contextual and situational, I think the above heuristics are good ones for a team to follow. Certainly you can always strive for simplicity but you should not hide complexity if, in fact, something <em>is</em> complex. Likewise, you probably don't want to make something more complex than it is by over-defining it or creating semantic nests.</p>
+
+<p>Uh ... semantic nest?</p>
+
+<p>Learning theory tells us that synonymous or closely related terms are stored in the same "semantic nest" in the brain. When one word in this nest is activated, the whole nest is activated as well. So, for example, if you hear the word "apple", you also activate the words "fruit", "pear", "orange", and so forth, in your mind. Once the semantic nest has been activated, a person will then tend to react faster to <em>all</em> the words of that nest. That's a good thing -- <em>if</em> the terms in the nest should truly be reacted to in the same way -- meaning, they have no operational distinction in a given context. That can be a bad thing, however, if the terms in the nest should not truly be reacted to in the same way -- meaning, they <em>do</em> have operational distinctions in a given context. I found I've had to use this this bit of cognitive theory in two distinct areas:</p>
+
+<ul>
+<li>When dealing with people new to testing or quality assurance, I can improve the learning process when a lot of new terminology has to be introduced or accepted.</li>
+<li>When dealing with people who are not new to testing or quality assurance, but who clearly don't practice a nuanced version of both, I can facilitate discussions by opening up a broader set of options for what concepts are discussed.</li>
+</ul>
+
+<p>Finally I'll say that in prior posts I opined about how I think <a href="http://testerstories.com/?p=322">functional testing as a term is misused</a> and how <a href="http://testerstories.com/?p=342">performance testing is misused</a>. Maybe now I can frame those thoughts in a slightly different context.</p>
+
+<p>When I talk about the approach of performance testing, I want that to then act as a semantic nest that triggers the terms regarding the techniques: load testing, stress testing, volume testing. Likewise, when I talk about the approach of functional testing I want that to trigger the terms unit testing, integration testing, and system testing.</p>
+
+<p>I want the approach terms to be thought of in terms of their techniques. I then have to make certain that there are operational definitions about what it means to do integration testing versus system testing. Likewise, there should be an operational distinction between doing load testing versus volume testing. And, of course, the very approaches themselves should be operationally distinct.</p>
+
+<p>This same kind of logic can apply to practitioners -- like myself -- who do make a distinction between quality assurance and testing. That often speaks to a higher process level concern. There's the distinction between different aspects of regression testing. That speaks to a lower-level practice concern. Even in terms of automated testing, I've seen testers sit and argue about whether they need to use a library that's a "web API" versus one that's a "browser API." That speaks to a conceptual concern.</p>
+
+<p>Maybe these distinction matter to you and your team. Maybe they don't. You'll be able to make informed decisions about that based on how operational your thinking is.</p>
+</body>
+</html>
