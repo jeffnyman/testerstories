@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cautionary Tales on Metrics</title>
+</head>
+<body>
+  <p>Some testers -- and most managers -- like to talk about metrics. One thing that often doesn't get discussed is what I call <em>metric dissociation</em>. Here's my thought: metrics should be easily or directly interpretable in terms of product or process features. If they're not, I think they are <em>dissociated</em> from the actual work that's being done and thus there's great danger of the metrics being misleading, at best, or outright inaccurate, at worst.</p>
+
+<!--more-->
+
+<h3>An Enjoyment Metric</h3>
+
+<p>Let's consider one example that may seem to have little relevance. This one is from a guy named Mike Rozak, who wanted to come up with, in his words, "a fundamental 'equation' that can represent many (or most?) of the design problems found when creating a virtual world." He was bringing this up in the context of creating games. The equation initially given is:</p>
+
+<p class="center">E(c) = f(various attributes)</p>
+
+<p>This is basically saying that the player's enjoyment of a given game choice, E(c), is a direct result from that given choice, c, and the subsequent story/experience of the game based on that choice -- i.e., the path through a game that is allowed by the choice being made. So what this metric says is that this part of the enjoyment is a function of many attributes, which I haven't listed here since you can presumably imagine many. Rozak lists the author's skill, the amount of "eye candy" (flash and dazzle, such as graphics) used for the game, and things along those lines.</p>
+
+<p>It's a truism that every single action that a player may want to try is probably not something the game can handle. Somewhere you're going to run into the limits of the game, in terms of what it allows the player to do. This is another factor in the metric being built up, according to Rozak, and it's modeled as such:</p>
+
+<p class="center">P(y|d) = f(various attributes)</p>
+
+<p>This metric is meant to indicate a probability. Here it's the probability of the player encountering a game limitation, y, given a decision the player made in the game, d. The metric says that this is a function of how much overall game content there is and how that content is modeled. So, for example, if you're playing an airplane simulation, this might refer to the amount of detail simulated, such as actual city and landscape details or the controls that you can manipulate as part of the plane. Or if this is a quest game, it might have something to do with the number of quests there are or the details regarding how the quests are played or the various options you have for solving quests or even disregarding them entirely.</p>
+
+<p>Where the above probability becomes relevant is that when players do end up trying an action that the game doesn't allow, the assumption is that the player gets annoyed. That annoyance factor translates into some loss of enjoyment. This putative "annoyance factor" produces another term for the growing metric:</p>
+
+<p class="center">A(c') = f(various attributes)</p>
+
+<p>In other words, the annoyance factor, A(), given a choice that, from the player's point of view, didn't work, c', is a function of the player's expectation that the game <em>should</em> have handled the choice. Another aspect of this might be that either the game didn't make it clear ahead of time that the choice wouldn't work or, alternatively, that the game didn't really make it clear after the fact why the choice didn't work.</p>
+
+<p>What all this leads to is the following Enjoyment Metric:</p>
+
+<a href="http://testerstories.com/wp-content/uploads/2011/12/eqn-caution-01.gif"><img src="http://testerstories.com/wp-content/uploads/2011/12/eqn-caution-01.gif" alt="Enjoyment Metric" title="eqn-caution-01" width="232" height="28" class="aligncenter size-full wp-image-473" /></a>
+
+<p>So here we have the metric E, which is the player's overall enjoyment of the game. It's said to be the sum over all decisions, d, that the player makes of the enjoyment from the decision choice that's finally accepted, E(c), minus the probability of the player's choice being invalid for whatever reason, multiplied by the annoyance that results from that choice being invalid. There are two scaling factors in there. I(d) is said to be a function that indicates how important the player views a given decision they made. P(d) is said to be the probability that the player will actually encounter the chance to make that kind of decision.</p>
+
+<p>Wow, huh?</p>
+
+<p>Rozak ends up giving a slightly revamped equation when all is said and done but this will do for my purposes. Rozak's article on this subject says that "the obvious use for the equation is to maximise E for all (paying) players, limited by the funds and technology that the [game] title has available." Now, Rozak is doing this on his own so I'm not trying to downplay the work he did here nor am I making fun of it. However, you can almost imagine a big game company utilizing some metrics like these.</p>
+
+<p>This is an example of a cautionary metric. It's one where you're probably going to attempt to derive some actionable points based on the "enjoyment" that those actions will add to the game being developed. Incidentally, if you want to see the full article, check out <a href="http://www.mxac.com.au/drt/InteractiveFictionEquation.htm">Interactive Fiction Equation</a>. You might also check out Rozak's follow-up to this at <a href="http://www.mxac.com.au/drt/InteractiveFictionEquation2.htm">Interactive Fiction Equation, Part 2</a>. At the end of that latter article he says "It's nice to see that the interactive-fiction equation agrees with conventional wisdom!" I think that's a telling statement in that I've heard that same line used in terms of software metrics: i.e., that a given metric "agrees with" the so-called "conventional wisdom."</p>
+
+<h3>A Complexity Metric</h3>
+
+<p>In the paper <a href="http://ieeexplore.ieee.org/xpl/freeabs_all.jsp?arnumber=46879">"Predicting Software Development Errors Using Complexity Metrics"</a>, you'll see something the authors call a "factor dimension metric," which they give the name <em>control</em>. Sure sounds interesting, doesn't it? This metric is calculated by a weighted sum that's given by the authors as -- brace yourself:</p>
+
+<p class="center">Control = a<sub>1</sub><em>HNK</em> + a<sub>2</sub><em>PRC</em> + a<sub>3</sub><em>E</em> + a<sub>4</sub><em>VG</em> + a<sub>5</sub><em>MMC</em> + a<sub>6</sub><em>Error</em> + a<sub>7</sub><em>HNP</em> + a<sub>8</sub><em>LOC</em></p>
+
+<p>Whew -- that sure looks impressive! But what does it all mean? Well, let's see here: the a<sub>i</sub>'s are derived from an area of study known as factor analysis. The details of that really don't matter for now. <em>HNK</em> is known as Henry and Kafura's "information flow complexity metric," <em>PRC</em> is a count of the number of procedures (read: functions, methods, whatever), <em>E</em> is shorthand for an "effort metric" proposed by a guy named Maurice Halstead, <em>VG</em> is shorthand for a "complexity metric" proposed by Thomas McCabe, <em>MMC</em> is shorthand for another "complexity metric" proposed by Warren Harrison, and <em>LOC</em> refers to Lines Of Code.</p>
+
+<p>Now, although this equation might help to avoid metrics that are too broad (often referred to as "multicolinearity"), it's very difficult for me to see how you might actually advise a designer on how to re-design an architecture to achieve a "better" control metric value. It's also somewhat hard for me to see how you might advise a programmer on how to more optimally code or design given modules of code within an application in order to achieve a "better" control metric value. While I'm at it, I'd say it's downright impossible for me to see how you might advise a test engineer to design test strategies that will taken into account this control metric in terms of determining what areas to concentrate on, what areas might best be suited for a minimal test suite, what areas offer the best hope of catching bugs, etc.</p>
+
+<p>Bottom-line: the effects of a change to the design, a given module, and to tests related to all of that is, to say the least, less than crystal clear.</p>
+
+<p>There are a few take-aways here.</p>
+
+<ul>
+<li>Slavish devotion to metrics just because they seem well thought out is a bad way to go.</li>
+<li>Slavish devotion to metrics just because they include a lot of other metrics that are "well-known" (like the complexity metrics of McCabe and Harrison) is a bad way to go.</li>
+<li>Slavish devotion to metrics just because they purport to take into account size and complexity is a bad way to go.</li>
+</ul>
+
+<p>But why do I say all that? Why do I say that these routes are a bad way to go? Because such slavish devotion does not take into account what I think is a crucial aspect: <strong>is the metric actually telling you anything</strong>? Does the metric provide a way for you to gauge some relevant aspect of your product or your process? Does the metric provide indicators that will help you know if you are of course in terms of your project cycle?</p>
+
+<p>If a metric obfuscates the answers to questions like these or renders them largely unanswerable, then I would say you have metric dissociation.</p>
+
+<h3>An Optimal Size Metric</h3>
+
+<p>All of what I describe above can happen with metrics that rely on averaged data as well. Analysis of averages means you're considering data that's one step removed from the original data. Using averages reduces the amount of information available to test a given conjecture and any conclusions will be correspondingly weaker. Let's consider this by way of a specific example.</p>
+
+<p>That specific example will be J.R. Gaffney's <a href="http://ieeexplore.ieee.org/xpl/freeabs_all.jsp?arnumber=1421075">"Estimating the Number of Faults in Code"</a>. Consider, as Gaffney did, the ratio of the number of defects (D) in a program to the lines of executable code (L) that make up that program. Gaffney showed that the relationship between D and L is not programming language dependent. He came up with a "defect prediction" based on this relationship:</p>
+
+<p class="center">D = 4.2 + 0.0015(L)<sup>4/3</sup></p>
+
+<p>An interesting ramification of this was that it seemed to indicate there was an optimal size for individual modules with respect to what's called "defect density." For this particular equation, this optimum module size was given as 877 LOC, where again "LOC" refers to Lines of Code.</p>
+
+<p>What this actually shows us is the misuse of averages because in Gaffney's paper the rule for optimal module size was derived on the assumption that to calculate the total number of defects in a system we could use the same model as had been derived using defect counts for an individual module. The model derived at the module level is shown by the above equation and can be extended to count the total defects in a system, D<sub>T</sub>, based on L<sub>i</sub>, and thus the total number of modules in the system is denoted by N:</p>
+
+<a href="http://testerstories.com/wp-content/uploads/2011/12/eqn-caution-02.gif"><img src="http://testerstories.com/wp-content/uploads/2011/12/eqn-caution-02.gif" alt="Optimal Metric" title="eqn-caution-02" width="291" height="49" class="aligncenter size-full wp-image-476" /></a>
+
+<p>Gaffney assumes that the average module size can be used to calculate the total defect count and also the optimum module size for any system, using the following:</p>
+
+<a href="http://testerstories.com/wp-content/uploads/2011/12/eqn-caution-03.gif"><img src="http://testerstories.com/wp-content/uploads/2011/12/eqn-caution-03.gif" alt="Optimal Metric" title="eqn-caution-03" width="254" height="109" class="aligncenter size-full wp-image-478" /></a>
+
+<p>You can probably see that the first and second equations of Gaffney are not, in fact, equivalent. The use of the second equation mistakenly assumes the power of a sum is equal to a sum of powers. What this means is that this metric is very potentially misleading at best and unworkable at worst.</p>
+
+<p>Now, clearly, this was an example that was more involved in terms of a problem with the mathematics but that's part of the point: it shows that the underlying math you use to "count up" (derive) your metrics can be faulty and thus lead to problems at the higher-level where the metric is supposed to telling you something about your project.</p>
+
+<h3>A Stable Metric</h3>
+
+<p>A <a href="http://www.computer.org/portal/web/csdl/doi/10.1109/MS.1988.10004">"Quality Time" article from <em>IEEE Software</em></a> gave an interesting example of how some metrics can be seemingly persuasive and yet really say nothing at all. The idea of the article was to come up with a "stable metric" for rating buildings in terms of suitability for having an office location there. This could refer to even vague things like the prestige of the location or the quality of the landscaping.</p>
+
+<p>So the idea was to list the desirable features of office buildings and then quantify each feature. For example, one idea is that a good building should help people work in teams and so you could focus on that characteristic. This means you can say that the effect of a building on the efficacy of cooperative work, E, should increase inversely with the mean distance, D, between the offices of members of a common project. The equation given was this:</p>
+
+<a href="http://testerstories.com/wp-content/uploads/2011/12/eqn-caution-04.gif"><img src="http://testerstories.com/wp-content/uploads/2011/12/eqn-caution-04.gif" alt="Stable Metric" title="eqn-caution-04" width="125" height="64" class="aligncenter size-full wp-image-479" /></a>
+
+<p>Here G is the set of all employees, |G| is the size of that set, and &delta;(i,j) is the distance in feet from the door of employee <em>i</em> to that of employee <em>j</em>. But D is not the only factor on which E depends. Office density, d, is another important inverse term. This can be calculated as such:</p>
+
+<p class="center">d = |G| / v</p>
+
+<p>Here <em>v</em> is the total number of offices.</p>
+
+<p>The value of E must also be directly proportional to the "aesthetics" of the building. Beauty would seem to be hard to quantify. However, it was said that you can reason as follows: the product of ceiling height, H, and average office square-footage, F, are crucial elements that seem to correlate well with the "attractiveness" of a building. The problem is that E will grow too rapidly if it depends directly on A = HF. Thus it's possible to define E as such:</p>
+
+<p class="center">E = logA / dD</p>
+
+<p>This is referred to in the article as an "efficacy metric." The article goes on to say that A is closely related to c, the cost per square foot. So you can write this:</p>
+
+<p class="center">E' = log c / dD</p>
+
+<p>That gives a new metric, namely E' = E. (Here E' is approximately equal to E.) This new metric requires many fewer measurements. But does this give us a quantifiable and scientific basis for choosing a building?</p>
+
+<p>Well, you'll probably note that one problem with E is the vague assumption that the few properties it measured somehow represented all other <em>relevant</em> properties. This metric, so far as I can see, would give you little way to effectively look for independent characteristics. For example, a building with air conditioning would seem to be important. However, E might just assume that <em>any</em> building that scores high in terms of the metric will have air-conditioning. (After all, why wouldn't it, right?)</p>
+
+<p>Lest that seems a little disconnected from anything real, think of some of the complexity metrics out there that are said to speak to overall comprehensibility of a program. These measures of complexity generally don't take into account the talent, education, or experience of the person who is actually trying to comprehend the program. For example, some metrics state the complexity of a program as a linear function of the number of "basic paths" in the program flow. This does not, however, account for symmetries that some programmers will recognize and perhaps exploit, either for further coding or for testing. The stable metric here for buildings mirrors that exact same metric dissociation.</p>
+
+<p>Now, I should note that this metric from the <em>Quality Time</em> article was purely fictional. Yet it almost seems like it <em>could</em> be real and <em>that</em> is the danger with metrics that are meant to be real but are, in fact, just as meaningless as this building metric.</p>
+
+<p>The point of all of my examples above is that the "metric" can be irrelevant because the measures are weak. If the measure does not model reality usefully, it's weak. Some people in the physical or theoretical sciences explicitly promote their work as having "a mathematical basis" and that basis is supposed to give us confidence. My reaction to that statement has always been that I would minimally expect that <em>any</em> scientific claim will use correct mathematics. But another minimum standard should require a <em>useful</em> mathematics. The same applies to metrics. The correct derivation of a weak and irrelevant measure is hardly more interesting than a non-mathematical presentation of the measure.</p>
+
+<p>So you might want to consider metrics you've seen used or that you use yourself and think about questions that should give you pause.</p>
+
+<ul>
+<li>Bug counts - Does this tell you anything about the tester or the testing being done? Does it tell us anything about the developer?</li>
+<li>Test case counts - Does this tell you anything about the quality of the tests? Are the tests effective and efficient at what they do?</li>
+<li>Traceability - Does this tell you that requirements are actually being tested? Or just that they've been "linked" to a test?</li>
+<li>"On-time" release metrics - But did we kill ourselves getting there? Are we always forced to be at 110% of capacity to be on time?</li>
+</ul>
+
+<p>I encourage everyone to think about the metrics you see and possibly use. Yes, I used some very specific -- and some might even say overly complicated -- examples here to make my point. Yet some of those metrics I presented in the list above, which are not as "complicated", are often used to support the same kind of potentially fallacious reasoning. Just be cautious of metrics. Make them work for you by making them useful and relevant for your needs.</p>
+</body>
+</html>
