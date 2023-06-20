@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+	<meta charset="utf-8">
+	<title>Test Site - Static Testing</title>
+	<meta name="HandheldFriendly" content="True">
+	<meta name="MobileOptimized" content="320">
+	<meta name="viewport" content="width=device-width, target-densitydpi=160dpi, initial-scale=1">
+	<link rel="stylesheet" media="screen" href="/test_app/assets/css/screen.css?v=1">
+</head>
+
+<body>
+
+<header role="banner">
+	<hgroup>
+		<h1>Test Site</h1>
+		<h2>A Simple Site for Test Automation</h2>
+		<h3>Static Testing</h3>
+	</hgroup>
+</header>
+
+<section>
+
+<h3>Links</h3>
+
+<p><a id="avengers_assemble_id" name="avengers_assemble_name" class="avengers_assemble_class" href="/test_app/success_1.html">Avengers Assemble</a></p>
+
+<p>These next two links are identical except in terms of where they lead when clicked:</p>
+
+<p><a href="/test_app/success_1.html">Justice League Unite</a></p>
+<p><a href="/test_app/success_2.html">Justice League Unite</a></p>
+
+<p>The link below has no identifiers to it except for its text and its href:</p>
+
+<p><a href="/test_app/success_1.html">"...in the brightest day and in the darkest night..."</a></p>
+
+<hr>
+
+<h3>Lists</h3>
+
+<h4>Unordered List</h4>
+
+<ul id="ul_id" name="ul_name" class="ul_class">
+    <li id="li_id" name="li_name" class="li_class">Darth Nihilus</li>
+    <li>Darth Plagueis</li>
+    <li>Darth Sidious</li>
+</ul>
+
+<h4>Ordered List</h4>
+
+<ol id="ol_id" name="ol_name" class="ol_class">
+    <li>USS Enterprise XCV 330</li>
+    <li>USS Enterprise NX-01</li>
+    <li>USS Enterprise NCC-1701</li>
+</ol>
+
+<hr>
+
+<h3>Sections</h3>
+
+<div id="div_id" name="div_name" class="div_class">
+This text is stored directly inside a DIV element.
+</div>
+
+<span id="span_id" name="span_name" class="span_class">
+This text is stored directly inside a SPAN element.
+</span>
+
+<hr>
+
+<h3>Tables</h3>
+
+<table id="table_id" name="table_name" class="table_class" border="1">
+  <caption><em>Savings Table</em></caption>
+  <thead>
+    <tr>
+      <th>Month</th>
+      <th>Savings</th>
+    </tr>
+  </thead>
+  <tfoot>
+    <tr>
+      <td>Sum</td>
+      <td>$180</td>
+    </tr>
+  </tfoot>
+  <tbody>
+    <tr>
+      <td>January</td>
+      <td id="cell_id" name="cell_name" class="cell_class">$100</td>
+    </tr>
+    <tr>
+      <td>February</td>
+      <td>$80</td>
+    </tr>
+  </tbody>
+</table> 
+
+
+<hr>
+
+<h3>Images</h3>
+
+<p>It's not the heat, it's the apocalypse...</p>
+
+<img src="/test_app/assets/img/mass_extinction.jpg" id="extinct" name="extinct" class="image_class">
+
+<p>The above link is not clickable, but it does have a few ways to locate it. The link below has alternate text and is clickable.</p>
+
+<a href="/"><img src="/test_app/assets/img/one_ring.jpg" id="one_ring" alt="One Ring To Rule Them All"></a>
+<p><em>One Ring to bring them all and in the darkness bind them...</em></p>
+
+</section>
+
+</body>
+</html>

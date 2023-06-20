@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+	<meta charset="utf-8">
+	<title>Test Site - Form Testing</title>
+	<meta name="HandheldFriendly" content="True">
+	<meta name="MobileOptimized" content="320">
+	<meta name="viewport" content="width=device-width, target-densitydpi=160dpi, initial-scale=1">
+	<link rel="stylesheet" media="screen" href="/test_app/assets/css/screen.css?v=1">
+
+	<style type="text/css">body, input, textarea {
+		font-size:12px;
+		line-height:18px;
+		font-family:Verdana, Geneva, sans-serif;
+	}
+	input {width:200px;}
+	.submit {width:120px;}
+
+	#error {
+		color:red;
+		font-size:10px;
+		display:none;
+	}
+	.needsfilled {
+		background:red;
+		color:white;
+	}</style>
+</head>
+
+<body>
+
+<header role="banner">
+	<hgroup>
+		<h1>Test Site</h1>
+		<h2>A Simple Site for Test Automation</h2>
+		<h3>Form Testing</h3>
+	</hgroup>
+</header>
+
+<section>
+
+<h3>Connected Form Elements</h3>
+
+<p>The first form below has no validation. The second does.</p>
+
+<table>
+<tr>
+<td>
+	<form id="Login" name="Login" method="get" action="success_1.html">
+	<p><label id="lbl_server" class="Fld" no_help="true" for="server">Server:</label><br>
+	<input id="server" name="server" helpid="server" class="Fld" size="40" type="text" value="Test"></p>
+	<p><label id="lbl_customerCode" class="Fld" no_help="true" for="customerCode">Customer ID:</label><br>
+	<input id="customerCode" name="customerCode" helpid="customerCode" class="Fld" size="40" type="text"></p>
+	<p><label id="lbl_loginName" class="Fld" no_help="true" for="loginName">Login Name:</label><br>
+	<input id="loginName" name="loginName" helpid="loginName" class="Fld" size="40" type="text"></p>
+	<p><label id="lbl_password" class="Fld" no_help="true" for="password">Password:</label><br>
+	<input id="password" name="password" helpid="password" class="Fld" size="40" type="text"></p>
+	<p><input id="btnSubmit" name="btnSubmit" class="btn" type="submit" value="Log In"></p>
+	</form>
+</td>
+<td><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p></td>
+<td>
+	<form action="success_1.html" id="theform" name="theform" method="post">
+	<p><label for="name">Name</label><br>
+	<input id="name" type="text" value="" name="name"></p>
+    <p><label for="email">E-mail</label><br>
+    <input id="email" type="text" value="" name="email"></p>
+    <p><label for="message">Message</label><br>
+    <textarea id="message" rows="7" cols="30" name="message"></textarea></p>
+    <p><input class="submit" type="submit" name="submit" value="Submit Form"></p>
+    <p id="error">There were errors on the form, please make sure all fields are fill out correctly.</p>
+	</form>
+</td>
+</tr>
+</table>
+    
+<hr>
+
+<h3>Standalone Form Elements</h3>
+    
+<div>
+<label id="lbl_title" no_help="true"><strong>Book Title:</strong></label><br>
+<input id="title" size="40" type="text"><br>
+<label id="lbl_description" no_help="true"><strong>Description:</strong></label><br>
+<textarea rows="2" cols="80" id="description" class="text_area_class" name="description"></textarea>
+<input id="isbn" name="isbn" class="hidden_field_class" size="40" type="hidden" value="0-85131-041-9">
+</div>
+
+<div>
+<p><strong>Choose Your Physics Concepts:</strong></p>
+<select name="concepts" id="concepts" class="sel_list_class">
+<option value="option1">Quantum Entanglement</option>
+<option value="option2">Tachyonic Antitravel</option>
+<option value="option3">Bose-Einstein Condensates</option>
+</select>
+</div>
+    
+<div>
+<p><strong>Choose Your Futuristic Technology:</strong></p>
+<input id="camoarmor" name="camoarmor" class="cb_class" type="checkbox" value="1"> Chameleoflage Armor<br>
+<input id="shunt" name="shunt" class="cb_class" type="checkbox" value="2"> Neural Shunts<br>
+<input id="harpoon" name="harpoon" class="cb_class" type="checkbox" value="3"> Kinetic Harpoons<br>
+<input id="oc" name="oc" class="cb_class" type="checkbox" value="4"> Organic Circuitry
+</div>
+
+<div>
+<p><strong>Select Your Least Favorite Way To Vaporize:</strong></p>
+<form>
+<input type="radio" id="mtc" name="badstuff" class="rb_class" value="Multiphasic Temporal Convergence"> Multiphasic Temporal Convergence<br>
+<input type="radio" id="ups" name="badstuff" class="rb_class" value="Unstable Phase Shift"> Unstable Phase Shift<br>
+<input type="radio" id="wcb" name="badstuff" class="rb_class" value="Warp Core Breach"> Warp Core Breach<br>
+</form>
+</div>
+
+
+<p><strong>Received Event Goes Here:</strong></p>
+<form action="" method="post" name="receiverForm">
+<fieldset>
+    <input type="text" name="receiverElement" value="old_value">
+</fieldset>
+</form>
+
+</section>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="assets/js/jquery-1.7.min.js">\x3C/script>')</script>
+
+<script src="/test_app/assets/js/validation.js"></script>
+
+</body>
+</html>

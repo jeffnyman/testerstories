@@ -1,0 +1,18 @@
+body{
+    //background-color: #000205;
+}
+
+#game {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    margin-top: -300px;
+    margin-left: -400px;
+}
+
+#instruct {
+    position: fixed;
+    top: 10%;
+    left: 32%;
+    margin-top: 10px;
+}

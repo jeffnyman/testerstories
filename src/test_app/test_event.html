@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+	<meta charset="utf-8">
+	<title>Test Site - Event Testing</title>
+	<meta name="HandheldFriendly" content="True">
+	<meta name="MobileOptimized" content="320">
+	<meta name="viewport" content="width=device-width, target-densitydpi=160dpi, initial-scale=1">
+	<link rel="stylesheet" media="screen" href="/test_app/assets/css/screen.css?v=1">
+    <script type="text/javascript">function modal() {
+        var retValue = window.showModalDialog(
+          "test_modal_1.html", self,
+          "status:no;resizable:Yes;help:no;maximize:no;minimize:no;scrollbars:no;");
+      }</script>
+</head>
+
+<body onload="document.senderForm.senderElement.focus()">
+
+<header role="banner">
+	<hgroup>
+		<h1>Test Site</h1>
+		<h2>A Simple Site for Test Automation</h2>
+		<h3>Event Testing</h3>
+	</hgroup>
+</header>
+
+<input id="alert_button" type="button" onclick="alert('I am an alert')" value="Alert">
+<input id="confirm_button" type="button" onclick="this.value = confirm('set the value')" value="Confirm">
+<input id="prompt_button" type="button" onclick='this.value = prompt("Favorite Sith Lord", "Darth Bane")' value="Prompt">
+
+
+<p><strong>Send To Another Page:</strong></p>
+<form action="" method="post" name="senderForm">
+<fieldset>
+    <input type="text" name="senderElement" id="senderElement" value="send_this_value">
+    <input type="button" id="send" onclick="parent.frame2.document.receiverForm.receiverElement.value = document.senderForm.senderElement.value" value="Send!">
+</fieldset>
+</form>
+
+<p><strong>Launch a Modal Dialog:</strong></p>
+<input id="modal" type="button" onclick="return modal();" value="Launch Modal Dialog">
+
+</body>
+</html>
