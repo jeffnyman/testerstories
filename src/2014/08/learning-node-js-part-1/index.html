@@ -1,0 +1,1818 @@
+<!DOCTYPE html>
+<html lang="en-US">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="profile" href="http://gmpg.org/xfn/11">
+				<link rel="pingback" href="/xmlrpc.php">
+				<title>Learning Node.js, Part 1 &#8211; Stories from a Software Tester</title>
+<meta name="robots" content="max-image-preview:large">
+ <style type="text/css" class="darkmysite_inline_css">:root { --darkmysite_dark_mode_bg: #0f0f0f; --darkmysite_dark_mode_secondary_bg: #171717; --darkmysite_dark_mode_text_color: #bebebe; --darkmysite_dark_mode_link_color: #ffffff; --darkmysite_dark_mode_link_hover_color: #cccccc; --darkmysite_dark_mode_input_bg: #2d2d2d; --darkmysite_dark_mode_input_text_color: #bebebe; --darkmysite_dark_mode_input_placeholder_color: #989898; --darkmysite_dark_mode_border_color: #4a4a4a; --darkmysite_dark_mode_btn_bg: #2d2d2d; --darkmysite_dark_mode_btn_text_color: #bebebe; }</style> <style type="text/css" class="darkmysite_inline_css">.darkmysite_dark_mode_enabled::-webkit-scrollbar { background: #29292a !important; } .darkmysite_dark_mode_enabled::-webkit-scrollbar-track { background: #29292a !important; } .darkmysite_dark_mode_enabled::-webkit-scrollbar-thumb { background-color: #52565a !important; } .darkmysite_dark_mode_enabled::-webkit-scrollbar-corner { background-color: #52565a !important; } .darkmysite_dark_mode_enabled::-webkit-scrollbar-button { background-color: transparent !important; background-repeat: no-repeat !important; background-size: contain !important; background-position: center !important; } .darkmysite_dark_mode_enabled::-webkit-scrollbar-button:start { background-image: url(/wp-content/plugins/darkmysite/assets/img/others/scroll_arrow_up.svg) !important; } .darkmysite_dark_mode_enabled::-webkit-scrollbar-button:end { background-image: url(/wp-content/plugins/darkmysite/assets/img/others/scroll_arrow_down.svg) !important; } .darkmysite_dark_mode_enabled::-webkit-scrollbar-button:start:horizontal { background-image: url(/wp-content/plugins/darkmysite/assets/img/others/scroll_arrow_left.svg) !important; } .darkmysite_dark_mode_enabled::-webkit-scrollbar-button:end:horizontal { background-image: url(/wp-content/plugins/darkmysite/assets/img/others/scroll_arrow_right.svg) !important; }</style> <script type="text/javascript" class="darkmysite_inline_js">var darkmysite_switch_unique_id = "866167966"; var darkmysite_is_this_admin_panel = "0"; var darkmysite_enable_default_dark_mode = "0"; var darkmysite_enable_os_aware = "1"; var darkmysite_enable_keyboard_shortcut = "1"; var darkmysite_enable_time_based_dark = "0"; var darkmysite_time_based_dark_start = "19:00"; var darkmysite_time_based_dark_stop = "07:00"; var darkmysite_alternative_dark_mode_switch = ""; var darkmysite_enable_low_image_brightness = "1"; var darkmysite_image_brightness_to = "80"; var darkmysite_enable_image_grayscale = "0"; var darkmysite_image_grayscale_to = "80"; var darkmysite_enable_bg_image_darken = "1"; var darkmysite_bg_image_darken_to = "60"; var darkmysite_enable_invert_inline_svg = "0"; var darkmysite_enable_low_video_brightness = "1"; var darkmysite_video_brightness_to = "80"; var darkmysite_enable_video_grayscale = "0"; var darkmysite_video_grayscale_to = "80"; var darkmysite_disallowed_elements = ".darkmysite_ignore, .darkmysite_ignore *, .darkmysite_switch, .darkmysite_switch *, .wp-block-button__link, .wp-block-button__link *";</script><link rel="dns-prefetch" href="//static.addtoany.com">
+<link rel="dns-prefetch" href="//fonts.googleapis.com">
+<link rel="alternate" type="application/rss+xml" title="Stories from a Software Tester &raquo; Feed" href="/feed/">
+<link rel="alternate" type="application/rss+xml" title="Stories from a Software Tester &raquo; Comments Feed" href="/comments/feed/">
+<link rel="alternate" type="application/rss+xml" title="Stories from a Software Tester &raquo; Learning Node.js, Part 1 Comments Feed" href="/2014/08/learning-node-js-part-1/feed/">
+<script type="text/javascript">
+window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/14.0.0\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/14.0.0\/svg\/","svgExt":".svg","source":{"concatemoji":"\/wp-includes\/js\/wp-emoji-release.min.js?ver=6.2.2"}};
+/*! This file is auto-generated */
+!function(e,a,t){var n,r,o,i=a.createElement("canvas"),p=i.getContext&&i.getContext("2d");function s(e,t){p.clearRect(0,0,i.width,i.height),p.fillText(e,0,0);e=i.toDataURL();return p.clearRect(0,0,i.width,i.height),p.fillText(t,0,0),e===i.toDataURL()}function c(e){var t=a.createElement("script");t.src=e,t.defer=t.type="text/javascript",a.getElementsByTagName("head")[0].appendChild(t)}for(o=Array("flag","emoji"),t.supports={everything:!0,everythingExceptFlag:!0},r=0;r<o.length;r++)t.supports[o[r]]=function(e){if(p&&p.fillText)switch(p.textBaseline="top",p.font="600 32px Arial",e){case"flag":return s("🏳️‍⚧️","🏳️​⚧️")?!1:!s("🇺🇳","🇺​🇳")&&!s("🏴󠁧󠁢󠁥󠁮󠁧󠁿","🏴​󠁧​󠁢​󠁥​󠁮​󠁧​󠁿");case"emoji":return!s("🫱🏻‍🫲🏿","🫱🏻​🫲🏿")}return!1}(o[r]),t.supports.everything=t.supports.everything&&t.supports[o[r]],"flag"!==o[r]&&(t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&t.supports[o[r]]);t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&!t.supports.flag,t.DOMReady=!1,t.readyCallback=function(){t.DOMReady=!0},t.supports.everything||(n=function(){t.readyCallback()},a.addEventListener?(a.addEventListener("DOMContentLoaded",n,!1),e.addEventListener("load",n,!1)):(e.attachEvent("onload",n),a.attachEvent("onreadystatechange",function(){"complete"===a.readyState&&t.readyCallback()})),(e=t.source||{}).concatemoji?c(e.concatemoji):e.wpemoji&&e.twemoji&&(c(e.twemoji),c(e.wpemoji)))}(window,document,window._wpemojiSettings);
+</script>
+<style type="text/css">img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 0.07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}</style>
+	<link rel="stylesheet" id="urvanov_syntax_highlighter-css" href="/wp-content/plugins/urvanov-syntax-highlighter/css/min/urvanov_syntax_highlighter.min.css?ver=2.8.33" type="text/css" media="all">
+<link rel="stylesheet" id="crayon-theme-classic-css" href="/wp-content/plugins/urvanov-syntax-highlighter/themes/classic/classic.css?ver=2.8.33" type="text/css" media="all">
+<link rel="stylesheet" id="crayon-font-monaco-css" href="/wp-content/plugins/urvanov-syntax-highlighter/fonts/monaco.css?ver=2.8.33" type="text/css" media="all">
+<link rel="stylesheet" id="wp-block-library-css" href="/wp-includes/css/dist/block-library/style.min.css?ver=6.2.2" type="text/css" media="all">
+<style id="wp-block-library-theme-inline-css" type="text/css">.wp-block-audio figcaption{color:#555;font-size:13px;text-align:center}.is-dark-theme .wp-block-audio figcaption{color:hsla(0,0%,100%,.65)}.wp-block-audio{margin:0 0 1em}.wp-block-code{border:1px solid #ccc;border-radius:4px;font-family:Menlo,Consolas,monaco,monospace;padding:.8em 1em}.wp-block-embed figcaption{color:#555;font-size:13px;text-align:center}.is-dark-theme .wp-block-embed figcaption{color:hsla(0,0%,100%,.65)}.wp-block-embed{margin:0 0 1em}.blocks-gallery-caption{color:#555;font-size:13px;text-align:center}.is-dark-theme .blocks-gallery-caption{color:hsla(0,0%,100%,.65)}.wp-block-image figcaption{color:#555;font-size:13px;text-align:center}.is-dark-theme .wp-block-image figcaption{color:hsla(0,0%,100%,.65)}.wp-block-image{margin:0 0 1em}.wp-block-pullquote{border-bottom:4px solid;border-top:4px solid;color:currentColor;margin-bottom:1.75em}.wp-block-pullquote cite,.wp-block-pullquote footer,.wp-block-pullquote__citation{color:currentColor;font-size:.8125em;font-style:normal;text-transform:uppercase}.wp-block-quote{border-left:.25em solid;margin:0 0 1.75em;padding-left:1em}.wp-block-quote cite,.wp-block-quote footer{color:currentColor;font-size:.8125em;font-style:normal;position:relative}.wp-block-quote.has-text-align-right{border-left:none;border-right:.25em solid;padding-left:0;padding-right:1em}.wp-block-quote.has-text-align-center{border:none;padding-left:0}.wp-block-quote.is-large,.wp-block-quote.is-style-large,.wp-block-quote.is-style-plain{border:none}.wp-block-search .wp-block-search__label{font-weight:700}.wp-block-search__button{border:1px solid #ccc;padding:.375em .625em}:where(.wp-block-group.has-background){padding:1.25em 2.375em}.wp-block-separator.has-css-opacity{opacity:.4}.wp-block-separator{border:none;border-bottom:2px solid;margin-left:auto;margin-right:auto}.wp-block-separator.has-alpha-channel-opacity{opacity:1}.wp-block-separator:not(.is-style-wide):not(.is-style-dots){width:100px}.wp-block-separator.has-background:not(.is-style-dots){border-bottom:none;height:1px}.wp-block-separator.has-background:not(.is-style-wide):not(.is-style-dots){height:2px}.wp-block-table{margin:0 0 1em}.wp-block-table td,.wp-block-table th{word-break:normal}.wp-block-table figcaption{color:#555;font-size:13px;text-align:center}.is-dark-theme .wp-block-table figcaption{color:hsla(0,0%,100%,.65)}.wp-block-video figcaption{color:#555;font-size:13px;text-align:center}.is-dark-theme .wp-block-video figcaption{color:hsla(0,0%,100%,.65)}.wp-block-video{margin:0 0 1em}.wp-block-template-part.has-background{margin-bottom:0;margin-top:0;padding:1.25em 2.375em}</style>
+<link rel="stylesheet" id="classic-theme-styles-css" href="/wp-includes/css/classic-themes.min.css?ver=6.2.2" type="text/css" media="all">
+<style id="global-styles-inline-css" type="text/css">body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgba(6,147,227,1) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgba(252,185,0,1) 0%,rgba(255,105,0,1) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgba(255,105,0,1) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--duotone--dark-grayscale: url('#wp-duotone-dark-grayscale');--wp--preset--duotone--grayscale: url('#wp-duotone-grayscale');--wp--preset--duotone--purple-yellow: url('#wp-duotone-purple-yellow');--wp--preset--duotone--blue-red: url('#wp-duotone-blue-red');--wp--preset--duotone--midnight: url('#wp-duotone-midnight');--wp--preset--duotone--magenta-yellow: url('#wp-duotone-magenta-yellow');--wp--preset--duotone--purple-green: url('#wp-duotone-purple-green');--wp--preset--duotone--blue-orange: url('#wp-duotone-blue-orange');--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;--wp--preset--spacing--20: 0.44rem;--wp--preset--spacing--30: 0.67rem;--wp--preset--spacing--40: 1rem;--wp--preset--spacing--50: 1.5rem;--wp--preset--spacing--60: 2.25rem;--wp--preset--spacing--70: 3.38rem;--wp--preset--spacing--80: 5.06rem;--wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);--wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);--wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);--wp--preset--shadow--outlined: 6px 6px 0px -3px rgba(255, 255, 255, 1), 6px 6px rgba(0, 0, 0, 1);--wp--preset--shadow--crisp: 6px 6px 0px rgba(0, 0, 0, 1);}:where(.is-layout-flex){gap: 0.5em;}body .is-layout-flow > .alignleft{float: left;margin-inline-start: 0;margin-inline-end: 2em;}body .is-layout-flow > .alignright{float: right;margin-inline-start: 2em;margin-inline-end: 0;}body .is-layout-flow > .aligncenter{margin-left: auto !important;margin-right: auto !important;}body .is-layout-constrained > .alignleft{float: left;margin-inline-start: 0;margin-inline-end: 2em;}body .is-layout-constrained > .alignright{float: right;margin-inline-start: 2em;margin-inline-end: 0;}body .is-layout-constrained > .aligncenter{margin-left: auto !important;margin-right: auto !important;}body .is-layout-constrained > :where(:not(.alignleft):not(.alignright):not(.alignfull)){max-width: var(--wp--style--global--content-size);margin-left: auto !important;margin-right: auto !important;}body .is-layout-constrained > .alignwide{max-width: var(--wp--style--global--wide-size);}body .is-layout-flex{display: flex;}body .is-layout-flex{flex-wrap: wrap;align-items: center;}body .is-layout-flex > *{margin: 0;}:where(.wp-block-columns.is-layout-flex){gap: 2em;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
+.wp-block-navigation a:where(:not(.wp-element-button)){color: inherit;}
+:where(.wp-block-columns.is-layout-flex){gap: 2em;}
+.wp-block-pullquote{font-size: 1.5em;line-height: 1.6;}</style>
+<link rel="stylesheet" id="darkmysite-client-main-css" href="/wp-content/plugins/darkmysite/assets/css/client_main.css?ver=1.2.6" type="text/css" media="all">
+<link rel="stylesheet" id="plyr-css-css" href="/wp-content/plugins/easy-video-player/lib/plyr.css?ver=6.2.2" type="text/css" media="all">
+<link rel="stylesheet" id="acuarela-fonts-css" href="https://fonts.googleapis.com/css?family=Lato%3A300italic%2C400italic%2C700italic%2C300%2C400%2C700%7CArima+Madurai%3A700%2C800%7CInconsolata%3A400%2C700&#038;subset=latin%2Clatin-ext&#038;ver=20190802" type="text/css" media="all">
+<link rel="stylesheet" id="genericons-css" href="/wp-content/themes/acuarela/genericons/genericons.css?ver=3.4.1" type="text/css" media="all">
+<link rel="stylesheet" id="animate-css" href="/wp-content/themes/acuarela/css/animate.css?ver=3.7.2" type="text/css" media="all">
+<link rel="stylesheet" id="acuarela-style-css" href="/wp-content/themes/acuarela/style.css?ver=6.2.2" type="text/css" media="all">
+<link rel="stylesheet" id="addtoany-css" href="/wp-content/plugins/add-to-any/addtoany.min.css?ver=1.16" type="text/css" media="all">
+<script type="text/javascript" src="/wp-includes/js/jquery/jquery.min.js?ver=3.6.4" id="jquery-core-js"></script>
+<script type="text/javascript" src="/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.4.0" id="jquery-migrate-js"></script>
+<script type="text/javascript" id="urvanov_syntax_highlighter_js-js-extra">
+/* <![CDATA[ */
+var UrvanovSyntaxHighlighterSyntaxSettings = {"version":"2.8.33","is_admin":"0","ajaxurl":"\/wp-admin\/admin-ajax.php","prefix":"urvanov-syntax-highlighter-","setting":"urvanov-syntax-highlighter-setting","selected":"urvanov-syntax-highlighter-setting-selected","changed":"urvanov-syntax-highlighter-setting-changed","special":"urvanov-syntax-highlighter-setting-special","orig_value":"data-orig-value","debug":""};
+var UrvanovSyntaxHighlighterSyntaxStrings = {"copy":"Copied to the clipboard","minimize":"Click To Expand Code"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="/wp-content/plugins/urvanov-syntax-highlighter/js/min/urvanov_syntax_highlighter.min.js?ver=2.8.33" id="urvanov_syntax_highlighter_js-js"></script>
+<script type="text/javascript" id="addtoany-core-js-before">window.a2a_config=window.a2a_config||{};a2a_config.callbacks=[];a2a_config.overlays=[];a2a_config.templates={};</script>
+<script type="text/javascript" async src="https://static.addtoany.com/menu/page.js" id="addtoany-core-js"></script>
+<script type="text/javascript" async src="/wp-content/plugins/add-to-any/addtoany.min.js?ver=1.1" id="addtoany-jquery-js"></script>
+<script type="text/javascript" src="/wp-content/plugins/darkmysite/assets/js/client_main.js?ver=1.2.6" id="darkmysite-client-main-js"></script>
+<script type="text/javascript" id="plyr-js-js-extra">
+/* <![CDATA[ */
+var easy_video_player = {"plyr_iconUrl":"\/wp-content\/plugins\/easy-video-player\/lib\/plyr.svg","plyr_blankVideo":"\/wp-content\/plugins\/easy-video-player\/lib\/blank.mp4"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="/wp-content/plugins/easy-video-player/lib/plyr.js?ver=6.2.2" id="plyr-js-js"></script>
+<link rel="https://api.w.org/" href="/wp-json/">
+<link rel="alternate" type="application/json" href="/wp-json/wp/v2/posts/1748">
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="/xmlrpc.php?rsd">
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="/wp-includes/wlwmanifest.xml">
+<meta name="generator" content="WordPress 6.2.2">
+<link rel="canonical" href="/2014/08/learning-node-js-part-1/">
+<link rel="shortlink" href="/?p=1748">
+<link rel="alternate" type="application/json+oembed" href="/wp-json/oembed/1.0/embed?url=https%3A%2F%2F%2F2014%2F08%2Flearning-node-js-part-1%2F">
+<link rel="alternate" type="text/xml+oembed" href="/wp-json/oembed/1.0/embed?url=https%3A%2F%2F%2F2014%2F08%2Flearning-node-js-part-1%2F#038;format=xml">
+<link type="text/css" rel="stylesheet" href="/wp-content/plugins/category-specific-rss-feed-menu/wp_cat_rss_style.css">
+<!--Custom Styling-->
+<style media="screen" type="text/css">.site-description { color: #222222}
+.site-title, .entry-title, .post-title, .widget-title, .posts-navigation .nav-links { font-family: Arima Madurai}
+ body { font-family: Lato}</style>
+	<style id="acuarela-header-css" type="text/css"></style>
+<style type="text/css" id="custom-background-css">body.custom-background { background-image: url("/wp-content/uploads/2020/10/low_contrast_linen.png"); background-position: left top; background-size: cover; background-repeat: no-repeat; background-attachment: fixed; }</style>
+			<style type="text/css" id="wp-custom-css">@font-face {
+  font-family: "Open Sans";
+  font-weight: 400;
+  font-style: normal;
+  src: local("Open Sans Regular"), local("OpenSans-Regular"), url("/fonts/OpenSans-Regular.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Open Sans Bold";
+  font-weight: 700;
+  font-style: normal;
+  src: local("Open Sans Bold"), local("OpenSans-Bold"), url("/fonts/OpenSans-Bold.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Open Sans Italic";
+  font-weight: 400;
+  font-style: normal;
+  src: local("Open Sans Italic"), local("OpenSans-Italic"), url("/fonts/OpenSans-Italic.woff") format("woff");
+}
+
+:root{
+	--primary: #01408e;
+	--secondary: #3c5d5c;
+	--initialLine: #ad2271;
+	--drop: #903;
+	--paraIndent: 1.25em;
+	--note: #4d5b7c;
+	--bq-color: #555555;
+	--bq-back: #ededed;
+	--sans: "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+	--mono: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
+    "Courier New", monospace;
+}
+/* For the top menu bar. */
+.site-navigation a {
+	padding: 0.9em 1.5em;
+}
+
+:where(html, body) {
+	overscroll-behavior-y: none;
+	cursor: url("/cursors/default.cur"), auto;
+}
+
+:where(p, h1, h2, h3, h4, h5, h6, blockquote, figcaption) {
+	cursor: url("/cursors/text-select.cur"), auto;
+}
+
+:where(ul, ol) {
+	margin: 1em 1em;
+	text-align: justify;
+	text-justify: inter-word;
+	cursor: url("/cursors/text-select.cur"), auto;
+}
+
+:where(aside, article) a {
+	cursor: url("/cursors/link-select.cur"), auto;
+}
+
+select, button, input,
+.wp-element-button,
+.darkmysite_switch,
+.site-title,
+.site-description {
+	cursor: url("/cursors/link-select.cur"), auto;
+}
+
+::selection {
+  color: #fff;
+  background: rgba(0, 0, 0, 0.99);
+}
+
+main,
+header {
+	font-size: 1rem;
+}
+
+main {
+	/*From here: https://fluidtypography.com/#app-get-started*/
+	/* Settings: 414-1280; 16-20; 1.6-1.3*/
+	font-size: clamp(1rem, 0.462vw + 0.88rem, 1.25rem);
+line-height: clamp(1.6rem, 0.046vw + 1.588rem, 1.625rem);
+}
+
+article {
+	font-family: var(--sans);
+	line-height: 1.6;
+  word-spacing: 0.16em;
+}
+
+h1:not(.site-title) {
+  font-size: 2.5em;
+  margin: 0.67em 0;
+  text-align: center;
+}
+
+:where(h1, h2, h3, h4) {
+	text-rendering: optimizeLegibility;
+	line-height: 1.4em;
+}
+
+article :where(h2, h3) {
+	margin-bottom: 0.7em;
+}
+
+p {
+	font-size: 1.2em;
+	text-align: justify;
+	text-justify: inter-word;
+}
+
+p:first-of-type:first-line {
+	color: var(--initialLine);
+}
+
+li {
+  margin-bottom: 0.5em;
+}
+
+/* This makes sure the first line of blockquotes are not colored since in Wordpress, a blockquote content has a paragraph tag applied to it. */
+:where(blockquote, footer, .comments-area) p:first-of-type:first-line {
+	color: inherit;
+}
+:where(p, blockquote, img, pre, ul, ol) + p:not(.note) {
+  text-indent: var(--paraIndent);
+}
+section > h3 + p::first-letter,
+section > h2 + p::first-letter,
+div.entry-content > p:not(.nostyle):first-child::first-letter {
+	color: var(--drop);
+  border-left: 2px solid var(--drop);
+  border-top: 2px solid var(--drop);
+  float: left;
+  font-family: Georgia;
+  font-size: 65px;
+  line-height: 60px;
+  padding-top: 4px;
+  padding-right: 12px;
+  padding-left: 3px;
+}
+
+:where(aside, article) a {
+	color: var(--primary);
+	text-underline-position: under;
+	text-decoration: underline 2px;
+	transition: all 0.3s linear;
+  background: linear-gradient(to right, #00d1b1 0%, #278fc6 98%);
+  background-size: 0px 2px;
+  background-repeat: no-repeat;
+  background-position: left 10%;
+  text-shadow: 0;
+}
+
+article a:hover {
+  background-size: 100% 2px;
+  color: var(--secondary);
+}
+
+article a:focus {
+  color: var(--secondary);
+}
+
+/* Handling external links to show an icon after them, but excluding links that are part of the TesterStories site. */
+
+a[href*="http"]::after,
+a[href*="https"]::after {
+  content: "";
+  width: 16px;
+  height: 16px;
+  margin-left: 4px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='currentColor' viewBox='0 0 16 16'%3E%3Cpath fill-rule='evenodd' d='M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5z'/%3E%3Cpath fill-rule='evenodd' d='M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0v-5z'/%3E%3C/svg%3E");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  display: inline-block;
+}
+
+a[href^="https://www.linkedin.com/"]::after {
+  content: none;
+}
+
+a[href^="https://testerstories.com/"]::after {
+  display: none !important;
+}
+
+img.framed {
+  --b: 10px;
+  margin: 0 auto;
+  padding: var(--b);
+  border: calc(2 * var(--b)) solid #0000;
+  border-radius: 25px;
+  outline: 1px solid #000;
+  outline-offset: calc(-1 * var(--b));
+  background: conic-gradient(from 90deg at 1px 1px, #0000 90deg, #000 0);
+}
+
+img.backframed {
+  margin: 0 auto;
+  border: 3px solid black;
+  box-shadow: -50px -50px 0 -40px #555555, 50px 50px 0 -40px #555555;
+}
+
+.note {
+  border: 1px solid rgb(107, 113, 177);
+  color: var(--note);
+  border-radius: 16px;
+  padding: 0.5em 0.8em;
+  margin: 1.9em;
+}
+
+.post {
+	background-color: white;
+}
+
+.entry-content li {
+	font-size: 1.2em;
+}
+
+.simplequote {
+	background: #fff url(/2014/08/learning-node-js-part-1/images/box_quote.png) no-repeat;
+	padding: 5px;
+	margin-top: 20px; margin-bottom: 20px;
+	margin-left: 50px; margin-right: 50px;
+	border: 3px solid #cecece;
+	text-indent: 25px;
+}
+
+p.example {
+	padding: 1ex;
+	margin-right: 50px; margin-left: 50px;
+	border: .5ex solid #808080;
+	color: #000000;
+	line-height: 1.2;
+	text-indent: 0em;
+}
+
+#headquote blockquote {
+	text-align: left;
+	margin: 0 auto 20px auto;
+	color: #555;
+	background: #eee url(/2014/08/learning-node-js-part-1/images/quote_top.gif) no-repeat top left;
+}
+
+#headquote blockquote {
+	width: 370px;
+	font-size: 110%;
+	letter-spacing: -1px;
+	line-height: 1.2em;
+}
+
+#headquote #quote {
+	margin-left: 40px;
+	padding: 20px 20px 10px 20px;
+	background: url(/2014/08/learning-node-js-part-1/images/quote_bottom.gif) no-repeat right bottom;
+}
+
+#headquote #author {
+	margin: 0;
+	text-align: center;
+	padding: 0 0 10px 0;
+	color: #999;
+	font-size: 95%;
+}
+
+#headquote blockquote strong {
+	color: #000;
+	font-weight: normal;
+}
+
+/* Center images. */
+
+img {
+	display: block;
+  margin: 0 auto;
+}
+
+img.smaller {
+  width: 200px;
+}
+
+img.even-smaller {
+  width: 100px;
+}
+
+table td.code {
+  font-family: "Courier New", courier, monospace;
+  font-size: 11.5px;
+}
+
+p.box {
+	font-family: Georgia, "Times New Roman", Times, serif;
+	text-align: justify;
+	padding-top: 25px;
+	margin: 0;
+	line-height: 1.2;
+}
+
+pre.box {
+	white-space: pre-wrap;
+	background-color: white;
+	border: 1px solid;
+}
+
+p.tip {
+	padding-bottom: 10px; padding-top: 10px;
+	padding-right: 10px; padding-left: 10px;
+	border: 1px solid;
+}
+
+div.aside {
+	padding-bottom: 10px; padding-top: 10px;
+	padding-right: 10px; padding-left: 10px;
+	margin-right: 50px; margin-left: 50px;
+	border: 1px dotted;
+}
+
+div.aside pre {
+	white-space: pre-wrap;
+}
+
+pre.view {
+	font-family: "Courier New", Courier, monospace;
+        //font-size: 16px;
+	padding-bottom: 10px; padding-top: 10px;
+	padding-right: 10px; padding-left: 10px;
+	white-space: pre-wrap;
+	background: rgb(255,255,255); /* Old browsers */
+	background: -moz-linear-gradient(top,  rgba(255,255,255,1) 0%, rgba(229,229,229,1) 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,1)), color-stop(100%,rgba(229,229,229,1))); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(229,229,229,1) 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(229,229,229,1) 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(229,229,229,1) 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  rgba(255,255,255,1) 0%,rgba(229,229,229,1) 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#e5e5e5',GradientType=0 ); /* IE6-9 */
+	border: 1px solid;
+	text-align: justify;
+}
+
+pre.view .string {
+	color: #3366CC;
+}
+
+pre.view .sub {
+        color: #8333FF;
+}
+
+pre.view .comment {
+	color: #009900;
+}
+
+pre.view .highlight {
+	background-color: #FFFF00;
+	border: 1px solid;
+	border-style: dotted;
+}
+
+pre.output .highlight {
+	background-color: rgb(255,255,255);
+	color: red;
+	border: 1px solid;
+	border-style: dotted;
+}
+
+pre.output {
+	font-family: "Courier New", Courier, monospace;
+        //font-size: 16px;
+	padding-bottom: 10px; padding-top: 10px;
+	padding-right: 10px; padding-left: 10px;
+	white-space: pre-wrap;
+	background: black;
+	color: white;
+}
+
+blockquote {
+  position: relative;
+  width: 80%;
+  margin: 50px auto;
+  padding: 1.2em 30px 1.2em 55px;
+  color: var(--bq-color);
+  background-color: var(--bq-back);
+  border-left: 8px solid #78c0a8;
+  text-align: justify;
+}
+
+blockquote::before {
+  position: absolute;
+	left: 5px;
+	top: -10px;
+	/* Line height needed here to avoid the quote appearing out of place due to calculated line heights for the article. */
+	line-height: 1.6;
+	content: "\201C";
+	color: #78c0a8;
+	font-size: 4em;
+}
+
+blockquote::after {
+	content: "";
+}
+
+blockquote span {
+	display: block;
+	color: #333333;
+	font-style: normal;
+  font-weight: bold;
+  margin-top: 1em;
+}
+
+img.frame {
+  --b: 10px;
+  padding: var(--b);
+  border: calc(2 * var(--b)) solid #0000;
+  outline: 1px solid #000;
+  outline-offset: calc(-1 * var(--b));
+  border-radius: 25px;
+  background: conic-gradient(from 90deg at 1px 1px, #0000 90deg, #000 0);
+  display: block;
+  margin: auto;
+  margin-bottom: 1rem;
+}
+
+code {
+  font-size: 0.9em;
+  padding: 0.0625rem 0.5rem;
+  border-radius: 0.125rem;
+  border: 1px solid #d33a2c;
+  box-shadow: 1px 1px #d33a2c, 2px 2px #d33a2c;
+  margin: 0 0.25rem;
+  color: #d33a2c;
+  font-family: monospace;
+}
+
+pre {
+  font-family: var(--mono);
+  max-width: 100%;
+	padding: 0;
+}
+
+pre code {
+  word-spacing: normal;
+  letter-spacing: normal;
+  font-family: var(--mono);
+  padding-left: 10px;
+  color: #e9e9f4;
+  background: #282936;
+  display: block;
+  max-width: 100%;
+  overflow-x: scroll;
+  /*font-size: 0.8em;*/
+
+  border: 1px solid #282936;
+  border-radius: 10px;
+  box-shadow: 1px 1px #282936, 2px 2px #282936;
+}
+
+pre code::-webkit-scrollbar {
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+pre code::-webkit-scrollbar:vertical {
+  width: 11px;
+}
+
+pre code::-webkit-scrollbar:horizontal {
+  height: 11px;
+}
+
+pre code::-webkit-scrollbar-thumb {
+  border-radius: 8px;
+  border: 2px solid white;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+/* The div part is only needed for long-form content that is pre-formatted. */
+
+pre code div {
+	line-height: 1.5em;
+}
+
+/* This would be for prefromatted material that is not literally from a game or simulation but is meant to indicate something about the details of the game or simulation. */
+
+pre p {
+  border: 2px solid grey;
+  border-radius: 5px;
+  padding: 0.8em;
+	padding-top: 0;
+	margin: 0;
+}</style>
+			</head>
+	<body class="post-template-default single single-post postid-1748 single-format-standard custom-background wp-embed-responsive custom-background-image">
+		<svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-dark-grayscale"><fecolormatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></fecolormatrix><fecomponenttransfer color-interpolation-filters="sRGB"><fefuncr type="table" tablevalues="0 0.49803921568627"></fefuncr><fefuncg type="table" tablevalues="0 0.49803921568627"></fefuncg><fefuncb type="table" tablevalues="0 0.49803921568627"></fefuncb><fefunca type="table" tablevalues="1 1"></fefunca></fecomponenttransfer><fecomposite in2="SourceGraphic" operator="in"></fecomposite></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-grayscale"><fecolormatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></fecolormatrix><fecomponenttransfer color-interpolation-filters="sRGB"><fefuncr type="table" tablevalues="0 1"></fefuncr><fefuncg type="table" tablevalues="0 1"></fefuncg><fefuncb type="table" tablevalues="0 1"></fefuncb><fefunca type="table" tablevalues="1 1"></fefunca></fecomponenttransfer><fecomposite in2="SourceGraphic" operator="in"></fecomposite></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-purple-yellow"><fecolormatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></fecolormatrix><fecomponenttransfer color-interpolation-filters="sRGB"><fefuncr type="table" tablevalues="0.54901960784314 0.98823529411765"></fefuncr><fefuncg type="table" tablevalues="0 1"></fefuncg><fefuncb type="table" tablevalues="0.71764705882353 0.25490196078431"></fefuncb><fefunca type="table" tablevalues="1 1"></fefunca></fecomponenttransfer><fecomposite in2="SourceGraphic" operator="in"></fecomposite></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-blue-red"><fecolormatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></fecolormatrix><fecomponenttransfer color-interpolation-filters="sRGB"><fefuncr type="table" tablevalues="0 1"></fefuncr><fefuncg type="table" tablevalues="0 0.27843137254902"></fefuncg><fefuncb type="table" tablevalues="0.5921568627451 0.27843137254902"></fefuncb><fefunca type="table" tablevalues="1 1"></fefunca></fecomponenttransfer><fecomposite in2="SourceGraphic" operator="in"></fecomposite></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-midnight"><fecolormatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></fecolormatrix><fecomponenttransfer color-interpolation-filters="sRGB"><fefuncr type="table" tablevalues="0 0"></fefuncr><fefuncg type="table" tablevalues="0 0.64705882352941"></fefuncg><fefuncb type="table" tablevalues="0 1"></fefuncb><fefunca type="table" tablevalues="1 1"></fefunca></fecomponenttransfer><fecomposite in2="SourceGraphic" operator="in"></fecomposite></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-magenta-yellow"><fecolormatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></fecolormatrix><fecomponenttransfer color-interpolation-filters="sRGB"><fefuncr type="table" tablevalues="0.78039215686275 1"></fefuncr><fefuncg type="table" tablevalues="0 0.94901960784314"></fefuncg><fefuncb type="table" tablevalues="0.35294117647059 0.47058823529412"></fefuncb><fefunca type="table" tablevalues="1 1"></fefunca></fecomponenttransfer><fecomposite in2="SourceGraphic" operator="in"></fecomposite></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-purple-green"><fecolormatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></fecolormatrix><fecomponenttransfer color-interpolation-filters="sRGB"><fefuncr type="table" tablevalues="0.65098039215686 0.40392156862745"></fefuncr><fefuncg type="table" tablevalues="0 1"></fefuncg><fefuncb type="table" tablevalues="0.44705882352941 0.4"></fefuncb><fefunca type="table" tablevalues="1 1"></fefunca></fecomponenttransfer><fecomposite in2="SourceGraphic" operator="in"></fecomposite></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-blue-orange"><fecolormatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></fecolormatrix><fecomponenttransfer color-interpolation-filters="sRGB"><fefuncr type="table" tablevalues="0.098039215686275 1"></fefuncr><fefuncg type="table" tablevalues="0 0.66274509803922"></fefuncg><fefuncb type="table" tablevalues="0.84705882352941 0.41960784313725"></fefuncb><fefunca type="table" tablevalues="1 1"></fefunca></fecomponenttransfer><fecomposite in2="SourceGraphic" operator="in"></fecomposite></filter></defs></svg>		<div id="container" class="site container">
+	<header id="masthead" class="site-header animated fadeInDown" role="banner">
+
+	<a class="screen-reader-text skip-link" href="#main-content">Skip to content</a>
+	<a class="screen-reader-text skip-link" href="#sidebar-widget-area">Skip to sidebar</a>
+	<a class="screen-reader-text skip-link" href="#page-footer">Skip to footer</a>
+	<div id="site-identity" class="site-identity">
+		<a href="/" class="home-link animated fadeIn" title="Stories from a Software Tester" rel="home">
+			<div class="title-description">
+				<h1 class="site-title">Stories from a Software Tester</h1>
+				<h2 class="site-description">Twice upon a time, in another space, no distance in any direction from here &#8230;</h2>
+			</div>
+		</a> 
+
+	</div>
+<!--/site-identity-->
+
+	<nav id="nav-menu" class="site-navigation main-navigation" role="navigation" aria-label="Main Navigation">
+		<button id="nav-button" class="menu-toggle" role="button">
+			<span class="screen-reader-text">Menu</span>
+			<span class="genericon" aria-hidden="true"></span>
+		</button>
+		<ul id="primary-menu" class="primary-menu">
+<li id="menu-item-3923" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-3923"><a href="/">Home</a></li>
+<li id="menu-item-2051" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2051"><a href="/about-tester-stories/">About Tester Stories</a></li>
+<li id="menu-item-2050" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2050"><a href="/who-am-i/">Who Am I</a></li>
+<li id="menu-item-2048" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2048"><a href="/just-for-fun/">Just For Fun</a></li>
+</ul>	</nav><!--/navigation-->
+
+
+<form role="search" method="get" class="search-form" action="https://testerstories.com/">
+	<label>
+		<span class="screen-reader-text">Search for:</span>
+		<input type="search" class="search-field" placeholder="Search &hellip;" value="" name="s" title="Search for:">
+	</label>
+	<button type="submit" class="search-submit"><span class="genericon genericon-search" aria-hidden="true"></span><span class="screen-reader-text">Search</span></button>
+</form>
+</header><!--/header-->
+
+<main id="main-content" class="main-content" role="main">
+<article id="post-1748" class="post-1748 post type-post status-publish format-standard hentry category-node-js">
+<header class="entry-header">
+	<span class="entry-meta"><span class="cat-links"><span class="screen-reader-text">Published in</span><span class="genericon genericon-category" aria-hidden="true"></span><a href="/category/development/web-development/node-js/" rel="category tag">Node.js</a></span></span><h1 class="entry-title">Learning Node.js, Part 1</h1>	<span class="byline">
+	Written by <a href="/author/administrator/" class="entry-author" rel="author">Jeff Nyman</a>	</span><!-- .byline -->
+	<span class="entry-meta">
+	<span class="genericon genericon-time" aria-hidden="true"></span><a href="/2014/08/14/" rel="bookmark" class="entry-date"><time datetime="2014-08-14T10:03:51-05:00">14 August 2014</time></a>		<span class="comments-link">
+			<span class="genericon genericon-comment" aria-hidden="true"></span>
+			<a href="/2014/08/learning-node-js-part-1/#respond">Leave a comment</a>		</span>
+		</span><!-- .entry-meta -->
+</header><!-- .entry-header -->
+
+	<div class="entry-content">
+		<p>My goal here is to introduce others to Node.js by basically detailing how I have learned it. In this initial post, I&#8217;ll jump right into creating a simple app-as-a-server and use that as a springboard for learning other aspects of Node.js.</p>
+<p><span id="more-1748"></span></p>
+<ul>
+<li>Learning Node.js, Part 1</li>
+<li><a href="/2014/08/learning-node-js-part-2/">Learning Node.js, Part 2</a></li>
+<li><a href="/2014/08/learning-node-js-part-3/">Learning Node.js, Part 3</a></li>
+<li><a href="/2014/08/learning-node-js-part-4/">Learning Node.js, Part 4</a></li>
+<li><a href="/2014/11/learning-node-js-part-5/">Learning Node.js, Part 5</a></li>
+</ul>
+<p>To get started, make sure you install Node.js. I have instructions in the <a href="/setting-up-webdev/">Setting up WebDev</a> page.</p>
+<h1>Some Node Basics</h1>
+<p>Node.js is a server-side technology that&#8217;s based on Google&#8217;s V8 JavaScript engine. Node is designed to be used for applications that are heavy on input/output (I/O), but relatively light on intense (CPU-bound) computation. Node applications are created with JavaScript. The JavaScript you use is exactly the same JavaScript that you would use in your client-side applications. You can use an alternative language that compiles to JavaScript, such as CoffeeScript.</p>
+<p>One of the fundamental design concepts with Node is that an application is executed on a single thread (or process) and all events are handled asynchronously. This asynchronous control is provided by an event loop and the liberal use of callback functions. An event loop is functionality that checks (&#8220;polls&#8221;) a system for specific events and invokes event handlers at the proper time. The &#8220;proper time&#8221; is when a certain event has occurred that a certain event handler is designed to respond to.</p>
+<p>Important point there: in Node, a callback function <em>is</em> the event handler.</p>
+<p>If you think of most web servers, like Apache or IIS, each time a web resource is requested, one of two things will happen: either a separate thread will be created to handle the request or a new process will be invoked to handle the request. Node doesn&#8217;t do either of those things. It doesn&#8217;t create a new thread nor does it create a new process for every request. Instead what Node does is listen for specific events, and when the event happens, it responds accordingly.</p>
+<p>Another fundamental design aspect of Node is that doesn&#8217;t block any other request while its waiting for the event functionality it&#8217;s dealing with to complete. All events are handled in a relatively uncomplicated event loop. Unlike with single-threaded applications, when you make a request to a Node application and that application must, in turn, make some request of resources &#8212; like a database query request or a file access request &#8212; Node starts the request, but doesn&#8217;t just sit there waiting until the request receives a response. Instead, Node attaches a callback function to the request. When whatever has been requested has provided a response, an event is emitted to that effect. This event triggers the associated callback function to do something with either the results of the requested action (such as display some text) or the resources requested (such as querying a database).</p>
+<h1>A Node App-as-a-Server</h1>
+<p>Node offers an interesting conceptual model to work with. The idea is that the application that you write is also the web server. What Node does is provide a framework for you to build a web server that seamlessly serves up your application.</p>
+<p>Let&#8217;s test it out. Create a file called <strong>testNode.js</strong> and put the following in it:</p>
+<p></p>
+<!-- Urvanov Syntax Highlighter v2.8.33 -->
+
+		<div id="urvanov-syntax-highlighter-647f451127b4e913936063" class="urvanov-syntax-highlighter-syntax crayon-theme-classic urvanov-syntax-highlighter-font-monaco urvanov-syntax-highlighter-os-pc print-yes notranslate" data-settings=" minimize scroll-mouseover" style="margin-top: 12px; margin-bottom: 12px; font-size: 12px !important; line-height: 15px !important;">
+		
+			<div class="crayon-toolbar" data-settings=" mouseover overlay hide delay" style="font-size: 12px !important;height: 18px !important; line-height: 18px !important;">
+<span class="crayon-title"></span>
+			<div class="crayon-tools" style="font-size: 12px !important;height: 18px !important; line-height: 18px !important;">
+<div class="crayon-button urvanov-syntax-highlighter-nums-button" title="Toggle Line Numbers"><div class="urvanov-syntax-highlighter-button-icon"></div></div>
+<div class="crayon-button urvanov-syntax-highlighter-plain-button" title="Toggle Plain Code"><div class="urvanov-syntax-highlighter-button-icon"></div></div>
+<div class="crayon-button urvanov-syntax-highlighter-wrap-button" title="Toggle Line Wrap"><div class="urvanov-syntax-highlighter-button-icon"></div></div>
+<div class="crayon-button urvanov-syntax-highlighter-expand-button" title="Expand Code"><div class="urvanov-syntax-highlighter-button-icon"></div></div>
+<div class="crayon-button urvanov-syntax-highlighter-copy-button" title="Copy"><div class="urvanov-syntax-highlighter-button-icon"></div></div>
+<div class="crayon-button urvanov-syntax-highlighter-popup-button" title="Open Code In New Window"><div class="urvanov-syntax-highlighter-button-icon"></div></div>
+<span class="crayon-language">JavaScript</span>
+</div>
+</div>
+			<div class="crayon-info" style="min-height: 16.8px !important; line-height: 16.8px !important;"></div>
+			<div class="urvanov-syntax-highlighter-plain-wrap"><textarea wrap="soft" class="urvanov-syntax-highlighter-plain print-no" data-settings="dblclick" readonly style="-moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4; font-size: 12px !important; line-height: 15px !important;">
+var http = require('http');
+
+http.createServer(function(req, res) {
+  res.writeHead(200, { 'Content-Type': 'text/plain' });
+  res.write('Node is working.');
+  res.end();
+}).listen(3000);
+
+console.log('Server started on localhost:3000; Ctrl-C to terminate.');</textarea></div>
+			<div class="urvanov-syntax-highlighter-main">
+				<table class="crayon-table">
+					<tr class="urvanov-syntax-highlighter-row">
+				<td class="crayon-nums " data-settings="show">
+					<div class="urvanov-syntax-highlighter-nums-content" style="font-size: 12px !important; line-height: 15px !important;">
+<div class="crayon-num" data-line="urvanov-syntax-highlighter-647f451127b4e913936063-1">1</div>
+<div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-647f451127b4e913936063-2">2</div>
+<div class="crayon-num" data-line="urvanov-syntax-highlighter-647f451127b4e913936063-3">3</div>
+<div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-647f451127b4e913936063-4">4</div>
+<div class="crayon-num" data-line="urvanov-syntax-highlighter-647f451127b4e913936063-5">5</div>
+<div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-647f451127b4e913936063-6">6</div>
+<div class="crayon-num" data-line="urvanov-syntax-highlighter-647f451127b4e913936063-7">7</div>
+<div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-647f451127b4e913936063-8">8</div>
+<div class="crayon-num" data-line="urvanov-syntax-highlighter-647f451127b4e913936063-9">9</div>
+</div>
+				</td>
+						<td class="urvanov-syntax-highlighter-code"><div class="crayon-pre" style="font-size: 12px !important; line-height: 15px !important; -moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4;">
+<div class="crayon-line" id="urvanov-syntax-highlighter-647f451127b4e913936063-1">
+<span class="crayon-t">var</span><span class="crayon-h"> </span><span class="crayon-v">http</span><span class="crayon-h"> </span><span class="crayon-o">=</span><span class="crayon-h"> </span><span class="crayon-e">require</span><span class="crayon-sy">(</span><span class="crayon-s">'http'</span><span class="crayon-sy">)</span><span class="crayon-sy">;</span>
+</div>
+<div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-647f451127b4e913936063-2">&nbsp;</div>
+<div class="crayon-line" id="urvanov-syntax-highlighter-647f451127b4e913936063-3">
+<span class="crayon-v">http</span><span class="crayon-sy">.</span><span class="crayon-e">createServer</span><span class="crayon-sy">(</span><span class="crayon-t">function</span><span class="crayon-sy">(</span><span class="crayon-v">req</span><span class="crayon-sy">,</span><span class="crayon-h"> </span><span class="crayon-v">res</span><span class="crayon-sy">)</span><span class="crayon-h"> </span><span class="crayon-sy">{</span>
+</div>
+<div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-647f451127b4e913936063-4">
+<span class="crayon-h">&nbsp;&nbsp;</span><span class="crayon-v">res</span><span class="crayon-sy">.</span><span class="crayon-e">writeHead</span><span class="crayon-sy">(</span><span class="crayon-cn">200</span><span class="crayon-sy">,</span><span class="crayon-h"> </span><span class="crayon-sy">{</span><span class="crayon-h"> </span><span class="crayon-s">'Content-Type'</span><span class="crayon-o">:</span><span class="crayon-h"> </span><span class="crayon-s">'text/plain'</span><span class="crayon-h"> </span><span class="crayon-sy">}</span><span class="crayon-sy">)</span><span class="crayon-sy">;</span>
+</div>
+<div class="crayon-line" id="urvanov-syntax-highlighter-647f451127b4e913936063-5">
+<span class="crayon-h">&nbsp;&nbsp;</span><span class="crayon-v">res</span><span class="crayon-sy">.</span><span class="crayon-e">write</span><span class="crayon-sy">(</span><span class="crayon-s">'Node is working.'</span><span class="crayon-sy">)</span><span class="crayon-sy">;</span>
+</div>
+<div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-647f451127b4e913936063-6">
+<span class="crayon-h">&nbsp;&nbsp;</span><span class="crayon-v">res</span><span class="crayon-sy">.</span><span class="crayon-st">end</span><span class="crayon-sy">(</span><span class="crayon-sy">)</span><span class="crayon-sy">;</span>
+</div>
+<div class="crayon-line" id="urvanov-syntax-highlighter-647f451127b4e913936063-7">
+<span class="crayon-sy">}</span><span class="crayon-sy">)</span><span class="crayon-sy">.</span><span class="crayon-e">listen</span><span class="crayon-sy">(</span><span class="crayon-cn">3000</span><span class="crayon-sy">)</span><span class="crayon-sy">;</span>
+</div>
+<div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-647f451127b4e913936063-8">&nbsp;</div>
+<div class="crayon-line" id="urvanov-syntax-highlighter-647f451127b4e913936063-9">
+<span class="crayon-v">console</span><span class="crayon-sy">.</span><span class="crayon-e">log</span><span class="crayon-sy">(</span><span class="crayon-s">'Server started on localhost:3000; Ctrl-C to terminate.'</span><span class="crayon-sy">)</span><span class="crayon-sy">;</span>
+</div>
+</div></td>
+					</tr>
+				</table>
+			</div>
+		</div>
+<!-- [Format Time: 0.0004 seconds] -->
+<p></p>
+<p>Most Node functionality is provided through external applications and libraries called modules. Case in point, line 1 loads the <code>http</code> module, assigning it to a local variable so that I can call methods on it. The <code>http</code> module provides the standard HTTP protocol functionality, which basically enables the application to have network access and accept HTTP request/response traffic.</p>
+<p>Let&#8217;s break down what&#8217;s happening with this code:</p>
+<ul>
+<li>Line 3 actually creates a new web server. It does this using the <code>createServer()</code> method. The anonymous function that is passed as an argument to this method is a &#8220;request listener&#8221; function. It has two parameters: a server request called <code>req</code> (of type http.ServerRequest) and a server response called <code>res</code> (of type http.ServerResponse).</li>
+</ul>
+<ul>
+<li>Line 4 uses the <code>http.ServerResponse.writeHead()</code> method to send a response header with the response status code of 200 as well as the content-type of the response. You&#8217;ll notice here that even though I&#8217;m creating a web server, I&#8217;m simply serving up plain text.</li>
+</ul>
+<ul>
+<li>Line 5 uses the <code>http.ServerResponse.write()</code> method to send a chunk of data to the response body. In this case, that chunk of data is a string of text.</li>
+</ul>
+<ul>
+<li>Line 6 uses the <code>http.ServerResponse.end()</code> method to signal that communication has finished. &#8220;Finished&#8221; here means all headers and the response body has been sent.</li>
+</ul>
+<p>Before trying this out, let&#8217;s briefly consider a bit of the asynchronous nature of Node. The <code>http.Server.listen()</code> method chained at the end of the createServer() method listens for incoming connections on a given port, which I&#8217;ve specified to be 3000. The listen method is asynchronous, which means that the application doesn&#8217;t block program execution while it&#8217;s waiting for the connection to be established. Whatever code follows the listen() call in the file will be processed without delay. The listen() callback function will be invoked when the port connection is established.</p>
+<p><strong>Make sure you understand this:</strong> the listen() method tells the HTTP server object to begin listening for connections on the given port. But Node doesn&#8217;t block while it waits for the connection to be established.</p>
+<p>To make this a little more clear, let&#8217;s do a slight modification to the above code:</p>
+<p></p>
+<!-- Urvanov Syntax Highlighter v2.8.33 -->
+
+		<div id="urvanov-syntax-highlighter-647f451127b53735707452" class="urvanov-syntax-highlighter-syntax crayon-theme-classic urvanov-syntax-highlighter-font-monaco urvanov-syntax-highlighter-os-pc print-yes notranslate" data-settings=" minimize scroll-mouseover" style="margin-top: 12px; margin-bottom: 12px; font-size: 12px !important; line-height: 15px !important;">
+		
+			<div class="crayon-toolbar" data-settings=" mouseover overlay hide delay" style="font-size: 12px !important;height: 18px !important; line-height: 18px !important;">
+<span class="crayon-title"></span>
+			<div class="crayon-tools" style="font-size: 12px !important;height: 18px !important; line-height: 18px !important;">
+<div class="crayon-button urvanov-syntax-highlighter-nums-button" title="Toggle Line Numbers"><div class="urvanov-syntax-highlighter-button-icon"></div></div>
+<div class="crayon-button urvanov-syntax-highlighter-plain-button" title="Toggle Plain Code"><div class="urvanov-syntax-highlighter-button-icon"></div></div>
+<div class="crayon-button urvanov-syntax-highlighter-wrap-button" title="Toggle Line Wrap"><div class="urvanov-syntax-highlighter-button-icon"></div></div>
+<div class="crayon-button urvanov-syntax-highlighter-expand-button" title="Expand Code"><div class="urvanov-syntax-highlighter-button-icon"></div></div>
+<div class="crayon-button urvanov-syntax-highlighter-copy-button" title="Copy"><div class="urvanov-syntax-highlighter-button-icon"></div></div>
+<div class="crayon-button urvanov-syntax-highlighter-popup-button" title="Open Code In New Window"><div class="urvanov-syntax-highlighter-button-icon"></div></div>
+<span class="crayon-language">JavaScript</span>
+</div>
+</div>
+			<div class="crayon-info" style="min-height: 16.8px !important; line-height: 16.8px !important;"></div>
+			<div class="urvanov-syntax-highlighter-plain-wrap"><textarea wrap="soft" class="urvanov-syntax-highlighter-plain print-no" data-settings="dblclick" readonly style="-moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4; font-size: 12px !important; line-height: 15px !important;">
+var http = require('http');
+
+http.createServer(function(req, res) {
+  res.writeHead(200, { 'Content-Type': 'text/plain' });
+  res.write('Node is working.');
+  res.end();
+}).listen(3000, function() { console.log('Start Server'); });
+
+console.log('Server started on localhost:3000; Ctrl-C to terminate.');</textarea></div>
+			<div class="urvanov-syntax-highlighter-main">
+				<table class="crayon-table">
+					<tr class="urvanov-syntax-highlighter-row">
+				<td class="crayon-nums " data-settings="show">
+					<div class="urvanov-syntax-highlighter-nums-content" style="font-size: 12px !important; line-height: 15px !important;">
+<div class="crayon-num" data-line="urvanov-syntax-highlighter-647f451127b53735707452-1">1</div>
+<div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-647f451127b53735707452-2">2</div>
+<div class="crayon-num" data-line="urvanov-syntax-highlighter-647f451127b53735707452-3">3</div>
+<div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-647f451127b53735707452-4">4</div>
+<div class="crayon-num" data-line="urvanov-syntax-highlighter-647f451127b53735707452-5">5</div>
+<div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-647f451127b53735707452-6">6</div>
+<div class="crayon-num crayon-marked-num crayon-top crayon-bottom" data-line="urvanov-syntax-highlighter-647f451127b53735707452-7">7</div>
+<div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-647f451127b53735707452-8">8</div>
+<div class="crayon-num" data-line="urvanov-syntax-highlighter-647f451127b53735707452-9">9</div>
+</div>
+				</td>
+						<td class="urvanov-syntax-highlighter-code"><div class="crayon-pre" style="font-size: 12px !important; line-height: 15px !important; -moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4;">
+<div class="crayon-line" id="urvanov-syntax-highlighter-647f451127b53735707452-1">
+<span class="crayon-t">var</span><span class="crayon-h"> </span><span class="crayon-v">http</span><span class="crayon-h"> </span><span class="crayon-o">=</span><span class="crayon-h"> </span><span class="crayon-e">require</span><span class="crayon-sy">(</span><span class="crayon-s">'http'</span><span class="crayon-sy">)</span><span class="crayon-sy">;</span>
+</div>
+<div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-647f451127b53735707452-2">&nbsp;</div>
+<div class="crayon-line" id="urvanov-syntax-highlighter-647f451127b53735707452-3">
+<span class="crayon-v">http</span><span class="crayon-sy">.</span><span class="crayon-e">createServer</span><span class="crayon-sy">(</span><span class="crayon-t">function</span><span class="crayon-sy">(</span><span class="crayon-v">req</span><span class="crayon-sy">,</span><span class="crayon-h"> </span><span class="crayon-v">res</span><span class="crayon-sy">)</span><span class="crayon-h"> </span><span class="crayon-sy">{</span>
+</div>
+<div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-647f451127b53735707452-4">
+<span class="crayon-h">&nbsp;&nbsp;</span><span class="crayon-v">res</span><span class="crayon-sy">.</span><span class="crayon-e">writeHead</span><span class="crayon-sy">(</span><span class="crayon-cn">200</span><span class="crayon-sy">,</span><span class="crayon-h"> </span><span class="crayon-sy">{</span><span class="crayon-h"> </span><span class="crayon-s">'Content-Type'</span><span class="crayon-o">:</span><span class="crayon-h"> </span><span class="crayon-s">'text/plain'</span><span class="crayon-h"> </span><span class="crayon-sy">}</span><span class="crayon-sy">)</span><span class="crayon-sy">;</span>
+</div>
+<div class="crayon-line" id="urvanov-syntax-highlighter-647f451127b53735707452-5">
+<span class="crayon-h">&nbsp;&nbsp;</span><span class="crayon-v">res</span><span class="crayon-sy">.</span><span class="crayon-e">write</span><span class="crayon-sy">(</span><span class="crayon-s">'Node is working.'</span><span class="crayon-sy">)</span><span class="crayon-sy">;</span>
+</div>
+<div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-647f451127b53735707452-6">
+<span class="crayon-h">&nbsp;&nbsp;</span><span class="crayon-v">res</span><span class="crayon-sy">.</span><span class="crayon-st">end</span><span class="crayon-sy">(</span><span class="crayon-sy">)</span><span class="crayon-sy">;</span>
+</div>
+<div class="crayon-line crayon-marked-line crayon-top crayon-bottom" id="urvanov-syntax-highlighter-647f451127b53735707452-7">
+<span class="crayon-sy">}</span><span class="crayon-sy">)</span><span class="crayon-sy">.</span><span class="crayon-e">listen</span><span class="crayon-sy">(</span><span class="crayon-cn">3000</span><span class="crayon-sy">,</span><span class="crayon-h"> </span><span class="crayon-t">function</span><span class="crayon-sy">(</span><span class="crayon-sy">)</span><span class="crayon-h"> </span><span class="crayon-sy">{</span><span class="crayon-h"> </span><span class="crayon-v">console</span><span class="crayon-sy">.</span><span class="crayon-e">log</span><span class="crayon-sy">(</span><span class="crayon-s">'Start Server'</span><span class="crayon-sy">)</span><span class="crayon-sy">;</span><span class="crayon-h"> </span><span class="crayon-sy">}</span><span class="crayon-sy">)</span><span class="crayon-sy">;</span>
+</div>
+<div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-647f451127b53735707452-8">&nbsp;</div>
+<div class="crayon-line" id="urvanov-syntax-highlighter-647f451127b53735707452-9">
+<span class="crayon-v">console</span><span class="crayon-sy">.</span><span class="crayon-e">log</span><span class="crayon-sy">(</span><span class="crayon-s">'Server started on localhost:3000; Ctrl-C to terminate.'</span><span class="crayon-sy">)</span><span class="crayon-sy">;</span>
+</div>
+</div></td>
+					</tr>
+				</table>
+			</div>
+		</div>
+<!-- [Format Time: 0.0003 seconds] -->
+<p></p>
+<p>There I&#8217;ve added a second parameter to the listen() method. The idea here is that if I need to do something once the connection is established, I provide a callback function. Here I&#8217;m passing an anonymous callback function to the listen() method. When the connection is established, a listening event is emitted, which then invokes the callback function. In this case, that callback function does nothing more than output a message to the console.</p>
+<p>Run your app-server with this command</p>
+<pre>
+$ node testNode.js
+</pre>
+<p>Of interest here, you&#8217;ll see output like this:</p>
+<pre>
+$ node testNode.js
+Server started on localhost:3000; Ctrl-C to terminate.
+Start Server
+</pre>
+<p>Note here the order that the console.log statements clearly fired in. The &#8220;Start Server&#8221; message comes after the &#8220;Server started on&#8230;&#8221; message. That shows you that Node began listening for the connection and then immediately executed what was in the rest of my JavaScript file, which was simply to log a message saying &#8220;Server started on localhost:3000; Ctrl-C to terminate.&#8221; Then, once the connection was established, the callback was fired and the message &#8220;Start Server&#8221; was logged.</p>
+<p>Incidentally, I could have made my logic a bit simpler by combining the write() and the end() statements:</p>
+<p></p>
+<!-- Urvanov Syntax Highlighter v2.8.33 -->
+
+		<div id="urvanov-syntax-highlighter-647f451127b57981222874" class="urvanov-syntax-highlighter-syntax crayon-theme-classic urvanov-syntax-highlighter-font-monaco urvanov-syntax-highlighter-os-pc print-yes notranslate" data-settings=" minimize scroll-mouseover" style="margin-top: 12px; margin-bottom: 12px; font-size: 12px !important; line-height: 15px !important;">
+		
+			<div class="crayon-toolbar" data-settings=" mouseover overlay hide delay" style="font-size: 12px !important;height: 18px !important; line-height: 18px !important;">
+<span class="crayon-title"></span>
+			<div class="crayon-tools" style="font-size: 12px !important;height: 18px !important; line-height: 18px !important;">
+<div class="crayon-button urvanov-syntax-highlighter-nums-button" title="Toggle Line Numbers"><div class="urvanov-syntax-highlighter-button-icon"></div></div>
+<div class="crayon-button urvanov-syntax-highlighter-plain-button" title="Toggle Plain Code"><div class="urvanov-syntax-highlighter-button-icon"></div></div>
+<div class="crayon-button urvanov-syntax-highlighter-wrap-button" title="Toggle Line Wrap"><div class="urvanov-syntax-highlighter-button-icon"></div></div>
+<div class="crayon-button urvanov-syntax-highlighter-expand-button" title="Expand Code"><div class="urvanov-syntax-highlighter-button-icon"></div></div>
+<div class="crayon-button urvanov-syntax-highlighter-copy-button" title="Copy"><div class="urvanov-syntax-highlighter-button-icon"></div></div>
+<div class="crayon-button urvanov-syntax-highlighter-popup-button" title="Open Code In New Window"><div class="urvanov-syntax-highlighter-button-icon"></div></div>
+<span class="crayon-language">JavaScript</span>
+</div>
+</div>
+			<div class="crayon-info" style="min-height: 16.8px !important; line-height: 16.8px !important;"></div>
+			<div class="urvanov-syntax-highlighter-plain-wrap"><textarea wrap="soft" class="urvanov-syntax-highlighter-plain print-no" data-settings="dblclick" readonly style="-moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4; font-size: 12px !important; line-height: 15px !important;">
+var http = require('http');
+
+http.createServer(function(req, res) {
+  res.writeHead(200, { 'Content-Type': 'text/plain' });
+  res.end('Node is working');
+}).listen(3000);
+
+console.log('Server started on localhost:3000; Ctrl-C to terminate.');</textarea></div>
+			<div class="urvanov-syntax-highlighter-main">
+				<table class="crayon-table">
+					<tr class="urvanov-syntax-highlighter-row">
+				<td class="crayon-nums " data-settings="show">
+					<div class="urvanov-syntax-highlighter-nums-content" style="font-size: 12px !important; line-height: 15px !important;">
+<div class="crayon-num" data-line="urvanov-syntax-highlighter-647f451127b57981222874-1">1</div>
+<div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-647f451127b57981222874-2">2</div>
+<div class="crayon-num" data-line="urvanov-syntax-highlighter-647f451127b57981222874-3">3</div>
+<div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-647f451127b57981222874-4">4</div>
+<div class="crayon-num crayon-marked-num crayon-top crayon-bottom" data-line="urvanov-syntax-highlighter-647f451127b57981222874-5">5</div>
+<div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-647f451127b57981222874-6">6</div>
+<div class="crayon-num" data-line="urvanov-syntax-highlighter-647f451127b57981222874-7">7</div>
+<div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-647f451127b57981222874-8">8</div>
+</div>
+				</td>
+						<td class="urvanov-syntax-highlighter-code"><div class="crayon-pre" style="font-size: 12px !important; line-height: 15px !important; -moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4;">
+<div class="crayon-line" id="urvanov-syntax-highlighter-647f451127b57981222874-1">
+<span class="crayon-t">var</span><span class="crayon-h"> </span><span class="crayon-v">http</span><span class="crayon-h"> </span><span class="crayon-o">=</span><span class="crayon-h"> </span><span class="crayon-e">require</span><span class="crayon-sy">(</span><span class="crayon-s">'http'</span><span class="crayon-sy">)</span><span class="crayon-sy">;</span>
+</div>
+<div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-647f451127b57981222874-2">&nbsp;</div>
+<div class="crayon-line" id="urvanov-syntax-highlighter-647f451127b57981222874-3">
+<span class="crayon-v">http</span><span class="crayon-sy">.</span><span class="crayon-e">createServer</span><span class="crayon-sy">(</span><span class="crayon-t">function</span><span class="crayon-sy">(</span><span class="crayon-v">req</span><span class="crayon-sy">,</span><span class="crayon-h"> </span><span class="crayon-v">res</span><span class="crayon-sy">)</span><span class="crayon-h"> </span><span class="crayon-sy">{</span>
+</div>
+<div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-647f451127b57981222874-4">
+<span class="crayon-h">&nbsp;&nbsp;</span><span class="crayon-v">res</span><span class="crayon-sy">.</span><span class="crayon-e">writeHead</span><span class="crayon-sy">(</span><span class="crayon-cn">200</span><span class="crayon-sy">,</span><span class="crayon-h"> </span><span class="crayon-sy">{</span><span class="crayon-h"> </span><span class="crayon-s">'Content-Type'</span><span class="crayon-o">:</span><span class="crayon-h"> </span><span class="crayon-s">'text/plain'</span><span class="crayon-h"> </span><span class="crayon-sy">}</span><span class="crayon-sy">)</span><span class="crayon-sy">;</span>
+</div>
+<div class="crayon-line crayon-marked-line crayon-top crayon-bottom" id="urvanov-syntax-highlighter-647f451127b57981222874-5">
+<span class="crayon-h">&nbsp;&nbsp;</span><span class="crayon-v">res</span><span class="crayon-sy">.</span><span class="crayon-st">end</span><span class="crayon-sy">(</span><span class="crayon-s">'Node is working'</span><span class="crayon-sy">)</span><span class="crayon-sy">;</span>
+</div>
+<div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-647f451127b57981222874-6">
+<span class="crayon-sy">}</span><span class="crayon-sy">)</span><span class="crayon-sy">.</span><span class="crayon-e">listen</span><span class="crayon-sy">(</span><span class="crayon-cn">3000</span><span class="crayon-sy">)</span><span class="crayon-sy">;</span>
+</div>
+<div class="crayon-line" id="urvanov-syntax-highlighter-647f451127b57981222874-7">&nbsp;</div>
+<div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-647f451127b57981222874-8">
+<span class="crayon-v">console</span><span class="crayon-sy">.</span><span class="crayon-e">log</span><span class="crayon-sy">(</span><span class="crayon-s">'Server started on localhost:3000; Ctrl-C to terminate.'</span><span class="crayon-sy">)</span><span class="crayon-sy">;</span>
+</div>
+</div></td>
+					</tr>
+				</table>
+			</div>
+		</div>
+<!-- [Format Time: 0.0002 seconds] -->
+<p></p>
+<p>Do note there how I&#8217;ve gone back to my original listen() method.</p>
+<h2>Monitoring for Changes</h2>
+<p>Incidentally, before you make this change, consider this: if you make a change to your testNode.js file, you have to stop the server and then restart to see that change. That can get annoying really quick. I recommend installing a code monitoring module that will check if the code has changed and, if it has, will restart the server automatically. I&#8217;m using <a href="https://github.com/remy/nodemon">nodemon</a> which you can install like this:</p>
+<pre>
+$ npm install -g nodemon
+</pre>
+<p>You can use <a href="https://github.com/nodejitsu/forever">forever</a>, <a href="https://github.com/fgnass/node-dev">node-dev</a> or <a href="https://github.com/isaacs/node-supervisor">node-supervisor</a> as well. They all work pretty much the same way.</p>
+<p>npm is the package manager for Node packages. The npm tool is not, according to the <a href="https://www.npmjs.org/doc/misc/npm-faq.html">npm FAQ</a>, an acronym for Node Package Manager. Apparently it&#8217;s a &#8220;recursive bacronymic abbreviation for &#8220;npm is not an acroynm.&#8221; Whatever.</p>
+<p>The -g flag tells npm to install the nodemon package globally, meaning it&#8217;s available globally on the system and thus available to any Node app I create. Incidentally, if you&#8217;re wondering when you would install globally versus when you would not, the general rule of thumb is that JavaScript utilities (like nodemon) will generally be installed globally, whereas packages that are specific to your web app or project will not.</p>
+<p>As a note to Windows users, when you specify the -g option, the packages are installed in a subdirectory of your Windows home directory that essentially involves your username. There are numerous reports that a lot of these packages don&#8217;t perform well if there are spaces in your username.</p>
+<p>To try this, start your application like this:</p>
+<pre>
+$ nodemon testNode.js
+</pre>
+<p>You should see output like this:</p>
+<pre>
+14 Aug 06:46:54 - [nodemon] v1.2.1
+14 Aug 06:46:54 - [nodemon] to restart at any time, enter <code>rs</code>
+14 Aug 06:46:54 - [nodemon] watching: *.*
+14 Aug 06:46:54 - [nodemon] starting <code>node testNode.js</code>
+Server started on localhost:3000; Ctrl-C to terminate.
+</pre>
+<p>Now make the change I mentioned above in the last code example: remove the res.write() line and modify the res.end() line. Upon saving the changes in testNode.js file, you should see the following output:</p>
+<pre>
+14 Aug 06:46:54 - [nodemon] v1.2.1
+14 Aug 06:46:54 - [nodemon] to restart at any time, enter <code>rs</code>
+14 Aug 06:46:54 - [nodemon] watching: *.*
+14 Aug 06:46:54 - [nodemon] starting <code>node testNode.js</code>
+Server started on localhost:3000; Ctrl-C to terminate.
+<strong>14 Aug 06:47:14 - [nodemon] restarting due to changes...
+14 Aug 06:47:14 - [nodemon] starting <code>node testNode.js</code>
+Server started on localhost:3000; Ctrl-C to terminate.</strong>
+</pre>
+<p>As you can see, the server automatically restarted due to the change you made to the file.</p>
+<h1>The Event-Driven Model</h1>
+<p>Make sure you have at least some understanding that one of the core driving principles behind Node is that of event-driven programming. What that means is that you have to understand what events are available to you and how you can have your server/app respond to them. In the previous code example, the event is an HTTP request. The createServer() method takes a function as an argument. That function is invoked every time an HTTP request (event) is made. This simple program does nothing more than set the content type to plain text and sends the string &#8220;Node is working.&#8221;</p>
+<p>While simple, this is you writing your first web server, with Node.js at least. That&#8217;s pretty cool. This particular server doesn&#8217;t serve HTML; rather, it just transmits the message &#8220;Node is working&#8221; in plain text to your browser. If you want, you can experiment with sending HTML instead, you could modify your example like this:</p>
+<p></p>
+<!-- Urvanov Syntax Highlighter v2.8.33 -->
+
+		<div id="urvanov-syntax-highlighter-647f451127b60161184137" class="urvanov-syntax-highlighter-syntax crayon-theme-classic urvanov-syntax-highlighter-font-monaco urvanov-syntax-highlighter-os-pc print-yes notranslate" data-settings=" minimize scroll-mouseover" style="margin-top: 12px; margin-bottom: 12px; font-size: 12px !important; line-height: 15px !important;">
+		
+			<div class="crayon-toolbar" data-settings=" mouseover overlay hide delay" style="font-size: 12px !important;height: 18px !important; line-height: 18px !important;">
+<span class="crayon-title"></span>
+			<div class="crayon-tools" style="font-size: 12px !important;height: 18px !important; line-height: 18px !important;">
+<div class="crayon-button urvanov-syntax-highlighter-nums-button" title="Toggle Line Numbers"><div class="urvanov-syntax-highlighter-button-icon"></div></div>
+<div class="crayon-button urvanov-syntax-highlighter-plain-button" title="Toggle Plain Code"><div class="urvanov-syntax-highlighter-button-icon"></div></div>
+<div class="crayon-button urvanov-syntax-highlighter-wrap-button" title="Toggle Line Wrap"><div class="urvanov-syntax-highlighter-button-icon"></div></div>
+<div class="crayon-button urvanov-syntax-highlighter-expand-button" title="Expand Code"><div class="urvanov-syntax-highlighter-button-icon"></div></div>
+<div class="crayon-button urvanov-syntax-highlighter-copy-button" title="Copy"><div class="urvanov-syntax-highlighter-button-icon"></div></div>
+<div class="crayon-button urvanov-syntax-highlighter-popup-button" title="Open Code In New Window"><div class="urvanov-syntax-highlighter-button-icon"></div></div>
+<span class="crayon-language">JavaScript</span>
+</div>
+</div>
+			<div class="crayon-info" style="min-height: 16.8px !important; line-height: 16.8px !important;"></div>
+			<div class="urvanov-syntax-highlighter-plain-wrap"><textarea wrap="soft" class="urvanov-syntax-highlighter-plain print-no" data-settings="dblclick" readonly style="-moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4; font-size: 12px !important; line-height: 15px !important;">
+var http = require('http');
+
+http.createServer(function(req, res) {
+  res.writeHead(200, { 'Content-Type': 'text/html' });
+  res.end('&lt;h1&gt;Node is Working&lt;/h1&gt;');
+}).listen(3000);
+
+console.log('Server started on localhost:3000; Ctrl-C to terminate.');</textarea></div>
+			<div class="urvanov-syntax-highlighter-main">
+				<table class="crayon-table">
+					<tr class="urvanov-syntax-highlighter-row">
+				<td class="crayon-nums " data-settings="show">
+					<div class="urvanov-syntax-highlighter-nums-content" style="font-size: 12px !important; line-height: 15px !important;">
+<div class="crayon-num" data-line="urvanov-syntax-highlighter-647f451127b60161184137-1">1</div>
+<div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-647f451127b60161184137-2">2</div>
+<div class="crayon-num" data-line="urvanov-syntax-highlighter-647f451127b60161184137-3">3</div>
+<div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-647f451127b60161184137-4">4</div>
+<div class="crayon-num" data-line="urvanov-syntax-highlighter-647f451127b60161184137-5">5</div>
+<div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-647f451127b60161184137-6">6</div>
+<div class="crayon-num" data-line="urvanov-syntax-highlighter-647f451127b60161184137-7">7</div>
+<div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-647f451127b60161184137-8">8</div>
+</div>
+				</td>
+						<td class="urvanov-syntax-highlighter-code"><div class="crayon-pre" style="font-size: 12px !important; line-height: 15px !important; -moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4;">
+<div class="crayon-line" id="urvanov-syntax-highlighter-647f451127b60161184137-1">
+<span class="crayon-t">var</span><span class="crayon-h"> </span><span class="crayon-v">http</span><span class="crayon-h"> </span><span class="crayon-o">=</span><span class="crayon-h"> </span><span class="crayon-e">require</span><span class="crayon-sy">(</span><span class="crayon-s">'http'</span><span class="crayon-sy">)</span><span class="crayon-sy">;</span>
+</div>
+<div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-647f451127b60161184137-2">&nbsp;</div>
+<div class="crayon-line" id="urvanov-syntax-highlighter-647f451127b60161184137-3">
+<span class="crayon-v">http</span><span class="crayon-sy">.</span><span class="crayon-e">createServer</span><span class="crayon-sy">(</span><span class="crayon-t">function</span><span class="crayon-sy">(</span><span class="crayon-v">req</span><span class="crayon-sy">,</span><span class="crayon-h"> </span><span class="crayon-v">res</span><span class="crayon-sy">)</span><span class="crayon-h"> </span><span class="crayon-sy">{</span>
+</div>
+<div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-647f451127b60161184137-4">
+<span class="crayon-h">&nbsp;&nbsp;</span><span class="crayon-v">res</span><span class="crayon-sy">.</span><span class="crayon-e">writeHead</span><span class="crayon-sy">(</span><span class="crayon-cn">200</span><span class="crayon-sy">,</span><span class="crayon-h"> </span><span class="crayon-sy">{</span><span class="crayon-h"> </span><span class="crayon-s">'Content-Type'</span><span class="crayon-o">:</span><span class="crayon-h"> </span><span class="crayon-s">'text/html'</span><span class="crayon-h"> </span><span class="crayon-sy">}</span><span class="crayon-sy">)</span><span class="crayon-sy">;</span>
+</div>
+<div class="crayon-line" id="urvanov-syntax-highlighter-647f451127b60161184137-5">
+<span class="crayon-h">&nbsp;&nbsp;</span><span class="crayon-v">res</span><span class="crayon-sy">.</span><span class="crayon-st">end</span><span class="crayon-sy">(</span><span class="crayon-s">'&lt;h1&gt;Node is Working&lt;/h1&gt;'</span><span class="crayon-sy">)</span><span class="crayon-sy">;</span>
+</div>
+<div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-647f451127b60161184137-6">
+<span class="crayon-sy">}</span><span class="crayon-sy">)</span><span class="crayon-sy">.</span><span class="crayon-e">listen</span><span class="crayon-sy">(</span><span class="crayon-cn">3000</span><span class="crayon-sy">)</span><span class="crayon-sy">;</span>
+</div>
+<div class="crayon-line" id="urvanov-syntax-highlighter-647f451127b60161184137-7">&nbsp;</div>
+<div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-647f451127b60161184137-8">
+<span class="crayon-v">console</span><span class="crayon-sy">.</span><span class="crayon-e">log</span><span class="crayon-sy">(</span><span class="crayon-s">'Server started on localhost:3000; Ctrl-C to terminate.'</span><span class="crayon-sy">)</span><span class="crayon-sy">;</span>
+</div>
+</div></td>
+					</tr>
+				</table>
+			</div>
+		</div>
+<!-- [Format Time: 0.0002 seconds] -->
+<p></p>
+<p>The key differences there are pretty clear, I think. You have to send a header indicating the content is HTML (&#8220;text/html&#8221;) and you can include HTML in your string that is sent to the response body.</p>
+<p>The event driven model, however, remains the same.</p>
+<h1>Explore the Asynchronous</h1>
+<p>Now stop your running server with Ctrl+C. The reason for this is because I&#8217;m going to ask you to write a different file and we&#8217;re going to use the new application we write to call up the existing testNode.js file. I&#8217;m doing this because I want to demonstrate Node&#8217;s asynchronous nature by creating a file that opens up the previously created testNode.js and outputs the contents to the client.</p>
+<p>To get started, create a file called <strong>readTestNode.js</strong>. In that file, start with this:</p>
+<p></p>
+<!-- Urvanov Syntax Highlighter v2.8.33 -->
+
+		<div id="urvanov-syntax-highlighter-647f451127b64989454574" class="urvanov-syntax-highlighter-syntax crayon-theme-classic urvanov-syntax-highlighter-font-monaco urvanov-syntax-highlighter-os-pc print-yes notranslate" data-settings=" minimize scroll-mouseover" style="margin-top: 12px; margin-bottom: 12px; font-size: 12px !important; line-height: 15px !important;">
+		
+			<div class="crayon-toolbar" data-settings=" mouseover overlay hide delay" style="font-size: 12px !important;height: 18px !important; line-height: 18px !important;">
+<span class="crayon-title"></span>
+			<div class="crayon-tools" style="font-size: 12px !important;height: 18px !important; line-height: 18px !important;">
+<div class="crayon-button urvanov-syntax-highlighter-nums-button" title="Toggle Line Numbers"><div class="urvanov-syntax-highlighter-button-icon"></div></div>
+<div class="crayon-button urvanov-syntax-highlighter-plain-button" title="Toggle Plain Code"><div class="urvanov-syntax-highlighter-button-icon"></div></div>
+<div class="crayon-button urvanov-syntax-highlighter-wrap-button" title="Toggle Line Wrap"><div class="urvanov-syntax-highlighter-button-icon"></div></div>
+<div class="crayon-button urvanov-syntax-highlighter-expand-button" title="Expand Code"><div class="urvanov-syntax-highlighter-button-icon"></div></div>
+<div class="crayon-button urvanov-syntax-highlighter-copy-button" title="Copy"><div class="urvanov-syntax-highlighter-button-icon"></div></div>
+<div class="crayon-button urvanov-syntax-highlighter-popup-button" title="Open Code In New Window"><div class="urvanov-syntax-highlighter-button-icon"></div></div>
+<span class="crayon-language">JavaScript</span>
+</div>
+</div>
+			<div class="crayon-info" style="min-height: 16.8px !important; line-height: 16.8px !important;"></div>
+			<div class="urvanov-syntax-highlighter-plain-wrap"><textarea wrap="soft" class="urvanov-syntax-highlighter-plain print-no" data-settings="dblclick" readonly style="-moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4; font-size: 12px !important; line-height: 15px !important;">
+var http = require('http');
+
+http.createServer(function(req, res) {
+}).listen(3000);
+
+console.log('Server started on localhost:3000; Ctrl-C to terminate.');</textarea></div>
+			<div class="urvanov-syntax-highlighter-main">
+				<table class="crayon-table">
+					<tr class="urvanov-syntax-highlighter-row">
+				<td class="crayon-nums " data-settings="show">
+					<div class="urvanov-syntax-highlighter-nums-content" style="font-size: 12px !important; line-height: 15px !important;">
+<div class="crayon-num" data-line="urvanov-syntax-highlighter-647f451127b64989454574-1">1</div>
+<div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-647f451127b64989454574-2">2</div>
+<div class="crayon-num" data-line="urvanov-syntax-highlighter-647f451127b64989454574-3">3</div>
+<div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-647f451127b64989454574-4">4</div>
+<div class="crayon-num" data-line="urvanov-syntax-highlighter-647f451127b64989454574-5">5</div>
+<div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-647f451127b64989454574-6">6</div>
+</div>
+				</td>
+						<td class="urvanov-syntax-highlighter-code"><div class="crayon-pre" style="font-size: 12px !important; line-height: 15px !important; -moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4;">
+<div class="crayon-line" id="urvanov-syntax-highlighter-647f451127b64989454574-1">
+<span class="crayon-t">var</span><span class="crayon-h"> </span><span class="crayon-v">http</span><span class="crayon-h"> </span><span class="crayon-o">=</span><span class="crayon-h"> </span><span class="crayon-e">require</span><span class="crayon-sy">(</span><span class="crayon-s">'http'</span><span class="crayon-sy">)</span><span class="crayon-sy">;</span>
+</div>
+<div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-647f451127b64989454574-2">&nbsp;</div>
+<div class="crayon-line" id="urvanov-syntax-highlighter-647f451127b64989454574-3">
+<span class="crayon-v">http</span><span class="crayon-sy">.</span><span class="crayon-e">createServer</span><span class="crayon-sy">(</span><span class="crayon-t">function</span><span class="crayon-sy">(</span><span class="crayon-v">req</span><span class="crayon-sy">,</span><span class="crayon-h"> </span><span class="crayon-v">res</span><span class="crayon-sy">)</span><span class="crayon-h"> </span><span class="crayon-sy">{</span>
+</div>
+<div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-647f451127b64989454574-4">
+<span class="crayon-sy">}</span><span class="crayon-sy">)</span><span class="crayon-sy">.</span><span class="crayon-e">listen</span><span class="crayon-sy">(</span><span class="crayon-cn">3000</span><span class="crayon-sy">)</span><span class="crayon-sy">;</span>
+</div>
+<div class="crayon-line" id="urvanov-syntax-highlighter-647f451127b64989454574-5">&nbsp;</div>
+<div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-647f451127b64989454574-6">
+<span class="crayon-v">console</span><span class="crayon-sy">.</span><span class="crayon-e">log</span><span class="crayon-sy">(</span><span class="crayon-s">'Server started on localhost:3000; Ctrl-C to terminate.'</span><span class="crayon-sy">)</span><span class="crayon-sy">;</span>
+</div>
+</div></td>
+					</tr>
+				</table>
+			</div>
+		</div>
+<!-- [Format Time: 0.0002 seconds] -->
+<p></p>
+<p>So far that&#8217;s the start of what you did before. I&#8217;m going to build this file a bit more incrementally. First let&#8217;s add a new module:</p>
+<p></p>
+<!-- Urvanov Syntax Highlighter v2.8.33 -->
+
+		<div id="urvanov-syntax-highlighter-647f451127b65069672967" class="urvanov-syntax-highlighter-syntax crayon-theme-classic urvanov-syntax-highlighter-font-monaco urvanov-syntax-highlighter-os-pc print-yes notranslate" data-settings=" minimize scroll-mouseover" style="margin-top: 12px; margin-bottom: 12px; font-size: 12px !important; line-height: 15px !important;">
+		
+			<div class="crayon-toolbar" data-settings=" mouseover overlay hide delay" style="font-size: 12px !important;height: 18px !important; line-height: 18px !important;">
+<span class="crayon-title"></span>
+			<div class="crayon-tools" style="font-size: 12px !important;height: 18px !important; line-height: 18px !important;">
+<div class="crayon-button urvanov-syntax-highlighter-nums-button" title="Toggle Line Numbers"><div class="urvanov-syntax-highlighter-button-icon"></div></div>
+<div class="crayon-button urvanov-syntax-highlighter-plain-button" title="Toggle Plain Code"><div class="urvanov-syntax-highlighter-button-icon"></div></div>
+<div class="crayon-button urvanov-syntax-highlighter-wrap-button" title="Toggle Line Wrap"><div class="urvanov-syntax-highlighter-button-icon"></div></div>
+<div class="crayon-button urvanov-syntax-highlighter-expand-button" title="Expand Code"><div class="urvanov-syntax-highlighter-button-icon"></div></div>
+<div class="crayon-button urvanov-syntax-highlighter-copy-button" title="Copy"><div class="urvanov-syntax-highlighter-button-icon"></div></div>
+<div class="crayon-button urvanov-syntax-highlighter-popup-button" title="Open Code In New Window"><div class="urvanov-syntax-highlighter-button-icon"></div></div>
+<span class="crayon-language">JavaScript</span>
+</div>
+</div>
+			<div class="crayon-info" style="min-height: 16.8px !important; line-height: 16.8px !important;"></div>
+			<div class="urvanov-syntax-highlighter-plain-wrap"><textarea wrap="soft" class="urvanov-syntax-highlighter-plain print-no" data-settings="dblclick" readonly style="-moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4; font-size: 12px !important; line-height: 15px !important;">
+var http = require('http');
+var fs = require('fs');
+
+http.createServer(function(req, res) {
+}).listen(3000);
+
+console.log('Server started on localhost:3000; Ctrl-C to terminate.');</textarea></div>
+			<div class="urvanov-syntax-highlighter-main">
+				<table class="crayon-table">
+					<tr class="urvanov-syntax-highlighter-row">
+				<td class="crayon-nums " data-settings="show">
+					<div class="urvanov-syntax-highlighter-nums-content" style="font-size: 12px !important; line-height: 15px !important;">
+<div class="crayon-num" data-line="urvanov-syntax-highlighter-647f451127b65069672967-1">1</div>
+<div class="crayon-num crayon-marked-num crayon-top crayon-bottom crayon-striped-num" data-line="urvanov-syntax-highlighter-647f451127b65069672967-2">2</div>
+<div class="crayon-num" data-line="urvanov-syntax-highlighter-647f451127b65069672967-3">3</div>
+<div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-647f451127b65069672967-4">4</div>
+<div class="crayon-num" data-line="urvanov-syntax-highlighter-647f451127b65069672967-5">5</div>
+<div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-647f451127b65069672967-6">6</div>
+<div class="crayon-num" data-line="urvanov-syntax-highlighter-647f451127b65069672967-7">7</div>
+</div>
+				</td>
+						<td class="urvanov-syntax-highlighter-code"><div class="crayon-pre" style="font-size: 12px !important; line-height: 15px !important; -moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4;">
+<div class="crayon-line" id="urvanov-syntax-highlighter-647f451127b65069672967-1">
+<span class="crayon-t">var</span><span class="crayon-h"> </span><span class="crayon-v">http</span><span class="crayon-h"> </span><span class="crayon-o">=</span><span class="crayon-h"> </span><span class="crayon-e">require</span><span class="crayon-sy">(</span><span class="crayon-s">'http'</span><span class="crayon-sy">)</span><span class="crayon-sy">;</span>
+</div>
+<div class="crayon-line crayon-marked-line crayon-top crayon-bottom crayon-striped-line" id="urvanov-syntax-highlighter-647f451127b65069672967-2">
+<span class="crayon-t">var</span><span class="crayon-h"> </span><span class="crayon-v">fs</span><span class="crayon-h"> </span><span class="crayon-o">=</span><span class="crayon-h"> </span><span class="crayon-e">require</span><span class="crayon-sy">(</span><span class="crayon-s">'fs'</span><span class="crayon-sy">)</span><span class="crayon-sy">;</span>
+</div>
+<div class="crayon-line" id="urvanov-syntax-highlighter-647f451127b65069672967-3">&nbsp;</div>
+<div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-647f451127b65069672967-4">
+<span class="crayon-v">http</span><span class="crayon-sy">.</span><span class="crayon-e">createServer</span><span class="crayon-sy">(</span><span class="crayon-t">function</span><span class="crayon-sy">(</span><span class="crayon-v">req</span><span class="crayon-sy">,</span><span class="crayon-h"> </span><span class="crayon-v">res</span><span class="crayon-sy">)</span><span class="crayon-h"> </span><span class="crayon-sy">{</span>
+</div>
+<div class="crayon-line" id="urvanov-syntax-highlighter-647f451127b65069672967-5">
+<span class="crayon-sy">}</span><span class="crayon-sy">)</span><span class="crayon-sy">.</span><span class="crayon-e">listen</span><span class="crayon-sy">(</span><span class="crayon-cn">3000</span><span class="crayon-sy">)</span><span class="crayon-sy">;</span>
+</div>
+<div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-647f451127b65069672967-6">&nbsp;</div>
+<div class="crayon-line" id="urvanov-syntax-highlighter-647f451127b65069672967-7">
+<span class="crayon-v">console</span><span class="crayon-sy">.</span><span class="crayon-e">log</span><span class="crayon-sy">(</span><span class="crayon-s">'Server started on localhost:3000; Ctrl-C to terminate.'</span><span class="crayon-sy">)</span><span class="crayon-sy">;</span>
+</div>
+</div></td>
+					</tr>
+				</table>
+			</div>
+		</div>
+<!-- [Format Time: 0.0002 seconds] -->
+<p></p>
+<p>A new module, File System (fs), is required. The File System module wraps standard file handling functionality. This includes opening and closing files, accessing the contents of a file, and so on. Now add the following:</p>
+<p></p>
+<!-- Urvanov Syntax Highlighter v2.8.33 -->
+
+		<div id="urvanov-syntax-highlighter-647f451127b66388867493" class="urvanov-syntax-highlighter-syntax crayon-theme-classic urvanov-syntax-highlighter-font-monaco urvanov-syntax-highlighter-os-pc print-yes notranslate" data-settings=" minimize scroll-mouseover" style="margin-top: 12px; margin-bottom: 12px; font-size: 12px !important; line-height: 15px !important;">
+		
+			<div class="crayon-toolbar" data-settings=" mouseover overlay hide delay" style="font-size: 12px !important;height: 18px !important; line-height: 18px !important;">
+<span class="crayon-title"></span>
+			<div class="crayon-tools" style="font-size: 12px !important;height: 18px !important; line-height: 18px !important;">
+<div class="crayon-button urvanov-syntax-highlighter-nums-button" title="Toggle Line Numbers"><div class="urvanov-syntax-highlighter-button-icon"></div></div>
+<div class="crayon-button urvanov-syntax-highlighter-plain-button" title="Toggle Plain Code"><div class="urvanov-syntax-highlighter-button-icon"></div></div>
+<div class="crayon-button urvanov-syntax-highlighter-wrap-button" title="Toggle Line Wrap"><div class="urvanov-syntax-highlighter-button-icon"></div></div>
+<div class="crayon-button urvanov-syntax-highlighter-expand-button" title="Expand Code"><div class="urvanov-syntax-highlighter-button-icon"></div></div>
+<div class="crayon-button urvanov-syntax-highlighter-copy-button" title="Copy"><div class="urvanov-syntax-highlighter-button-icon"></div></div>
+<div class="crayon-button urvanov-syntax-highlighter-popup-button" title="Open Code In New Window"><div class="urvanov-syntax-highlighter-button-icon"></div></div>
+<span class="crayon-language">JavaScript</span>
+</div>
+</div>
+			<div class="crayon-info" style="min-height: 16.8px !important; line-height: 16.8px !important;"></div>
+			<div class="urvanov-syntax-highlighter-plain-wrap"><textarea wrap="soft" class="urvanov-syntax-highlighter-plain print-no" data-settings="dblclick" readonly style="-moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4; font-size: 12px !important; line-height: 15px !important;">
+var http = require('http');
+var fs = require('fs');
+
+http.createServer(function(req, res) {
+  fs.readFile('testNode.js', 'utf8', function(err, data) {
+    
+  });
+}).listen(3000);
+
+console.log('Server started on localhost:3000; Ctrl-C to terminate.');</textarea></div>
+			<div class="urvanov-syntax-highlighter-main">
+				<table class="crayon-table">
+					<tr class="urvanov-syntax-highlighter-row">
+				<td class="crayon-nums " data-settings="show">
+					<div class="urvanov-syntax-highlighter-nums-content" style="font-size: 12px !important; line-height: 15px !important;">
+<div class="crayon-num" data-line="urvanov-syntax-highlighter-647f451127b66388867493-1">1</div>
+<div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-647f451127b66388867493-2">2</div>
+<div class="crayon-num" data-line="urvanov-syntax-highlighter-647f451127b66388867493-3">3</div>
+<div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-647f451127b66388867493-4">4</div>
+<div class="crayon-num crayon-marked-num crayon-top" data-line="urvanov-syntax-highlighter-647f451127b66388867493-5">5</div>
+<div class="crayon-num crayon-marked-num crayon-striped-num" data-line="urvanov-syntax-highlighter-647f451127b66388867493-6">6</div>
+<div class="crayon-num crayon-marked-num crayon-bottom" data-line="urvanov-syntax-highlighter-647f451127b66388867493-7">7</div>
+<div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-647f451127b66388867493-8">8</div>
+<div class="crayon-num" data-line="urvanov-syntax-highlighter-647f451127b66388867493-9">9</div>
+<div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-647f451127b66388867493-10">10</div>
+</div>
+				</td>
+						<td class="urvanov-syntax-highlighter-code"><div class="crayon-pre" style="font-size: 12px !important; line-height: 15px !important; -moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4;">
+<div class="crayon-line" id="urvanov-syntax-highlighter-647f451127b66388867493-1">
+<span class="crayon-t">var</span><span class="crayon-h"> </span><span class="crayon-v">http</span><span class="crayon-h"> </span><span class="crayon-o">=</span><span class="crayon-h"> </span><span class="crayon-e">require</span><span class="crayon-sy">(</span><span class="crayon-s">'http'</span><span class="crayon-sy">)</span><span class="crayon-sy">;</span>
+</div>
+<div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-647f451127b66388867493-2">
+<span class="crayon-t">var</span><span class="crayon-h"> </span><span class="crayon-v">fs</span><span class="crayon-h"> </span><span class="crayon-o">=</span><span class="crayon-h"> </span><span class="crayon-e">require</span><span class="crayon-sy">(</span><span class="crayon-s">'fs'</span><span class="crayon-sy">)</span><span class="crayon-sy">;</span>
+</div>
+<div class="crayon-line" id="urvanov-syntax-highlighter-647f451127b66388867493-3">&nbsp;</div>
+<div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-647f451127b66388867493-4">
+<span class="crayon-v">http</span><span class="crayon-sy">.</span><span class="crayon-e">createServer</span><span class="crayon-sy">(</span><span class="crayon-t">function</span><span class="crayon-sy">(</span><span class="crayon-v">req</span><span class="crayon-sy">,</span><span class="crayon-h"> </span><span class="crayon-v">res</span><span class="crayon-sy">)</span><span class="crayon-h"> </span><span class="crayon-sy">{</span>
+</div>
+<div class="crayon-line crayon-marked-line crayon-top" id="urvanov-syntax-highlighter-647f451127b66388867493-5">
+<span class="crayon-h">&nbsp;&nbsp;</span><span class="crayon-v">fs</span><span class="crayon-sy">.</span><span class="crayon-e">readFile</span><span class="crayon-sy">(</span><span class="crayon-s">'testNode.js'</span><span class="crayon-sy">,</span><span class="crayon-h"> </span><span class="crayon-s">'utf8'</span><span class="crayon-sy">,</span><span class="crayon-h"> </span><span class="crayon-t">function</span><span class="crayon-sy">(</span><span class="crayon-v">err</span><span class="crayon-sy">,</span><span class="crayon-h"> </span><span class="crayon-v">data</span><span class="crayon-sy">)</span><span class="crayon-h"> </span><span class="crayon-sy">{</span>
+</div>
+<div class="crayon-line crayon-marked-line crayon-striped-line" id="urvanov-syntax-highlighter-647f451127b66388867493-6"><span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;</span></div>
+<div class="crayon-line crayon-marked-line crayon-bottom" id="urvanov-syntax-highlighter-647f451127b66388867493-7">
+<span class="crayon-h">&nbsp;&nbsp;</span><span class="crayon-sy">}</span><span class="crayon-sy">)</span><span class="crayon-sy">;</span>
+</div>
+<div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-647f451127b66388867493-8">
+<span class="crayon-sy">}</span><span class="crayon-sy">)</span><span class="crayon-sy">.</span><span class="crayon-e">listen</span><span class="crayon-sy">(</span><span class="crayon-cn">3000</span><span class="crayon-sy">)</span><span class="crayon-sy">;</span>
+</div>
+<div class="crayon-line" id="urvanov-syntax-highlighter-647f451127b66388867493-9">&nbsp;</div>
+<div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-647f451127b66388867493-10">
+<span class="crayon-v">console</span><span class="crayon-sy">.</span><span class="crayon-e">log</span><span class="crayon-sy">(</span><span class="crayon-s">'Server started on localhost:3000; Ctrl-C to terminate.'</span><span class="crayon-sy">)</span><span class="crayon-sy">;</span>
+</div>
+</div></td>
+					</tr>
+				</table>
+			</div>
+		</div>
+<!-- [Format Time: 0.0003 seconds] -->
+<p></p>
+<p>The method used from the fs module is readFile(). Here that method is passed the name of the file to open, the encoding of that file, and an anonymous function which, by now, you know is the callback function. That callback function attached to the readFile() method is an instance of asynchronous behavior. Why do that here? Well, consider that access a file can be a time-consuming operation. If you have lots of clients hitting your server trying to access the same file, and if your server blocks on file access, you can imagine the user experience is going to be less good the more people there are using your app.</p>
+<p>With this example, that&#8217;s not a problem because the file is opened and the contents are read asynchronously. Only when the contents have been read into the data buffer &#8212; or an error occurs during the reading process &#8212; is the callback function that was passed to the readFile() method invoked. That function will be passed the error (if any) or the data from the readFile action if no error occurs. So now let&#8217;s write the contents of the function:</p>
+<p></p>
+<!-- Urvanov Syntax Highlighter v2.8.33 -->
+
+		<div id="urvanov-syntax-highlighter-647f451127b67126321210" class="urvanov-syntax-highlighter-syntax crayon-theme-classic urvanov-syntax-highlighter-font-monaco urvanov-syntax-highlighter-os-pc print-yes notranslate" data-settings=" minimize scroll-mouseover" style="margin-top: 12px; margin-bottom: 12px; font-size: 12px !important; line-height: 15px !important;">
+		
+			<div class="crayon-toolbar" data-settings=" mouseover overlay hide delay" style="font-size: 12px !important;height: 18px !important; line-height: 18px !important;">
+<span class="crayon-title"></span>
+			<div class="crayon-tools" style="font-size: 12px !important;height: 18px !important; line-height: 18px !important;">
+<div class="crayon-button urvanov-syntax-highlighter-nums-button" title="Toggle Line Numbers"><div class="urvanov-syntax-highlighter-button-icon"></div></div>
+<div class="crayon-button urvanov-syntax-highlighter-plain-button" title="Toggle Plain Code"><div class="urvanov-syntax-highlighter-button-icon"></div></div>
+<div class="crayon-button urvanov-syntax-highlighter-wrap-button" title="Toggle Line Wrap"><div class="urvanov-syntax-highlighter-button-icon"></div></div>
+<div class="crayon-button urvanov-syntax-highlighter-expand-button" title="Expand Code"><div class="urvanov-syntax-highlighter-button-icon"></div></div>
+<div class="crayon-button urvanov-syntax-highlighter-copy-button" title="Copy"><div class="urvanov-syntax-highlighter-button-icon"></div></div>
+<div class="crayon-button urvanov-syntax-highlighter-popup-button" title="Open Code In New Window"><div class="urvanov-syntax-highlighter-button-icon"></div></div>
+<span class="crayon-language">JavaScript</span>
+</div>
+</div>
+			<div class="crayon-info" style="min-height: 16.8px !important; line-height: 16.8px !important;"></div>
+			<div class="urvanov-syntax-highlighter-plain-wrap"><textarea wrap="soft" class="urvanov-syntax-highlighter-plain print-no" data-settings="dblclick" readonly style="-moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4; font-size: 12px !important; line-height: 15px !important;">
+var http = require('http');
+var fs = require('fs');
+
+http.createServer(function(req, res) {
+  fs.readFile('testNode.js', 'utf8', function(err, data) {
+    res.writeHead(200, { 'Content-Type': 'text/plain' });
+    if (err)
+      res.write('Unable to find or open file for reading\n');
+    else
+      res.write(data);
+    res.end();
+  });
+}).listen(3000);
+
+console.log('Server started on localhost:3000; Ctrl-C to terminate.');</textarea></div>
+			<div class="urvanov-syntax-highlighter-main">
+				<table class="crayon-table">
+					<tr class="urvanov-syntax-highlighter-row">
+				<td class="crayon-nums " data-settings="show">
+					<div class="urvanov-syntax-highlighter-nums-content" style="font-size: 12px !important; line-height: 15px !important;">
+<div class="crayon-num" data-line="urvanov-syntax-highlighter-647f451127b67126321210-1">1</div>
+<div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-647f451127b67126321210-2">2</div>
+<div class="crayon-num" data-line="urvanov-syntax-highlighter-647f451127b67126321210-3">3</div>
+<div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-647f451127b67126321210-4">4</div>
+<div class="crayon-num" data-line="urvanov-syntax-highlighter-647f451127b67126321210-5">5</div>
+<div class="crayon-num crayon-marked-num crayon-top crayon-striped-num" data-line="urvanov-syntax-highlighter-647f451127b67126321210-6">6</div>
+<div class="crayon-num crayon-marked-num" data-line="urvanov-syntax-highlighter-647f451127b67126321210-7">7</div>
+<div class="crayon-num crayon-marked-num crayon-striped-num" data-line="urvanov-syntax-highlighter-647f451127b67126321210-8">8</div>
+<div class="crayon-num crayon-marked-num" data-line="urvanov-syntax-highlighter-647f451127b67126321210-9">9</div>
+<div class="crayon-num crayon-marked-num crayon-striped-num" data-line="urvanov-syntax-highlighter-647f451127b67126321210-10">10</div>
+<div class="crayon-num crayon-marked-num crayon-bottom" data-line="urvanov-syntax-highlighter-647f451127b67126321210-11">11</div>
+<div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-647f451127b67126321210-12">12</div>
+<div class="crayon-num" data-line="urvanov-syntax-highlighter-647f451127b67126321210-13">13</div>
+<div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-647f451127b67126321210-14">14</div>
+<div class="crayon-num" data-line="urvanov-syntax-highlighter-647f451127b67126321210-15">15</div>
+</div>
+				</td>
+						<td class="urvanov-syntax-highlighter-code"><div class="crayon-pre" style="font-size: 12px !important; line-height: 15px !important; -moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4;">
+<div class="crayon-line" id="urvanov-syntax-highlighter-647f451127b67126321210-1">
+<span class="crayon-t">var</span><span class="crayon-h"> </span><span class="crayon-v">http</span><span class="crayon-h"> </span><span class="crayon-o">=</span><span class="crayon-h"> </span><span class="crayon-e">require</span><span class="crayon-sy">(</span><span class="crayon-s">'http'</span><span class="crayon-sy">)</span><span class="crayon-sy">;</span>
+</div>
+<div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-647f451127b67126321210-2">
+<span class="crayon-t">var</span><span class="crayon-h"> </span><span class="crayon-v">fs</span><span class="crayon-h"> </span><span class="crayon-o">=</span><span class="crayon-h"> </span><span class="crayon-e">require</span><span class="crayon-sy">(</span><span class="crayon-s">'fs'</span><span class="crayon-sy">)</span><span class="crayon-sy">;</span>
+</div>
+<div class="crayon-line" id="urvanov-syntax-highlighter-647f451127b67126321210-3">&nbsp;</div>
+<div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-647f451127b67126321210-4">
+<span class="crayon-v">http</span><span class="crayon-sy">.</span><span class="crayon-e">createServer</span><span class="crayon-sy">(</span><span class="crayon-t">function</span><span class="crayon-sy">(</span><span class="crayon-v">req</span><span class="crayon-sy">,</span><span class="crayon-h"> </span><span class="crayon-v">res</span><span class="crayon-sy">)</span><span class="crayon-h"> </span><span class="crayon-sy">{</span>
+</div>
+<div class="crayon-line" id="urvanov-syntax-highlighter-647f451127b67126321210-5">
+<span class="crayon-h">&nbsp;&nbsp;</span><span class="crayon-v">fs</span><span class="crayon-sy">.</span><span class="crayon-e">readFile</span><span class="crayon-sy">(</span><span class="crayon-s">'testNode.js'</span><span class="crayon-sy">,</span><span class="crayon-h"> </span><span class="crayon-s">'utf8'</span><span class="crayon-sy">,</span><span class="crayon-h"> </span><span class="crayon-t">function</span><span class="crayon-sy">(</span><span class="crayon-v">err</span><span class="crayon-sy">,</span><span class="crayon-h"> </span><span class="crayon-v">data</span><span class="crayon-sy">)</span><span class="crayon-h"> </span><span class="crayon-sy">{</span>
+</div>
+<div class="crayon-line crayon-marked-line crayon-top crayon-striped-line" id="urvanov-syntax-highlighter-647f451127b67126321210-6">
+<span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-v">res</span><span class="crayon-sy">.</span><span class="crayon-e">writeHead</span><span class="crayon-sy">(</span><span class="crayon-cn">200</span><span class="crayon-sy">,</span><span class="crayon-h"> </span><span class="crayon-sy">{</span><span class="crayon-h"> </span><span class="crayon-s">'Content-Type'</span><span class="crayon-o">:</span><span class="crayon-h"> </span><span class="crayon-s">'text/plain'</span><span class="crayon-h"> </span><span class="crayon-sy">}</span><span class="crayon-sy">)</span><span class="crayon-sy">;</span>
+</div>
+<div class="crayon-line crayon-marked-line" id="urvanov-syntax-highlighter-647f451127b67126321210-7">
+<span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-st">if</span><span class="crayon-h"> </span><span class="crayon-sy">(</span><span class="crayon-v">err</span><span class="crayon-sy">)</span>
+</div>
+<div class="crayon-line crayon-marked-line crayon-striped-line" id="urvanov-syntax-highlighter-647f451127b67126321210-8">
+<span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-v">res</span><span class="crayon-sy">.</span><span class="crayon-e">write</span><span class="crayon-sy">(</span><span class="crayon-s">'Unable to find or open file for reading\n'</span><span class="crayon-sy">)</span><span class="crayon-sy">;</span>
+</div>
+<div class="crayon-line crayon-marked-line" id="urvanov-syntax-highlighter-647f451127b67126321210-9">
+<span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-st">else</span>
+</div>
+<div class="crayon-line crayon-marked-line crayon-striped-line" id="urvanov-syntax-highlighter-647f451127b67126321210-10">
+<span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-v">res</span><span class="crayon-sy">.</span><span class="crayon-e">write</span><span class="crayon-sy">(</span><span class="crayon-v">data</span><span class="crayon-sy">)</span><span class="crayon-sy">;</span>
+</div>
+<div class="crayon-line crayon-marked-line crayon-bottom" id="urvanov-syntax-highlighter-647f451127b67126321210-11">
+<span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-v">res</span><span class="crayon-sy">.</span><span class="crayon-st">end</span><span class="crayon-sy">(</span><span class="crayon-sy">)</span><span class="crayon-sy">;</span>
+</div>
+<div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-647f451127b67126321210-12">
+<span class="crayon-h">&nbsp;&nbsp;</span><span class="crayon-sy">}</span><span class="crayon-sy">)</span><span class="crayon-sy">;</span>
+</div>
+<div class="crayon-line" id="urvanov-syntax-highlighter-647f451127b67126321210-13">
+<span class="crayon-sy">}</span><span class="crayon-sy">)</span><span class="crayon-sy">.</span><span class="crayon-e">listen</span><span class="crayon-sy">(</span><span class="crayon-cn">3000</span><span class="crayon-sy">)</span><span class="crayon-sy">;</span>
+</div>
+<div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-647f451127b67126321210-14">&nbsp;</div>
+<div class="crayon-line" id="urvanov-syntax-highlighter-647f451127b67126321210-15">
+<span class="crayon-v">console</span><span class="crayon-sy">.</span><span class="crayon-e">log</span><span class="crayon-sy">(</span><span class="crayon-s">'Server started on localhost:3000; Ctrl-C to terminate.'</span><span class="crayon-sy">)</span><span class="crayon-sy">;</span>
+</div>
+</div></td>
+					</tr>
+				</table>
+			</div>
+		</div>
+<!-- [Format Time: 0.0005 seconds] -->
+<p></p>
+<p>In the callback function, the error is checked, and if there is no error, the data is then written out to the response back to the client. To see how it works, start it up, using either node or nodemon:</p>
+<pre>
+$ node readTestNode.js
+</pre>
+<p>Going to <a href="http://localhost:3000/">http://localhost:3000</a> should show you that the contents of testNode.js are put into the browser. To test the error handling, of course, you could just use the wrong file name in line 5 in readTestNode.js.</p>
+<p>I should note that Node isn&#8217;t all asynchronous function calls. Some objects may provide both synchronous and asynchronous versions of the same function. For example, there is a readFileSync() method that would essentially block all further processing until the file in question has been read entirely. However, I&#8217;m not sure why you would want to use that.</p>
+<p>This was a hopefully useful start to this series of posts. Next I&#8217;ll start looking at making the app/server a little more familiar by considering how routing works and how to serve up static resources.</p>
+<div class="addtoany_share_save_container addtoany_content addtoany_content_bottom"><div class="a2a_kit a2a_kit_size_16 addtoany_list" data-a2a-url="https://testerstories.com/2014/08/learning-node-js-part-1/" data-a2a-title="Learning Node.js, Part 1">
+<a class="a2a_button_facebook" href="https://www.addtoany.com/add_to/facebook?linkurl=%2F2014%2F08%2Flearning-node-js-part-1%2F&amp;linkname=Learning%20Node.js%2C%20Part%201" title="Facebook" rel="nofollow noopener" target="_blank"></a><a class="a2a_button_twitter" href="https://www.addtoany.com/add_to/twitter?linkurl=%2F2014%2F08%2Flearning-node-js-part-1%2F&amp;linkname=Learning%20Node.js%2C%20Part%201" title="Twitter" rel="nofollow noopener" target="_blank"></a><a class="a2a_button_linkedin" href="https://www.addtoany.com/add_to/linkedin?linkurl=%2F2014%2F08%2Flearning-node-js-part-1%2F&amp;linkname=Learning%20Node.js%2C%20Part%201" title="LinkedIn" rel="nofollow noopener" target="_blank"></a><a class="a2a_button_print" href="https://www.addtoany.com/add_to/print?linkurl=%2F2014%2F08%2Flearning-node-js-part-1%2F&amp;linkname=Learning%20Node.js%2C%20Part%201" title="Print" rel="nofollow noopener" target="_blank"></a><a class="a2a_dd addtoany_share_save addtoany_share" href="https://www.addtoany.com/share"><img src="https://static.addtoany.com/buttons/favicon.png" alt="Share"></a>
+</div></div>      
+	</div>
+<!-- .entry-content -->
+	<footer class="entry-footer">       
+		<p class="written-by">This article was written by <a href="/author/administrator/">Jeff Nyman</a></p>
+<div class="author-bio">
+		
+	<h3><a href="/author/administrator/" rel="author">About  Jeff Nyman</a></h3>		
+	<img alt="" src="https://secure.gravatar.com/avatar/a3b6c2d0b2bafdb9ad9cdf782873204d?s=72&#038;d=mm&#038;r=pg" srcset="https://secure.gravatar.com/avatar/a3b6c2d0b2bafdb9ad9cdf782873204d?s=144&#038;d=mm&#038;r=pg 2x" class="avatar avatar-72 photo" height="72" width="72" decoding="async"><p class="author-description">Anything I put here is an approximation of the truth. You're getting a particular view of myself ... and it's the view I'm choosing to present to you. If you've never met me before in person, please realize I'm not the same in person as I am in writing. That's because I can only put part of myself down into words.
+
+If you have met me before in person then I'd ask you to consider that the view you've formed that way and the view you come to by reading what I say here may, in fact, both be true. I'd advise that you not automatically discard either viewpoint when they conflict or accept either as truth when they agree.</p>		
+</div>
+<!-- .author-bio -->
+	</footer><!-- .entry-footer -->
+
+	<nav class="navigation post-navigation" aria-label="Posts">
+		<h2 class="screen-reader-text">Post navigation</h2>
+		<div class="nav-links">
+<div class="nav-previous"><a href="/2014/07/bdd-specs-and-parameterizing-phrases/" rel="prev"><span class="genericon genericon-previous" aria-hidden="true"></span> <span class="screen-reader-text">Previous post:</span> <span class="post-title">BDD Specs and Parameterizing Phrases</span></a></div>
+<div class="nav-next"><a href="/2014/08/learning-node-js-part-2/" rel="next"><span class="post-title">Learning Node.js, Part 2</span><span class="screen-reader-text">Next post:</span> <span class="genericon genericon-next" aria-hidden="true"></span> </a></div>
+</div>
+	</nav>
+<div id="comments" class="comments-area">
+
+
+		<div id="respond" class="comment-respond">
+		<h3 id="reply-title" class="comment-reply-title">Leave a Reply <small><a rel="nofollow" id="cancel-comment-reply-link" href="/2014/08/learning-node-js-part-1/#respond" style="display:none;">Cancel reply</a></small>
+</h3>
+<form action="https://testerstories.com/wp-comments-post.php" method="post" id="commentform" class="comment-form" novalidate>
+<p class="comment-notes"><span id="email-notes">Your email address will not be published.</span> <span class="required-field-message">Required fields are marked <span class="required">*</span></span></p>
+<p class="comment-form-comment"><label for="comment">Comment <span class="required">*</span></label> <textarea id="comment" name="comment" cols="45" rows="8" maxlength="65525" required></textarea></p>
+<p class="comment-form-author"><label for="author">Name <span class="required">*</span></label> <input id="author" name="author" type="text" value="" size="30" maxlength="245" autocomplete="name" required></p>
+<p class="comment-form-email"><label for="email">Email <span class="required">*</span></label> <input id="email" name="email" type="email" value="" size="30" maxlength="100" aria-describedby="email-notes" autocomplete="email" required></p>
+<p class="comment-form-url"><label for="url">Website</label> <input id="url" name="url" type="url" value="" size="30" maxlength="200" autocomplete="url"></p>
+<p class="form-submit"><input name="submit" type="submit" id="submit" class="submit" value="Post Comment"> <input type="hidden" name="comment_post_ID" value="1748" id="comment_post_ID">
+<input type="hidden" name="comment_parent" id="comment_parent" value="0">
+</p>
+<p style="display: none;"><input type="hidden" id="akismet_comment_nonce" name="akismet_comment_nonce" value="0e7d37cb45"></p>
+<p style="display: none !important;"><label>&#916;<textarea name="ak_hp_textarea" cols="45" rows="8" maxlength="100"></textarea></label><input type="hidden" id="ak_js_1" name="ak_js" value="188"><script>document.getElementById( "ak_js_1" ).setAttribute( "value", ( new Date() ).getTime() );</script></p>
+</form>	</div>
+<!-- #respond -->
+	<p class="akismet_comment_form_privacy_notice">This site uses Akismet to reduce spam. <a href="https://akismet.com/privacy/" target="_blank" rel="nofollow noopener">Learn how your comment data is processed</a>.</p>
+</div>
+<!-- #comments -->
+</article><!-- #post-## -->
+</main><!--/main-content-->
+	<aside id="sidebar-widget-area" class="sidebar-widget-area" role="complementary">
+		<a class="screen-reader-text skip-link" href="#page-footer">Skip to footer</a>
+
+		<section id="sidebar" class="widget-area sidebar">
+			<div id="text-6" class="widget widget_text">			<div class="textwidget">
+<p><a href="https://www.linkedin.com/pub/jeff-nyman/12/b32/16a"><br>
+<img decoding="async" src="https://static.licdn.com/scds/common/u/img/webpromo/btn_myprofile_160x33.png" alt="View Jeff Nyman's profile on LinkedIn" width="160" height="33" border="0"></a></p>
+</div>
+		</div>
+<div id="categories-5" class="widget widget_categories">
+<h2 class="widget-title">Topics</h2>
+			<ul>
+					<li class="cat-item cat-item-58">
+<a href="/category/agile/">Agile</a> (2)
+</li>
+	<li class="cat-item cat-item-49">
+<a href="/category/ai/">AI</a> (24)
+<ul class="children">
+	<li class="cat-item cat-item-50">
+<a href="/category/ai/machine-learning/">Machine Learning</a> (12)
+	<ul class="children">
+	<li class="cat-item cat-item-55">
+<a href="/category/ai/machine-learning/ml-series-1/">ML Series 1</a> (2)
+</li>
+	<li class="cat-item cat-item-56">
+<a href="/category/ai/machine-learning/ml-series-2/">ML Series 2</a> (4)
+</li>
+	<li class="cat-item cat-item-57">
+<a href="/category/ai/machine-learning/ml-series-3/">ML Series 3</a> (6)
+</li>
+	</ul>
+</li>
+</ul>
+</li>
+	<li class="cat-item cat-item-11">
+<a href="/category/automation/">Automation</a> (68)
+<ul class="children">
+	<li class="cat-item cat-item-41">
+<a href="/category/automation/c/">C#</a> (2)
+</li>
+	<li class="cat-item cat-item-8">
+<a href="/category/automation/capybara/">Capybara</a> (11)
+</li>
+	<li class="cat-item cat-item-9">
+<a href="/category/automation/cucumber/">Cucumber</a> (10)
+</li>
+	<li class="cat-item cat-item-31">
+<a href="/category/automation/cucumber-jvm/">Cucumber-JVM</a> (6)
+</li>
+	<li class="cat-item cat-item-42">
+<a href="/category/automation/groovy/">Groovy</a> (1)
+</li>
+	<li class="cat-item cat-item-40">
+<a href="/category/automation/java/">Java</a> (9)
+</li>
+	<li class="cat-item cat-item-10">
+<a href="/category/automation/qtp/">QTP</a> (6)
+</li>
+	<li class="cat-item cat-item-5">
+<a href="/category/automation/rspec/">RSpec</a> (4)
+</li>
+	<li class="cat-item cat-item-7">
+<a href="/category/automation/selenium/">Selenium</a> (17)
+</li>
+	<li class="cat-item cat-item-39">
+<a href="/category/automation/serenity/">Serenity</a> (8)
+</li>
+	<li class="cat-item cat-item-30">
+<a href="/category/automation/symbiont/">Symbiont</a> (11)
+</li>
+	<li class="cat-item cat-item-51">
+<a href="/category/automation/tapestry/">Tapestry</a> (6)
+</li>
+	<li class="cat-item cat-item-6">
+<a href="/category/automation/watir/">Watir</a> (4)
+</li>
+</ul>
+</li>
+	<li class="cat-item cat-item-13">
+<a href="/category/bdd/">BDD</a> (24)
+<ul class="children">
+	<li class="cat-item cat-item-23">
+<a href="/category/bdd/tdl/">TDL</a> (17)
+</li>
+</ul>
+</li>
+	<li class="cat-item cat-item-25">
+<a href="/category/career/">Career</a> (33)
+<ul class="children">
+	<li class="cat-item cat-item-53">
+<a href="/category/career/interview/">Interview</a> (10)
+</li>
+</ul>
+</li>
+	<li class="cat-item cat-item-15">
+<a href="/category/communication/">Communication</a> (16)
+</li>
+	<li class="cat-item cat-item-65">
+<a href="/category/crime-scene/">Crime Scene</a> (4)
+</li>
+	<li class="cat-item cat-item-52">
+<a href="/category/data-science/">Data Science</a> (4)
+</li>
+	<li class="cat-item cat-item-61">
+<a href="/category/development/">Development</a> (39)
+<ul class="children">
+	<li class="cat-item cat-item-36">
+<a href="/category/development/chef/">Chef</a> (2)
+</li>
+	<li class="cat-item cat-item-32">
+<a href="/category/development/inform-7/">Inform 7</a> (3)
+</li>
+	<li class="cat-item cat-item-38">
+<a href="/category/development/javascript-test-solutions/">JavaScript</a> (6)
+</li>
+	<li class="cat-item cat-item-19">
+<a href="/category/development/language-building/">Language Building</a> (9)
+	<ul class="children">
+	<li class="cat-item cat-item-20">
+<a href="/category/development/language-building/rex-and-racc/">Rex and Racc</a> (3)
+</li>
+	</ul>
+</li>
+	<li class="cat-item cat-item-48">
+<a href="/category/development/python/">Python</a> (4)
+</li>
+	<li class="cat-item cat-item-29">
+<a href="/category/development/rails/">Rails</a> (4)
+</li>
+	<li class="cat-item cat-item-21">
+<a href="/category/development/web-development/">Web Development</a> (11)
+	<ul class="children">
+	<li class="cat-item cat-item-34">
+<a href="/category/development/web-development/node-js/">Node.js</a> (5)
+</li>
+	<li class="cat-item cat-item-22">
+<a href="/category/development/web-development/sinatra/">Sinatra</a> (6)
+</li>
+	</ul>
+</li>
+</ul>
+</li>
+	<li class="cat-item cat-item-28">
+<a href="/category/dialect/">Dialect</a> (6)
+</li>
+	<li class="cat-item cat-item-45">
+<a href="/category/exploration/">Exploration</a> (14)
+<ul class="children">
+	<li class="cat-item cat-item-46">
+<a href="/category/exploration/interactive/">Interactive</a> (6)
+</li>
+</ul>
+</li>
+	<li class="cat-item cat-item-44">
+<a href="/category/indefinito/">Indefinito</a> (11)
+</li>
+	<li class="cat-item cat-item-17">
+<a href="/category/learning/">Learning</a> (11)
+</li>
+	<li class="cat-item cat-item-24">
+<a href="/category/lucid/">Lucid</a> (11)
+</li>
+	<li class="cat-item cat-item-62">
+<a href="/category/product-development/">Product Development</a> (7)
+</li>
+	<li class="cat-item cat-item-64">
+<a href="/category/product-management/">Product Management</a> (3)
+</li>
+	<li class="cat-item cat-item-3">
+<a href="/category/quality/">Quality</a> (7)
+</li>
+	<li class="cat-item cat-item-14">
+<a href="/category/quality-assurance/">Quality Assurance</a> (5)
+</li>
+	<li class="cat-item cat-item-35">
+<a href="/category/specify/">Specify</a> (2)
+</li>
+	<li class="cat-item cat-item-16">
+<a href="/category/symbiont-pg/">Symbiont-PG</a> (4)
+</li>
+	<li class="cat-item cat-item-27">
+<a href="/category/test-solutions/">Test Solutions</a> (11)
+</li>
+	<li class="cat-item cat-item-4">
+<a href="/category/testing/">Testing</a> (167)
+<ul class="children">
+	<li class="cat-item cat-item-59">
+<a href="/category/testing/contracts/">Contracts</a> (2)
+</li>
+	<li class="cat-item cat-item-63">
+<a href="/category/testing/epistemology/">Epistemology</a> (1)
+</li>
+	<li class="cat-item cat-item-67">
+<a href="/category/testing/games/">Games</a> (8)
+</li>
+	<li class="cat-item cat-item-68">
+<a href="/category/testing/history-and-science/">History and Science</a> (5)
+</li>
+	<li class="cat-item cat-item-43">
+<a href="/category/testing/modern-testing/">Modern Testing</a> (15)
+</li>
+	<li class="cat-item cat-item-54">
+<a href="/category/testing/testability/">Testability</a> (9)
+</li>
+</ul>
+</li>
+	<li class="cat-item cat-item-12">
+<a href="/category/thinking/">Thinking</a> (22)
+</li>
+	<li class="cat-item cat-item-47">
+<a href="/category/what-if/">What If</a> (1)
+</li>
+	<li class="cat-item cat-item-69">
+<a href="/category/zmachine/">Z-Machine</a> (7)
+</li>
+			</ul>
+
+			</div>
+<div id="archives-5" class="widget widget_archive">
+<h2 class="widget-title">Archives</h2>		<label class="screen-reader-text" for="archives-dropdown-5">Archives</label>
+		<select id="archives-dropdown-5" name="archive-dropdown">
+			
+			<option value="">Select Month</option>
+				<option value="https://testerstories.com/2023/06/"> June 2023 </option>
+	<option value="https://testerstories.com/2023/05/"> May 2023 </option>
+	<option value="https://testerstories.com/2023/04/"> April 2023 </option>
+	<option value="https://testerstories.com/2023/03/"> March 2023 </option>
+	<option value="https://testerstories.com/2023/02/"> February 2023 </option>
+	<option value="https://testerstories.com/2023/01/"> January 2023 </option>
+	<option value="https://testerstories.com/2022/12/"> December 2022 </option>
+	<option value="https://testerstories.com/2022/11/"> November 2022 </option>
+	<option value="https://testerstories.com/2022/10/"> October 2022 </option>
+	<option value="https://testerstories.com/2022/07/"> July 2022 </option>
+	<option value="https://testerstories.com/2022/06/"> June 2022 </option>
+	<option value="https://testerstories.com/2022/05/"> May 2022 </option>
+	<option value="https://testerstories.com/2022/03/"> March 2022 </option>
+	<option value="https://testerstories.com/2022/02/"> February 2022 </option>
+	<option value="https://testerstories.com/2022/01/"> January 2022 </option>
+	<option value="https://testerstories.com/2021/12/"> December 2021 </option>
+	<option value="https://testerstories.com/2021/10/"> October 2021 </option>
+	<option value="https://testerstories.com/2021/08/"> August 2021 </option>
+	<option value="https://testerstories.com/2021/07/"> July 2021 </option>
+	<option value="https://testerstories.com/2021/06/"> June 2021 </option>
+	<option value="https://testerstories.com/2021/05/"> May 2021 </option>
+	<option value="https://testerstories.com/2021/04/"> April 2021 </option>
+	<option value="https://testerstories.com/2021/03/"> March 2021 </option>
+	<option value="https://testerstories.com/2021/02/"> February 2021 </option>
+	<option value="https://testerstories.com/2021/01/"> January 2021 </option>
+	<option value="https://testerstories.com/2020/11/"> November 2020 </option>
+	<option value="https://testerstories.com/2020/10/"> October 2020 </option>
+	<option value="https://testerstories.com/2020/09/"> September 2020 </option>
+	<option value="https://testerstories.com/2020/07/"> July 2020 </option>
+	<option value="https://testerstories.com/2020/06/"> June 2020 </option>
+	<option value="https://testerstories.com/2020/05/"> May 2020 </option>
+	<option value="https://testerstories.com/2020/02/"> February 2020 </option>
+	<option value="https://testerstories.com/2020/01/"> January 2020 </option>
+	<option value="https://testerstories.com/2019/12/"> December 2019 </option>
+	<option value="https://testerstories.com/2019/11/"> November 2019 </option>
+	<option value="https://testerstories.com/2019/10/"> October 2019 </option>
+	<option value="https://testerstories.com/2019/09/"> September 2019 </option>
+	<option value="https://testerstories.com/2019/08/"> August 2019 </option>
+	<option value="https://testerstories.com/2019/07/"> July 2019 </option>
+	<option value="https://testerstories.com/2019/06/"> June 2019 </option>
+	<option value="https://testerstories.com/2019/05/"> May 2019 </option>
+	<option value="https://testerstories.com/2019/04/"> April 2019 </option>
+	<option value="https://testerstories.com/2019/03/"> March 2019 </option>
+	<option value="https://testerstories.com/2019/02/"> February 2019 </option>
+	<option value="https://testerstories.com/2019/01/"> January 2019 </option>
+	<option value="https://testerstories.com/2018/12/"> December 2018 </option>
+	<option value="https://testerstories.com/2018/11/"> November 2018 </option>
+	<option value="https://testerstories.com/2018/10/"> October 2018 </option>
+	<option value="https://testerstories.com/2018/09/"> September 2018 </option>
+	<option value="https://testerstories.com/2018/08/"> August 2018 </option>
+	<option value="https://testerstories.com/2018/07/"> July 2018 </option>
+	<option value="https://testerstories.com/2018/06/"> June 2018 </option>
+	<option value="https://testerstories.com/2018/05/"> May 2018 </option>
+	<option value="https://testerstories.com/2018/04/"> April 2018 </option>
+	<option value="https://testerstories.com/2018/03/"> March 2018 </option>
+	<option value="https://testerstories.com/2018/02/"> February 2018 </option>
+	<option value="https://testerstories.com/2018/01/"> January 2018 </option>
+	<option value="https://testerstories.com/2017/12/"> December 2017 </option>
+	<option value="https://testerstories.com/2017/11/"> November 2017 </option>
+	<option value="https://testerstories.com/2017/10/"> October 2017 </option>
+	<option value="https://testerstories.com/2017/09/"> September 2017 </option>
+	<option value="https://testerstories.com/2017/08/"> August 2017 </option>
+	<option value="https://testerstories.com/2017/07/"> July 2017 </option>
+	<option value="https://testerstories.com/2017/06/"> June 2017 </option>
+	<option value="https://testerstories.com/2017/05/"> May 2017 </option>
+	<option value="https://testerstories.com/2017/04/"> April 2017 </option>
+	<option value="https://testerstories.com/2017/03/"> March 2017 </option>
+	<option value="https://testerstories.com/2017/02/"> February 2017 </option>
+	<option value="https://testerstories.com/2017/01/"> January 2017 </option>
+	<option value="https://testerstories.com/2016/12/"> December 2016 </option>
+	<option value="https://testerstories.com/2016/11/"> November 2016 </option>
+	<option value="https://testerstories.com/2016/10/"> October 2016 </option>
+	<option value="https://testerstories.com/2016/09/"> September 2016 </option>
+	<option value="https://testerstories.com/2016/08/"> August 2016 </option>
+	<option value="https://testerstories.com/2016/07/"> July 2016 </option>
+	<option value="https://testerstories.com/2016/06/"> June 2016 </option>
+	<option value="https://testerstories.com/2016/04/"> April 2016 </option>
+	<option value="https://testerstories.com/2016/03/"> March 2016 </option>
+	<option value="https://testerstories.com/2016/02/"> February 2016 </option>
+	<option value="https://testerstories.com/2016/01/"> January 2016 </option>
+	<option value="https://testerstories.com/2015/12/"> December 2015 </option>
+	<option value="https://testerstories.com/2015/11/"> November 2015 </option>
+	<option value="https://testerstories.com/2015/10/"> October 2015 </option>
+	<option value="https://testerstories.com/2015/09/"> September 2015 </option>
+	<option value="https://testerstories.com/2015/08/"> August 2015 </option>
+	<option value="https://testerstories.com/2015/07/"> July 2015 </option>
+	<option value="https://testerstories.com/2015/06/"> June 2015 </option>
+	<option value="https://testerstories.com/2015/05/"> May 2015 </option>
+	<option value="https://testerstories.com/2015/04/"> April 2015 </option>
+	<option value="https://testerstories.com/2015/03/"> March 2015 </option>
+	<option value="https://testerstories.com/2015/02/"> February 2015 </option>
+	<option value="https://testerstories.com/2014/12/"> December 2014 </option>
+	<option value="https://testerstories.com/2014/11/"> November 2014 </option>
+	<option value="https://testerstories.com/2014/10/"> October 2014 </option>
+	<option value="https://testerstories.com/2014/09/"> September 2014 </option>
+	<option value="https://testerstories.com/2014/08/"> August 2014 </option>
+	<option value="https://testerstories.com/2014/07/"> July 2014 </option>
+	<option value="https://testerstories.com/2014/06/"> June 2014 </option>
+	<option value="https://testerstories.com/2014/05/"> May 2014 </option>
+	<option value="https://testerstories.com/2014/04/"> April 2014 </option>
+	<option value="https://testerstories.com/2014/03/"> March 2014 </option>
+	<option value="https://testerstories.com/2014/01/"> January 2014 </option>
+	<option value="https://testerstories.com/2013/12/"> December 2013 </option>
+	<option value="https://testerstories.com/2013/09/"> September 2013 </option>
+	<option value="https://testerstories.com/2013/08/"> August 2013 </option>
+	<option value="https://testerstories.com/2013/07/"> July 2013 </option>
+	<option value="https://testerstories.com/2013/06/"> June 2013 </option>
+	<option value="https://testerstories.com/2013/05/"> May 2013 </option>
+	<option value="https://testerstories.com/2013/03/"> March 2013 </option>
+	<option value="https://testerstories.com/2013/01/"> January 2013 </option>
+	<option value="https://testerstories.com/2012/12/"> December 2012 </option>
+	<option value="https://testerstories.com/2012/10/"> October 2012 </option>
+	<option value="https://testerstories.com/2012/09/"> September 2012 </option>
+	<option value="https://testerstories.com/2012/08/"> August 2012 </option>
+	<option value="https://testerstories.com/2012/07/"> July 2012 </option>
+	<option value="https://testerstories.com/2012/06/"> June 2012 </option>
+	<option value="https://testerstories.com/2012/05/"> May 2012 </option>
+	<option value="https://testerstories.com/2012/04/"> April 2012 </option>
+	<option value="https://testerstories.com/2012/03/"> March 2012 </option>
+	<option value="https://testerstories.com/2012/02/"> February 2012 </option>
+	<option value="https://testerstories.com/2012/01/"> January 2012 </option>
+	<option value="https://testerstories.com/2011/12/"> December 2011 </option>
+	<option value="https://testerstories.com/2011/11/"> November 2011 </option>
+	<option value="https://testerstories.com/2011/10/"> October 2011 </option>
+	<option value="https://testerstories.com/2011/09/"> September 2011 </option>
+	<option value="https://testerstories.com/2011/08/"> August 2011 </option>
+
+		</select>
+
+<script type="text/javascript">
+/* <![CDATA[ */
+(function() {
+	var dropdown = document.getElementById( "archives-dropdown-5" );
+	function onSelectChange() {
+		if ( dropdown.options[ dropdown.selectedIndex ].value !== '' ) {
+			document.location.href = this.options[ this.selectedIndex ].value;
+		}
+	}
+	dropdown.onchange = onSelectChange;
+})();
+/* ]]> */
+</script>
+			</div>
+<div id="meta-5" class="widget widget_meta">
+<h2 class="widget-title">Site</h2>
+		<ul>
+						<li><a href="/wp-login.php">Log in</a></li>
+			<li><a href="/feed/">Entries feed</a></li>
+			<li><a href="/comments/feed/">Comments feed</a></li>
+
+			<li><a href="https://wordpress.org/">WordPress.org</a></li>
+		</ul>
+
+		</div>
+<div id="text-4" class="widget widget_text">			<div class="textwidget"><a href="https://www.linkedin.com/pub/jeff-nyman/12/b32/16a">
+          <img src="https://static.licdn.com/scds/common/u/img/webpromo/btn_myprofile_160x33.png" width="160" height="33" border="0" alt="View Jeff Nyman's profile on LinkedIn"></a></div>
+		</div>
+<div id="search-3" class="widget widget_search">
+<form role="search" method="get" class="search-form" action="https://testerstories.com/">
+	<label>
+		<span class="screen-reader-text">Search for:</span>
+		<input type="search" class="search-field" placeholder="Search &hellip;" value="" name="s" title="Search for:">
+	</label>
+	<button type="submit" class="search-submit"><span class="genericon genericon-search" aria-hidden="true"></span><span class="screen-reader-text">Search</span></button>
+</form>
+</div>		</section><!-- #sidebar .widget-area -->
+
+	</aside>
+
+  
+
+<footer id="page-footer" role="contentinfo">
+	<div id="site-info" class="site-info">
+		<span class="footer-site-title"><a href="/" rel="home">Stories from a Software Tester</a></span>
+		<a href="https://wordpress.org/">Proudly powered by WordPress</a>
+	</div>
+<!--/site-info-->
+</footer> <!--/footer-->
+</div>
+<!-- #container -->
+            
+            <style type="text/css" class="darkmysite_inline_css">#darkmysite_switch_866167966 {
+        --darkmysite_switch_apple_width_height: 60px;
+        --darkmysite_switch_apple_border_radius: 7px;
+        --darkmysite_switch_apple_icon_width: 30px;
+        --darkmysite_switch_apple_light_mode_bg: #121116;
+        --darkmysite_switch_apple_dark_mode_bg: #ffffff;
+        --darkmysite_switch_apple_light_mode_icon_color: #ffffff;
+        --darkmysite_switch_apple_dark_mode_icon_color: #121116;
+        }
+
+    #darkmysite_switch_866167966 {
+        --darkmysite_switch_margin_from_top: 40px;
+        --darkmysite_switch_margin_from_bottom: 40px;
+        --darkmysite_switch_margin_from_left: 40px;
+        --darkmysite_switch_margin_from_right: 40px;
+        }</style>
+
+
+
+
+    <div id="darkmysite_switch_866167966" class="darkmysite_switch  darkmysite_bottom_right   darkmysite_switch_apple" onclick="darkmysite_switch_trigger()">
+        <span class="darkmysite_switch_icon"></span>
+            </div>
+
+            
+    <script type="text/javascript" class="darkmysite_inline_js">document.addEventListener("DOMContentLoaded", function(event) {
+            darkmysite_init_alternative_dark_mode_switch();
+        });</script>
+
+
+<script type="text/javascript" id="acuarela-script-js-extra">
+/* <![CDATA[ */
+var acuarelaScreenReaderText = {"expand":"expand child menu","collapse":"collapse child menu"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="/wp-content/themes/acuarela/js/functions.js?ver=20190802" id="acuarela-script-js"></script>
+<script type="text/javascript" src="/wp-includes/js/comment-reply.min.js?ver=6.2.2" id="comment-reply-js"></script>
+<script defer type="text/javascript" src="/wp-content/plugins/akismet/_inc/akismet-frontend.js?ver=1680871091" id="akismet-frontend-js"></script>
+</body>
+</html>
