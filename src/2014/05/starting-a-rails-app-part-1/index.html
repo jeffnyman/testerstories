@@ -1,0 +1,2132 @@
+<!DOCTYPE html>
+<html lang="en-US">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="profile" href="http://gmpg.org/xfn/11">
+				<link rel="pingback" href="/xmlrpc.php">
+				<title>Starting a Rails App, Part 1 &#8211; Stories from a Software Tester</title>
+<meta name="robots" content="max-image-preview:large">
+ <style type="text/css" class="darkmysite_inline_css">:root { --darkmysite_dark_mode_bg: #0f0f0f; --darkmysite_dark_mode_secondary_bg: #171717; --darkmysite_dark_mode_text_color: #bebebe; --darkmysite_dark_mode_link_color: #ffffff; --darkmysite_dark_mode_link_hover_color: #cccccc; --darkmysite_dark_mode_input_bg: #2d2d2d; --darkmysite_dark_mode_input_text_color: #bebebe; --darkmysite_dark_mode_input_placeholder_color: #989898; --darkmysite_dark_mode_border_color: #4a4a4a; --darkmysite_dark_mode_btn_bg: #2d2d2d; --darkmysite_dark_mode_btn_text_color: #bebebe; }</style> <style type="text/css" class="darkmysite_inline_css">.darkmysite_dark_mode_enabled::-webkit-scrollbar { background: #29292a !important; } .darkmysite_dark_mode_enabled::-webkit-scrollbar-track { background: #29292a !important; } .darkmysite_dark_mode_enabled::-webkit-scrollbar-thumb { background-color: #52565a !important; } .darkmysite_dark_mode_enabled::-webkit-scrollbar-corner { background-color: #52565a !important; } .darkmysite_dark_mode_enabled::-webkit-scrollbar-button { background-color: transparent !important; background-repeat: no-repeat !important; background-size: contain !important; background-position: center !important; } .darkmysite_dark_mode_enabled::-webkit-scrollbar-button:start { background-image: url(/wp-content/plugins/darkmysite/assets/img/others/scroll_arrow_up.svg) !important; } .darkmysite_dark_mode_enabled::-webkit-scrollbar-button:end { background-image: url(/wp-content/plugins/darkmysite/assets/img/others/scroll_arrow_down.svg) !important; } .darkmysite_dark_mode_enabled::-webkit-scrollbar-button:start:horizontal { background-image: url(/wp-content/plugins/darkmysite/assets/img/others/scroll_arrow_left.svg) !important; } .darkmysite_dark_mode_enabled::-webkit-scrollbar-button:end:horizontal { background-image: url(/wp-content/plugins/darkmysite/assets/img/others/scroll_arrow_right.svg) !important; }</style> <script type="text/javascript" class="darkmysite_inline_js">var darkmysite_switch_unique_id = "608925021"; var darkmysite_is_this_admin_panel = "0"; var darkmysite_enable_default_dark_mode = "0"; var darkmysite_enable_os_aware = "1"; var darkmysite_enable_keyboard_shortcut = "1"; var darkmysite_enable_time_based_dark = "0"; var darkmysite_time_based_dark_start = "19:00"; var darkmysite_time_based_dark_stop = "07:00"; var darkmysite_alternative_dark_mode_switch = ""; var darkmysite_enable_low_image_brightness = "1"; var darkmysite_image_brightness_to = "80"; var darkmysite_enable_image_grayscale = "0"; var darkmysite_image_grayscale_to = "80"; var darkmysite_enable_bg_image_darken = "1"; var darkmysite_bg_image_darken_to = "60"; var darkmysite_enable_invert_inline_svg = "0"; var darkmysite_enable_low_video_brightness = "1"; var darkmysite_video_brightness_to = "80"; var darkmysite_enable_video_grayscale = "0"; var darkmysite_video_grayscale_to = "80"; var darkmysite_disallowed_elements = ".darkmysite_ignore, .darkmysite_ignore *, .darkmysite_switch, .darkmysite_switch *, .wp-block-button__link, .wp-block-button__link *";</script><link rel="dns-prefetch" href="//static.addtoany.com">
+<link rel="dns-prefetch" href="//fonts.googleapis.com">
+<link rel="alternate" type="application/rss+xml" title="Stories from a Software Tester &raquo; Feed" href="/feed/">
+<link rel="alternate" type="application/rss+xml" title="Stories from a Software Tester &raquo; Comments Feed" href="/comments/feed/">
+<link rel="alternate" type="application/rss+xml" title="Stories from a Software Tester &raquo; Starting a Rails App, Part 1 Comments Feed" href="/2014/05/starting-a-rails-app-part-1/feed/">
+<script type="text/javascript">
+window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/14.0.0\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/14.0.0\/svg\/","svgExt":".svg","source":{"concatemoji":"\/wp-includes\/js\/wp-emoji-release.min.js?ver=6.2.2"}};
+/*! This file is auto-generated */
+!function(e,a,t){var n,r,o,i=a.createElement("canvas"),p=i.getContext&&i.getContext("2d");function s(e,t){p.clearRect(0,0,i.width,i.height),p.fillText(e,0,0);e=i.toDataURL();return p.clearRect(0,0,i.width,i.height),p.fillText(t,0,0),e===i.toDataURL()}function c(e){var t=a.createElement("script");t.src=e,t.defer=t.type="text/javascript",a.getElementsByTagName("head")[0].appendChild(t)}for(o=Array("flag","emoji"),t.supports={everything:!0,everythingExceptFlag:!0},r=0;r<o.length;r++)t.supports[o[r]]=function(e){if(p&&p.fillText)switch(p.textBaseline="top",p.font="600 32px Arial",e){case"flag":return s("🏳️‍⚧️","🏳️​⚧️")?!1:!s("🇺🇳","🇺​🇳")&&!s("🏴󠁧󠁢󠁥󠁮󠁧󠁿","🏴​󠁧​󠁢​󠁥​󠁮​󠁧​󠁿");case"emoji":return!s("🫱🏻‍🫲🏿","🫱🏻​🫲🏿")}return!1}(o[r]),t.supports.everything=t.supports.everything&&t.supports[o[r]],"flag"!==o[r]&&(t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&t.supports[o[r]]);t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&!t.supports.flag,t.DOMReady=!1,t.readyCallback=function(){t.DOMReady=!0},t.supports.everything||(n=function(){t.readyCallback()},a.addEventListener?(a.addEventListener("DOMContentLoaded",n,!1),e.addEventListener("load",n,!1)):(e.attachEvent("onload",n),a.attachEvent("onreadystatechange",function(){"complete"===a.readyState&&t.readyCallback()})),(e=t.source||{}).concatemoji?c(e.concatemoji):e.wpemoji&&e.twemoji&&(c(e.twemoji),c(e.wpemoji)))}(window,document,window._wpemojiSettings);
+</script>
+<style type="text/css">img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 0.07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}</style>
+	<link rel="stylesheet" id="urvanov_syntax_highlighter-css" href="/wp-content/plugins/urvanov-syntax-highlighter/css/min/urvanov_syntax_highlighter.min.css?ver=2.8.33" type="text/css" media="all">
+<link rel="stylesheet" id="crayon-theme-classic-css" href="/wp-content/plugins/urvanov-syntax-highlighter/themes/classic/classic.css?ver=2.8.33" type="text/css" media="all">
+<link rel="stylesheet" id="crayon-font-monaco-css" href="/wp-content/plugins/urvanov-syntax-highlighter/fonts/monaco.css?ver=2.8.33" type="text/css" media="all">
+<link rel="stylesheet" id="wp-block-library-css" href="/wp-includes/css/dist/block-library/style.min.css?ver=6.2.2" type="text/css" media="all">
+<style id="wp-block-library-theme-inline-css" type="text/css">.wp-block-audio figcaption{color:#555;font-size:13px;text-align:center}.is-dark-theme .wp-block-audio figcaption{color:hsla(0,0%,100%,.65)}.wp-block-audio{margin:0 0 1em}.wp-block-code{border:1px solid #ccc;border-radius:4px;font-family:Menlo,Consolas,monaco,monospace;padding:.8em 1em}.wp-block-embed figcaption{color:#555;font-size:13px;text-align:center}.is-dark-theme .wp-block-embed figcaption{color:hsla(0,0%,100%,.65)}.wp-block-embed{margin:0 0 1em}.blocks-gallery-caption{color:#555;font-size:13px;text-align:center}.is-dark-theme .blocks-gallery-caption{color:hsla(0,0%,100%,.65)}.wp-block-image figcaption{color:#555;font-size:13px;text-align:center}.is-dark-theme .wp-block-image figcaption{color:hsla(0,0%,100%,.65)}.wp-block-image{margin:0 0 1em}.wp-block-pullquote{border-bottom:4px solid;border-top:4px solid;color:currentColor;margin-bottom:1.75em}.wp-block-pullquote cite,.wp-block-pullquote footer,.wp-block-pullquote__citation{color:currentColor;font-size:.8125em;font-style:normal;text-transform:uppercase}.wp-block-quote{border-left:.25em solid;margin:0 0 1.75em;padding-left:1em}.wp-block-quote cite,.wp-block-quote footer{color:currentColor;font-size:.8125em;font-style:normal;position:relative}.wp-block-quote.has-text-align-right{border-left:none;border-right:.25em solid;padding-left:0;padding-right:1em}.wp-block-quote.has-text-align-center{border:none;padding-left:0}.wp-block-quote.is-large,.wp-block-quote.is-style-large,.wp-block-quote.is-style-plain{border:none}.wp-block-search .wp-block-search__label{font-weight:700}.wp-block-search__button{border:1px solid #ccc;padding:.375em .625em}:where(.wp-block-group.has-background){padding:1.25em 2.375em}.wp-block-separator.has-css-opacity{opacity:.4}.wp-block-separator{border:none;border-bottom:2px solid;margin-left:auto;margin-right:auto}.wp-block-separator.has-alpha-channel-opacity{opacity:1}.wp-block-separator:not(.is-style-wide):not(.is-style-dots){width:100px}.wp-block-separator.has-background:not(.is-style-dots){border-bottom:none;height:1px}.wp-block-separator.has-background:not(.is-style-wide):not(.is-style-dots){height:2px}.wp-block-table{margin:0 0 1em}.wp-block-table td,.wp-block-table th{word-break:normal}.wp-block-table figcaption{color:#555;font-size:13px;text-align:center}.is-dark-theme .wp-block-table figcaption{color:hsla(0,0%,100%,.65)}.wp-block-video figcaption{color:#555;font-size:13px;text-align:center}.is-dark-theme .wp-block-video figcaption{color:hsla(0,0%,100%,.65)}.wp-block-video{margin:0 0 1em}.wp-block-template-part.has-background{margin-bottom:0;margin-top:0;padding:1.25em 2.375em}</style>
+<link rel="stylesheet" id="classic-theme-styles-css" href="/wp-includes/css/classic-themes.min.css?ver=6.2.2" type="text/css" media="all">
+<style id="global-styles-inline-css" type="text/css">body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgba(6,147,227,1) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgba(252,185,0,1) 0%,rgba(255,105,0,1) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgba(255,105,0,1) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--duotone--dark-grayscale: url('#wp-duotone-dark-grayscale');--wp--preset--duotone--grayscale: url('#wp-duotone-grayscale');--wp--preset--duotone--purple-yellow: url('#wp-duotone-purple-yellow');--wp--preset--duotone--blue-red: url('#wp-duotone-blue-red');--wp--preset--duotone--midnight: url('#wp-duotone-midnight');--wp--preset--duotone--magenta-yellow: url('#wp-duotone-magenta-yellow');--wp--preset--duotone--purple-green: url('#wp-duotone-purple-green');--wp--preset--duotone--blue-orange: url('#wp-duotone-blue-orange');--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;--wp--preset--spacing--20: 0.44rem;--wp--preset--spacing--30: 0.67rem;--wp--preset--spacing--40: 1rem;--wp--preset--spacing--50: 1.5rem;--wp--preset--spacing--60: 2.25rem;--wp--preset--spacing--70: 3.38rem;--wp--preset--spacing--80: 5.06rem;--wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);--wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);--wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);--wp--preset--shadow--outlined: 6px 6px 0px -3px rgba(255, 255, 255, 1), 6px 6px rgba(0, 0, 0, 1);--wp--preset--shadow--crisp: 6px 6px 0px rgba(0, 0, 0, 1);}:where(.is-layout-flex){gap: 0.5em;}body .is-layout-flow > .alignleft{float: left;margin-inline-start: 0;margin-inline-end: 2em;}body .is-layout-flow > .alignright{float: right;margin-inline-start: 2em;margin-inline-end: 0;}body .is-layout-flow > .aligncenter{margin-left: auto !important;margin-right: auto !important;}body .is-layout-constrained > .alignleft{float: left;margin-inline-start: 0;margin-inline-end: 2em;}body .is-layout-constrained > .alignright{float: right;margin-inline-start: 2em;margin-inline-end: 0;}body .is-layout-constrained > .aligncenter{margin-left: auto !important;margin-right: auto !important;}body .is-layout-constrained > :where(:not(.alignleft):not(.alignright):not(.alignfull)){max-width: var(--wp--style--global--content-size);margin-left: auto !important;margin-right: auto !important;}body .is-layout-constrained > .alignwide{max-width: var(--wp--style--global--wide-size);}body .is-layout-flex{display: flex;}body .is-layout-flex{flex-wrap: wrap;align-items: center;}body .is-layout-flex > *{margin: 0;}:where(.wp-block-columns.is-layout-flex){gap: 2em;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
+.wp-block-navigation a:where(:not(.wp-element-button)){color: inherit;}
+:where(.wp-block-columns.is-layout-flex){gap: 2em;}
+.wp-block-pullquote{font-size: 1.5em;line-height: 1.6;}</style>
+<link rel="stylesheet" id="darkmysite-client-main-css" href="/wp-content/plugins/darkmysite/assets/css/client_main.css?ver=1.2.6" type="text/css" media="all">
+<link rel="stylesheet" id="plyr-css-css" href="/wp-content/plugins/easy-video-player/lib/plyr.css?ver=6.2.2" type="text/css" media="all">
+<link rel="stylesheet" id="acuarela-fonts-css" href="https://fonts.googleapis.com/css?family=Lato%3A300italic%2C400italic%2C700italic%2C300%2C400%2C700%7CArima+Madurai%3A700%2C800%7CInconsolata%3A400%2C700&#038;subset=latin%2Clatin-ext&#038;ver=20190802" type="text/css" media="all">
+<link rel="stylesheet" id="genericons-css" href="/wp-content/themes/acuarela/genericons/genericons.css?ver=3.4.1" type="text/css" media="all">
+<link rel="stylesheet" id="animate-css" href="/wp-content/themes/acuarela/css/animate.css?ver=3.7.2" type="text/css" media="all">
+<link rel="stylesheet" id="acuarela-style-css" href="/wp-content/themes/acuarela/style.css?ver=6.2.2" type="text/css" media="all">
+<link rel="stylesheet" id="addtoany-css" href="/wp-content/plugins/add-to-any/addtoany.min.css?ver=1.16" type="text/css" media="all">
+<script type="text/javascript" src="/wp-includes/js/jquery/jquery.min.js?ver=3.6.4" id="jquery-core-js"></script>
+<script type="text/javascript" src="/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.4.0" id="jquery-migrate-js"></script>
+<script type="text/javascript" id="urvanov_syntax_highlighter_js-js-extra">
+/* <![CDATA[ */
+var UrvanovSyntaxHighlighterSyntaxSettings = {"version":"2.8.33","is_admin":"0","ajaxurl":"\/wp-admin\/admin-ajax.php","prefix":"urvanov-syntax-highlighter-","setting":"urvanov-syntax-highlighter-setting","selected":"urvanov-syntax-highlighter-setting-selected","changed":"urvanov-syntax-highlighter-setting-changed","special":"urvanov-syntax-highlighter-setting-special","orig_value":"data-orig-value","debug":""};
+var UrvanovSyntaxHighlighterSyntaxStrings = {"copy":"Copied to the clipboard","minimize":"Click To Expand Code"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="/wp-content/plugins/urvanov-syntax-highlighter/js/min/urvanov_syntax_highlighter.min.js?ver=2.8.33" id="urvanov_syntax_highlighter_js-js"></script>
+<script type="text/javascript" id="addtoany-core-js-before">window.a2a_config=window.a2a_config||{};a2a_config.callbacks=[];a2a_config.overlays=[];a2a_config.templates={};</script>
+<script type="text/javascript" async src="https://static.addtoany.com/menu/page.js" id="addtoany-core-js"></script>
+<script type="text/javascript" async src="/wp-content/plugins/add-to-any/addtoany.min.js?ver=1.1" id="addtoany-jquery-js"></script>
+<script type="text/javascript" src="/wp-content/plugins/darkmysite/assets/js/client_main.js?ver=1.2.6" id="darkmysite-client-main-js"></script>
+<script type="text/javascript" id="plyr-js-js-extra">
+/* <![CDATA[ */
+var easy_video_player = {"plyr_iconUrl":"\/wp-content\/plugins\/easy-video-player\/lib\/plyr.svg","plyr_blankVideo":"\/wp-content\/plugins\/easy-video-player\/lib\/blank.mp4"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="/wp-content/plugins/easy-video-player/lib/plyr.js?ver=6.2.2" id="plyr-js-js"></script>
+<link rel="https://api.w.org/" href="/wp-json/">
+<link rel="alternate" type="application/json" href="/wp-json/wp/v2/posts/1379">
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="/xmlrpc.php?rsd">
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="/wp-includes/wlwmanifest.xml">
+<meta name="generator" content="WordPress 6.2.2">
+<link rel="canonical" href="/2014/05/starting-a-rails-app-part-1/">
+<link rel="shortlink" href="/?p=1379">
+<link rel="alternate" type="application/json+oembed" href="/wp-json/oembed/1.0/embed?url=https%3A%2F%2F%2F2014%2F05%2Fstarting-a-rails-app-part-1%2F">
+<link rel="alternate" type="text/xml+oembed" href="/wp-json/oembed/1.0/embed?url=https%3A%2F%2F%2F2014%2F05%2Fstarting-a-rails-app-part-1%2F#038;format=xml">
+<link type="text/css" rel="stylesheet" href="/wp-content/plugins/category-specific-rss-feed-menu/wp_cat_rss_style.css">
+<!--Custom Styling-->
+<style media="screen" type="text/css">.site-description { color: #222222}
+.site-title, .entry-title, .post-title, .widget-title, .posts-navigation .nav-links { font-family: Arima Madurai}
+ body { font-family: Lato}</style>
+	<style id="acuarela-header-css" type="text/css"></style>
+<style type="text/css" id="custom-background-css">body.custom-background { background-image: url("/wp-content/uploads/2020/10/low_contrast_linen.png"); background-position: left top; background-size: cover; background-repeat: no-repeat; background-attachment: fixed; }</style>
+			<style type="text/css" id="wp-custom-css">@font-face {
+  font-family: "Open Sans";
+  font-weight: 400;
+  font-style: normal;
+  src: local("Open Sans Regular"), local("OpenSans-Regular"), url("/fonts/OpenSans-Regular.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Open Sans Bold";
+  font-weight: 700;
+  font-style: normal;
+  src: local("Open Sans Bold"), local("OpenSans-Bold"), url("/fonts/OpenSans-Bold.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Open Sans Italic";
+  font-weight: 400;
+  font-style: normal;
+  src: local("Open Sans Italic"), local("OpenSans-Italic"), url("/fonts/OpenSans-Italic.woff") format("woff");
+}
+
+:root{
+	--primary: #01408e;
+	--secondary: #3c5d5c;
+	--initialLine: #ad2271;
+	--drop: #903;
+	--paraIndent: 1.25em;
+	--note: #4d5b7c;
+	--bq-color: #555555;
+	--bq-back: #ededed;
+	--sans: "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+	--mono: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
+    "Courier New", monospace;
+}
+/* For the top menu bar. */
+.site-navigation a {
+	padding: 0.9em 1.5em;
+}
+
+:where(html, body) {
+	overscroll-behavior-y: none;
+	cursor: url("/cursors/default.cur"), auto;
+}
+
+:where(p, h1, h2, h3, h4, h5, h6, blockquote, figcaption) {
+	cursor: url("/cursors/text-select.cur"), auto;
+}
+
+:where(ul, ol) {
+	margin: 1em 1em;
+	text-align: justify;
+	text-justify: inter-word;
+	cursor: url("/cursors/text-select.cur"), auto;
+}
+
+:where(aside, article) a {
+	cursor: url("/cursors/link-select.cur"), auto;
+}
+
+select, button, input,
+.wp-element-button,
+.darkmysite_switch,
+.site-title,
+.site-description {
+	cursor: url("/cursors/link-select.cur"), auto;
+}
+
+::selection {
+  color: #fff;
+  background: rgba(0, 0, 0, 0.99);
+}
+
+main,
+header {
+	font-size: 1rem;
+}
+
+main {
+	/*From here: https://fluidtypography.com/#app-get-started*/
+	/* Settings: 414-1280; 16-20; 1.6-1.3*/
+	font-size: clamp(1rem, 0.462vw + 0.88rem, 1.25rem);
+line-height: clamp(1.6rem, 0.046vw + 1.588rem, 1.625rem);
+}
+
+article {
+	font-family: var(--sans);
+	line-height: 1.6;
+  word-spacing: 0.16em;
+}
+
+h1:not(.site-title) {
+  font-size: 2.5em;
+  margin: 0.67em 0;
+  text-align: center;
+}
+
+:where(h1, h2, h3, h4) {
+	text-rendering: optimizeLegibility;
+	line-height: 1.4em;
+}
+
+article :where(h2, h3) {
+	margin-bottom: 0.7em;
+}
+
+p {
+	font-size: 1.2em;
+	text-align: justify;
+	text-justify: inter-word;
+}
+
+p:first-of-type:first-line {
+	color: var(--initialLine);
+}
+
+li {
+  margin-bottom: 0.5em;
+}
+
+/* This makes sure the first line of blockquotes are not colored since in Wordpress, a blockquote content has a paragraph tag applied to it. */
+:where(blockquote, footer, .comments-area) p:first-of-type:first-line {
+	color: inherit;
+}
+:where(p, blockquote, img, pre, ul, ol) + p:not(.note) {
+  text-indent: var(--paraIndent);
+}
+section > h3 + p::first-letter,
+section > h2 + p::first-letter,
+div.entry-content > p:not(.nostyle):first-child::first-letter {
+	color: var(--drop);
+  border-left: 2px solid var(--drop);
+  border-top: 2px solid var(--drop);
+  float: left;
+  font-family: Georgia;
+  font-size: 65px;
+  line-height: 60px;
+  padding-top: 4px;
+  padding-right: 12px;
+  padding-left: 3px;
+}
+
+:where(aside, article) a {
+	color: var(--primary);
+	text-underline-position: under;
+	text-decoration: underline 2px;
+	transition: all 0.3s linear;
+  background: linear-gradient(to right, #00d1b1 0%, #278fc6 98%);
+  background-size: 0px 2px;
+  background-repeat: no-repeat;
+  background-position: left 10%;
+  text-shadow: 0;
+}
+
+article a:hover {
+  background-size: 100% 2px;
+  color: var(--secondary);
+}
+
+article a:focus {
+  color: var(--secondary);
+}
+
+/* Handling external links to show an icon after them, but excluding links that are part of the TesterStories site. */
+
+a[href*="http"]::after,
+a[href*="https"]::after {
+  content: "";
+  width: 16px;
+  height: 16px;
+  margin-left: 4px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='currentColor' viewBox='0 0 16 16'%3E%3Cpath fill-rule='evenodd' d='M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5z'/%3E%3Cpath fill-rule='evenodd' d='M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0v-5z'/%3E%3C/svg%3E");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  display: inline-block;
+}
+
+a[href^="https://www.linkedin.com/"]::after {
+  content: none;
+}
+
+a[href^="https://testerstories.com/"]::after {
+  display: none !important;
+}
+
+img.framed {
+  --b: 10px;
+  margin: 0 auto;
+  padding: var(--b);
+  border: calc(2 * var(--b)) solid #0000;
+  border-radius: 25px;
+  outline: 1px solid #000;
+  outline-offset: calc(-1 * var(--b));
+  background: conic-gradient(from 90deg at 1px 1px, #0000 90deg, #000 0);
+}
+
+img.backframed {
+  margin: 0 auto;
+  border: 3px solid black;
+  box-shadow: -50px -50px 0 -40px #555555, 50px 50px 0 -40px #555555;
+}
+
+.note {
+  border: 1px solid rgb(107, 113, 177);
+  color: var(--note);
+  border-radius: 16px;
+  padding: 0.5em 0.8em;
+  margin: 1.9em;
+}
+
+.post {
+	background-color: white;
+}
+
+.entry-content li {
+	font-size: 1.2em;
+}
+
+.simplequote {
+	background: #fff url(/2014/05/starting-a-rails-app-part-1/images/box_quote.png) no-repeat;
+	padding: 5px;
+	margin-top: 20px; margin-bottom: 20px;
+	margin-left: 50px; margin-right: 50px;
+	border: 3px solid #cecece;
+	text-indent: 25px;
+}
+
+p.example {
+	padding: 1ex;
+	margin-right: 50px; margin-left: 50px;
+	border: .5ex solid #808080;
+	color: #000000;
+	line-height: 1.2;
+	text-indent: 0em;
+}
+
+#headquote blockquote {
+	text-align: left;
+	margin: 0 auto 20px auto;
+	color: #555;
+	background: #eee url(/2014/05/starting-a-rails-app-part-1/images/quote_top.gif) no-repeat top left;
+}
+
+#headquote blockquote {
+	width: 370px;
+	font-size: 110%;
+	letter-spacing: -1px;
+	line-height: 1.2em;
+}
+
+#headquote #quote {
+	margin-left: 40px;
+	padding: 20px 20px 10px 20px;
+	background: url(/2014/05/starting-a-rails-app-part-1/images/quote_bottom.gif) no-repeat right bottom;
+}
+
+#headquote #author {
+	margin: 0;
+	text-align: center;
+	padding: 0 0 10px 0;
+	color: #999;
+	font-size: 95%;
+}
+
+#headquote blockquote strong {
+	color: #000;
+	font-weight: normal;
+}
+
+/* Center images. */
+
+img {
+	display: block;
+  margin: 0 auto;
+}
+
+img.smaller {
+  width: 200px;
+}
+
+img.even-smaller {
+  width: 100px;
+}
+
+table td.code {
+  font-family: "Courier New", courier, monospace;
+  font-size: 11.5px;
+}
+
+p.box {
+	font-family: Georgia, "Times New Roman", Times, serif;
+	text-align: justify;
+	padding-top: 25px;
+	margin: 0;
+	line-height: 1.2;
+}
+
+pre.box {
+	white-space: pre-wrap;
+	background-color: white;
+	border: 1px solid;
+}
+
+p.tip {
+	padding-bottom: 10px; padding-top: 10px;
+	padding-right: 10px; padding-left: 10px;
+	border: 1px solid;
+}
+
+div.aside {
+	padding-bottom: 10px; padding-top: 10px;
+	padding-right: 10px; padding-left: 10px;
+	margin-right: 50px; margin-left: 50px;
+	border: 1px dotted;
+}
+
+div.aside pre {
+	white-space: pre-wrap;
+}
+
+pre.view {
+	font-family: "Courier New", Courier, monospace;
+        //font-size: 16px;
+	padding-bottom: 10px; padding-top: 10px;
+	padding-right: 10px; padding-left: 10px;
+	white-space: pre-wrap;
+	background: rgb(255,255,255); /* Old browsers */
+	background: -moz-linear-gradient(top,  rgba(255,255,255,1) 0%, rgba(229,229,229,1) 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,1)), color-stop(100%,rgba(229,229,229,1))); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(229,229,229,1) 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(229,229,229,1) 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(229,229,229,1) 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  rgba(255,255,255,1) 0%,rgba(229,229,229,1) 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#e5e5e5',GradientType=0 ); /* IE6-9 */
+	border: 1px solid;
+	text-align: justify;
+}
+
+pre.view .string {
+	color: #3366CC;
+}
+
+pre.view .sub {
+        color: #8333FF;
+}
+
+pre.view .comment {
+	color: #009900;
+}
+
+pre.view .highlight {
+	background-color: #FFFF00;
+	border: 1px solid;
+	border-style: dotted;
+}
+
+pre.output .highlight {
+	background-color: rgb(255,255,255);
+	color: red;
+	border: 1px solid;
+	border-style: dotted;
+}
+
+pre.output {
+	font-family: "Courier New", Courier, monospace;
+        //font-size: 16px;
+	padding-bottom: 10px; padding-top: 10px;
+	padding-right: 10px; padding-left: 10px;
+	white-space: pre-wrap;
+	background: black;
+	color: white;
+}
+
+blockquote {
+  position: relative;
+  width: 80%;
+  margin: 50px auto;
+  padding: 1.2em 30px 1.2em 55px;
+  color: var(--bq-color);
+  background-color: var(--bq-back);
+  border-left: 8px solid #78c0a8;
+  text-align: justify;
+}
+
+blockquote::before {
+  position: absolute;
+	left: 5px;
+	top: -10px;
+	/* Line height needed here to avoid the quote appearing out of place due to calculated line heights for the article. */
+	line-height: 1.6;
+	content: "\201C";
+	color: #78c0a8;
+	font-size: 4em;
+}
+
+blockquote::after {
+	content: "";
+}
+
+blockquote span {
+	display: block;
+	color: #333333;
+	font-style: normal;
+  font-weight: bold;
+  margin-top: 1em;
+}
+
+img.frame {
+  --b: 10px;
+  padding: var(--b);
+  border: calc(2 * var(--b)) solid #0000;
+  outline: 1px solid #000;
+  outline-offset: calc(-1 * var(--b));
+  border-radius: 25px;
+  background: conic-gradient(from 90deg at 1px 1px, #0000 90deg, #000 0);
+  display: block;
+  margin: auto;
+  margin-bottom: 1rem;
+}
+
+code {
+  font-size: 0.9em;
+  padding: 0.0625rem 0.5rem;
+  border-radius: 0.125rem;
+  border: 1px solid #d33a2c;
+  box-shadow: 1px 1px #d33a2c, 2px 2px #d33a2c;
+  margin: 0 0.25rem;
+  color: #d33a2c;
+  font-family: monospace;
+}
+
+pre {
+  font-family: var(--mono);
+  max-width: 100%;
+	padding: 0;
+}
+
+pre code {
+  word-spacing: normal;
+  letter-spacing: normal;
+  font-family: var(--mono);
+  padding-left: 10px;
+  color: #e9e9f4;
+  background: #282936;
+  display: block;
+  max-width: 100%;
+  overflow-x: scroll;
+  /*font-size: 0.8em;*/
+
+  border: 1px solid #282936;
+  border-radius: 10px;
+  box-shadow: 1px 1px #282936, 2px 2px #282936;
+}
+
+pre code::-webkit-scrollbar {
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+pre code::-webkit-scrollbar:vertical {
+  width: 11px;
+}
+
+pre code::-webkit-scrollbar:horizontal {
+  height: 11px;
+}
+
+pre code::-webkit-scrollbar-thumb {
+  border-radius: 8px;
+  border: 2px solid white;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+/* The div part is only needed for long-form content that is pre-formatted. */
+
+pre code div {
+	line-height: 1.5em;
+}
+
+/* This would be for prefromatted material that is not literally from a game or simulation but is meant to indicate something about the details of the game or simulation. */
+
+pre p {
+  border: 2px solid grey;
+  border-radius: 5px;
+  padding: 0.8em;
+	padding-top: 0;
+	margin: 0;
+}</style>
+			</head>
+	<body class="post-template-default single single-post postid-1379 single-format-standard custom-background wp-embed-responsive custom-background-image">
+		<svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-dark-grayscale"><fecolormatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></fecolormatrix><fecomponenttransfer color-interpolation-filters="sRGB"><fefuncr type="table" tablevalues="0 0.49803921568627"></fefuncr><fefuncg type="table" tablevalues="0 0.49803921568627"></fefuncg><fefuncb type="table" tablevalues="0 0.49803921568627"></fefuncb><fefunca type="table" tablevalues="1 1"></fefunca></fecomponenttransfer><fecomposite in2="SourceGraphic" operator="in"></fecomposite></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-grayscale"><fecolormatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></fecolormatrix><fecomponenttransfer color-interpolation-filters="sRGB"><fefuncr type="table" tablevalues="0 1"></fefuncr><fefuncg type="table" tablevalues="0 1"></fefuncg><fefuncb type="table" tablevalues="0 1"></fefuncb><fefunca type="table" tablevalues="1 1"></fefunca></fecomponenttransfer><fecomposite in2="SourceGraphic" operator="in"></fecomposite></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-purple-yellow"><fecolormatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></fecolormatrix><fecomponenttransfer color-interpolation-filters="sRGB"><fefuncr type="table" tablevalues="0.54901960784314 0.98823529411765"></fefuncr><fefuncg type="table" tablevalues="0 1"></fefuncg><fefuncb type="table" tablevalues="0.71764705882353 0.25490196078431"></fefuncb><fefunca type="table" tablevalues="1 1"></fefunca></fecomponenttransfer><fecomposite in2="SourceGraphic" operator="in"></fecomposite></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-blue-red"><fecolormatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></fecolormatrix><fecomponenttransfer color-interpolation-filters="sRGB"><fefuncr type="table" tablevalues="0 1"></fefuncr><fefuncg type="table" tablevalues="0 0.27843137254902"></fefuncg><fefuncb type="table" tablevalues="0.5921568627451 0.27843137254902"></fefuncb><fefunca type="table" tablevalues="1 1"></fefunca></fecomponenttransfer><fecomposite in2="SourceGraphic" operator="in"></fecomposite></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-midnight"><fecolormatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></fecolormatrix><fecomponenttransfer color-interpolation-filters="sRGB"><fefuncr type="table" tablevalues="0 0"></fefuncr><fefuncg type="table" tablevalues="0 0.64705882352941"></fefuncg><fefuncb type="table" tablevalues="0 1"></fefuncb><fefunca type="table" tablevalues="1 1"></fefunca></fecomponenttransfer><fecomposite in2="SourceGraphic" operator="in"></fecomposite></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-magenta-yellow"><fecolormatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></fecolormatrix><fecomponenttransfer color-interpolation-filters="sRGB"><fefuncr type="table" tablevalues="0.78039215686275 1"></fefuncr><fefuncg type="table" tablevalues="0 0.94901960784314"></fefuncg><fefuncb type="table" tablevalues="0.35294117647059 0.47058823529412"></fefuncb><fefunca type="table" tablevalues="1 1"></fefunca></fecomponenttransfer><fecomposite in2="SourceGraphic" operator="in"></fecomposite></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-purple-green"><fecolormatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></fecolormatrix><fecomponenttransfer color-interpolation-filters="sRGB"><fefuncr type="table" tablevalues="0.65098039215686 0.40392156862745"></fefuncr><fefuncg type="table" tablevalues="0 1"></fefuncg><fefuncb type="table" tablevalues="0.44705882352941 0.4"></fefuncb><fefunca type="table" tablevalues="1 1"></fefunca></fecomponenttransfer><fecomposite in2="SourceGraphic" operator="in"></fecomposite></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-blue-orange"><fecolormatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></fecolormatrix><fecomponenttransfer color-interpolation-filters="sRGB"><fefuncr type="table" tablevalues="0.098039215686275 1"></fefuncr><fefuncg type="table" tablevalues="0 0.66274509803922"></fefuncg><fefuncb type="table" tablevalues="0.84705882352941 0.41960784313725"></fefuncb><fefunca type="table" tablevalues="1 1"></fefunca></fecomponenttransfer><fecomposite in2="SourceGraphic" operator="in"></fecomposite></filter></defs></svg>		<div id="container" class="site container">
+	<header id="masthead" class="site-header animated fadeInDown" role="banner">
+
+	<a class="screen-reader-text skip-link" href="#main-content">Skip to content</a>
+	<a class="screen-reader-text skip-link" href="#sidebar-widget-area">Skip to sidebar</a>
+	<a class="screen-reader-text skip-link" href="#page-footer">Skip to footer</a>
+	<div id="site-identity" class="site-identity">
+		<a href="/" class="home-link animated fadeIn" title="Stories from a Software Tester" rel="home">
+			<div class="title-description">
+				<h1 class="site-title">Stories from a Software Tester</h1>
+				<h2 class="site-description">Twice upon a time, in another space, no distance in any direction from here &#8230;</h2>
+			</div>
+		</a> 
+
+	</div>
+<!--/site-identity-->
+
+	<nav id="nav-menu" class="site-navigation main-navigation" role="navigation" aria-label="Main Navigation">
+		<button id="nav-button" class="menu-toggle" role="button">
+			<span class="screen-reader-text">Menu</span>
+			<span class="genericon" aria-hidden="true"></span>
+		</button>
+		<ul id="primary-menu" class="primary-menu">
+<li id="menu-item-3923" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-3923"><a href="/">Home</a></li>
+<li id="menu-item-2051" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2051"><a href="/about-tester-stories/">About Tester Stories</a></li>
+<li id="menu-item-2050" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2050"><a href="/who-am-i/">Who Am I</a></li>
+<li id="menu-item-2048" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2048"><a href="/just-for-fun/">Just For Fun</a></li>
+</ul>	</nav><!--/navigation-->
+
+
+<form role="search" method="get" class="search-form" action="https://testerstories.com/">
+	<label>
+		<span class="screen-reader-text">Search for:</span>
+		<input type="search" class="search-field" placeholder="Search &hellip;" value="" name="s" title="Search for:">
+	</label>
+	<button type="submit" class="search-submit"><span class="genericon genericon-search" aria-hidden="true"></span><span class="screen-reader-text">Search</span></button>
+</form>
+</header><!--/header-->
+
+<main id="main-content" class="main-content" role="main">
+<article id="post-1379" class="post-1379 post type-post status-publish format-standard hentry category-rails">
+<header class="entry-header">
+	<span class="entry-meta"><span class="cat-links"><span class="screen-reader-text">Published in</span><span class="genericon genericon-category" aria-hidden="true"></span><a href="/category/development/rails/" rel="category tag">Rails</a></span></span><h1 class="entry-title">Starting a Rails App, Part 1</h1>	<span class="byline">
+	Written by <a href="/author/administrator/" class="entry-author" rel="author">Jeff Nyman</a>	</span><!-- .byline -->
+	<span class="entry-meta">
+	<span class="genericon genericon-time" aria-hidden="true"></span><a href="/2014/05/27/" rel="bookmark" class="entry-date"><time datetime="2014-05-27T09:39:47-05:00">27 May 2014</time></a>		<span class="comments-link">
+			<span class="genericon genericon-comment" aria-hidden="true"></span>
+			<a href="/2014/05/starting-a-rails-app-part-1/#respond">Leave a comment</a>		</span>
+		</span><!-- .entry-meta -->
+</header><!-- .entry-header -->
+
+	<div class="entry-content">
+		<p>Many testers these days will find themselves in Rails shops and, even if that&#8217;s not the case, Rails is a good environment within which to build custom test solutions that require a database and a web interface. This is largely because when using Rails, you are using one of the most concise and expressive languages out there: Ruby. I plan to document some of my learning of the Rails ecosystem in two posts.</p>
+<p><span id="more-1379"></span></p>
+<p>I covered some basics of <a href="/a-tester-learns-rails/">learning Rails</a> and the <a href="/learning-the-rails-way-a-testers-perspective/">basis of Rails</a> in previous posts, so I won&#8217;t repeat all that here. If you want to follow along, you should be able to install Ruby and Rails on your operating system of choice. I am using Ruby 2.0 and Rails 4.1.1. I also plan on using SQLite3 for the database. This is not going to be a post on &#8220;how to create a Rails app from soup to nuts.&#8221; This really is just about building a solid enough base where you feel like you can trust Rails enough. That was something I struggled with early on.</p>
+<h2>The Application</h2>
+<p>For the purposes of my learning, I&#8217;m going to create a very simple &#8220;Planets&#8221; application. This is going to be thrown together as I go, mainly based on what I think I can learn. The initial goal of this application is simple: be able to showcase some information about the planets in our solar system and, at some point, allow a user to calculate what their weight would be on one of these planets.</p>
+<p>In true agile fashion, I certainly can&#8217;t be charged with overthinking this too much!</p>
+<p>Essentially I&#8217;ll design what I need as I need it with only a rough guide as to where I&#8217;ll end up. Realistically I should probably do this &#8220;test-first&#8221;; practically, however, I&#8217;ve found doing <em>anything</em> test-first when you are also learning the framework you are writing in is an exercise in frustration.</p>
+<p>I&#8217;ll write a lot of this in the first person (as in &#8220;I take this action&#8221;) but I&#8217;ll probably describe aspects in the second person (as in &#8220;you&#8217;ll notice that that action resulted in some effect&#8221;). I find I tend to do that anyway so I may as well call it out and hope it isn&#8217;t too jarring.</p>
+<p>Finally, I&#8217;m not going to cover every aspect and nuance of Rails as I go or learn it. What I&#8217;m going to do is distill a sort of &#8220;first start&#8221; tutorial to a reader of this post based on what I&#8217;ve learned via my own research. I&#8217;m aiming to present just enough of what I consider to be the &#8220;right amount of information&#8221; with a focus on getting a reader as much exposure to Rails internals as possible and exploring how to get a working application started.</p>
+<h2>Creating the App</h2>
+<p>First I&#8217;ll use the Rails script to create a new application:</p>
+<pre>
+rails new planets
+</pre>
+<p>Rails spews out a lot of information about the project directory that just got created. Probably the most important, in terms of getting started, is recognizing that the <strong>app directory</strong> is where you store all of the components of your application. There are directories within that app directory for each of the major aspects of an MVC style application, specifically, <strong>models</strong>, <strong>views</strong>, <strong>controllers</strong>, and <strong>helpers</strong>. Beyond that, the <strong>config</strong> directory is where you store all aspects of configuration for your application and the <strong>db</strong> directory is where you store all files related to the database you are using. If you&#8217;re using SQLite3 the db directory is where your file-based database will be stored, at least by default.</p>
+<p>Speaking of databases, creating an application like I did above has Rails assuming you want to use the default database system of SQLite3. You can create an application that uses another database system by using the <code>-d</code> option. For example, you could use commands like these:</p>
+<pre>
+rails new planets -d mysql
+rails new planets -d postgresql
+rails new planets -d oracle
+</pre>
+<p>Specifying a database management system like this will impact what you see in the <strong>config/database.yml</strong> file. That file contains all the information about the databases that your application will be using. For SQLite3, the database is file-based and, as I said, will be stored in the <strong>db</strong> directory by default, although you can change that. Another difference is that databases like MySQL, PostgreSQL, and Oracle will likely have authentication required to connect to a database whereas SQLite3 does not.</p>
+<p>As this post goes on, I&#8217;m going to create a model, some views, a controller, and a migration or two; ultimately all of this will be for interacting with a planets table in my database. I&#8217;ll preface all that activity by saying that I could do all of it with just one command. Essentially, I could have Rails generate a <em>scaffold</em> for a Planet model. I&#8217;m not going to do that right away, however. I&#8217;m going to go through some of the steps.</p>
+<h2>Creating the Database</h2>
+<p>Rails uses different databases for development, test, and production environments. I&#8217;ll create those databases (based on information from the database.yml file) by doing the following:</p>
+<pre>
+rake db:create:all
+</pre>
+<p>If you&#8217;re using SQLite, you technically don&#8217;t have to do this because Rails takes care of creating the database for you when you operate in one of the environments. However, it doesn&#8217;t hurt to get into the habit of doing this even if you are using SQLite. Do keep in mind that for any other database, you <em>must</em> do this. For a database that requires authentication, as long as your authentication information for each database management system is correct in the database.yml file, Rails will be able to connect in and create the database within the DBMS.</p>
+<p>I was curious if I could accidentally wipe out all my databases in one fell swoop but, as it turns out, nope. This command will not overwrite an existing database. So there is no harm in running this more than once.</p>
+<h2>Creating the Model</h2>
+<p>Now that the database is there, it&#8217;s time to create a model. Looked at simplistically, a Rails model exists to let your application use a database table. Models in Rails correspond to database table names. Rails actually gets pretty specific about this, due to conventions, so here&#8217;s a good heuristic to keep in mind: <strong>model names are camel-cased singular and correspond to tables that are lower-cased plural</strong>. This means that a model named <code>Planet</code> will be associated with a database table named <code>planets</code>. So I create my Planet model:</p>
+<pre>
+rails generate model Planet
+</pre>
+<p>Incidentally, some tutorials show you the command like I just did: with a capitalized model name. Others show you the command with a lowercase name (&#8220;planet&#8221;). As it turns out, it doesn&#8217;t matter; either way will work just fine.</p>
+<p>The output from the command I get is something like the following:</p>
+<pre>
+create    db/migrate/20140520104833_create_planets.rb
+create    app/models/planet.rb
+create    test/models/planet_test.rb
+create    test/fixtures/planets.yml
+</pre>
+<p>You get a database migration that has a timestamp as part of the filename. A migration represents a change that you want to make to the data or the schema that represents the data. More specifically, a migration contains instructions for creating or modifying the tables and columns of your database. Just know that whenever you generate a new model, a migration is created along with it. Incidentally, it&#8217;s called a &#8220;migration&#8221; because it allows you to evolve, or migrate, your schema.</p>
+<p>Along with the migration, you get the model itself (<strong>planet.rb</strong>). You also get a unit test stub (<strong>planet_test.rb</strong>) for testing your model&#8217;s functionality. Finally, you get a planet fixture (<strong>planets.yml</strong>) which is a textual representation of table data that you can use for testing purposes. The fixture is essentially a way to make sure you always have valid data available for your tests for a particular model. I&#8217;ll get more into fixtures later.</p>
+<p>These files are just stubs at this point and contain little useful beyond their presence. For example, take a look at the model file, planet.rb:</p>
+<p></p>
+<!-- Urvanov Syntax Highlighter v2.8.33 -->
+
+		<div id="urvanov-syntax-highlighter-647f44fbbff1d389710574" class="urvanov-syntax-highlighter-syntax crayon-theme-classic urvanov-syntax-highlighter-font-monaco urvanov-syntax-highlighter-os-pc print-yes notranslate" data-settings=" minimize scroll-mouseover" style="margin-top: 12px; margin-bottom: 12px; font-size: 12px !important; line-height: 15px !important;">
+		
+			<div class="crayon-toolbar" data-settings=" mouseover overlay hide delay" style="font-size: 12px !important;height: 18px !important; line-height: 18px !important;">
+<span class="crayon-title"></span>
+			<div class="crayon-tools" style="font-size: 12px !important;height: 18px !important; line-height: 18px !important;">
+<div class="crayon-button urvanov-syntax-highlighter-nums-button" title="Toggle Line Numbers"><div class="urvanov-syntax-highlighter-button-icon"></div></div>
+<div class="crayon-button urvanov-syntax-highlighter-plain-button" title="Toggle Plain Code"><div class="urvanov-syntax-highlighter-button-icon"></div></div>
+<div class="crayon-button urvanov-syntax-highlighter-wrap-button" title="Toggle Line Wrap"><div class="urvanov-syntax-highlighter-button-icon"></div></div>
+<div class="crayon-button urvanov-syntax-highlighter-expand-button" title="Expand Code"><div class="urvanov-syntax-highlighter-button-icon"></div></div>
+<div class="crayon-button urvanov-syntax-highlighter-copy-button" title="Copy"><div class="urvanov-syntax-highlighter-button-icon"></div></div>
+<div class="crayon-button urvanov-syntax-highlighter-popup-button" title="Open Code In New Window"><div class="urvanov-syntax-highlighter-button-icon"></div></div>
+<span class="crayon-language">Ruby</span>
+</div>
+</div>
+			<div class="crayon-info" style="min-height: 16.8px !important; line-height: 16.8px !important;"></div>
+			<div class="urvanov-syntax-highlighter-plain-wrap"><textarea wrap="soft" class="urvanov-syntax-highlighter-plain print-no" data-settings="dblclick" readonly style="-moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4; font-size: 12px !important; line-height: 15px !important;">
+class Planet &lt; ActiveRecord::Base
+end</textarea></div>
+			<div class="urvanov-syntax-highlighter-main">
+				<table class="crayon-table">
+					<tr class="urvanov-syntax-highlighter-row">
+				<td class="crayon-nums " data-settings="show">
+					<div class="urvanov-syntax-highlighter-nums-content" style="font-size: 12px !important; line-height: 15px !important;">
+<div class="crayon-num" data-line="urvanov-syntax-highlighter-647f44fbbff1d389710574-1">1</div>
+<div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-647f44fbbff1d389710574-2">2</div>
+</div>
+				</td>
+						<td class="urvanov-syntax-highlighter-code"><div class="crayon-pre" style="font-size: 12px !important; line-height: 15px !important; -moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4;">
+<div class="crayon-line" id="urvanov-syntax-highlighter-647f44fbbff1d389710574-1">
+<span class="crayon-r">class</span><span class="crayon-h"> </span><span class="crayon-v">Planet</span><span class="crayon-h"> </span><span class="crayon-o">&lt;</span><span class="crayon-h"> </span><span class="crayon-v">ActiveRecord</span><span class="crayon-o">::</span><span class="crayon-i">Base</span>
+</div>
+<div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-647f44fbbff1d389710574-2"><span class="crayon-st">end</span></div>
+</div></td>
+					</tr>
+				</table>
+			</div>
+		</div>
+<!-- [Format Time: 0.0001 seconds] -->
+<p></p>
+<p>Just an empty class. You can see, however, that my Planet class derives from ActiveRecord::Base. I&#8217;ll jump the gun a bit here and say that all adding, editing, and deleting of planets is going to happen through Active Record. Active Record lets you communicate with your database using Ruby code rather than SQL.</p>
+<p>Getting a little more detailed, Active Record is an Object Relational Mapping (ORM) tool but an interesting thing about this is that Rails is agnostic about the ORM you use. You can use Active Record completely outside of a Rails context and you can bring your ORM of choice into the Rails context. Active Record is simply what Rails supports by default. One final note on this, just because I think it&#8217;s interesting: Active Record is actually a design pattern. The basis of the pattern is a one-to-one mapping between a database record and the object that represents it.</p>
+<p>The test for this model is similarly barren:</p>
+<p></p>
+<!-- Urvanov Syntax Highlighter v2.8.33 -->
+
+		<div id="urvanov-syntax-highlighter-647f44fbbff2a309086546" class="urvanov-syntax-highlighter-syntax crayon-theme-classic urvanov-syntax-highlighter-font-monaco urvanov-syntax-highlighter-os-pc print-yes notranslate" data-settings=" minimize scroll-mouseover" style="margin-top: 12px; margin-bottom: 12px; font-size: 12px !important; line-height: 15px !important;">
+		
+			<div class="crayon-toolbar" data-settings=" mouseover overlay hide delay" style="font-size: 12px !important;height: 18px !important; line-height: 18px !important;">
+<span class="crayon-title"></span>
+			<div class="crayon-tools" style="font-size: 12px !important;height: 18px !important; line-height: 18px !important;">
+<div class="crayon-button urvanov-syntax-highlighter-nums-button" title="Toggle Line Numbers"><div class="urvanov-syntax-highlighter-button-icon"></div></div>
+<div class="crayon-button urvanov-syntax-highlighter-plain-button" title="Toggle Plain Code"><div class="urvanov-syntax-highlighter-button-icon"></div></div>
+<div class="crayon-button urvanov-syntax-highlighter-wrap-button" title="Toggle Line Wrap"><div class="urvanov-syntax-highlighter-button-icon"></div></div>
+<div class="crayon-button urvanov-syntax-highlighter-expand-button" title="Expand Code"><div class="urvanov-syntax-highlighter-button-icon"></div></div>
+<div class="crayon-button urvanov-syntax-highlighter-copy-button" title="Copy"><div class="urvanov-syntax-highlighter-button-icon"></div></div>
+<div class="crayon-button urvanov-syntax-highlighter-popup-button" title="Open Code In New Window"><div class="urvanov-syntax-highlighter-button-icon"></div></div>
+<span class="crayon-language">Ruby</span>
+</div>
+</div>
+			<div class="crayon-info" style="min-height: 16.8px !important; line-height: 16.8px !important;"></div>
+			<div class="urvanov-syntax-highlighter-plain-wrap"><textarea wrap="soft" class="urvanov-syntax-highlighter-plain print-no" data-settings="dblclick" readonly style="-moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4; font-size: 12px !important; line-height: 15px !important;">
+require 'test_helper'
+
+class PlanetTest &lt; ActiveSupport::TestCase
+  # test "the truth" do
+  #   assert true
+  # end
+end</textarea></div>
+			<div class="urvanov-syntax-highlighter-main">
+				<table class="crayon-table">
+					<tr class="urvanov-syntax-highlighter-row">
+				<td class="crayon-nums " data-settings="show">
+					<div class="urvanov-syntax-highlighter-nums-content" style="font-size: 12px !important; line-height: 15px !important;">
+<div class="crayon-num" data-line="urvanov-syntax-highlighter-647f44fbbff2a309086546-1">1</div>
+<div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-647f44fbbff2a309086546-2">2</div>
+<div class="crayon-num" data-line="urvanov-syntax-highlighter-647f44fbbff2a309086546-3">3</div>
+<div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-647f44fbbff2a309086546-4">4</div>
+<div class="crayon-num" data-line="urvanov-syntax-highlighter-647f44fbbff2a309086546-5">5</div>
+<div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-647f44fbbff2a309086546-6">6</div>
+<div class="crayon-num" data-line="urvanov-syntax-highlighter-647f44fbbff2a309086546-7">7</div>
+</div>
+				</td>
+						<td class="urvanov-syntax-highlighter-code"><div class="crayon-pre" style="font-size: 12px !important; line-height: 15px !important; -moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4;">
+<div class="crayon-line" id="urvanov-syntax-highlighter-647f44fbbff2a309086546-1">
+<span class="crayon-i">require</span><span class="crayon-h"> </span><span class="crayon-s">'test_helper'</span>
+</div>
+<div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-647f44fbbff2a309086546-2">&nbsp;</div>
+<div class="crayon-line" id="urvanov-syntax-highlighter-647f44fbbff2a309086546-3">
+<span class="crayon-r">class</span><span class="crayon-h"> </span><span class="crayon-v">PlanetTest</span><span class="crayon-h"> </span><span class="crayon-o">&lt;</span><span class="crayon-h"> </span><span class="crayon-v">ActiveSupport</span><span class="crayon-o">::</span><span class="crayon-i">TestCase</span>
+</div>
+<div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-647f44fbbff2a309086546-4">
+<span class="crayon-h">&nbsp;&nbsp;</span><span class="crayon-c"># test "the truth" do</span>
+</div>
+<div class="crayon-line" id="urvanov-syntax-highlighter-647f44fbbff2a309086546-5">
+<span class="crayon-h">&nbsp;&nbsp;</span><span class="crayon-c">#&nbsp;&nbsp; assert true</span>
+</div>
+<div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-647f44fbbff2a309086546-6">
+<span class="crayon-h">&nbsp;&nbsp;</span><span class="crayon-c"># end</span>
+</div>
+<div class="crayon-line" id="urvanov-syntax-highlighter-647f44fbbff2a309086546-7"><span class="crayon-st">end</span></div>
+</div></td>
+					</tr>
+				</table>
+			</div>
+		</div>
+<!-- [Format Time: 0.0001 seconds] -->
+<p></p>
+<p>Since there is nothing in the model, there&#8217;s nothing to test. However, the file that Rails generates does give you some information. You can see that PlanetTest is derived from ActiveSupport::TestCase. Rails uses the MiniTest framework that is part of Ruby so tests are derived from MiniTest::Unit::TestCase. However, Rails provides an enhanced version of that framework as part of ActiveSupport. The commented test gives you the basic pattern of how to write tests. Specifically, tests are implemented as blocks using the test() method. The first parameter to this method is a description of that test. Within a test, assertions are used to test expectations.</p>
+<p>Incidentally, this brings up a good point: when Rails generates files, take the time to look them over. I see many people who, during the process of learning Rails, simply accept whatever the console output tells them without looking into what Rails is doing.</p>
+<p>Finally, here&#8217;s the initial state of the migration file:</p>
+<p></p>
+<!-- Urvanov Syntax Highlighter v2.8.33 -->
+
+		<div id="urvanov-syntax-highlighter-647f44fbbff2c422903715" class="urvanov-syntax-highlighter-syntax crayon-theme-classic urvanov-syntax-highlighter-font-monaco urvanov-syntax-highlighter-os-pc print-yes notranslate" data-settings=" minimize scroll-mouseover" style="margin-top: 12px; margin-bottom: 12px; font-size: 12px !important; line-height: 15px !important;">
+		
+			<div class="crayon-toolbar" data-settings=" mouseover overlay hide delay" style="font-size: 12px !important;height: 18px !important; line-height: 18px !important;">
+<span class="crayon-title"></span>
+			<div class="crayon-tools" style="font-size: 12px !important;height: 18px !important; line-height: 18px !important;">
+<div class="crayon-button urvanov-syntax-highlighter-nums-button" title="Toggle Line Numbers"><div class="urvanov-syntax-highlighter-button-icon"></div></div>
+<div class="crayon-button urvanov-syntax-highlighter-plain-button" title="Toggle Plain Code"><div class="urvanov-syntax-highlighter-button-icon"></div></div>
+<div class="crayon-button urvanov-syntax-highlighter-wrap-button" title="Toggle Line Wrap"><div class="urvanov-syntax-highlighter-button-icon"></div></div>
+<div class="crayon-button urvanov-syntax-highlighter-expand-button" title="Expand Code"><div class="urvanov-syntax-highlighter-button-icon"></div></div>
+<div class="crayon-button urvanov-syntax-highlighter-copy-button" title="Copy"><div class="urvanov-syntax-highlighter-button-icon"></div></div>
+<div class="crayon-button urvanov-syntax-highlighter-popup-button" title="Open Code In New Window"><div class="urvanov-syntax-highlighter-button-icon"></div></div>
+<span class="crayon-language">Ruby</span>
+</div>
+</div>
+			<div class="crayon-info" style="min-height: 16.8px !important; line-height: 16.8px !important;"></div>
+			<div class="urvanov-syntax-highlighter-plain-wrap"><textarea wrap="soft" class="urvanov-syntax-highlighter-plain print-no" data-settings="dblclick" readonly style="-moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4; font-size: 12px !important; line-height: 15px !important;">
+class CreatePlanets &lt; ActiveRecord::Migration
+  def change
+    create_table :planets do |t|
+
+      t.timestamps
+    end
+  end
+end</textarea></div>
+			<div class="urvanov-syntax-highlighter-main">
+				<table class="crayon-table">
+					<tr class="urvanov-syntax-highlighter-row">
+				<td class="crayon-nums " data-settings="show">
+					<div class="urvanov-syntax-highlighter-nums-content" style="font-size: 12px !important; line-height: 15px !important;">
+<div class="crayon-num" data-line="urvanov-syntax-highlighter-647f44fbbff2c422903715-1">1</div>
+<div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-647f44fbbff2c422903715-2">2</div>
+<div class="crayon-num" data-line="urvanov-syntax-highlighter-647f44fbbff2c422903715-3">3</div>
+<div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-647f44fbbff2c422903715-4">4</div>
+<div class="crayon-num" data-line="urvanov-syntax-highlighter-647f44fbbff2c422903715-5">5</div>
+<div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-647f44fbbff2c422903715-6">6</div>
+<div class="crayon-num" data-line="urvanov-syntax-highlighter-647f44fbbff2c422903715-7">7</div>
+<div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-647f44fbbff2c422903715-8">8</div>
+</div>
+				</td>
+						<td class="urvanov-syntax-highlighter-code"><div class="crayon-pre" style="font-size: 12px !important; line-height: 15px !important; -moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4;">
+<div class="crayon-line" id="urvanov-syntax-highlighter-647f44fbbff2c422903715-1">
+<span class="crayon-r">class</span><span class="crayon-h"> </span><span class="crayon-v">CreatePlanets</span><span class="crayon-h"> </span><span class="crayon-o">&lt;</span><span class="crayon-h"> </span><span class="crayon-v">ActiveRecord</span><span class="crayon-o">::</span><span class="crayon-i">Migration</span>
+</div>
+<div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-647f44fbbff2c422903715-2">
+<span class="crayon-h">&nbsp;&nbsp;</span><span class="crayon-r">def</span><span class="crayon-h"> </span><span class="crayon-i">change</span>
+</div>
+<div class="crayon-line" id="urvanov-syntax-highlighter-647f44fbbff2c422903715-3">
+<span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-v">create_table</span><span class="crayon-h"> </span><span class="crayon-o">:</span><span class="crayon-i">planets</span><span class="crayon-h"> </span><span class="crayon-st">do</span><span class="crayon-h"> </span><span class="crayon-o">|</span><span class="crayon-v">t</span><span class="crayon-o">|</span>
+</div>
+<div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-647f44fbbff2c422903715-4">&nbsp;</div>
+<div class="crayon-line" id="urvanov-syntax-highlighter-647f44fbbff2c422903715-5">
+<span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-v">t</span><span class="crayon-sy">.</span><span class="crayon-i">timestamps</span>
+</div>
+<div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-647f44fbbff2c422903715-6">
+<span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-st">end</span>
+</div>
+<div class="crayon-line" id="urvanov-syntax-highlighter-647f44fbbff2c422903715-7">
+<span class="crayon-h">&nbsp;&nbsp;</span><span class="crayon-st">end</span>
+</div>
+<div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-647f44fbbff2c422903715-8"><span class="crayon-st">end</span></div>
+</div></td>
+					</tr>
+				</table>
+			</div>
+		</div>
+<!-- [Format Time: 0.0003 seconds] -->
+<p></p>
+<p>I&#8217;m going to add a few things to this migration before I do anything with it. Keep in mind that the migration is going to say what my database schema looks like. So here I&#8217;m going to make sure I put in a few columns that I want my database to have.</p>
+<p></p>
+<!-- Urvanov Syntax Highlighter v2.8.33 -->
+
+		<div id="urvanov-syntax-highlighter-647f44fbbff2d515224076" class="urvanov-syntax-highlighter-syntax crayon-theme-classic urvanov-syntax-highlighter-font-monaco urvanov-syntax-highlighter-os-pc print-yes notranslate" data-settings=" minimize scroll-mouseover" style="margin-top: 12px; margin-bottom: 12px; font-size: 12px !important; line-height: 15px !important;">
+		
+			<div class="crayon-toolbar" data-settings=" mouseover overlay hide delay" style="font-size: 12px !important;height: 18px !important; line-height: 18px !important;">
+<span class="crayon-title"></span>
+			<div class="crayon-tools" style="font-size: 12px !important;height: 18px !important; line-height: 18px !important;">
+<div class="crayon-button urvanov-syntax-highlighter-nums-button" title="Toggle Line Numbers"><div class="urvanov-syntax-highlighter-button-icon"></div></div>
+<div class="crayon-button urvanov-syntax-highlighter-plain-button" title="Toggle Plain Code"><div class="urvanov-syntax-highlighter-button-icon"></div></div>
+<div class="crayon-button urvanov-syntax-highlighter-wrap-button" title="Toggle Line Wrap"><div class="urvanov-syntax-highlighter-button-icon"></div></div>
+<div class="crayon-button urvanov-syntax-highlighter-expand-button" title="Expand Code"><div class="urvanov-syntax-highlighter-button-icon"></div></div>
+<div class="crayon-button urvanov-syntax-highlighter-copy-button" title="Copy"><div class="urvanov-syntax-highlighter-button-icon"></div></div>
+<div class="crayon-button urvanov-syntax-highlighter-popup-button" title="Open Code In New Window"><div class="urvanov-syntax-highlighter-button-icon"></div></div>
+<span class="crayon-language">Ruby</span>
+</div>
+</div>
+			<div class="crayon-info" style="min-height: 16.8px !important; line-height: 16.8px !important;"></div>
+			<div class="urvanov-syntax-highlighter-plain-wrap"><textarea wrap="soft" class="urvanov-syntax-highlighter-plain print-no" data-settings="dblclick" readonly style="-moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4; font-size: 12px !important; line-height: 15px !important;">
+class CreatePlanets &lt; ActiveRecord::Migration
+  def change
+    create_table :planets do |t|
+      t.string :name
+      t.string :image_url
+      t.text   :details
+      t.text   :facts
+
+      t.timestamps
+    end
+  end
+end</textarea></div>
+			<div class="urvanov-syntax-highlighter-main">
+				<table class="crayon-table">
+					<tr class="urvanov-syntax-highlighter-row">
+				<td class="crayon-nums " data-settings="show">
+					<div class="urvanov-syntax-highlighter-nums-content" style="font-size: 12px !important; line-height: 15px !important;">
+<div class="crayon-num" data-line="urvanov-syntax-highlighter-647f44fbbff2d515224076-1">1</div>
+<div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-647f44fbbff2d515224076-2">2</div>
+<div class="crayon-num" data-line="urvanov-syntax-highlighter-647f44fbbff2d515224076-3">3</div>
+<div class="crayon-num crayon-marked-num crayon-top crayon-striped-num" data-line="urvanov-syntax-highlighter-647f44fbbff2d515224076-4">4</div>
+<div class="crayon-num crayon-marked-num" data-line="urvanov-syntax-highlighter-647f44fbbff2d515224076-5">5</div>
+<div class="crayon-num crayon-marked-num crayon-striped-num" data-line="urvanov-syntax-highlighter-647f44fbbff2d515224076-6">6</div>
+<div class="crayon-num crayon-marked-num crayon-bottom" data-line="urvanov-syntax-highlighter-647f44fbbff2d515224076-7">7</div>
+<div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-647f44fbbff2d515224076-8">8</div>
+<div class="crayon-num" data-line="urvanov-syntax-highlighter-647f44fbbff2d515224076-9">9</div>
+<div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-647f44fbbff2d515224076-10">10</div>
+<div class="crayon-num" data-line="urvanov-syntax-highlighter-647f44fbbff2d515224076-11">11</div>
+<div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-647f44fbbff2d515224076-12">12</div>
+</div>
+				</td>
+						<td class="urvanov-syntax-highlighter-code"><div class="crayon-pre" style="font-size: 12px !important; line-height: 15px !important; -moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4;">
+<div class="crayon-line" id="urvanov-syntax-highlighter-647f44fbbff2d515224076-1">
+<span class="crayon-r">class</span><span class="crayon-h"> </span><span class="crayon-v">CreatePlanets</span><span class="crayon-h"> </span><span class="crayon-o">&lt;</span><span class="crayon-h"> </span><span class="crayon-v">ActiveRecord</span><span class="crayon-o">::</span><span class="crayon-i">Migration</span>
+</div>
+<div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-647f44fbbff2d515224076-2">
+<span class="crayon-h">&nbsp;&nbsp;</span><span class="crayon-r">def</span><span class="crayon-h"> </span><span class="crayon-i">change</span>
+</div>
+<div class="crayon-line" id="urvanov-syntax-highlighter-647f44fbbff2d515224076-3">
+<span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-v">create_table</span><span class="crayon-h"> </span><span class="crayon-o">:</span><span class="crayon-i">planets</span><span class="crayon-h"> </span><span class="crayon-st">do</span><span class="crayon-h"> </span><span class="crayon-o">|</span><span class="crayon-v">t</span><span class="crayon-o">|</span>
+</div>
+<div class="crayon-line crayon-marked-line crayon-top crayon-striped-line" id="urvanov-syntax-highlighter-647f44fbbff2d515224076-4">
+<span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-v">t</span><span class="crayon-sy">.</span><span class="crayon-t">string</span><span class="crayon-h"> </span><span class="crayon-o">:</span><span class="crayon-i">name</span>
+</div>
+<div class="crayon-line crayon-marked-line" id="urvanov-syntax-highlighter-647f44fbbff2d515224076-5">
+<span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-v">t</span><span class="crayon-sy">.</span><span class="crayon-t">string</span><span class="crayon-h"> </span><span class="crayon-o">:</span><span class="crayon-v">image</span><span class="crayon-sy">_</span>url</div>
+<div class="crayon-line crayon-marked-line crayon-striped-line" id="urvanov-syntax-highlighter-647f44fbbff2d515224076-6">
+<span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-v">t</span><span class="crayon-sy">.</span><span class="crayon-v">text</span><span class="crayon-h">&nbsp;&nbsp; </span><span class="crayon-o">:</span><span class="crayon-i">details</span>
+</div>
+<div class="crayon-line crayon-marked-line crayon-bottom" id="urvanov-syntax-highlighter-647f44fbbff2d515224076-7">
+<span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-v">t</span><span class="crayon-sy">.</span><span class="crayon-v">text</span><span class="crayon-h">&nbsp;&nbsp; </span><span class="crayon-o">:</span><span class="crayon-i">facts</span>
+</div>
+<div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-647f44fbbff2d515224076-8">&nbsp;</div>
+<div class="crayon-line" id="urvanov-syntax-highlighter-647f44fbbff2d515224076-9">
+<span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-v">t</span><span class="crayon-sy">.</span><span class="crayon-i">timestamps</span>
+</div>
+<div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-647f44fbbff2d515224076-10">
+<span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-st">end</span>
+</div>
+<div class="crayon-line" id="urvanov-syntax-highlighter-647f44fbbff2d515224076-11">
+<span class="crayon-h">&nbsp;&nbsp;</span><span class="crayon-st">end</span>
+</div>
+<div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-647f44fbbff2d515224076-12"><span class="crayon-st">end</span></div>
+</div></td>
+					</tr>
+				</table>
+			</div>
+		</div>
+<!-- [Format Time: 0.0004 seconds] -->
+<p></p>
+<p>Incidentally, I could have had those fields created for me in the migration by specifying them at the time I created the model. So I could have done this:</p>
+<pre>
+rails generate model Planet name:string image_url:string details:text facts:text
+</pre>
+<p>With the logic in the migration file, you can see that the create_table() method is called which provides the name of the table to create (planets). Inside the block, the string and text methods each create a column that is named after the parameter. So <code>t.string :name</code> creates a field (column) named <code>name</code> with the type <code>string</code>.</p>
+<p>You&#8217;ll have noticed that the one thing that was provided for you is the <code>t.timestamps</code>. This is used by Rails to create two fields &#8212; <code>created_at</code> and <code>updated_at</code>. As you can no doubt imagine, Rails sets the value of these fields to the date when a given database record is created and updated, respectively.</p>
+<p>Now that the migration is how I want it to be, I&#8217;ll run the migration to create the table.</p>
+<pre>
+rake db:migrate
+</pre>
+<p>When you run this command, the Rake tool looks for all the migrations not yet applied to the database and applies them. How does Rake know what hasn&#8217;t been applied? Well, in part, that&#8217;s exactly what the timestamp is for as part of the migration filename. In this case, the above action means that the planets table is added to the database defined by the development section of the database.yml file. Why development? Because that&#8217;s the environment or mode that Rails runs in by default.</p>
+<p>Now, if you&#8217;re like me, you want to have options for the &#8220;What if I screwed up?&#8221; situation. You can roll back migrations that you just applied. Use <code>rake db:rollback</code> for that purpose. If you did that after the above command, it would simply delete (or drop, as they say) the planets table from the database, thus reversing the create_table action.</p>
+<p>What if you had more than one migration you wanted to rollback? You could do that like this: <code>rake db:rollback STEP=3</code>. That would rollback the last three migrations. There are other variations that I won&#8217;t cover here; just know you have options if you find yourself in one of those &#8220;uh oh&#8221; moments.</p>
+<h2>Creating the Controller</h2>
+<p>Now I can create a controller named planets. In Rails, the convention is that controllers are plural and models are singular. This particular controller will control the operation of the application&#8217;s &#8220;planets functionality,&#8221; whatever that turns out to be. Realistically what this means is that the controller will provide a means to get information into and out of the model, the latter of which, remember, is going to store the actual data about planets.</p>
+<p>So I&#8217;ll generate my controller:</p>
+<pre>
+rails generate controller planets
+</pre>
+<p>I get output looking like this:</p>
+<pre>
+create  app/controllers/planets_controller.rb
+create  app/views/planets
+create  test/controllers/planets_controller_test.rb
+create  app/helpers/planets_helper.rb
+create  test/helpers/planets_helper_test.rb
+create  app/assets/javascripts/planets.js.coffee
+create  app/assets/stylesheets/planets.css.scss
+</pre>
+<p>You get a controller (<strong>planet_controller.rb</strong>) that handles any requests or responses that have to do with planets. Along with that there&#8217;s a test stub (<strong>planets_controller_test.rb</strong>) for holding any tests for this controller. If this controller will utilize any utility methods to help it talk with views, those can be placed in the provided helper class (<strong>planets_helper.rb</strong>). And, as with the controller itself, there is a test stub (<strong>planets_helper_test.rb</strong>) created to hold tests for these utility methods.</p>
+<p>Two other files generated may seem a little odd: the JavaScript (<strong>planets.js.coffee</strong>) and CSS (<strong>planets.css.scss</strong>) files. Or, rather, the CoffeeScript and Sassy CSS files. The idea with these files is that if any views for the planets are going to rely on scripts or stylesheets, the stubs are in place to handle that.</p>
+<p>CoffeeScript and SASS are languages that compile into JavaScript and CSS, respectively. Rails supports these by default by using something called the &#8220;asset pipeline&#8221;, introduced in Rails 3, which became &#8220;sprockets-rails&#8221; in Rails 4. For now just know that these .coffee and .scss files get compiled into the more standard languages &#8212; .js and .css, respectively. This happens automatically and ensures that a browser actually recognizes the files.</p>
+<p>It&#8217;s important to note that the controller generator also created an empty directory of <strong>app/views/planets</strong>. Rails doesn&#8217;t put any stub views in there but this is where you would place the templates for the planets controller.</p>
+<h2>Using Scaffolding</h2>
+<p>So now here we get a bit into the weeds and into an interesting aspect of Rails. There&#8217;s a concept in Rails called &#8220;scaffolding&#8221;, the purpose of which is to allow you to create a boilerplate-style set of actions (in a controller) and templates (for views) that make it easy to manipulate data for a specific model.</p>
+<p>It&#8217;s important to understand that you can &#8212; and arguably should &#8212; code all that stuff without using scaffolding. (In fact, that&#8217;s what I did in my post on <a href="/a-tester-learns-rails/">learning Rails</a>.) Here, however, I&#8217;m going to use it just to see what it does.</p>
+<p>So first I&#8217;m going to create a scaffold that supports my existing model of Planet:</p>
+<pre style="white-space: pre-wrap;">
+rails generate scaffold Planet name:string image_url:string details:text facts:text --skip-migration
+</pre>
+<p>You&#8217;ll notice here I&#8217;m generating this scaffold using the same columns/fields for when I created the model earlier. This is where I&#8217;m coloring outside the lines a little bit. Normally, if planning to use scaffolding, you would not have created the controller and model as I originally did in this post. Rather you would have simply used the scaffolding as I just did with that last command.</p>
+<p>Okay, so then why am I doing this now, essentially recreating some of what I already did? Well, the scaffold simplifies giving me the actions to test out my model while still retaining the model I already created.</p>
+<p>Because of the fact that I already created some of this material, I&#8217;m going to be asked by the scaffold generator if it can overwrite some of that stuff with its own new versions of those files. Specifically, I got this:</p>
+<pre>
+Overwrite /planets/test/fixtures/planets.yml?
+Overwrite /planets/app/controllers/planets_controller.rb?
+Overwrite /planets/test/controllers/planets_controller_test.rb?
+Overwrite /planets/app/assets/javascripts/planets.js.coffee?
+Overwrite /planets/app/assets/stylesheets/planets.css.scss?
+</pre>
+<p>I answered &#8216;y&#8217; to all of those. Also, the generator may or may not warn you about the planets.js.coffee script; I&#8217;m not sure why.</p>
+<p>Please keep something in mind here: because my planets controller was empty, it&#8217;s entirely safe for me to overwrite it. The same goes for the test and fixture. Clearly had I done work in those files, this would have been a bit more problematic. Then again, had I already done the work in those files, I probably wouldn&#8217;t be using scaffolding.</p>
+<p>I want to make one point very clear here: if you run the model generator, it creates a migration to in turn create the table associated with the model &#8212; <em>unless</em> you specify the <code>--skip-migration</code> option. You&#8217;ve seen both variations of this in action now. You can also generate a migration on its own, without generating a model. More on that later.</p>
+<p>A lot of output is given with the above command, but here&#8217;s a few things to call out:</p>
+<pre>
+route    resources :planets
+create   app/views/planets/index.html.erb
+create   app/views/planets/edit.html.erb
+create   app/views/planets/show.html.erb
+create   app/views/planets/new.html.erb
+create   app/views/planets/_form.html.erb
+</pre>
+<p>Resources are configured in the <strong>config/routes.rb</strong> file using the resources() method. Without going into too many details, the resources() method generated some named routes for me based on the controller called &#8220;planets&#8221;. Notice here that the <strong>app/views/planets</strong> folder &#8212; originally left as empty &#8212; is now populated with some views. These views are pages that can be called up in a browser. We&#8217;ll get to that in a bit.</p>
+<p>Another thing that stands out: I used the <code>--skip-migration</code> option when calling the generator, which I mentioned a few moments ago. But why did I do that? Because a migration creating the planets table already existed. That was one of the first things I did earlier. If I did not tell Rails to skip creating a migration this time around, Rails would have created the same migration as before. Would that be so bad? Well, think back to our first migration. That migration attempts to create a table. So if a second migration was created this time, it would also be trying to create a table and Rails won&#8217;t allow a table to be created twice.</p>
+<p>So what did I get for all this &#8220;convenience&#8221; of using the scaffold? Quite a bit, actually. The scaffold provided methods and pages (views) that allow me to create, display, update, and delete records in my planets database. I actually now have a working example of the Planet model. To see that, start up the server:</p>
+<pre>
+rails server
+</pre>
+<p>Then go to the <a href="http://localhost:3000/planets">http://localhost:3000/planets</a> url.</p>
+<p>This takes me to a listing page for my planets. There&#8217;s no data in the database yet so, not surprisingly, this page is empty. This page, however, corresponds to the following action in the planets_controller.rb file:</p>
+<p></p>
+<!-- Urvanov Syntax Highlighter v2.8.33 -->
+
+		<div id="urvanov-syntax-highlighter-647f44fbbff2e675498759" class="urvanov-syntax-highlighter-syntax crayon-theme-classic urvanov-syntax-highlighter-font-monaco urvanov-syntax-highlighter-os-pc print-yes notranslate" data-settings=" minimize scroll-mouseover" style="margin-top: 12px; margin-bottom: 12px; font-size: 12px !important; line-height: 15px !important;">
+		
+			<div class="crayon-toolbar" data-settings=" mouseover overlay hide delay" style="font-size: 12px !important;height: 18px !important; line-height: 18px !important;">
+<span class="crayon-title"></span>
+			<div class="crayon-tools" style="font-size: 12px !important;height: 18px !important; line-height: 18px !important;">
+<div class="crayon-button urvanov-syntax-highlighter-nums-button" title="Toggle Line Numbers"><div class="urvanov-syntax-highlighter-button-icon"></div></div>
+<div class="crayon-button urvanov-syntax-highlighter-plain-button" title="Toggle Plain Code"><div class="urvanov-syntax-highlighter-button-icon"></div></div>
+<div class="crayon-button urvanov-syntax-highlighter-wrap-button" title="Toggle Line Wrap"><div class="urvanov-syntax-highlighter-button-icon"></div></div>
+<div class="crayon-button urvanov-syntax-highlighter-expand-button" title="Expand Code"><div class="urvanov-syntax-highlighter-button-icon"></div></div>
+<div class="crayon-button urvanov-syntax-highlighter-copy-button" title="Copy"><div class="urvanov-syntax-highlighter-button-icon"></div></div>
+<div class="crayon-button urvanov-syntax-highlighter-popup-button" title="Open Code In New Window"><div class="urvanov-syntax-highlighter-button-icon"></div></div>
+<span class="crayon-language">Ruby</span>
+</div>
+</div>
+			<div class="crayon-info" style="min-height: 16.8px !important; line-height: 16.8px !important;"></div>
+			<div class="urvanov-syntax-highlighter-plain-wrap"><textarea wrap="soft" class="urvanov-syntax-highlighter-plain print-no" data-settings="dblclick" readonly style="-moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4; font-size: 12px !important; line-height: 15px !important;">
+class PlanetsController &lt; ApplicationController
+  def index
+    @planets = Planet.all
+  end
+end</textarea></div>
+			<div class="urvanov-syntax-highlighter-main">
+				<table class="crayon-table">
+					<tr class="urvanov-syntax-highlighter-row">
+				<td class="crayon-nums " data-settings="show">
+					<div class="urvanov-syntax-highlighter-nums-content" style="font-size: 12px !important; line-height: 15px !important;">
+<div class="crayon-num" data-line="urvanov-syntax-highlighter-647f44fbbff2e675498759-1">1</div>
+<div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-647f44fbbff2e675498759-2">2</div>
+<div class="crayon-num" data-line="urvanov-syntax-highlighter-647f44fbbff2e675498759-3">3</div>
+<div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-647f44fbbff2e675498759-4">4</div>
+<div class="crayon-num" data-line="urvanov-syntax-highlighter-647f44fbbff2e675498759-5">5</div>
+</div>
+				</td>
+						<td class="urvanov-syntax-highlighter-code"><div class="crayon-pre" style="font-size: 12px !important; line-height: 15px !important; -moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4;">
+<div class="crayon-line" id="urvanov-syntax-highlighter-647f44fbbff2e675498759-1">
+<span class="crayon-r">class</span><span class="crayon-h"> </span><span class="crayon-v">PlanetsController</span><span class="crayon-h"> </span><span class="crayon-o">&lt;</span><span class="crayon-h"> </span><span class="crayon-i">ApplicationController</span>
+</div>
+<div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-647f44fbbff2e675498759-2">
+<span class="crayon-h">&nbsp;&nbsp;</span><span class="crayon-r">def</span><span class="crayon-h"> </span><span class="crayon-i">index</span>
+</div>
+<div class="crayon-line" id="urvanov-syntax-highlighter-647f44fbbff2e675498759-3">
+<span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-v">@planets</span><span class="crayon-h"> </span><span class="crayon-o">=</span><span class="crayon-h"> </span><span class="crayon-v">Planet</span><span class="crayon-sy">.</span><span class="crayon-i">all</span>
+</div>
+<div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-647f44fbbff2e675498759-4">
+<span class="crayon-h">&nbsp;&nbsp;</span><span class="crayon-st">end</span>
+</div>
+<div class="crayon-line" id="urvanov-syntax-highlighter-647f44fbbff2e675498759-5"><span class="crayon-st">end</span></div>
+</div></td>
+					</tr>
+				</table>
+			</div>
+		</div>
+<!-- [Format Time: 0.0001 seconds] -->
+<p></p>
+<p>That&#8217;s an example of the controller calling out to my model (Planet) and saying &#8220;Get me all the planets in the database and store them in the instance variable @planets.&#8221; Again, there are no items in the database yet, so nothing is returned.</p>
+<p>If you look in the console where you started the server, you&#8217;ll see that the act of visiting the page gives you some information on how Rails is working (such as calling PlanetsController#index) and getting information from the database:</p>
+<pre style="white-space: pre-wrap; background-color: white; border: 1px solid;">
+Started GET "/planets" for 127.0.0.1 at 2014-05-25 05:56:53 -0500
+Processing by PlanetsController#index as HTML
+  Planet Load (0.0ms)  SELECT "planets".* FROM "planets"
+  Rendered planets/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 11ms (Views: 9.0ms | ActiveRecord: 0.0ms)
+</pre>
+<p>In the browser, click the New Planet link, and you&#8217;re taken to a screen where you can enter information about a planet. Notice that the URL is <a href="http://localhost:3000/planets/new">http://localhost:3000/planets/new</a>. In Rails, this URL means you&#8217;re invoking the new action on the planets controller, which looks like this (all due to scaffolding):</p>
+<p></p>
+<!-- Urvanov Syntax Highlighter v2.8.33 -->
+
+		<div id="urvanov-syntax-highlighter-647f44fbbff39920728419" class="urvanov-syntax-highlighter-syntax crayon-theme-classic urvanov-syntax-highlighter-font-monaco urvanov-syntax-highlighter-os-pc print-yes notranslate" data-settings=" minimize scroll-mouseover" style="margin-top: 12px; margin-bottom: 12px; font-size: 12px !important; line-height: 15px !important;">
+		
+			<div class="crayon-toolbar" data-settings=" mouseover overlay hide delay" style="font-size: 12px !important;height: 18px !important; line-height: 18px !important;">
+<span class="crayon-title"></span>
+			<div class="crayon-tools" style="font-size: 12px !important;height: 18px !important; line-height: 18px !important;">
+<div class="crayon-button urvanov-syntax-highlighter-nums-button" title="Toggle Line Numbers"><div class="urvanov-syntax-highlighter-button-icon"></div></div>
+<div class="crayon-button urvanov-syntax-highlighter-plain-button" title="Toggle Plain Code"><div class="urvanov-syntax-highlighter-button-icon"></div></div>
+<div class="crayon-button urvanov-syntax-highlighter-wrap-button" title="Toggle Line Wrap"><div class="urvanov-syntax-highlighter-button-icon"></div></div>
+<div class="crayon-button urvanov-syntax-highlighter-expand-button" title="Expand Code"><div class="urvanov-syntax-highlighter-button-icon"></div></div>
+<div class="crayon-button urvanov-syntax-highlighter-copy-button" title="Copy"><div class="urvanov-syntax-highlighter-button-icon"></div></div>
+<div class="crayon-button urvanov-syntax-highlighter-popup-button" title="Open Code In New Window"><div class="urvanov-syntax-highlighter-button-icon"></div></div>
+<span class="crayon-language">Ruby</span>
+</div>
+</div>
+			<div class="crayon-info" style="min-height: 16.8px !important; line-height: 16.8px !important;"></div>
+			<div class="urvanov-syntax-highlighter-plain-wrap"><textarea wrap="soft" class="urvanov-syntax-highlighter-plain print-no" data-settings="dblclick" readonly style="-moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4; font-size: 12px !important; line-height: 15px !important;">
+class PlanetsController &lt; ApplicationController
+  def new
+    @planet = Planet.new
+  end
+end</textarea></div>
+			<div class="urvanov-syntax-highlighter-main">
+				<table class="crayon-table">
+					<tr class="urvanov-syntax-highlighter-row">
+				<td class="crayon-nums " data-settings="show">
+					<div class="urvanov-syntax-highlighter-nums-content" style="font-size: 12px !important; line-height: 15px !important;">
+<div class="crayon-num" data-line="urvanov-syntax-highlighter-647f44fbbff39920728419-1">1</div>
+<div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-647f44fbbff39920728419-2">2</div>
+<div class="crayon-num" data-line="urvanov-syntax-highlighter-647f44fbbff39920728419-3">3</div>
+<div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-647f44fbbff39920728419-4">4</div>
+<div class="crayon-num" data-line="urvanov-syntax-highlighter-647f44fbbff39920728419-5">5</div>
+</div>
+				</td>
+						<td class="urvanov-syntax-highlighter-code"><div class="crayon-pre" style="font-size: 12px !important; line-height: 15px !important; -moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4;">
+<div class="crayon-line" id="urvanov-syntax-highlighter-647f44fbbff39920728419-1">
+<span class="crayon-r">class</span><span class="crayon-h"> </span><span class="crayon-v">PlanetsController</span><span class="crayon-h"> </span><span class="crayon-o">&lt;</span><span class="crayon-h"> </span><span class="crayon-i">ApplicationController</span>
+</div>
+<div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-647f44fbbff39920728419-2">
+<span class="crayon-h">&nbsp;&nbsp;</span><span class="crayon-r">def</span><span class="crayon-h"> </span><span class="crayon-i">new</span>
+</div>
+<div class="crayon-line" id="urvanov-syntax-highlighter-647f44fbbff39920728419-3">
+<span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-v">@planet</span><span class="crayon-h"> </span><span class="crayon-o">=</span><span class="crayon-h"> </span><span class="crayon-v">Planet</span><span class="crayon-sy">.</span><span class="crayon-i">new</span>
+</div>
+<div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-647f44fbbff39920728419-4">
+<span class="crayon-h">&nbsp;&nbsp;</span><span class="crayon-st">end</span>
+</div>
+<div class="crayon-line" id="urvanov-syntax-highlighter-647f44fbbff39920728419-5"><span class="crayon-st">end</span></div>
+</div></td>
+					</tr>
+				</table>
+			</div>
+		</div>
+<!-- [Format Time: 0.0001 seconds] -->
+<p></p>
+<p>This is an example of a new instance of a model object (Planet) being created and stored in a @planet instance variable. Behind the scenes, you&#8217;ll see this:</p>
+<pre style="white-space: pre-wrap; background-color: white; border: 1px solid;">
+Started GET "/planets/new" for 127.0.0.1 at 2014-05-22 19:27:35 -0500
+Processing by PlanetsController#new as HTML
+  Rendered planets/_form.html.erb (47.0ms)
+  Rendered planets/new.html.erb within layouts/application (64.2ms)
+Completed 200 OK in 84ms (Views: 77.7ms | ActiveRecord: 2.0ms)
+</pre>
+<p>It would be a shame not to see if the scaffolding generated something that actually worked, so try it out! Add a planet. The information entered into the fields at this point doesn&#8217;t matter.</p>
+<p>You&#8217;ll notice that every time you add a planet, you&#8217;re taken to a view that shows you details of what you just entered. What actually happens here is that the create action on the controller is called and then the show action is called, the methods of which should look something like this in the controller:</p>
+<p></p>
+<!-- Urvanov Syntax Highlighter v2.8.33 -->
+
+		<div id="urvanov-syntax-highlighter-647f44fbbff3b160392516" class="urvanov-syntax-highlighter-syntax crayon-theme-classic urvanov-syntax-highlighter-font-monaco urvanov-syntax-highlighter-os-pc print-yes notranslate" data-settings=" minimize scroll-mouseover" style="margin-top: 12px; margin-bottom: 12px; font-size: 12px !important; line-height: 15px !important;">
+		
+			<div class="crayon-toolbar" data-settings=" mouseover overlay hide delay" style="font-size: 12px !important;height: 18px !important; line-height: 18px !important;">
+<span class="crayon-title"></span>
+			<div class="crayon-tools" style="font-size: 12px !important;height: 18px !important; line-height: 18px !important;">
+<div class="crayon-button urvanov-syntax-highlighter-nums-button" title="Toggle Line Numbers"><div class="urvanov-syntax-highlighter-button-icon"></div></div>
+<div class="crayon-button urvanov-syntax-highlighter-plain-button" title="Toggle Plain Code"><div class="urvanov-syntax-highlighter-button-icon"></div></div>
+<div class="crayon-button urvanov-syntax-highlighter-wrap-button" title="Toggle Line Wrap"><div class="urvanov-syntax-highlighter-button-icon"></div></div>
+<div class="crayon-button urvanov-syntax-highlighter-expand-button" title="Expand Code"><div class="urvanov-syntax-highlighter-button-icon"></div></div>
+<div class="crayon-button urvanov-syntax-highlighter-copy-button" title="Copy"><div class="urvanov-syntax-highlighter-button-icon"></div></div>
+<div class="crayon-button urvanov-syntax-highlighter-popup-button" title="Open Code In New Window"><div class="urvanov-syntax-highlighter-button-icon"></div></div>
+<span class="crayon-language">Ruby</span>
+</div>
+</div>
+			<div class="crayon-info" style="min-height: 16.8px !important; line-height: 16.8px !important;"></div>
+			<div class="urvanov-syntax-highlighter-plain-wrap"><textarea wrap="soft" class="urvanov-syntax-highlighter-plain print-no" data-settings="dblclick" readonly style="-moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4; font-size: 12px !important; line-height: 15px !important;">
+class PlanetsController &lt; ApplicationController
+  def create
+    @planet = Planet.new(planet_params)
+
+    respond_to do |format|
+      if @planet.save
+        format.html { redirect_to @planet, notice: 'Planet was successfully created.' }
+        format.json { render :show, status: :created, location: @planet }
+      else
+        format.html { render :new }
+        format.json { render json: @planet.errors, status: :unprocessable_entity }
+      end
+    end
+  end
+	
+  def show
+  end
+end</textarea></div>
+			<div class="urvanov-syntax-highlighter-main">
+				<table class="crayon-table">
+					<tr class="urvanov-syntax-highlighter-row">
+				<td class="crayon-nums " data-settings="show">
+					<div class="urvanov-syntax-highlighter-nums-content" style="font-size: 12px !important; line-height: 15px !important;">
+<div class="crayon-num" data-line="urvanov-syntax-highlighter-647f44fbbff3b160392516-1">1</div>
+<div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-647f44fbbff3b160392516-2">2</div>
+<div class="crayon-num" data-line="urvanov-syntax-highlighter-647f44fbbff3b160392516-3">3</div>
+<div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-647f44fbbff3b160392516-4">4</div>
+<div class="crayon-num" data-line="urvanov-syntax-highlighter-647f44fbbff3b160392516-5">5</div>
+<div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-647f44fbbff3b160392516-6">6</div>
+<div class="crayon-num" data-line="urvanov-syntax-highlighter-647f44fbbff3b160392516-7">7</div>
+<div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-647f44fbbff3b160392516-8">8</div>
+<div class="crayon-num" data-line="urvanov-syntax-highlighter-647f44fbbff3b160392516-9">9</div>
+<div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-647f44fbbff3b160392516-10">10</div>
+<div class="crayon-num" data-line="urvanov-syntax-highlighter-647f44fbbff3b160392516-11">11</div>
+<div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-647f44fbbff3b160392516-12">12</div>
+<div class="crayon-num" data-line="urvanov-syntax-highlighter-647f44fbbff3b160392516-13">13</div>
+<div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-647f44fbbff3b160392516-14">14</div>
+<div class="crayon-num" data-line="urvanov-syntax-highlighter-647f44fbbff3b160392516-15">15</div>
+<div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-647f44fbbff3b160392516-16">16</div>
+<div class="crayon-num" data-line="urvanov-syntax-highlighter-647f44fbbff3b160392516-17">17</div>
+<div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-647f44fbbff3b160392516-18">18</div>
+</div>
+				</td>
+						<td class="urvanov-syntax-highlighter-code"><div class="crayon-pre" style="font-size: 12px !important; line-height: 15px !important; -moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4;">
+<div class="crayon-line" id="urvanov-syntax-highlighter-647f44fbbff3b160392516-1">
+<span class="crayon-r">class</span><span class="crayon-h"> </span><span class="crayon-v">PlanetsController</span><span class="crayon-h"> </span><span class="crayon-o">&lt;</span><span class="crayon-h"> </span><span class="crayon-i">ApplicationController</span>
+</div>
+<div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-647f44fbbff3b160392516-2">
+<span class="crayon-h">&nbsp;&nbsp;</span><span class="crayon-r">def</span><span class="crayon-h"> </span><span class="crayon-i">create</span>
+</div>
+<div class="crayon-line" id="urvanov-syntax-highlighter-647f44fbbff3b160392516-3">
+<span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-v">@planet</span><span class="crayon-h"> </span><span class="crayon-o">=</span><span class="crayon-h"> </span><span class="crayon-v">Planet</span><span class="crayon-sy">.</span><span class="crayon-e">new</span><span class="crayon-sy">(</span><span class="crayon-v">planet_params</span><span class="crayon-sy">)</span>
+</div>
+<div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-647f44fbbff3b160392516-4">&nbsp;</div>
+<div class="crayon-line" id="urvanov-syntax-highlighter-647f44fbbff3b160392516-5">
+<span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-v">respond</span><span class="crayon-sy">_</span>to<span class="crayon-h"> </span><span class="crayon-st">do</span><span class="crayon-h"> </span><span class="crayon-o">|</span><span class="crayon-v">format</span><span class="crayon-o">|</span>
+</div>
+<div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-647f44fbbff3b160392516-6">
+<span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-st">if</span><span class="crayon-h"> </span><span class="crayon-v">@planet</span><span class="crayon-sy">.</span><span class="crayon-i">save</span>
+</div>
+<div class="crayon-line" id="urvanov-syntax-highlighter-647f44fbbff3b160392516-7">
+<span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-v">format</span><span class="crayon-sy">.</span><span class="crayon-e">html</span><span class="crayon-h"> </span><span class="crayon-k ">{</span><span class="crayon-h"> </span><span class="crayon-v">redirect</span><span class="crayon-sy">_</span>to<span class="crayon-h"> </span><span class="crayon-v">@planet</span><span class="crayon-sy">,</span><span class="crayon-h"> </span><span class="crayon-v">notice</span><span class="crayon-o">:</span><span class="crayon-h"> </span><span class="crayon-s">'Planet was successfully created.'</span><span class="crayon-h"> </span><span class="crayon-k ">}</span>
+</div>
+<div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-647f44fbbff3b160392516-8">
+<span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-v">format</span><span class="crayon-sy">.</span><span class="crayon-e">json</span><span class="crayon-h"> </span><span class="crayon-k ">{</span><span class="crayon-h"> </span><span class="crayon-v">render</span><span class="crayon-h"> </span><span class="crayon-o">:</span><span class="crayon-v">show</span><span class="crayon-sy">,</span><span class="crayon-h"> </span><span class="crayon-v">status</span><span class="crayon-o">:</span><span class="crayon-h"> </span><span class="crayon-o">:</span><span class="crayon-v">created</span><span class="crayon-sy">,</span><span class="crayon-h"> </span><span class="crayon-v">location</span><span class="crayon-o">:</span><span class="crayon-h"> </span><span class="crayon-v">@planet</span><span class="crayon-h"> </span><span class="crayon-k ">}</span>
+</div>
+<div class="crayon-line" id="urvanov-syntax-highlighter-647f44fbbff3b160392516-9">
+<span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-st">else</span>
+</div>
+<div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-647f44fbbff3b160392516-10">
+<span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-v">format</span><span class="crayon-sy">.</span><span class="crayon-e">html</span><span class="crayon-h"> </span><span class="crayon-k ">{</span><span class="crayon-h"> </span><span class="crayon-v">render</span><span class="crayon-h"> </span><span class="crayon-o">:</span><span class="crayon-i">new</span><span class="crayon-h"> </span><span class="crayon-k ">}</span>
+</div>
+<div class="crayon-line" id="urvanov-syntax-highlighter-647f44fbbff3b160392516-11">
+<span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-v">format</span><span class="crayon-sy">.</span><span class="crayon-e">json</span><span class="crayon-h"> </span><span class="crayon-k ">{</span><span class="crayon-h"> </span><span class="crayon-i">render</span><span class="crayon-h"> </span><span class="crayon-v">json</span><span class="crayon-o">:</span><span class="crayon-h"> </span><span class="crayon-v">@planet</span><span class="crayon-sy">.</span><span class="crayon-v">errors</span><span class="crayon-sy">,</span><span class="crayon-h"> </span><span class="crayon-v">status</span><span class="crayon-o">:</span><span class="crayon-h"> </span><span class="crayon-o">:</span><span class="crayon-v">unprocessable</span><span class="crayon-sy">_</span>entity<span class="crayon-h"> </span><span class="crayon-k ">}</span>
+</div>
+<div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-647f44fbbff3b160392516-12">
+<span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-st">end</span>
+</div>
+<div class="crayon-line" id="urvanov-syntax-highlighter-647f44fbbff3b160392516-13">
+<span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-st">end</span>
+</div>
+<div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-647f44fbbff3b160392516-14">
+<span class="crayon-h">&nbsp;&nbsp;</span><span class="crayon-st">end</span>
+</div>
+<div class="crayon-line" id="urvanov-syntax-highlighter-647f44fbbff3b160392516-15"><span class="crayon-h">	</span></div>
+<div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-647f44fbbff3b160392516-16">
+<span class="crayon-h">&nbsp;&nbsp;</span><span class="crayon-r">def</span><span class="crayon-h"> </span><span class="crayon-i">show</span>
+</div>
+<div class="crayon-line" id="urvanov-syntax-highlighter-647f44fbbff3b160392516-17">
+<span class="crayon-h">&nbsp;&nbsp;</span><span class="crayon-st">end</span>
+</div>
+<div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-647f44fbbff3b160392516-18"><span class="crayon-st">end</span></div>
+</div></td>
+					</tr>
+				</table>
+			</div>
+		</div>
+<!-- [Format Time: 0.0005 seconds] -->
+<p></p>
+<p>It was interesting to me that show() was entirely empty but apparently that&#8217;s a part of Rails that &#8220;just works.&#8221; You can see in the create() method that there are redirect_to() and render() methods that apparently handle some or most of this in some way, which is probably opaque to you at first glance.</p>
+<p>Behind the scenes, once again, you can confirm what&#8217;s going on when you create a new database record:</p>
+<pre style="white-space: pre-wrap; background-color: white; border: 1px solid;">
+Started POST "/planets" for 127.0.0.1 at 2014-05-22 19:31:36 -0500Started POST "/planets" for 127.0.0.1 at 2014-05-25 05:59:28 -0500
+Processing by PlanetsController#create as HTML
+  Parameters: {"utf8"=>"?", "authenticity_token"=>"WEnpNfPy4B4LIwxxjSO883Qwe+tRS7Q1K4PbpE/mk4Y=", "planet"=>{"name"=>"Mars", "image_url"=>"mars.jpg", "details"=>"Details on Mars", "facts"=>"Facts about Mars"}, "commit"=>"Create Planet"}
+   (0.0ms)  begin transaction
+  SQL (1.0ms)  INSERT INTO "planets" ("created_at", "details", "facts", "image_url", "name", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["created_at", "2014-05-25 10:59:28.940556"], ["details", "Details on Mars"], ["facts", "Facts about Mars"], ["image_url", "mars.jpg"], ["name", "Mars"], ["updated_at", "2014-05-25 10:59:28.940556"]]
+   (5.0ms)  commit transaction
+Redirected to http://localhost:3000/planets/1
+Completed 302 Found in 27ms (ActiveRecord: 6.0ms)
+
+
+Started GET "/planets/1" for 127.0.0.1 at 2014-05-25 05:59:28 -0500
+Processing by PlanetsController#show as HTML
+  Parameters: {"id"=>"1"}
+  Planet Load (1.0ms)  SELECT  "planets".* FROM "planets"  WHERE "planets"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered planets/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 13ms (Views: 9.7ms | ActiveRecord: 1.0ms)
+</pre>
+<p>On the page you are taken to after creating a planet, you can either go &#8220;back&#8221; (redirected back to the index action, where you see all your planets listed) or you can edit the entry that you just created. For now, just go back to the index page and make sure the planet shows up on the list. Not only should it be there, but you&#8217;ll also see that links were generated that allow you to edit, delete or show the planet. Should you choose to edit the planet, you&#8217;ll actually be calling the update() method in the controller. If you look at that method and compare it with the create() method, you&#8217;ll see what seems to be an instance of Rails not being entirely &#8220;dry&#8221;, but maybe that&#8217;s just the scaffolding?</p>
+<p>The only point there being: don&#8217;t just trust what Rails is doing or generating for you. Look at the files that are generated and try to understand what Rails is doing and how it is doing it. In this post, I&#8217;m not going to cover all of those details because it can become a bit of a rat&#8217;s nest talking about how Rails handles HTTP verbs while also just trying to get something done with your application. You&#8217;ll probably note that there are small comments in the planets_controller.rb file that tell you what HTTP verb Rails is responding to for each action method.</p>
+<h2>Enhance the Model</h2>
+<p>Now that I can see the model represented in the browser, I&#8217;m going to add some more fields to make the model capable of ultimately storing what I need it to for calculating someone&#8217;s weight on a given planet. Whenever you need to add or modify database fields, you should do so using a migration. I didn&#8217;t need to generate the last migration (the one used to create the planets table), because the model generator took care of that for me. But this time around, I&#8217;m adding new fields entirely on an existing model and so I&#8217;m going to use the migration generator. So I do this:</p>
+<pre>
+rails generate migration add_diameter_and_mass_to_planets diameter:float mass:float
+</pre>
+<p>With this command, the generator creates a migration class in db/migrate, once again prefixed by a number identifying when the migration was created. In the file you see the migration class. As with the model generator I originally used, which prefilled the migration to some extent, passing the field names and types as options to the migration generator prefills the generated class:</p>
+<p></p>
+<!-- Urvanov Syntax Highlighter v2.8.33 -->
+
+		<div id="urvanov-syntax-highlighter-647f44fbbff3c102182571" class="urvanov-syntax-highlighter-syntax crayon-theme-classic urvanov-syntax-highlighter-font-monaco urvanov-syntax-highlighter-os-pc print-yes notranslate" data-settings=" minimize scroll-mouseover" style="margin-top: 12px; margin-bottom: 12px; font-size: 12px !important; line-height: 15px !important;">
+		
+			<div class="crayon-toolbar" data-settings=" mouseover overlay hide delay" style="font-size: 12px !important;height: 18px !important; line-height: 18px !important;">
+<span class="crayon-title"></span>
+			<div class="crayon-tools" style="font-size: 12px !important;height: 18px !important; line-height: 18px !important;">
+<div class="crayon-button urvanov-syntax-highlighter-nums-button" title="Toggle Line Numbers"><div class="urvanov-syntax-highlighter-button-icon"></div></div>
+<div class="crayon-button urvanov-syntax-highlighter-plain-button" title="Toggle Plain Code"><div class="urvanov-syntax-highlighter-button-icon"></div></div>
+<div class="crayon-button urvanov-syntax-highlighter-wrap-button" title="Toggle Line Wrap"><div class="urvanov-syntax-highlighter-button-icon"></div></div>
+<div class="crayon-button urvanov-syntax-highlighter-expand-button" title="Expand Code"><div class="urvanov-syntax-highlighter-button-icon"></div></div>
+<div class="crayon-button urvanov-syntax-highlighter-copy-button" title="Copy"><div class="urvanov-syntax-highlighter-button-icon"></div></div>
+<div class="crayon-button urvanov-syntax-highlighter-popup-button" title="Open Code In New Window"><div class="urvanov-syntax-highlighter-button-icon"></div></div>
+<span class="crayon-language">Ruby</span>
+</div>
+</div>
+			<div class="crayon-info" style="min-height: 16.8px !important; line-height: 16.8px !important;"></div>
+			<div class="urvanov-syntax-highlighter-plain-wrap"><textarea wrap="soft" class="urvanov-syntax-highlighter-plain print-no" data-settings="dblclick" readonly style="-moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4; font-size: 12px !important; line-height: 15px !important;">
+class AddDiameterAndMassToPlanets &lt; ActiveRecord::Migration
+  def change
+    add_column :planets, :diameter, :float
+    add_column :planets, :mass, :float
+  end
+end</textarea></div>
+			<div class="urvanov-syntax-highlighter-main">
+				<table class="crayon-table">
+					<tr class="urvanov-syntax-highlighter-row">
+				<td class="crayon-nums " data-settings="show">
+					<div class="urvanov-syntax-highlighter-nums-content" style="font-size: 12px !important; line-height: 15px !important;">
+<div class="crayon-num" data-line="urvanov-syntax-highlighter-647f44fbbff3c102182571-1">1</div>
+<div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-647f44fbbff3c102182571-2">2</div>
+<div class="crayon-num" data-line="urvanov-syntax-highlighter-647f44fbbff3c102182571-3">3</div>
+<div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-647f44fbbff3c102182571-4">4</div>
+<div class="crayon-num" data-line="urvanov-syntax-highlighter-647f44fbbff3c102182571-5">5</div>
+<div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-647f44fbbff3c102182571-6">6</div>
+</div>
+				</td>
+						<td class="urvanov-syntax-highlighter-code"><div class="crayon-pre" style="font-size: 12px !important; line-height: 15px !important; -moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4;">
+<div class="crayon-line" id="urvanov-syntax-highlighter-647f44fbbff3c102182571-1">
+<span class="crayon-r">class</span><span class="crayon-h"> </span><span class="crayon-v">AddDiameterAndMassToPlanets</span><span class="crayon-h"> </span><span class="crayon-o">&lt;</span><span class="crayon-h"> </span><span class="crayon-v">ActiveRecord</span><span class="crayon-o">::</span><span class="crayon-i">Migration</span>
+</div>
+<div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-647f44fbbff3c102182571-2">
+<span class="crayon-h">&nbsp;&nbsp;</span><span class="crayon-r">def</span><span class="crayon-h"> </span><span class="crayon-i">change</span>
+</div>
+<div class="crayon-line" id="urvanov-syntax-highlighter-647f44fbbff3c102182571-3">
+<span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-v">add_column</span><span class="crayon-h"> </span><span class="crayon-o">:</span><span class="crayon-v">planets</span><span class="crayon-sy">,</span><span class="crayon-h"> </span><span class="crayon-o">:</span><span class="crayon-v">diameter</span><span class="crayon-sy">,</span><span class="crayon-h"> </span><span class="crayon-o">:</span><span class="crayon-t">float</span>
+</div>
+<div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-647f44fbbff3c102182571-4">
+<span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-v">add_column</span><span class="crayon-h"> </span><span class="crayon-o">:</span><span class="crayon-v">planets</span><span class="crayon-sy">,</span><span class="crayon-h"> </span><span class="crayon-o">:</span><span class="crayon-v">mass</span><span class="crayon-sy">,</span><span class="crayon-h"> </span><span class="crayon-o">:</span><span class="crayon-t">float</span>
+</div>
+<div class="crayon-line" id="urvanov-syntax-highlighter-647f44fbbff3c102182571-5">
+<span class="crayon-h">&nbsp;&nbsp;</span><span class="crayon-st">end</span>
+</div>
+<div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-647f44fbbff3c102182571-6"><span class="crayon-st">end</span></div>
+</div></td>
+					</tr>
+				</table>
+			</div>
+		</div>
+<!-- [Format Time: 0.0002 seconds] -->
+<p></p>
+<p>However, and this is a key point, this only works correctly <em>if you refer to the correct table name at the end of the migration name</em>. So in my case the &#8220;_to_planets&#8221; was critical to making this work.</p>
+<p>Looking at the migration that was generated, you&#8217;ll see that it doesn&#8217;t attempt a &#8220;create_table&#8221; action because how I generated the migration (with &#8220;_to_planets&#8221;) made it clear to Rails that the table existed. Instead you will see &#8220;add_column&#8221; actions that do exactly that: add columns to the database schema.</p>
+<p>With this new migration in place, I&#8217;ll apply the changes as I did before:</p>
+<pre>
+rake db:migrate
+</pre>
+<p>Nothing new there. If all goes according to plan, the planets table now has two new fields. There are ways I could confirm that before going further, but I&#8217;ll hold off on that for now. However, even though my database has these fields, my interface (view) still does not. At this point I could (and probably should) edit the view templates in the app/views/planets folder to add form elements for the new fields. Instead, however, I&#8217;ll keep on the scaffolding train and just call the generator again:</p>
+<pre style="white-space: pre-wrap;">
+rails generate scaffold Planet name:string image_url:string diameter:float mass:float details:text facts:text --skip-migration
+</pre>
+<p>As before, you&#8217;ll be asked to overwrite some files:</p>
+<pre>
+Overwrite /planets/test/fixtures/planets.yml?
+Overwrite /planets/app/controllers/planets_controller.rb?
+Overwrite /planets/app/views/planets/index.html.erb?
+Overwrite /planets/app/views/planets/show.html.erb?
+Overwrite /planets/app/views/planets/_form.html.erb?
+Overwrite /planets/test/controllers/planets_controller_test.rb?
+Overwrite /planets/app/views/planets/index.json.jbuilder?
+Overwrite /planets/app/views/planets/show.json.jbuilder?
+</pre>
+<p>And as before, when you generate new versions of the scaffold files, you run the risk of overwriting custom changes you may have made. This is working okay for me because I haven&#8217;t done anything in any of these files yet. I&#8217;m basically in my &#8220;generation phase.&#8221; Again, I can&#8217;t stress enough that you normally would not want to do this after you&#8217;ve done any work at all in your files.</p>
+<p>At this point, you can check the &#8220;create a new planet&#8221; page (<a href="http://localhost:3000/planets/new">http://localhost:3000/planets/new</a>) and make sure the new fields are there.</p>
+<p>This would be a good time to once again check if all the functionality of the form works. Editing the form (perhaps to fill in the new fields) will call the update() method of the controller. It&#8217;s also possible to delete the data item. Rails gets violent and calls this &#8220;destroy&#8221; for some reason. Doing that calls the destroy() action method in the controller:</p>
+<p></p>
+<!-- Urvanov Syntax Highlighter v2.8.33 -->
+
+		<div id="urvanov-syntax-highlighter-647f44fbbff43326515927" class="urvanov-syntax-highlighter-syntax crayon-theme-classic urvanov-syntax-highlighter-font-monaco urvanov-syntax-highlighter-os-pc print-yes notranslate" data-settings=" minimize scroll-mouseover" style="margin-top: 12px; margin-bottom: 12px; font-size: 12px !important; line-height: 15px !important;">
+		
+			<div class="crayon-toolbar" data-settings=" mouseover overlay hide delay" style="font-size: 12px !important;height: 18px !important; line-height: 18px !important;">
+<span class="crayon-title"></span>
+			<div class="crayon-tools" style="font-size: 12px !important;height: 18px !important; line-height: 18px !important;">
+<div class="crayon-button urvanov-syntax-highlighter-nums-button" title="Toggle Line Numbers"><div class="urvanov-syntax-highlighter-button-icon"></div></div>
+<div class="crayon-button urvanov-syntax-highlighter-plain-button" title="Toggle Plain Code"><div class="urvanov-syntax-highlighter-button-icon"></div></div>
+<div class="crayon-button urvanov-syntax-highlighter-wrap-button" title="Toggle Line Wrap"><div class="urvanov-syntax-highlighter-button-icon"></div></div>
+<div class="crayon-button urvanov-syntax-highlighter-expand-button" title="Expand Code"><div class="urvanov-syntax-highlighter-button-icon"></div></div>
+<div class="crayon-button urvanov-syntax-highlighter-copy-button" title="Copy"><div class="urvanov-syntax-highlighter-button-icon"></div></div>
+<div class="crayon-button urvanov-syntax-highlighter-popup-button" title="Open Code In New Window"><div class="urvanov-syntax-highlighter-button-icon"></div></div>
+<span class="crayon-language">Ruby</span>
+</div>
+</div>
+			<div class="crayon-info" style="min-height: 16.8px !important; line-height: 16.8px !important;"></div>
+			<div class="urvanov-syntax-highlighter-plain-wrap"><textarea wrap="soft" class="urvanov-syntax-highlighter-plain print-no" data-settings="dblclick" readonly style="-moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4; font-size: 12px !important; line-height: 15px !important;">
+class PlanetsController &lt; ApplicationController
+  def destroy
+    @planet.destroy
+    respond_to do |format|
+      format.html { redirect_to planets_url, notice: 'Planet was successfully destroyed.' }
+      format.json { head :no_content }
+    end
+  end
+end</textarea></div>
+			<div class="urvanov-syntax-highlighter-main">
+				<table class="crayon-table">
+					<tr class="urvanov-syntax-highlighter-row">
+				<td class="crayon-nums " data-settings="show">
+					<div class="urvanov-syntax-highlighter-nums-content" style="font-size: 12px !important; line-height: 15px !important;">
+<div class="crayon-num" data-line="urvanov-syntax-highlighter-647f44fbbff43326515927-1">1</div>
+<div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-647f44fbbff43326515927-2">2</div>
+<div class="crayon-num" data-line="urvanov-syntax-highlighter-647f44fbbff43326515927-3">3</div>
+<div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-647f44fbbff43326515927-4">4</div>
+<div class="crayon-num" data-line="urvanov-syntax-highlighter-647f44fbbff43326515927-5">5</div>
+<div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-647f44fbbff43326515927-6">6</div>
+<div class="crayon-num" data-line="urvanov-syntax-highlighter-647f44fbbff43326515927-7">7</div>
+<div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-647f44fbbff43326515927-8">8</div>
+<div class="crayon-num" data-line="urvanov-syntax-highlighter-647f44fbbff43326515927-9">9</div>
+</div>
+				</td>
+						<td class="urvanov-syntax-highlighter-code"><div class="crayon-pre" style="font-size: 12px !important; line-height: 15px !important; -moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4;">
+<div class="crayon-line" id="urvanov-syntax-highlighter-647f44fbbff43326515927-1">
+<span class="crayon-r">class</span><span class="crayon-h"> </span><span class="crayon-v">PlanetsController</span><span class="crayon-h"> </span><span class="crayon-o">&lt;</span><span class="crayon-h"> </span><span class="crayon-i">ApplicationController</span>
+</div>
+<div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-647f44fbbff43326515927-2">
+<span class="crayon-h">&nbsp;&nbsp;</span><span class="crayon-r">def</span><span class="crayon-h"> </span><span class="crayon-i">destroy</span>
+</div>
+<div class="crayon-line" id="urvanov-syntax-highlighter-647f44fbbff43326515927-3">
+<span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-v">@planet</span><span class="crayon-sy">.</span><span class="crayon-i">destroy</span>
+</div>
+<div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-647f44fbbff43326515927-4">
+<span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-v">respond</span><span class="crayon-sy">_</span>to<span class="crayon-h"> </span><span class="crayon-st">do</span><span class="crayon-h"> </span><span class="crayon-o">|</span><span class="crayon-v">format</span><span class="crayon-o">|</span>
+</div>
+<div class="crayon-line" id="urvanov-syntax-highlighter-647f44fbbff43326515927-5">
+<span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-v">format</span><span class="crayon-sy">.</span><span class="crayon-e">html</span><span class="crayon-h"> </span><span class="crayon-k ">{</span><span class="crayon-h"> </span><span class="crayon-v">redirect</span><span class="crayon-sy">_</span>to<span class="crayon-h"> </span><span class="crayon-v">planets_url</span><span class="crayon-sy">,</span><span class="crayon-h"> </span><span class="crayon-v">notice</span><span class="crayon-o">:</span><span class="crayon-h"> </span><span class="crayon-s">'Planet was successfully destroyed.'</span><span class="crayon-h"> </span><span class="crayon-k ">}</span>
+</div>
+<div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-647f44fbbff43326515927-6">
+<span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-v">format</span><span class="crayon-sy">.</span><span class="crayon-e">json</span><span class="crayon-h"> </span><span class="crayon-k ">{</span><span class="crayon-h"> </span><span class="crayon-v">head</span><span class="crayon-h"> </span><span class="crayon-o">:</span><span class="crayon-v">no</span><span class="crayon-sy">_</span>content<span class="crayon-h"> </span><span class="crayon-k ">}</span>
+</div>
+<div class="crayon-line" id="urvanov-syntax-highlighter-647f44fbbff43326515927-7">
+<span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-st">end</span>
+</div>
+<div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-647f44fbbff43326515927-8">
+<span class="crayon-h">&nbsp;&nbsp;</span><span class="crayon-st">end</span>
+</div>
+<div class="crayon-line" id="urvanov-syntax-highlighter-647f44fbbff43326515927-9"><span class="crayon-st">end</span></div>
+</div></td>
+					</tr>
+				</table>
+			</div>
+		</div>
+<!-- [Format Time: 0.0003 seconds] -->
+<p></p>
+<p>If you look back in your console after you remove the data item, you&#8217;ll see how Rails is accomplishing this:</p>
+<pre style="white-space: pre-wrap; background-color: white; border: 1px solid;">
+Started DELETE "/planets/1" for 127.0.0.1 at 2014-05-25 06:32:27 -0500
+  ActiveRecord::SchemaMigration Load (1.0ms)  SELECT "schema_migrations".* FROM "schema_migrations"
+Processing by PlanetsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"WEnpNfPy4B4LIwxxjSO883Qwe+tRS7Q1K4PbpE/mk4Y=", "id"=>"1"}
+  Planet Load (0.0ms)  SELECT  "planets".* FROM "planets"  WHERE "planets"."id" = ? LIMIT 1  [["id", 1]]
+   (0.0ms)  begin transaction
+  SQL (2.0ms)  DELETE FROM "planets" WHERE "planets"."id" = ?  [["id", 1]]
+   (5.2ms)  commit transaction
+Redirected to http://localhost:3000/planets
+Completed 302 Found in 27ms (ActiveRecord: 9.2ms)
+</pre>
+<h2>Seed the Model</h2>
+<p>In fact, now that I&#8217;ve destroyed my only planet, this brings up another good point. In order to keep developing this application, I&#8217;d like to have a consistent set of test data to work with in my development environment. Obviously I could just enter data in the interface form as I did but, as any good tester would say, I want the ability to load up a set of standard data on demand. Rails does help you do this by allowing you to provide seed data for your database. (Note: This is different than setting up data via the model fixture that Rails generated for you.)</p>
+<p>To do this, I&#8217;ll modify the <strong>db/seeds.rb</strong> file. Here&#8217;s a completed example:</p>
+<p></p>
+<!-- Urvanov Syntax Highlighter v2.8.33 -->
+
+		<div id="urvanov-syntax-highlighter-647f44fbbff44541201529" class="urvanov-syntax-highlighter-syntax crayon-theme-classic urvanov-syntax-highlighter-font-monaco urvanov-syntax-highlighter-os-pc print-yes notranslate" data-settings=" minimize scroll-mouseover" style="margin-top: 12px; margin-bottom: 12px; font-size: 12px !important; line-height: 15px !important;">
+		
+			<div class="crayon-toolbar" data-settings=" mouseover overlay hide delay" style="font-size: 12px !important;height: 18px !important; line-height: 18px !important;">
+<span class="crayon-title"></span>
+			<div class="crayon-tools" style="font-size: 12px !important;height: 18px !important; line-height: 18px !important;">
+<div class="crayon-button urvanov-syntax-highlighter-nums-button" title="Toggle Line Numbers"><div class="urvanov-syntax-highlighter-button-icon"></div></div>
+<div class="crayon-button urvanov-syntax-highlighter-plain-button" title="Toggle Plain Code"><div class="urvanov-syntax-highlighter-button-icon"></div></div>
+<div class="crayon-button urvanov-syntax-highlighter-wrap-button" title="Toggle Line Wrap"><div class="urvanov-syntax-highlighter-button-icon"></div></div>
+<div class="crayon-button urvanov-syntax-highlighter-expand-button" title="Expand Code"><div class="urvanov-syntax-highlighter-button-icon"></div></div>
+<div class="crayon-button urvanov-syntax-highlighter-copy-button" title="Copy"><div class="urvanov-syntax-highlighter-button-icon"></div></div>
+<div class="crayon-button urvanov-syntax-highlighter-popup-button" title="Open Code In New Window"><div class="urvanov-syntax-highlighter-button-icon"></div></div>
+<span class="crayon-language">Ruby</span>
+</div>
+</div>
+			<div class="crayon-info" style="min-height: 16.8px !important; line-height: 16.8px !important;"></div>
+			<div class="urvanov-syntax-highlighter-plain-wrap"><textarea wrap="soft" class="urvanov-syntax-highlighter-plain print-no" data-settings="dblclick" readonly style="-moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4; font-size: 12px !important; line-height: 15px !important;">
+Planet.delete_all
+
+Planet.create!(
+  name: 'Mars',
+  image_url: 'mars.jpg',
+  diameter: 6794,
+  mass: 6.4219e23,
+  details:
+    %{&lt;p&gt;
+      Mars is the only planet whose surface can be seen in detail from the Earth.
+      It is reddish in color, and was named after the bloody red God of war of the
+      ancient Romans. Mars is the fourth closest planet to the sun. The diameter
+      of Mars is 4,200 miles, a little over half that of the Earth. Mercury is the
+      only planet smaller than Mars.
+      &lt;/p&gt;
+    },
+  facts:
+    %{&lt;ul&gt;
+      &lt;li&gt;Mars orbits the sun every 687 Earth days.&lt;/li&gt;
+      &lt;li&gt;The Martian "day" is about half a hour longer than Earth.&lt;/li&gt;
+      &lt;li&gt;At its brightest, Mars outshines every other planet apart from Venus.&lt;/li&gt;
+      &lt;li&gt;The thin atmosphere of Mars is made of mostly carbon dioxide.&lt;/li&gt;
+      &lt;/ul&gt;
+    }
+)</textarea></div>
+			<div class="urvanov-syntax-highlighter-main">
+				<table class="crayon-table">
+					<tr class="urvanov-syntax-highlighter-row">
+				<td class="crayon-nums " data-settings="show">
+					<div class="urvanov-syntax-highlighter-nums-content" style="font-size: 12px !important; line-height: 15px !important;">
+<div class="crayon-num" data-line="urvanov-syntax-highlighter-647f44fbbff44541201529-1">1</div>
+<div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-647f44fbbff44541201529-2">2</div>
+<div class="crayon-num" data-line="urvanov-syntax-highlighter-647f44fbbff44541201529-3">3</div>
+<div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-647f44fbbff44541201529-4">4</div>
+<div class="crayon-num" data-line="urvanov-syntax-highlighter-647f44fbbff44541201529-5">5</div>
+<div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-647f44fbbff44541201529-6">6</div>
+<div class="crayon-num" data-line="urvanov-syntax-highlighter-647f44fbbff44541201529-7">7</div>
+<div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-647f44fbbff44541201529-8">8</div>
+<div class="crayon-num" data-line="urvanov-syntax-highlighter-647f44fbbff44541201529-9">9</div>
+<div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-647f44fbbff44541201529-10">10</div>
+<div class="crayon-num" data-line="urvanov-syntax-highlighter-647f44fbbff44541201529-11">11</div>
+<div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-647f44fbbff44541201529-12">12</div>
+<div class="crayon-num" data-line="urvanov-syntax-highlighter-647f44fbbff44541201529-13">13</div>
+<div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-647f44fbbff44541201529-14">14</div>
+<div class="crayon-num" data-line="urvanov-syntax-highlighter-647f44fbbff44541201529-15">15</div>
+<div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-647f44fbbff44541201529-16">16</div>
+<div class="crayon-num" data-line="urvanov-syntax-highlighter-647f44fbbff44541201529-17">17</div>
+<div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-647f44fbbff44541201529-18">18</div>
+<div class="crayon-num" data-line="urvanov-syntax-highlighter-647f44fbbff44541201529-19">19</div>
+<div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-647f44fbbff44541201529-20">20</div>
+<div class="crayon-num" data-line="urvanov-syntax-highlighter-647f44fbbff44541201529-21">21</div>
+<div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-647f44fbbff44541201529-22">22</div>
+<div class="crayon-num" data-line="urvanov-syntax-highlighter-647f44fbbff44541201529-23">23</div>
+<div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-647f44fbbff44541201529-24">24</div>
+<div class="crayon-num" data-line="urvanov-syntax-highlighter-647f44fbbff44541201529-25">25</div>
+</div>
+				</td>
+						<td class="urvanov-syntax-highlighter-code"><div class="crayon-pre" style="font-size: 12px !important; line-height: 15px !important; -moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4;">
+<div class="crayon-line" id="urvanov-syntax-highlighter-647f44fbbff44541201529-1">
+<span class="crayon-v">Planet</span><span class="crayon-sy">.</span><span class="crayon-v">delete</span><span class="crayon-sy">_</span>all</div>
+<div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-647f44fbbff44541201529-2">&nbsp;</div>
+<div class="crayon-line" id="urvanov-syntax-highlighter-647f44fbbff44541201529-3">
+<span class="crayon-v">Planet</span><span class="crayon-sy">.</span><span class="crayon-v">create</span><span class="crayon-o">!</span><span class="crayon-sy">(</span>
+</div>
+<div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-647f44fbbff44541201529-4">
+<span class="crayon-h">&nbsp;&nbsp;</span><span class="crayon-v">name</span><span class="crayon-o">:</span><span class="crayon-h"> </span><span class="crayon-s">'Mars'</span><span class="crayon-sy">,</span>
+</div>
+<div class="crayon-line" id="urvanov-syntax-highlighter-647f44fbbff44541201529-5">
+<span class="crayon-h">&nbsp;&nbsp;</span><span class="crayon-v">image_url</span><span class="crayon-o">:</span><span class="crayon-h"> </span><span class="crayon-s">'mars.jpg'</span><span class="crayon-sy">,</span>
+</div>
+<div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-647f44fbbff44541201529-6">
+<span class="crayon-h">&nbsp;&nbsp;</span><span class="crayon-v">diameter</span><span class="crayon-o">:</span><span class="crayon-h"> </span><span class="crayon-cn">6794</span><span class="crayon-sy">,</span>
+</div>
+<div class="crayon-line" id="urvanov-syntax-highlighter-647f44fbbff44541201529-7">
+<span class="crayon-h">&nbsp;&nbsp;</span><span class="crayon-v">mass</span><span class="crayon-o">:</span><span class="crayon-h"> </span><span class="crayon-cn">6.4219e23</span><span class="crayon-sy">,</span>
+</div>
+<div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-647f44fbbff44541201529-8">
+<span class="crayon-h">&nbsp;&nbsp;</span><span class="crayon-v">details</span><span class="crayon-o">:</span>
+</div>
+<div class="crayon-line" id="urvanov-syntax-highlighter-647f44fbbff44541201529-9">
+<span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-o">%</span><span class="crayon-k ">{</span><span class="crayon-o">&lt;</span><span class="crayon-v">p</span><span class="crayon-o">&gt;</span>
+</div>
+<div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-647f44fbbff44541201529-10">
+<span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-i">Mars</span><span class="crayon-h"> </span><span class="crayon-i">is</span><span class="crayon-h"> </span><span class="crayon-i">the</span><span class="crayon-h"> </span><span class="crayon-i">only</span><span class="crayon-h"> </span><span class="crayon-i">planet</span><span class="crayon-h"> </span><span class="crayon-i">whose</span><span class="crayon-h"> </span><span class="crayon-i">surface</span><span class="crayon-h"> </span><span class="crayon-i">can</span><span class="crayon-h"> </span><span class="crayon-i">be</span><span class="crayon-h"> </span><span class="crayon-i">seen</span><span class="crayon-h"> </span><span class="crayon-st">in</span><span class="crayon-h"> </span><span class="crayon-i">detail</span><span class="crayon-h"> </span><span class="crayon-i">from</span><span class="crayon-h"> </span><span class="crayon-i">the</span><span class="crayon-h"> </span><span class="crayon-v">Earth</span><span class="crayon-sy">.</span>
+</div>
+<div class="crayon-line" id="urvanov-syntax-highlighter-647f44fbbff44541201529-11">
+<span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-i">It</span><span class="crayon-h"> </span><span class="crayon-i">is</span><span class="crayon-h"> </span><span class="crayon-i">reddish</span><span class="crayon-h"> </span><span class="crayon-st">in</span><span class="crayon-h"> </span><span class="crayon-v">color</span><span class="crayon-sy">,</span><span class="crayon-h"> </span><span class="crayon-st">and</span><span class="crayon-h"> </span><span class="crayon-i">was</span><span class="crayon-h"> </span><span class="crayon-i">named</span><span class="crayon-h"> </span><span class="crayon-i">after</span><span class="crayon-h"> </span><span class="crayon-i">the</span><span class="crayon-h"> </span><span class="crayon-i">bloody</span><span class="crayon-h"> </span><span class="crayon-i">red</span><span class="crayon-h"> </span><span class="crayon-i">God</span><span class="crayon-h"> </span><span class="crayon-i">of</span><span class="crayon-h"> </span><span class="crayon-i">war</span><span class="crayon-h"> </span><span class="crayon-i">of</span><span class="crayon-h"> </span><span class="crayon-i">the</span>
+</div>
+<div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-647f44fbbff44541201529-12">
+<span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-i">ancient</span><span class="crayon-h"> </span><span class="crayon-v">Romans</span><span class="crayon-sy">.</span><span class="crayon-h"> </span><span class="crayon-i">Mars</span><span class="crayon-h"> </span><span class="crayon-i">is</span><span class="crayon-h"> </span><span class="crayon-i">the</span><span class="crayon-h"> </span><span class="crayon-i">fourth</span><span class="crayon-h"> </span><span class="crayon-i">closest</span><span class="crayon-h"> </span><span class="crayon-i">planet</span><span class="crayon-h"> </span><span class="crayon-i">to</span><span class="crayon-h"> </span><span class="crayon-i">the</span><span class="crayon-h"> </span><span class="crayon-v">sun</span><span class="crayon-sy">.</span><span class="crayon-h"> </span><span class="crayon-i">The</span><span class="crayon-h"> </span><span class="crayon-i">diameter</span>
+</div>
+<div class="crayon-line" id="urvanov-syntax-highlighter-647f44fbbff44541201529-13">
+<span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-i">of</span><span class="crayon-h"> </span><span class="crayon-i">Mars</span><span class="crayon-h"> </span><span class="crayon-i">is</span><span class="crayon-h"> </span><span class="crayon-cn">4</span><span class="crayon-sy">,</span><span class="crayon-cn">200</span><span class="crayon-h"> </span><span class="crayon-v">miles</span><span class="crayon-sy">,</span><span class="crayon-h"> </span><span class="crayon-i">a</span><span class="crayon-h"> </span><span class="crayon-i">little</span><span class="crayon-h"> </span><span class="crayon-i">over</span><span class="crayon-h"> </span><span class="crayon-i">half</span><span class="crayon-h"> </span><span class="crayon-i">that</span><span class="crayon-h"> </span><span class="crayon-i">of</span><span class="crayon-h"> </span><span class="crayon-i">the</span><span class="crayon-h"> </span><span class="crayon-v">Earth</span><span class="crayon-sy">.</span><span class="crayon-h"> </span><span class="crayon-i">Mercury</span><span class="crayon-h"> </span><span class="crayon-i">is</span><span class="crayon-h"> </span><span class="crayon-i">the</span>
+</div>
+<div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-647f44fbbff44541201529-14">
+<span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-i">only</span><span class="crayon-h"> </span><span class="crayon-i">planet</span><span class="crayon-h"> </span><span class="crayon-i">smaller</span><span class="crayon-h"> </span><span class="crayon-i">than</span><span class="crayon-h"> </span><span class="crayon-v">Mars</span><span class="crayon-sy">.</span>
+</div>
+<div class="crayon-line" id="urvanov-syntax-highlighter-647f44fbbff44541201529-15">
+<span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-o">&lt;</span><span class="crayon-o">/</span><span class="crayon-v">p</span><span class="crayon-o">&gt;</span>
+</div>
+<div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-647f44fbbff44541201529-16">
+<span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-k ">}</span><span class="crayon-sy">,</span>
+</div>
+<div class="crayon-line" id="urvanov-syntax-highlighter-647f44fbbff44541201529-17">
+<span class="crayon-h">&nbsp;&nbsp;</span><span class="crayon-v">facts</span><span class="crayon-o">:</span>
+</div>
+<div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-647f44fbbff44541201529-18">
+<span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-o">%</span><span class="crayon-k ">{</span><span class="crayon-o">&lt;</span><span class="crayon-v">ul</span><span class="crayon-o">&gt;</span>
+</div>
+<div class="crayon-line" id="urvanov-syntax-highlighter-647f44fbbff44541201529-19">
+<span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-o">&lt;</span><span class="crayon-v">li</span><span class="crayon-o">&gt;</span><span class="crayon-i">Mars</span><span class="crayon-h"> </span><span class="crayon-i">orbits</span><span class="crayon-h"> </span><span class="crayon-i">the</span><span class="crayon-h"> </span><span class="crayon-i">sun</span><span class="crayon-h"> </span><span class="crayon-i">every</span><span class="crayon-h"> </span><span class="crayon-cn">687</span><span class="crayon-h"> </span><span class="crayon-i">Earth</span><span class="crayon-h"> </span><span class="crayon-v">days</span><span class="crayon-sy">.</span><span class="crayon-o">&lt;</span><span class="crayon-o">/</span><span class="crayon-v">li</span><span class="crayon-o">&gt;</span>
+</div>
+<div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-647f44fbbff44541201529-20">
+<span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-o">&lt;</span><span class="crayon-v">li</span><span class="crayon-o">&gt;</span><span class="crayon-i">The</span><span class="crayon-h"> </span><span class="crayon-i">Martian</span><span class="crayon-h"> </span><span class="crayon-s">"day"</span><span class="crayon-h"> </span><span class="crayon-i">is</span><span class="crayon-h"> </span><span class="crayon-i">about</span><span class="crayon-h"> </span><span class="crayon-i">half</span><span class="crayon-h"> </span><span class="crayon-i">a</span><span class="crayon-h"> </span><span class="crayon-i">hour</span><span class="crayon-h"> </span><span class="crayon-i">longer</span><span class="crayon-h"> </span><span class="crayon-i">than</span><span class="crayon-h"> </span><span class="crayon-v">Earth</span><span class="crayon-sy">.</span><span class="crayon-o">&lt;</span><span class="crayon-o">/</span><span class="crayon-v">li</span><span class="crayon-o">&gt;</span>
+</div>
+<div class="crayon-line" id="urvanov-syntax-highlighter-647f44fbbff44541201529-21">
+<span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-o">&lt;</span><span class="crayon-v">li</span><span class="crayon-o">&gt;</span><span class="crayon-i">At</span><span class="crayon-h"> </span><span class="crayon-i">its</span><span class="crayon-h"> </span><span class="crayon-v">brightest</span><span class="crayon-sy">,</span><span class="crayon-h"> </span><span class="crayon-i">Mars</span><span class="crayon-h"> </span><span class="crayon-i">outshines</span><span class="crayon-h"> </span><span class="crayon-i">every</span><span class="crayon-h"> </span><span class="crayon-i">other</span><span class="crayon-h"> </span><span class="crayon-i">planet</span><span class="crayon-h"> </span><span class="crayon-i">apart</span><span class="crayon-h"> </span><span class="crayon-i">from</span><span class="crayon-h"> </span><span class="crayon-v">Venus</span><span class="crayon-sy">.</span><span class="crayon-o">&lt;</span><span class="crayon-o">/</span><span class="crayon-v">li</span><span class="crayon-o">&gt;</span>
+</div>
+<div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-647f44fbbff44541201529-22">
+<span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-o">&lt;</span><span class="crayon-v">li</span><span class="crayon-o">&gt;</span><span class="crayon-i">The</span><span class="crayon-h"> </span><span class="crayon-i">thin</span><span class="crayon-h"> </span><span class="crayon-i">atmosphere</span><span class="crayon-h"> </span><span class="crayon-i">of</span><span class="crayon-h"> </span><span class="crayon-i">Mars</span><span class="crayon-h"> </span><span class="crayon-i">is</span><span class="crayon-h"> </span><span class="crayon-i">made</span><span class="crayon-h"> </span><span class="crayon-i">of</span><span class="crayon-h"> </span><span class="crayon-i">mostly</span><span class="crayon-h"> </span><span class="crayon-i">carbon</span><span class="crayon-h"> </span><span class="crayon-v">dioxide</span><span class="crayon-sy">.</span><span class="crayon-o">&lt;</span><span class="crayon-o">/</span><span class="crayon-v">li</span><span class="crayon-o">&gt;</span>
+</div>
+<div class="crayon-line" id="urvanov-syntax-highlighter-647f44fbbff44541201529-23">
+<span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-o">&lt;</span><span class="crayon-o">/</span><span class="crayon-v">ul</span><span class="crayon-o">&gt;</span>
+</div>
+<div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-647f44fbbff44541201529-24">
+<span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-k ">}</span>
+</div>
+<div class="crayon-line" id="urvanov-syntax-highlighter-647f44fbbff44541201529-25"><span class="crayon-sy">)</span></div>
+</div></td>
+					</tr>
+				</table>
+			</div>
+		</div>
+<!-- [Format Time: 0.0011 seconds] -->
+<p></p>
+<p>Here I first delete everything from the Planet table. This is seed data, meaning it&#8217;s meant to be the only data that I can consistently rely on and that the database is seeded with. So it starts from a clean slate. The &#8220;delete everything&#8221; part is really important because you don&#8217;t want to spend a lot of time adding in data only to wipe it out with your seed data.</p>
+<p>After deleting from the table, the create!() method is called and I essentially just pass in the columns/field names with some relevant values. To see if this works, I just seed the database:</p>
+<pre>
+rake db:seed
+</pre>
+<p>Assuming you have some valid data in seeds.rb, the above command should put that data into the database and the data should be visible in the browser.</p>
+<h2>Wrapping Up</h2>
+<p>Well, this was certainly a long post, no? Hopefully it wasn&#8217;t terribly boring. One final thing I&#8217;ll say here: you now have a way to seed data and you have a series of generator commands, provided in this post, that essentially allow you to recreate your model, controllers and views at any time with the scaffolding.</p>
+<p><strong>That&#8217;s really important!</strong></p>
+<p>Why? Because this would be a great time to dig into the code that Rails has provided; play around with it; see if you can figure out how things work. Don&#8217;t be afraid to change things and see what happens. In fact, use this time to get used to the error messages that Rails will throw when something goes wrong. You can always use the seed data and the generators to get back to a fresh state. This is probably one of the best uses of scaffolding, in my opinion.</p>
+<p>I&#8217;ve done nothing I&#8217;m afraid of losing and I can recreate the little I have done at any point. That gives me confidence to explore and it should do the same for you.</p>
+<p>This is a good place to stop. What I end up with here is essentially a working application that can connect to a database. Further, I have a set of views that will display the data in that database as well as a form that will allow me to enter new data. One thing I don&#8217;t have right now is any sort of validation. I also don&#8217;t really have any tests. While Rails generated stubs, I&#8217;ve done nothing with them. These are areas I plan to tackle in the next post in this series.</p>
+<div class="addtoany_share_save_container addtoany_content addtoany_content_bottom"><div class="a2a_kit a2a_kit_size_16 addtoany_list" data-a2a-url="https://testerstories.com/2014/05/starting-a-rails-app-part-1/" data-a2a-title="Starting a Rails App, Part 1">
+<a class="a2a_button_facebook" href="https://www.addtoany.com/add_to/facebook?linkurl=%2F2014%2F05%2Fstarting-a-rails-app-part-1%2F&amp;linkname=Starting%20a%20Rails%20App%2C%20Part%201" title="Facebook" rel="nofollow noopener" target="_blank"></a><a class="a2a_button_twitter" href="https://www.addtoany.com/add_to/twitter?linkurl=%2F2014%2F05%2Fstarting-a-rails-app-part-1%2F&amp;linkname=Starting%20a%20Rails%20App%2C%20Part%201" title="Twitter" rel="nofollow noopener" target="_blank"></a><a class="a2a_button_linkedin" href="https://www.addtoany.com/add_to/linkedin?linkurl=%2F2014%2F05%2Fstarting-a-rails-app-part-1%2F&amp;linkname=Starting%20a%20Rails%20App%2C%20Part%201" title="LinkedIn" rel="nofollow noopener" target="_blank"></a><a class="a2a_button_print" href="https://www.addtoany.com/add_to/print?linkurl=%2F2014%2F05%2Fstarting-a-rails-app-part-1%2F&amp;linkname=Starting%20a%20Rails%20App%2C%20Part%201" title="Print" rel="nofollow noopener" target="_blank"></a><a class="a2a_dd addtoany_share_save addtoany_share" href="https://www.addtoany.com/share"><img src="https://static.addtoany.com/buttons/favicon.png" alt="Share"></a>
+</div></div>      
+	</div>
+<!-- .entry-content -->
+	<footer class="entry-footer">       
+		<p class="written-by">This article was written by <a href="/author/administrator/">Jeff Nyman</a></p>
+<div class="author-bio">
+		
+	<h3><a href="/author/administrator/" rel="author">About  Jeff Nyman</a></h3>		
+	<img alt="" src="https://secure.gravatar.com/avatar/a3b6c2d0b2bafdb9ad9cdf782873204d?s=72&#038;d=mm&#038;r=pg" srcset="https://secure.gravatar.com/avatar/a3b6c2d0b2bafdb9ad9cdf782873204d?s=144&#038;d=mm&#038;r=pg 2x" class="avatar avatar-72 photo" height="72" width="72" decoding="async"><p class="author-description">Anything I put here is an approximation of the truth. You're getting a particular view of myself ... and it's the view I'm choosing to present to you. If you've never met me before in person, please realize I'm not the same in person as I am in writing. That's because I can only put part of myself down into words.
+
+If you have met me before in person then I'd ask you to consider that the view you've formed that way and the view you come to by reading what I say here may, in fact, both be true. I'd advise that you not automatically discard either viewpoint when they conflict or accept either as truth when they agree.</p>		
+</div>
+<!-- .author-bio -->
+	</footer><!-- .entry-footer -->
+
+	<nav class="navigation post-navigation" aria-label="Posts">
+		<h2 class="screen-reader-text">Post navigation</h2>
+		<div class="nav-links">
+<div class="nav-previous"><a href="/2014/05/the-craft-of-testing/" rel="prev"><span class="genericon genericon-previous" aria-hidden="true"></span> <span class="screen-reader-text">Previous post:</span> <span class="post-title">The Craft of Testing</span></a></div>
+<div class="nav-next"><a href="/2014/05/starting-a-rails-app-part-2/" rel="next"><span class="post-title">Starting a Rails App, Part 2</span><span class="screen-reader-text">Next post:</span> <span class="genericon genericon-next" aria-hidden="true"></span> </a></div>
+</div>
+	</nav>
+<div id="comments" class="comments-area">
+
+
+		<div id="respond" class="comment-respond">
+		<h3 id="reply-title" class="comment-reply-title">Leave a Reply <small><a rel="nofollow" id="cancel-comment-reply-link" href="/2014/05/starting-a-rails-app-part-1/#respond" style="display:none;">Cancel reply</a></small>
+</h3>
+<form action="https://testerstories.com/wp-comments-post.php" method="post" id="commentform" class="comment-form" novalidate>
+<p class="comment-notes"><span id="email-notes">Your email address will not be published.</span> <span class="required-field-message">Required fields are marked <span class="required">*</span></span></p>
+<p class="comment-form-comment"><label for="comment">Comment <span class="required">*</span></label> <textarea id="comment" name="comment" cols="45" rows="8" maxlength="65525" required></textarea></p>
+<p class="comment-form-author"><label for="author">Name <span class="required">*</span></label> <input id="author" name="author" type="text" value="" size="30" maxlength="245" autocomplete="name" required></p>
+<p class="comment-form-email"><label for="email">Email <span class="required">*</span></label> <input id="email" name="email" type="email" value="" size="30" maxlength="100" aria-describedby="email-notes" autocomplete="email" required></p>
+<p class="comment-form-url"><label for="url">Website</label> <input id="url" name="url" type="url" value="" size="30" maxlength="200" autocomplete="url"></p>
+<p class="form-submit"><input name="submit" type="submit" id="submit" class="submit" value="Post Comment"> <input type="hidden" name="comment_post_ID" value="1379" id="comment_post_ID">
+<input type="hidden" name="comment_parent" id="comment_parent" value="0">
+</p>
+<p style="display: none;"><input type="hidden" id="akismet_comment_nonce" name="akismet_comment_nonce" value="4b4da1615e"></p>
+<p style="display: none !important;"><label>&#916;<textarea name="ak_hp_textarea" cols="45" rows="8" maxlength="100"></textarea></label><input type="hidden" id="ak_js_1" name="ak_js" value="174"><script>document.getElementById( "ak_js_1" ).setAttribute( "value", ( new Date() ).getTime() );</script></p>
+</form>	</div>
+<!-- #respond -->
+	<p class="akismet_comment_form_privacy_notice">This site uses Akismet to reduce spam. <a href="https://akismet.com/privacy/" target="_blank" rel="nofollow noopener">Learn how your comment data is processed</a>.</p>
+</div>
+<!-- #comments -->
+</article><!-- #post-## -->
+</main><!--/main-content-->
+	<aside id="sidebar-widget-area" class="sidebar-widget-area" role="complementary">
+		<a class="screen-reader-text skip-link" href="#page-footer">Skip to footer</a>
+
+		<section id="sidebar" class="widget-area sidebar">
+			<div id="text-6" class="widget widget_text">			<div class="textwidget">
+<p><a href="https://www.linkedin.com/pub/jeff-nyman/12/b32/16a"><br>
+<img decoding="async" src="https://static.licdn.com/scds/common/u/img/webpromo/btn_myprofile_160x33.png" alt="View Jeff Nyman's profile on LinkedIn" width="160" height="33" border="0"></a></p>
+</div>
+		</div>
+<div id="categories-5" class="widget widget_categories">
+<h2 class="widget-title">Topics</h2>
+			<ul>
+					<li class="cat-item cat-item-58">
+<a href="/category/agile/">Agile</a> (2)
+</li>
+	<li class="cat-item cat-item-49">
+<a href="/category/ai/">AI</a> (24)
+<ul class="children">
+	<li class="cat-item cat-item-50">
+<a href="/category/ai/machine-learning/">Machine Learning</a> (12)
+	<ul class="children">
+	<li class="cat-item cat-item-55">
+<a href="/category/ai/machine-learning/ml-series-1/">ML Series 1</a> (2)
+</li>
+	<li class="cat-item cat-item-56">
+<a href="/category/ai/machine-learning/ml-series-2/">ML Series 2</a> (4)
+</li>
+	<li class="cat-item cat-item-57">
+<a href="/category/ai/machine-learning/ml-series-3/">ML Series 3</a> (6)
+</li>
+	</ul>
+</li>
+</ul>
+</li>
+	<li class="cat-item cat-item-11">
+<a href="/category/automation/">Automation</a> (68)
+<ul class="children">
+	<li class="cat-item cat-item-41">
+<a href="/category/automation/c/">C#</a> (2)
+</li>
+	<li class="cat-item cat-item-8">
+<a href="/category/automation/capybara/">Capybara</a> (11)
+</li>
+	<li class="cat-item cat-item-9">
+<a href="/category/automation/cucumber/">Cucumber</a> (10)
+</li>
+	<li class="cat-item cat-item-31">
+<a href="/category/automation/cucumber-jvm/">Cucumber-JVM</a> (6)
+</li>
+	<li class="cat-item cat-item-42">
+<a href="/category/automation/groovy/">Groovy</a> (1)
+</li>
+	<li class="cat-item cat-item-40">
+<a href="/category/automation/java/">Java</a> (9)
+</li>
+	<li class="cat-item cat-item-10">
+<a href="/category/automation/qtp/">QTP</a> (6)
+</li>
+	<li class="cat-item cat-item-5">
+<a href="/category/automation/rspec/">RSpec</a> (4)
+</li>
+	<li class="cat-item cat-item-7">
+<a href="/category/automation/selenium/">Selenium</a> (17)
+</li>
+	<li class="cat-item cat-item-39">
+<a href="/category/automation/serenity/">Serenity</a> (8)
+</li>
+	<li class="cat-item cat-item-30">
+<a href="/category/automation/symbiont/">Symbiont</a> (11)
+</li>
+	<li class="cat-item cat-item-51">
+<a href="/category/automation/tapestry/">Tapestry</a> (6)
+</li>
+	<li class="cat-item cat-item-6">
+<a href="/category/automation/watir/">Watir</a> (4)
+</li>
+</ul>
+</li>
+	<li class="cat-item cat-item-13">
+<a href="/category/bdd/">BDD</a> (24)
+<ul class="children">
+	<li class="cat-item cat-item-23">
+<a href="/category/bdd/tdl/">TDL</a> (17)
+</li>
+</ul>
+</li>
+	<li class="cat-item cat-item-25">
+<a href="/category/career/">Career</a> (33)
+<ul class="children">
+	<li class="cat-item cat-item-53">
+<a href="/category/career/interview/">Interview</a> (10)
+</li>
+</ul>
+</li>
+	<li class="cat-item cat-item-15">
+<a href="/category/communication/">Communication</a> (16)
+</li>
+	<li class="cat-item cat-item-65">
+<a href="/category/crime-scene/">Crime Scene</a> (4)
+</li>
+	<li class="cat-item cat-item-52">
+<a href="/category/data-science/">Data Science</a> (4)
+</li>
+	<li class="cat-item cat-item-61">
+<a href="/category/development/">Development</a> (39)
+<ul class="children">
+	<li class="cat-item cat-item-36">
+<a href="/category/development/chef/">Chef</a> (2)
+</li>
+	<li class="cat-item cat-item-32">
+<a href="/category/development/inform-7/">Inform 7</a> (3)
+</li>
+	<li class="cat-item cat-item-38">
+<a href="/category/development/javascript-test-solutions/">JavaScript</a> (6)
+</li>
+	<li class="cat-item cat-item-19">
+<a href="/category/development/language-building/">Language Building</a> (9)
+	<ul class="children">
+	<li class="cat-item cat-item-20">
+<a href="/category/development/language-building/rex-and-racc/">Rex and Racc</a> (3)
+</li>
+	</ul>
+</li>
+	<li class="cat-item cat-item-48">
+<a href="/category/development/python/">Python</a> (4)
+</li>
+	<li class="cat-item cat-item-29">
+<a href="/category/development/rails/">Rails</a> (4)
+</li>
+	<li class="cat-item cat-item-21">
+<a href="/category/development/web-development/">Web Development</a> (11)
+	<ul class="children">
+	<li class="cat-item cat-item-34">
+<a href="/category/development/web-development/node-js/">Node.js</a> (5)
+</li>
+	<li class="cat-item cat-item-22">
+<a href="/category/development/web-development/sinatra/">Sinatra</a> (6)
+</li>
+	</ul>
+</li>
+</ul>
+</li>
+	<li class="cat-item cat-item-28">
+<a href="/category/dialect/">Dialect</a> (6)
+</li>
+	<li class="cat-item cat-item-45">
+<a href="/category/exploration/">Exploration</a> (14)
+<ul class="children">
+	<li class="cat-item cat-item-46">
+<a href="/category/exploration/interactive/">Interactive</a> (6)
+</li>
+</ul>
+</li>
+	<li class="cat-item cat-item-44">
+<a href="/category/indefinito/">Indefinito</a> (11)
+</li>
+	<li class="cat-item cat-item-17">
+<a href="/category/learning/">Learning</a> (11)
+</li>
+	<li class="cat-item cat-item-24">
+<a href="/category/lucid/">Lucid</a> (11)
+</li>
+	<li class="cat-item cat-item-62">
+<a href="/category/product-development/">Product Development</a> (7)
+</li>
+	<li class="cat-item cat-item-64">
+<a href="/category/product-management/">Product Management</a> (3)
+</li>
+	<li class="cat-item cat-item-3">
+<a href="/category/quality/">Quality</a> (7)
+</li>
+	<li class="cat-item cat-item-14">
+<a href="/category/quality-assurance/">Quality Assurance</a> (5)
+</li>
+	<li class="cat-item cat-item-35">
+<a href="/category/specify/">Specify</a> (2)
+</li>
+	<li class="cat-item cat-item-16">
+<a href="/category/symbiont-pg/">Symbiont-PG</a> (4)
+</li>
+	<li class="cat-item cat-item-27">
+<a href="/category/test-solutions/">Test Solutions</a> (11)
+</li>
+	<li class="cat-item cat-item-4">
+<a href="/category/testing/">Testing</a> (167)
+<ul class="children">
+	<li class="cat-item cat-item-59">
+<a href="/category/testing/contracts/">Contracts</a> (2)
+</li>
+	<li class="cat-item cat-item-63">
+<a href="/category/testing/epistemology/">Epistemology</a> (1)
+</li>
+	<li class="cat-item cat-item-67">
+<a href="/category/testing/games/">Games</a> (8)
+</li>
+	<li class="cat-item cat-item-68">
+<a href="/category/testing/history-and-science/">History and Science</a> (5)
+</li>
+	<li class="cat-item cat-item-43">
+<a href="/category/testing/modern-testing/">Modern Testing</a> (15)
+</li>
+	<li class="cat-item cat-item-54">
+<a href="/category/testing/testability/">Testability</a> (9)
+</li>
+</ul>
+</li>
+	<li class="cat-item cat-item-12">
+<a href="/category/thinking/">Thinking</a> (22)
+</li>
+	<li class="cat-item cat-item-47">
+<a href="/category/what-if/">What If</a> (1)
+</li>
+	<li class="cat-item cat-item-69">
+<a href="/category/zmachine/">Z-Machine</a> (7)
+</li>
+			</ul>
+
+			</div>
+<div id="archives-5" class="widget widget_archive">
+<h2 class="widget-title">Archives</h2>		<label class="screen-reader-text" for="archives-dropdown-5">Archives</label>
+		<select id="archives-dropdown-5" name="archive-dropdown">
+			
+			<option value="">Select Month</option>
+				<option value="https://testerstories.com/2023/06/"> June 2023 </option>
+	<option value="https://testerstories.com/2023/05/"> May 2023 </option>
+	<option value="https://testerstories.com/2023/04/"> April 2023 </option>
+	<option value="https://testerstories.com/2023/03/"> March 2023 </option>
+	<option value="https://testerstories.com/2023/02/"> February 2023 </option>
+	<option value="https://testerstories.com/2023/01/"> January 2023 </option>
+	<option value="https://testerstories.com/2022/12/"> December 2022 </option>
+	<option value="https://testerstories.com/2022/11/"> November 2022 </option>
+	<option value="https://testerstories.com/2022/10/"> October 2022 </option>
+	<option value="https://testerstories.com/2022/07/"> July 2022 </option>
+	<option value="https://testerstories.com/2022/06/"> June 2022 </option>
+	<option value="https://testerstories.com/2022/05/"> May 2022 </option>
+	<option value="https://testerstories.com/2022/03/"> March 2022 </option>
+	<option value="https://testerstories.com/2022/02/"> February 2022 </option>
+	<option value="https://testerstories.com/2022/01/"> January 2022 </option>
+	<option value="https://testerstories.com/2021/12/"> December 2021 </option>
+	<option value="https://testerstories.com/2021/10/"> October 2021 </option>
+	<option value="https://testerstories.com/2021/08/"> August 2021 </option>
+	<option value="https://testerstories.com/2021/07/"> July 2021 </option>
+	<option value="https://testerstories.com/2021/06/"> June 2021 </option>
+	<option value="https://testerstories.com/2021/05/"> May 2021 </option>
+	<option value="https://testerstories.com/2021/04/"> April 2021 </option>
+	<option value="https://testerstories.com/2021/03/"> March 2021 </option>
+	<option value="https://testerstories.com/2021/02/"> February 2021 </option>
+	<option value="https://testerstories.com/2021/01/"> January 2021 </option>
+	<option value="https://testerstories.com/2020/11/"> November 2020 </option>
+	<option value="https://testerstories.com/2020/10/"> October 2020 </option>
+	<option value="https://testerstories.com/2020/09/"> September 2020 </option>
+	<option value="https://testerstories.com/2020/07/"> July 2020 </option>
+	<option value="https://testerstories.com/2020/06/"> June 2020 </option>
+	<option value="https://testerstories.com/2020/05/"> May 2020 </option>
+	<option value="https://testerstories.com/2020/02/"> February 2020 </option>
+	<option value="https://testerstories.com/2020/01/"> January 2020 </option>
+	<option value="https://testerstories.com/2019/12/"> December 2019 </option>
+	<option value="https://testerstories.com/2019/11/"> November 2019 </option>
+	<option value="https://testerstories.com/2019/10/"> October 2019 </option>
+	<option value="https://testerstories.com/2019/09/"> September 2019 </option>
+	<option value="https://testerstories.com/2019/08/"> August 2019 </option>
+	<option value="https://testerstories.com/2019/07/"> July 2019 </option>
+	<option value="https://testerstories.com/2019/06/"> June 2019 </option>
+	<option value="https://testerstories.com/2019/05/"> May 2019 </option>
+	<option value="https://testerstories.com/2019/04/"> April 2019 </option>
+	<option value="https://testerstories.com/2019/03/"> March 2019 </option>
+	<option value="https://testerstories.com/2019/02/"> February 2019 </option>
+	<option value="https://testerstories.com/2019/01/"> January 2019 </option>
+	<option value="https://testerstories.com/2018/12/"> December 2018 </option>
+	<option value="https://testerstories.com/2018/11/"> November 2018 </option>
+	<option value="https://testerstories.com/2018/10/"> October 2018 </option>
+	<option value="https://testerstories.com/2018/09/"> September 2018 </option>
+	<option value="https://testerstories.com/2018/08/"> August 2018 </option>
+	<option value="https://testerstories.com/2018/07/"> July 2018 </option>
+	<option value="https://testerstories.com/2018/06/"> June 2018 </option>
+	<option value="https://testerstories.com/2018/05/"> May 2018 </option>
+	<option value="https://testerstories.com/2018/04/"> April 2018 </option>
+	<option value="https://testerstories.com/2018/03/"> March 2018 </option>
+	<option value="https://testerstories.com/2018/02/"> February 2018 </option>
+	<option value="https://testerstories.com/2018/01/"> January 2018 </option>
+	<option value="https://testerstories.com/2017/12/"> December 2017 </option>
+	<option value="https://testerstories.com/2017/11/"> November 2017 </option>
+	<option value="https://testerstories.com/2017/10/"> October 2017 </option>
+	<option value="https://testerstories.com/2017/09/"> September 2017 </option>
+	<option value="https://testerstories.com/2017/08/"> August 2017 </option>
+	<option value="https://testerstories.com/2017/07/"> July 2017 </option>
+	<option value="https://testerstories.com/2017/06/"> June 2017 </option>
+	<option value="https://testerstories.com/2017/05/"> May 2017 </option>
+	<option value="https://testerstories.com/2017/04/"> April 2017 </option>
+	<option value="https://testerstories.com/2017/03/"> March 2017 </option>
+	<option value="https://testerstories.com/2017/02/"> February 2017 </option>
+	<option value="https://testerstories.com/2017/01/"> January 2017 </option>
+	<option value="https://testerstories.com/2016/12/"> December 2016 </option>
+	<option value="https://testerstories.com/2016/11/"> November 2016 </option>
+	<option value="https://testerstories.com/2016/10/"> October 2016 </option>
+	<option value="https://testerstories.com/2016/09/"> September 2016 </option>
+	<option value="https://testerstories.com/2016/08/"> August 2016 </option>
+	<option value="https://testerstories.com/2016/07/"> July 2016 </option>
+	<option value="https://testerstories.com/2016/06/"> June 2016 </option>
+	<option value="https://testerstories.com/2016/04/"> April 2016 </option>
+	<option value="https://testerstories.com/2016/03/"> March 2016 </option>
+	<option value="https://testerstories.com/2016/02/"> February 2016 </option>
+	<option value="https://testerstories.com/2016/01/"> January 2016 </option>
+	<option value="https://testerstories.com/2015/12/"> December 2015 </option>
+	<option value="https://testerstories.com/2015/11/"> November 2015 </option>
+	<option value="https://testerstories.com/2015/10/"> October 2015 </option>
+	<option value="https://testerstories.com/2015/09/"> September 2015 </option>
+	<option value="https://testerstories.com/2015/08/"> August 2015 </option>
+	<option value="https://testerstories.com/2015/07/"> July 2015 </option>
+	<option value="https://testerstories.com/2015/06/"> June 2015 </option>
+	<option value="https://testerstories.com/2015/05/"> May 2015 </option>
+	<option value="https://testerstories.com/2015/04/"> April 2015 </option>
+	<option value="https://testerstories.com/2015/03/"> March 2015 </option>
+	<option value="https://testerstories.com/2015/02/"> February 2015 </option>
+	<option value="https://testerstories.com/2014/12/"> December 2014 </option>
+	<option value="https://testerstories.com/2014/11/"> November 2014 </option>
+	<option value="https://testerstories.com/2014/10/"> October 2014 </option>
+	<option value="https://testerstories.com/2014/09/"> September 2014 </option>
+	<option value="https://testerstories.com/2014/08/"> August 2014 </option>
+	<option value="https://testerstories.com/2014/07/"> July 2014 </option>
+	<option value="https://testerstories.com/2014/06/"> June 2014 </option>
+	<option value="https://testerstories.com/2014/05/"> May 2014 </option>
+	<option value="https://testerstories.com/2014/04/"> April 2014 </option>
+	<option value="https://testerstories.com/2014/03/"> March 2014 </option>
+	<option value="https://testerstories.com/2014/01/"> January 2014 </option>
+	<option value="https://testerstories.com/2013/12/"> December 2013 </option>
+	<option value="https://testerstories.com/2013/09/"> September 2013 </option>
+	<option value="https://testerstories.com/2013/08/"> August 2013 </option>
+	<option value="https://testerstories.com/2013/07/"> July 2013 </option>
+	<option value="https://testerstories.com/2013/06/"> June 2013 </option>
+	<option value="https://testerstories.com/2013/05/"> May 2013 </option>
+	<option value="https://testerstories.com/2013/03/"> March 2013 </option>
+	<option value="https://testerstories.com/2013/01/"> January 2013 </option>
+	<option value="https://testerstories.com/2012/12/"> December 2012 </option>
+	<option value="https://testerstories.com/2012/10/"> October 2012 </option>
+	<option value="https://testerstories.com/2012/09/"> September 2012 </option>
+	<option value="https://testerstories.com/2012/08/"> August 2012 </option>
+	<option value="https://testerstories.com/2012/07/"> July 2012 </option>
+	<option value="https://testerstories.com/2012/06/"> June 2012 </option>
+	<option value="https://testerstories.com/2012/05/"> May 2012 </option>
+	<option value="https://testerstories.com/2012/04/"> April 2012 </option>
+	<option value="https://testerstories.com/2012/03/"> March 2012 </option>
+	<option value="https://testerstories.com/2012/02/"> February 2012 </option>
+	<option value="https://testerstories.com/2012/01/"> January 2012 </option>
+	<option value="https://testerstories.com/2011/12/"> December 2011 </option>
+	<option value="https://testerstories.com/2011/11/"> November 2011 </option>
+	<option value="https://testerstories.com/2011/10/"> October 2011 </option>
+	<option value="https://testerstories.com/2011/09/"> September 2011 </option>
+	<option value="https://testerstories.com/2011/08/"> August 2011 </option>
+
+		</select>
+
+<script type="text/javascript">
+/* <![CDATA[ */
+(function() {
+	var dropdown = document.getElementById( "archives-dropdown-5" );
+	function onSelectChange() {
+		if ( dropdown.options[ dropdown.selectedIndex ].value !== '' ) {
+			document.location.href = this.options[ this.selectedIndex ].value;
+		}
+	}
+	dropdown.onchange = onSelectChange;
+})();
+/* ]]> */
+</script>
+			</div>
+<div id="meta-5" class="widget widget_meta">
+<h2 class="widget-title">Site</h2>
+		<ul>
+						<li><a href="/wp-login.php">Log in</a></li>
+			<li><a href="/feed/">Entries feed</a></li>
+			<li><a href="/comments/feed/">Comments feed</a></li>
+
+			<li><a href="https://wordpress.org/">WordPress.org</a></li>
+		</ul>
+
+		</div>
+<div id="text-4" class="widget widget_text">			<div class="textwidget"><a href="https://www.linkedin.com/pub/jeff-nyman/12/b32/16a">
+          <img src="https://static.licdn.com/scds/common/u/img/webpromo/btn_myprofile_160x33.png" width="160" height="33" border="0" alt="View Jeff Nyman's profile on LinkedIn"></a></div>
+		</div>
+<div id="search-3" class="widget widget_search">
+<form role="search" method="get" class="search-form" action="https://testerstories.com/">
+	<label>
+		<span class="screen-reader-text">Search for:</span>
+		<input type="search" class="search-field" placeholder="Search &hellip;" value="" name="s" title="Search for:">
+	</label>
+	<button type="submit" class="search-submit"><span class="genericon genericon-search" aria-hidden="true"></span><span class="screen-reader-text">Search</span></button>
+</form>
+</div>		</section><!-- #sidebar .widget-area -->
+
+	</aside>
+
+  
+
+<footer id="page-footer" role="contentinfo">
+	<div id="site-info" class="site-info">
+		<span class="footer-site-title"><a href="/" rel="home">Stories from a Software Tester</a></span>
+		<a href="https://wordpress.org/">Proudly powered by WordPress</a>
+	</div>
+<!--/site-info-->
+</footer> <!--/footer-->
+</div>
+<!-- #container -->
+            
+            <style type="text/css" class="darkmysite_inline_css">#darkmysite_switch_608925021 {
+        --darkmysite_switch_apple_width_height: 60px;
+        --darkmysite_switch_apple_border_radius: 7px;
+        --darkmysite_switch_apple_icon_width: 30px;
+        --darkmysite_switch_apple_light_mode_bg: #121116;
+        --darkmysite_switch_apple_dark_mode_bg: #ffffff;
+        --darkmysite_switch_apple_light_mode_icon_color: #ffffff;
+        --darkmysite_switch_apple_dark_mode_icon_color: #121116;
+        }
+
+    #darkmysite_switch_608925021 {
+        --darkmysite_switch_margin_from_top: 40px;
+        --darkmysite_switch_margin_from_bottom: 40px;
+        --darkmysite_switch_margin_from_left: 40px;
+        --darkmysite_switch_margin_from_right: 40px;
+        }</style>
+
+
+
+
+    <div id="darkmysite_switch_608925021" class="darkmysite_switch  darkmysite_bottom_right   darkmysite_switch_apple" onclick="darkmysite_switch_trigger()">
+        <span class="darkmysite_switch_icon"></span>
+            </div>
+
+            
+    <script type="text/javascript" class="darkmysite_inline_js">document.addEventListener("DOMContentLoaded", function(event) {
+            darkmysite_init_alternative_dark_mode_switch();
+        });</script>
+
+
+<script type="text/javascript" id="acuarela-script-js-extra">
+/* <![CDATA[ */
+var acuarelaScreenReaderText = {"expand":"expand child menu","collapse":"collapse child menu"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="/wp-content/themes/acuarela/js/functions.js?ver=20190802" id="acuarela-script-js"></script>
+<script type="text/javascript" src="/wp-includes/js/comment-reply.min.js?ver=6.2.2" id="comment-reply-js"></script>
+<script defer type="text/javascript" src="/wp-content/plugins/akismet/_inc/akismet-frontend.js?ver=1680871091" id="akismet-frontend-js"></script>
+</body>
+</html>
