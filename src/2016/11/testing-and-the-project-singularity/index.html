@@ -1,0 +1,1270 @@
+<!DOCTYPE html>
+<html lang="en-US">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="profile" href="http://gmpg.org/xfn/11">
+				<link rel="pingback" href="/xmlrpc.php">
+				<title>Testing and the Project Singularity &#8211; Stories from a Software Tester</title>
+<meta name="robots" content="max-image-preview:large">
+ <style type="text/css" class="darkmysite_inline_css">:root { --darkmysite_dark_mode_bg: #0f0f0f; --darkmysite_dark_mode_secondary_bg: #171717; --darkmysite_dark_mode_text_color: #bebebe; --darkmysite_dark_mode_link_color: #ffffff; --darkmysite_dark_mode_link_hover_color: #cccccc; --darkmysite_dark_mode_input_bg: #2d2d2d; --darkmysite_dark_mode_input_text_color: #bebebe; --darkmysite_dark_mode_input_placeholder_color: #989898; --darkmysite_dark_mode_border_color: #4a4a4a; --darkmysite_dark_mode_btn_bg: #2d2d2d; --darkmysite_dark_mode_btn_text_color: #bebebe; }</style> <style type="text/css" class="darkmysite_inline_css">.darkmysite_dark_mode_enabled::-webkit-scrollbar { background: #29292a !important; } .darkmysite_dark_mode_enabled::-webkit-scrollbar-track { background: #29292a !important; } .darkmysite_dark_mode_enabled::-webkit-scrollbar-thumb { background-color: #52565a !important; } .darkmysite_dark_mode_enabled::-webkit-scrollbar-corner { background-color: #52565a !important; } .darkmysite_dark_mode_enabled::-webkit-scrollbar-button { background-color: transparent !important; background-repeat: no-repeat !important; background-size: contain !important; background-position: center !important; } .darkmysite_dark_mode_enabled::-webkit-scrollbar-button:start { background-image: url(/wp-content/plugins/darkmysite/assets/img/others/scroll_arrow_up.svg) !important; } .darkmysite_dark_mode_enabled::-webkit-scrollbar-button:end { background-image: url(/wp-content/plugins/darkmysite/assets/img/others/scroll_arrow_down.svg) !important; } .darkmysite_dark_mode_enabled::-webkit-scrollbar-button:start:horizontal { background-image: url(/wp-content/plugins/darkmysite/assets/img/others/scroll_arrow_left.svg) !important; } .darkmysite_dark_mode_enabled::-webkit-scrollbar-button:end:horizontal { background-image: url(/wp-content/plugins/darkmysite/assets/img/others/scroll_arrow_right.svg) !important; }</style> <script type="text/javascript" class="darkmysite_inline_js">var darkmysite_switch_unique_id = "293394925"; var darkmysite_is_this_admin_panel = "0"; var darkmysite_enable_default_dark_mode = "0"; var darkmysite_enable_os_aware = "1"; var darkmysite_enable_keyboard_shortcut = "1"; var darkmysite_enable_time_based_dark = "0"; var darkmysite_time_based_dark_start = "19:00"; var darkmysite_time_based_dark_stop = "07:00"; var darkmysite_alternative_dark_mode_switch = ""; var darkmysite_enable_low_image_brightness = "1"; var darkmysite_image_brightness_to = "80"; var darkmysite_enable_image_grayscale = "0"; var darkmysite_image_grayscale_to = "80"; var darkmysite_enable_bg_image_darken = "1"; var darkmysite_bg_image_darken_to = "60"; var darkmysite_enable_invert_inline_svg = "0"; var darkmysite_enable_low_video_brightness = "1"; var darkmysite_video_brightness_to = "80"; var darkmysite_enable_video_grayscale = "0"; var darkmysite_video_grayscale_to = "80"; var darkmysite_disallowed_elements = ".darkmysite_ignore, .darkmysite_ignore *, .darkmysite_switch, .darkmysite_switch *, .wp-block-button__link, .wp-block-button__link *";</script><link rel="dns-prefetch" href="//static.addtoany.com">
+<link rel="dns-prefetch" href="//fonts.googleapis.com">
+<link rel="alternate" type="application/rss+xml" title="Stories from a Software Tester &raquo; Feed" href="/feed/">
+<link rel="alternate" type="application/rss+xml" title="Stories from a Software Tester &raquo; Comments Feed" href="/comments/feed/">
+<link rel="alternate" type="application/rss+xml" title="Stories from a Software Tester &raquo; Testing and the Project Singularity Comments Feed" href="/2016/11/testing-and-the-project-singularity/feed/">
+<script type="text/javascript">
+window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/14.0.0\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/14.0.0\/svg\/","svgExt":".svg","source":{"concatemoji":"\/wp-includes\/js\/wp-emoji-release.min.js?ver=6.2.2"}};
+/*! This file is auto-generated */
+!function(e,a,t){var n,r,o,i=a.createElement("canvas"),p=i.getContext&&i.getContext("2d");function s(e,t){p.clearRect(0,0,i.width,i.height),p.fillText(e,0,0);e=i.toDataURL();return p.clearRect(0,0,i.width,i.height),p.fillText(t,0,0),e===i.toDataURL()}function c(e){var t=a.createElement("script");t.src=e,t.defer=t.type="text/javascript",a.getElementsByTagName("head")[0].appendChild(t)}for(o=Array("flag","emoji"),t.supports={everything:!0,everythingExceptFlag:!0},r=0;r<o.length;r++)t.supports[o[r]]=function(e){if(p&&p.fillText)switch(p.textBaseline="top",p.font="600 32px Arial",e){case"flag":return s("🏳️‍⚧️","🏳️​⚧️")?!1:!s("🇺🇳","🇺​🇳")&&!s("🏴󠁧󠁢󠁥󠁮󠁧󠁿","🏴​󠁧​󠁢​󠁥​󠁮​󠁧​󠁿");case"emoji":return!s("🫱🏻‍🫲🏿","🫱🏻​🫲🏿")}return!1}(o[r]),t.supports.everything=t.supports.everything&&t.supports[o[r]],"flag"!==o[r]&&(t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&t.supports[o[r]]);t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&!t.supports.flag,t.DOMReady=!1,t.readyCallback=function(){t.DOMReady=!0},t.supports.everything||(n=function(){t.readyCallback()},a.addEventListener?(a.addEventListener("DOMContentLoaded",n,!1),e.addEventListener("load",n,!1)):(e.attachEvent("onload",n),a.attachEvent("onreadystatechange",function(){"complete"===a.readyState&&t.readyCallback()})),(e=t.source||{}).concatemoji?c(e.concatemoji):e.wpemoji&&e.twemoji&&(c(e.twemoji),c(e.wpemoji)))}(window,document,window._wpemojiSettings);
+</script>
+<style type="text/css">img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 0.07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}</style>
+	<link rel="stylesheet" id="urvanov_syntax_highlighter-css" href="/wp-content/plugins/urvanov-syntax-highlighter/css/min/urvanov_syntax_highlighter.min.css?ver=2.8.33" type="text/css" media="all">
+<link rel="stylesheet" id="wp-block-library-css" href="/wp-includes/css/dist/block-library/style.min.css?ver=6.2.2" type="text/css" media="all">
+<style id="wp-block-library-theme-inline-css" type="text/css">.wp-block-audio figcaption{color:#555;font-size:13px;text-align:center}.is-dark-theme .wp-block-audio figcaption{color:hsla(0,0%,100%,.65)}.wp-block-audio{margin:0 0 1em}.wp-block-code{border:1px solid #ccc;border-radius:4px;font-family:Menlo,Consolas,monaco,monospace;padding:.8em 1em}.wp-block-embed figcaption{color:#555;font-size:13px;text-align:center}.is-dark-theme .wp-block-embed figcaption{color:hsla(0,0%,100%,.65)}.wp-block-embed{margin:0 0 1em}.blocks-gallery-caption{color:#555;font-size:13px;text-align:center}.is-dark-theme .blocks-gallery-caption{color:hsla(0,0%,100%,.65)}.wp-block-image figcaption{color:#555;font-size:13px;text-align:center}.is-dark-theme .wp-block-image figcaption{color:hsla(0,0%,100%,.65)}.wp-block-image{margin:0 0 1em}.wp-block-pullquote{border-bottom:4px solid;border-top:4px solid;color:currentColor;margin-bottom:1.75em}.wp-block-pullquote cite,.wp-block-pullquote footer,.wp-block-pullquote__citation{color:currentColor;font-size:.8125em;font-style:normal;text-transform:uppercase}.wp-block-quote{border-left:.25em solid;margin:0 0 1.75em;padding-left:1em}.wp-block-quote cite,.wp-block-quote footer{color:currentColor;font-size:.8125em;font-style:normal;position:relative}.wp-block-quote.has-text-align-right{border-left:none;border-right:.25em solid;padding-left:0;padding-right:1em}.wp-block-quote.has-text-align-center{border:none;padding-left:0}.wp-block-quote.is-large,.wp-block-quote.is-style-large,.wp-block-quote.is-style-plain{border:none}.wp-block-search .wp-block-search__label{font-weight:700}.wp-block-search__button{border:1px solid #ccc;padding:.375em .625em}:where(.wp-block-group.has-background){padding:1.25em 2.375em}.wp-block-separator.has-css-opacity{opacity:.4}.wp-block-separator{border:none;border-bottom:2px solid;margin-left:auto;margin-right:auto}.wp-block-separator.has-alpha-channel-opacity{opacity:1}.wp-block-separator:not(.is-style-wide):not(.is-style-dots){width:100px}.wp-block-separator.has-background:not(.is-style-dots){border-bottom:none;height:1px}.wp-block-separator.has-background:not(.is-style-wide):not(.is-style-dots){height:2px}.wp-block-table{margin:0 0 1em}.wp-block-table td,.wp-block-table th{word-break:normal}.wp-block-table figcaption{color:#555;font-size:13px;text-align:center}.is-dark-theme .wp-block-table figcaption{color:hsla(0,0%,100%,.65)}.wp-block-video figcaption{color:#555;font-size:13px;text-align:center}.is-dark-theme .wp-block-video figcaption{color:hsla(0,0%,100%,.65)}.wp-block-video{margin:0 0 1em}.wp-block-template-part.has-background{margin-bottom:0;margin-top:0;padding:1.25em 2.375em}</style>
+<link rel="stylesheet" id="classic-theme-styles-css" href="/wp-includes/css/classic-themes.min.css?ver=6.2.2" type="text/css" media="all">
+<style id="global-styles-inline-css" type="text/css">body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgba(6,147,227,1) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgba(252,185,0,1) 0%,rgba(255,105,0,1) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgba(255,105,0,1) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--duotone--dark-grayscale: url('#wp-duotone-dark-grayscale');--wp--preset--duotone--grayscale: url('#wp-duotone-grayscale');--wp--preset--duotone--purple-yellow: url('#wp-duotone-purple-yellow');--wp--preset--duotone--blue-red: url('#wp-duotone-blue-red');--wp--preset--duotone--midnight: url('#wp-duotone-midnight');--wp--preset--duotone--magenta-yellow: url('#wp-duotone-magenta-yellow');--wp--preset--duotone--purple-green: url('#wp-duotone-purple-green');--wp--preset--duotone--blue-orange: url('#wp-duotone-blue-orange');--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;--wp--preset--spacing--20: 0.44rem;--wp--preset--spacing--30: 0.67rem;--wp--preset--spacing--40: 1rem;--wp--preset--spacing--50: 1.5rem;--wp--preset--spacing--60: 2.25rem;--wp--preset--spacing--70: 3.38rem;--wp--preset--spacing--80: 5.06rem;--wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);--wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);--wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);--wp--preset--shadow--outlined: 6px 6px 0px -3px rgba(255, 255, 255, 1), 6px 6px rgba(0, 0, 0, 1);--wp--preset--shadow--crisp: 6px 6px 0px rgba(0, 0, 0, 1);}:where(.is-layout-flex){gap: 0.5em;}body .is-layout-flow > .alignleft{float: left;margin-inline-start: 0;margin-inline-end: 2em;}body .is-layout-flow > .alignright{float: right;margin-inline-start: 2em;margin-inline-end: 0;}body .is-layout-flow > .aligncenter{margin-left: auto !important;margin-right: auto !important;}body .is-layout-constrained > .alignleft{float: left;margin-inline-start: 0;margin-inline-end: 2em;}body .is-layout-constrained > .alignright{float: right;margin-inline-start: 2em;margin-inline-end: 0;}body .is-layout-constrained > .aligncenter{margin-left: auto !important;margin-right: auto !important;}body .is-layout-constrained > :where(:not(.alignleft):not(.alignright):not(.alignfull)){max-width: var(--wp--style--global--content-size);margin-left: auto !important;margin-right: auto !important;}body .is-layout-constrained > .alignwide{max-width: var(--wp--style--global--wide-size);}body .is-layout-flex{display: flex;}body .is-layout-flex{flex-wrap: wrap;align-items: center;}body .is-layout-flex > *{margin: 0;}:where(.wp-block-columns.is-layout-flex){gap: 2em;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
+.wp-block-navigation a:where(:not(.wp-element-button)){color: inherit;}
+:where(.wp-block-columns.is-layout-flex){gap: 2em;}
+.wp-block-pullquote{font-size: 1.5em;line-height: 1.6;}</style>
+<link rel="stylesheet" id="darkmysite-client-main-css" href="/wp-content/plugins/darkmysite/assets/css/client_main.css?ver=1.2.6" type="text/css" media="all">
+<link rel="stylesheet" id="plyr-css-css" href="/wp-content/plugins/easy-video-player/lib/plyr.css?ver=6.2.2" type="text/css" media="all">
+<link rel="stylesheet" id="acuarela-fonts-css" href="https://fonts.googleapis.com/css?family=Lato%3A300italic%2C400italic%2C700italic%2C300%2C400%2C700%7CArima+Madurai%3A700%2C800%7CInconsolata%3A400%2C700&#038;subset=latin%2Clatin-ext&#038;ver=20190802" type="text/css" media="all">
+<link rel="stylesheet" id="genericons-css" href="/wp-content/themes/acuarela/genericons/genericons.css?ver=3.4.1" type="text/css" media="all">
+<link rel="stylesheet" id="animate-css" href="/wp-content/themes/acuarela/css/animate.css?ver=3.7.2" type="text/css" media="all">
+<link rel="stylesheet" id="acuarela-style-css" href="/wp-content/themes/acuarela/style.css?ver=6.2.2" type="text/css" media="all">
+<link rel="stylesheet" id="addtoany-css" href="/wp-content/plugins/add-to-any/addtoany.min.css?ver=1.16" type="text/css" media="all">
+<script type="text/javascript" src="/wp-includes/js/jquery/jquery.min.js?ver=3.6.4" id="jquery-core-js"></script>
+<script type="text/javascript" src="/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.4.0" id="jquery-migrate-js"></script>
+<script type="text/javascript" id="urvanov_syntax_highlighter_js-js-extra">
+/* <![CDATA[ */
+var UrvanovSyntaxHighlighterSyntaxSettings = {"version":"2.8.33","is_admin":"0","ajaxurl":"\/wp-admin\/admin-ajax.php","prefix":"urvanov-syntax-highlighter-","setting":"urvanov-syntax-highlighter-setting","selected":"urvanov-syntax-highlighter-setting-selected","changed":"urvanov-syntax-highlighter-setting-changed","special":"urvanov-syntax-highlighter-setting-special","orig_value":"data-orig-value","debug":""};
+var UrvanovSyntaxHighlighterSyntaxStrings = {"copy":"Copied to the clipboard","minimize":"Click To Expand Code"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="/wp-content/plugins/urvanov-syntax-highlighter/js/min/urvanov_syntax_highlighter.min.js?ver=2.8.33" id="urvanov_syntax_highlighter_js-js"></script>
+<script type="text/javascript" id="addtoany-core-js-before">window.a2a_config=window.a2a_config||{};a2a_config.callbacks=[];a2a_config.overlays=[];a2a_config.templates={};</script>
+<script type="text/javascript" async src="https://static.addtoany.com/menu/page.js" id="addtoany-core-js"></script>
+<script type="text/javascript" async src="/wp-content/plugins/add-to-any/addtoany.min.js?ver=1.1" id="addtoany-jquery-js"></script>
+<script type="text/javascript" src="/wp-content/plugins/darkmysite/assets/js/client_main.js?ver=1.2.6" id="darkmysite-client-main-js"></script>
+<script type="text/javascript" id="plyr-js-js-extra">
+/* <![CDATA[ */
+var easy_video_player = {"plyr_iconUrl":"\/wp-content\/plugins\/easy-video-player\/lib\/plyr.svg","plyr_blankVideo":"\/wp-content\/plugins\/easy-video-player\/lib\/blank.mp4"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="/wp-content/plugins/easy-video-player/lib/plyr.js?ver=6.2.2" id="plyr-js-js"></script>
+<link rel="https://api.w.org/" href="/wp-json/">
+<link rel="alternate" type="application/json" href="/wp-json/wp/v2/posts/2892">
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="/xmlrpc.php?rsd">
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="/wp-includes/wlwmanifest.xml">
+<meta name="generator" content="WordPress 6.2.2">
+<link rel="canonical" href="/2016/11/testing-and-the-project-singularity/">
+<link rel="shortlink" href="/?p=2892">
+<link rel="alternate" type="application/json+oembed" href="/wp-json/oembed/1.0/embed?url=https%3A%2F%2F%2F2016%2F11%2Ftesting-and-the-project-singularity%2F">
+<link rel="alternate" type="text/xml+oembed" href="/wp-json/oembed/1.0/embed?url=https%3A%2F%2F%2F2016%2F11%2Ftesting-and-the-project-singularity%2F#038;format=xml">
+<link type="text/css" rel="stylesheet" href="/wp-content/plugins/category-specific-rss-feed-menu/wp_cat_rss_style.css">
+<!--Custom Styling-->
+<style media="screen" type="text/css">.site-description { color: #222222}
+.site-title, .entry-title, .post-title, .widget-title, .posts-navigation .nav-links { font-family: Arima Madurai}
+ body { font-family: Lato}</style>
+	<style id="acuarela-header-css" type="text/css"></style>
+<style type="text/css" id="custom-background-css">body.custom-background { background-image: url("/wp-content/uploads/2020/10/low_contrast_linen.png"); background-position: left top; background-size: cover; background-repeat: no-repeat; background-attachment: fixed; }</style>
+			<style type="text/css" id="wp-custom-css">@font-face {
+  font-family: "Open Sans";
+  font-weight: 400;
+  font-style: normal;
+  src: local("Open Sans Regular"), local("OpenSans-Regular"), url("/fonts/OpenSans-Regular.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Open Sans Bold";
+  font-weight: 700;
+  font-style: normal;
+  src: local("Open Sans Bold"), local("OpenSans-Bold"), url("/fonts/OpenSans-Bold.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Open Sans Italic";
+  font-weight: 400;
+  font-style: normal;
+  src: local("Open Sans Italic"), local("OpenSans-Italic"), url("/fonts/OpenSans-Italic.woff") format("woff");
+}
+
+:root{
+	--primary: #01408e;
+	--secondary: #3c5d5c;
+	--initialLine: #ad2271;
+	--drop: #903;
+	--paraIndent: 1.25em;
+	--note: #4d5b7c;
+	--bq-color: #555555;
+	--bq-back: #ededed;
+	--sans: "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+	--mono: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
+    "Courier New", monospace;
+}
+/* For the top menu bar. */
+.site-navigation a {
+	padding: 0.9em 1.5em;
+}
+
+:where(html, body) {
+	overscroll-behavior-y: none;
+	cursor: url("/cursors/default.cur"), auto;
+}
+
+:where(p, h1, h2, h3, h4, h5, h6, blockquote, figcaption) {
+	cursor: url("/cursors/text-select.cur"), auto;
+}
+
+:where(ul, ol) {
+	margin: 1em 1em;
+	text-align: justify;
+	text-justify: inter-word;
+	cursor: url("/cursors/text-select.cur"), auto;
+}
+
+:where(aside, article) a {
+	cursor: url("/cursors/link-select.cur"), auto;
+}
+
+select, button, input,
+.wp-element-button,
+.darkmysite_switch,
+.site-title,
+.site-description {
+	cursor: url("/cursors/link-select.cur"), auto;
+}
+
+::selection {
+  color: #fff;
+  background: rgba(0, 0, 0, 0.99);
+}
+
+main,
+header {
+	font-size: 1rem;
+}
+
+main {
+	/*From here: https://fluidtypography.com/#app-get-started*/
+	/* Settings: 414-1280; 16-20; 1.6-1.3*/
+	font-size: clamp(1rem, 0.462vw + 0.88rem, 1.25rem);
+line-height: clamp(1.6rem, 0.046vw + 1.588rem, 1.625rem);
+}
+
+article {
+	font-family: var(--sans);
+	line-height: 1.6;
+  word-spacing: 0.16em;
+}
+
+h1:not(.site-title) {
+  font-size: 2.5em;
+  margin: 0.67em 0;
+  text-align: center;
+}
+
+:where(h1, h2, h3, h4) {
+	text-rendering: optimizeLegibility;
+	line-height: 1.4em;
+}
+
+article :where(h2, h3) {
+	margin-bottom: 0.7em;
+}
+
+p {
+	font-size: 1.2em;
+	text-align: justify;
+	text-justify: inter-word;
+}
+
+p:first-of-type:first-line {
+	color: var(--initialLine);
+}
+
+li {
+  margin-bottom: 0.5em;
+}
+
+/* This makes sure the first line of blockquotes are not colored since in Wordpress, a blockquote content has a paragraph tag applied to it. */
+:where(blockquote, footer, .comments-area) p:first-of-type:first-line {
+	color: inherit;
+}
+:where(p, blockquote, img, pre, ul, ol) + p:not(.note) {
+  text-indent: var(--paraIndent);
+}
+section > h3 + p::first-letter,
+section > h2 + p::first-letter,
+div.entry-content > p:not(.nostyle):first-child::first-letter {
+	color: var(--drop);
+  border-left: 2px solid var(--drop);
+  border-top: 2px solid var(--drop);
+  float: left;
+  font-family: Georgia;
+  font-size: 65px;
+  line-height: 60px;
+  padding-top: 4px;
+  padding-right: 12px;
+  padding-left: 3px;
+}
+
+:where(aside, article) a {
+	color: var(--primary);
+	text-underline-position: under;
+	text-decoration: underline 2px;
+	transition: all 0.3s linear;
+  background: linear-gradient(to right, #00d1b1 0%, #278fc6 98%);
+  background-size: 0px 2px;
+  background-repeat: no-repeat;
+  background-position: left 10%;
+  text-shadow: 0;
+}
+
+article a:hover {
+  background-size: 100% 2px;
+  color: var(--secondary);
+}
+
+article a:focus {
+  color: var(--secondary);
+}
+
+/* Handling external links to show an icon after them, but excluding links that are part of the TesterStories site. */
+
+a[href*="http"]::after,
+a[href*="https"]::after {
+  content: "";
+  width: 16px;
+  height: 16px;
+  margin-left: 4px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='currentColor' viewBox='0 0 16 16'%3E%3Cpath fill-rule='evenodd' d='M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5z'/%3E%3Cpath fill-rule='evenodd' d='M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0v-5z'/%3E%3C/svg%3E");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  display: inline-block;
+}
+
+a[href^="https://www.linkedin.com/"]::after {
+  content: none;
+}
+
+a[href^="https://testerstories.com/"]::after {
+  display: none !important;
+}
+
+img.framed {
+  --b: 10px;
+  margin: 0 auto;
+  padding: var(--b);
+  border: calc(2 * var(--b)) solid #0000;
+  border-radius: 25px;
+  outline: 1px solid #000;
+  outline-offset: calc(-1 * var(--b));
+  background: conic-gradient(from 90deg at 1px 1px, #0000 90deg, #000 0);
+}
+
+img.backframed {
+  margin: 0 auto;
+  border: 3px solid black;
+  box-shadow: -50px -50px 0 -40px #555555, 50px 50px 0 -40px #555555;
+}
+
+.note {
+  border: 1px solid rgb(107, 113, 177);
+  color: var(--note);
+  border-radius: 16px;
+  padding: 0.5em 0.8em;
+  margin: 1.9em;
+}
+
+.post {
+	background-color: white;
+}
+
+.entry-content li {
+	font-size: 1.2em;
+}
+
+.simplequote {
+	background: #fff url(/2016/11/testing-and-the-project-singularity/images/box_quote.png) no-repeat;
+	padding: 5px;
+	margin-top: 20px; margin-bottom: 20px;
+	margin-left: 50px; margin-right: 50px;
+	border: 3px solid #cecece;
+	text-indent: 25px;
+}
+
+p.example {
+	padding: 1ex;
+	margin-right: 50px; margin-left: 50px;
+	border: .5ex solid #808080;
+	color: #000000;
+	line-height: 1.2;
+	text-indent: 0em;
+}
+
+#headquote blockquote {
+	text-align: left;
+	margin: 0 auto 20px auto;
+	color: #555;
+	background: #eee url(/2016/11/testing-and-the-project-singularity/images/quote_top.gif) no-repeat top left;
+}
+
+#headquote blockquote {
+	width: 370px;
+	font-size: 110%;
+	letter-spacing: -1px;
+	line-height: 1.2em;
+}
+
+#headquote #quote {
+	margin-left: 40px;
+	padding: 20px 20px 10px 20px;
+	background: url(/2016/11/testing-and-the-project-singularity/images/quote_bottom.gif) no-repeat right bottom;
+}
+
+#headquote #author {
+	margin: 0;
+	text-align: center;
+	padding: 0 0 10px 0;
+	color: #999;
+	font-size: 95%;
+}
+
+#headquote blockquote strong {
+	color: #000;
+	font-weight: normal;
+}
+
+/* Center images. */
+
+img {
+	display: block;
+  margin: 0 auto;
+}
+
+img.smaller {
+  width: 200px;
+}
+
+img.even-smaller {
+  width: 100px;
+}
+
+table td.code {
+  font-family: "Courier New", courier, monospace;
+  font-size: 11.5px;
+}
+
+p.box {
+	font-family: Georgia, "Times New Roman", Times, serif;
+	text-align: justify;
+	padding-top: 25px;
+	margin: 0;
+	line-height: 1.2;
+}
+
+pre.box {
+	white-space: pre-wrap;
+	background-color: white;
+	border: 1px solid;
+}
+
+p.tip {
+	padding-bottom: 10px; padding-top: 10px;
+	padding-right: 10px; padding-left: 10px;
+	border: 1px solid;
+}
+
+div.aside {
+	padding-bottom: 10px; padding-top: 10px;
+	padding-right: 10px; padding-left: 10px;
+	margin-right: 50px; margin-left: 50px;
+	border: 1px dotted;
+}
+
+div.aside pre {
+	white-space: pre-wrap;
+}
+
+pre.view {
+	font-family: "Courier New", Courier, monospace;
+        //font-size: 16px;
+	padding-bottom: 10px; padding-top: 10px;
+	padding-right: 10px; padding-left: 10px;
+	white-space: pre-wrap;
+	background: rgb(255,255,255); /* Old browsers */
+	background: -moz-linear-gradient(top,  rgba(255,255,255,1) 0%, rgba(229,229,229,1) 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,1)), color-stop(100%,rgba(229,229,229,1))); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(229,229,229,1) 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(229,229,229,1) 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(229,229,229,1) 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  rgba(255,255,255,1) 0%,rgba(229,229,229,1) 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#e5e5e5',GradientType=0 ); /* IE6-9 */
+	border: 1px solid;
+	text-align: justify;
+}
+
+pre.view .string {
+	color: #3366CC;
+}
+
+pre.view .sub {
+        color: #8333FF;
+}
+
+pre.view .comment {
+	color: #009900;
+}
+
+pre.view .highlight {
+	background-color: #FFFF00;
+	border: 1px solid;
+	border-style: dotted;
+}
+
+pre.output .highlight {
+	background-color: rgb(255,255,255);
+	color: red;
+	border: 1px solid;
+	border-style: dotted;
+}
+
+pre.output {
+	font-family: "Courier New", Courier, monospace;
+        //font-size: 16px;
+	padding-bottom: 10px; padding-top: 10px;
+	padding-right: 10px; padding-left: 10px;
+	white-space: pre-wrap;
+	background: black;
+	color: white;
+}
+
+blockquote {
+  position: relative;
+  width: 80%;
+  margin: 50px auto;
+  padding: 1.2em 30px 1.2em 55px;
+  color: var(--bq-color);
+  background-color: var(--bq-back);
+  border-left: 8px solid #78c0a8;
+  text-align: justify;
+}
+
+blockquote::before {
+  position: absolute;
+	left: 5px;
+	top: -10px;
+	/* Line height needed here to avoid the quote appearing out of place due to calculated line heights for the article. */
+	line-height: 1.6;
+	content: "\201C";
+	color: #78c0a8;
+	font-size: 4em;
+}
+
+blockquote::after {
+	content: "";
+}
+
+blockquote span {
+	display: block;
+	color: #333333;
+	font-style: normal;
+  font-weight: bold;
+  margin-top: 1em;
+}
+
+img.frame {
+  --b: 10px;
+  padding: var(--b);
+  border: calc(2 * var(--b)) solid #0000;
+  outline: 1px solid #000;
+  outline-offset: calc(-1 * var(--b));
+  border-radius: 25px;
+  background: conic-gradient(from 90deg at 1px 1px, #0000 90deg, #000 0);
+  display: block;
+  margin: auto;
+  margin-bottom: 1rem;
+}
+
+code {
+  font-size: 0.9em;
+  padding: 0.0625rem 0.5rem;
+  border-radius: 0.125rem;
+  border: 1px solid #d33a2c;
+  box-shadow: 1px 1px #d33a2c, 2px 2px #d33a2c;
+  margin: 0 0.25rem;
+  color: #d33a2c;
+  font-family: monospace;
+}
+
+pre {
+  font-family: var(--mono);
+  max-width: 100%;
+	padding: 0;
+}
+
+pre code {
+  word-spacing: normal;
+  letter-spacing: normal;
+  font-family: var(--mono);
+  padding-left: 10px;
+  color: #e9e9f4;
+  background: #282936;
+  display: block;
+  max-width: 100%;
+  overflow-x: scroll;
+  /*font-size: 0.8em;*/
+
+  border: 1px solid #282936;
+  border-radius: 10px;
+  box-shadow: 1px 1px #282936, 2px 2px #282936;
+}
+
+pre code::-webkit-scrollbar {
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+pre code::-webkit-scrollbar:vertical {
+  width: 11px;
+}
+
+pre code::-webkit-scrollbar:horizontal {
+  height: 11px;
+}
+
+pre code::-webkit-scrollbar-thumb {
+  border-radius: 8px;
+  border: 2px solid white;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+/* The div part is only needed for long-form content that is pre-formatted. */
+
+pre code div {
+	line-height: 1.5em;
+}
+
+/* This would be for prefromatted material that is not literally from a game or simulation but is meant to indicate something about the details of the game or simulation. */
+
+pre p {
+  border: 2px solid grey;
+  border-radius: 5px;
+  padding: 0.8em;
+	padding-top: 0;
+	margin: 0;
+}</style>
+			</head>
+	<body class="post-template-default single single-post postid-2892 single-format-standard custom-background wp-embed-responsive custom-background-image">
+		<svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-dark-grayscale"><fecolormatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></fecolormatrix><fecomponenttransfer color-interpolation-filters="sRGB"><fefuncr type="table" tablevalues="0 0.49803921568627"></fefuncr><fefuncg type="table" tablevalues="0 0.49803921568627"></fefuncg><fefuncb type="table" tablevalues="0 0.49803921568627"></fefuncb><fefunca type="table" tablevalues="1 1"></fefunca></fecomponenttransfer><fecomposite in2="SourceGraphic" operator="in"></fecomposite></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-grayscale"><fecolormatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></fecolormatrix><fecomponenttransfer color-interpolation-filters="sRGB"><fefuncr type="table" tablevalues="0 1"></fefuncr><fefuncg type="table" tablevalues="0 1"></fefuncg><fefuncb type="table" tablevalues="0 1"></fefuncb><fefunca type="table" tablevalues="1 1"></fefunca></fecomponenttransfer><fecomposite in2="SourceGraphic" operator="in"></fecomposite></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-purple-yellow"><fecolormatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></fecolormatrix><fecomponenttransfer color-interpolation-filters="sRGB"><fefuncr type="table" tablevalues="0.54901960784314 0.98823529411765"></fefuncr><fefuncg type="table" tablevalues="0 1"></fefuncg><fefuncb type="table" tablevalues="0.71764705882353 0.25490196078431"></fefuncb><fefunca type="table" tablevalues="1 1"></fefunca></fecomponenttransfer><fecomposite in2="SourceGraphic" operator="in"></fecomposite></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-blue-red"><fecolormatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></fecolormatrix><fecomponenttransfer color-interpolation-filters="sRGB"><fefuncr type="table" tablevalues="0 1"></fefuncr><fefuncg type="table" tablevalues="0 0.27843137254902"></fefuncg><fefuncb type="table" tablevalues="0.5921568627451 0.27843137254902"></fefuncb><fefunca type="table" tablevalues="1 1"></fefunca></fecomponenttransfer><fecomposite in2="SourceGraphic" operator="in"></fecomposite></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-midnight"><fecolormatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></fecolormatrix><fecomponenttransfer color-interpolation-filters="sRGB"><fefuncr type="table" tablevalues="0 0"></fefuncr><fefuncg type="table" tablevalues="0 0.64705882352941"></fefuncg><fefuncb type="table" tablevalues="0 1"></fefuncb><fefunca type="table" tablevalues="1 1"></fefunca></fecomponenttransfer><fecomposite in2="SourceGraphic" operator="in"></fecomposite></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-magenta-yellow"><fecolormatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></fecolormatrix><fecomponenttransfer color-interpolation-filters="sRGB"><fefuncr type="table" tablevalues="0.78039215686275 1"></fefuncr><fefuncg type="table" tablevalues="0 0.94901960784314"></fefuncg><fefuncb type="table" tablevalues="0.35294117647059 0.47058823529412"></fefuncb><fefunca type="table" tablevalues="1 1"></fefunca></fecomponenttransfer><fecomposite in2="SourceGraphic" operator="in"></fecomposite></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-purple-green"><fecolormatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></fecolormatrix><fecomponenttransfer color-interpolation-filters="sRGB"><fefuncr type="table" tablevalues="0.65098039215686 0.40392156862745"></fefuncr><fefuncg type="table" tablevalues="0 1"></fefuncg><fefuncb type="table" tablevalues="0.44705882352941 0.4"></fefuncb><fefunca type="table" tablevalues="1 1"></fefunca></fecomponenttransfer><fecomposite in2="SourceGraphic" operator="in"></fecomposite></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-blue-orange"><fecolormatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></fecolormatrix><fecomponenttransfer color-interpolation-filters="sRGB"><fefuncr type="table" tablevalues="0.098039215686275 1"></fefuncr><fefuncg type="table" tablevalues="0 0.66274509803922"></fefuncg><fefuncb type="table" tablevalues="0.84705882352941 0.41960784313725"></fefuncb><fefunca type="table" tablevalues="1 1"></fefunca></fecomponenttransfer><fecomposite in2="SourceGraphic" operator="in"></fecomposite></filter></defs></svg>		<div id="container" class="site container">
+	<header id="masthead" class="site-header animated fadeInDown" role="banner">
+
+	<a class="screen-reader-text skip-link" href="#main-content">Skip to content</a>
+	<a class="screen-reader-text skip-link" href="#sidebar-widget-area">Skip to sidebar</a>
+	<a class="screen-reader-text skip-link" href="#page-footer">Skip to footer</a>
+	<div id="site-identity" class="site-identity">
+		<a href="/" class="home-link animated fadeIn" title="Stories from a Software Tester" rel="home">
+			<div class="title-description">
+				<h1 class="site-title">Stories from a Software Tester</h1>
+				<h2 class="site-description">Twice upon a time, in another space, no distance in any direction from here &#8230;</h2>
+			</div>
+		</a> 
+
+	</div>
+<!--/site-identity-->
+
+	<nav id="nav-menu" class="site-navigation main-navigation" role="navigation" aria-label="Main Navigation">
+		<button id="nav-button" class="menu-toggle" role="button">
+			<span class="screen-reader-text">Menu</span>
+			<span class="genericon" aria-hidden="true"></span>
+		</button>
+		<ul id="primary-menu" class="primary-menu">
+<li id="menu-item-3923" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-3923"><a href="/">Home</a></li>
+<li id="menu-item-2051" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2051"><a href="/about-tester-stories/">About Tester Stories</a></li>
+<li id="menu-item-2050" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2050"><a href="/who-am-i/">Who Am I</a></li>
+<li id="menu-item-2048" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2048"><a href="/just-for-fun/">Just For Fun</a></li>
+</ul>	</nav><!--/navigation-->
+
+
+<form role="search" method="get" class="search-form" action="https://testerstories.com/">
+	<label>
+		<span class="screen-reader-text">Search for:</span>
+		<input type="search" class="search-field" placeholder="Search &hellip;" value="" name="s" title="Search for:">
+	</label>
+	<button type="submit" class="search-submit"><span class="genericon genericon-search" aria-hidden="true"></span><span class="screen-reader-text">Search</span></button>
+</form>
+</header><!--/header-->
+
+<main id="main-content" class="main-content" role="main">
+<article id="post-2892" class="post-2892 post type-post status-publish format-standard hentry category-indefinito">
+<header class="entry-header">
+	<span class="entry-meta"><span class="cat-links"><span class="screen-reader-text">Published in</span><span class="genericon genericon-category" aria-hidden="true"></span><a href="/category/indefinito/" rel="category tag">Indefinito</a></span></span><h1 class="entry-title">Testing and the Project Singularity</h1>	<span class="byline">
+	Written by <a href="/author/administrator/" class="entry-author" rel="author">Jeff Nyman</a>	</span><!-- .byline -->
+	<span class="entry-meta">
+	<span class="genericon genericon-time" aria-hidden="true"></span><a href="/2016/11/29/" rel="bookmark" class="entry-date"><time datetime="2016-11-29T06:54:54-06:00">29 November 2016</time></a>		<span class="comments-link">
+			<span class="genericon genericon-comment" aria-hidden="true"></span>
+			<a href="/2016/11/testing-and-the-project-singularity/#comments">2 Comments</a>		</span>
+		</span><!-- .entry-meta -->
+</header><!-- .entry-header -->
+
+	<div class="entry-content">
+		<p>In mathematics, a singularity refers to a point that is basically undefined because it is infinite or what is known as degenerate. In physics, a singularity is a &#8220;region&#8221; that has infinite density with an infinitesimal volume. So what does this extreme concept have to do with testing? Well, let&#8217;s talk about that.</p>
+<p><span id="more-2892"></span></p>
+<p>Okay, so singularities. Nifty things.</p>
+<p align="center"><img decoding="async" src="/files/singularity-001.png"></p>
+<p>In that image, the singularity would the dot at the center of the funnel and while the dot seems to have extent that&#8217;s just an artifact of the drawing. By the definitions given, singularities can&#8217;t be measured. They do, however, transform anything measurable that passes through them. When testing is taken as a social discipline and a truth-preserving mechanism I think this has an interesting corollary with the idea of the singularity and my previous thoughts on the character of projects.</p>
+<p>But what are the two sides of that &#8220;funnel&#8221; there? That would be past and future. Here&#8217;s a common physics conception of the same thing:</p>
+<p align="center"><img decoding="async" src="/files/singularity-002.png"></p>
+<p>The past and the future are two of the most <a href="/2016/11/the-shifting-polarities-of-testing/">prominent polarities that we shift between</a>. But that project singularity changes everything.</p>
+<p>So I&#8217;m going to go on a bit of an analogy rant here. Some of the following analogy is very much one from John Gaddis that I am appropriating here because I think it&#8217;s so well considered. My contribution to this analogy is how &#8220;project time&#8221; itself forms a natural singularity about which our projects must pass through. In doing so, these projects are transformed. That transformation takes place over a smeared out moment of &#8220;now&#8221;, where &#8220;now&#8221; becomes a duration that is measured in terms of sprints or whatever else we call our discrete project activities. Stretching this analogy to what is no doubt its breaking point, I also want to visualize how our projects can become pathological in this context.</p>
+<h2>The Duration of &#8220;Now&#8221;</h2>
+<p>In <a href="/2016/11/the-character-of-projects/">the character of projects</a> I talked about how the notion of &#8220;now&#8221; is not really a moment in time for us:</p>
+<blockquote><p>The ephemeral moment of “now” is when everything is actionable for us. Here “now” is a duration that comes into being and persists for a project.</p></blockquote>
+<p>The &#8220;present&#8221; is thus a temporal spread. Our singularity is thus a bit smeared out. Part of why I said &#8220;agile&#8221; and &#8220;waterfall&#8221; were irrelevant in that prior post was because they don&#8217;t at all deal with the consequences of the temporal spread. But I will say that I think &#8220;agile&#8221; has the better focus, which is keeping the &#8220;now duration&#8221; as small as possible. If we keep our singularity from smearing out too much, we get this:</p>
+<p align="center"><img decoding="async" src="/files/singularity-003.png"></p>
+<p>But if the &#8220;now duration&#8221; is allowed to become longer and longer, the singularity of our project smears out more and more:</p>
+<p align="center"><img decoding="async" src="/files/singularity-004.png"></p>
+<p>The more smeared out the singularity, the greater the transformation process that takes place. In the interesting book <em>Time, Continuity, and Indeterminancy</em>, Sandra Rosenthal says:</p>
+<blockquote><p>&#8220;The &#8216;cut&#8217; of the present contains past and future because it contains the continuities or possibilities that extend into the future.&#8221;</p></blockquote>
+<p>I like that notion of continuities so let&#8217;s stick with that a bit.</p>
+<h2>Continuities and Contingencies</h2>
+<p>Since our projects are essentially reflections of life, let&#8217;s consider that within our projects, just as within life, there are continuities and there are contingencies.</p>
+<ul>
+<li>Continuities refer to patterns that persist and extend across some amount of time. These are events that recur with sufficient regularity to make themselves apparent to us. Our ability to generalize comes from continuities.</li>
+</ul>
+<ul>
+<li>Contingencies refer to events that do not form patterns. These events don’t fall within the realm of repeated experience, at least so far as we can tell. We generally learn about these, and reason about them, only after they’ve happened.</li>
+</ul>
+<p>In <em>Tacit and Explicit Knowledge</em>, Harry Collins discusses what he calls &#8220;contingent tacit knowledge,&#8221; which refers to, as Collins describes it, the &#8220;contingencies of social life.&#8221; That resonated with me because remember that I fully believe testing is, first and foremost, a social discipline. Thus testing, as an activity, should focus on the &#8220;social life&#8221; of our projects. But those projects are going to have contingencies as well as continuities.</p>
+<p>So now think of the present moment &#8212; but the &#8220;smeared out&#8221; present moment that I&#8217;m referring to &#8212; as a singularity through which the future has to go through in order to become the past.</p>
+<p>Here&#8217;s where we tie the ideas together. The present achieves its transformation by locking into place the relationships between the continuities and the contingencies. As Gaddis says (in <em>The Landscape of History</em>):</p>
+<blockquote><p>&#8220;On the future side of the singularity, these are fluid, decoupled, and therefore indeterminate; however, as they pass through it they fuse and can’t then be separated.&#8221;</p></blockquote>
+<p>A key point here is that in the future, the contingencies and continuities coexist independently of one another. The past, however, is where their relationship is fixed. The present is the singularity that brings the two together. This means that continuities intersect with contingencies, contingencies run up against continuities. Ultimately this is the process by which what we call &#8220;history&#8221; is made.</p>
+<h2>Everything is the Past</h2>
+<p>As I said in the <a href="/2016/11/the-shifting-polarities-of-testing/">shifting polarities</a>, everything we rely on is in the past. Our emphasis is ultimately on the history of our projects. It is the history that contains the actions we took and the artifacts we produced. That means we are mainly dealing with where the relationship between contingencies and continuities are fixed.</p>
+<p>Okay, yeah &#8230; so what? I mean, what&#8217;s that really saying? Well, let&#8217;s state the obvious here: the trouble with the future is that it’s so much less knowable than the past. Because the future lies on the other side of the singularity that is the &#8220;now duration&#8221;, all we can count on is that certain continuities from the past will extend into it. We can also count on the fact that those continuities are going to run into uncertain contingencies.</p>
+<p>Now, some continuities will be sufficiently anti-fragile that contingencies will not deflect them. But the &#8220;problem&#8221; is that our projects have a human component at all times. And, as we know, when it comes to actions people themselves choose to take &#8212; in other words, when consciousness and sapience <em>are</em> one of the primary contingencies &#8212; forecasting and planning becomes a far more problematic activity.</p>
+<p>Likewise, however, details about the past can also be less knowable in many ways. Remember the singularity transforms <em>everything</em> that passes through it. This means distortion is is inevitably made. Micro-decisions made and rationales promoted are subsumed by the artifacts that get left behind. We tend to reason about those artifacts more than we do the human reasoning processes that produced them.</p>
+<h2>Visualizing Project Pathologies</h2>
+<p>I won&#8217;t dig too deep into this point because my thoughts are still percolating. But I do think this focus on the artifacts rather than on the means of production is akin to how we might focus on the structures of history rather than the forces that created the structures. This can lead to certain project pathologies and, again, this can happen in agile, waterfall or any variation thereof.</p>
+<p>Here&#8217;s one:</p>
+<p align="center"><img decoding="async" src="/files/singularity-005.jpg"></p>
+<p>Consider the &#8220;tube&#8221; you saw in my first visual for this article. Here the tube gets twisted back, not so much on itself, but rather on the &#8220;consistency&#8221; we have on our projects. It&#8217;s a feedback loop but, in this case, it&#8217;s a loop that lets nothing else in. This is like when we keep using the same artifacts, often incurring the same technical debt (however you choose to define that) and thus our projects look like this: a loop of activity that ultimately keeps us in the same state.</p>
+<p>Here&#8217;s another:</p>
+<p align="center"><img decoding="async" src="/files/singularity-006.jpg"></p>
+<p>Here is a variation on the previous, where the tube is ultimately twisted back on itself. This it the pathology where, on our projects, we simply don&#8217;t learn. We&#8217;re on a sort of treadmill. The bigger the loop, the less we realize we are on a treadmill.</p>
+<p>Here&#8217;s one more:</p>
+<p align="center"><img decoding="async" src="/files/singularity-007.jpg"></p>
+<p>This is where our tubes lead us into islands of sophistication and reservoirs of knowledge. This means that our discoverability is ultimately compromised because it&#8217;s reliant on these localized distributions of information, artifact and knowledge. Everything is potentially knowable, of course, but the reality is that as the &#8220;bubbles&#8221; grow, it becomes more and more difficult to effectively share information.</p>
+<p>I realize these may seem like a pathetic attempt to stick to my theme, treating singularities as a project pathology. As I said, thoughts are still percolating.</p>
+<h2>Reasoning in the Present</h2>
+<p>Here&#8217;s another aspect that I want to investigate more. As in historical studies, having direct experiences of an event or a time are not necessarily the best path to understanding them. This is because when we are directly experiencing an event, our field of vision tends to extend only out to what is necessary for our most immediate senses to function.</p>
+<p>So, as an example, in the thick of encoding a business domain as tests for a particular feature in a given sprint, we often can’t do the one thing we need to do, which is reason about the entirety of the system. And, likewise, as a discipline, testing and quality assurance, rarely look back on themselves with a wide-angles lens.</p>
+<p>This means, to me, a component of a quality assurance function is having at least some people who are not mired in any sprint. They are aware of it, certainly. But they are an architect of history which means making sure that the truth-preserving mechanism of testing does, in fact, preserve through the singularity.</p>
+<p>I want to drill this point home a bit more. If we have detachment from, and consequent elevation above, something this means we get a departure from the immediate. This can provide us with a new perception on what we do, how we do it, and so on. An elevation that provides a shift in perspective tends to enlarge our experience.</p>
+<p>In my post talking about how <a href="/2016/11/testing-is-like-cartography/">testing is like cartography</a>, I mentioned that</p>
+<blockquote><p>Maps thus serve as a way to package up a vicarious experience by providing a representation.</p></blockquote>
+<p>When we perform an act of representation, this can lift us above the familiar and the immediate to let us experience vicariously what we can no longer experience directly: a wider view. We can’t reclaim the time when the decisions were made on our projects. But we can create representations of those decisions and come to a historical understanding of why and how they were made. This is, in part, the truth-preserving aspect of testing that I believe must be encouraged more. Concepts like BDD, with copious feature files based on communication, may be seen as trying to provide this but, in fact, the opposite is true &#8212; or so I would argue.</p>
+<p>What most of our &#8220;methodologies&#8221; (i.e., agile) or our &#8220;processes&#8221; (i.e., BDD) are simply encouraging tradition: a streamlined means of how to act on projects. Far from enlarging our experiences, I believe these things constrain them.</p>
+<h2>Representation and Abstraction</h2>
+<p>I have said, in various contexts, that one of the key skills for testers is choosing the right abstractions to work with. See the following, if curious:</p>
+<ul>
+<li><a href="/2016/08/the-integration-pact/">The Integration Pact</a></li>
+<li><a href="/2015/07/abstraction-levels-for-tests/">Abstraction Levels for Tests</a></li>
+<li><a href="/2015/10/good-tests-vs-bad-tests-with-description-languages/">Good Test vs Bad Tests withe Description Languages</a></li>
+<li><a href="/2016/01/the-bdd-lure-and-trap/">The BDD Lure and Trap</a></li>
+</ul>
+<p>I point those out because they are examples where my own thinking was &#8212; maybe &#8212; on the right track but too focused on limited contexts.</p>
+<p>A purpose of representation is distillation: you want to package up a large body of information into a compact usable form so that someone can, ultimately, reason about and make decisions about things using that information. So part of what my test artifacts do is distill the micro-decisions and rationale that went into the creation of a given feature; they provide a context into how that feature sits relative to other features.</p>
+<p>What you are doing is offering a compression of historical experience that can vicariously enlarge personal experience. It&#8217;s a way of recovering information that passed through the project singularity.</p>
+<p>In terms of harnessing those continuities mentioned earlier, the idea of abstraction is a separation from context and this is what can make generalizations hold up over time. This is pretty much the idea of choosing the appropriate abstractions in testing. Or it&#8217;s pretty much that idea <strong><em>if</em></strong> you view testing as primarily a social discipline that puts emphasis on the means by which a culture makes decisions, implements those decisions as artifacts, and then encodes relevant information for historical discovery.</p>
+<h2>Abstraction and Liberation</h2>
+<p>It&#8217;s important to keep in mind that abstraction arose as a form of liberation. Abstraction, in both art and science, was a way to provide a new view of reality that put an emphasis on the flow of time. That process works, though, by distorting space. This means we end up with compressions and distillations of thought and experience. This is what I believe we do in testing as well, both as a social discipline and as a truth-preserving mechanism: we use compressions and distillations of the past in order to make it usable in the future. This is another example of moving between polarities.</p>
+<p>But this means there is always a tension between the literal and the abstract, between the detailed depiction of what lies at some point in the past, on the one hand, and sweeping sketch of what extends over long stretches of it, on the other. Thus we find ourselves facing other polarities: that between generalization and particularization as well as the gap between the abstract and literal representation.</p>
+<p>So I&#8217;ll close here with something I said in <a href="/2016/11/testing-and-the-human-element-of-history/">testing and the human element of history</a>:</p>
+<blockquote><p>I do believe that testing is about moving between polarities of thought. I believe this is what, as a whole, our discipline is in danger of not doing as we fall prey to the technocrats, the complex methodologists, and the “guiding” hand of technological sophistication rather than the nuance, and uncertainty and messiness, of human reason and communication.</p></blockquote>
+<p>I believe this more than ever and I&#8217;m on a quest to tie the idea of polarities to the idea of the social discipline and truth-preserving mechanism of testing.</p>
+<div class="addtoany_share_save_container addtoany_content addtoany_content_bottom"><div class="a2a_kit a2a_kit_size_16 addtoany_list" data-a2a-url="https://testerstories.com/2016/11/testing-and-the-project-singularity/" data-a2a-title="Testing and the Project Singularity">
+<a class="a2a_button_facebook" href="https://www.addtoany.com/add_to/facebook?linkurl=%2F2016%2F11%2Ftesting-and-the-project-singularity%2F&amp;linkname=Testing%20and%20the%20Project%20Singularity" title="Facebook" rel="nofollow noopener" target="_blank"></a><a class="a2a_button_twitter" href="https://www.addtoany.com/add_to/twitter?linkurl=%2F2016%2F11%2Ftesting-and-the-project-singularity%2F&amp;linkname=Testing%20and%20the%20Project%20Singularity" title="Twitter" rel="nofollow noopener" target="_blank"></a><a class="a2a_button_linkedin" href="https://www.addtoany.com/add_to/linkedin?linkurl=%2F2016%2F11%2Ftesting-and-the-project-singularity%2F&amp;linkname=Testing%20and%20the%20Project%20Singularity" title="LinkedIn" rel="nofollow noopener" target="_blank"></a><a class="a2a_button_print" href="https://www.addtoany.com/add_to/print?linkurl=%2F2016%2F11%2Ftesting-and-the-project-singularity%2F&amp;linkname=Testing%20and%20the%20Project%20Singularity" title="Print" rel="nofollow noopener" target="_blank"></a><a class="a2a_dd addtoany_share_save addtoany_share" href="https://www.addtoany.com/share"><img src="https://static.addtoany.com/buttons/favicon.png" alt="Share"></a>
+</div></div>      
+	</div>
+<!-- .entry-content -->
+	<footer class="entry-footer">       
+		<p class="written-by">This article was written by <a href="/author/administrator/">Jeff Nyman</a></p>
+<div class="author-bio">
+		
+	<h3><a href="/author/administrator/" rel="author">About  Jeff Nyman</a></h3>		
+	<img alt="" src="https://secure.gravatar.com/avatar/a3b6c2d0b2bafdb9ad9cdf782873204d?s=72&#038;d=mm&#038;r=pg" srcset="https://secure.gravatar.com/avatar/a3b6c2d0b2bafdb9ad9cdf782873204d?s=144&#038;d=mm&#038;r=pg 2x" class="avatar avatar-72 photo" height="72" width="72" decoding="async"><p class="author-description">Anything I put here is an approximation of the truth. You're getting a particular view of myself ... and it's the view I'm choosing to present to you. If you've never met me before in person, please realize I'm not the same in person as I am in writing. That's because I can only put part of myself down into words.
+
+If you have met me before in person then I'd ask you to consider that the view you've formed that way and the view you come to by reading what I say here may, in fact, both be true. I'd advise that you not automatically discard either viewpoint when they conflict or accept either as truth when they agree.</p>		
+</div>
+<!-- .author-bio -->
+	</footer><!-- .entry-footer -->
+
+	<nav class="navigation post-navigation" aria-label="Posts">
+		<h2 class="screen-reader-text">Post navigation</h2>
+		<div class="nav-links">
+<div class="nav-previous"><a href="/2016/11/testing-is-like-cartography/" rel="prev"><span class="genericon genericon-previous" aria-hidden="true"></span> <span class="screen-reader-text">Previous post:</span> <span class="post-title">Testing Is Like Cartography</span></a></div>
+<div class="nav-next"><a href="/2016/12/the-dimensionality-of-testing/" rel="next"><span class="post-title">The Dimensionality of Testing</span><span class="screen-reader-text">Next post:</span> <span class="genericon genericon-next" aria-hidden="true"></span> </a></div>
+</div>
+	</nav>
+<div id="comments" class="comments-area">
+
+
+	<h2 class="comments-title">
+2 thoughts on &ldquo;Testing and the Project Singularity&rdquo;	</h2>
+
+
+	<ol class="comment-list">
+				<li id="comment-36033" class="comment even thread-even depth-1 parent">
+			<article id="div-comment-36033" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img alt="" src="https://secure.gravatar.com/avatar/3d8389add775613139a0f30784830fd9?s=34&#038;d=mm&#038;r=pg" srcset="https://secure.gravatar.com/avatar/3d8389add775613139a0f30784830fd9?s=68&#038;d=mm&#038;r=pg 2x" class="avatar avatar-34 photo" height="34" width="34" decoding="async">						<b class="fn"><a href="https://asym.dk/english/" class="url" rel="ugc external nofollow">Anders Dinsen</a></b> <span class="says">says:</span>					</div>
+<!-- .comment-author -->
+
+					<div class="comment-metadata">
+						<a href="/2016/11/testing-and-the-project-singularity/#comment-36033"><time datetime="2016-12-11T13:22:34-06:00">11 December 2016 at 1:22 pm</time></a>					</div>
+<!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p>Thank you for sharing your fascinating thoughts on testing. I&#8217;d like to offer you critique of your thoughts here. Not to tell you you are wrong, but to inspire you to think about whether the premises of your thinking are correct. I cannot judge your thinking, as logically you are correct, but I can offer you a different perspective.</p>
+<p>And I do see a problem in the way you work.</p>
+<p>You correctly identify testing as a social activity.</p>
+<p>But by starting out with theories of time, space, and matter, your thinking is limited, and accidentially, you reduce the social in the activity to a question of cause and effect with random input. This quote is particularly revealing:</p>
+<blockquote><p>But the “problem” is that our projects have a human component at all times.</p></blockquote>
+<p>Let me ask you the following two questions:</p>
+<p> 	Are the human components not in fact the <strong>only</strong> anti-fragile component in projects?<br>
+ 	Do continuities not only happen <strong>because</strong> of the human components?</p>
+<p>Again: Thank you for sharing your fascinating thoughts and allowing us to comment. Happy thinking!</p>
+<p>Best,<br>
+Anders</p>
+				</div>
+<!-- .comment-content -->
+
+				<div class="reply"><a rel="nofollow" class="comment-reply-link" href="/2016/11/testing-and-the-project-singularity/?replytocom=36033#respond" data-commentid="36033" data-postid="2892" data-belowelement="div-comment-36033" data-respondelement="respond" data-replyto="Reply to Anders Dinsen" aria-label="Reply to Anders Dinsen"><span class="genericon genericon-reply" aria-hidden="true"></span>Reply</a></div>			</article><!-- .comment-body -->
+		<ol class="children">
+		<li id="comment-36034" class="comment byuser comment-author-administrator bypostauthor odd alt depth-2">
+			<article id="div-comment-36034" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img alt="" src="https://secure.gravatar.com/avatar/a3b6c2d0b2bafdb9ad9cdf782873204d?s=34&#038;d=mm&#038;r=pg" srcset="https://secure.gravatar.com/avatar/a3b6c2d0b2bafdb9ad9cdf782873204d?s=68&#038;d=mm&#038;r=pg 2x" class="avatar avatar-34 photo" height="34" width="34" decoding="async">						<b class="fn">Jeff Nyman</b> <span class="says">says:</span>					</div>
+<!-- .comment-author -->
+
+					<div class="comment-metadata">
+						<a href="/2016/11/testing-and-the-project-singularity/#comment-36034"><time datetime="2016-12-11T13:35:52-06:00">11 December 2016 at 1:35 pm</time></a>					</div>
+<!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p>I appreciate and desire critique!</p>
+<p>Regarding that quote, note that I put the word &#8220;problem&#8221; itself in quotes. What I didn&#8217;t do is properly indicate that this was sometimes how people looked at things: &#8220;people are the problem.&#8221;</p>
+<p>But it is also true to say that when you add in the free will of human agents, projects (of course, right?) become more complicated. That&#8217;s why, ultimately, our projects are not just reductionist exercises wherein you can look at the sum of the parts and work the project as you would, say, solve an equation.</p>
+<p>So &#8212; in short &#8212; you raise an excellent point. I presented my thinking there in a shallow way. And I have to ask myself if that&#8217;s because my thinking <em>is</em> shallow in that context. I will investigate this. Let&#8217;s take a stab at your questions.</p>
+<p><strong>Are the human components not in fact the only anti-fragile component in projects?</strong></p>
+<p>I&#8217;m still parsing Nassim Taleb&#8217;s book <em>Antifragile</em> so my thoughts are very in flux, thus I hesitate to pontificate too much. What I can say I believe is that many things can be anti-fragile. But do they come down to humans ultimately? Let&#8217;s consider &#8220;faith&#8221; as an example.</p>
+<p>I would argue that anyone&#8217;s faith that can be crushed by some questioning &#8212; even hard questioning &#8212; is not much of a faith. But notice it&#8217;s not the &#8220;faith that is antifragile.&#8221; It&#8217;s the network of associations, arguments, and concepts that operate in human minds that can lend a notion of antifragility to the concept of that person&#8217;s individual faith.</p>
+<p>But humans can build systems that are antifragile outside of their thoughts about those systems. I can work with people to build software infrastructures that are potentially antifragile.</p>
+<p>I&#8217;m not sure if I&#8217;m responding to your question well but I appreciate that it&#8217;s giving me something to think about further.</p>
+<p><strong>Do continuities not only happen because of the human components?</strong></p>
+<p>Excellent question. So in an article I just published today (<a href="/2016/12/testing-is-like-studying-the-past/">this one</a>), the continuities that we have in the past are the structures that have survived. Those were created with some processes and, in the context of our projects, yes &#8212; that would be because of humans. Unless software starts writing itself. In other disciplines &#8212; like geology, for example &#8212; this is not the case. Operative processes in nature &#8212; without human intervention &#8212; could have left structures.</p>
+<p>Consider our source code. That&#8217;s a continuity. But it got there by humans. Consider the &#8220;agile approach&#8221; we used as a team to create some software. That approach &#8212; the way we incremented and iterated &#8212; left structures, including memories. But, again, without humans in the mix, what would we have ended up with?</p>
+<p>So &#8212; responding to those human aspects &#8212; there is nothing (in my mind) wrong with the notion of humans being &#8220;problematic&#8221; in that this doesn&#8217;t have to be a bad thing or a good thing. It simply is. Humans are complicated. Things we deal with become complicated because we apply our own values, thoughts, desires, biases and so on to those things.</p>
+				</div>
+<!-- .comment-content -->
+
+							</article><!-- .comment-body -->
+		</li>
+<!-- #comment-## -->
+</ol>
+<!-- .children -->
+</li>
+<!-- #comment-## -->
+	</ol>
+<!-- .comment-list -->
+
+
+
+	
+		<div id="respond" class="comment-respond">
+		<h3 id="reply-title" class="comment-reply-title">Leave a Reply <small><a rel="nofollow" id="cancel-comment-reply-link" href="/2016/11/testing-and-the-project-singularity/#respond" style="display:none;">Cancel reply</a></small>
+</h3>
+<form action="https://testerstories.com/wp-comments-post.php" method="post" id="commentform" class="comment-form" novalidate>
+<p class="comment-notes"><span id="email-notes">Your email address will not be published.</span> <span class="required-field-message">Required fields are marked <span class="required">*</span></span></p>
+<p class="comment-form-comment"><label for="comment">Comment <span class="required">*</span></label> <textarea id="comment" name="comment" cols="45" rows="8" maxlength="65525" required></textarea></p>
+<p class="comment-form-author"><label for="author">Name <span class="required">*</span></label> <input id="author" name="author" type="text" value="" size="30" maxlength="245" autocomplete="name" required></p>
+<p class="comment-form-email"><label for="email">Email <span class="required">*</span></label> <input id="email" name="email" type="email" value="" size="30" maxlength="100" aria-describedby="email-notes" autocomplete="email" required></p>
+<p class="comment-form-url"><label for="url">Website</label> <input id="url" name="url" type="url" value="" size="30" maxlength="200" autocomplete="url"></p>
+<p class="form-submit"><input name="submit" type="submit" id="submit" class="submit" value="Post Comment"> <input type="hidden" name="comment_post_ID" value="2892" id="comment_post_ID">
+<input type="hidden" name="comment_parent" id="comment_parent" value="0">
+</p>
+<p style="display: none;"><input type="hidden" id="akismet_comment_nonce" name="akismet_comment_nonce" value="b8008d15be"></p>
+<p style="display: none !important;"><label>&#916;<textarea name="ak_hp_textarea" cols="45" rows="8" maxlength="100"></textarea></label><input type="hidden" id="ak_js_1" name="ak_js" value="98"><script>document.getElementById( "ak_js_1" ).setAttribute( "value", ( new Date() ).getTime() );</script></p>
+</form>	</div>
+<!-- #respond -->
+	<p class="akismet_comment_form_privacy_notice">This site uses Akismet to reduce spam. <a href="https://akismet.com/privacy/" target="_blank" rel="nofollow noopener">Learn how your comment data is processed</a>.</p>
+</div>
+<!-- #comments -->
+</article><!-- #post-## -->
+</main><!--/main-content-->
+	<aside id="sidebar-widget-area" class="sidebar-widget-area" role="complementary">
+		<a class="screen-reader-text skip-link" href="#page-footer">Skip to footer</a>
+
+		<section id="sidebar" class="widget-area sidebar">
+			<div id="text-6" class="widget widget_text">			<div class="textwidget">
+<p><a href="https://www.linkedin.com/pub/jeff-nyman/12/b32/16a"><br>
+<img decoding="async" src="https://static.licdn.com/scds/common/u/img/webpromo/btn_myprofile_160x33.png" alt="View Jeff Nyman's profile on LinkedIn" width="160" height="33" border="0"></a></p>
+</div>
+		</div>
+<div id="categories-5" class="widget widget_categories">
+<h2 class="widget-title">Topics</h2>
+			<ul>
+					<li class="cat-item cat-item-58">
+<a href="/category/agile/">Agile</a> (2)
+</li>
+	<li class="cat-item cat-item-49">
+<a href="/category/ai/">AI</a> (24)
+<ul class="children">
+	<li class="cat-item cat-item-50">
+<a href="/category/ai/machine-learning/">Machine Learning</a> (12)
+	<ul class="children">
+	<li class="cat-item cat-item-55">
+<a href="/category/ai/machine-learning/ml-series-1/">ML Series 1</a> (2)
+</li>
+	<li class="cat-item cat-item-56">
+<a href="/category/ai/machine-learning/ml-series-2/">ML Series 2</a> (4)
+</li>
+	<li class="cat-item cat-item-57">
+<a href="/category/ai/machine-learning/ml-series-3/">ML Series 3</a> (6)
+</li>
+	</ul>
+</li>
+</ul>
+</li>
+	<li class="cat-item cat-item-11">
+<a href="/category/automation/">Automation</a> (68)
+<ul class="children">
+	<li class="cat-item cat-item-41">
+<a href="/category/automation/c/">C#</a> (2)
+</li>
+	<li class="cat-item cat-item-8">
+<a href="/category/automation/capybara/">Capybara</a> (11)
+</li>
+	<li class="cat-item cat-item-9">
+<a href="/category/automation/cucumber/">Cucumber</a> (10)
+</li>
+	<li class="cat-item cat-item-31">
+<a href="/category/automation/cucumber-jvm/">Cucumber-JVM</a> (6)
+</li>
+	<li class="cat-item cat-item-42">
+<a href="/category/automation/groovy/">Groovy</a> (1)
+</li>
+	<li class="cat-item cat-item-40">
+<a href="/category/automation/java/">Java</a> (9)
+</li>
+	<li class="cat-item cat-item-10">
+<a href="/category/automation/qtp/">QTP</a> (6)
+</li>
+	<li class="cat-item cat-item-5">
+<a href="/category/automation/rspec/">RSpec</a> (4)
+</li>
+	<li class="cat-item cat-item-7">
+<a href="/category/automation/selenium/">Selenium</a> (17)
+</li>
+	<li class="cat-item cat-item-39">
+<a href="/category/automation/serenity/">Serenity</a> (8)
+</li>
+	<li class="cat-item cat-item-30">
+<a href="/category/automation/symbiont/">Symbiont</a> (11)
+</li>
+	<li class="cat-item cat-item-51">
+<a href="/category/automation/tapestry/">Tapestry</a> (6)
+</li>
+	<li class="cat-item cat-item-6">
+<a href="/category/automation/watir/">Watir</a> (4)
+</li>
+</ul>
+</li>
+	<li class="cat-item cat-item-13">
+<a href="/category/bdd/">BDD</a> (24)
+<ul class="children">
+	<li class="cat-item cat-item-23">
+<a href="/category/bdd/tdl/">TDL</a> (17)
+</li>
+</ul>
+</li>
+	<li class="cat-item cat-item-25">
+<a href="/category/career/">Career</a> (33)
+<ul class="children">
+	<li class="cat-item cat-item-53">
+<a href="/category/career/interview/">Interview</a> (10)
+</li>
+</ul>
+</li>
+	<li class="cat-item cat-item-15">
+<a href="/category/communication/">Communication</a> (16)
+</li>
+	<li class="cat-item cat-item-65">
+<a href="/category/crime-scene/">Crime Scene</a> (4)
+</li>
+	<li class="cat-item cat-item-52">
+<a href="/category/data-science/">Data Science</a> (4)
+</li>
+	<li class="cat-item cat-item-61">
+<a href="/category/development/">Development</a> (39)
+<ul class="children">
+	<li class="cat-item cat-item-36">
+<a href="/category/development/chef/">Chef</a> (2)
+</li>
+	<li class="cat-item cat-item-32">
+<a href="/category/development/inform-7/">Inform 7</a> (3)
+</li>
+	<li class="cat-item cat-item-38">
+<a href="/category/development/javascript-test-solutions/">JavaScript</a> (6)
+</li>
+	<li class="cat-item cat-item-19">
+<a href="/category/development/language-building/">Language Building</a> (9)
+	<ul class="children">
+	<li class="cat-item cat-item-20">
+<a href="/category/development/language-building/rex-and-racc/">Rex and Racc</a> (3)
+</li>
+	</ul>
+</li>
+	<li class="cat-item cat-item-48">
+<a href="/category/development/python/">Python</a> (4)
+</li>
+	<li class="cat-item cat-item-29">
+<a href="/category/development/rails/">Rails</a> (4)
+</li>
+	<li class="cat-item cat-item-21">
+<a href="/category/development/web-development/">Web Development</a> (11)
+	<ul class="children">
+	<li class="cat-item cat-item-34">
+<a href="/category/development/web-development/node-js/">Node.js</a> (5)
+</li>
+	<li class="cat-item cat-item-22">
+<a href="/category/development/web-development/sinatra/">Sinatra</a> (6)
+</li>
+	</ul>
+</li>
+</ul>
+</li>
+	<li class="cat-item cat-item-28">
+<a href="/category/dialect/">Dialect</a> (6)
+</li>
+	<li class="cat-item cat-item-45">
+<a href="/category/exploration/">Exploration</a> (14)
+<ul class="children">
+	<li class="cat-item cat-item-46">
+<a href="/category/exploration/interactive/">Interactive</a> (6)
+</li>
+</ul>
+</li>
+	<li class="cat-item cat-item-44">
+<a href="/category/indefinito/">Indefinito</a> (11)
+</li>
+	<li class="cat-item cat-item-17">
+<a href="/category/learning/">Learning</a> (11)
+</li>
+	<li class="cat-item cat-item-24">
+<a href="/category/lucid/">Lucid</a> (11)
+</li>
+	<li class="cat-item cat-item-62">
+<a href="/category/product-development/">Product Development</a> (7)
+</li>
+	<li class="cat-item cat-item-64">
+<a href="/category/product-management/">Product Management</a> (3)
+</li>
+	<li class="cat-item cat-item-3">
+<a href="/category/quality/">Quality</a> (7)
+</li>
+	<li class="cat-item cat-item-14">
+<a href="/category/quality-assurance/">Quality Assurance</a> (5)
+</li>
+	<li class="cat-item cat-item-35">
+<a href="/category/specify/">Specify</a> (2)
+</li>
+	<li class="cat-item cat-item-16">
+<a href="/category/symbiont-pg/">Symbiont-PG</a> (4)
+</li>
+	<li class="cat-item cat-item-27">
+<a href="/category/test-solutions/">Test Solutions</a> (11)
+</li>
+	<li class="cat-item cat-item-4">
+<a href="/category/testing/">Testing</a> (167)
+<ul class="children">
+	<li class="cat-item cat-item-59">
+<a href="/category/testing/contracts/">Contracts</a> (2)
+</li>
+	<li class="cat-item cat-item-63">
+<a href="/category/testing/epistemology/">Epistemology</a> (1)
+</li>
+	<li class="cat-item cat-item-67">
+<a href="/category/testing/games/">Games</a> (8)
+</li>
+	<li class="cat-item cat-item-68">
+<a href="/category/testing/history-and-science/">History and Science</a> (5)
+</li>
+	<li class="cat-item cat-item-43">
+<a href="/category/testing/modern-testing/">Modern Testing</a> (15)
+</li>
+	<li class="cat-item cat-item-54">
+<a href="/category/testing/testability/">Testability</a> (9)
+</li>
+</ul>
+</li>
+	<li class="cat-item cat-item-12">
+<a href="/category/thinking/">Thinking</a> (22)
+</li>
+	<li class="cat-item cat-item-47">
+<a href="/category/what-if/">What If</a> (1)
+</li>
+	<li class="cat-item cat-item-69">
+<a href="/category/zmachine/">Z-Machine</a> (7)
+</li>
+			</ul>
+
+			</div>
+<div id="archives-5" class="widget widget_archive">
+<h2 class="widget-title">Archives</h2>		<label class="screen-reader-text" for="archives-dropdown-5">Archives</label>
+		<select id="archives-dropdown-5" name="archive-dropdown">
+			
+			<option value="">Select Month</option>
+				<option value="https://testerstories.com/2023/06/"> June 2023 </option>
+	<option value="https://testerstories.com/2023/05/"> May 2023 </option>
+	<option value="https://testerstories.com/2023/04/"> April 2023 </option>
+	<option value="https://testerstories.com/2023/03/"> March 2023 </option>
+	<option value="https://testerstories.com/2023/02/"> February 2023 </option>
+	<option value="https://testerstories.com/2023/01/"> January 2023 </option>
+	<option value="https://testerstories.com/2022/12/"> December 2022 </option>
+	<option value="https://testerstories.com/2022/11/"> November 2022 </option>
+	<option value="https://testerstories.com/2022/10/"> October 2022 </option>
+	<option value="https://testerstories.com/2022/07/"> July 2022 </option>
+	<option value="https://testerstories.com/2022/06/"> June 2022 </option>
+	<option value="https://testerstories.com/2022/05/"> May 2022 </option>
+	<option value="https://testerstories.com/2022/03/"> March 2022 </option>
+	<option value="https://testerstories.com/2022/02/"> February 2022 </option>
+	<option value="https://testerstories.com/2022/01/"> January 2022 </option>
+	<option value="https://testerstories.com/2021/12/"> December 2021 </option>
+	<option value="https://testerstories.com/2021/10/"> October 2021 </option>
+	<option value="https://testerstories.com/2021/08/"> August 2021 </option>
+	<option value="https://testerstories.com/2021/07/"> July 2021 </option>
+	<option value="https://testerstories.com/2021/06/"> June 2021 </option>
+	<option value="https://testerstories.com/2021/05/"> May 2021 </option>
+	<option value="https://testerstories.com/2021/04/"> April 2021 </option>
+	<option value="https://testerstories.com/2021/03/"> March 2021 </option>
+	<option value="https://testerstories.com/2021/02/"> February 2021 </option>
+	<option value="https://testerstories.com/2021/01/"> January 2021 </option>
+	<option value="https://testerstories.com/2020/11/"> November 2020 </option>
+	<option value="https://testerstories.com/2020/10/"> October 2020 </option>
+	<option value="https://testerstories.com/2020/09/"> September 2020 </option>
+	<option value="https://testerstories.com/2020/07/"> July 2020 </option>
+	<option value="https://testerstories.com/2020/06/"> June 2020 </option>
+	<option value="https://testerstories.com/2020/05/"> May 2020 </option>
+	<option value="https://testerstories.com/2020/02/"> February 2020 </option>
+	<option value="https://testerstories.com/2020/01/"> January 2020 </option>
+	<option value="https://testerstories.com/2019/12/"> December 2019 </option>
+	<option value="https://testerstories.com/2019/11/"> November 2019 </option>
+	<option value="https://testerstories.com/2019/10/"> October 2019 </option>
+	<option value="https://testerstories.com/2019/09/"> September 2019 </option>
+	<option value="https://testerstories.com/2019/08/"> August 2019 </option>
+	<option value="https://testerstories.com/2019/07/"> July 2019 </option>
+	<option value="https://testerstories.com/2019/06/"> June 2019 </option>
+	<option value="https://testerstories.com/2019/05/"> May 2019 </option>
+	<option value="https://testerstories.com/2019/04/"> April 2019 </option>
+	<option value="https://testerstories.com/2019/03/"> March 2019 </option>
+	<option value="https://testerstories.com/2019/02/"> February 2019 </option>
+	<option value="https://testerstories.com/2019/01/"> January 2019 </option>
+	<option value="https://testerstories.com/2018/12/"> December 2018 </option>
+	<option value="https://testerstories.com/2018/11/"> November 2018 </option>
+	<option value="https://testerstories.com/2018/10/"> October 2018 </option>
+	<option value="https://testerstories.com/2018/09/"> September 2018 </option>
+	<option value="https://testerstories.com/2018/08/"> August 2018 </option>
+	<option value="https://testerstories.com/2018/07/"> July 2018 </option>
+	<option value="https://testerstories.com/2018/06/"> June 2018 </option>
+	<option value="https://testerstories.com/2018/05/"> May 2018 </option>
+	<option value="https://testerstories.com/2018/04/"> April 2018 </option>
+	<option value="https://testerstories.com/2018/03/"> March 2018 </option>
+	<option value="https://testerstories.com/2018/02/"> February 2018 </option>
+	<option value="https://testerstories.com/2018/01/"> January 2018 </option>
+	<option value="https://testerstories.com/2017/12/"> December 2017 </option>
+	<option value="https://testerstories.com/2017/11/"> November 2017 </option>
+	<option value="https://testerstories.com/2017/10/"> October 2017 </option>
+	<option value="https://testerstories.com/2017/09/"> September 2017 </option>
+	<option value="https://testerstories.com/2017/08/"> August 2017 </option>
+	<option value="https://testerstories.com/2017/07/"> July 2017 </option>
+	<option value="https://testerstories.com/2017/06/"> June 2017 </option>
+	<option value="https://testerstories.com/2017/05/"> May 2017 </option>
+	<option value="https://testerstories.com/2017/04/"> April 2017 </option>
+	<option value="https://testerstories.com/2017/03/"> March 2017 </option>
+	<option value="https://testerstories.com/2017/02/"> February 2017 </option>
+	<option value="https://testerstories.com/2017/01/"> January 2017 </option>
+	<option value="https://testerstories.com/2016/12/"> December 2016 </option>
+	<option value="https://testerstories.com/2016/11/"> November 2016 </option>
+	<option value="https://testerstories.com/2016/10/"> October 2016 </option>
+	<option value="https://testerstories.com/2016/09/"> September 2016 </option>
+	<option value="https://testerstories.com/2016/08/"> August 2016 </option>
+	<option value="https://testerstories.com/2016/07/"> July 2016 </option>
+	<option value="https://testerstories.com/2016/06/"> June 2016 </option>
+	<option value="https://testerstories.com/2016/04/"> April 2016 </option>
+	<option value="https://testerstories.com/2016/03/"> March 2016 </option>
+	<option value="https://testerstories.com/2016/02/"> February 2016 </option>
+	<option value="https://testerstories.com/2016/01/"> January 2016 </option>
+	<option value="https://testerstories.com/2015/12/"> December 2015 </option>
+	<option value="https://testerstories.com/2015/11/"> November 2015 </option>
+	<option value="https://testerstories.com/2015/10/"> October 2015 </option>
+	<option value="https://testerstories.com/2015/09/"> September 2015 </option>
+	<option value="https://testerstories.com/2015/08/"> August 2015 </option>
+	<option value="https://testerstories.com/2015/07/"> July 2015 </option>
+	<option value="https://testerstories.com/2015/06/"> June 2015 </option>
+	<option value="https://testerstories.com/2015/05/"> May 2015 </option>
+	<option value="https://testerstories.com/2015/04/"> April 2015 </option>
+	<option value="https://testerstories.com/2015/03/"> March 2015 </option>
+	<option value="https://testerstories.com/2015/02/"> February 2015 </option>
+	<option value="https://testerstories.com/2014/12/"> December 2014 </option>
+	<option value="https://testerstories.com/2014/11/"> November 2014 </option>
+	<option value="https://testerstories.com/2014/10/"> October 2014 </option>
+	<option value="https://testerstories.com/2014/09/"> September 2014 </option>
+	<option value="https://testerstories.com/2014/08/"> August 2014 </option>
+	<option value="https://testerstories.com/2014/07/"> July 2014 </option>
+	<option value="https://testerstories.com/2014/06/"> June 2014 </option>
+	<option value="https://testerstories.com/2014/05/"> May 2014 </option>
+	<option value="https://testerstories.com/2014/04/"> April 2014 </option>
+	<option value="https://testerstories.com/2014/03/"> March 2014 </option>
+	<option value="https://testerstories.com/2014/01/"> January 2014 </option>
+	<option value="https://testerstories.com/2013/12/"> December 2013 </option>
+	<option value="https://testerstories.com/2013/09/"> September 2013 </option>
+	<option value="https://testerstories.com/2013/08/"> August 2013 </option>
+	<option value="https://testerstories.com/2013/07/"> July 2013 </option>
+	<option value="https://testerstories.com/2013/06/"> June 2013 </option>
+	<option value="https://testerstories.com/2013/05/"> May 2013 </option>
+	<option value="https://testerstories.com/2013/03/"> March 2013 </option>
+	<option value="https://testerstories.com/2013/01/"> January 2013 </option>
+	<option value="https://testerstories.com/2012/12/"> December 2012 </option>
+	<option value="https://testerstories.com/2012/10/"> October 2012 </option>
+	<option value="https://testerstories.com/2012/09/"> September 2012 </option>
+	<option value="https://testerstories.com/2012/08/"> August 2012 </option>
+	<option value="https://testerstories.com/2012/07/"> July 2012 </option>
+	<option value="https://testerstories.com/2012/06/"> June 2012 </option>
+	<option value="https://testerstories.com/2012/05/"> May 2012 </option>
+	<option value="https://testerstories.com/2012/04/"> April 2012 </option>
+	<option value="https://testerstories.com/2012/03/"> March 2012 </option>
+	<option value="https://testerstories.com/2012/02/"> February 2012 </option>
+	<option value="https://testerstories.com/2012/01/"> January 2012 </option>
+	<option value="https://testerstories.com/2011/12/"> December 2011 </option>
+	<option value="https://testerstories.com/2011/11/"> November 2011 </option>
+	<option value="https://testerstories.com/2011/10/"> October 2011 </option>
+	<option value="https://testerstories.com/2011/09/"> September 2011 </option>
+	<option value="https://testerstories.com/2011/08/"> August 2011 </option>
+
+		</select>
+
+<script type="text/javascript">
+/* <![CDATA[ */
+(function() {
+	var dropdown = document.getElementById( "archives-dropdown-5" );
+	function onSelectChange() {
+		if ( dropdown.options[ dropdown.selectedIndex ].value !== '' ) {
+			document.location.href = this.options[ this.selectedIndex ].value;
+		}
+	}
+	dropdown.onchange = onSelectChange;
+})();
+/* ]]> */
+</script>
+			</div>
+<div id="meta-5" class="widget widget_meta">
+<h2 class="widget-title">Site</h2>
+		<ul>
+						<li><a href="/wp-login.php">Log in</a></li>
+			<li><a href="/feed/">Entries feed</a></li>
+			<li><a href="/comments/feed/">Comments feed</a></li>
+
+			<li><a href="https://wordpress.org/">WordPress.org</a></li>
+		</ul>
+
+		</div>
+<div id="text-4" class="widget widget_text">			<div class="textwidget"><a href="https://www.linkedin.com/pub/jeff-nyman/12/b32/16a">
+          <img src="https://static.licdn.com/scds/common/u/img/webpromo/btn_myprofile_160x33.png" width="160" height="33" border="0" alt="View Jeff Nyman's profile on LinkedIn"></a></div>
+		</div>
+<div id="search-3" class="widget widget_search">
+<form role="search" method="get" class="search-form" action="https://testerstories.com/">
+	<label>
+		<span class="screen-reader-text">Search for:</span>
+		<input type="search" class="search-field" placeholder="Search &hellip;" value="" name="s" title="Search for:">
+	</label>
+	<button type="submit" class="search-submit"><span class="genericon genericon-search" aria-hidden="true"></span><span class="screen-reader-text">Search</span></button>
+</form>
+</div>		</section><!-- #sidebar .widget-area -->
+
+	</aside>
+
+  
+
+<footer id="page-footer" role="contentinfo">
+	<div id="site-info" class="site-info">
+		<span class="footer-site-title"><a href="/" rel="home">Stories from a Software Tester</a></span>
+		<a href="https://wordpress.org/">Proudly powered by WordPress</a>
+	</div>
+<!--/site-info-->
+</footer> <!--/footer-->
+</div>
+<!-- #container -->
+            
+            <style type="text/css" class="darkmysite_inline_css">#darkmysite_switch_293394925 {
+        --darkmysite_switch_apple_width_height: 60px;
+        --darkmysite_switch_apple_border_radius: 7px;
+        --darkmysite_switch_apple_icon_width: 30px;
+        --darkmysite_switch_apple_light_mode_bg: #121116;
+        --darkmysite_switch_apple_dark_mode_bg: #ffffff;
+        --darkmysite_switch_apple_light_mode_icon_color: #ffffff;
+        --darkmysite_switch_apple_dark_mode_icon_color: #121116;
+        }
+
+    #darkmysite_switch_293394925 {
+        --darkmysite_switch_margin_from_top: 40px;
+        --darkmysite_switch_margin_from_bottom: 40px;
+        --darkmysite_switch_margin_from_left: 40px;
+        --darkmysite_switch_margin_from_right: 40px;
+        }</style>
+
+
+
+
+    <div id="darkmysite_switch_293394925" class="darkmysite_switch  darkmysite_bottom_right   darkmysite_switch_apple" onclick="darkmysite_switch_trigger()">
+        <span class="darkmysite_switch_icon"></span>
+            </div>
+
+            
+    <script type="text/javascript" class="darkmysite_inline_js">document.addEventListener("DOMContentLoaded", function(event) {
+            darkmysite_init_alternative_dark_mode_switch();
+        });</script>
+
+
+<script type="text/javascript" id="acuarela-script-js-extra">
+/* <![CDATA[ */
+var acuarelaScreenReaderText = {"expand":"expand child menu","collapse":"collapse child menu"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="/wp-content/themes/acuarela/js/functions.js?ver=20190802" id="acuarela-script-js"></script>
+<script type="text/javascript" src="/wp-includes/js/comment-reply.min.js?ver=6.2.2" id="comment-reply-js"></script>
+<script defer type="text/javascript" src="/wp-content/plugins/akismet/_inc/akismet-frontend.js?ver=1680871091" id="akismet-frontend-js"></script>
+</body>
+</html>
