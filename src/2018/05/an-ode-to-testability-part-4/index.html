@@ -1,0 +1,2278 @@
+<!DOCTYPE html>
+<html lang="en-US">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="profile" href="http://gmpg.org/xfn/11">
+				<link rel="pingback" href="/xmlrpc.php">
+				<title>An Ode to Testability, Part 4 &#8211; Stories from a Software Tester</title>
+<meta name="robots" content="max-image-preview:large">
+ <style type="text/css" class="darkmysite_inline_css">:root { --darkmysite_dark_mode_bg: #0f0f0f; --darkmysite_dark_mode_secondary_bg: #171717; --darkmysite_dark_mode_text_color: #bebebe; --darkmysite_dark_mode_link_color: #ffffff; --darkmysite_dark_mode_link_hover_color: #cccccc; --darkmysite_dark_mode_input_bg: #2d2d2d; --darkmysite_dark_mode_input_text_color: #bebebe; --darkmysite_dark_mode_input_placeholder_color: #989898; --darkmysite_dark_mode_border_color: #4a4a4a; --darkmysite_dark_mode_btn_bg: #2d2d2d; --darkmysite_dark_mode_btn_text_color: #bebebe; }</style> <style type="text/css" class="darkmysite_inline_css">.darkmysite_dark_mode_enabled::-webkit-scrollbar { background: #29292a !important; } .darkmysite_dark_mode_enabled::-webkit-scrollbar-track { background: #29292a !important; } .darkmysite_dark_mode_enabled::-webkit-scrollbar-thumb { background-color: #52565a !important; } .darkmysite_dark_mode_enabled::-webkit-scrollbar-corner { background-color: #52565a !important; } .darkmysite_dark_mode_enabled::-webkit-scrollbar-button { background-color: transparent !important; background-repeat: no-repeat !important; background-size: contain !important; background-position: center !important; } .darkmysite_dark_mode_enabled::-webkit-scrollbar-button:start { background-image: url(/wp-content/plugins/darkmysite/assets/img/others/scroll_arrow_up.svg) !important; } .darkmysite_dark_mode_enabled::-webkit-scrollbar-button:end { background-image: url(/wp-content/plugins/darkmysite/assets/img/others/scroll_arrow_down.svg) !important; } .darkmysite_dark_mode_enabled::-webkit-scrollbar-button:start:horizontal { background-image: url(/wp-content/plugins/darkmysite/assets/img/others/scroll_arrow_left.svg) !important; } .darkmysite_dark_mode_enabled::-webkit-scrollbar-button:end:horizontal { background-image: url(/wp-content/plugins/darkmysite/assets/img/others/scroll_arrow_right.svg) !important; }</style> <script type="text/javascript" class="darkmysite_inline_js">var darkmysite_switch_unique_id = "881878813"; var darkmysite_is_this_admin_panel = "0"; var darkmysite_enable_default_dark_mode = "0"; var darkmysite_enable_os_aware = "1"; var darkmysite_enable_keyboard_shortcut = "1"; var darkmysite_enable_time_based_dark = "0"; var darkmysite_time_based_dark_start = "19:00"; var darkmysite_time_based_dark_stop = "07:00"; var darkmysite_alternative_dark_mode_switch = ""; var darkmysite_enable_low_image_brightness = "1"; var darkmysite_image_brightness_to = "80"; var darkmysite_enable_image_grayscale = "0"; var darkmysite_image_grayscale_to = "80"; var darkmysite_enable_bg_image_darken = "1"; var darkmysite_bg_image_darken_to = "60"; var darkmysite_enable_invert_inline_svg = "0"; var darkmysite_enable_low_video_brightness = "1"; var darkmysite_video_brightness_to = "80"; var darkmysite_enable_video_grayscale = "0"; var darkmysite_video_grayscale_to = "80"; var darkmysite_disallowed_elements = ".darkmysite_ignore, .darkmysite_ignore *, .darkmysite_switch, .darkmysite_switch *, .wp-block-button__link, .wp-block-button__link *";</script><link rel="dns-prefetch" href="//static.addtoany.com">
+<link rel="dns-prefetch" href="//fonts.googleapis.com">
+<link rel="alternate" type="application/rss+xml" title="Stories from a Software Tester &raquo; Feed" href="/feed/">
+<link rel="alternate" type="application/rss+xml" title="Stories from a Software Tester &raquo; Comments Feed" href="/comments/feed/">
+<link rel="alternate" type="application/rss+xml" title="Stories from a Software Tester &raquo; An Ode to Testability, Part 4 Comments Feed" href="/2018/05/an-ode-to-testability-part-4/feed/">
+<script type="text/javascript">
+window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/14.0.0\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/14.0.0\/svg\/","svgExt":".svg","source":{"concatemoji":"\/wp-includes\/js\/wp-emoji-release.min.js?ver=6.2.2"}};
+/*! This file is auto-generated */
+!function(e,a,t){var n,r,o,i=a.createElement("canvas"),p=i.getContext&&i.getContext("2d");function s(e,t){p.clearRect(0,0,i.width,i.height),p.fillText(e,0,0);e=i.toDataURL();return p.clearRect(0,0,i.width,i.height),p.fillText(t,0,0),e===i.toDataURL()}function c(e){var t=a.createElement("script");t.src=e,t.defer=t.type="text/javascript",a.getElementsByTagName("head")[0].appendChild(t)}for(o=Array("flag","emoji"),t.supports={everything:!0,everythingExceptFlag:!0},r=0;r<o.length;r++)t.supports[o[r]]=function(e){if(p&&p.fillText)switch(p.textBaseline="top",p.font="600 32px Arial",e){case"flag":return s("🏳️‍⚧️","🏳️​⚧️")?!1:!s("🇺🇳","🇺​🇳")&&!s("🏴󠁧󠁢󠁥󠁮󠁧󠁿","🏴​󠁧​󠁢​󠁥​󠁮​󠁧​󠁿");case"emoji":return!s("🫱🏻‍🫲🏿","🫱🏻​🫲🏿")}return!1}(o[r]),t.supports.everything=t.supports.everything&&t.supports[o[r]],"flag"!==o[r]&&(t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&t.supports[o[r]]);t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&!t.supports.flag,t.DOMReady=!1,t.readyCallback=function(){t.DOMReady=!0},t.supports.everything||(n=function(){t.readyCallback()},a.addEventListener?(a.addEventListener("DOMContentLoaded",n,!1),e.addEventListener("load",n,!1)):(e.attachEvent("onload",n),a.attachEvent("onreadystatechange",function(){"complete"===a.readyState&&t.readyCallback()})),(e=t.source||{}).concatemoji?c(e.concatemoji):e.wpemoji&&e.twemoji&&(c(e.twemoji),c(e.wpemoji)))}(window,document,window._wpemojiSettings);
+</script>
+<style type="text/css">img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 0.07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}</style>
+	<link rel="stylesheet" id="urvanov_syntax_highlighter-css" href="/wp-content/plugins/urvanov-syntax-highlighter/css/min/urvanov_syntax_highlighter.min.css?ver=2.8.33" type="text/css" media="all">
+<link rel="stylesheet" id="crayon-theme-classic-css" href="/wp-content/plugins/urvanov-syntax-highlighter/themes/classic/classic.css?ver=2.8.33" type="text/css" media="all">
+<link rel="stylesheet" id="crayon-font-monaco-css" href="/wp-content/plugins/urvanov-syntax-highlighter/fonts/monaco.css?ver=2.8.33" type="text/css" media="all">
+<link rel="stylesheet" id="wp-block-library-css" href="/wp-includes/css/dist/block-library/style.min.css?ver=6.2.2" type="text/css" media="all">
+<style id="wp-block-library-theme-inline-css" type="text/css">.wp-block-audio figcaption{color:#555;font-size:13px;text-align:center}.is-dark-theme .wp-block-audio figcaption{color:hsla(0,0%,100%,.65)}.wp-block-audio{margin:0 0 1em}.wp-block-code{border:1px solid #ccc;border-radius:4px;font-family:Menlo,Consolas,monaco,monospace;padding:.8em 1em}.wp-block-embed figcaption{color:#555;font-size:13px;text-align:center}.is-dark-theme .wp-block-embed figcaption{color:hsla(0,0%,100%,.65)}.wp-block-embed{margin:0 0 1em}.blocks-gallery-caption{color:#555;font-size:13px;text-align:center}.is-dark-theme .blocks-gallery-caption{color:hsla(0,0%,100%,.65)}.wp-block-image figcaption{color:#555;font-size:13px;text-align:center}.is-dark-theme .wp-block-image figcaption{color:hsla(0,0%,100%,.65)}.wp-block-image{margin:0 0 1em}.wp-block-pullquote{border-bottom:4px solid;border-top:4px solid;color:currentColor;margin-bottom:1.75em}.wp-block-pullquote cite,.wp-block-pullquote footer,.wp-block-pullquote__citation{color:currentColor;font-size:.8125em;font-style:normal;text-transform:uppercase}.wp-block-quote{border-left:.25em solid;margin:0 0 1.75em;padding-left:1em}.wp-block-quote cite,.wp-block-quote footer{color:currentColor;font-size:.8125em;font-style:normal;position:relative}.wp-block-quote.has-text-align-right{border-left:none;border-right:.25em solid;padding-left:0;padding-right:1em}.wp-block-quote.has-text-align-center{border:none;padding-left:0}.wp-block-quote.is-large,.wp-block-quote.is-style-large,.wp-block-quote.is-style-plain{border:none}.wp-block-search .wp-block-search__label{font-weight:700}.wp-block-search__button{border:1px solid #ccc;padding:.375em .625em}:where(.wp-block-group.has-background){padding:1.25em 2.375em}.wp-block-separator.has-css-opacity{opacity:.4}.wp-block-separator{border:none;border-bottom:2px solid;margin-left:auto;margin-right:auto}.wp-block-separator.has-alpha-channel-opacity{opacity:1}.wp-block-separator:not(.is-style-wide):not(.is-style-dots){width:100px}.wp-block-separator.has-background:not(.is-style-dots){border-bottom:none;height:1px}.wp-block-separator.has-background:not(.is-style-wide):not(.is-style-dots){height:2px}.wp-block-table{margin:0 0 1em}.wp-block-table td,.wp-block-table th{word-break:normal}.wp-block-table figcaption{color:#555;font-size:13px;text-align:center}.is-dark-theme .wp-block-table figcaption{color:hsla(0,0%,100%,.65)}.wp-block-video figcaption{color:#555;font-size:13px;text-align:center}.is-dark-theme .wp-block-video figcaption{color:hsla(0,0%,100%,.65)}.wp-block-video{margin:0 0 1em}.wp-block-template-part.has-background{margin-bottom:0;margin-top:0;padding:1.25em 2.375em}</style>
+<link rel="stylesheet" id="classic-theme-styles-css" href="/wp-includes/css/classic-themes.min.css?ver=6.2.2" type="text/css" media="all">
+<style id="global-styles-inline-css" type="text/css">body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgba(6,147,227,1) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgba(252,185,0,1) 0%,rgba(255,105,0,1) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgba(255,105,0,1) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--duotone--dark-grayscale: url('#wp-duotone-dark-grayscale');--wp--preset--duotone--grayscale: url('#wp-duotone-grayscale');--wp--preset--duotone--purple-yellow: url('#wp-duotone-purple-yellow');--wp--preset--duotone--blue-red: url('#wp-duotone-blue-red');--wp--preset--duotone--midnight: url('#wp-duotone-midnight');--wp--preset--duotone--magenta-yellow: url('#wp-duotone-magenta-yellow');--wp--preset--duotone--purple-green: url('#wp-duotone-purple-green');--wp--preset--duotone--blue-orange: url('#wp-duotone-blue-orange');--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;--wp--preset--spacing--20: 0.44rem;--wp--preset--spacing--30: 0.67rem;--wp--preset--spacing--40: 1rem;--wp--preset--spacing--50: 1.5rem;--wp--preset--spacing--60: 2.25rem;--wp--preset--spacing--70: 3.38rem;--wp--preset--spacing--80: 5.06rem;--wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);--wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);--wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);--wp--preset--shadow--outlined: 6px 6px 0px -3px rgba(255, 255, 255, 1), 6px 6px rgba(0, 0, 0, 1);--wp--preset--shadow--crisp: 6px 6px 0px rgba(0, 0, 0, 1);}:where(.is-layout-flex){gap: 0.5em;}body .is-layout-flow > .alignleft{float: left;margin-inline-start: 0;margin-inline-end: 2em;}body .is-layout-flow > .alignright{float: right;margin-inline-start: 2em;margin-inline-end: 0;}body .is-layout-flow > .aligncenter{margin-left: auto !important;margin-right: auto !important;}body .is-layout-constrained > .alignleft{float: left;margin-inline-start: 0;margin-inline-end: 2em;}body .is-layout-constrained > .alignright{float: right;margin-inline-start: 2em;margin-inline-end: 0;}body .is-layout-constrained > .aligncenter{margin-left: auto !important;margin-right: auto !important;}body .is-layout-constrained > :where(:not(.alignleft):not(.alignright):not(.alignfull)){max-width: var(--wp--style--global--content-size);margin-left: auto !important;margin-right: auto !important;}body .is-layout-constrained > .alignwide{max-width: var(--wp--style--global--wide-size);}body .is-layout-flex{display: flex;}body .is-layout-flex{flex-wrap: wrap;align-items: center;}body .is-layout-flex > *{margin: 0;}:where(.wp-block-columns.is-layout-flex){gap: 2em;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
+.wp-block-navigation a:where(:not(.wp-element-button)){color: inherit;}
+:where(.wp-block-columns.is-layout-flex){gap: 2em;}
+.wp-block-pullquote{font-size: 1.5em;line-height: 1.6;}</style>
+<link rel="stylesheet" id="darkmysite-client-main-css" href="/wp-content/plugins/darkmysite/assets/css/client_main.css?ver=1.2.6" type="text/css" media="all">
+<link rel="stylesheet" id="plyr-css-css" href="/wp-content/plugins/easy-video-player/lib/plyr.css?ver=6.2.2" type="text/css" media="all">
+<link rel="stylesheet" id="acuarela-fonts-css" href="https://fonts.googleapis.com/css?family=Lato%3A300italic%2C400italic%2C700italic%2C300%2C400%2C700%7CArima+Madurai%3A700%2C800%7CInconsolata%3A400%2C700&#038;subset=latin%2Clatin-ext&#038;ver=20190802" type="text/css" media="all">
+<link rel="stylesheet" id="genericons-css" href="/wp-content/themes/acuarela/genericons/genericons.css?ver=3.4.1" type="text/css" media="all">
+<link rel="stylesheet" id="animate-css" href="/wp-content/themes/acuarela/css/animate.css?ver=3.7.2" type="text/css" media="all">
+<link rel="stylesheet" id="acuarela-style-css" href="/wp-content/themes/acuarela/style.css?ver=6.2.2" type="text/css" media="all">
+<link rel="stylesheet" id="addtoany-css" href="/wp-content/plugins/add-to-any/addtoany.min.css?ver=1.16" type="text/css" media="all">
+<script type="text/javascript" src="/wp-includes/js/jquery/jquery.min.js?ver=3.6.4" id="jquery-core-js"></script>
+<script type="text/javascript" src="/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.4.0" id="jquery-migrate-js"></script>
+<script type="text/javascript" id="urvanov_syntax_highlighter_js-js-extra">
+/* <![CDATA[ */
+var UrvanovSyntaxHighlighterSyntaxSettings = {"version":"2.8.33","is_admin":"0","ajaxurl":"\/wp-admin\/admin-ajax.php","prefix":"urvanov-syntax-highlighter-","setting":"urvanov-syntax-highlighter-setting","selected":"urvanov-syntax-highlighter-setting-selected","changed":"urvanov-syntax-highlighter-setting-changed","special":"urvanov-syntax-highlighter-setting-special","orig_value":"data-orig-value","debug":""};
+var UrvanovSyntaxHighlighterSyntaxStrings = {"copy":"Copied to the clipboard","minimize":"Click To Expand Code"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="/wp-content/plugins/urvanov-syntax-highlighter/js/min/urvanov_syntax_highlighter.min.js?ver=2.8.33" id="urvanov_syntax_highlighter_js-js"></script>
+<script type="text/javascript" id="addtoany-core-js-before">window.a2a_config=window.a2a_config||{};a2a_config.callbacks=[];a2a_config.overlays=[];a2a_config.templates={};</script>
+<script type="text/javascript" async src="https://static.addtoany.com/menu/page.js" id="addtoany-core-js"></script>
+<script type="text/javascript" async src="/wp-content/plugins/add-to-any/addtoany.min.js?ver=1.1" id="addtoany-jquery-js"></script>
+<script type="text/javascript" src="/wp-content/plugins/darkmysite/assets/js/client_main.js?ver=1.2.6" id="darkmysite-client-main-js"></script>
+<script type="text/javascript" id="plyr-js-js-extra">
+/* <![CDATA[ */
+var easy_video_player = {"plyr_iconUrl":"\/wp-content\/plugins\/easy-video-player\/lib\/plyr.svg","plyr_blankVideo":"\/wp-content\/plugins\/easy-video-player\/lib\/blank.mp4"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="/wp-content/plugins/easy-video-player/lib/plyr.js?ver=6.2.2" id="plyr-js-js"></script>
+<link rel="https://api.w.org/" href="/wp-json/">
+<link rel="alternate" type="application/json" href="/wp-json/wp/v2/posts/3436">
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="/xmlrpc.php?rsd">
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="/wp-includes/wlwmanifest.xml">
+<meta name="generator" content="WordPress 6.2.2">
+<link rel="canonical" href="/2018/05/an-ode-to-testability-part-4/">
+<link rel="shortlink" href="/?p=3436">
+<link rel="alternate" type="application/json+oembed" href="/wp-json/oembed/1.0/embed?url=https%3A%2F%2F%2F2018%2F05%2Fan-ode-to-testability-part-4%2F">
+<link rel="alternate" type="text/xml+oembed" href="/wp-json/oembed/1.0/embed?url=https%3A%2F%2F%2F2018%2F05%2Fan-ode-to-testability-part-4%2F#038;format=xml">
+<link type="text/css" rel="stylesheet" href="/wp-content/plugins/category-specific-rss-feed-menu/wp_cat_rss_style.css">
+<!--Custom Styling-->
+<style media="screen" type="text/css">.site-description { color: #222222}
+.site-title, .entry-title, .post-title, .widget-title, .posts-navigation .nav-links { font-family: Arima Madurai}
+ body { font-family: Lato}</style>
+	<style id="acuarela-header-css" type="text/css"></style>
+<style type="text/css" id="custom-background-css">body.custom-background { background-image: url("/wp-content/uploads/2020/10/low_contrast_linen.png"); background-position: left top; background-size: cover; background-repeat: no-repeat; background-attachment: fixed; }</style>
+			<style type="text/css" id="wp-custom-css">@font-face {
+  font-family: "Open Sans";
+  font-weight: 400;
+  font-style: normal;
+  src: local("Open Sans Regular"), local("OpenSans-Regular"), url("/fonts/OpenSans-Regular.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Open Sans Bold";
+  font-weight: 700;
+  font-style: normal;
+  src: local("Open Sans Bold"), local("OpenSans-Bold"), url("/fonts/OpenSans-Bold.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Open Sans Italic";
+  font-weight: 400;
+  font-style: normal;
+  src: local("Open Sans Italic"), local("OpenSans-Italic"), url("/fonts/OpenSans-Italic.woff") format("woff");
+}
+
+:root{
+	--primary: #01408e;
+	--secondary: #3c5d5c;
+	--initialLine: #ad2271;
+	--drop: #903;
+	--paraIndent: 1.25em;
+	--note: #4d5b7c;
+	--bq-color: #555555;
+	--bq-back: #ededed;
+	--sans: "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+	--mono: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
+    "Courier New", monospace;
+}
+/* For the top menu bar. */
+.site-navigation a {
+	padding: 0.9em 1.5em;
+}
+
+:where(html, body) {
+	overscroll-behavior-y: none;
+	cursor: url("/cursors/default.cur"), auto;
+}
+
+:where(p, h1, h2, h3, h4, h5, h6, blockquote, figcaption) {
+	cursor: url("/cursors/text-select.cur"), auto;
+}
+
+:where(ul, ol) {
+	margin: 1em 1em;
+	text-align: justify;
+	text-justify: inter-word;
+	cursor: url("/cursors/text-select.cur"), auto;
+}
+
+:where(aside, article) a {
+	cursor: url("/cursors/link-select.cur"), auto;
+}
+
+select, button, input,
+.wp-element-button,
+.darkmysite_switch,
+.site-title,
+.site-description {
+	cursor: url("/cursors/link-select.cur"), auto;
+}
+
+::selection {
+  color: #fff;
+  background: rgba(0, 0, 0, 0.99);
+}
+
+main,
+header {
+	font-size: 1rem;
+}
+
+main {
+	/*From here: https://fluidtypography.com/#app-get-started*/
+	/* Settings: 414-1280; 16-20; 1.6-1.3*/
+	font-size: clamp(1rem, 0.462vw + 0.88rem, 1.25rem);
+line-height: clamp(1.6rem, 0.046vw + 1.588rem, 1.625rem);
+}
+
+article {
+	font-family: var(--sans);
+	line-height: 1.6;
+  word-spacing: 0.16em;
+}
+
+h1:not(.site-title) {
+  font-size: 2.5em;
+  margin: 0.67em 0;
+  text-align: center;
+}
+
+:where(h1, h2, h3, h4) {
+	text-rendering: optimizeLegibility;
+	line-height: 1.4em;
+}
+
+article :where(h2, h3) {
+	margin-bottom: 0.7em;
+}
+
+p {
+	font-size: 1.2em;
+	text-align: justify;
+	text-justify: inter-word;
+}
+
+p:first-of-type:first-line {
+	color: var(--initialLine);
+}
+
+li {
+  margin-bottom: 0.5em;
+}
+
+/* This makes sure the first line of blockquotes are not colored since in Wordpress, a blockquote content has a paragraph tag applied to it. */
+:where(blockquote, footer, .comments-area) p:first-of-type:first-line {
+	color: inherit;
+}
+:where(p, blockquote, img, pre, ul, ol) + p:not(.note) {
+  text-indent: var(--paraIndent);
+}
+section > h3 + p::first-letter,
+section > h2 + p::first-letter,
+div.entry-content > p:not(.nostyle):first-child::first-letter {
+	color: var(--drop);
+  border-left: 2px solid var(--drop);
+  border-top: 2px solid var(--drop);
+  float: left;
+  font-family: Georgia;
+  font-size: 65px;
+  line-height: 60px;
+  padding-top: 4px;
+  padding-right: 12px;
+  padding-left: 3px;
+}
+
+:where(aside, article) a {
+	color: var(--primary);
+	text-underline-position: under;
+	text-decoration: underline 2px;
+	transition: all 0.3s linear;
+  background: linear-gradient(to right, #00d1b1 0%, #278fc6 98%);
+  background-size: 0px 2px;
+  background-repeat: no-repeat;
+  background-position: left 10%;
+  text-shadow: 0;
+}
+
+article a:hover {
+  background-size: 100% 2px;
+  color: var(--secondary);
+}
+
+article a:focus {
+  color: var(--secondary);
+}
+
+/* Handling external links to show an icon after them, but excluding links that are part of the TesterStories site. */
+
+a[href*="http"]::after,
+a[href*="https"]::after {
+  content: "";
+  width: 16px;
+  height: 16px;
+  margin-left: 4px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='currentColor' viewBox='0 0 16 16'%3E%3Cpath fill-rule='evenodd' d='M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5z'/%3E%3Cpath fill-rule='evenodd' d='M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0v-5z'/%3E%3C/svg%3E");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  display: inline-block;
+}
+
+a[href^="https://www.linkedin.com/"]::after {
+  content: none;
+}
+
+a[href^="https://testerstories.com/"]::after {
+  display: none !important;
+}
+
+img.framed {
+  --b: 10px;
+  margin: 0 auto;
+  padding: var(--b);
+  border: calc(2 * var(--b)) solid #0000;
+  border-radius: 25px;
+  outline: 1px solid #000;
+  outline-offset: calc(-1 * var(--b));
+  background: conic-gradient(from 90deg at 1px 1px, #0000 90deg, #000 0);
+}
+
+img.backframed {
+  margin: 0 auto;
+  border: 3px solid black;
+  box-shadow: -50px -50px 0 -40px #555555, 50px 50px 0 -40px #555555;
+}
+
+.note {
+  border: 1px solid rgb(107, 113, 177);
+  color: var(--note);
+  border-radius: 16px;
+  padding: 0.5em 0.8em;
+  margin: 1.9em;
+}
+
+.post {
+	background-color: white;
+}
+
+.entry-content li {
+	font-size: 1.2em;
+}
+
+.simplequote {
+	background: #fff url(/2018/05/an-ode-to-testability-part-4/images/box_quote.png) no-repeat;
+	padding: 5px;
+	margin-top: 20px; margin-bottom: 20px;
+	margin-left: 50px; margin-right: 50px;
+	border: 3px solid #cecece;
+	text-indent: 25px;
+}
+
+p.example {
+	padding: 1ex;
+	margin-right: 50px; margin-left: 50px;
+	border: .5ex solid #808080;
+	color: #000000;
+	line-height: 1.2;
+	text-indent: 0em;
+}
+
+#headquote blockquote {
+	text-align: left;
+	margin: 0 auto 20px auto;
+	color: #555;
+	background: #eee url(/2018/05/an-ode-to-testability-part-4/images/quote_top.gif) no-repeat top left;
+}
+
+#headquote blockquote {
+	width: 370px;
+	font-size: 110%;
+	letter-spacing: -1px;
+	line-height: 1.2em;
+}
+
+#headquote #quote {
+	margin-left: 40px;
+	padding: 20px 20px 10px 20px;
+	background: url(/2018/05/an-ode-to-testability-part-4/images/quote_bottom.gif) no-repeat right bottom;
+}
+
+#headquote #author {
+	margin: 0;
+	text-align: center;
+	padding: 0 0 10px 0;
+	color: #999;
+	font-size: 95%;
+}
+
+#headquote blockquote strong {
+	color: #000;
+	font-weight: normal;
+}
+
+/* Center images. */
+
+img {
+	display: block;
+  margin: 0 auto;
+}
+
+img.smaller {
+  width: 200px;
+}
+
+img.even-smaller {
+  width: 100px;
+}
+
+table td.code {
+  font-family: "Courier New", courier, monospace;
+  font-size: 11.5px;
+}
+
+p.box {
+	font-family: Georgia, "Times New Roman", Times, serif;
+	text-align: justify;
+	padding-top: 25px;
+	margin: 0;
+	line-height: 1.2;
+}
+
+pre.box {
+	white-space: pre-wrap;
+	background-color: white;
+	border: 1px solid;
+}
+
+p.tip {
+	padding-bottom: 10px; padding-top: 10px;
+	padding-right: 10px; padding-left: 10px;
+	border: 1px solid;
+}
+
+div.aside {
+	padding-bottom: 10px; padding-top: 10px;
+	padding-right: 10px; padding-left: 10px;
+	margin-right: 50px; margin-left: 50px;
+	border: 1px dotted;
+}
+
+div.aside pre {
+	white-space: pre-wrap;
+}
+
+pre.view {
+	font-family: "Courier New", Courier, monospace;
+        //font-size: 16px;
+	padding-bottom: 10px; padding-top: 10px;
+	padding-right: 10px; padding-left: 10px;
+	white-space: pre-wrap;
+	background: rgb(255,255,255); /* Old browsers */
+	background: -moz-linear-gradient(top,  rgba(255,255,255,1) 0%, rgba(229,229,229,1) 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,1)), color-stop(100%,rgba(229,229,229,1))); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(229,229,229,1) 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(229,229,229,1) 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(229,229,229,1) 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  rgba(255,255,255,1) 0%,rgba(229,229,229,1) 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#e5e5e5',GradientType=0 ); /* IE6-9 */
+	border: 1px solid;
+	text-align: justify;
+}
+
+pre.view .string {
+	color: #3366CC;
+}
+
+pre.view .sub {
+        color: #8333FF;
+}
+
+pre.view .comment {
+	color: #009900;
+}
+
+pre.view .highlight {
+	background-color: #FFFF00;
+	border: 1px solid;
+	border-style: dotted;
+}
+
+pre.output .highlight {
+	background-color: rgb(255,255,255);
+	color: red;
+	border: 1px solid;
+	border-style: dotted;
+}
+
+pre.output {
+	font-family: "Courier New", Courier, monospace;
+        //font-size: 16px;
+	padding-bottom: 10px; padding-top: 10px;
+	padding-right: 10px; padding-left: 10px;
+	white-space: pre-wrap;
+	background: black;
+	color: white;
+}
+
+blockquote {
+  position: relative;
+  width: 80%;
+  margin: 50px auto;
+  padding: 1.2em 30px 1.2em 55px;
+  color: var(--bq-color);
+  background-color: var(--bq-back);
+  border-left: 8px solid #78c0a8;
+  text-align: justify;
+}
+
+blockquote::before {
+  position: absolute;
+	left: 5px;
+	top: -10px;
+	/* Line height needed here to avoid the quote appearing out of place due to calculated line heights for the article. */
+	line-height: 1.6;
+	content: "\201C";
+	color: #78c0a8;
+	font-size: 4em;
+}
+
+blockquote::after {
+	content: "";
+}
+
+blockquote span {
+	display: block;
+	color: #333333;
+	font-style: normal;
+  font-weight: bold;
+  margin-top: 1em;
+}
+
+img.frame {
+  --b: 10px;
+  padding: var(--b);
+  border: calc(2 * var(--b)) solid #0000;
+  outline: 1px solid #000;
+  outline-offset: calc(-1 * var(--b));
+  border-radius: 25px;
+  background: conic-gradient(from 90deg at 1px 1px, #0000 90deg, #000 0);
+  display: block;
+  margin: auto;
+  margin-bottom: 1rem;
+}
+
+code {
+  font-size: 0.9em;
+  padding: 0.0625rem 0.5rem;
+  border-radius: 0.125rem;
+  border: 1px solid #d33a2c;
+  box-shadow: 1px 1px #d33a2c, 2px 2px #d33a2c;
+  margin: 0 0.25rem;
+  color: #d33a2c;
+  font-family: monospace;
+}
+
+pre {
+  font-family: var(--mono);
+  max-width: 100%;
+	padding: 0;
+}
+
+pre code {
+  word-spacing: normal;
+  letter-spacing: normal;
+  font-family: var(--mono);
+  padding-left: 10px;
+  color: #e9e9f4;
+  background: #282936;
+  display: block;
+  max-width: 100%;
+  overflow-x: scroll;
+  /*font-size: 0.8em;*/
+
+  border: 1px solid #282936;
+  border-radius: 10px;
+  box-shadow: 1px 1px #282936, 2px 2px #282936;
+}
+
+pre code::-webkit-scrollbar {
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+pre code::-webkit-scrollbar:vertical {
+  width: 11px;
+}
+
+pre code::-webkit-scrollbar:horizontal {
+  height: 11px;
+}
+
+pre code::-webkit-scrollbar-thumb {
+  border-radius: 8px;
+  border: 2px solid white;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+/* The div part is only needed for long-form content that is pre-formatted. */
+
+pre code div {
+	line-height: 1.5em;
+}
+
+/* This would be for prefromatted material that is not literally from a game or simulation but is meant to indicate something about the details of the game or simulation. */
+
+pre p {
+  border: 2px solid grey;
+  border-radius: 5px;
+  padding: 0.8em;
+	padding-top: 0;
+	margin: 0;
+}</style>
+			</head>
+	<body class="post-template-default single single-post postid-3436 single-format-standard custom-background wp-embed-responsive custom-background-image">
+		<svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-dark-grayscale"><fecolormatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></fecolormatrix><fecomponenttransfer color-interpolation-filters="sRGB"><fefuncr type="table" tablevalues="0 0.49803921568627"></fefuncr><fefuncg type="table" tablevalues="0 0.49803921568627"></fefuncg><fefuncb type="table" tablevalues="0 0.49803921568627"></fefuncb><fefunca type="table" tablevalues="1 1"></fefunca></fecomponenttransfer><fecomposite in2="SourceGraphic" operator="in"></fecomposite></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-grayscale"><fecolormatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></fecolormatrix><fecomponenttransfer color-interpolation-filters="sRGB"><fefuncr type="table" tablevalues="0 1"></fefuncr><fefuncg type="table" tablevalues="0 1"></fefuncg><fefuncb type="table" tablevalues="0 1"></fefuncb><fefunca type="table" tablevalues="1 1"></fefunca></fecomponenttransfer><fecomposite in2="SourceGraphic" operator="in"></fecomposite></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-purple-yellow"><fecolormatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></fecolormatrix><fecomponenttransfer color-interpolation-filters="sRGB"><fefuncr type="table" tablevalues="0.54901960784314 0.98823529411765"></fefuncr><fefuncg type="table" tablevalues="0 1"></fefuncg><fefuncb type="table" tablevalues="0.71764705882353 0.25490196078431"></fefuncb><fefunca type="table" tablevalues="1 1"></fefunca></fecomponenttransfer><fecomposite in2="SourceGraphic" operator="in"></fecomposite></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-blue-red"><fecolormatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></fecolormatrix><fecomponenttransfer color-interpolation-filters="sRGB"><fefuncr type="table" tablevalues="0 1"></fefuncr><fefuncg type="table" tablevalues="0 0.27843137254902"></fefuncg><fefuncb type="table" tablevalues="0.5921568627451 0.27843137254902"></fefuncb><fefunca type="table" tablevalues="1 1"></fefunca></fecomponenttransfer><fecomposite in2="SourceGraphic" operator="in"></fecomposite></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-midnight"><fecolormatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></fecolormatrix><fecomponenttransfer color-interpolation-filters="sRGB"><fefuncr type="table" tablevalues="0 0"></fefuncr><fefuncg type="table" tablevalues="0 0.64705882352941"></fefuncg><fefuncb type="table" tablevalues="0 1"></fefuncb><fefunca type="table" tablevalues="1 1"></fefunca></fecomponenttransfer><fecomposite in2="SourceGraphic" operator="in"></fecomposite></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-magenta-yellow"><fecolormatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></fecolormatrix><fecomponenttransfer color-interpolation-filters="sRGB"><fefuncr type="table" tablevalues="0.78039215686275 1"></fefuncr><fefuncg type="table" tablevalues="0 0.94901960784314"></fefuncg><fefuncb type="table" tablevalues="0.35294117647059 0.47058823529412"></fefuncb><fefunca type="table" tablevalues="1 1"></fefunca></fecomponenttransfer><fecomposite in2="SourceGraphic" operator="in"></fecomposite></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-purple-green"><fecolormatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></fecolormatrix><fecomponenttransfer color-interpolation-filters="sRGB"><fefuncr type="table" tablevalues="0.65098039215686 0.40392156862745"></fefuncr><fefuncg type="table" tablevalues="0 1"></fefuncg><fefuncb type="table" tablevalues="0.44705882352941 0.4"></fefuncb><fefunca type="table" tablevalues="1 1"></fefunca></fecomponenttransfer><fecomposite in2="SourceGraphic" operator="in"></fecomposite></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-blue-orange"><fecolormatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></fecolormatrix><fecomponenttransfer color-interpolation-filters="sRGB"><fefuncr type="table" tablevalues="0.098039215686275 1"></fefuncr><fefuncg type="table" tablevalues="0 0.66274509803922"></fefuncg><fefuncb type="table" tablevalues="0.84705882352941 0.41960784313725"></fefuncb><fefunca type="table" tablevalues="1 1"></fefunca></fecomponenttransfer><fecomposite in2="SourceGraphic" operator="in"></fecomposite></filter></defs></svg>		<div id="container" class="site container">
+	<header id="masthead" class="site-header animated fadeInDown" role="banner">
+
+	<a class="screen-reader-text skip-link" href="#main-content">Skip to content</a>
+	<a class="screen-reader-text skip-link" href="#sidebar-widget-area">Skip to sidebar</a>
+	<a class="screen-reader-text skip-link" href="#page-footer">Skip to footer</a>
+	<div id="site-identity" class="site-identity">
+		<a href="/" class="home-link animated fadeIn" title="Stories from a Software Tester" rel="home">
+			<div class="title-description">
+				<h1 class="site-title">Stories from a Software Tester</h1>
+				<h2 class="site-description">Twice upon a time, in another space, no distance in any direction from here &#8230;</h2>
+			</div>
+		</a> 
+
+	</div>
+<!--/site-identity-->
+
+	<nav id="nav-menu" class="site-navigation main-navigation" role="navigation" aria-label="Main Navigation">
+		<button id="nav-button" class="menu-toggle" role="button">
+			<span class="screen-reader-text">Menu</span>
+			<span class="genericon" aria-hidden="true"></span>
+		</button>
+		<ul id="primary-menu" class="primary-menu">
+<li id="menu-item-3923" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-3923"><a href="/">Home</a></li>
+<li id="menu-item-2051" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2051"><a href="/about-tester-stories/">About Tester Stories</a></li>
+<li id="menu-item-2050" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2050"><a href="/who-am-i/">Who Am I</a></li>
+<li id="menu-item-2048" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2048"><a href="/just-for-fun/">Just For Fun</a></li>
+</ul>	</nav><!--/navigation-->
+
+
+<form role="search" method="get" class="search-form" action="https://testerstories.com/">
+	<label>
+		<span class="screen-reader-text">Search for:</span>
+		<input type="search" class="search-field" placeholder="Search &hellip;" value="" name="s" title="Search for:">
+	</label>
+	<button type="submit" class="search-submit"><span class="genericon genericon-search" aria-hidden="true"></span><span class="screen-reader-text">Search</span></button>
+</form>
+</header><!--/header-->
+
+<main id="main-content" class="main-content" role="main">
+<article id="post-3436" class="post-3436 post type-post status-publish format-standard hentry category-testability">
+<header class="entry-header">
+	<span class="entry-meta"><span class="cat-links"><span class="screen-reader-text">Published in</span><span class="genericon genericon-category" aria-hidden="true"></span><a href="/category/testing/testability/" rel="category tag">Testability</a></span></span><h1 class="entry-title">An Ode to Testability, Part 4</h1>	<span class="byline">
+	Written by <a href="/author/administrator/" class="entry-author" rel="author">Jeff Nyman</a>	</span><!-- .byline -->
+	<span class="entry-meta">
+	<span class="genericon genericon-time" aria-hidden="true"></span><a href="/2018/05/02/" rel="bookmark" class="entry-date"><time datetime="2018-05-02T06:35:14-05:00">2 May 2018</time></a>		<span class="comments-link">
+			<span class="genericon genericon-comment" aria-hidden="true"></span>
+			<a href="/2018/05/an-ode-to-testability-part-4/#respond">Leave a comment</a>		</span>
+		</span><!-- .entry-meta -->
+</header><!-- .entry-header -->
+
+	<div class="entry-content">
+		<p>Here we&#8217;ll continue on from the previous posts, getting more and more into aligning correctness of implementation with value for the business. We&#8217;re also going to look a bit at that line where the &#8220;unit test&#8221; starts to shade into an &#8220;integration test&#8221; and thus where a &#8220;programmer test&#8221; might start becoming a &#8220;customer test.&#8221;</p>
+<p><span id="more-3436"></span></p>
+<p>We ended up with a pretty good idea of what the states of the dig site and activities within a dig site are and can be. We left off with a bit of concern regarding how the activities themselves were not really distinguishable. Why is that a concern? Because it seemed to threaten the link between correctness and value.</p>
+<p>Specifically, we need a couple of aspects to be considered about activities. One is a measure <em>of</em> them (a cost), which was brought up by the business team early on in our first post, the other is a measure <em>between</em> them (a duration). What this is doing is getting us to think about the value of activities in terms of how quickly they get finished and what each of them cost.</p>
+<p><strong>Tester!</strong> Any concerns when you hear me bring up a term like &#8220;cost&#8221;?</p>
+<p>What should be of a bit of concern is that the idea of &#8220;cost&#8221; is generic; it can factor in a lot of things. For our context, generally speaking, the higher cost activities may likely be the ones that take the longest. For example, on a dig site this might manifest as the bringing in of heavy machinery to plow the ground as well as removing one level of ground layer at a time. Yet, while that would be a high <em>monetary</em> cost it actually could be a relatively quick cost in terms of <em>time</em>. There&#8217;s also the use of workers to sift through buckets of dirt to find artifacts, including the logging and photographing of artifacts that are in place. These can be relatively cheap in terms of immediate outlay of money but are very slow and thus costly in that sense with time.</p>
+<p>So here we realize that our properties of cost &#8212; monetary and time &#8212; may relate but also may not.</p>
+<p>That bit of context is clearly important and I&#8217;ll come back to more of why that is in a bit.</p>
+<h2>Contexts and Examples</h2>
+<p>What you&#8217;re seeing here is the start of having to think in terms of contexts. In a programmatic sense, we might call these fixtures. But essentially what we need to start thinking about is example-driven development, where we take a context that serves as an example. That example allows us to evolve our ideas and our code. The existence of that example is part of how we know we are thinking in terms of testability.</p>
+<p>For now, let&#8217;s set up a a new block of tests for our DigSite, called &#8220;costs&#8221;. This will be added to the <a href="https://github.com/jeffnyman/benchmarker/blob/v3.0/spec/dig_site_spec.rb">dig_site_spec.rb</a>:</p>
+<p></p>
+<!-- Urvanov Syntax Highlighter v2.8.33 -->
+
+		<div id="urvanov-syntax-highlighter-647f47178e414540913705" class="urvanov-syntax-highlighter-syntax crayon-theme-classic urvanov-syntax-highlighter-font-monaco urvanov-syntax-highlighter-os-pc print-yes notranslate" data-settings=" minimize scroll-mouseover" style="margin-top: 12px; margin-bottom: 12px; font-size: 12px !important; line-height: 15px !important;">
+		
+			<div class="crayon-toolbar" data-settings=" mouseover overlay hide delay" style="font-size: 12px !important;height: 18px !important; line-height: 18px !important;">
+<span class="crayon-title"></span>
+			<div class="crayon-tools" style="font-size: 12px !important;height: 18px !important; line-height: 18px !important;">
+<div class="crayon-button urvanov-syntax-highlighter-nums-button" title="Toggle Line Numbers"><div class="urvanov-syntax-highlighter-button-icon"></div></div>
+<div class="crayon-button urvanov-syntax-highlighter-plain-button" title="Toggle Plain Code"><div class="urvanov-syntax-highlighter-button-icon"></div></div>
+<div class="crayon-button urvanov-syntax-highlighter-wrap-button" title="Toggle Line Wrap"><div class="urvanov-syntax-highlighter-button-icon"></div></div>
+<div class="crayon-button urvanov-syntax-highlighter-expand-button" title="Expand Code"><div class="urvanov-syntax-highlighter-button-icon"></div></div>
+<div class="crayon-button urvanov-syntax-highlighter-copy-button" title="Copy"><div class="urvanov-syntax-highlighter-button-icon"></div></div>
+<div class="crayon-button urvanov-syntax-highlighter-popup-button" title="Open Code In New Window"><div class="urvanov-syntax-highlighter-button-icon"></div></div>
+<span class="crayon-language">Ruby</span>
+</div>
+</div>
+			<div class="crayon-info" style="min-height: 16.8px !important; line-height: 16.8px !important;"></div>
+			<div class="urvanov-syntax-highlighter-plain-wrap"><textarea wrap="soft" class="urvanov-syntax-highlighter-plain print-no" data-settings="dblclick" readonly style="-moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4; font-size: 12px !important; line-height: 15px !important;">
+  describe "costs" do
+    let(:dig) { DigSite.new }
+    let(:finished) { Activity.new(cost: 10, finished: true) }
+    let(:small_unfinished) { Activity.new(cost: 2) }
+    let(:large_unfinished) { Activity.new(cost: 25) }
+
+    before(:example) do
+      dig.activities = [finished, small_unfinished, large_unfinished]
+    end
+  end</textarea></div>
+			<div class="urvanov-syntax-highlighter-main">
+				<table class="crayon-table">
+					<tr class="urvanov-syntax-highlighter-row">
+				<td class="crayon-nums " data-settings="show">
+					<div class="urvanov-syntax-highlighter-nums-content" style="font-size: 12px !important; line-height: 15px !important;">
+<div class="crayon-num" data-line="urvanov-syntax-highlighter-647f47178e414540913705-1">1</div>
+<div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-647f47178e414540913705-2">2</div>
+<div class="crayon-num" data-line="urvanov-syntax-highlighter-647f47178e414540913705-3">3</div>
+<div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-647f47178e414540913705-4">4</div>
+<div class="crayon-num" data-line="urvanov-syntax-highlighter-647f47178e414540913705-5">5</div>
+<div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-647f47178e414540913705-6">6</div>
+<div class="crayon-num" data-line="urvanov-syntax-highlighter-647f47178e414540913705-7">7</div>
+<div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-647f47178e414540913705-8">8</div>
+<div class="crayon-num" data-line="urvanov-syntax-highlighter-647f47178e414540913705-9">9</div>
+<div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-647f47178e414540913705-10">10</div>
+</div>
+				</td>
+						<td class="urvanov-syntax-highlighter-code"><div class="crayon-pre" style="font-size: 12px !important; line-height: 15px !important; -moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4;">
+<div class="crayon-line" id="urvanov-syntax-highlighter-647f47178e414540913705-1">
+<span class="crayon-h">&nbsp;&nbsp;</span><span class="crayon-i">describe</span><span class="crayon-h"> </span><span class="crayon-s">"costs"</span><span class="crayon-h"> </span><span class="crayon-st">do</span>
+</div>
+<div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-647f47178e414540913705-2">
+<span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-e">let</span><span class="crayon-sy">(</span><span class="crayon-o">:</span><span class="crayon-v">dig</span><span class="crayon-sy">)</span><span class="crayon-h"> </span><span class="crayon-k ">{</span><span class="crayon-h"> </span><span class="crayon-v">DigSite</span><span class="crayon-sy">.</span><span class="crayon-i">new</span><span class="crayon-h"> </span><span class="crayon-k ">}</span>
+</div>
+<div class="crayon-line" id="urvanov-syntax-highlighter-647f47178e414540913705-3">
+<span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-e">let</span><span class="crayon-sy">(</span><span class="crayon-o">:</span><span class="crayon-v">finished</span><span class="crayon-sy">)</span><span class="crayon-h"> </span><span class="crayon-k ">{</span><span class="crayon-h"> </span><span class="crayon-v">Activity</span><span class="crayon-sy">.</span><span class="crayon-e">new</span><span class="crayon-sy">(</span><span class="crayon-v">cost</span><span class="crayon-o">:</span><span class="crayon-h"> </span><span class="crayon-cn">10</span><span class="crayon-sy">,</span><span class="crayon-h"> </span><span class="crayon-v">finished</span><span class="crayon-o">:</span><span class="crayon-h"> </span><span class="crayon-r">true</span><span class="crayon-sy">)</span><span class="crayon-h"> </span><span class="crayon-k ">}</span>
+</div>
+<div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-647f47178e414540913705-4">
+<span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-e">let</span><span class="crayon-sy">(</span><span class="crayon-o">:</span><span class="crayon-v">small_unfinished</span><span class="crayon-sy">)</span><span class="crayon-h"> </span><span class="crayon-k ">{</span><span class="crayon-h"> </span><span class="crayon-v">Activity</span><span class="crayon-sy">.</span><span class="crayon-e">new</span><span class="crayon-sy">(</span><span class="crayon-v">cost</span><span class="crayon-o">:</span><span class="crayon-h"> </span><span class="crayon-cn">2</span><span class="crayon-sy">)</span><span class="crayon-h"> </span><span class="crayon-k ">}</span>
+</div>
+<div class="crayon-line" id="urvanov-syntax-highlighter-647f47178e414540913705-5">
+<span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-e">let</span><span class="crayon-sy">(</span><span class="crayon-o">:</span><span class="crayon-v">large_unfinished</span><span class="crayon-sy">)</span><span class="crayon-h"> </span><span class="crayon-k ">{</span><span class="crayon-h"> </span><span class="crayon-v">Activity</span><span class="crayon-sy">.</span><span class="crayon-e">new</span><span class="crayon-sy">(</span><span class="crayon-v">cost</span><span class="crayon-o">:</span><span class="crayon-h"> </span><span class="crayon-cn">25</span><span class="crayon-sy">)</span><span class="crayon-h"> </span><span class="crayon-k ">}</span>
+</div>
+<div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-647f47178e414540913705-6">&nbsp;</div>
+<div class="crayon-line" id="urvanov-syntax-highlighter-647f47178e414540913705-7">
+<span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-e">before</span><span class="crayon-sy">(</span><span class="crayon-o">:</span><span class="crayon-v">example</span><span class="crayon-sy">)</span><span class="crayon-h"> </span><span class="crayon-st">do</span>
+</div>
+<div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-647f47178e414540913705-8">
+<span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-v">dig</span><span class="crayon-sy">.</span><span class="crayon-v">activities</span><span class="crayon-h"> </span><span class="crayon-o">=</span><span class="crayon-h"> </span><span class="crayon-sy">[</span><span class="crayon-v">finished</span><span class="crayon-sy">,</span><span class="crayon-h"> </span><span class="crayon-v">small_unfinished</span><span class="crayon-sy">,</span><span class="crayon-h"> </span><span class="crayon-v">large_unfinished</span><span class="crayon-sy">]</span>
+</div>
+<div class="crayon-line" id="urvanov-syntax-highlighter-647f47178e414540913705-9">
+<span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-st">end</span>
+</div>
+<div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-647f47178e414540913705-10">
+<span class="crayon-h">&nbsp;&nbsp;</span><span class="crayon-st">end</span>
+</div>
+</div></td>
+					</tr>
+				</table>
+			</div>
+		</div>
+<!-- [Format Time: 0.0004 seconds] -->
+<p></p>
+<p>Here I&#8217;m describing the costs as part of the DigSite tests. I&#8217;ll show you the full code momentarily so you can orient yourself but take a look at that above code, which is basically setting up a context. That context is what we want our examples to use.</p>
+<p>Now, before I said the cost context is important. And what you see here is that as we talk about cost we&#8217;re going to be framing it not as currency but rather as a relative size that encapsulates the monetary cost outlay as well as the time duration over which the cost applies.</p>
+<p>But imagine if you didn&#8217;t know that and you were reading the above tests. What would those numbers (10, 2, 25) mean to you? Would you just assume they referred to some local currency value ($10, $2, $25)? Or should I treat those numbers as some sort of &#8220;time cost&#8221; and assume they reflect hours?</p>
+<p>My only point here is that no matter how expressive your tests are, it is possible for ambiguity or outright misunderstanding to creep in. These kind of abstractions can get lost in the code when it&#8217;s not clear what we&#8217;re talking about or what kind of decisions were made.</p>
+<h2>Context Sometimes Changes Code</h2>
+<p>One thing I want to call out is that even just this bit of logic &#8212; which is just setup, remember &#8212; has actually forced a design change. Think about how an activity was set up before and think about how it is set up now, given the above code. Specifically, the activity now has to take in some parameters that give it a state. So the Activity logic (in <a href="https://github.com/jeffnyman/benchmarker/blob/v3.0/code/activity.rb">activity.rb</a>) would change a bit:</p>
+<p></p>
+<!-- Urvanov Syntax Highlighter v2.8.33 -->
+
+		<div id="urvanov-syntax-highlighter-647f47178e419520810623" class="urvanov-syntax-highlighter-syntax crayon-theme-classic urvanov-syntax-highlighter-font-monaco urvanov-syntax-highlighter-os-pc print-yes notranslate" data-settings=" minimize scroll-mouseover" style="margin-top: 12px; margin-bottom: 12px; font-size: 12px !important; line-height: 15px !important;">
+		
+			<div class="crayon-toolbar" data-settings=" mouseover overlay hide delay" style="font-size: 12px !important;height: 18px !important; line-height: 18px !important;">
+<span class="crayon-title"></span>
+			<div class="crayon-tools" style="font-size: 12px !important;height: 18px !important; line-height: 18px !important;">
+<div class="crayon-button urvanov-syntax-highlighter-nums-button" title="Toggle Line Numbers"><div class="urvanov-syntax-highlighter-button-icon"></div></div>
+<div class="crayon-button urvanov-syntax-highlighter-plain-button" title="Toggle Plain Code"><div class="urvanov-syntax-highlighter-button-icon"></div></div>
+<div class="crayon-button urvanov-syntax-highlighter-wrap-button" title="Toggle Line Wrap"><div class="urvanov-syntax-highlighter-button-icon"></div></div>
+<div class="crayon-button urvanov-syntax-highlighter-expand-button" title="Expand Code"><div class="urvanov-syntax-highlighter-button-icon"></div></div>
+<div class="crayon-button urvanov-syntax-highlighter-copy-button" title="Copy"><div class="urvanov-syntax-highlighter-button-icon"></div></div>
+<div class="crayon-button urvanov-syntax-highlighter-popup-button" title="Open Code In New Window"><div class="urvanov-syntax-highlighter-button-icon"></div></div>
+<span class="crayon-language">Ruby</span>
+</div>
+</div>
+			<div class="crayon-info" style="min-height: 16.8px !important; line-height: 16.8px !important;"></div>
+			<div class="urvanov-syntax-highlighter-plain-wrap"><textarea wrap="soft" class="urvanov-syntax-highlighter-plain print-no" data-settings="dblclick" readonly style="-moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4; font-size: 12px !important; line-height: 15px !important;">
+class Activity
+  def initialize(setup = {})
+    @finished = false
+  end
+  
+  ....</textarea></div>
+			<div class="urvanov-syntax-highlighter-main">
+				<table class="crayon-table">
+					<tr class="urvanov-syntax-highlighter-row">
+				<td class="crayon-nums " data-settings="show">
+					<div class="urvanov-syntax-highlighter-nums-content" style="font-size: 12px !important; line-height: 15px !important;">
+<div class="crayon-num" data-line="urvanov-syntax-highlighter-647f47178e419520810623-1">1</div>
+<div class="crayon-num crayon-marked-num crayon-top crayon-bottom crayon-striped-num" data-line="urvanov-syntax-highlighter-647f47178e419520810623-2">2</div>
+<div class="crayon-num" data-line="urvanov-syntax-highlighter-647f47178e419520810623-3">3</div>
+<div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-647f47178e419520810623-4">4</div>
+<div class="crayon-num" data-line="urvanov-syntax-highlighter-647f47178e419520810623-5">5</div>
+<div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-647f47178e419520810623-6">6</div>
+</div>
+				</td>
+						<td class="urvanov-syntax-highlighter-code"><div class="crayon-pre" style="font-size: 12px !important; line-height: 15px !important; -moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4;">
+<div class="crayon-line" id="urvanov-syntax-highlighter-647f47178e419520810623-1">
+<span class="crayon-r">class</span><span class="crayon-h"> </span><span class="crayon-i">Activity</span>
+</div>
+<div class="crayon-line crayon-marked-line crayon-top crayon-bottom crayon-striped-line" id="urvanov-syntax-highlighter-647f47178e419520810623-2">
+<span class="crayon-h">&nbsp;&nbsp;</span><span class="crayon-r">def</span><span class="crayon-h"> </span><span class="crayon-e">initialize</span><span class="crayon-sy">(</span><span class="crayon-v">setup</span><span class="crayon-h"> </span><span class="crayon-o">=</span><span class="crayon-h"> </span><span class="crayon-k ">{</span><span class="crayon-k ">}</span><span class="crayon-sy">)</span>
+</div>
+<div class="crayon-line" id="urvanov-syntax-highlighter-647f47178e419520810623-3">
+<span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-v">@finished</span><span class="crayon-h"> </span><span class="crayon-o">=</span><span class="crayon-h"> </span><span class="crayon-r">false</span>
+</div>
+<div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-647f47178e419520810623-4">
+<span class="crayon-h">&nbsp;&nbsp;</span><span class="crayon-st">end</span>
+</div>
+<div class="crayon-line" id="urvanov-syntax-highlighter-647f47178e419520810623-5"><span class="crayon-h">&nbsp;&nbsp;</span></div>
+<div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-647f47178e419520810623-6">
+<span class="crayon-h">&nbsp;&nbsp;</span><span class="crayon-sy">.</span><span class="crayon-sy">.</span><span class="crayon-sy">.</span><span class="crayon-sy">.</span>
+</div>
+</div></td>
+					</tr>
+				</table>
+			</div>
+		</div>
+<!-- [Format Time: 0.0001 seconds] -->
+<p></p>
+<p>Simple enough but do notice how we&#8217;ve made a code change for something we&#8217;re not doing anything with yet in our actual code. We are putting this is in solely as a result of the fact that our tests, putting pressure on design, have forced us to evolve the code in this way.</p>
+<p>Some people get terribly nervous about this sort of thing and use it to argue against approaches where tests are written first, as opposed to written concurrently or after the fact. I won&#8217;t take a stance on that here but just be aware of this.</p>
+<h2>Evolving the Code: Costs</h2>
+<p>Now let&#8217;s get back to how we want our code to evolve. What do we want to do with our test in this dig site context? Well, one obvious thing is that we can get the total cost of the dig. Regardless of what activities are finished or unfinished, we can add up their costs to get a total. That seems like a really simple thing to do via a very straightforward calculation.</p>
+<p>How about this (again, I&#8217;ll show all the code soon):</p>
+<p></p>
+<!-- Urvanov Syntax Highlighter v2.8.33 -->
+
+		<div id="urvanov-syntax-highlighter-647f47178e41d136348644" class="urvanov-syntax-highlighter-syntax crayon-theme-classic urvanov-syntax-highlighter-font-monaco urvanov-syntax-highlighter-os-pc print-yes notranslate" data-settings=" minimize scroll-mouseover" style="margin-top: 12px; margin-bottom: 12px; font-size: 12px !important; line-height: 15px !important;">
+		
+			<div class="crayon-toolbar" data-settings=" mouseover overlay hide delay" style="font-size: 12px !important;height: 18px !important; line-height: 18px !important;">
+<span class="crayon-title"></span>
+			<div class="crayon-tools" style="font-size: 12px !important;height: 18px !important; line-height: 18px !important;">
+<div class="crayon-button urvanov-syntax-highlighter-nums-button" title="Toggle Line Numbers"><div class="urvanov-syntax-highlighter-button-icon"></div></div>
+<div class="crayon-button urvanov-syntax-highlighter-plain-button" title="Toggle Plain Code"><div class="urvanov-syntax-highlighter-button-icon"></div></div>
+<div class="crayon-button urvanov-syntax-highlighter-wrap-button" title="Toggle Line Wrap"><div class="urvanov-syntax-highlighter-button-icon"></div></div>
+<div class="crayon-button urvanov-syntax-highlighter-expand-button" title="Expand Code"><div class="urvanov-syntax-highlighter-button-icon"></div></div>
+<div class="crayon-button urvanov-syntax-highlighter-copy-button" title="Copy"><div class="urvanov-syntax-highlighter-button-icon"></div></div>
+<div class="crayon-button urvanov-syntax-highlighter-popup-button" title="Open Code In New Window"><div class="urvanov-syntax-highlighter-button-icon"></div></div>
+<span class="crayon-language">Ruby</span>
+</div>
+</div>
+			<div class="crayon-info" style="min-height: 16.8px !important; line-height: 16.8px !important;"></div>
+			<div class="urvanov-syntax-highlighter-plain-wrap"><textarea wrap="soft" class="urvanov-syntax-highlighter-plain print-no" data-settings="dblclick" readonly style="-moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4; font-size: 12px !important; line-height: 15px !important;">
+it "provides a total cost of all activities" do
+  expect(dig.total_cost).to eq(37)
+end</textarea></div>
+			<div class="urvanov-syntax-highlighter-main">
+				<table class="crayon-table">
+					<tr class="urvanov-syntax-highlighter-row">
+				<td class="crayon-nums " data-settings="show">
+					<div class="urvanov-syntax-highlighter-nums-content" style="font-size: 12px !important; line-height: 15px !important;">
+<div class="crayon-num" data-line="urvanov-syntax-highlighter-647f47178e41d136348644-1">1</div>
+<div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-647f47178e41d136348644-2">2</div>
+<div class="crayon-num" data-line="urvanov-syntax-highlighter-647f47178e41d136348644-3">3</div>
+</div>
+				</td>
+						<td class="urvanov-syntax-highlighter-code"><div class="crayon-pre" style="font-size: 12px !important; line-height: 15px !important; -moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4;">
+<div class="crayon-line" id="urvanov-syntax-highlighter-647f47178e41d136348644-1">
+<span class="crayon-i">it</span><span class="crayon-h"> </span><span class="crayon-s">"provides a total cost of all activities"</span><span class="crayon-h"> </span><span class="crayon-st">do</span>
+</div>
+<div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-647f47178e41d136348644-2">
+<span class="crayon-h">&nbsp;&nbsp;</span><span class="crayon-e">expect</span><span class="crayon-sy">(</span><span class="crayon-v">dig</span><span class="crayon-sy">.</span><span class="crayon-v">total_cost</span><span class="crayon-sy">)</span><span class="crayon-sy">.</span><span class="crayon-i">to</span><span class="crayon-h"> </span><span class="crayon-e">eq</span><span class="crayon-sy">(</span><span class="crayon-cn">37</span><span class="crayon-sy">)</span>
+</div>
+<div class="crayon-line" id="urvanov-syntax-highlighter-647f47178e41d136348644-3"><span class="crayon-st">end</span></div>
+</div></td>
+					</tr>
+				</table>
+			</div>
+		</div>
+<!-- [Format Time: 0.0001 seconds] -->
+<p></p>
+<p>To get this passing would lead to one extra method on the dig site (<a href="https://github.com/jeffnyman/benchmarker/blob/v3.0/code/dig_site.rb">dig_site.rb</a>):</p>
+<p></p>
+<!-- Urvanov Syntax Highlighter v2.8.33 -->
+
+		<div id="urvanov-syntax-highlighter-647f47178e421888030109" class="urvanov-syntax-highlighter-syntax crayon-theme-classic urvanov-syntax-highlighter-font-monaco urvanov-syntax-highlighter-os-pc print-yes notranslate" data-settings=" minimize scroll-mouseover" style="margin-top: 12px; margin-bottom: 12px; font-size: 12px !important; line-height: 15px !important;">
+		
+			<div class="crayon-toolbar" data-settings=" mouseover overlay hide delay" style="font-size: 12px !important;height: 18px !important; line-height: 18px !important;">
+<span class="crayon-title"></span>
+			<div class="crayon-tools" style="font-size: 12px !important;height: 18px !important; line-height: 18px !important;">
+<div class="crayon-button urvanov-syntax-highlighter-nums-button" title="Toggle Line Numbers"><div class="urvanov-syntax-highlighter-button-icon"></div></div>
+<div class="crayon-button urvanov-syntax-highlighter-plain-button" title="Toggle Plain Code"><div class="urvanov-syntax-highlighter-button-icon"></div></div>
+<div class="crayon-button urvanov-syntax-highlighter-wrap-button" title="Toggle Line Wrap"><div class="urvanov-syntax-highlighter-button-icon"></div></div>
+<div class="crayon-button urvanov-syntax-highlighter-expand-button" title="Expand Code"><div class="urvanov-syntax-highlighter-button-icon"></div></div>
+<div class="crayon-button urvanov-syntax-highlighter-copy-button" title="Copy"><div class="urvanov-syntax-highlighter-button-icon"></div></div>
+<div class="crayon-button urvanov-syntax-highlighter-popup-button" title="Open Code In New Window"><div class="urvanov-syntax-highlighter-button-icon"></div></div>
+<span class="crayon-language">Ruby</span>
+</div>
+</div>
+			<div class="crayon-info" style="min-height: 16.8px !important; line-height: 16.8px !important;"></div>
+			<div class="urvanov-syntax-highlighter-plain-wrap"><textarea wrap="soft" class="urvanov-syntax-highlighter-plain print-no" data-settings="dblclick" readonly style="-moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4; font-size: 12px !important; line-height: 15px !important;">
+class DigSite
+  attr_accessor :activities
+
+  def initialize
+    @activities = []
+  end
+
+  def finished?
+    activities.all?(&amp;:finished?)
+  end
+
+  def total_cost
+    activities.sum(&amp;:cost)
+  end
+end</textarea></div>
+			<div class="urvanov-syntax-highlighter-main">
+				<table class="crayon-table">
+					<tr class="urvanov-syntax-highlighter-row">
+				<td class="crayon-nums " data-settings="show">
+					<div class="urvanov-syntax-highlighter-nums-content" style="font-size: 12px !important; line-height: 15px !important;">
+<div class="crayon-num" data-line="urvanov-syntax-highlighter-647f47178e421888030109-1">1</div>
+<div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-647f47178e421888030109-2">2</div>
+<div class="crayon-num" data-line="urvanov-syntax-highlighter-647f47178e421888030109-3">3</div>
+<div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-647f47178e421888030109-4">4</div>
+<div class="crayon-num" data-line="urvanov-syntax-highlighter-647f47178e421888030109-5">5</div>
+<div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-647f47178e421888030109-6">6</div>
+<div class="crayon-num" data-line="urvanov-syntax-highlighter-647f47178e421888030109-7">7</div>
+<div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-647f47178e421888030109-8">8</div>
+<div class="crayon-num" data-line="urvanov-syntax-highlighter-647f47178e421888030109-9">9</div>
+<div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-647f47178e421888030109-10">10</div>
+<div class="crayon-num" data-line="urvanov-syntax-highlighter-647f47178e421888030109-11">11</div>
+<div class="crayon-num crayon-marked-num crayon-top crayon-striped-num" data-line="urvanov-syntax-highlighter-647f47178e421888030109-12">12</div>
+<div class="crayon-num crayon-marked-num" data-line="urvanov-syntax-highlighter-647f47178e421888030109-13">13</div>
+<div class="crayon-num crayon-marked-num crayon-bottom crayon-striped-num" data-line="urvanov-syntax-highlighter-647f47178e421888030109-14">14</div>
+<div class="crayon-num" data-line="urvanov-syntax-highlighter-647f47178e421888030109-15">15</div>
+</div>
+				</td>
+						<td class="urvanov-syntax-highlighter-code"><div class="crayon-pre" style="font-size: 12px !important; line-height: 15px !important; -moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4;">
+<div class="crayon-line" id="urvanov-syntax-highlighter-647f47178e421888030109-1">
+<span class="crayon-r">class</span><span class="crayon-h"> </span><span class="crayon-i">DigSite</span>
+</div>
+<div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-647f47178e421888030109-2">
+<span class="crayon-h">&nbsp;&nbsp;</span><span class="crayon-v">attr_accessor</span><span class="crayon-h"> </span><span class="crayon-o">:</span><span class="crayon-i">activities</span>
+</div>
+<div class="crayon-line" id="urvanov-syntax-highlighter-647f47178e421888030109-3">&nbsp;</div>
+<div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-647f47178e421888030109-4">
+<span class="crayon-h">&nbsp;&nbsp;</span><span class="crayon-r">def</span><span class="crayon-h"> </span><span class="crayon-i">initialize</span>
+</div>
+<div class="crayon-line" id="urvanov-syntax-highlighter-647f47178e421888030109-5">
+<span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-v">@activities</span><span class="crayon-h"> </span><span class="crayon-o">=</span><span class="crayon-h"> </span><span class="crayon-sy">[</span><span class="crayon-sy">]</span>
+</div>
+<div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-647f47178e421888030109-6">
+<span class="crayon-h">&nbsp;&nbsp;</span><span class="crayon-st">end</span>
+</div>
+<div class="crayon-line" id="urvanov-syntax-highlighter-647f47178e421888030109-7">&nbsp;</div>
+<div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-647f47178e421888030109-8">
+<span class="crayon-h">&nbsp;&nbsp;</span><span class="crayon-r">def</span><span class="crayon-h"> </span><span class="crayon-v">finished</span><span class="crayon-sy">?</span>
+</div>
+<div class="crayon-line" id="urvanov-syntax-highlighter-647f47178e421888030109-9">
+<span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-v">activities</span><span class="crayon-sy">.</span><span class="crayon-v">all</span><span class="crayon-sy">?</span><span class="crayon-sy">(</span><span class="crayon-o">&amp;</span><span class="crayon-o">:</span><span class="crayon-v">finished</span><span class="crayon-sy">?</span><span class="crayon-sy">)</span>
+</div>
+<div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-647f47178e421888030109-10">
+<span class="crayon-h">&nbsp;&nbsp;</span><span class="crayon-st">end</span>
+</div>
+<div class="crayon-line" id="urvanov-syntax-highlighter-647f47178e421888030109-11">&nbsp;</div>
+<div class="crayon-line crayon-marked-line crayon-top crayon-striped-line" id="urvanov-syntax-highlighter-647f47178e421888030109-12">
+<span class="crayon-h">&nbsp;&nbsp;</span><span class="crayon-r">def</span><span class="crayon-h"> </span><span class="crayon-v">total</span><span class="crayon-sy">_</span>cost</div>
+<div class="crayon-line crayon-marked-line" id="urvanov-syntax-highlighter-647f47178e421888030109-13">
+<span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-v">activities</span><span class="crayon-sy">.</span><span class="crayon-e">sum</span><span class="crayon-sy">(</span><span class="crayon-o">&amp;</span><span class="crayon-o">:</span><span class="crayon-v">cost</span><span class="crayon-sy">)</span>
+</div>
+<div class="crayon-line crayon-marked-line crayon-bottom crayon-striped-line" id="urvanov-syntax-highlighter-647f47178e421888030109-14">
+<span class="crayon-h">&nbsp;&nbsp;</span><span class="crayon-st">end</span>
+</div>
+<div class="crayon-line" id="urvanov-syntax-highlighter-647f47178e421888030109-15"><span class="crayon-st">end</span></div>
+</div></td>
+					</tr>
+				</table>
+			</div>
+		</div>
+<!-- [Format Time: 0.0002 seconds] -->
+<p></p>
+<p>Well, actually, that wouldn&#8217;t pass. You would need to make one more addition to Activity:</p>
+<p></p>
+<!-- Urvanov Syntax Highlighter v2.8.33 -->
+
+		<div id="urvanov-syntax-highlighter-647f47178e423461912849" class="urvanov-syntax-highlighter-syntax crayon-theme-classic urvanov-syntax-highlighter-font-monaco urvanov-syntax-highlighter-os-pc print-yes notranslate" data-settings=" minimize scroll-mouseover" style="margin-top: 12px; margin-bottom: 12px; font-size: 12px !important; line-height: 15px !important;">
+		
+			<div class="crayon-toolbar" data-settings=" mouseover overlay hide delay" style="font-size: 12px !important;height: 18px !important; line-height: 18px !important;">
+<span class="crayon-title"></span>
+			<div class="crayon-tools" style="font-size: 12px !important;height: 18px !important; line-height: 18px !important;">
+<div class="crayon-button urvanov-syntax-highlighter-nums-button" title="Toggle Line Numbers"><div class="urvanov-syntax-highlighter-button-icon"></div></div>
+<div class="crayon-button urvanov-syntax-highlighter-plain-button" title="Toggle Plain Code"><div class="urvanov-syntax-highlighter-button-icon"></div></div>
+<div class="crayon-button urvanov-syntax-highlighter-wrap-button" title="Toggle Line Wrap"><div class="urvanov-syntax-highlighter-button-icon"></div></div>
+<div class="crayon-button urvanov-syntax-highlighter-expand-button" title="Expand Code"><div class="urvanov-syntax-highlighter-button-icon"></div></div>
+<div class="crayon-button urvanov-syntax-highlighter-copy-button" title="Copy"><div class="urvanov-syntax-highlighter-button-icon"></div></div>
+<div class="crayon-button urvanov-syntax-highlighter-popup-button" title="Open Code In New Window"><div class="urvanov-syntax-highlighter-button-icon"></div></div>
+<span class="crayon-language">Ruby</span>
+</div>
+</div>
+			<div class="crayon-info" style="min-height: 16.8px !important; line-height: 16.8px !important;"></div>
+			<div class="urvanov-syntax-highlighter-plain-wrap"><textarea wrap="soft" class="urvanov-syntax-highlighter-plain print-no" data-settings="dblclick" readonly style="-moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4; font-size: 12px !important; line-height: 15px !important;">
+class Activity
+  attr_accessor :cost
+
+  def initialize(setup = {})    
+    @finished = false
+  end
+  
+  ....</textarea></div>
+			<div class="urvanov-syntax-highlighter-main">
+				<table class="crayon-table">
+					<tr class="urvanov-syntax-highlighter-row">
+				<td class="crayon-nums " data-settings="show">
+					<div class="urvanov-syntax-highlighter-nums-content" style="font-size: 12px !important; line-height: 15px !important;">
+<div class="crayon-num" data-line="urvanov-syntax-highlighter-647f47178e423461912849-1">1</div>
+<div class="crayon-num crayon-marked-num crayon-top crayon-bottom crayon-striped-num" data-line="urvanov-syntax-highlighter-647f47178e423461912849-2">2</div>
+<div class="crayon-num" data-line="urvanov-syntax-highlighter-647f47178e423461912849-3">3</div>
+<div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-647f47178e423461912849-4">4</div>
+<div class="crayon-num" data-line="urvanov-syntax-highlighter-647f47178e423461912849-5">5</div>
+<div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-647f47178e423461912849-6">6</div>
+<div class="crayon-num" data-line="urvanov-syntax-highlighter-647f47178e423461912849-7">7</div>
+<div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-647f47178e423461912849-8">8</div>
+</div>
+				</td>
+						<td class="urvanov-syntax-highlighter-code"><div class="crayon-pre" style="font-size: 12px !important; line-height: 15px !important; -moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4;">
+<div class="crayon-line" id="urvanov-syntax-highlighter-647f47178e423461912849-1">
+<span class="crayon-r">class</span><span class="crayon-h"> </span><span class="crayon-i">Activity</span>
+</div>
+<div class="crayon-line crayon-marked-line crayon-top crayon-bottom crayon-striped-line" id="urvanov-syntax-highlighter-647f47178e423461912849-2">
+<span class="crayon-h">&nbsp;&nbsp;</span><span class="crayon-v">attr_accessor</span><span class="crayon-h"> </span><span class="crayon-o">:</span><span class="crayon-i">cost</span>
+</div>
+<div class="crayon-line" id="urvanov-syntax-highlighter-647f47178e423461912849-3">&nbsp;</div>
+<div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-647f47178e423461912849-4">
+<span class="crayon-h">&nbsp;&nbsp;</span><span class="crayon-r">def</span><span class="crayon-h"> </span><span class="crayon-e">initialize</span><span class="crayon-sy">(</span><span class="crayon-v">setup</span><span class="crayon-h"> </span><span class="crayon-o">=</span><span class="crayon-h"> </span><span class="crayon-k ">{</span><span class="crayon-k ">}</span><span class="crayon-sy">)</span><span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;</span>
+</div>
+<div class="crayon-line" id="urvanov-syntax-highlighter-647f47178e423461912849-5">
+<span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-v">@finished</span><span class="crayon-h"> </span><span class="crayon-o">=</span><span class="crayon-h"> </span><span class="crayon-r">false</span>
+</div>
+<div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-647f47178e423461912849-6">
+<span class="crayon-h">&nbsp;&nbsp;</span><span class="crayon-st">end</span>
+</div>
+<div class="crayon-line" id="urvanov-syntax-highlighter-647f47178e423461912849-7"><span class="crayon-h">&nbsp;&nbsp;</span></div>
+<div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-647f47178e423461912849-8">
+<span class="crayon-h">&nbsp;&nbsp;</span><span class="crayon-sy">.</span><span class="crayon-sy">.</span><span class="crayon-sy">.</span><span class="crayon-sy">.</span>
+</div>
+</div></td>
+					</tr>
+				</table>
+			</div>
+		</div>
+<!-- [Format Time: 0.0002 seconds] -->
+<p></p>
+<p>As an incidental note, here the coupling we talked about in the third post is coming home to roost!</p>
+<p>That code addition wouldn&#8217;t be enough for the test to pass either. The reason is because the new <code>total_cost</code> method would be trying to sum up the cost attribute on the activities but, in fact, we haven&#8217;t made that available as a property on the instance. That change would mean our initialization of an activity becomes this:</p>
+<p></p>
+<!-- Urvanov Syntax Highlighter v2.8.33 -->
+
+		<div id="urvanov-syntax-highlighter-647f47178e424699582720" class="urvanov-syntax-highlighter-syntax crayon-theme-classic urvanov-syntax-highlighter-font-monaco urvanov-syntax-highlighter-os-pc print-yes notranslate" data-settings=" minimize scroll-mouseover" style="margin-top: 12px; margin-bottom: 12px; font-size: 12px !important; line-height: 15px !important;">
+		
+			<div class="crayon-toolbar" data-settings=" mouseover overlay hide delay" style="font-size: 12px !important;height: 18px !important; line-height: 18px !important;">
+<span class="crayon-title"></span>
+			<div class="crayon-tools" style="font-size: 12px !important;height: 18px !important; line-height: 18px !important;">
+<div class="crayon-button urvanov-syntax-highlighter-nums-button" title="Toggle Line Numbers"><div class="urvanov-syntax-highlighter-button-icon"></div></div>
+<div class="crayon-button urvanov-syntax-highlighter-plain-button" title="Toggle Plain Code"><div class="urvanov-syntax-highlighter-button-icon"></div></div>
+<div class="crayon-button urvanov-syntax-highlighter-wrap-button" title="Toggle Line Wrap"><div class="urvanov-syntax-highlighter-button-icon"></div></div>
+<div class="crayon-button urvanov-syntax-highlighter-expand-button" title="Expand Code"><div class="urvanov-syntax-highlighter-button-icon"></div></div>
+<div class="crayon-button urvanov-syntax-highlighter-copy-button" title="Copy"><div class="urvanov-syntax-highlighter-button-icon"></div></div>
+<div class="crayon-button urvanov-syntax-highlighter-popup-button" title="Open Code In New Window"><div class="urvanov-syntax-highlighter-button-icon"></div></div>
+<span class="crayon-language">Ruby</span>
+</div>
+</div>
+			<div class="crayon-info" style="min-height: 16.8px !important; line-height: 16.8px !important;"></div>
+			<div class="urvanov-syntax-highlighter-plain-wrap"><textarea wrap="soft" class="urvanov-syntax-highlighter-plain print-no" data-settings="dblclick" readonly style="-moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4; font-size: 12px !important; line-height: 15px !important;">
+class Activity
+  attr_accessor :cost
+
+  def initialize(setup = {})    
+    @finished = false
+    @cost = setup[:cost]
+  end
+  
+  ....</textarea></div>
+			<div class="urvanov-syntax-highlighter-main">
+				<table class="crayon-table">
+					<tr class="urvanov-syntax-highlighter-row">
+				<td class="crayon-nums " data-settings="show">
+					<div class="urvanov-syntax-highlighter-nums-content" style="font-size: 12px !important; line-height: 15px !important;">
+<div class="crayon-num" data-line="urvanov-syntax-highlighter-647f47178e424699582720-1">1</div>
+<div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-647f47178e424699582720-2">2</div>
+<div class="crayon-num" data-line="urvanov-syntax-highlighter-647f47178e424699582720-3">3</div>
+<div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-647f47178e424699582720-4">4</div>
+<div class="crayon-num" data-line="urvanov-syntax-highlighter-647f47178e424699582720-5">5</div>
+<div class="crayon-num crayon-marked-num crayon-top crayon-bottom crayon-striped-num" data-line="urvanov-syntax-highlighter-647f47178e424699582720-6">6</div>
+<div class="crayon-num" data-line="urvanov-syntax-highlighter-647f47178e424699582720-7">7</div>
+<div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-647f47178e424699582720-8">8</div>
+<div class="crayon-num" data-line="urvanov-syntax-highlighter-647f47178e424699582720-9">9</div>
+</div>
+				</td>
+						<td class="urvanov-syntax-highlighter-code"><div class="crayon-pre" style="font-size: 12px !important; line-height: 15px !important; -moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4;">
+<div class="crayon-line" id="urvanov-syntax-highlighter-647f47178e424699582720-1">
+<span class="crayon-r">class</span><span class="crayon-h"> </span><span class="crayon-i">Activity</span>
+</div>
+<div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-647f47178e424699582720-2">
+<span class="crayon-h">&nbsp;&nbsp;</span><span class="crayon-v">attr_accessor</span><span class="crayon-h"> </span><span class="crayon-o">:</span><span class="crayon-i">cost</span>
+</div>
+<div class="crayon-line" id="urvanov-syntax-highlighter-647f47178e424699582720-3">&nbsp;</div>
+<div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-647f47178e424699582720-4">
+<span class="crayon-h">&nbsp;&nbsp;</span><span class="crayon-r">def</span><span class="crayon-h"> </span><span class="crayon-e">initialize</span><span class="crayon-sy">(</span><span class="crayon-v">setup</span><span class="crayon-h"> </span><span class="crayon-o">=</span><span class="crayon-h"> </span><span class="crayon-k ">{</span><span class="crayon-k ">}</span><span class="crayon-sy">)</span><span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;</span>
+</div>
+<div class="crayon-line" id="urvanov-syntax-highlighter-647f47178e424699582720-5">
+<span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-v">@finished</span><span class="crayon-h"> </span><span class="crayon-o">=</span><span class="crayon-h"> </span><span class="crayon-r">false</span>
+</div>
+<div class="crayon-line crayon-marked-line crayon-top crayon-bottom crayon-striped-line" id="urvanov-syntax-highlighter-647f47178e424699582720-6">
+<span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-v">@cost</span><span class="crayon-h"> </span><span class="crayon-o">=</span><span class="crayon-h"> </span><span class="crayon-v">setup</span><span class="crayon-sy">[</span><span class="crayon-o">:</span><span class="crayon-v">cost</span><span class="crayon-sy">]</span>
+</div>
+<div class="crayon-line" id="urvanov-syntax-highlighter-647f47178e424699582720-7">
+<span class="crayon-h">&nbsp;&nbsp;</span><span class="crayon-st">end</span>
+</div>
+<div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-647f47178e424699582720-8"><span class="crayon-h">&nbsp;&nbsp;</span></div>
+<div class="crayon-line" id="urvanov-syntax-highlighter-647f47178e424699582720-9">
+<span class="crayon-h">&nbsp;&nbsp;</span><span class="crayon-sy">.</span><span class="crayon-sy">.</span><span class="crayon-sy">.</span><span class="crayon-sy">.</span>
+</div>
+</div></td>
+					</tr>
+				</table>
+			</div>
+		</div>
+<!-- [Format Time: 0.0002 seconds] -->
+<p></p>
+<p>And now the test passes.</p>
+<p>Now, you may be wondering why I just bothered to go through all that. My point is that our use of tests to guide our design is tightening up that connection between the DigSite and the Activity. Crucially we are making a lot of low-level &#8212; albeit, simple &#8212; changes here that are far below what the actual user layer would be. Yet, this &#8212; right at the level we&#8217;re currently working at &#8212; is where complexity ultimately stems from.</p>
+<p><strong>That&#8217;s a really important point!</strong></p>
+<p>This is why development is hard. This is why saying you want testability as a primary quality attribute is <em>really</em> hard. This is why &#8220;design&#8221; is a discipline onto itself. Too many people use the word &#8220;design&#8221; as if they knew what it meant but what I want to show you here is how to start building up your intuition for what &#8220;design&#8221; <em>actually</em> means.</p>
+<p>This would apply, by the way, regardless of whether you were using tests to drive your design.</p>
+<p>Okay, so from a code perspective, all of that is relatively simple. What next? How do we keep evolving our code?</p>
+<h2>Look at the Boundaries</h2>
+<p>We just got the full cost of our dig based on the activities and that was something we could do without considering the distinction between finished and unfinished activities. So, it would seem, evolving that means performing a calculation that <em>is</em> based on that distinction.</p>
+<p>And, lucky us, we set up our test context with one finished activity and two unfinished activities. So that means we can calculate the <em>remaining</em> cost for the dig site. That test:</p>
+<p></p>
+<!-- Urvanov Syntax Highlighter v2.8.33 -->
+
+		<div id="urvanov-syntax-highlighter-647f47178e425553380861" class="urvanov-syntax-highlighter-syntax crayon-theme-classic urvanov-syntax-highlighter-font-monaco urvanov-syntax-highlighter-os-pc print-yes notranslate" data-settings=" minimize scroll-mouseover" style="margin-top: 12px; margin-bottom: 12px; font-size: 12px !important; line-height: 15px !important;">
+		
+			<div class="crayon-toolbar" data-settings=" mouseover overlay hide delay" style="font-size: 12px !important;height: 18px !important; line-height: 18px !important;">
+<span class="crayon-title"></span>
+			<div class="crayon-tools" style="font-size: 12px !important;height: 18px !important; line-height: 18px !important;">
+<div class="crayon-button urvanov-syntax-highlighter-nums-button" title="Toggle Line Numbers"><div class="urvanov-syntax-highlighter-button-icon"></div></div>
+<div class="crayon-button urvanov-syntax-highlighter-plain-button" title="Toggle Plain Code"><div class="urvanov-syntax-highlighter-button-icon"></div></div>
+<div class="crayon-button urvanov-syntax-highlighter-wrap-button" title="Toggle Line Wrap"><div class="urvanov-syntax-highlighter-button-icon"></div></div>
+<div class="crayon-button urvanov-syntax-highlighter-expand-button" title="Expand Code"><div class="urvanov-syntax-highlighter-button-icon"></div></div>
+<div class="crayon-button urvanov-syntax-highlighter-copy-button" title="Copy"><div class="urvanov-syntax-highlighter-button-icon"></div></div>
+<div class="crayon-button urvanov-syntax-highlighter-popup-button" title="Open Code In New Window"><div class="urvanov-syntax-highlighter-button-icon"></div></div>
+<span class="crayon-language">Ruby</span>
+</div>
+</div>
+			<div class="crayon-info" style="min-height: 16.8px !important; line-height: 16.8px !important;"></div>
+			<div class="urvanov-syntax-highlighter-plain-wrap"><textarea wrap="soft" class="urvanov-syntax-highlighter-plain print-no" data-settings="dblclick" readonly style="-moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4; font-size: 12px !important; line-height: 15px !important;">
+it "provides a remaining cost based on unfinished activities" do
+  expect(dig.remaining_cost).to eq(27)
+end</textarea></div>
+			<div class="urvanov-syntax-highlighter-main">
+				<table class="crayon-table">
+					<tr class="urvanov-syntax-highlighter-row">
+				<td class="crayon-nums " data-settings="show">
+					<div class="urvanov-syntax-highlighter-nums-content" style="font-size: 12px !important; line-height: 15px !important;">
+<div class="crayon-num" data-line="urvanov-syntax-highlighter-647f47178e425553380861-1">1</div>
+<div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-647f47178e425553380861-2">2</div>
+<div class="crayon-num" data-line="urvanov-syntax-highlighter-647f47178e425553380861-3">3</div>
+</div>
+				</td>
+						<td class="urvanov-syntax-highlighter-code"><div class="crayon-pre" style="font-size: 12px !important; line-height: 15px !important; -moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4;">
+<div class="crayon-line" id="urvanov-syntax-highlighter-647f47178e425553380861-1">
+<span class="crayon-i">it</span><span class="crayon-h"> </span><span class="crayon-s">"provides a remaining cost based on unfinished activities"</span><span class="crayon-h"> </span><span class="crayon-st">do</span>
+</div>
+<div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-647f47178e425553380861-2">
+<span class="crayon-h">&nbsp;&nbsp;</span><span class="crayon-e">expect</span><span class="crayon-sy">(</span><span class="crayon-v">dig</span><span class="crayon-sy">.</span><span class="crayon-v">remaining_cost</span><span class="crayon-sy">)</span><span class="crayon-sy">.</span><span class="crayon-i">to</span><span class="crayon-h"> </span><span class="crayon-e">eq</span><span class="crayon-sy">(</span><span class="crayon-cn">27</span><span class="crayon-sy">)</span>
+</div>
+<div class="crayon-line" id="urvanov-syntax-highlighter-647f47178e425553380861-3"><span class="crayon-st">end</span></div>
+</div></td>
+					</tr>
+				</table>
+			</div>
+		</div>
+<!-- [Format Time: 0.0001 seconds] -->
+<p></p>
+<p>To get that to pass, we need one more simple addition to our dig site:</p>
+<p></p>
+<!-- Urvanov Syntax Highlighter v2.8.33 -->
+
+		<div id="urvanov-syntax-highlighter-647f47178e428393269315" class="urvanov-syntax-highlighter-syntax crayon-theme-classic urvanov-syntax-highlighter-font-monaco urvanov-syntax-highlighter-os-pc print-yes notranslate" data-settings=" minimize scroll-mouseover" style="margin-top: 12px; margin-bottom: 12px; font-size: 12px !important; line-height: 15px !important;">
+		
+			<div class="crayon-toolbar" data-settings=" mouseover overlay hide delay" style="font-size: 12px !important;height: 18px !important; line-height: 18px !important;">
+<span class="crayon-title"></span>
+			<div class="crayon-tools" style="font-size: 12px !important;height: 18px !important; line-height: 18px !important;">
+<div class="crayon-button urvanov-syntax-highlighter-nums-button" title="Toggle Line Numbers"><div class="urvanov-syntax-highlighter-button-icon"></div></div>
+<div class="crayon-button urvanov-syntax-highlighter-plain-button" title="Toggle Plain Code"><div class="urvanov-syntax-highlighter-button-icon"></div></div>
+<div class="crayon-button urvanov-syntax-highlighter-wrap-button" title="Toggle Line Wrap"><div class="urvanov-syntax-highlighter-button-icon"></div></div>
+<div class="crayon-button urvanov-syntax-highlighter-expand-button" title="Expand Code"><div class="urvanov-syntax-highlighter-button-icon"></div></div>
+<div class="crayon-button urvanov-syntax-highlighter-copy-button" title="Copy"><div class="urvanov-syntax-highlighter-button-icon"></div></div>
+<div class="crayon-button urvanov-syntax-highlighter-popup-button" title="Open Code In New Window"><div class="urvanov-syntax-highlighter-button-icon"></div></div>
+<span class="crayon-language">Ruby</span>
+</div>
+</div>
+			<div class="crayon-info" style="min-height: 16.8px !important; line-height: 16.8px !important;"></div>
+			<div class="urvanov-syntax-highlighter-plain-wrap"><textarea wrap="soft" class="urvanov-syntax-highlighter-plain print-no" data-settings="dblclick" readonly style="-moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4; font-size: 12px !important; line-height: 15px !important;">
+class DigSite
+  attr_accessor :activities
+
+  def initialize
+    @activities = []
+  end
+
+  def finished?
+    activities.all?(&amp;:finished?)
+  end
+
+  def total_cost
+    activities.sum(&amp;:cost)
+  end
+
+  def remaining_cost
+    activities.reject(&amp;:finished?).sum(&amp;:cost)
+  end
+end</textarea></div>
+			<div class="urvanov-syntax-highlighter-main">
+				<table class="crayon-table">
+					<tr class="urvanov-syntax-highlighter-row">
+				<td class="crayon-nums " data-settings="show">
+					<div class="urvanov-syntax-highlighter-nums-content" style="font-size: 12px !important; line-height: 15px !important;">
+<div class="crayon-num" data-line="urvanov-syntax-highlighter-647f47178e428393269315-1">1</div>
+<div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-647f47178e428393269315-2">2</div>
+<div class="crayon-num" data-line="urvanov-syntax-highlighter-647f47178e428393269315-3">3</div>
+<div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-647f47178e428393269315-4">4</div>
+<div class="crayon-num" data-line="urvanov-syntax-highlighter-647f47178e428393269315-5">5</div>
+<div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-647f47178e428393269315-6">6</div>
+<div class="crayon-num" data-line="urvanov-syntax-highlighter-647f47178e428393269315-7">7</div>
+<div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-647f47178e428393269315-8">8</div>
+<div class="crayon-num" data-line="urvanov-syntax-highlighter-647f47178e428393269315-9">9</div>
+<div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-647f47178e428393269315-10">10</div>
+<div class="crayon-num" data-line="urvanov-syntax-highlighter-647f47178e428393269315-11">11</div>
+<div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-647f47178e428393269315-12">12</div>
+<div class="crayon-num" data-line="urvanov-syntax-highlighter-647f47178e428393269315-13">13</div>
+<div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-647f47178e428393269315-14">14</div>
+<div class="crayon-num" data-line="urvanov-syntax-highlighter-647f47178e428393269315-15">15</div>
+<div class="crayon-num crayon-marked-num crayon-top crayon-striped-num" data-line="urvanov-syntax-highlighter-647f47178e428393269315-16">16</div>
+<div class="crayon-num crayon-marked-num" data-line="urvanov-syntax-highlighter-647f47178e428393269315-17">17</div>
+<div class="crayon-num crayon-marked-num crayon-bottom crayon-striped-num" data-line="urvanov-syntax-highlighter-647f47178e428393269315-18">18</div>
+<div class="crayon-num" data-line="urvanov-syntax-highlighter-647f47178e428393269315-19">19</div>
+</div>
+				</td>
+						<td class="urvanov-syntax-highlighter-code"><div class="crayon-pre" style="font-size: 12px !important; line-height: 15px !important; -moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4;">
+<div class="crayon-line" id="urvanov-syntax-highlighter-647f47178e428393269315-1">
+<span class="crayon-r">class</span><span class="crayon-h"> </span><span class="crayon-i">DigSite</span>
+</div>
+<div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-647f47178e428393269315-2">
+<span class="crayon-h">&nbsp;&nbsp;</span><span class="crayon-v">attr_accessor</span><span class="crayon-h"> </span><span class="crayon-o">:</span><span class="crayon-i">activities</span>
+</div>
+<div class="crayon-line" id="urvanov-syntax-highlighter-647f47178e428393269315-3">&nbsp;</div>
+<div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-647f47178e428393269315-4">
+<span class="crayon-h">&nbsp;&nbsp;</span><span class="crayon-r">def</span><span class="crayon-h"> </span><span class="crayon-i">initialize</span>
+</div>
+<div class="crayon-line" id="urvanov-syntax-highlighter-647f47178e428393269315-5">
+<span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-v">@activities</span><span class="crayon-h"> </span><span class="crayon-o">=</span><span class="crayon-h"> </span><span class="crayon-sy">[</span><span class="crayon-sy">]</span>
+</div>
+<div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-647f47178e428393269315-6">
+<span class="crayon-h">&nbsp;&nbsp;</span><span class="crayon-st">end</span>
+</div>
+<div class="crayon-line" id="urvanov-syntax-highlighter-647f47178e428393269315-7">&nbsp;</div>
+<div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-647f47178e428393269315-8">
+<span class="crayon-h">&nbsp;&nbsp;</span><span class="crayon-r">def</span><span class="crayon-h"> </span><span class="crayon-v">finished</span><span class="crayon-sy">?</span>
+</div>
+<div class="crayon-line" id="urvanov-syntax-highlighter-647f47178e428393269315-9">
+<span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-v">activities</span><span class="crayon-sy">.</span><span class="crayon-v">all</span><span class="crayon-sy">?</span><span class="crayon-sy">(</span><span class="crayon-o">&amp;</span><span class="crayon-o">:</span><span class="crayon-v">finished</span><span class="crayon-sy">?</span><span class="crayon-sy">)</span>
+</div>
+<div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-647f47178e428393269315-10">
+<span class="crayon-h">&nbsp;&nbsp;</span><span class="crayon-st">end</span>
+</div>
+<div class="crayon-line" id="urvanov-syntax-highlighter-647f47178e428393269315-11">&nbsp;</div>
+<div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-647f47178e428393269315-12">
+<span class="crayon-h">&nbsp;&nbsp;</span><span class="crayon-r">def</span><span class="crayon-h"> </span><span class="crayon-v">total</span><span class="crayon-sy">_</span>cost</div>
+<div class="crayon-line" id="urvanov-syntax-highlighter-647f47178e428393269315-13">
+<span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-v">activities</span><span class="crayon-sy">.</span><span class="crayon-e">sum</span><span class="crayon-sy">(</span><span class="crayon-o">&amp;</span><span class="crayon-o">:</span><span class="crayon-v">cost</span><span class="crayon-sy">)</span>
+</div>
+<div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-647f47178e428393269315-14">
+<span class="crayon-h">&nbsp;&nbsp;</span><span class="crayon-st">end</span>
+</div>
+<div class="crayon-line" id="urvanov-syntax-highlighter-647f47178e428393269315-15">&nbsp;</div>
+<div class="crayon-line crayon-marked-line crayon-top crayon-striped-line" id="urvanov-syntax-highlighter-647f47178e428393269315-16">
+<span class="crayon-h">&nbsp;&nbsp;</span><span class="crayon-r">def</span><span class="crayon-h"> </span><span class="crayon-v">remaining</span><span class="crayon-sy">_</span>cost</div>
+<div class="crayon-line crayon-marked-line" id="urvanov-syntax-highlighter-647f47178e428393269315-17">
+<span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-v">activities</span><span class="crayon-sy">.</span><span class="crayon-e">reject</span><span class="crayon-sy">(</span><span class="crayon-o">&amp;</span><span class="crayon-o">:</span><span class="crayon-v">finished</span><span class="crayon-sy">?</span><span class="crayon-sy">)</span><span class="crayon-sy">.</span><span class="crayon-e">sum</span><span class="crayon-sy">(</span><span class="crayon-o">&amp;</span><span class="crayon-o">:</span><span class="crayon-v">cost</span><span class="crayon-sy">)</span>
+</div>
+<div class="crayon-line crayon-marked-line crayon-bottom crayon-striped-line" id="urvanov-syntax-highlighter-647f47178e428393269315-18">
+<span class="crayon-h">&nbsp;&nbsp;</span><span class="crayon-st">end</span>
+</div>
+<div class="crayon-line" id="urvanov-syntax-highlighter-647f47178e428393269315-19"><span class="crayon-st">end</span></div>
+</div></td>
+					</tr>
+				</table>
+			</div>
+		</div>
+<!-- [Format Time: 0.0003 seconds] -->
+<p></p>
+<p>That test would actually fail at this point. It would fail because, if you ran it, you would see that while the test was expecting 27, in fact the logic was producing 37. There is a clear reason for this and based on how we&#8217;ve stepped through the code here, you might be able to figure that out. Hint: it has to do with how an activity is initialized.</p>
+<p>Don&#8217;t worry if you didn&#8217;t figure it out. This isn&#8217;t a coding challenge. Here&#8217;s the slight addition needed to make our test pass:</p>
+<p></p>
+<!-- Urvanov Syntax Highlighter v2.8.33 -->
+
+		<div id="urvanov-syntax-highlighter-647f47178e429407560653" class="urvanov-syntax-highlighter-syntax crayon-theme-classic urvanov-syntax-highlighter-font-monaco urvanov-syntax-highlighter-os-pc print-yes notranslate" data-settings=" minimize scroll-mouseover" style="margin-top: 12px; margin-bottom: 12px; font-size: 12px !important; line-height: 15px !important;">
+		
+			<div class="crayon-toolbar" data-settings=" mouseover overlay hide delay" style="font-size: 12px !important;height: 18px !important; line-height: 18px !important;">
+<span class="crayon-title"></span>
+			<div class="crayon-tools" style="font-size: 12px !important;height: 18px !important; line-height: 18px !important;">
+<div class="crayon-button urvanov-syntax-highlighter-nums-button" title="Toggle Line Numbers"><div class="urvanov-syntax-highlighter-button-icon"></div></div>
+<div class="crayon-button urvanov-syntax-highlighter-plain-button" title="Toggle Plain Code"><div class="urvanov-syntax-highlighter-button-icon"></div></div>
+<div class="crayon-button urvanov-syntax-highlighter-wrap-button" title="Toggle Line Wrap"><div class="urvanov-syntax-highlighter-button-icon"></div></div>
+<div class="crayon-button urvanov-syntax-highlighter-expand-button" title="Expand Code"><div class="urvanov-syntax-highlighter-button-icon"></div></div>
+<div class="crayon-button urvanov-syntax-highlighter-copy-button" title="Copy"><div class="urvanov-syntax-highlighter-button-icon"></div></div>
+<div class="crayon-button urvanov-syntax-highlighter-popup-button" title="Open Code In New Window"><div class="urvanov-syntax-highlighter-button-icon"></div></div>
+<span class="crayon-language">Ruby</span>
+</div>
+</div>
+			<div class="crayon-info" style="min-height: 16.8px !important; line-height: 16.8px !important;"></div>
+			<div class="urvanov-syntax-highlighter-plain-wrap"><textarea wrap="soft" class="urvanov-syntax-highlighter-plain print-no" data-settings="dblclick" readonly style="-moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4; font-size: 12px !important; line-height: 15px !important;">
+class Activity
+  attr_accessor :cost
+
+  def initialize(setup = {})    
+    @finished = setup[:finished]
+    @cost = setup[:cost]
+  end
+  
+  ....</textarea></div>
+			<div class="urvanov-syntax-highlighter-main">
+				<table class="crayon-table">
+					<tr class="urvanov-syntax-highlighter-row">
+				<td class="crayon-nums " data-settings="show">
+					<div class="urvanov-syntax-highlighter-nums-content" style="font-size: 12px !important; line-height: 15px !important;">
+<div class="crayon-num" data-line="urvanov-syntax-highlighter-647f47178e429407560653-1">1</div>
+<div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-647f47178e429407560653-2">2</div>
+<div class="crayon-num" data-line="urvanov-syntax-highlighter-647f47178e429407560653-3">3</div>
+<div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-647f47178e429407560653-4">4</div>
+<div class="crayon-num crayon-marked-num crayon-top crayon-bottom" data-line="urvanov-syntax-highlighter-647f47178e429407560653-5">5</div>
+<div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-647f47178e429407560653-6">6</div>
+<div class="crayon-num" data-line="urvanov-syntax-highlighter-647f47178e429407560653-7">7</div>
+<div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-647f47178e429407560653-8">8</div>
+<div class="crayon-num" data-line="urvanov-syntax-highlighter-647f47178e429407560653-9">9</div>
+</div>
+				</td>
+						<td class="urvanov-syntax-highlighter-code"><div class="crayon-pre" style="font-size: 12px !important; line-height: 15px !important; -moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4;">
+<div class="crayon-line" id="urvanov-syntax-highlighter-647f47178e429407560653-1">
+<span class="crayon-r">class</span><span class="crayon-h"> </span><span class="crayon-i">Activity</span>
+</div>
+<div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-647f47178e429407560653-2">
+<span class="crayon-h">&nbsp;&nbsp;</span><span class="crayon-v">attr_accessor</span><span class="crayon-h"> </span><span class="crayon-o">:</span><span class="crayon-i">cost</span>
+</div>
+<div class="crayon-line" id="urvanov-syntax-highlighter-647f47178e429407560653-3">&nbsp;</div>
+<div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-647f47178e429407560653-4">
+<span class="crayon-h">&nbsp;&nbsp;</span><span class="crayon-r">def</span><span class="crayon-h"> </span><span class="crayon-e">initialize</span><span class="crayon-sy">(</span><span class="crayon-v">setup</span><span class="crayon-h"> </span><span class="crayon-o">=</span><span class="crayon-h"> </span><span class="crayon-k ">{</span><span class="crayon-k ">}</span><span class="crayon-sy">)</span><span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;</span>
+</div>
+<div class="crayon-line crayon-marked-line crayon-top crayon-bottom" id="urvanov-syntax-highlighter-647f47178e429407560653-5">
+<span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-v">@finished</span><span class="crayon-h"> </span><span class="crayon-o">=</span><span class="crayon-h"> </span><span class="crayon-v">setup</span><span class="crayon-sy">[</span><span class="crayon-o">:</span><span class="crayon-v">finished</span><span class="crayon-sy">]</span>
+</div>
+<div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-647f47178e429407560653-6">
+<span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-v">@cost</span><span class="crayon-h"> </span><span class="crayon-o">=</span><span class="crayon-h"> </span><span class="crayon-v">setup</span><span class="crayon-sy">[</span><span class="crayon-o">:</span><span class="crayon-v">cost</span><span class="crayon-sy">]</span>
+</div>
+<div class="crayon-line" id="urvanov-syntax-highlighter-647f47178e429407560653-7">
+<span class="crayon-h">&nbsp;&nbsp;</span><span class="crayon-st">end</span>
+</div>
+<div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-647f47178e429407560653-8"><span class="crayon-h">&nbsp;&nbsp;</span></div>
+<div class="crayon-line" id="urvanov-syntax-highlighter-647f47178e429407560653-9">
+<span class="crayon-h">&nbsp;&nbsp;</span><span class="crayon-sy">.</span><span class="crayon-sy">.</span><span class="crayon-sy">.</span><span class="crayon-sy">.</span>
+</div>
+</div></td>
+					</tr>
+				</table>
+			</div>
+		</div>
+<!-- [Format Time: 0.0002 seconds] -->
+<p></p>
+<p>Previously all activities being created were simply initialized to not being finished (<code>@finished = false</code>). That&#8217;s no longer the case. A small thing, but an important one. But notice how long &#8212; well, relatively speaking &#8212; it took us to find that out. Our tests were passing up until we got to a certain point.</p>
+<p>And, once again, please note how we keep shifting between adding code bits to our DigSite and our Activity. Because we only have two classes and we&#8217;re early in development, this is easy to manage. But imagine how much more complicated this can get &#8212; and the possibilities for issues &#8212; when the code base is much larger or the individual code elements being dealt with are much more complex.</p>
+<h2>The Duplication Enemy</h2>
+<p>I often talk about two main enemies of quality: intransparency and churn. But there is another one as well: duplication. And, as most any developer will tell you, duplication is also a code smell. So take a look at our DigSite class, which I presented above. Given what I just said here, what do you notice?</p>
+<p>Regardless of your facility with code, please do take a look. Reason out what I might be referring to here.</p>
+<p>You might notice there how we have two places where we reference <code>(&:finished?)</code>. What that really represents is a domain concept: finished activities. But the important part there is really that &#8220;reject&#8221; notion. That changes that to a domain concept of <em>unfinished</em> activities. Given how we&#8217;ve framed this, it&#8217;s pretty clear we could extract that bit of domain knowledge out. Check out this revision:</p>
+<p></p>
+<!-- Urvanov Syntax Highlighter v2.8.33 -->
+
+		<div id="urvanov-syntax-highlighter-647f47178e42a601433526" class="urvanov-syntax-highlighter-syntax crayon-theme-classic urvanov-syntax-highlighter-font-monaco urvanov-syntax-highlighter-os-pc print-yes notranslate" data-settings=" minimize scroll-mouseover" style="margin-top: 12px; margin-bottom: 12px; font-size: 12px !important; line-height: 15px !important;">
+		
+			<div class="crayon-toolbar" data-settings=" mouseover overlay hide delay" style="font-size: 12px !important;height: 18px !important; line-height: 18px !important;">
+<span class="crayon-title"></span>
+			<div class="crayon-tools" style="font-size: 12px !important;height: 18px !important; line-height: 18px !important;">
+<div class="crayon-button urvanov-syntax-highlighter-nums-button" title="Toggle Line Numbers"><div class="urvanov-syntax-highlighter-button-icon"></div></div>
+<div class="crayon-button urvanov-syntax-highlighter-plain-button" title="Toggle Plain Code"><div class="urvanov-syntax-highlighter-button-icon"></div></div>
+<div class="crayon-button urvanov-syntax-highlighter-wrap-button" title="Toggle Line Wrap"><div class="urvanov-syntax-highlighter-button-icon"></div></div>
+<div class="crayon-button urvanov-syntax-highlighter-expand-button" title="Expand Code"><div class="urvanov-syntax-highlighter-button-icon"></div></div>
+<div class="crayon-button urvanov-syntax-highlighter-copy-button" title="Copy"><div class="urvanov-syntax-highlighter-button-icon"></div></div>
+<div class="crayon-button urvanov-syntax-highlighter-popup-button" title="Open Code In New Window"><div class="urvanov-syntax-highlighter-button-icon"></div></div>
+<span class="crayon-language">Ruby</span>
+</div>
+</div>
+			<div class="crayon-info" style="min-height: 16.8px !important; line-height: 16.8px !important;"></div>
+			<div class="urvanov-syntax-highlighter-plain-wrap"><textarea wrap="soft" class="urvanov-syntax-highlighter-plain print-no" data-settings="dblclick" readonly style="-moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4; font-size: 12px !important; line-height: 15px !important;">
+class DigSite
+  attr_accessor :activities
+
+  def initialize
+    @activities = []
+  end
+
+  def finished?
+    unfinished_activities.empty?
+  end
+
+  def total_cost
+    activities.sum(&amp;:cost)
+  end
+
+  def remaining_cost
+    unfinished_activities.sum(&amp;:cost)
+  end
+  
+  def unfinished_activities
+    activities.reject(&amp;:finished?)
+  end
+end</textarea></div>
+			<div class="urvanov-syntax-highlighter-main">
+				<table class="crayon-table">
+					<tr class="urvanov-syntax-highlighter-row">
+				<td class="crayon-nums " data-settings="show">
+					<div class="urvanov-syntax-highlighter-nums-content" style="font-size: 12px !important; line-height: 15px !important;">
+<div class="crayon-num" data-line="urvanov-syntax-highlighter-647f47178e42a601433526-1">1</div>
+<div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-647f47178e42a601433526-2">2</div>
+<div class="crayon-num" data-line="urvanov-syntax-highlighter-647f47178e42a601433526-3">3</div>
+<div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-647f47178e42a601433526-4">4</div>
+<div class="crayon-num" data-line="urvanov-syntax-highlighter-647f47178e42a601433526-5">5</div>
+<div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-647f47178e42a601433526-6">6</div>
+<div class="crayon-num" data-line="urvanov-syntax-highlighter-647f47178e42a601433526-7">7</div>
+<div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-647f47178e42a601433526-8">8</div>
+<div class="crayon-num crayon-marked-num crayon-top crayon-bottom" data-line="urvanov-syntax-highlighter-647f47178e42a601433526-9">9</div>
+<div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-647f47178e42a601433526-10">10</div>
+<div class="crayon-num" data-line="urvanov-syntax-highlighter-647f47178e42a601433526-11">11</div>
+<div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-647f47178e42a601433526-12">12</div>
+<div class="crayon-num" data-line="urvanov-syntax-highlighter-647f47178e42a601433526-13">13</div>
+<div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-647f47178e42a601433526-14">14</div>
+<div class="crayon-num" data-line="urvanov-syntax-highlighter-647f47178e42a601433526-15">15</div>
+<div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-647f47178e42a601433526-16">16</div>
+<div class="crayon-num crayon-marked-num crayon-top crayon-bottom" data-line="urvanov-syntax-highlighter-647f47178e42a601433526-17">17</div>
+<div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-647f47178e42a601433526-18">18</div>
+<div class="crayon-num" data-line="urvanov-syntax-highlighter-647f47178e42a601433526-19">19</div>
+<div class="crayon-num crayon-marked-num crayon-top crayon-striped-num" data-line="urvanov-syntax-highlighter-647f47178e42a601433526-20">20</div>
+<div class="crayon-num crayon-marked-num" data-line="urvanov-syntax-highlighter-647f47178e42a601433526-21">21</div>
+<div class="crayon-num crayon-marked-num crayon-bottom crayon-striped-num" data-line="urvanov-syntax-highlighter-647f47178e42a601433526-22">22</div>
+<div class="crayon-num" data-line="urvanov-syntax-highlighter-647f47178e42a601433526-23">23</div>
+</div>
+				</td>
+						<td class="urvanov-syntax-highlighter-code"><div class="crayon-pre" style="font-size: 12px !important; line-height: 15px !important; -moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4;">
+<div class="crayon-line" id="urvanov-syntax-highlighter-647f47178e42a601433526-1">
+<span class="crayon-r">class</span><span class="crayon-h"> </span><span class="crayon-i">DigSite</span>
+</div>
+<div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-647f47178e42a601433526-2">
+<span class="crayon-h">&nbsp;&nbsp;</span><span class="crayon-v">attr_accessor</span><span class="crayon-h"> </span><span class="crayon-o">:</span><span class="crayon-i">activities</span>
+</div>
+<div class="crayon-line" id="urvanov-syntax-highlighter-647f47178e42a601433526-3">&nbsp;</div>
+<div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-647f47178e42a601433526-4">
+<span class="crayon-h">&nbsp;&nbsp;</span><span class="crayon-r">def</span><span class="crayon-h"> </span><span class="crayon-i">initialize</span>
+</div>
+<div class="crayon-line" id="urvanov-syntax-highlighter-647f47178e42a601433526-5">
+<span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-v">@activities</span><span class="crayon-h"> </span><span class="crayon-o">=</span><span class="crayon-h"> </span><span class="crayon-sy">[</span><span class="crayon-sy">]</span>
+</div>
+<div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-647f47178e42a601433526-6">
+<span class="crayon-h">&nbsp;&nbsp;</span><span class="crayon-st">end</span>
+</div>
+<div class="crayon-line" id="urvanov-syntax-highlighter-647f47178e42a601433526-7">&nbsp;</div>
+<div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-647f47178e42a601433526-8">
+<span class="crayon-h">&nbsp;&nbsp;</span><span class="crayon-r">def</span><span class="crayon-h"> </span><span class="crayon-v">finished</span><span class="crayon-sy">?</span>
+</div>
+<div class="crayon-line crayon-marked-line crayon-top crayon-bottom" id="urvanov-syntax-highlighter-647f47178e42a601433526-9">
+<span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-v">unfinished_activities</span><span class="crayon-sy">.</span><span class="crayon-v">empty</span><span class="crayon-sy">?</span>
+</div>
+<div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-647f47178e42a601433526-10">
+<span class="crayon-h">&nbsp;&nbsp;</span><span class="crayon-st">end</span>
+</div>
+<div class="crayon-line" id="urvanov-syntax-highlighter-647f47178e42a601433526-11">&nbsp;</div>
+<div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-647f47178e42a601433526-12">
+<span class="crayon-h">&nbsp;&nbsp;</span><span class="crayon-r">def</span><span class="crayon-h"> </span><span class="crayon-v">total</span><span class="crayon-sy">_</span>cost</div>
+<div class="crayon-line" id="urvanov-syntax-highlighter-647f47178e42a601433526-13">
+<span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-v">activities</span><span class="crayon-sy">.</span><span class="crayon-e">sum</span><span class="crayon-sy">(</span><span class="crayon-o">&amp;</span><span class="crayon-o">:</span><span class="crayon-v">cost</span><span class="crayon-sy">)</span>
+</div>
+<div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-647f47178e42a601433526-14">
+<span class="crayon-h">&nbsp;&nbsp;</span><span class="crayon-st">end</span>
+</div>
+<div class="crayon-line" id="urvanov-syntax-highlighter-647f47178e42a601433526-15">&nbsp;</div>
+<div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-647f47178e42a601433526-16">
+<span class="crayon-h">&nbsp;&nbsp;</span><span class="crayon-r">def</span><span class="crayon-h"> </span><span class="crayon-v">remaining</span><span class="crayon-sy">_</span>cost</div>
+<div class="crayon-line crayon-marked-line crayon-top crayon-bottom" id="urvanov-syntax-highlighter-647f47178e42a601433526-17">
+<span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-v">unfinished_activities</span><span class="crayon-sy">.</span><span class="crayon-e">sum</span><span class="crayon-sy">(</span><span class="crayon-o">&amp;</span><span class="crayon-o">:</span><span class="crayon-v">cost</span><span class="crayon-sy">)</span>
+</div>
+<div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-647f47178e42a601433526-18">
+<span class="crayon-h">&nbsp;&nbsp;</span><span class="crayon-st">end</span>
+</div>
+<div class="crayon-line" id="urvanov-syntax-highlighter-647f47178e42a601433526-19"><span class="crayon-h">&nbsp;&nbsp;</span></div>
+<div class="crayon-line crayon-marked-line crayon-top crayon-striped-line" id="urvanov-syntax-highlighter-647f47178e42a601433526-20">
+<span class="crayon-h">&nbsp;&nbsp;</span><span class="crayon-r">def</span><span class="crayon-h"> </span><span class="crayon-v">unfinished</span><span class="crayon-sy">_</span>activities</div>
+<div class="crayon-line crayon-marked-line" id="urvanov-syntax-highlighter-647f47178e42a601433526-21">
+<span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-v">activities</span><span class="crayon-sy">.</span><span class="crayon-e">reject</span><span class="crayon-sy">(</span><span class="crayon-o">&amp;</span><span class="crayon-o">:</span><span class="crayon-v">finished</span><span class="crayon-sy">?</span><span class="crayon-sy">)</span>
+</div>
+<div class="crayon-line crayon-marked-line crayon-bottom crayon-striped-line" id="urvanov-syntax-highlighter-647f47178e42a601433526-22">
+<span class="crayon-h">&nbsp;&nbsp;</span><span class="crayon-st">end</span>
+</div>
+<div class="crayon-line" id="urvanov-syntax-highlighter-647f47178e42a601433526-23"><span class="crayon-st">end</span></div>
+</div></td>
+					</tr>
+				</table>
+			</div>
+		</div>
+<!-- [Format Time: 0.0003 seconds] -->
+<p></p>
+<p>This is what would be referred to as refactoring in a strict programmatic sense but do notice that what &#8220;refactoring&#8221; really means is &#8220;putting pressure on design.&#8221; It just happens to mean you do so in a way where the overall behavior already in place does not change. And how do you know that the behavior does not change? Well, that&#8217;s what you have your tests for!</p>
+<p>Does this really matter, though? Refactoring is one of those things that can be hard to justify for some people. After all, the code <em>is</em> already there. And it <em>is</em> working. And we want to get more features out rather than &#8220;tinkering&#8221; with existing features. The problem is just that: some people view this as a form of &#8220;tinkering&#8221; with the code or &#8220;gold plating&#8221; it.</p>
+<p>Yet bear with me here as I take a moment and consider the differences here with our own code. With the &#8220;remaining_cost&#8221; method, we went from this:</p>
+<p><code>activities.reject(&:finished?).sum(&:cost)</code></p>
+<p>(which basically says, &#8220;first reject any activities that are finished and then sum up the cost of those that are left&#8221;) to this:</p>
+<p><code>unfinished_activities.sum(&:cost)</code></p>
+<p>(which basically says, &#8220;sum up the cost of all unfinished activities&#8221;).</p>
+<p>With the &#8220;finished?&#8221; method, we went from this:</p>
+<p><code>activities.all?(&:finished)</code></p>
+<p>(which basically says, &#8220;check if all the activities are finished&#8221;) to this:</p>
+<p>to this:</p>
+<p><code>unfinished_activities.empty?</code></p>
+<p>(which basically says, &#8220;Are there any unfinished activities?&#8221;).</p>
+<p>So that bit of refactoring, simple as it was, actually made the code easier to understand and perhaps even a bit easier to describe.</p>
+<p>Oh, and by the way, notice how in &#8220;finished?&#8221; we are now back to basically checking for an empty list &#8212; which is actually what we had started with in the second post! Back then we had this:</p>
+<p></p>
+<!-- Urvanov Syntax Highlighter v2.8.33 -->
+
+		<div id="urvanov-syntax-highlighter-647f47178e432097576264" class="urvanov-syntax-highlighter-syntax crayon-theme-classic urvanov-syntax-highlighter-font-monaco urvanov-syntax-highlighter-os-pc print-yes notranslate" data-settings=" minimize scroll-mouseover" style="margin-top: 12px; margin-bottom: 12px; font-size: 12px !important; line-height: 15px !important;">
+		
+			<div class="crayon-toolbar" data-settings=" mouseover overlay hide delay" style="font-size: 12px !important;height: 18px !important; line-height: 18px !important;">
+<span class="crayon-title"></span>
+			<div class="crayon-tools" style="font-size: 12px !important;height: 18px !important; line-height: 18px !important;">
+<div class="crayon-button urvanov-syntax-highlighter-nums-button" title="Toggle Line Numbers"><div class="urvanov-syntax-highlighter-button-icon"></div></div>
+<div class="crayon-button urvanov-syntax-highlighter-plain-button" title="Toggle Plain Code"><div class="urvanov-syntax-highlighter-button-icon"></div></div>
+<div class="crayon-button urvanov-syntax-highlighter-wrap-button" title="Toggle Line Wrap"><div class="urvanov-syntax-highlighter-button-icon"></div></div>
+<div class="crayon-button urvanov-syntax-highlighter-expand-button" title="Expand Code"><div class="urvanov-syntax-highlighter-button-icon"></div></div>
+<div class="crayon-button urvanov-syntax-highlighter-copy-button" title="Copy"><div class="urvanov-syntax-highlighter-button-icon"></div></div>
+<div class="crayon-button urvanov-syntax-highlighter-popup-button" title="Open Code In New Window"><div class="urvanov-syntax-highlighter-button-icon"></div></div>
+<span class="crayon-language">Ruby</span>
+</div>
+</div>
+			<div class="crayon-info" style="min-height: 16.8px !important; line-height: 16.8px !important;"></div>
+			<div class="urvanov-syntax-highlighter-plain-wrap"><textarea wrap="soft" class="urvanov-syntax-highlighter-plain print-no" data-settings="dblclick" readonly style="-moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4; font-size: 12px !important; line-height: 15px !important;">
+def finished?
+  activities.empty?
+end</textarea></div>
+			<div class="urvanov-syntax-highlighter-main">
+				<table class="crayon-table">
+					<tr class="urvanov-syntax-highlighter-row">
+				<td class="crayon-nums " data-settings="show">
+					<div class="urvanov-syntax-highlighter-nums-content" style="font-size: 12px !important; line-height: 15px !important;">
+<div class="crayon-num" data-line="urvanov-syntax-highlighter-647f47178e432097576264-1">1</div>
+<div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-647f47178e432097576264-2">2</div>
+<div class="crayon-num" data-line="urvanov-syntax-highlighter-647f47178e432097576264-3">3</div>
+</div>
+				</td>
+						<td class="urvanov-syntax-highlighter-code"><div class="crayon-pre" style="font-size: 12px !important; line-height: 15px !important; -moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4;">
+<div class="crayon-line" id="urvanov-syntax-highlighter-647f47178e432097576264-1">
+<span class="crayon-r">def</span><span class="crayon-h"> </span><span class="crayon-v">finished</span><span class="crayon-sy">?</span>
+</div>
+<div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-647f47178e432097576264-2">
+<span class="crayon-h">&nbsp;&nbsp;</span><span class="crayon-v">activities</span><span class="crayon-sy">.</span><span class="crayon-v">empty</span><span class="crayon-sy">?</span>
+</div>
+<div class="crayon-line" id="urvanov-syntax-highlighter-647f47178e432097576264-3"><span class="crayon-st">end</span></div>
+</div></td>
+					</tr>
+				</table>
+			</div>
+		</div>
+<!-- [Format Time: 0.0001 seconds] -->
+<p></p>
+<p>It&#8217;s interesting when that kind of thing happens.</p>
+<h2>The Domain Emerges</h2>
+<p>I say interesting because what you are seeing there is the expression of the domain evolve in the code. Some of the best programmatic developers I know are very good at being able to spot this. Further, some of the adherents of TDD who are very good at &#8220;seeing ahead&#8221; will have actually leap-frogged past much of what I did in the second (and perhaps even third) post and simply ended up where we&#8217;re at now.</p>
+<p>However, some people see that as a &#8220;violation&#8221; of TDD because you didn&#8217;t increment &#8220;correctly.&#8221; In fact, however, what this simply shows is that there is no one, right way. And the way that works is often going to be predicated upon the specialist skills of the team you are working with. That said, there <em>is</em> a balance between doing the minimum that&#8217;s needed and looking too far ahead. Anticipating what a feature might have to do or become is often how we end up with over-engineering and that can become a form of technical debt.</p>
+<p>I can see how, depending on your experience, this may seem trivial but reflecting your domain in your code <em>is</em> a good thing to do. That&#8217;s the basis of Domain-Driven Design. Regardless of your adherence or lack thereof to that discipline, it&#8217;s still a good idea to be able to reduce ambiguity when and where possible and you generally do that by exposing the domain.</p>
+<p>Finally, from a purely programmatic perspective related to the above example, we also put a functional call into a context, which can help for clarity. (See my post on the <a href="/2014/07/functional-programming-is-there-a-clarity-trade-off/">functional clarity trade-off</a> for more on this.)</p>
+<h2>Test Expressiveness</h2>
+<p>I did promise I would show the full test at this point, so here that is:</p>
+<p></p>
+<!-- Urvanov Syntax Highlighter v2.8.33 -->
+
+		<div id="urvanov-syntax-highlighter-647f47178e435565118774" class="urvanov-syntax-highlighter-syntax crayon-theme-classic urvanov-syntax-highlighter-font-monaco urvanov-syntax-highlighter-os-pc print-yes notranslate" data-settings=" minimize scroll-mouseover" style="margin-top: 12px; margin-bottom: 12px; font-size: 12px !important; line-height: 15px !important;">
+		
+			<div class="crayon-toolbar" data-settings=" mouseover overlay hide delay" style="font-size: 12px !important;height: 18px !important; line-height: 18px !important;">
+<span class="crayon-title"></span>
+			<div class="crayon-tools" style="font-size: 12px !important;height: 18px !important; line-height: 18px !important;">
+<div class="crayon-button urvanov-syntax-highlighter-nums-button" title="Toggle Line Numbers"><div class="urvanov-syntax-highlighter-button-icon"></div></div>
+<div class="crayon-button urvanov-syntax-highlighter-plain-button" title="Toggle Plain Code"><div class="urvanov-syntax-highlighter-button-icon"></div></div>
+<div class="crayon-button urvanov-syntax-highlighter-wrap-button" title="Toggle Line Wrap"><div class="urvanov-syntax-highlighter-button-icon"></div></div>
+<div class="crayon-button urvanov-syntax-highlighter-expand-button" title="Expand Code"><div class="urvanov-syntax-highlighter-button-icon"></div></div>
+<div class="crayon-button urvanov-syntax-highlighter-copy-button" title="Copy"><div class="urvanov-syntax-highlighter-button-icon"></div></div>
+<div class="crayon-button urvanov-syntax-highlighter-popup-button" title="Open Code In New Window"><div class="urvanov-syntax-highlighter-button-icon"></div></div>
+<span class="crayon-language">Ruby</span>
+</div>
+</div>
+			<div class="crayon-info" style="min-height: 16.8px !important; line-height: 16.8px !important;"></div>
+			<div class="urvanov-syntax-highlighter-plain-wrap"><textarea wrap="soft" class="urvanov-syntax-highlighter-plain print-no" data-settings="dblclick" readonly style="-moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4; font-size: 12px !important; line-height: 15px !important;">
+RSpec.describe DigSite do
+  describe "state" do
+    let(:dig) { DigSite.new }
+    let(:activity) { Activity.new }
+
+    it "represents a dig with no activities as finished" do
+      expect(dig).to be_finished
+    end
+
+    it "represents a dig with an unfinished activity as unfinished" do
+      dig.activities &lt;&lt; activity
+      expect(dig).not_to be_finished
+    end
+
+    it "considers a dig as finished if all activities are finished" do
+      dig.activities &lt;&lt; activity
+      activity.set_finished
+      expect(dig).to be_finished
+    end
+  end
+
+  describe "costs" do
+    let(:dig) { DigSite.new }
+    let(:finished) { Activity.new(cost: 10, finished: true) }
+    let(:small_unfinished) { Activity.new(cost: 2) }
+    let(:large_unfinished) { Activity.new(cost: 25) }
+
+    before(:example) do
+      dig.activities = [finished, small_unfinished, large_unfinished]
+    end
+
+    it "provides a total cost of all activities" do
+      expect(dig.total_cost).to eq(37)
+    end
+
+    it "provides a remaining cost based on unfinished activities" do
+      expect(dig.remaining_cost).to eq(27)
+    end
+  end
+end</textarea></div>
+			<div class="urvanov-syntax-highlighter-main">
+				<table class="crayon-table">
+					<tr class="urvanov-syntax-highlighter-row">
+				<td class="crayon-nums " data-settings="show">
+					<div class="urvanov-syntax-highlighter-nums-content" style="font-size: 12px !important; line-height: 15px !important;">
+<div class="crayon-num" data-line="urvanov-syntax-highlighter-647f47178e435565118774-1">1</div>
+<div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-647f47178e435565118774-2">2</div>
+<div class="crayon-num" data-line="urvanov-syntax-highlighter-647f47178e435565118774-3">3</div>
+<div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-647f47178e435565118774-4">4</div>
+<div class="crayon-num" data-line="urvanov-syntax-highlighter-647f47178e435565118774-5">5</div>
+<div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-647f47178e435565118774-6">6</div>
+<div class="crayon-num" data-line="urvanov-syntax-highlighter-647f47178e435565118774-7">7</div>
+<div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-647f47178e435565118774-8">8</div>
+<div class="crayon-num" data-line="urvanov-syntax-highlighter-647f47178e435565118774-9">9</div>
+<div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-647f47178e435565118774-10">10</div>
+<div class="crayon-num" data-line="urvanov-syntax-highlighter-647f47178e435565118774-11">11</div>
+<div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-647f47178e435565118774-12">12</div>
+<div class="crayon-num" data-line="urvanov-syntax-highlighter-647f47178e435565118774-13">13</div>
+<div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-647f47178e435565118774-14">14</div>
+<div class="crayon-num" data-line="urvanov-syntax-highlighter-647f47178e435565118774-15">15</div>
+<div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-647f47178e435565118774-16">16</div>
+<div class="crayon-num" data-line="urvanov-syntax-highlighter-647f47178e435565118774-17">17</div>
+<div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-647f47178e435565118774-18">18</div>
+<div class="crayon-num" data-line="urvanov-syntax-highlighter-647f47178e435565118774-19">19</div>
+<div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-647f47178e435565118774-20">20</div>
+<div class="crayon-num" data-line="urvanov-syntax-highlighter-647f47178e435565118774-21">21</div>
+<div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-647f47178e435565118774-22">22</div>
+<div class="crayon-num" data-line="urvanov-syntax-highlighter-647f47178e435565118774-23">23</div>
+<div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-647f47178e435565118774-24">24</div>
+<div class="crayon-num" data-line="urvanov-syntax-highlighter-647f47178e435565118774-25">25</div>
+<div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-647f47178e435565118774-26">26</div>
+<div class="crayon-num" data-line="urvanov-syntax-highlighter-647f47178e435565118774-27">27</div>
+<div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-647f47178e435565118774-28">28</div>
+<div class="crayon-num" data-line="urvanov-syntax-highlighter-647f47178e435565118774-29">29</div>
+<div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-647f47178e435565118774-30">30</div>
+<div class="crayon-num" data-line="urvanov-syntax-highlighter-647f47178e435565118774-31">31</div>
+<div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-647f47178e435565118774-32">32</div>
+<div class="crayon-num" data-line="urvanov-syntax-highlighter-647f47178e435565118774-33">33</div>
+<div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-647f47178e435565118774-34">34</div>
+<div class="crayon-num" data-line="urvanov-syntax-highlighter-647f47178e435565118774-35">35</div>
+<div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-647f47178e435565118774-36">36</div>
+<div class="crayon-num" data-line="urvanov-syntax-highlighter-647f47178e435565118774-37">37</div>
+<div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-647f47178e435565118774-38">38</div>
+<div class="crayon-num" data-line="urvanov-syntax-highlighter-647f47178e435565118774-39">39</div>
+<div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-647f47178e435565118774-40">40</div>
+</div>
+				</td>
+						<td class="urvanov-syntax-highlighter-code"><div class="crayon-pre" style="font-size: 12px !important; line-height: 15px !important; -moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4;">
+<div class="crayon-line" id="urvanov-syntax-highlighter-647f47178e435565118774-1">
+<span class="crayon-v">RSpec</span><span class="crayon-sy">.</span><span class="crayon-i">describe</span><span class="crayon-h"> </span><span class="crayon-i">DigSite</span><span class="crayon-h"> </span><span class="crayon-st">do</span>
+</div>
+<div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-647f47178e435565118774-2">
+<span class="crayon-h">&nbsp;&nbsp;</span><span class="crayon-i">describe</span><span class="crayon-h"> </span><span class="crayon-s">"state"</span><span class="crayon-h"> </span><span class="crayon-st">do</span>
+</div>
+<div class="crayon-line" id="urvanov-syntax-highlighter-647f47178e435565118774-3">
+<span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-e">let</span><span class="crayon-sy">(</span><span class="crayon-o">:</span><span class="crayon-v">dig</span><span class="crayon-sy">)</span><span class="crayon-h"> </span><span class="crayon-k ">{</span><span class="crayon-h"> </span><span class="crayon-v">DigSite</span><span class="crayon-sy">.</span><span class="crayon-i">new</span><span class="crayon-h"> </span><span class="crayon-k ">}</span>
+</div>
+<div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-647f47178e435565118774-4">
+<span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-e">let</span><span class="crayon-sy">(</span><span class="crayon-o">:</span><span class="crayon-v">activity</span><span class="crayon-sy">)</span><span class="crayon-h"> </span><span class="crayon-k ">{</span><span class="crayon-h"> </span><span class="crayon-v">Activity</span><span class="crayon-sy">.</span><span class="crayon-i">new</span><span class="crayon-h"> </span><span class="crayon-k ">}</span>
+</div>
+<div class="crayon-line" id="urvanov-syntax-highlighter-647f47178e435565118774-5">&nbsp;</div>
+<div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-647f47178e435565118774-6">
+<span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-i">it</span><span class="crayon-h"> </span><span class="crayon-s">"represents a dig with no activities as finished"</span><span class="crayon-h"> </span><span class="crayon-st">do</span>
+</div>
+<div class="crayon-line" id="urvanov-syntax-highlighter-647f47178e435565118774-7">
+<span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-e">expect</span><span class="crayon-sy">(</span><span class="crayon-v">dig</span><span class="crayon-sy">)</span><span class="crayon-sy">.</span><span class="crayon-i">to</span><span class="crayon-h"> </span><span class="crayon-v">be</span><span class="crayon-sy">_</span>finished</div>
+<div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-647f47178e435565118774-8">
+<span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-st">end</span>
+</div>
+<div class="crayon-line" id="urvanov-syntax-highlighter-647f47178e435565118774-9">&nbsp;</div>
+<div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-647f47178e435565118774-10">
+<span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-i">it</span><span class="crayon-h"> </span><span class="crayon-s">"represents a dig with an unfinished activity as unfinished"</span><span class="crayon-h"> </span><span class="crayon-st">do</span>
+</div>
+<div class="crayon-line" id="urvanov-syntax-highlighter-647f47178e435565118774-11">
+<span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-v">dig</span><span class="crayon-sy">.</span><span class="crayon-v">activities</span><span class="crayon-h"> </span><span class="crayon-o">&lt;&lt;</span><span class="crayon-h"> </span><span class="crayon-i">activity</span>
+</div>
+<div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-647f47178e435565118774-12">
+<span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-e">expect</span><span class="crayon-sy">(</span><span class="crayon-v">dig</span><span class="crayon-sy">)</span><span class="crayon-sy">.</span><span class="crayon-v">not</span><span class="crayon-sy">_</span>to<span class="crayon-h"> </span><span class="crayon-v">be</span><span class="crayon-sy">_</span>finished</div>
+<div class="crayon-line" id="urvanov-syntax-highlighter-647f47178e435565118774-13">
+<span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-st">end</span>
+</div>
+<div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-647f47178e435565118774-14">&nbsp;</div>
+<div class="crayon-line" id="urvanov-syntax-highlighter-647f47178e435565118774-15">
+<span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-i">it</span><span class="crayon-h"> </span><span class="crayon-s">"considers a dig as finished if all activities are finished"</span><span class="crayon-h"> </span><span class="crayon-st">do</span>
+</div>
+<div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-647f47178e435565118774-16">
+<span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-v">dig</span><span class="crayon-sy">.</span><span class="crayon-v">activities</span><span class="crayon-h"> </span><span class="crayon-o">&lt;&lt;</span><span class="crayon-h"> </span><span class="crayon-i">activity</span>
+</div>
+<div class="crayon-line" id="urvanov-syntax-highlighter-647f47178e435565118774-17">
+<span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-v">activity</span><span class="crayon-sy">.</span><span class="crayon-v">set</span><span class="crayon-sy">_</span>finished</div>
+<div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-647f47178e435565118774-18">
+<span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-e">expect</span><span class="crayon-sy">(</span><span class="crayon-v">dig</span><span class="crayon-sy">)</span><span class="crayon-sy">.</span><span class="crayon-i">to</span><span class="crayon-h"> </span><span class="crayon-v">be</span><span class="crayon-sy">_</span>finished</div>
+<div class="crayon-line" id="urvanov-syntax-highlighter-647f47178e435565118774-19">
+<span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-st">end</span>
+</div>
+<div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-647f47178e435565118774-20">
+<span class="crayon-h">&nbsp;&nbsp;</span><span class="crayon-st">end</span>
+</div>
+<div class="crayon-line" id="urvanov-syntax-highlighter-647f47178e435565118774-21">&nbsp;</div>
+<div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-647f47178e435565118774-22">
+<span class="crayon-h">&nbsp;&nbsp;</span><span class="crayon-i">describe</span><span class="crayon-h"> </span><span class="crayon-s">"costs"</span><span class="crayon-h"> </span><span class="crayon-st">do</span>
+</div>
+<div class="crayon-line" id="urvanov-syntax-highlighter-647f47178e435565118774-23">
+<span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-e">let</span><span class="crayon-sy">(</span><span class="crayon-o">:</span><span class="crayon-v">dig</span><span class="crayon-sy">)</span><span class="crayon-h"> </span><span class="crayon-k ">{</span><span class="crayon-h"> </span><span class="crayon-v">DigSite</span><span class="crayon-sy">.</span><span class="crayon-i">new</span><span class="crayon-h"> </span><span class="crayon-k ">}</span>
+</div>
+<div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-647f47178e435565118774-24">
+<span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-e">let</span><span class="crayon-sy">(</span><span class="crayon-o">:</span><span class="crayon-v">finished</span><span class="crayon-sy">)</span><span class="crayon-h"> </span><span class="crayon-k ">{</span><span class="crayon-h"> </span><span class="crayon-v">Activity</span><span class="crayon-sy">.</span><span class="crayon-e">new</span><span class="crayon-sy">(</span><span class="crayon-v">cost</span><span class="crayon-o">:</span><span class="crayon-h"> </span><span class="crayon-cn">10</span><span class="crayon-sy">,</span><span class="crayon-h"> </span><span class="crayon-v">finished</span><span class="crayon-o">:</span><span class="crayon-h"> </span><span class="crayon-r">true</span><span class="crayon-sy">)</span><span class="crayon-h"> </span><span class="crayon-k ">}</span>
+</div>
+<div class="crayon-line" id="urvanov-syntax-highlighter-647f47178e435565118774-25">
+<span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-e">let</span><span class="crayon-sy">(</span><span class="crayon-o">:</span><span class="crayon-v">small_unfinished</span><span class="crayon-sy">)</span><span class="crayon-h"> </span><span class="crayon-k ">{</span><span class="crayon-h"> </span><span class="crayon-v">Activity</span><span class="crayon-sy">.</span><span class="crayon-e">new</span><span class="crayon-sy">(</span><span class="crayon-v">cost</span><span class="crayon-o">:</span><span class="crayon-h"> </span><span class="crayon-cn">2</span><span class="crayon-sy">)</span><span class="crayon-h"> </span><span class="crayon-k ">}</span>
+</div>
+<div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-647f47178e435565118774-26">
+<span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-e">let</span><span class="crayon-sy">(</span><span class="crayon-o">:</span><span class="crayon-v">large_unfinished</span><span class="crayon-sy">)</span><span class="crayon-h"> </span><span class="crayon-k ">{</span><span class="crayon-h"> </span><span class="crayon-v">Activity</span><span class="crayon-sy">.</span><span class="crayon-e">new</span><span class="crayon-sy">(</span><span class="crayon-v">cost</span><span class="crayon-o">:</span><span class="crayon-h"> </span><span class="crayon-cn">25</span><span class="crayon-sy">)</span><span class="crayon-h"> </span><span class="crayon-k ">}</span>
+</div>
+<div class="crayon-line" id="urvanov-syntax-highlighter-647f47178e435565118774-27">&nbsp;</div>
+<div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-647f47178e435565118774-28">
+<span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-e">before</span><span class="crayon-sy">(</span><span class="crayon-o">:</span><span class="crayon-v">example</span><span class="crayon-sy">)</span><span class="crayon-h"> </span><span class="crayon-st">do</span>
+</div>
+<div class="crayon-line" id="urvanov-syntax-highlighter-647f47178e435565118774-29">
+<span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-v">dig</span><span class="crayon-sy">.</span><span class="crayon-v">activities</span><span class="crayon-h"> </span><span class="crayon-o">=</span><span class="crayon-h"> </span><span class="crayon-sy">[</span><span class="crayon-v">finished</span><span class="crayon-sy">,</span><span class="crayon-h"> </span><span class="crayon-v">small_unfinished</span><span class="crayon-sy">,</span><span class="crayon-h"> </span><span class="crayon-v">large_unfinished</span><span class="crayon-sy">]</span>
+</div>
+<div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-647f47178e435565118774-30">
+<span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-st">end</span>
+</div>
+<div class="crayon-line" id="urvanov-syntax-highlighter-647f47178e435565118774-31">&nbsp;</div>
+<div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-647f47178e435565118774-32">
+<span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-i">it</span><span class="crayon-h"> </span><span class="crayon-s">"provides a total cost of all activities"</span><span class="crayon-h"> </span><span class="crayon-st">do</span>
+</div>
+<div class="crayon-line" id="urvanov-syntax-highlighter-647f47178e435565118774-33">
+<span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-e">expect</span><span class="crayon-sy">(</span><span class="crayon-v">dig</span><span class="crayon-sy">.</span><span class="crayon-v">total_cost</span><span class="crayon-sy">)</span><span class="crayon-sy">.</span><span class="crayon-i">to</span><span class="crayon-h"> </span><span class="crayon-e">eq</span><span class="crayon-sy">(</span><span class="crayon-cn">37</span><span class="crayon-sy">)</span>
+</div>
+<div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-647f47178e435565118774-34">
+<span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-st">end</span>
+</div>
+<div class="crayon-line" id="urvanov-syntax-highlighter-647f47178e435565118774-35">&nbsp;</div>
+<div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-647f47178e435565118774-36">
+<span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-i">it</span><span class="crayon-h"> </span><span class="crayon-s">"provides a remaining cost based on unfinished activities"</span><span class="crayon-h"> </span><span class="crayon-st">do</span>
+</div>
+<div class="crayon-line" id="urvanov-syntax-highlighter-647f47178e435565118774-37">
+<span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-e">expect</span><span class="crayon-sy">(</span><span class="crayon-v">dig</span><span class="crayon-sy">.</span><span class="crayon-v">remaining_cost</span><span class="crayon-sy">)</span><span class="crayon-sy">.</span><span class="crayon-i">to</span><span class="crayon-h"> </span><span class="crayon-e">eq</span><span class="crayon-sy">(</span><span class="crayon-cn">27</span><span class="crayon-sy">)</span>
+</div>
+<div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-647f47178e435565118774-38">
+<span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-st">end</span>
+</div>
+<div class="crayon-line" id="urvanov-syntax-highlighter-647f47178e435565118774-39">
+<span class="crayon-h">&nbsp;&nbsp;</span><span class="crayon-st">end</span>
+</div>
+<div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-647f47178e435565118774-40"><span class="crayon-st">end</span></div>
+</div></td>
+					</tr>
+				</table>
+			</div>
+		</div>
+<!-- [Format Time: 0.0009 seconds] -->
+<p></p>
+<p>This notion of using an xSpec style &#8212; as RSpec does; also tools like Mocha, Jasmine, Spock, etc &#8212; is something that some people really don&#8217;t like. They don&#8217;t like that idea of mixing code and natural language. I happen to like it and I also find it can be a nice way to keep the natural language close to the code rather than separate from it (as you might find in traditional BDD, or xBehave, approaches, using tools like Cucumber, SpecFlow, etc).</p>
+<p>Also of note, when these tests are executed, you get this output:</p>
+<pre>
+DigSite
+  state
+    represents a dig with no activities as finished
+    represents a dig with an unfinished activity as unfinished
+    considers a dig as finished if all activities are finished
+  costs
+    provides a total cost of all activities
+    provides a remaining cost based on unfinished activities
+</pre>
+<p>This is a way to push natural language up (xSpec) rather than pull natural language down (xBehave). This can allow you to have high-level discussions with business about how value is being represented. Also, if you look at the code of our tests, each is simple enough and almost reads like natural language that business shouldn&#8217;t have too much trouble interacting with it at that level as well.</p>
+<p>So, from a testing standpoint, this is a call to choosing your test solutions, and thus your test abstractions, wisely. Ruby happens to be really good at this kind of thing. But none of what I&#8217;m describing here is particular to Ruby. You can do all of these techniques with suitable test runners in just about every language out there.</p>
+<h2>Bringing Ideas Together</h2>
+<p>This was the longest post in this series so far and this seems like a good place to end for now. We&#8217;re ending here with a cautionary note against being too purist in any given approach, but with a recognition that there <em>are</em> various ways to go about evolving code (correctness) based on putting pressure on design (value), and reflecting our domain in our code while adhering to testability.</p>
+<p>Putting pressure on design, in this context, is not just about the design of the business feature itself (an external quality) but also on the code itself, in terms of how it is architected to be scalable or modular (internal qualities) as well as reducing the likelihood of certain kinds of technical debt.</p>
+<p>Testers &#8212; not just programmers &#8212; care about both of these kinds of qualities. That&#8217;s why, working as part of a delivery team, we&#8217;re all developers.</p>
+<h2>Shading Into Integration</h2>
+<p>I mentioned a few places above where the DigSite and the Activity were getting more intertwined. That&#8217;s a good way to determine when you are starting to move a bit beyond so-called &#8220;unit&#8221; and getting more into &#8220;integration.&#8221; The fact that you need a context and that that context will start to provide the basis for a business scenario is the context where you are leaving strict &#8220;programmer test&#8221; (correctness) and venturing more into &#8220;customer test&#8221; (value).</p>
+<p>I talked about some of these ideas in <a href="/2016/08/the-integration-pact/">the integration pact</a> so I won&#8217;t revisit too much of that here. All I wanted to do was showcase the line where the distinctions start to happen or at least become visible on your testing horizon.</p>
+<h2>Onward and Forward!</h2>
+<p>Join me in the <a href="/2018/05/an-ode-to-testability-part-5/">next post</a> as we get into some areas that can introduce a bit more complexity into how we frame our examples. Specifically we&#8217;ll get into durations and that gets tricky because you run the risk of temporal coupling (for invocation), brittle tests (that rely on that invocation), and making your code somewhat intransparent regarding its intent.</p>
+<div class="addtoany_share_save_container addtoany_content addtoany_content_bottom"><div class="a2a_kit a2a_kit_size_16 addtoany_list" data-a2a-url="https://testerstories.com/2018/05/an-ode-to-testability-part-4/" data-a2a-title="An Ode to Testability, Part 4">
+<a class="a2a_button_facebook" href="https://www.addtoany.com/add_to/facebook?linkurl=%2F2018%2F05%2Fan-ode-to-testability-part-4%2F&amp;linkname=An%20Ode%20to%20Testability%2C%20Part%204" title="Facebook" rel="nofollow noopener" target="_blank"></a><a class="a2a_button_twitter" href="https://www.addtoany.com/add_to/twitter?linkurl=%2F2018%2F05%2Fan-ode-to-testability-part-4%2F&amp;linkname=An%20Ode%20to%20Testability%2C%20Part%204" title="Twitter" rel="nofollow noopener" target="_blank"></a><a class="a2a_button_linkedin" href="https://www.addtoany.com/add_to/linkedin?linkurl=%2F2018%2F05%2Fan-ode-to-testability-part-4%2F&amp;linkname=An%20Ode%20to%20Testability%2C%20Part%204" title="LinkedIn" rel="nofollow noopener" target="_blank"></a><a class="a2a_button_print" href="https://www.addtoany.com/add_to/print?linkurl=%2F2018%2F05%2Fan-ode-to-testability-part-4%2F&amp;linkname=An%20Ode%20to%20Testability%2C%20Part%204" title="Print" rel="nofollow noopener" target="_blank"></a><a class="a2a_dd addtoany_share_save addtoany_share" href="https://www.addtoany.com/share"><img src="https://static.addtoany.com/buttons/favicon.png" alt="Share"></a>
+</div></div>      
+	</div>
+<!-- .entry-content -->
+	<footer class="entry-footer">       
+		<p class="written-by">This article was written by <a href="/author/administrator/">Jeff Nyman</a></p>
+<div class="author-bio">
+		
+	<h3><a href="/author/administrator/" rel="author">About  Jeff Nyman</a></h3>		
+	<img alt="" src="https://secure.gravatar.com/avatar/a3b6c2d0b2bafdb9ad9cdf782873204d?s=72&#038;d=mm&#038;r=pg" srcset="https://secure.gravatar.com/avatar/a3b6c2d0b2bafdb9ad9cdf782873204d?s=144&#038;d=mm&#038;r=pg 2x" class="avatar avatar-72 photo" height="72" width="72" decoding="async"><p class="author-description">Anything I put here is an approximation of the truth. You're getting a particular view of myself ... and it's the view I'm choosing to present to you. If you've never met me before in person, please realize I'm not the same in person as I am in writing. That's because I can only put part of myself down into words.
+
+If you have met me before in person then I'd ask you to consider that the view you've formed that way and the view you come to by reading what I say here may, in fact, both be true. I'd advise that you not automatically discard either viewpoint when they conflict or accept either as truth when they agree.</p>		
+</div>
+<!-- .author-bio -->
+	</footer><!-- .entry-footer -->
+
+	<nav class="navigation post-navigation" aria-label="Posts">
+		<h2 class="screen-reader-text">Post navigation</h2>
+		<div class="nav-links">
+<div class="nav-previous"><a href="/2018/04/an-ode-to-testability-part-3/" rel="prev"><span class="genericon genericon-previous" aria-hidden="true"></span> <span class="screen-reader-text">Previous post:</span> <span class="post-title">An Ode to Testability, Part 3</span></a></div>
+<div class="nav-next"><a href="/2018/05/an-ode-to-testability-part-5/" rel="next"><span class="post-title">An Ode to Testability, Part 5</span><span class="screen-reader-text">Next post:</span> <span class="genericon genericon-next" aria-hidden="true"></span> </a></div>
+</div>
+	</nav>
+<div id="comments" class="comments-area">
+
+
+		<div id="respond" class="comment-respond">
+		<h3 id="reply-title" class="comment-reply-title">Leave a Reply <small><a rel="nofollow" id="cancel-comment-reply-link" href="/2018/05/an-ode-to-testability-part-4/#respond" style="display:none;">Cancel reply</a></small>
+</h3>
+<form action="https://testerstories.com/wp-comments-post.php" method="post" id="commentform" class="comment-form" novalidate>
+<p class="comment-notes"><span id="email-notes">Your email address will not be published.</span> <span class="required-field-message">Required fields are marked <span class="required">*</span></span></p>
+<p class="comment-form-comment"><label for="comment">Comment <span class="required">*</span></label> <textarea id="comment" name="comment" cols="45" rows="8" maxlength="65525" required></textarea></p>
+<p class="comment-form-author"><label for="author">Name <span class="required">*</span></label> <input id="author" name="author" type="text" value="" size="30" maxlength="245" autocomplete="name" required></p>
+<p class="comment-form-email"><label for="email">Email <span class="required">*</span></label> <input id="email" name="email" type="email" value="" size="30" maxlength="100" aria-describedby="email-notes" autocomplete="email" required></p>
+<p class="comment-form-url"><label for="url">Website</label> <input id="url" name="url" type="url" value="" size="30" maxlength="200" autocomplete="url"></p>
+<p class="form-submit"><input name="submit" type="submit" id="submit" class="submit" value="Post Comment"> <input type="hidden" name="comment_post_ID" value="3436" id="comment_post_ID">
+<input type="hidden" name="comment_parent" id="comment_parent" value="0">
+</p>
+<p style="display: none;"><input type="hidden" id="akismet_comment_nonce" name="akismet_comment_nonce" value="389fb34c1b"></p>
+<p style="display: none !important;"><label>&#916;<textarea name="ak_hp_textarea" cols="45" rows="8" maxlength="100"></textarea></label><input type="hidden" id="ak_js_1" name="ak_js" value="237"><script>document.getElementById( "ak_js_1" ).setAttribute( "value", ( new Date() ).getTime() );</script></p>
+</form>	</div>
+<!-- #respond -->
+	<p class="akismet_comment_form_privacy_notice">This site uses Akismet to reduce spam. <a href="https://akismet.com/privacy/" target="_blank" rel="nofollow noopener">Learn how your comment data is processed</a>.</p>
+</div>
+<!-- #comments -->
+</article><!-- #post-## -->
+</main><!--/main-content-->
+	<aside id="sidebar-widget-area" class="sidebar-widget-area" role="complementary">
+		<a class="screen-reader-text skip-link" href="#page-footer">Skip to footer</a>
+
+		<section id="sidebar" class="widget-area sidebar">
+			<div id="text-6" class="widget widget_text">			<div class="textwidget">
+<p><a href="https://www.linkedin.com/pub/jeff-nyman/12/b32/16a"><br>
+<img decoding="async" src="https://static.licdn.com/scds/common/u/img/webpromo/btn_myprofile_160x33.png" alt="View Jeff Nyman's profile on LinkedIn" width="160" height="33" border="0"></a></p>
+</div>
+		</div>
+<div id="categories-5" class="widget widget_categories">
+<h2 class="widget-title">Topics</h2>
+			<ul>
+					<li class="cat-item cat-item-58">
+<a href="/category/agile/">Agile</a> (2)
+</li>
+	<li class="cat-item cat-item-49">
+<a href="/category/ai/">AI</a> (24)
+<ul class="children">
+	<li class="cat-item cat-item-50">
+<a href="/category/ai/machine-learning/">Machine Learning</a> (12)
+	<ul class="children">
+	<li class="cat-item cat-item-55">
+<a href="/category/ai/machine-learning/ml-series-1/">ML Series 1</a> (2)
+</li>
+	<li class="cat-item cat-item-56">
+<a href="/category/ai/machine-learning/ml-series-2/">ML Series 2</a> (4)
+</li>
+	<li class="cat-item cat-item-57">
+<a href="/category/ai/machine-learning/ml-series-3/">ML Series 3</a> (6)
+</li>
+	</ul>
+</li>
+</ul>
+</li>
+	<li class="cat-item cat-item-11">
+<a href="/category/automation/">Automation</a> (68)
+<ul class="children">
+	<li class="cat-item cat-item-41">
+<a href="/category/automation/c/">C#</a> (2)
+</li>
+	<li class="cat-item cat-item-8">
+<a href="/category/automation/capybara/">Capybara</a> (11)
+</li>
+	<li class="cat-item cat-item-9">
+<a href="/category/automation/cucumber/">Cucumber</a> (10)
+</li>
+	<li class="cat-item cat-item-31">
+<a href="/category/automation/cucumber-jvm/">Cucumber-JVM</a> (6)
+</li>
+	<li class="cat-item cat-item-42">
+<a href="/category/automation/groovy/">Groovy</a> (1)
+</li>
+	<li class="cat-item cat-item-40">
+<a href="/category/automation/java/">Java</a> (9)
+</li>
+	<li class="cat-item cat-item-10">
+<a href="/category/automation/qtp/">QTP</a> (6)
+</li>
+	<li class="cat-item cat-item-5">
+<a href="/category/automation/rspec/">RSpec</a> (4)
+</li>
+	<li class="cat-item cat-item-7">
+<a href="/category/automation/selenium/">Selenium</a> (17)
+</li>
+	<li class="cat-item cat-item-39">
+<a href="/category/automation/serenity/">Serenity</a> (8)
+</li>
+	<li class="cat-item cat-item-30">
+<a href="/category/automation/symbiont/">Symbiont</a> (11)
+</li>
+	<li class="cat-item cat-item-51">
+<a href="/category/automation/tapestry/">Tapestry</a> (6)
+</li>
+	<li class="cat-item cat-item-6">
+<a href="/category/automation/watir/">Watir</a> (4)
+</li>
+</ul>
+</li>
+	<li class="cat-item cat-item-13">
+<a href="/category/bdd/">BDD</a> (24)
+<ul class="children">
+	<li class="cat-item cat-item-23">
+<a href="/category/bdd/tdl/">TDL</a> (17)
+</li>
+</ul>
+</li>
+	<li class="cat-item cat-item-25">
+<a href="/category/career/">Career</a> (33)
+<ul class="children">
+	<li class="cat-item cat-item-53">
+<a href="/category/career/interview/">Interview</a> (10)
+</li>
+</ul>
+</li>
+	<li class="cat-item cat-item-15">
+<a href="/category/communication/">Communication</a> (16)
+</li>
+	<li class="cat-item cat-item-65">
+<a href="/category/crime-scene/">Crime Scene</a> (4)
+</li>
+	<li class="cat-item cat-item-52">
+<a href="/category/data-science/">Data Science</a> (4)
+</li>
+	<li class="cat-item cat-item-61">
+<a href="/category/development/">Development</a> (39)
+<ul class="children">
+	<li class="cat-item cat-item-36">
+<a href="/category/development/chef/">Chef</a> (2)
+</li>
+	<li class="cat-item cat-item-32">
+<a href="/category/development/inform-7/">Inform 7</a> (3)
+</li>
+	<li class="cat-item cat-item-38">
+<a href="/category/development/javascript-test-solutions/">JavaScript</a> (6)
+</li>
+	<li class="cat-item cat-item-19">
+<a href="/category/development/language-building/">Language Building</a> (9)
+	<ul class="children">
+	<li class="cat-item cat-item-20">
+<a href="/category/development/language-building/rex-and-racc/">Rex and Racc</a> (3)
+</li>
+	</ul>
+</li>
+	<li class="cat-item cat-item-48">
+<a href="/category/development/python/">Python</a> (4)
+</li>
+	<li class="cat-item cat-item-29">
+<a href="/category/development/rails/">Rails</a> (4)
+</li>
+	<li class="cat-item cat-item-21">
+<a href="/category/development/web-development/">Web Development</a> (11)
+	<ul class="children">
+	<li class="cat-item cat-item-34">
+<a href="/category/development/web-development/node-js/">Node.js</a> (5)
+</li>
+	<li class="cat-item cat-item-22">
+<a href="/category/development/web-development/sinatra/">Sinatra</a> (6)
+</li>
+	</ul>
+</li>
+</ul>
+</li>
+	<li class="cat-item cat-item-28">
+<a href="/category/dialect/">Dialect</a> (6)
+</li>
+	<li class="cat-item cat-item-45">
+<a href="/category/exploration/">Exploration</a> (14)
+<ul class="children">
+	<li class="cat-item cat-item-46">
+<a href="/category/exploration/interactive/">Interactive</a> (6)
+</li>
+</ul>
+</li>
+	<li class="cat-item cat-item-44">
+<a href="/category/indefinito/">Indefinito</a> (11)
+</li>
+	<li class="cat-item cat-item-17">
+<a href="/category/learning/">Learning</a> (11)
+</li>
+	<li class="cat-item cat-item-24">
+<a href="/category/lucid/">Lucid</a> (11)
+</li>
+	<li class="cat-item cat-item-62">
+<a href="/category/product-development/">Product Development</a> (7)
+</li>
+	<li class="cat-item cat-item-64">
+<a href="/category/product-management/">Product Management</a> (3)
+</li>
+	<li class="cat-item cat-item-3">
+<a href="/category/quality/">Quality</a> (7)
+</li>
+	<li class="cat-item cat-item-14">
+<a href="/category/quality-assurance/">Quality Assurance</a> (5)
+</li>
+	<li class="cat-item cat-item-35">
+<a href="/category/specify/">Specify</a> (2)
+</li>
+	<li class="cat-item cat-item-16">
+<a href="/category/symbiont-pg/">Symbiont-PG</a> (4)
+</li>
+	<li class="cat-item cat-item-27">
+<a href="/category/test-solutions/">Test Solutions</a> (11)
+</li>
+	<li class="cat-item cat-item-4">
+<a href="/category/testing/">Testing</a> (167)
+<ul class="children">
+	<li class="cat-item cat-item-59">
+<a href="/category/testing/contracts/">Contracts</a> (2)
+</li>
+	<li class="cat-item cat-item-63">
+<a href="/category/testing/epistemology/">Epistemology</a> (1)
+</li>
+	<li class="cat-item cat-item-67">
+<a href="/category/testing/games/">Games</a> (8)
+</li>
+	<li class="cat-item cat-item-68">
+<a href="/category/testing/history-and-science/">History and Science</a> (5)
+</li>
+	<li class="cat-item cat-item-43">
+<a href="/category/testing/modern-testing/">Modern Testing</a> (15)
+</li>
+	<li class="cat-item cat-item-54">
+<a href="/category/testing/testability/">Testability</a> (9)
+</li>
+</ul>
+</li>
+	<li class="cat-item cat-item-12">
+<a href="/category/thinking/">Thinking</a> (22)
+</li>
+	<li class="cat-item cat-item-47">
+<a href="/category/what-if/">What If</a> (1)
+</li>
+	<li class="cat-item cat-item-69">
+<a href="/category/zmachine/">Z-Machine</a> (7)
+</li>
+			</ul>
+
+			</div>
+<div id="archives-5" class="widget widget_archive">
+<h2 class="widget-title">Archives</h2>		<label class="screen-reader-text" for="archives-dropdown-5">Archives</label>
+		<select id="archives-dropdown-5" name="archive-dropdown">
+			
+			<option value="">Select Month</option>
+				<option value="https://testerstories.com/2023/06/"> June 2023 </option>
+	<option value="https://testerstories.com/2023/05/"> May 2023 </option>
+	<option value="https://testerstories.com/2023/04/"> April 2023 </option>
+	<option value="https://testerstories.com/2023/03/"> March 2023 </option>
+	<option value="https://testerstories.com/2023/02/"> February 2023 </option>
+	<option value="https://testerstories.com/2023/01/"> January 2023 </option>
+	<option value="https://testerstories.com/2022/12/"> December 2022 </option>
+	<option value="https://testerstories.com/2022/11/"> November 2022 </option>
+	<option value="https://testerstories.com/2022/10/"> October 2022 </option>
+	<option value="https://testerstories.com/2022/07/"> July 2022 </option>
+	<option value="https://testerstories.com/2022/06/"> June 2022 </option>
+	<option value="https://testerstories.com/2022/05/"> May 2022 </option>
+	<option value="https://testerstories.com/2022/03/"> March 2022 </option>
+	<option value="https://testerstories.com/2022/02/"> February 2022 </option>
+	<option value="https://testerstories.com/2022/01/"> January 2022 </option>
+	<option value="https://testerstories.com/2021/12/"> December 2021 </option>
+	<option value="https://testerstories.com/2021/10/"> October 2021 </option>
+	<option value="https://testerstories.com/2021/08/"> August 2021 </option>
+	<option value="https://testerstories.com/2021/07/"> July 2021 </option>
+	<option value="https://testerstories.com/2021/06/"> June 2021 </option>
+	<option value="https://testerstories.com/2021/05/"> May 2021 </option>
+	<option value="https://testerstories.com/2021/04/"> April 2021 </option>
+	<option value="https://testerstories.com/2021/03/"> March 2021 </option>
+	<option value="https://testerstories.com/2021/02/"> February 2021 </option>
+	<option value="https://testerstories.com/2021/01/"> January 2021 </option>
+	<option value="https://testerstories.com/2020/11/"> November 2020 </option>
+	<option value="https://testerstories.com/2020/10/"> October 2020 </option>
+	<option value="https://testerstories.com/2020/09/"> September 2020 </option>
+	<option value="https://testerstories.com/2020/07/"> July 2020 </option>
+	<option value="https://testerstories.com/2020/06/"> June 2020 </option>
+	<option value="https://testerstories.com/2020/05/"> May 2020 </option>
+	<option value="https://testerstories.com/2020/02/"> February 2020 </option>
+	<option value="https://testerstories.com/2020/01/"> January 2020 </option>
+	<option value="https://testerstories.com/2019/12/"> December 2019 </option>
+	<option value="https://testerstories.com/2019/11/"> November 2019 </option>
+	<option value="https://testerstories.com/2019/10/"> October 2019 </option>
+	<option value="https://testerstories.com/2019/09/"> September 2019 </option>
+	<option value="https://testerstories.com/2019/08/"> August 2019 </option>
+	<option value="https://testerstories.com/2019/07/"> July 2019 </option>
+	<option value="https://testerstories.com/2019/06/"> June 2019 </option>
+	<option value="https://testerstories.com/2019/05/"> May 2019 </option>
+	<option value="https://testerstories.com/2019/04/"> April 2019 </option>
+	<option value="https://testerstories.com/2019/03/"> March 2019 </option>
+	<option value="https://testerstories.com/2019/02/"> February 2019 </option>
+	<option value="https://testerstories.com/2019/01/"> January 2019 </option>
+	<option value="https://testerstories.com/2018/12/"> December 2018 </option>
+	<option value="https://testerstories.com/2018/11/"> November 2018 </option>
+	<option value="https://testerstories.com/2018/10/"> October 2018 </option>
+	<option value="https://testerstories.com/2018/09/"> September 2018 </option>
+	<option value="https://testerstories.com/2018/08/"> August 2018 </option>
+	<option value="https://testerstories.com/2018/07/"> July 2018 </option>
+	<option value="https://testerstories.com/2018/06/"> June 2018 </option>
+	<option value="https://testerstories.com/2018/05/"> May 2018 </option>
+	<option value="https://testerstories.com/2018/04/"> April 2018 </option>
+	<option value="https://testerstories.com/2018/03/"> March 2018 </option>
+	<option value="https://testerstories.com/2018/02/"> February 2018 </option>
+	<option value="https://testerstories.com/2018/01/"> January 2018 </option>
+	<option value="https://testerstories.com/2017/12/"> December 2017 </option>
+	<option value="https://testerstories.com/2017/11/"> November 2017 </option>
+	<option value="https://testerstories.com/2017/10/"> October 2017 </option>
+	<option value="https://testerstories.com/2017/09/"> September 2017 </option>
+	<option value="https://testerstories.com/2017/08/"> August 2017 </option>
+	<option value="https://testerstories.com/2017/07/"> July 2017 </option>
+	<option value="https://testerstories.com/2017/06/"> June 2017 </option>
+	<option value="https://testerstories.com/2017/05/"> May 2017 </option>
+	<option value="https://testerstories.com/2017/04/"> April 2017 </option>
+	<option value="https://testerstories.com/2017/03/"> March 2017 </option>
+	<option value="https://testerstories.com/2017/02/"> February 2017 </option>
+	<option value="https://testerstories.com/2017/01/"> January 2017 </option>
+	<option value="https://testerstories.com/2016/12/"> December 2016 </option>
+	<option value="https://testerstories.com/2016/11/"> November 2016 </option>
+	<option value="https://testerstories.com/2016/10/"> October 2016 </option>
+	<option value="https://testerstories.com/2016/09/"> September 2016 </option>
+	<option value="https://testerstories.com/2016/08/"> August 2016 </option>
+	<option value="https://testerstories.com/2016/07/"> July 2016 </option>
+	<option value="https://testerstories.com/2016/06/"> June 2016 </option>
+	<option value="https://testerstories.com/2016/04/"> April 2016 </option>
+	<option value="https://testerstories.com/2016/03/"> March 2016 </option>
+	<option value="https://testerstories.com/2016/02/"> February 2016 </option>
+	<option value="https://testerstories.com/2016/01/"> January 2016 </option>
+	<option value="https://testerstories.com/2015/12/"> December 2015 </option>
+	<option value="https://testerstories.com/2015/11/"> November 2015 </option>
+	<option value="https://testerstories.com/2015/10/"> October 2015 </option>
+	<option value="https://testerstories.com/2015/09/"> September 2015 </option>
+	<option value="https://testerstories.com/2015/08/"> August 2015 </option>
+	<option value="https://testerstories.com/2015/07/"> July 2015 </option>
+	<option value="https://testerstories.com/2015/06/"> June 2015 </option>
+	<option value="https://testerstories.com/2015/05/"> May 2015 </option>
+	<option value="https://testerstories.com/2015/04/"> April 2015 </option>
+	<option value="https://testerstories.com/2015/03/"> March 2015 </option>
+	<option value="https://testerstories.com/2015/02/"> February 2015 </option>
+	<option value="https://testerstories.com/2014/12/"> December 2014 </option>
+	<option value="https://testerstories.com/2014/11/"> November 2014 </option>
+	<option value="https://testerstories.com/2014/10/"> October 2014 </option>
+	<option value="https://testerstories.com/2014/09/"> September 2014 </option>
+	<option value="https://testerstories.com/2014/08/"> August 2014 </option>
+	<option value="https://testerstories.com/2014/07/"> July 2014 </option>
+	<option value="https://testerstories.com/2014/06/"> June 2014 </option>
+	<option value="https://testerstories.com/2014/05/"> May 2014 </option>
+	<option value="https://testerstories.com/2014/04/"> April 2014 </option>
+	<option value="https://testerstories.com/2014/03/"> March 2014 </option>
+	<option value="https://testerstories.com/2014/01/"> January 2014 </option>
+	<option value="https://testerstories.com/2013/12/"> December 2013 </option>
+	<option value="https://testerstories.com/2013/09/"> September 2013 </option>
+	<option value="https://testerstories.com/2013/08/"> August 2013 </option>
+	<option value="https://testerstories.com/2013/07/"> July 2013 </option>
+	<option value="https://testerstories.com/2013/06/"> June 2013 </option>
+	<option value="https://testerstories.com/2013/05/"> May 2013 </option>
+	<option value="https://testerstories.com/2013/03/"> March 2013 </option>
+	<option value="https://testerstories.com/2013/01/"> January 2013 </option>
+	<option value="https://testerstories.com/2012/12/"> December 2012 </option>
+	<option value="https://testerstories.com/2012/10/"> October 2012 </option>
+	<option value="https://testerstories.com/2012/09/"> September 2012 </option>
+	<option value="https://testerstories.com/2012/08/"> August 2012 </option>
+	<option value="https://testerstories.com/2012/07/"> July 2012 </option>
+	<option value="https://testerstories.com/2012/06/"> June 2012 </option>
+	<option value="https://testerstories.com/2012/05/"> May 2012 </option>
+	<option value="https://testerstories.com/2012/04/"> April 2012 </option>
+	<option value="https://testerstories.com/2012/03/"> March 2012 </option>
+	<option value="https://testerstories.com/2012/02/"> February 2012 </option>
+	<option value="https://testerstories.com/2012/01/"> January 2012 </option>
+	<option value="https://testerstories.com/2011/12/"> December 2011 </option>
+	<option value="https://testerstories.com/2011/11/"> November 2011 </option>
+	<option value="https://testerstories.com/2011/10/"> October 2011 </option>
+	<option value="https://testerstories.com/2011/09/"> September 2011 </option>
+	<option value="https://testerstories.com/2011/08/"> August 2011 </option>
+
+		</select>
+
+<script type="text/javascript">
+/* <![CDATA[ */
+(function() {
+	var dropdown = document.getElementById( "archives-dropdown-5" );
+	function onSelectChange() {
+		if ( dropdown.options[ dropdown.selectedIndex ].value !== '' ) {
+			document.location.href = this.options[ this.selectedIndex ].value;
+		}
+	}
+	dropdown.onchange = onSelectChange;
+})();
+/* ]]> */
+</script>
+			</div>
+<div id="meta-5" class="widget widget_meta">
+<h2 class="widget-title">Site</h2>
+		<ul>
+						<li><a href="/wp-login.php">Log in</a></li>
+			<li><a href="/feed/">Entries feed</a></li>
+			<li><a href="/comments/feed/">Comments feed</a></li>
+
+			<li><a href="https://wordpress.org/">WordPress.org</a></li>
+		</ul>
+
+		</div>
+<div id="text-4" class="widget widget_text">			<div class="textwidget"><a href="https://www.linkedin.com/pub/jeff-nyman/12/b32/16a">
+          <img src="https://static.licdn.com/scds/common/u/img/webpromo/btn_myprofile_160x33.png" width="160" height="33" border="0" alt="View Jeff Nyman's profile on LinkedIn"></a></div>
+		</div>
+<div id="search-3" class="widget widget_search">
+<form role="search" method="get" class="search-form" action="https://testerstories.com/">
+	<label>
+		<span class="screen-reader-text">Search for:</span>
+		<input type="search" class="search-field" placeholder="Search &hellip;" value="" name="s" title="Search for:">
+	</label>
+	<button type="submit" class="search-submit"><span class="genericon genericon-search" aria-hidden="true"></span><span class="screen-reader-text">Search</span></button>
+</form>
+</div>		</section><!-- #sidebar .widget-area -->
+
+	</aside>
+
+  
+
+<footer id="page-footer" role="contentinfo">
+	<div id="site-info" class="site-info">
+		<span class="footer-site-title"><a href="/" rel="home">Stories from a Software Tester</a></span>
+		<a href="https://wordpress.org/">Proudly powered by WordPress</a>
+	</div>
+<!--/site-info-->
+</footer> <!--/footer-->
+</div>
+<!-- #container -->
+            
+            <style type="text/css" class="darkmysite_inline_css">#darkmysite_switch_881878813 {
+        --darkmysite_switch_apple_width_height: 60px;
+        --darkmysite_switch_apple_border_radius: 7px;
+        --darkmysite_switch_apple_icon_width: 30px;
+        --darkmysite_switch_apple_light_mode_bg: #121116;
+        --darkmysite_switch_apple_dark_mode_bg: #ffffff;
+        --darkmysite_switch_apple_light_mode_icon_color: #ffffff;
+        --darkmysite_switch_apple_dark_mode_icon_color: #121116;
+        }
+
+    #darkmysite_switch_881878813 {
+        --darkmysite_switch_margin_from_top: 40px;
+        --darkmysite_switch_margin_from_bottom: 40px;
+        --darkmysite_switch_margin_from_left: 40px;
+        --darkmysite_switch_margin_from_right: 40px;
+        }</style>
+
+
+
+
+    <div id="darkmysite_switch_881878813" class="darkmysite_switch  darkmysite_bottom_right   darkmysite_switch_apple" onclick="darkmysite_switch_trigger()">
+        <span class="darkmysite_switch_icon"></span>
+            </div>
+
+            
+    <script type="text/javascript" class="darkmysite_inline_js">document.addEventListener("DOMContentLoaded", function(event) {
+            darkmysite_init_alternative_dark_mode_switch();
+        });</script>
+
+
+<script type="text/javascript" id="acuarela-script-js-extra">
+/* <![CDATA[ */
+var acuarelaScreenReaderText = {"expand":"expand child menu","collapse":"collapse child menu"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="/wp-content/themes/acuarela/js/functions.js?ver=20190802" id="acuarela-script-js"></script>
+<script type="text/javascript" src="/wp-includes/js/comment-reply.min.js?ver=6.2.2" id="comment-reply-js"></script>
+<script defer type="text/javascript" src="/wp-content/plugins/akismet/_inc/akismet-frontend.js?ver=1680871091" id="akismet-frontend-js"></script>
+</body>
+</html>
