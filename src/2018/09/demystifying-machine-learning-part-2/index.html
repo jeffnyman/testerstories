@@ -1,0 +1,2048 @@
+<!DOCTYPE html>
+<html lang="en-US">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="profile" href="http://gmpg.org/xfn/11">
+				<link rel="pingback" href="/xmlrpc.php">
+				<title>Demystifying Machine Learning, Part 2 &#8211; Stories from a Software Tester</title>
+<meta name="robots" content="max-image-preview:large">
+ <style type="text/css" class="darkmysite_inline_css">:root { --darkmysite_dark_mode_bg: #0f0f0f; --darkmysite_dark_mode_secondary_bg: #171717; --darkmysite_dark_mode_text_color: #bebebe; --darkmysite_dark_mode_link_color: #ffffff; --darkmysite_dark_mode_link_hover_color: #cccccc; --darkmysite_dark_mode_input_bg: #2d2d2d; --darkmysite_dark_mode_input_text_color: #bebebe; --darkmysite_dark_mode_input_placeholder_color: #989898; --darkmysite_dark_mode_border_color: #4a4a4a; --darkmysite_dark_mode_btn_bg: #2d2d2d; --darkmysite_dark_mode_btn_text_color: #bebebe; }</style> <style type="text/css" class="darkmysite_inline_css">.darkmysite_dark_mode_enabled::-webkit-scrollbar { background: #29292a !important; } .darkmysite_dark_mode_enabled::-webkit-scrollbar-track { background: #29292a !important; } .darkmysite_dark_mode_enabled::-webkit-scrollbar-thumb { background-color: #52565a !important; } .darkmysite_dark_mode_enabled::-webkit-scrollbar-corner { background-color: #52565a !important; } .darkmysite_dark_mode_enabled::-webkit-scrollbar-button { background-color: transparent !important; background-repeat: no-repeat !important; background-size: contain !important; background-position: center !important; } .darkmysite_dark_mode_enabled::-webkit-scrollbar-button:start { background-image: url(/wp-content/plugins/darkmysite/assets/img/others/scroll_arrow_up.svg) !important; } .darkmysite_dark_mode_enabled::-webkit-scrollbar-button:end { background-image: url(/wp-content/plugins/darkmysite/assets/img/others/scroll_arrow_down.svg) !important; } .darkmysite_dark_mode_enabled::-webkit-scrollbar-button:start:horizontal { background-image: url(/wp-content/plugins/darkmysite/assets/img/others/scroll_arrow_left.svg) !important; } .darkmysite_dark_mode_enabled::-webkit-scrollbar-button:end:horizontal { background-image: url(/wp-content/plugins/darkmysite/assets/img/others/scroll_arrow_right.svg) !important; }</style> <script type="text/javascript" class="darkmysite_inline_js">var darkmysite_switch_unique_id = "602985923"; var darkmysite_is_this_admin_panel = "0"; var darkmysite_enable_default_dark_mode = "0"; var darkmysite_enable_os_aware = "1"; var darkmysite_enable_keyboard_shortcut = "1"; var darkmysite_enable_time_based_dark = "0"; var darkmysite_time_based_dark_start = "19:00"; var darkmysite_time_based_dark_stop = "07:00"; var darkmysite_alternative_dark_mode_switch = ""; var darkmysite_enable_low_image_brightness = "1"; var darkmysite_image_brightness_to = "80"; var darkmysite_enable_image_grayscale = "0"; var darkmysite_image_grayscale_to = "80"; var darkmysite_enable_bg_image_darken = "1"; var darkmysite_bg_image_darken_to = "60"; var darkmysite_enable_invert_inline_svg = "0"; var darkmysite_enable_low_video_brightness = "1"; var darkmysite_video_brightness_to = "80"; var darkmysite_enable_video_grayscale = "0"; var darkmysite_video_grayscale_to = "80"; var darkmysite_disallowed_elements = ".darkmysite_ignore, .darkmysite_ignore *, .darkmysite_switch, .darkmysite_switch *, .wp-block-button__link, .wp-block-button__link *";</script><link rel="dns-prefetch" href="//static.addtoany.com">
+<link rel="dns-prefetch" href="//fonts.googleapis.com">
+<link rel="alternate" type="application/rss+xml" title="Stories from a Software Tester &raquo; Feed" href="/feed/">
+<link rel="alternate" type="application/rss+xml" title="Stories from a Software Tester &raquo; Comments Feed" href="/comments/feed/">
+<link rel="alternate" type="application/rss+xml" title="Stories from a Software Tester &raquo; Demystifying Machine Learning, Part 2 Comments Feed" href="/2018/09/demystifying-machine-learning-part-2/feed/">
+<script type="text/javascript">
+window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/14.0.0\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/14.0.0\/svg\/","svgExt":".svg","source":{"concatemoji":"\/wp-includes\/js\/wp-emoji-release.min.js?ver=6.2.2"}};
+/*! This file is auto-generated */
+!function(e,a,t){var n,r,o,i=a.createElement("canvas"),p=i.getContext&&i.getContext("2d");function s(e,t){p.clearRect(0,0,i.width,i.height),p.fillText(e,0,0);e=i.toDataURL();return p.clearRect(0,0,i.width,i.height),p.fillText(t,0,0),e===i.toDataURL()}function c(e){var t=a.createElement("script");t.src=e,t.defer=t.type="text/javascript",a.getElementsByTagName("head")[0].appendChild(t)}for(o=Array("flag","emoji"),t.supports={everything:!0,everythingExceptFlag:!0},r=0;r<o.length;r++)t.supports[o[r]]=function(e){if(p&&p.fillText)switch(p.textBaseline="top",p.font="600 32px Arial",e){case"flag":return s("🏳️‍⚧️","🏳️​⚧️")?!1:!s("🇺🇳","🇺​🇳")&&!s("🏴󠁧󠁢󠁥󠁮󠁧󠁿","🏴​󠁧​󠁢​󠁥​󠁮​󠁧​󠁿");case"emoji":return!s("🫱🏻‍🫲🏿","🫱🏻​🫲🏿")}return!1}(o[r]),t.supports.everything=t.supports.everything&&t.supports[o[r]],"flag"!==o[r]&&(t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&t.supports[o[r]]);t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&!t.supports.flag,t.DOMReady=!1,t.readyCallback=function(){t.DOMReady=!0},t.supports.everything||(n=function(){t.readyCallback()},a.addEventListener?(a.addEventListener("DOMContentLoaded",n,!1),e.addEventListener("load",n,!1)):(e.attachEvent("onload",n),a.attachEvent("onreadystatechange",function(){"complete"===a.readyState&&t.readyCallback()})),(e=t.source||{}).concatemoji?c(e.concatemoji):e.wpemoji&&e.twemoji&&(c(e.twemoji),c(e.wpemoji)))}(window,document,window._wpemojiSettings);
+</script>
+<style type="text/css">img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 0.07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}</style>
+	<link rel="stylesheet" id="urvanov_syntax_highlighter-css" href="/wp-content/plugins/urvanov-syntax-highlighter/css/min/urvanov_syntax_highlighter.min.css?ver=2.8.33" type="text/css" media="all">
+<link rel="stylesheet" id="crayon-theme-classic-css" href="/wp-content/plugins/urvanov-syntax-highlighter/themes/classic/classic.css?ver=2.8.33" type="text/css" media="all">
+<link rel="stylesheet" id="crayon-font-monaco-css" href="/wp-content/plugins/urvanov-syntax-highlighter/fonts/monaco.css?ver=2.8.33" type="text/css" media="all">
+<link rel="stylesheet" id="wp-block-library-css" href="/wp-includes/css/dist/block-library/style.min.css?ver=6.2.2" type="text/css" media="all">
+<style id="wp-block-library-theme-inline-css" type="text/css">.wp-block-audio figcaption{color:#555;font-size:13px;text-align:center}.is-dark-theme .wp-block-audio figcaption{color:hsla(0,0%,100%,.65)}.wp-block-audio{margin:0 0 1em}.wp-block-code{border:1px solid #ccc;border-radius:4px;font-family:Menlo,Consolas,monaco,monospace;padding:.8em 1em}.wp-block-embed figcaption{color:#555;font-size:13px;text-align:center}.is-dark-theme .wp-block-embed figcaption{color:hsla(0,0%,100%,.65)}.wp-block-embed{margin:0 0 1em}.blocks-gallery-caption{color:#555;font-size:13px;text-align:center}.is-dark-theme .blocks-gallery-caption{color:hsla(0,0%,100%,.65)}.wp-block-image figcaption{color:#555;font-size:13px;text-align:center}.is-dark-theme .wp-block-image figcaption{color:hsla(0,0%,100%,.65)}.wp-block-image{margin:0 0 1em}.wp-block-pullquote{border-bottom:4px solid;border-top:4px solid;color:currentColor;margin-bottom:1.75em}.wp-block-pullquote cite,.wp-block-pullquote footer,.wp-block-pullquote__citation{color:currentColor;font-size:.8125em;font-style:normal;text-transform:uppercase}.wp-block-quote{border-left:.25em solid;margin:0 0 1.75em;padding-left:1em}.wp-block-quote cite,.wp-block-quote footer{color:currentColor;font-size:.8125em;font-style:normal;position:relative}.wp-block-quote.has-text-align-right{border-left:none;border-right:.25em solid;padding-left:0;padding-right:1em}.wp-block-quote.has-text-align-center{border:none;padding-left:0}.wp-block-quote.is-large,.wp-block-quote.is-style-large,.wp-block-quote.is-style-plain{border:none}.wp-block-search .wp-block-search__label{font-weight:700}.wp-block-search__button{border:1px solid #ccc;padding:.375em .625em}:where(.wp-block-group.has-background){padding:1.25em 2.375em}.wp-block-separator.has-css-opacity{opacity:.4}.wp-block-separator{border:none;border-bottom:2px solid;margin-left:auto;margin-right:auto}.wp-block-separator.has-alpha-channel-opacity{opacity:1}.wp-block-separator:not(.is-style-wide):not(.is-style-dots){width:100px}.wp-block-separator.has-background:not(.is-style-dots){border-bottom:none;height:1px}.wp-block-separator.has-background:not(.is-style-wide):not(.is-style-dots){height:2px}.wp-block-table{margin:0 0 1em}.wp-block-table td,.wp-block-table th{word-break:normal}.wp-block-table figcaption{color:#555;font-size:13px;text-align:center}.is-dark-theme .wp-block-table figcaption{color:hsla(0,0%,100%,.65)}.wp-block-video figcaption{color:#555;font-size:13px;text-align:center}.is-dark-theme .wp-block-video figcaption{color:hsla(0,0%,100%,.65)}.wp-block-video{margin:0 0 1em}.wp-block-template-part.has-background{margin-bottom:0;margin-top:0;padding:1.25em 2.375em}</style>
+<link rel="stylesheet" id="classic-theme-styles-css" href="/wp-includes/css/classic-themes.min.css?ver=6.2.2" type="text/css" media="all">
+<style id="global-styles-inline-css" type="text/css">body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgba(6,147,227,1) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgba(252,185,0,1) 0%,rgba(255,105,0,1) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgba(255,105,0,1) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--duotone--dark-grayscale: url('#wp-duotone-dark-grayscale');--wp--preset--duotone--grayscale: url('#wp-duotone-grayscale');--wp--preset--duotone--purple-yellow: url('#wp-duotone-purple-yellow');--wp--preset--duotone--blue-red: url('#wp-duotone-blue-red');--wp--preset--duotone--midnight: url('#wp-duotone-midnight');--wp--preset--duotone--magenta-yellow: url('#wp-duotone-magenta-yellow');--wp--preset--duotone--purple-green: url('#wp-duotone-purple-green');--wp--preset--duotone--blue-orange: url('#wp-duotone-blue-orange');--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;--wp--preset--spacing--20: 0.44rem;--wp--preset--spacing--30: 0.67rem;--wp--preset--spacing--40: 1rem;--wp--preset--spacing--50: 1.5rem;--wp--preset--spacing--60: 2.25rem;--wp--preset--spacing--70: 3.38rem;--wp--preset--spacing--80: 5.06rem;--wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);--wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);--wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);--wp--preset--shadow--outlined: 6px 6px 0px -3px rgba(255, 255, 255, 1), 6px 6px rgba(0, 0, 0, 1);--wp--preset--shadow--crisp: 6px 6px 0px rgba(0, 0, 0, 1);}:where(.is-layout-flex){gap: 0.5em;}body .is-layout-flow > .alignleft{float: left;margin-inline-start: 0;margin-inline-end: 2em;}body .is-layout-flow > .alignright{float: right;margin-inline-start: 2em;margin-inline-end: 0;}body .is-layout-flow > .aligncenter{margin-left: auto !important;margin-right: auto !important;}body .is-layout-constrained > .alignleft{float: left;margin-inline-start: 0;margin-inline-end: 2em;}body .is-layout-constrained > .alignright{float: right;margin-inline-start: 2em;margin-inline-end: 0;}body .is-layout-constrained > .aligncenter{margin-left: auto !important;margin-right: auto !important;}body .is-layout-constrained > :where(:not(.alignleft):not(.alignright):not(.alignfull)){max-width: var(--wp--style--global--content-size);margin-left: auto !important;margin-right: auto !important;}body .is-layout-constrained > .alignwide{max-width: var(--wp--style--global--wide-size);}body .is-layout-flex{display: flex;}body .is-layout-flex{flex-wrap: wrap;align-items: center;}body .is-layout-flex > *{margin: 0;}:where(.wp-block-columns.is-layout-flex){gap: 2em;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
+.wp-block-navigation a:where(:not(.wp-element-button)){color: inherit;}
+:where(.wp-block-columns.is-layout-flex){gap: 2em;}
+.wp-block-pullquote{font-size: 1.5em;line-height: 1.6;}</style>
+<link rel="stylesheet" id="darkmysite-client-main-css" href="/wp-content/plugins/darkmysite/assets/css/client_main.css?ver=1.2.6" type="text/css" media="all">
+<link rel="stylesheet" id="plyr-css-css" href="/wp-content/plugins/easy-video-player/lib/plyr.css?ver=6.2.2" type="text/css" media="all">
+<link rel="stylesheet" id="acuarela-fonts-css" href="https://fonts.googleapis.com/css?family=Lato%3A300italic%2C400italic%2C700italic%2C300%2C400%2C700%7CArima+Madurai%3A700%2C800%7CInconsolata%3A400%2C700&#038;subset=latin%2Clatin-ext&#038;ver=20190802" type="text/css" media="all">
+<link rel="stylesheet" id="genericons-css" href="/wp-content/themes/acuarela/genericons/genericons.css?ver=3.4.1" type="text/css" media="all">
+<link rel="stylesheet" id="animate-css" href="/wp-content/themes/acuarela/css/animate.css?ver=3.7.2" type="text/css" media="all">
+<link rel="stylesheet" id="acuarela-style-css" href="/wp-content/themes/acuarela/style.css?ver=6.2.2" type="text/css" media="all">
+<link rel="stylesheet" id="addtoany-css" href="/wp-content/plugins/add-to-any/addtoany.min.css?ver=1.16" type="text/css" media="all">
+<script type="text/javascript" src="/wp-includes/js/jquery/jquery.min.js?ver=3.6.4" id="jquery-core-js"></script>
+<script type="text/javascript" src="/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.4.0" id="jquery-migrate-js"></script>
+<script type="text/javascript" id="urvanov_syntax_highlighter_js-js-extra">
+/* <![CDATA[ */
+var UrvanovSyntaxHighlighterSyntaxSettings = {"version":"2.8.33","is_admin":"0","ajaxurl":"\/wp-admin\/admin-ajax.php","prefix":"urvanov-syntax-highlighter-","setting":"urvanov-syntax-highlighter-setting","selected":"urvanov-syntax-highlighter-setting-selected","changed":"urvanov-syntax-highlighter-setting-changed","special":"urvanov-syntax-highlighter-setting-special","orig_value":"data-orig-value","debug":""};
+var UrvanovSyntaxHighlighterSyntaxStrings = {"copy":"Copied to the clipboard","minimize":"Click To Expand Code"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="/wp-content/plugins/urvanov-syntax-highlighter/js/min/urvanov_syntax_highlighter.min.js?ver=2.8.33" id="urvanov_syntax_highlighter_js-js"></script>
+<script type="text/javascript" id="addtoany-core-js-before">window.a2a_config=window.a2a_config||{};a2a_config.callbacks=[];a2a_config.overlays=[];a2a_config.templates={};</script>
+<script type="text/javascript" async src="https://static.addtoany.com/menu/page.js" id="addtoany-core-js"></script>
+<script type="text/javascript" async src="/wp-content/plugins/add-to-any/addtoany.min.js?ver=1.1" id="addtoany-jquery-js"></script>
+<script type="text/javascript" src="/wp-content/plugins/darkmysite/assets/js/client_main.js?ver=1.2.6" id="darkmysite-client-main-js"></script>
+<script type="text/javascript" id="plyr-js-js-extra">
+/* <![CDATA[ */
+var easy_video_player = {"plyr_iconUrl":"\/wp-content\/plugins\/easy-video-player\/lib\/plyr.svg","plyr_blankVideo":"\/wp-content\/plugins\/easy-video-player\/lib\/blank.mp4"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="/wp-content/plugins/easy-video-player/lib/plyr.js?ver=6.2.2" id="plyr-js-js"></script>
+<link rel="https://api.w.org/" href="/wp-json/">
+<link rel="alternate" type="application/json" href="/wp-json/wp/v2/posts/3554">
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="/xmlrpc.php?rsd">
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="/wp-includes/wlwmanifest.xml">
+<meta name="generator" content="WordPress 6.2.2">
+<link rel="canonical" href="/2018/09/demystifying-machine-learning-part-2/">
+<link rel="shortlink" href="/?p=3554">
+<link rel="alternate" type="application/json+oembed" href="/wp-json/oembed/1.0/embed?url=https%3A%2F%2F%2F2018%2F09%2Fdemystifying-machine-learning-part-2%2F">
+<link rel="alternate" type="text/xml+oembed" href="/wp-json/oembed/1.0/embed?url=https%3A%2F%2F%2F2018%2F09%2Fdemystifying-machine-learning-part-2%2F#038;format=xml">
+<link type="text/css" rel="stylesheet" href="/wp-content/plugins/category-specific-rss-feed-menu/wp_cat_rss_style.css">
+<!--Custom Styling-->
+<style media="screen" type="text/css">.site-description { color: #222222}
+.site-title, .entry-title, .post-title, .widget-title, .posts-navigation .nav-links { font-family: Arima Madurai}
+ body { font-family: Lato}</style>
+	<style id="acuarela-header-css" type="text/css"></style>
+<style type="text/css" id="custom-background-css">body.custom-background { background-image: url("/wp-content/uploads/2020/10/low_contrast_linen.png"); background-position: left top; background-size: cover; background-repeat: no-repeat; background-attachment: fixed; }</style>
+			<style type="text/css" id="wp-custom-css">@font-face {
+  font-family: "Open Sans";
+  font-weight: 400;
+  font-style: normal;
+  src: local("Open Sans Regular"), local("OpenSans-Regular"), url("/fonts/OpenSans-Regular.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Open Sans Bold";
+  font-weight: 700;
+  font-style: normal;
+  src: local("Open Sans Bold"), local("OpenSans-Bold"), url("/fonts/OpenSans-Bold.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Open Sans Italic";
+  font-weight: 400;
+  font-style: normal;
+  src: local("Open Sans Italic"), local("OpenSans-Italic"), url("/fonts/OpenSans-Italic.woff") format("woff");
+}
+
+:root{
+	--primary: #01408e;
+	--secondary: #3c5d5c;
+	--initialLine: #ad2271;
+	--drop: #903;
+	--paraIndent: 1.25em;
+	--note: #4d5b7c;
+	--bq-color: #555555;
+	--bq-back: #ededed;
+	--sans: "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+	--mono: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
+    "Courier New", monospace;
+}
+/* For the top menu bar. */
+.site-navigation a {
+	padding: 0.9em 1.5em;
+}
+
+:where(html, body) {
+	overscroll-behavior-y: none;
+	cursor: url("/cursors/default.cur"), auto;
+}
+
+:where(p, h1, h2, h3, h4, h5, h6, blockquote, figcaption) {
+	cursor: url("/cursors/text-select.cur"), auto;
+}
+
+:where(ul, ol) {
+	margin: 1em 1em;
+	text-align: justify;
+	text-justify: inter-word;
+	cursor: url("/cursors/text-select.cur"), auto;
+}
+
+:where(aside, article) a {
+	cursor: url("/cursors/link-select.cur"), auto;
+}
+
+select, button, input,
+.wp-element-button,
+.darkmysite_switch,
+.site-title,
+.site-description {
+	cursor: url("/cursors/link-select.cur"), auto;
+}
+
+::selection {
+  color: #fff;
+  background: rgba(0, 0, 0, 0.99);
+}
+
+main,
+header {
+	font-size: 1rem;
+}
+
+main {
+	/*From here: https://fluidtypography.com/#app-get-started*/
+	/* Settings: 414-1280; 16-20; 1.6-1.3*/
+	font-size: clamp(1rem, 0.462vw + 0.88rem, 1.25rem);
+line-height: clamp(1.6rem, 0.046vw + 1.588rem, 1.625rem);
+}
+
+article {
+	font-family: var(--sans);
+	line-height: 1.6;
+  word-spacing: 0.16em;
+}
+
+h1:not(.site-title) {
+  font-size: 2.5em;
+  margin: 0.67em 0;
+  text-align: center;
+}
+
+:where(h1, h2, h3, h4) {
+	text-rendering: optimizeLegibility;
+	line-height: 1.4em;
+}
+
+article :where(h2, h3) {
+	margin-bottom: 0.7em;
+}
+
+p {
+	font-size: 1.2em;
+	text-align: justify;
+	text-justify: inter-word;
+}
+
+p:first-of-type:first-line {
+	color: var(--initialLine);
+}
+
+li {
+  margin-bottom: 0.5em;
+}
+
+/* This makes sure the first line of blockquotes are not colored since in Wordpress, a blockquote content has a paragraph tag applied to it. */
+:where(blockquote, footer, .comments-area) p:first-of-type:first-line {
+	color: inherit;
+}
+:where(p, blockquote, img, pre, ul, ol) + p:not(.note) {
+  text-indent: var(--paraIndent);
+}
+section > h3 + p::first-letter,
+section > h2 + p::first-letter,
+div.entry-content > p:not(.nostyle):first-child::first-letter {
+	color: var(--drop);
+  border-left: 2px solid var(--drop);
+  border-top: 2px solid var(--drop);
+  float: left;
+  font-family: Georgia;
+  font-size: 65px;
+  line-height: 60px;
+  padding-top: 4px;
+  padding-right: 12px;
+  padding-left: 3px;
+}
+
+:where(aside, article) a {
+	color: var(--primary);
+	text-underline-position: under;
+	text-decoration: underline 2px;
+	transition: all 0.3s linear;
+  background: linear-gradient(to right, #00d1b1 0%, #278fc6 98%);
+  background-size: 0px 2px;
+  background-repeat: no-repeat;
+  background-position: left 10%;
+  text-shadow: 0;
+}
+
+article a:hover {
+  background-size: 100% 2px;
+  color: var(--secondary);
+}
+
+article a:focus {
+  color: var(--secondary);
+}
+
+/* Handling external links to show an icon after them, but excluding links that are part of the TesterStories site. */
+
+a[href*="http"]::after,
+a[href*="https"]::after {
+  content: "";
+  width: 16px;
+  height: 16px;
+  margin-left: 4px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='currentColor' viewBox='0 0 16 16'%3E%3Cpath fill-rule='evenodd' d='M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5z'/%3E%3Cpath fill-rule='evenodd' d='M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0v-5z'/%3E%3C/svg%3E");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  display: inline-block;
+}
+
+a[href^="https://www.linkedin.com/"]::after {
+  content: none;
+}
+
+a[href^="https://testerstories.com/"]::after {
+  display: none !important;
+}
+
+img.framed {
+  --b: 10px;
+  margin: 0 auto;
+  padding: var(--b);
+  border: calc(2 * var(--b)) solid #0000;
+  border-radius: 25px;
+  outline: 1px solid #000;
+  outline-offset: calc(-1 * var(--b));
+  background: conic-gradient(from 90deg at 1px 1px, #0000 90deg, #000 0);
+}
+
+img.backframed {
+  margin: 0 auto;
+  border: 3px solid black;
+  box-shadow: -50px -50px 0 -40px #555555, 50px 50px 0 -40px #555555;
+}
+
+.note {
+  border: 1px solid rgb(107, 113, 177);
+  color: var(--note);
+  border-radius: 16px;
+  padding: 0.5em 0.8em;
+  margin: 1.9em;
+}
+
+.post {
+	background-color: white;
+}
+
+.entry-content li {
+	font-size: 1.2em;
+}
+
+.simplequote {
+	background: #fff url(/2018/09/demystifying-machine-learning-part-2/images/box_quote.png) no-repeat;
+	padding: 5px;
+	margin-top: 20px; margin-bottom: 20px;
+	margin-left: 50px; margin-right: 50px;
+	border: 3px solid #cecece;
+	text-indent: 25px;
+}
+
+p.example {
+	padding: 1ex;
+	margin-right: 50px; margin-left: 50px;
+	border: .5ex solid #808080;
+	color: #000000;
+	line-height: 1.2;
+	text-indent: 0em;
+}
+
+#headquote blockquote {
+	text-align: left;
+	margin: 0 auto 20px auto;
+	color: #555;
+	background: #eee url(/2018/09/demystifying-machine-learning-part-2/images/quote_top.gif) no-repeat top left;
+}
+
+#headquote blockquote {
+	width: 370px;
+	font-size: 110%;
+	letter-spacing: -1px;
+	line-height: 1.2em;
+}
+
+#headquote #quote {
+	margin-left: 40px;
+	padding: 20px 20px 10px 20px;
+	background: url(/2018/09/demystifying-machine-learning-part-2/images/quote_bottom.gif) no-repeat right bottom;
+}
+
+#headquote #author {
+	margin: 0;
+	text-align: center;
+	padding: 0 0 10px 0;
+	color: #999;
+	font-size: 95%;
+}
+
+#headquote blockquote strong {
+	color: #000;
+	font-weight: normal;
+}
+
+/* Center images. */
+
+img {
+	display: block;
+  margin: 0 auto;
+}
+
+img.smaller {
+  width: 200px;
+}
+
+img.even-smaller {
+  width: 100px;
+}
+
+table td.code {
+  font-family: "Courier New", courier, monospace;
+  font-size: 11.5px;
+}
+
+p.box {
+	font-family: Georgia, "Times New Roman", Times, serif;
+	text-align: justify;
+	padding-top: 25px;
+	margin: 0;
+	line-height: 1.2;
+}
+
+pre.box {
+	white-space: pre-wrap;
+	background-color: white;
+	border: 1px solid;
+}
+
+p.tip {
+	padding-bottom: 10px; padding-top: 10px;
+	padding-right: 10px; padding-left: 10px;
+	border: 1px solid;
+}
+
+div.aside {
+	padding-bottom: 10px; padding-top: 10px;
+	padding-right: 10px; padding-left: 10px;
+	margin-right: 50px; margin-left: 50px;
+	border: 1px dotted;
+}
+
+div.aside pre {
+	white-space: pre-wrap;
+}
+
+pre.view {
+	font-family: "Courier New", Courier, monospace;
+        //font-size: 16px;
+	padding-bottom: 10px; padding-top: 10px;
+	padding-right: 10px; padding-left: 10px;
+	white-space: pre-wrap;
+	background: rgb(255,255,255); /* Old browsers */
+	background: -moz-linear-gradient(top,  rgba(255,255,255,1) 0%, rgba(229,229,229,1) 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,1)), color-stop(100%,rgba(229,229,229,1))); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(229,229,229,1) 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(229,229,229,1) 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(229,229,229,1) 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  rgba(255,255,255,1) 0%,rgba(229,229,229,1) 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#e5e5e5',GradientType=0 ); /* IE6-9 */
+	border: 1px solid;
+	text-align: justify;
+}
+
+pre.view .string {
+	color: #3366CC;
+}
+
+pre.view .sub {
+        color: #8333FF;
+}
+
+pre.view .comment {
+	color: #009900;
+}
+
+pre.view .highlight {
+	background-color: #FFFF00;
+	border: 1px solid;
+	border-style: dotted;
+}
+
+pre.output .highlight {
+	background-color: rgb(255,255,255);
+	color: red;
+	border: 1px solid;
+	border-style: dotted;
+}
+
+pre.output {
+	font-family: "Courier New", Courier, monospace;
+        //font-size: 16px;
+	padding-bottom: 10px; padding-top: 10px;
+	padding-right: 10px; padding-left: 10px;
+	white-space: pre-wrap;
+	background: black;
+	color: white;
+}
+
+blockquote {
+  position: relative;
+  width: 80%;
+  margin: 50px auto;
+  padding: 1.2em 30px 1.2em 55px;
+  color: var(--bq-color);
+  background-color: var(--bq-back);
+  border-left: 8px solid #78c0a8;
+  text-align: justify;
+}
+
+blockquote::before {
+  position: absolute;
+	left: 5px;
+	top: -10px;
+	/* Line height needed here to avoid the quote appearing out of place due to calculated line heights for the article. */
+	line-height: 1.6;
+	content: "\201C";
+	color: #78c0a8;
+	font-size: 4em;
+}
+
+blockquote::after {
+	content: "";
+}
+
+blockquote span {
+	display: block;
+	color: #333333;
+	font-style: normal;
+  font-weight: bold;
+  margin-top: 1em;
+}
+
+img.frame {
+  --b: 10px;
+  padding: var(--b);
+  border: calc(2 * var(--b)) solid #0000;
+  outline: 1px solid #000;
+  outline-offset: calc(-1 * var(--b));
+  border-radius: 25px;
+  background: conic-gradient(from 90deg at 1px 1px, #0000 90deg, #000 0);
+  display: block;
+  margin: auto;
+  margin-bottom: 1rem;
+}
+
+code {
+  font-size: 0.9em;
+  padding: 0.0625rem 0.5rem;
+  border-radius: 0.125rem;
+  border: 1px solid #d33a2c;
+  box-shadow: 1px 1px #d33a2c, 2px 2px #d33a2c;
+  margin: 0 0.25rem;
+  color: #d33a2c;
+  font-family: monospace;
+}
+
+pre {
+  font-family: var(--mono);
+  max-width: 100%;
+	padding: 0;
+}
+
+pre code {
+  word-spacing: normal;
+  letter-spacing: normal;
+  font-family: var(--mono);
+  padding-left: 10px;
+  color: #e9e9f4;
+  background: #282936;
+  display: block;
+  max-width: 100%;
+  overflow-x: scroll;
+  /*font-size: 0.8em;*/
+
+  border: 1px solid #282936;
+  border-radius: 10px;
+  box-shadow: 1px 1px #282936, 2px 2px #282936;
+}
+
+pre code::-webkit-scrollbar {
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+pre code::-webkit-scrollbar:vertical {
+  width: 11px;
+}
+
+pre code::-webkit-scrollbar:horizontal {
+  height: 11px;
+}
+
+pre code::-webkit-scrollbar-thumb {
+  border-radius: 8px;
+  border: 2px solid white;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+/* The div part is only needed for long-form content that is pre-formatted. */
+
+pre code div {
+	line-height: 1.5em;
+}
+
+/* This would be for prefromatted material that is not literally from a game or simulation but is meant to indicate something about the details of the game or simulation. */
+
+pre p {
+  border: 2px solid grey;
+  border-radius: 5px;
+  padding: 0.8em;
+	padding-top: 0;
+	margin: 0;
+}</style>
+			</head>
+	<body class="post-template-default single single-post postid-3554 single-format-standard custom-background wp-embed-responsive custom-background-image">
+		<svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-dark-grayscale"><fecolormatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></fecolormatrix><fecomponenttransfer color-interpolation-filters="sRGB"><fefuncr type="table" tablevalues="0 0.49803921568627"></fefuncr><fefuncg type="table" tablevalues="0 0.49803921568627"></fefuncg><fefuncb type="table" tablevalues="0 0.49803921568627"></fefuncb><fefunca type="table" tablevalues="1 1"></fefunca></fecomponenttransfer><fecomposite in2="SourceGraphic" operator="in"></fecomposite></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-grayscale"><fecolormatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></fecolormatrix><fecomponenttransfer color-interpolation-filters="sRGB"><fefuncr type="table" tablevalues="0 1"></fefuncr><fefuncg type="table" tablevalues="0 1"></fefuncg><fefuncb type="table" tablevalues="0 1"></fefuncb><fefunca type="table" tablevalues="1 1"></fefunca></fecomponenttransfer><fecomposite in2="SourceGraphic" operator="in"></fecomposite></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-purple-yellow"><fecolormatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></fecolormatrix><fecomponenttransfer color-interpolation-filters="sRGB"><fefuncr type="table" tablevalues="0.54901960784314 0.98823529411765"></fefuncr><fefuncg type="table" tablevalues="0 1"></fefuncg><fefuncb type="table" tablevalues="0.71764705882353 0.25490196078431"></fefuncb><fefunca type="table" tablevalues="1 1"></fefunca></fecomponenttransfer><fecomposite in2="SourceGraphic" operator="in"></fecomposite></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-blue-red"><fecolormatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></fecolormatrix><fecomponenttransfer color-interpolation-filters="sRGB"><fefuncr type="table" tablevalues="0 1"></fefuncr><fefuncg type="table" tablevalues="0 0.27843137254902"></fefuncg><fefuncb type="table" tablevalues="0.5921568627451 0.27843137254902"></fefuncb><fefunca type="table" tablevalues="1 1"></fefunca></fecomponenttransfer><fecomposite in2="SourceGraphic" operator="in"></fecomposite></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-midnight"><fecolormatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></fecolormatrix><fecomponenttransfer color-interpolation-filters="sRGB"><fefuncr type="table" tablevalues="0 0"></fefuncr><fefuncg type="table" tablevalues="0 0.64705882352941"></fefuncg><fefuncb type="table" tablevalues="0 1"></fefuncb><fefunca type="table" tablevalues="1 1"></fefunca></fecomponenttransfer><fecomposite in2="SourceGraphic" operator="in"></fecomposite></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-magenta-yellow"><fecolormatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></fecolormatrix><fecomponenttransfer color-interpolation-filters="sRGB"><fefuncr type="table" tablevalues="0.78039215686275 1"></fefuncr><fefuncg type="table" tablevalues="0 0.94901960784314"></fefuncg><fefuncb type="table" tablevalues="0.35294117647059 0.47058823529412"></fefuncb><fefunca type="table" tablevalues="1 1"></fefunca></fecomponenttransfer><fecomposite in2="SourceGraphic" operator="in"></fecomposite></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-purple-green"><fecolormatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></fecolormatrix><fecomponenttransfer color-interpolation-filters="sRGB"><fefuncr type="table" tablevalues="0.65098039215686 0.40392156862745"></fefuncr><fefuncg type="table" tablevalues="0 1"></fefuncg><fefuncb type="table" tablevalues="0.44705882352941 0.4"></fefuncb><fefunca type="table" tablevalues="1 1"></fefunca></fecomponenttransfer><fecomposite in2="SourceGraphic" operator="in"></fecomposite></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-blue-orange"><fecolormatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></fecolormatrix><fecomponenttransfer color-interpolation-filters="sRGB"><fefuncr type="table" tablevalues="0.098039215686275 1"></fefuncr><fefuncg type="table" tablevalues="0 0.66274509803922"></fefuncg><fefuncb type="table" tablevalues="0.84705882352941 0.41960784313725"></fefuncb><fefunca type="table" tablevalues="1 1"></fefunca></fecomponenttransfer><fecomposite in2="SourceGraphic" operator="in"></fecomposite></filter></defs></svg>		<div id="container" class="site container">
+	<header id="masthead" class="site-header animated fadeInDown" role="banner">
+
+	<a class="screen-reader-text skip-link" href="#main-content">Skip to content</a>
+	<a class="screen-reader-text skip-link" href="#sidebar-widget-area">Skip to sidebar</a>
+	<a class="screen-reader-text skip-link" href="#page-footer">Skip to footer</a>
+	<div id="site-identity" class="site-identity">
+		<a href="/" class="home-link animated fadeIn" title="Stories from a Software Tester" rel="home">
+			<div class="title-description">
+				<h1 class="site-title">Stories from a Software Tester</h1>
+				<h2 class="site-description">Twice upon a time, in another space, no distance in any direction from here &#8230;</h2>
+			</div>
+		</a> 
+
+	</div>
+<!--/site-identity-->
+
+	<nav id="nav-menu" class="site-navigation main-navigation" role="navigation" aria-label="Main Navigation">
+		<button id="nav-button" class="menu-toggle" role="button">
+			<span class="screen-reader-text">Menu</span>
+			<span class="genericon" aria-hidden="true"></span>
+		</button>
+		<ul id="primary-menu" class="primary-menu">
+<li id="menu-item-3923" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-3923"><a href="/">Home</a></li>
+<li id="menu-item-2051" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2051"><a href="/about-tester-stories/">About Tester Stories</a></li>
+<li id="menu-item-2050" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2050"><a href="/who-am-i/">Who Am I</a></li>
+<li id="menu-item-2048" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2048"><a href="/just-for-fun/">Just For Fun</a></li>
+</ul>	</nav><!--/navigation-->
+
+
+<form role="search" method="get" class="search-form" action="https://testerstories.com/">
+	<label>
+		<span class="screen-reader-text">Search for:</span>
+		<input type="search" class="search-field" placeholder="Search &hellip;" value="" name="s" title="Search for:">
+	</label>
+	<button type="submit" class="search-submit"><span class="genericon genericon-search" aria-hidden="true"></span><span class="screen-reader-text">Search</span></button>
+</form>
+</header><!--/header-->
+
+<main id="main-content" class="main-content" role="main">
+<article id="post-3554" class="post-3554 post type-post status-publish format-standard hentry category-machine-learning category-ml-series-3">
+<header class="entry-header">
+	<span class="entry-meta"><span class="cat-links"><span class="screen-reader-text">Published in</span><span class="genericon genericon-category" aria-hidden="true"></span><a href="/category/ai/machine-learning/" rel="category tag">Machine Learning</a><span aria-hidden="true">, </span><a href="/category/ai/machine-learning/ml-series-3/" rel="category tag">ML Series 3</a></span></span><h1 class="entry-title">Demystifying Machine Learning, Part 2</h1>	<span class="byline">
+	Written by <a href="/author/administrator/" class="entry-author" rel="author">Jeff Nyman</a>	</span><!-- .byline -->
+	<span class="entry-meta">
+	<span class="genericon genericon-time" aria-hidden="true"></span><a href="/2018/09/09/" rel="bookmark" class="entry-date"><time datetime="2018-09-09T11:08:05-05:00">9 September 2018</time></a>		<span class="comments-link">
+			<span class="genericon genericon-comment" aria-hidden="true"></span>
+			<a href="/2018/09/demystifying-machine-learning-part-2/#comments">3 Comments</a>		</span>
+		</span><!-- .entry-meta -->
+</header><!-- .entry-header -->
+
+	<div class="entry-content">
+		<p>Here we&#8217;ll pick up from the <a href="/2018/09/demystifying-machine-learning-part-1/">first post</a> and get to work with our machine learning, specifically focusing on getting a data set, exploring it a bit, and then doing some processing on the data to get it into a format that would be usable for a neural network algorithm.</p>
+<p><span id="more-3554"></span></p>
+<h2>Our Data Context</h2>
+<p>I mentioned in the first post that we would be using the MNIST handwritten digits database. Let&#8217;s get a little context for this, starting with what it is. Back in the 1980s, the National Institute of Standards and Technology (NIST) created what they called a modified dataset (called MNIST) containing grayscale images of handwritten digits.</p>
+<p>An entry level task into machine learning is the use of this data set as a classification exercise. The goal of the exercise is to train an algorithm to accurately recognize handwritten digits. The fact that the digits are handwritten means a lot of variation in terms of how the numbers are represented. Here are some examples from the data set:</p>
+<p align="center"><img decoding="async" src="/files/ai_and_ml/mnist-001-number-examples.png"></p>
+<p>The data set is made up of 60,000 training images and 10,000 test images, where each image is 28 &times; 28 pixels.</p>
+<p>The training images are scanned handwriting samples from a population of 250 people. Half of this group was made up of United States Census Bureau employees and the other half were high school students. The test images were taken from a different population of 250 people than the original training data, but still with an equal group split between United States Census Bureau employees and high school students.</p>
+<p>Using the terminology introduced in the first post, the data set is said to contain ten categories, also called classes. Specifically, those classes are the digits 0 through 9. Each image is a data point and each data point is called a sample.</p>
+<p>Bringing the above details together with achieving the previously stated goal means that you build a model that will learn from the training images. The model tries to understand the patterns that lead a given category of image (of 9) being given a certain label (of &#8220;9&#8221;).</p>
+<p align="center"><img decoding="async" src="/files/ai_and_ml/ml-mnist-learning-generic.png"></p>
+<p>The model is essentially learning to associate images and labels. Then you can test how well your model learned by having it run against the test images. Here the model should attempt to predict what the label will be for a given image. It should be able to do this because it will have understood how to classify those images.</p>
+<p>Again, with the terminology from the first post in mind, the labels are the outcomes or the targets. We want our model to &#8220;hit the target&#8221;, meaning to accurately classify an image as being associated with a label.</p>
+<h2>Does This Really Involve Learning?</h2>
+<p>In the first post, I had a section titled the same as this one and I answered that at a bit of a high-level. I think it&#8217;s important to frame that question again but this time leading into the specific work we&#8217;re going to be doing.</p>
+<p>Learning, in the context of machine learning, describes a process for finding better representations of data. A central problem of machine learning is to meaningfully transform data, which basically just means to learn useful representations of whatever input data we have. We measure &#8220;usefulness&#8221; by how much closer to an expected output those representations get us.</p>
+<p>What this means practically is that we need a way to determine the distance between a model&#8217;s actual output and its expected output. How do we do that? Essentially, we provide a feedback signal. A feedback signal to a model will tell it if the distance between the actual and the expected is increasing or decreasing.</p>
+<p>But what&#8217;s the model supposed to do with that information? The model will then have to make adjustments accordingly. Those adjustments could be described as the process of learning. The adjustments that lead to decreasing the distance between the actual output and the expected output is another way of describing how data is transformed into different and more useful representations.</p>
+<p>Thus we can say that machine learning is basically searching for useful representations of some input data within a predefined hypothesis space of possibilities, using guidance from a feedback signal. This machine learning becomes &#8220;deep learning&#8221; when you have algorithms that learn <em>successive</em> layers of increasingly meaningful representations.</p>
+<p>These are all bits that I mentioned in the first post. I hope this repetition here helps to reinforce these ideas.</p>
+<h2>Representations of Data</h2>
+<p>Let&#8217;s consider what the above process might look like in the context of our MNIST data:</p>
+<p align="center"><img decoding="async" src="/files/ai_and_ml/ml-classify-001.png"></p>
+<p>Here we have a simple transformation of an MNIST digit. What happens between the input and the output &#8212; what happens inside the layers &#8212; in order to allow the image 4 to be associated with the label &#8220;4&#8221; is where learning occurs. We can even further expand that view:</p>
+<p align="center"><img decoding="async" src="/files/ai_and_ml/ml-classify-002.png"></p>
+<p>The model, made up of layers, will transform the digit image into representations that allow the algorithm to learn the features that associate 4 with &#8220;4&#8221;.</p>
+<p>A key point to understand is that deep neural networks with many hidden layers can sequentially learn more complex features from any input image. For the relatively simple MNIST data set, the image features don&#8217;t get that complex. But let&#8217;s think about how this scales up.</p>
+<p>Consider trying to recognize whether an animal is in an image. The first hidden layer might only learn local edge patterns that ultimately frame all objects in the image. Then, each subsequent layer might learn more complex representations. Maybe the next layer learns gradients. Then the next one learns shading. Then the next one uses the output of those two previous layers to learn perspective. Finally, the last layer, the output layer, can generally classify the image as having something in it.</p>
+<h2>Processing of Data</h2>
+<p>Overall a deep learning model is basically an engine made up of different layers that we can think of as data processing units. Each of those units contains data filters. These units are stacked up one after the other or one on top of the other, depending on the visualization you prefer. What&#8217;s important is that the model passes inputs (data) through the stack of layers.</p>
+<p>That&#8217;s basically a neural network. Each data processing unit is a layer that takes in some data, performs some filtering on it, and extracts some representation out of the data, and then outputs that representation.</p>
+<p>The &#8220;model&#8221; in all this is a bit of a vague term. The neural network itself is sometimes called the model. However, I find it&#8217;s better to recognize that a neural network is really an algorithm. The model is that algorithm plus the representations that are learned as data is fed to the algorithm.</p>
+<p>Another way to frame this is that you can think of the network or model as a big math equation. We put data in, some calculations occur, and then some data pops out. If that sounds to you like how mathematical equations work, you now have a path from the intution of what machine learning <em>is</em> to how it actually <em>works</em>.</p>
+<h2>Mathematics Applied to Data</h2>
+<p>In fact, let&#8217;s dig in just a tiny bit to the mathematical underpinnings here.</p>
+<p>I keep talking about &#8220;filtering&#8221; or &#8220;extracting&#8221; or &#8220;transforming.&#8221; What&#8217;s actually doing all that? Generally speaking, that&#8217;s a bunch of math operating behind the scenes.</p>
+<p>Machine learning is fundamentally a <em>mathematical</em> framework for learning representations from data. To put a little meat on that statement, all transformations &#8212; all aspects of filtering data into representations &#8212; that are learned by deep neural networks can be reduced to a handful of tensor operations applied to tensors of numeric data.</p>
+<p>These deep learning models that we&#8217;re talking about only work with numeric tensors. I&#8217;ll revisit tensors later so don&#8217;t worry too much about them right now. In fact, with the libraries we&#8217;ll be using you technically don&#8217;t have to worry about them at all. But, as you might guess, TensorFlow is named for these tensors. It&#8217;s the underlying library that performs tensor operations and the &#8220;flow&#8221; part of TensorFlow refers to those tensors flowing through layers.</p>
+<h2>Conceptualizing the Math/Data Relationship</h2>
+<p>Depending on your experiences with math, all of that can seem a bit intimidating but there&#8217;s a fantastic description of this in the book <em>Deep Learning with Python</em> that I&#8217;ll use here. In that book, François Chollet puts this tensor stuff in context:</p>
+<blockquote><p>&#8220;Neural networks consist entirely of chains of tensor operations and all of these tensor operations are just geometric transformations of the input data. It follows that you can interpret a neural network as a very complex geometric transformation in a high-dimensional space, implemented via a long series of simple steps.&#8221;</p></blockquote>
+<p>Chollet then asks us to consider this visualization:</p>
+<p align="center"><img decoding="async" src="/files/ai_and_ml/nn-tensor-conceptual.png"></p>
+<p>I like that visualization because, conceptually, a neural network is searching for a transformation of the paper ball that would uncrumple it.</p>
+<p>But now imagine <em>two</em> sheets of paper, each differently colored or perhaps with different writing on them. Then crumple up both of them together. The neural network can apply that same uncrumpling process used for the single crumpled paper to make the two classes of paper separable again. As Chollet states:</p>
+<blockquote><p>&#8220;Uncrumpling paper balls is what machine learning is about: finding neat representations for complex, highly folded data manifolds. [Deep learning] takes the approach of incrementally decomposing a complicated geometric transformation into a long chain of elementary ones, which is pretty much the strategy a human would follow to uncrumple a paper ball.&#8221;</p></blockquote>
+<p>The term &#8220;manifold&#8221; there might have thrown you a bit. Let&#8217;s talk about this.</p>
+<h2>From Numbers to Geometry</h2>
+<p>Imagine holding an uncrumpled piece of paper in your hand. That paper represents two-dimensional data in three-dimensional space. That&#8217;s a pretty rough explanation so let&#8217;s take another example that we&#8217;re all familiar with. Earth is a two-dimensional manifold or a surface. What that <em>means</em> is that it&#8217;s a space that looks locally like a flat plane &#8230; but it may have a different global structure.</p>
+<p>And we know that to be the case. While the Earth looks locally flat, globally it&#8217;s a sphere. Or, if striving for complete accuracy, an oblate spheroid. A key point here is that the Earth could also have have been something other than a sphere. It could have been a torus, for example. But that wouldn&#8217;t change the fact that the surface would be locally flat any point. So we have a two-dimensional manifold, which would be like the &#8220;highly folded data manifold&#8221; mentioned in the above quote.</p>
+<p>One more quick point here: a manifold captures precisely the local flatness in <em>any</em> dimensions. The reason that&#8217;s important is because it let&#8217;s us talk about the rate of change of something on that manifold. This is essentially how we can perform activities like differentiation, which does factor into machine learning.</p>
+<p>This movement from numbers to linear algebra to geometry is actually really important. It will take me into the next post to cover that. Remember that Douglas Adams quote from the first post? The above might have been another such moment for you. Don&#8217;t panic! We&#8217;ll get more into these topics.</p>
+<h2>Visualizing the Operations</h2>
+<p>Now let&#8217;s take some of what I said above and workflow it out, so to speak. I&#8217;ll respectfully borrow a few more images from Chollet&#8217;s work to visualize that process:</p>
+<p align="center"><img decoding="async" src="/files/ai_and_ml/ml-operation-001.png"></p>
+<p>If I&#8217;ve presented things well so far, that visual workflow should make sense. We have inputs, here labeled X, and we have outputs, here labeled Y. The outputs are predictions or classifications. Our expected output is Y. The trick is we want the neural network to come to that conclusion by passing the input (X) into its layers and doing some transformations on X such that it&#8217;s actual output matches the expected output.</p>
+<p>The transformations that are implemented by a given layer are parameterized, or modulated, by the <em>weights</em> (w) of that layer. Remember those adjustments I mentioned earlier? What this visual shows is a refinement to that idea.</p>
+<p>Learning means the neural network finds a set of values for the weights in each layer. It&#8217;s the actual weights that are being adjusted. But what actually <em>is</em> a weight? In this context, just think of the weight as how much value you give to certain parameters that are being operated on in the layer.</p>
+<p>A neural network will adjust these weights based on the distance between the expected output and the actual output. Let&#8217;s add to our visualization here:</p>
+<p align="center"><img decoding="async" src="/files/ai_and_ml/ml-operation-002.png"></p>
+<p>To control the output of a neural network, you need to be able to measure how far the actual output is from what you expected. This is the job of something called the loss (or cost) function of the network. The loss function takes the predictions of the network (what the network did output) and the true target (what you wanted the network to output) and computes a distance score, capturing how well the network has done on a specific sample of data.</p>
+<p>This is getting us to that feedback signal I mentioned earlier. Let&#8217;s expand our visualization once more:</p>
+<p align="center"><img decoding="async" src="/files/ai_and_ml/ml-operation-003.png"></p>
+<p>The fundamental trick in machine learning is to use this computed loss score as the feedback signal to adjust the value of the weights. But adjust them by how much? Well, that&#8217;s part of what&#8217;s being learned.</p>
+<p>Ultimately the goal is to adjust the weights in a direction that will lower the loss score for the current sample. This adjustment is the job of something called an optimizer, which implements what’s called a backpropagation algorithm. Backpropagation is pretty much the central algorithm in much of machine learning and it really just means taking information at the end of the process and propagating it <em>back</em> to a point earlier in the process.</p>
+<h2>Quick Math Side Trip</h2>
+<p>If you are familiar with linear algebra &#8212; and I mentioned it above to get you thinking about it &#8212; you&#8217;ll note here that we have <strong>y</strong>, <strong>x</strong>, and <strong>w</strong> as aspects of our model. Can you think of any equation you learned that has those as part of a single calculation aspect? It might help if I introduced another parameter called <strong>b</strong>.</p>
+<p>Any ideas? How about this:</p>
+<pre style="white-space: pre-wrap; background-color: white; border: 1px solid;">
+f(x) = xw + b
+</pre>
+<p>We have a function of x such that x multiplied by w and added to b gives us a line. Remember about machine learning being fundamentally about drawing lines? Let&#8217;s replace the f(x) as such:</p>
+<pre style="white-space: pre-wrap; background-color: white; border: 1px solid;">
+y = xw + b
+</pre>
+<p>Well, that&#8217;s just a linear equation, isn&#8217;t it? Indeed so!</p>
+<p>In linear algebra terms, x is your input, w is your coefficient and b is called the intercept. The only difference in machine learning is that we call w the weight and b the bias. I&#8217;ll come back to this. I find a gradual introduction of math interspersed if often better than just a total focus on it in one shot.</p>
+<h2>Learn By Training</h2>
+<p>A core idea here is that the model is trained. Training is how experience is acquired. And the acquisition of experience is how learning is achieved, assuming that the experience can be extrapolated from.</p>
+<p>A simplified, but not inaccurate, view of how training works is that initially the weights of the network are assigned random values. This would mean the model implements a series of random transformations. As you can imagine, from that kind of starting point, the output of the model will likely be far from what it should ideally be. This would imply that the loss score is going to be quite high.</p>
+<p>But with every sample the model processes, the weights are adjusted a little in the correct direction. &#8220;Correct&#8221; here is determined by seeing the loss score decrease. The goal is ultimately finding weight values that minimize the loss function as much as possible. A model with a minimal loss is one for which the actual outputs are as close as they can be to the targets, which are the expected outputs.</p>
+<h2>Neural Network Life Cycle</h2>
+<p>How do we make those concepts and visualizations operational? How do we turn those ideas into working code that we can observe and test? Even more to the point, how does <em>any</em> of this go from theory to practice?</p>
+<p>There is a life cycle, for lack of a better term, to a neural network model. The life cycle is essentially this:</p>
+<ol>
+<li>Gather and Prepare Data</li>
+<li>Define the Model</li>
+<li>Compile the Model</li>
+<li>Fit the Model</li>
+<li>Evaluate the Model</li>
+<li>Generate Predictions from the Model</li>
+</ol>
+<p>How this is actually implemented in various tool libraries will differ but they all should be following this life cycle.</p>
+<p>The first step of gathering and preparation is, of course, extremely important because it&#8217;s this data that we&#8217;re going to feed to the network we create. In our case, ultimately we&#8217;re going to use some pre-existing data that was encoded for us and thus was preprocessed. But I&#8217;ll also do some processing with you, reshaping and scaling the data, just so you can see how it works.</p>
+<p>Before we get to that, I&#8217;ll use the remainder of this post to how you how to do a bit of initial data gathering. You&#8217;ve been patient with a <em>lot</em> of theory; so let&#8217;s get to some practice.</p>
+<h2>Processing our Data</h2>
+<p>I described the MNIST data set earlier. This data set is actually part of the Keras set of provided data sets and ultimately that is what we&#8217;re going to use. But I did want to take a little time and show you what it would mean to be given data in a raw encoded format. Here I want to show you a bit of how that data gets to the point where it&#8217;s usable and I&#8217;m doing this mainly because many tutorials out there <em>don&#8217;t</em> do this.</p>
+<p>First a little history for you: the first successful practical application of neural nets came in 1989 from Bell Labs. A researcher named Yann LeCun combined the the existing ideas of convolutional neural networks and backpropagation and to showcase how this worked he applied the resulting combination to the problem of classifying handwritten digits.</p>
+<p>That context will make you understand why I want you to check out the raw encoded data set from Yann LeCun&#8217;s website:</p>
+<p><a href="http://yann.lecun.com/exdb/mnist/">http://yann.lecun.com/exdb/mnist/</a></p>
+<p>There are four files at the above site. You can download those and then uncompress them. This raw data has already been processed to an extent. As the site itself says:</p>
+<blockquote><p>&#8220;The digits have been size-normalized and centered in a fixed-size image.&#8221;</p></blockquote>
+<p>Yet what you will end up with is four binary files which isn&#8217;t entirely helpful to us for machine learning purposes. What we can do is run a processing program of our own creation to get that data into a format that ultimately could be passed to a neural network. Create a script called <strong>process.py</strong> in the same location as your uncompressed MNIST files. Add the following logic:</p>
+<p></p>
+<!-- Urvanov Syntax Highlighter v2.8.33 -->
+
+		<div id="urvanov-syntax-highlighter-647f41eac9288560194682" class="urvanov-syntax-highlighter-syntax crayon-theme-classic urvanov-syntax-highlighter-font-monaco urvanov-syntax-highlighter-os-pc print-yes notranslate" data-settings=" minimize scroll-mouseover" style="margin-top: 12px; margin-bottom: 12px; font-size: 12px !important; line-height: 15px !important;">
+		
+			<div class="crayon-toolbar" data-settings=" mouseover overlay hide delay" style="font-size: 12px !important;height: 18px !important; line-height: 18px !important;">
+<span class="crayon-title"></span>
+			<div class="crayon-tools" style="font-size: 12px !important;height: 18px !important; line-height: 18px !important;">
+<div class="crayon-button urvanov-syntax-highlighter-nums-button" title="Toggle Line Numbers"><div class="urvanov-syntax-highlighter-button-icon"></div></div>
+<div class="crayon-button urvanov-syntax-highlighter-plain-button" title="Toggle Plain Code"><div class="urvanov-syntax-highlighter-button-icon"></div></div>
+<div class="crayon-button urvanov-syntax-highlighter-wrap-button" title="Toggle Line Wrap"><div class="urvanov-syntax-highlighter-button-icon"></div></div>
+<div class="crayon-button urvanov-syntax-highlighter-expand-button" title="Expand Code"><div class="urvanov-syntax-highlighter-button-icon"></div></div>
+<div class="crayon-button urvanov-syntax-highlighter-copy-button" title="Copy"><div class="urvanov-syntax-highlighter-button-icon"></div></div>
+<div class="crayon-button urvanov-syntax-highlighter-popup-button" title="Open Code In New Window"><div class="urvanov-syntax-highlighter-button-icon"></div></div>
+<span class="crayon-language">Python</span>
+</div>
+</div>
+			<div class="crayon-info" style="min-height: 16.8px !important; line-height: 16.8px !important;"></div>
+			<div class="urvanov-syntax-highlighter-plain-wrap"><textarea wrap="soft" class="urvanov-syntax-highlighter-plain print-no" data-settings="dblclick" readonly style="-moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4; font-size: 12px !important; line-height: 15px !important;">
+def process(image_file, label_file, output_file, samples):
+    input_images = open(image_file, "rb")
+    input_labels = open(label_file, "rb")
+    output = open(output_file, "w")
+
+    input_images.read(16)
+    input_labels.read(8)
+    images = []
+
+    for i in range(samples):
+        image = [ord(input_labels.read(1))]
+
+        for j in range(28*28):
+            image.append(ord(input_images.read(1)))
+
+        images.append(image)
+
+    for image in images:
+        output.write(",".join(str(pixel) for pixel in image) + "\n")
+
+    input_images.close()
+    input_labels.close()
+    output.close()
+
+
+process("train-images.idx3-ubyte",
+        "train-labels.idx1-ubyte", "mnist-train-data.csv", 60000)
+
+process("t10k-images.idx3-ubyte",
+        "t10k-labels.idx1-ubyte", "mnist-test-data.csv", 10000)</textarea></div>
+			<div class="urvanov-syntax-highlighter-main">
+				<table class="crayon-table">
+					<tr class="urvanov-syntax-highlighter-row">
+				<td class="crayon-nums " data-settings="show">
+					<div class="urvanov-syntax-highlighter-nums-content" style="font-size: 12px !important; line-height: 15px !important;">
+<div class="crayon-num" data-line="urvanov-syntax-highlighter-647f41eac9288560194682-1">1</div>
+<div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-647f41eac9288560194682-2">2</div>
+<div class="crayon-num" data-line="urvanov-syntax-highlighter-647f41eac9288560194682-3">3</div>
+<div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-647f41eac9288560194682-4">4</div>
+<div class="crayon-num" data-line="urvanov-syntax-highlighter-647f41eac9288560194682-5">5</div>
+<div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-647f41eac9288560194682-6">6</div>
+<div class="crayon-num" data-line="urvanov-syntax-highlighter-647f41eac9288560194682-7">7</div>
+<div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-647f41eac9288560194682-8">8</div>
+<div class="crayon-num" data-line="urvanov-syntax-highlighter-647f41eac9288560194682-9">9</div>
+<div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-647f41eac9288560194682-10">10</div>
+<div class="crayon-num" data-line="urvanov-syntax-highlighter-647f41eac9288560194682-11">11</div>
+<div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-647f41eac9288560194682-12">12</div>
+<div class="crayon-num" data-line="urvanov-syntax-highlighter-647f41eac9288560194682-13">13</div>
+<div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-647f41eac9288560194682-14">14</div>
+<div class="crayon-num" data-line="urvanov-syntax-highlighter-647f41eac9288560194682-15">15</div>
+<div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-647f41eac9288560194682-16">16</div>
+<div class="crayon-num" data-line="urvanov-syntax-highlighter-647f41eac9288560194682-17">17</div>
+<div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-647f41eac9288560194682-18">18</div>
+<div class="crayon-num" data-line="urvanov-syntax-highlighter-647f41eac9288560194682-19">19</div>
+<div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-647f41eac9288560194682-20">20</div>
+<div class="crayon-num" data-line="urvanov-syntax-highlighter-647f41eac9288560194682-21">21</div>
+<div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-647f41eac9288560194682-22">22</div>
+<div class="crayon-num" data-line="urvanov-syntax-highlighter-647f41eac9288560194682-23">23</div>
+<div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-647f41eac9288560194682-24">24</div>
+<div class="crayon-num" data-line="urvanov-syntax-highlighter-647f41eac9288560194682-25">25</div>
+<div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-647f41eac9288560194682-26">26</div>
+<div class="crayon-num" data-line="urvanov-syntax-highlighter-647f41eac9288560194682-27">27</div>
+<div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-647f41eac9288560194682-28">28</div>
+<div class="crayon-num" data-line="urvanov-syntax-highlighter-647f41eac9288560194682-29">29</div>
+<div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-647f41eac9288560194682-30">30</div>
+</div>
+				</td>
+						<td class="urvanov-syntax-highlighter-code"><div class="crayon-pre" style="font-size: 12px !important; line-height: 15px !important; -moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4;">
+<div class="crayon-line" id="urvanov-syntax-highlighter-647f41eac9288560194682-1">
+<span class="crayon-r">def</span><span class="crayon-h"> </span><span class="crayon-e">process</span><span class="crayon-sy">(</span><span class="crayon-v">image_file</span><span class="crayon-sy">,</span><span class="crayon-h"> </span><span class="crayon-v">label_file</span><span class="crayon-sy">,</span><span class="crayon-h"> </span><span class="crayon-v">output_file</span><span class="crayon-sy">,</span><span class="crayon-h"> </span><span class="crayon-v">samples</span><span class="crayon-sy">)</span><span class="crayon-o">:</span>
+</div>
+<div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-647f41eac9288560194682-2">
+<span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-v">input_images</span><span class="crayon-h"> </span><span class="crayon-o">=</span><span class="crayon-h"> </span><span class="crayon-k ">open</span><span class="crayon-sy">(</span><span class="crayon-v">image_file</span><span class="crayon-sy">,</span><span class="crayon-h"> </span><span class="crayon-s">"rb"</span><span class="crayon-sy">)</span>
+</div>
+<div class="crayon-line" id="urvanov-syntax-highlighter-647f41eac9288560194682-3">
+<span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-v">input_labels</span><span class="crayon-h"> </span><span class="crayon-o">=</span><span class="crayon-h"> </span><span class="crayon-k ">open</span><span class="crayon-sy">(</span><span class="crayon-v">label_file</span><span class="crayon-sy">,</span><span class="crayon-h"> </span><span class="crayon-s">"rb"</span><span class="crayon-sy">)</span>
+</div>
+<div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-647f41eac9288560194682-4">
+<span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-v">output</span><span class="crayon-h"> </span><span class="crayon-o">=</span><span class="crayon-h"> </span><span class="crayon-k ">open</span><span class="crayon-sy">(</span><span class="crayon-v">output_file</span><span class="crayon-sy">,</span><span class="crayon-h"> </span><span class="crayon-s">"w"</span><span class="crayon-sy">)</span>
+</div>
+<div class="crayon-line" id="urvanov-syntax-highlighter-647f41eac9288560194682-5">&nbsp;</div>
+<div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-647f41eac9288560194682-6">
+<span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-v">input_images</span><span class="crayon-sy">.</span><span class="crayon-e">read</span><span class="crayon-sy">(</span><span class="crayon-cn">16</span><span class="crayon-sy">)</span>
+</div>
+<div class="crayon-line" id="urvanov-syntax-highlighter-647f41eac9288560194682-7">
+<span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-v">input_labels</span><span class="crayon-sy">.</span><span class="crayon-e">read</span><span class="crayon-sy">(</span><span class="crayon-cn">8</span><span class="crayon-sy">)</span>
+</div>
+<div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-647f41eac9288560194682-8">
+<span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-v">images</span><span class="crayon-h"> </span><span class="crayon-o">=</span><span class="crayon-h"> </span><span class="crayon-sy">[</span><span class="crayon-sy">]</span>
+</div>
+<div class="crayon-line" id="urvanov-syntax-highlighter-647f41eac9288560194682-9">&nbsp;</div>
+<div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-647f41eac9288560194682-10">
+<span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-st">for</span><span class="crayon-h"> </span><span class="crayon-i">i</span><span class="crayon-h"> </span><span class="crayon-st">in</span><span class="crayon-h"> </span><span class="crayon-k ">range</span><span class="crayon-sy">(</span><span class="crayon-v">samples</span><span class="crayon-sy">)</span><span class="crayon-o">:</span>
+</div>
+<div class="crayon-line" id="urvanov-syntax-highlighter-647f41eac9288560194682-11">
+<span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-v">image</span><span class="crayon-h"> </span><span class="crayon-o">=</span><span class="crayon-h"> </span><span class="crayon-sy">[</span><span class="crayon-k ">ord</span><span class="crayon-sy">(</span><span class="crayon-v">input_labels</span><span class="crayon-sy">.</span><span class="crayon-e">read</span><span class="crayon-sy">(</span><span class="crayon-cn">1</span><span class="crayon-sy">)</span><span class="crayon-sy">)</span><span class="crayon-sy">]</span>
+</div>
+<div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-647f41eac9288560194682-12">&nbsp;</div>
+<div class="crayon-line" id="urvanov-syntax-highlighter-647f41eac9288560194682-13">
+<span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-st">for</span><span class="crayon-h"> </span><span class="crayon-i">j</span><span class="crayon-h"> </span><span class="crayon-st">in</span><span class="crayon-h"> </span><span class="crayon-k ">range</span><span class="crayon-sy">(</span><span class="crayon-cn">28</span><span class="crayon-o">*</span><span class="crayon-cn">28</span><span class="crayon-sy">)</span><span class="crayon-o">:</span>
+</div>
+<div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-647f41eac9288560194682-14">
+<span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-v">image</span><span class="crayon-sy">.</span><span class="crayon-e">append</span><span class="crayon-sy">(</span><span class="crayon-k ">ord</span><span class="crayon-sy">(</span><span class="crayon-v">input_images</span><span class="crayon-sy">.</span><span class="crayon-e">read</span><span class="crayon-sy">(</span><span class="crayon-cn">1</span><span class="crayon-sy">)</span><span class="crayon-sy">)</span><span class="crayon-sy">)</span>
+</div>
+<div class="crayon-line" id="urvanov-syntax-highlighter-647f41eac9288560194682-15">&nbsp;</div>
+<div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-647f41eac9288560194682-16">
+<span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-v">images</span><span class="crayon-sy">.</span><span class="crayon-e">append</span><span class="crayon-sy">(</span><span class="crayon-v">image</span><span class="crayon-sy">)</span>
+</div>
+<div class="crayon-line" id="urvanov-syntax-highlighter-647f41eac9288560194682-17">&nbsp;</div>
+<div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-647f41eac9288560194682-18">
+<span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-st">for</span><span class="crayon-h"> </span><span class="crayon-e">image </span><span class="crayon-st">in</span><span class="crayon-h"> </span><span class="crayon-v">images</span><span class="crayon-o">:</span>
+</div>
+<div class="crayon-line" id="urvanov-syntax-highlighter-647f41eac9288560194682-19">
+<span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-v">output</span><span class="crayon-sy">.</span><span class="crayon-e">write</span><span class="crayon-sy">(</span><span class="crayon-s">","</span><span class="crayon-sy">.</span><span class="crayon-e">join</span><span class="crayon-sy">(</span><span class="crayon-k ">str</span><span class="crayon-sy">(</span><span class="crayon-v">pixel</span><span class="crayon-sy">)</span><span class="crayon-h"> </span><span class="crayon-st">for</span><span class="crayon-h"> </span><span class="crayon-e">pixel </span><span class="crayon-st">in</span><span class="crayon-h"> </span><span class="crayon-v">image</span><span class="crayon-sy">)</span><span class="crayon-h"> </span><span class="crayon-o">+</span><span class="crayon-h"> </span><span class="crayon-s">"\n"</span><span class="crayon-sy">)</span>
+</div>
+<div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-647f41eac9288560194682-20">&nbsp;</div>
+<div class="crayon-line" id="urvanov-syntax-highlighter-647f41eac9288560194682-21">
+<span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-v">input_images</span><span class="crayon-sy">.</span><span class="crayon-e">close</span><span class="crayon-sy">(</span><span class="crayon-sy">)</span>
+</div>
+<div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-647f41eac9288560194682-22">
+<span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-v">input_labels</span><span class="crayon-sy">.</span><span class="crayon-e">close</span><span class="crayon-sy">(</span><span class="crayon-sy">)</span>
+</div>
+<div class="crayon-line" id="urvanov-syntax-highlighter-647f41eac9288560194682-23">
+<span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-v">output</span><span class="crayon-sy">.</span><span class="crayon-e">close</span><span class="crayon-sy">(</span><span class="crayon-sy">)</span>
+</div>
+<div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-647f41eac9288560194682-24">&nbsp;</div>
+<div class="crayon-line" id="urvanov-syntax-highlighter-647f41eac9288560194682-25">&nbsp;</div>
+<div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-647f41eac9288560194682-26">
+<span class="crayon-e">process</span><span class="crayon-sy">(</span><span class="crayon-s">"train-images.idx3-ubyte"</span><span class="crayon-sy">,</span>
+</div>
+<div class="crayon-line" id="urvanov-syntax-highlighter-647f41eac9288560194682-27">
+<span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-s">"train-labels.idx1-ubyte"</span><span class="crayon-sy">,</span><span class="crayon-h"> </span><span class="crayon-s">"mnist-train-data.csv"</span><span class="crayon-sy">,</span><span class="crayon-h"> </span><span class="crayon-cn">60000</span><span class="crayon-sy">)</span>
+</div>
+<div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-647f41eac9288560194682-28">&nbsp;</div>
+<div class="crayon-line" id="urvanov-syntax-highlighter-647f41eac9288560194682-29">
+<span class="crayon-e">process</span><span class="crayon-sy">(</span><span class="crayon-s">"t10k-images.idx3-ubyte"</span><span class="crayon-sy">,</span>
+</div>
+<div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-647f41eac9288560194682-30">
+<span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-s">"t10k-labels.idx1-ubyte"</span><span class="crayon-sy">,</span><span class="crayon-h"> </span><span class="crayon-s">"mnist-test-data.csv"</span><span class="crayon-sy">,</span><span class="crayon-h"> </span><span class="crayon-cn">10000</span><span class="crayon-sy">)</span>
+</div>
+</div></td>
+					</tr>
+				</table>
+			</div>
+		</div>
+<!-- [Format Time: 0.0010 seconds] -->
+<p></p>
+<p>Run the script, which should only take a minute or two at most to run. That will get you two files: mnist-train-data.csv and mnist-test-data.csv. Keep in mind what I said earlier: &#8220;the data set is made up of 60,000 training images and 10,000 test images that are of size 28 × 28 pixels.&#8221; Given that, some of the numbers in that script may make some sense.</p>
+<p>The format of these csv files is a series of rows and columns. The first column will be the label, which means what number is encoded for that row. The remaining columns can be thought of as pixel<sub>11</sub>, pixel<sub>12</sub>, and so on, where the general format is pixel<sub>ij</sub> meaning the entry for that cell is the pixel in the ith row and jth column.</p>
+<p>This process is important. If you can get your data into what amounts to a spreadsheet-readable format, you know that it can be fed into a neural network.</p>
+<p>There are a few bits of nomenclature I should clarify here. While I&#8217;ve talked about rows and columns, when you get into machine learning the rows are called observations or samples. The columns are referred to as features. It&#8217;s also more often the case that the target variable or expected output is at the end, meaning the last column, rather than the first.</p>
+<h2>Checking Our Data</h2>
+<p>Now let’s do a little experimentation to see what we got. Create a new script called <strong>mnist_data.py</strong>. In that script, let&#8217;s bring in some of the libraries we&#8217;ll need:</p>
+<p></p>
+<!-- Urvanov Syntax Highlighter v2.8.33 -->
+
+		<div id="urvanov-syntax-highlighter-647f41eac9290642018883" class="urvanov-syntax-highlighter-syntax crayon-theme-classic urvanov-syntax-highlighter-font-monaco urvanov-syntax-highlighter-os-pc print-yes notranslate" data-settings=" minimize scroll-mouseover" style="margin-top: 12px; margin-bottom: 12px; font-size: 12px !important; line-height: 15px !important;">
+		
+			<div class="crayon-toolbar" data-settings=" mouseover overlay hide delay" style="font-size: 12px !important;height: 18px !important; line-height: 18px !important;">
+<span class="crayon-title"></span>
+			<div class="crayon-tools" style="font-size: 12px !important;height: 18px !important; line-height: 18px !important;">
+<div class="crayon-button urvanov-syntax-highlighter-nums-button" title="Toggle Line Numbers"><div class="urvanov-syntax-highlighter-button-icon"></div></div>
+<div class="crayon-button urvanov-syntax-highlighter-plain-button" title="Toggle Plain Code"><div class="urvanov-syntax-highlighter-button-icon"></div></div>
+<div class="crayon-button urvanov-syntax-highlighter-wrap-button" title="Toggle Line Wrap"><div class="urvanov-syntax-highlighter-button-icon"></div></div>
+<div class="crayon-button urvanov-syntax-highlighter-expand-button" title="Expand Code"><div class="urvanov-syntax-highlighter-button-icon"></div></div>
+<div class="crayon-button urvanov-syntax-highlighter-copy-button" title="Copy"><div class="urvanov-syntax-highlighter-button-icon"></div></div>
+<div class="crayon-button urvanov-syntax-highlighter-popup-button" title="Open Code In New Window"><div class="urvanov-syntax-highlighter-button-icon"></div></div>
+<span class="crayon-language">Python</span>
+</div>
+</div>
+			<div class="crayon-info" style="min-height: 16.8px !important; line-height: 16.8px !important;"></div>
+			<div class="urvanov-syntax-highlighter-plain-wrap"><textarea wrap="soft" class="urvanov-syntax-highlighter-plain print-no" data-settings="dblclick" readonly style="-moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4; font-size: 12px !important; line-height: 15px !important;">
+import numpy as np
+import matplotlib.pyplot as plt</textarea></div>
+			<div class="urvanov-syntax-highlighter-main">
+				<table class="crayon-table">
+					<tr class="urvanov-syntax-highlighter-row">
+				<td class="crayon-nums " data-settings="show">
+					<div class="urvanov-syntax-highlighter-nums-content" style="font-size: 12px !important; line-height: 15px !important;">
+<div class="crayon-num" data-line="urvanov-syntax-highlighter-647f41eac9290642018883-1">1</div>
+<div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-647f41eac9290642018883-2">2</div>
+</div>
+				</td>
+						<td class="urvanov-syntax-highlighter-code"><div class="crayon-pre" style="font-size: 12px !important; line-height: 15px !important; -moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4;">
+<div class="crayon-line" id="urvanov-syntax-highlighter-647f41eac9290642018883-1">
+<span class="crayon-r">import</span><span class="crayon-h"> </span><span class="crayon-e">numpy </span><span class="crayon-st">as</span><span class="crayon-h"> </span><span class="crayon-e">np</span>
+</div>
+<div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-647f41eac9290642018883-2">
+<span class="crayon-r">import</span><span class="crayon-h"> </span><span class="crayon-v">matplotlib</span><span class="crayon-sy">.</span><span class="crayon-e">pyplot </span><span class="crayon-st">as</span><span class="crayon-h"> </span><span class="crayon-v">plt</span>
+</div>
+</div></td>
+					</tr>
+				</table>
+			</div>
+		</div>
+<!-- [Format Time: 0.0001 seconds] -->
+<p></p>
+<p>Now let&#8217;s open one of those data files:</p>
+<p></p>
+<!-- Urvanov Syntax Highlighter v2.8.33 -->
+
+		<div id="urvanov-syntax-highlighter-647f41eac9291597631386" class="urvanov-syntax-highlighter-syntax crayon-theme-classic urvanov-syntax-highlighter-font-monaco urvanov-syntax-highlighter-os-pc print-yes notranslate" data-settings=" minimize scroll-mouseover" style="margin-top: 12px; margin-bottom: 12px; font-size: 12px !important; line-height: 15px !important;">
+		
+			<div class="crayon-toolbar" data-settings=" mouseover overlay hide delay" style="font-size: 12px !important;height: 18px !important; line-height: 18px !important;">
+<span class="crayon-title"></span>
+			<div class="crayon-tools" style="font-size: 12px !important;height: 18px !important; line-height: 18px !important;">
+<div class="crayon-button urvanov-syntax-highlighter-nums-button" title="Toggle Line Numbers"><div class="urvanov-syntax-highlighter-button-icon"></div></div>
+<div class="crayon-button urvanov-syntax-highlighter-plain-button" title="Toggle Plain Code"><div class="urvanov-syntax-highlighter-button-icon"></div></div>
+<div class="crayon-button urvanov-syntax-highlighter-wrap-button" title="Toggle Line Wrap"><div class="urvanov-syntax-highlighter-button-icon"></div></div>
+<div class="crayon-button urvanov-syntax-highlighter-expand-button" title="Expand Code"><div class="urvanov-syntax-highlighter-button-icon"></div></div>
+<div class="crayon-button urvanov-syntax-highlighter-copy-button" title="Copy"><div class="urvanov-syntax-highlighter-button-icon"></div></div>
+<div class="crayon-button urvanov-syntax-highlighter-popup-button" title="Open Code In New Window"><div class="urvanov-syntax-highlighter-button-icon"></div></div>
+<span class="crayon-language">Python</span>
+</div>
+</div>
+			<div class="crayon-info" style="min-height: 16.8px !important; line-height: 16.8px !important;"></div>
+			<div class="urvanov-syntax-highlighter-plain-wrap"><textarea wrap="soft" class="urvanov-syntax-highlighter-plain print-no" data-settings="dblclick" readonly style="-moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4; font-size: 12px !important; line-height: 15px !important;">
+input_file = open("mnist-train-data.csv", "r")
+input_data = input_file.readlines()
+input_file.close()</textarea></div>
+			<div class="urvanov-syntax-highlighter-main">
+				<table class="crayon-table">
+					<tr class="urvanov-syntax-highlighter-row">
+				<td class="crayon-nums " data-settings="show">
+					<div class="urvanov-syntax-highlighter-nums-content" style="font-size: 12px !important; line-height: 15px !important;">
+<div class="crayon-num" data-line="urvanov-syntax-highlighter-647f41eac9291597631386-1">1</div>
+<div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-647f41eac9291597631386-2">2</div>
+<div class="crayon-num" data-line="urvanov-syntax-highlighter-647f41eac9291597631386-3">3</div>
+</div>
+				</td>
+						<td class="urvanov-syntax-highlighter-code"><div class="crayon-pre" style="font-size: 12px !important; line-height: 15px !important; -moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4;">
+<div class="crayon-line" id="urvanov-syntax-highlighter-647f41eac9291597631386-1">
+<span class="crayon-v">input_file</span><span class="crayon-h"> </span><span class="crayon-o">=</span><span class="crayon-h"> </span><span class="crayon-k ">open</span><span class="crayon-sy">(</span><span class="crayon-s">"mnist-train-data.csv"</span><span class="crayon-sy">,</span><span class="crayon-h"> </span><span class="crayon-s">"r"</span><span class="crayon-sy">)</span>
+</div>
+<div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-647f41eac9291597631386-2">
+<span class="crayon-v">input_data</span><span class="crayon-h"> </span><span class="crayon-o">=</span><span class="crayon-h"> </span><span class="crayon-v">input_file</span><span class="crayon-sy">.</span><span class="crayon-e">readlines</span><span class="crayon-sy">(</span><span class="crayon-sy">)</span>
+</div>
+<div class="crayon-line" id="urvanov-syntax-highlighter-647f41eac9291597631386-3">
+<span class="crayon-v">input_file</span><span class="crayon-sy">.</span><span class="crayon-e">close</span><span class="crayon-sy">(</span><span class="crayon-sy">)</span>
+</div>
+</div></td>
+					</tr>
+				</table>
+			</div>
+		</div>
+<!-- [Format Time: 0.0001 seconds] -->
+<p></p>
+<p>Now we can check the count of samples and get a look at one of the samples:</p>
+<p></p>
+<!-- Urvanov Syntax Highlighter v2.8.33 -->
+
+		<div id="urvanov-syntax-highlighter-647f41eac9292442589708" class="urvanov-syntax-highlighter-syntax crayon-theme-classic urvanov-syntax-highlighter-font-monaco urvanov-syntax-highlighter-os-pc print-yes notranslate" data-settings=" minimize scroll-mouseover" style="margin-top: 12px; margin-bottom: 12px; font-size: 12px !important; line-height: 15px !important;">
+		
+			<div class="crayon-toolbar" data-settings=" mouseover overlay hide delay" style="font-size: 12px !important;height: 18px !important; line-height: 18px !important;">
+<span class="crayon-title"></span>
+			<div class="crayon-tools" style="font-size: 12px !important;height: 18px !important; line-height: 18px !important;">
+<div class="crayon-button urvanov-syntax-highlighter-nums-button" title="Toggle Line Numbers"><div class="urvanov-syntax-highlighter-button-icon"></div></div>
+<div class="crayon-button urvanov-syntax-highlighter-plain-button" title="Toggle Plain Code"><div class="urvanov-syntax-highlighter-button-icon"></div></div>
+<div class="crayon-button urvanov-syntax-highlighter-wrap-button" title="Toggle Line Wrap"><div class="urvanov-syntax-highlighter-button-icon"></div></div>
+<div class="crayon-button urvanov-syntax-highlighter-expand-button" title="Expand Code"><div class="urvanov-syntax-highlighter-button-icon"></div></div>
+<div class="crayon-button urvanov-syntax-highlighter-copy-button" title="Copy"><div class="urvanov-syntax-highlighter-button-icon"></div></div>
+<div class="crayon-button urvanov-syntax-highlighter-popup-button" title="Open Code In New Window"><div class="urvanov-syntax-highlighter-button-icon"></div></div>
+<span class="crayon-language">Python</span>
+</div>
+</div>
+			<div class="crayon-info" style="min-height: 16.8px !important; line-height: 16.8px !important;"></div>
+			<div class="urvanov-syntax-highlighter-plain-wrap"><textarea wrap="soft" class="urvanov-syntax-highlighter-plain print-no" data-settings="dblclick" readonly style="-moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4; font-size: 12px !important; line-height: 15px !important;">
+print(len(input_data))
+print(input_data[17])</textarea></div>
+			<div class="urvanov-syntax-highlighter-main">
+				<table class="crayon-table">
+					<tr class="urvanov-syntax-highlighter-row">
+				<td class="crayon-nums " data-settings="show">
+					<div class="urvanov-syntax-highlighter-nums-content" style="font-size: 12px !important; line-height: 15px !important;">
+<div class="crayon-num" data-line="urvanov-syntax-highlighter-647f41eac9292442589708-1">1</div>
+<div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-647f41eac9292442589708-2">2</div>
+</div>
+				</td>
+						<td class="urvanov-syntax-highlighter-code"><div class="crayon-pre" style="font-size: 12px !important; line-height: 15px !important; -moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4;">
+<div class="crayon-line" id="urvanov-syntax-highlighter-647f41eac9292442589708-1">
+<span class="crayon-k ">print</span><span class="crayon-sy">(</span><span class="crayon-k ">len</span><span class="crayon-sy">(</span><span class="crayon-v">input_data</span><span class="crayon-sy">)</span><span class="crayon-sy">)</span>
+</div>
+<div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-647f41eac9292442589708-2">
+<span class="crayon-k ">print</span><span class="crayon-sy">(</span><span class="crayon-v">input_data</span><span class="crayon-sy">[</span><span class="crayon-cn">17</span><span class="crayon-sy">]</span><span class="crayon-sy">)</span>
+</div>
+</div></td>
+					</tr>
+				</table>
+			</div>
+		</div>
+<!-- [Format Time: 0.0001 seconds] -->
+<p></p>
+<p>This gives you a count of 60,000 which is how many training images are in the data set. Then you get an idea of what one sample in that data set looks like.</p>
+<p>The first number is ‘8’ which is the label. The rest of the 784 numbers are the color values for the pixels that make up the image. If you glance at the numbers you can tell these color values seem to range between 0 and 255.</p>
+<p>Essentially, what our processing of the data has done is something like this:</p>
+<p align="center"><img decoding="async" src="/files/ai_and_ml/ml-number-to-array.png"></p>
+<p>Basically you have an array from the data that is serving as a representation:</p>
+<p align="center"><img decoding="async" src="/files/ai_and_ml/ml-number-to-array-animated.gif"></p>
+<p>Let&#8217;s plot out the array of numbers to see what we get. To do that, we need to convert that list of comma separated numbers into a suitable array.</p>
+<p></p>
+<!-- Urvanov Syntax Highlighter v2.8.33 -->
+
+		<div id="urvanov-syntax-highlighter-647f41eac9293048667654" class="urvanov-syntax-highlighter-syntax crayon-theme-classic urvanov-syntax-highlighter-font-monaco urvanov-syntax-highlighter-os-pc print-yes notranslate" data-settings=" minimize scroll-mouseover" style="margin-top: 12px; margin-bottom: 12px; font-size: 12px !important; line-height: 15px !important;">
+		
+			<div class="crayon-toolbar" data-settings=" mouseover overlay hide delay" style="font-size: 12px !important;height: 18px !important; line-height: 18px !important;">
+<span class="crayon-title"></span>
+			<div class="crayon-tools" style="font-size: 12px !important;height: 18px !important; line-height: 18px !important;">
+<div class="crayon-button urvanov-syntax-highlighter-nums-button" title="Toggle Line Numbers"><div class="urvanov-syntax-highlighter-button-icon"></div></div>
+<div class="crayon-button urvanov-syntax-highlighter-plain-button" title="Toggle Plain Code"><div class="urvanov-syntax-highlighter-button-icon"></div></div>
+<div class="crayon-button urvanov-syntax-highlighter-wrap-button" title="Toggle Line Wrap"><div class="urvanov-syntax-highlighter-button-icon"></div></div>
+<div class="crayon-button urvanov-syntax-highlighter-expand-button" title="Expand Code"><div class="urvanov-syntax-highlighter-button-icon"></div></div>
+<div class="crayon-button urvanov-syntax-highlighter-copy-button" title="Copy"><div class="urvanov-syntax-highlighter-button-icon"></div></div>
+<div class="crayon-button urvanov-syntax-highlighter-popup-button" title="Open Code In New Window"><div class="urvanov-syntax-highlighter-button-icon"></div></div>
+<span class="crayon-language">Python</span>
+</div>
+</div>
+			<div class="crayon-info" style="min-height: 16.8px !important; line-height: 16.8px !important;"></div>
+			<div class="urvanov-syntax-highlighter-plain-wrap"><textarea wrap="soft" class="urvanov-syntax-highlighter-plain print-no" data-settings="dblclick" readonly style="-moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4; font-size: 12px !important; line-height: 15px !important;">
+all_values = input_data[17].split(',')
+image_array = np.asfarray(all_values[1:]).reshape((28, 28))
+
+plt.imshow(image_array, cmap='gray', interpolation='None')
+plt.show()</textarea></div>
+			<div class="urvanov-syntax-highlighter-main">
+				<table class="crayon-table">
+					<tr class="urvanov-syntax-highlighter-row">
+				<td class="crayon-nums " data-settings="show">
+					<div class="urvanov-syntax-highlighter-nums-content" style="font-size: 12px !important; line-height: 15px !important;">
+<div class="crayon-num" data-line="urvanov-syntax-highlighter-647f41eac9293048667654-1">1</div>
+<div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-647f41eac9293048667654-2">2</div>
+<div class="crayon-num" data-line="urvanov-syntax-highlighter-647f41eac9293048667654-3">3</div>
+<div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-647f41eac9293048667654-4">4</div>
+<div class="crayon-num" data-line="urvanov-syntax-highlighter-647f41eac9293048667654-5">5</div>
+</div>
+				</td>
+						<td class="urvanov-syntax-highlighter-code"><div class="crayon-pre" style="font-size: 12px !important; line-height: 15px !important; -moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4;">
+<div class="crayon-line" id="urvanov-syntax-highlighter-647f41eac9293048667654-1">
+<span class="crayon-v">all_values</span><span class="crayon-h"> </span><span class="crayon-o">=</span><span class="crayon-h"> </span><span class="crayon-v">input_data</span><span class="crayon-sy">[</span><span class="crayon-cn">17</span><span class="crayon-sy">]</span><span class="crayon-sy">.</span><span class="crayon-e">split</span><span class="crayon-sy">(</span><span class="crayon-s">','</span><span class="crayon-sy">)</span>
+</div>
+<div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-647f41eac9293048667654-2">
+<span class="crayon-v">image_array</span><span class="crayon-h"> </span><span class="crayon-o">=</span><span class="crayon-h"> </span><span class="crayon-v">np</span><span class="crayon-sy">.</span><span class="crayon-e">asfarray</span><span class="crayon-sy">(</span><span class="crayon-v">all_values</span><span class="crayon-sy">[</span><span class="crayon-cn">1</span><span class="crayon-o">:</span><span class="crayon-sy">]</span><span class="crayon-sy">)</span><span class="crayon-sy">.</span><span class="crayon-e">reshape</span><span class="crayon-sy">(</span><span class="crayon-sy">(</span><span class="crayon-cn">28</span><span class="crayon-sy">,</span><span class="crayon-h"> </span><span class="crayon-cn">28</span><span class="crayon-sy">)</span><span class="crayon-sy">)</span>
+</div>
+<div class="crayon-line" id="urvanov-syntax-highlighter-647f41eac9293048667654-3">&nbsp;</div>
+<div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-647f41eac9293048667654-4">
+<span class="crayon-v">plt</span><span class="crayon-sy">.</span><span class="crayon-e">imshow</span><span class="crayon-sy">(</span><span class="crayon-v">image_array</span><span class="crayon-sy">,</span><span class="crayon-h"> </span><span class="crayon-v">cmap</span><span class="crayon-o">=</span><span class="crayon-s">'gray'</span><span class="crayon-sy">,</span><span class="crayon-h"> </span><span class="crayon-v">interpolation</span><span class="crayon-o">=</span><span class="crayon-s">'None'</span><span class="crayon-sy">)</span>
+</div>
+<div class="crayon-line" id="urvanov-syntax-highlighter-647f41eac9293048667654-5">
+<span class="crayon-v">plt</span><span class="crayon-sy">.</span><span class="crayon-e">show</span><span class="crayon-sy">(</span><span class="crayon-sy">)</span>
+</div>
+</div></td>
+					</tr>
+				</table>
+			</div>
+		</div>
+<!-- [Format Time: 0.0003 seconds] -->
+<p></p>
+<p>I don&#8217;t want to make this series of posts too much about processing data but I do want to give you some idea of what&#8217;s happening here.</p>
+<p>The above logic first splits the string of comma separated values into individual values, using the comma as the delimiter. The first value of the resulting data is ignored because it&#8217;s the label. Thus the logic takes the remaining list of 784 values and turns those values into an array which has a shape of 28 rows by 28 columns. Specifically, the <code>reshape((28, 28))</code> part is what makes sure the list of numbers is wrapped around every 28 elements to make a square matrix of 28 by 28.</p>
+<p>Finally, the logic plots the resulting array. This is done using a grayscale color palette (<code>cmap='gray'</code>) to better show the handwritten characters. The plotting function is told not to try blending the colors (<code>interpolation='None'</code>). Blending the colors would make the plot look smoother but it&#8217;s hardly something we&#8217;re concerned about.</p>
+<p>Then we show the image, which, if you run the script, you can see is an 8 and that does match the label (&#8220;8&#8221;) that was provided for that data sample.</p>
+<p>Why am I doing all this? Well, the main thing to note here is that we reshaped the data into a 28 &times; 28 array. That will be something we revisit later but the short story is that you need to make sure your data is in a format that a neural network can do something with.</p>
+<p>Also, going through this exercise has proved to you some of the assertions I made about this data set, namely that it is made up of a certain number (60,000 samples) and those samples are handwritten digits that are encoded as numbers.</p>
+<h2>Scale Our Data</h2>
+<p>Just to show how we can do a things with our data to make it easier to work with, let&#8217;s rescale the input pixel values from the larger range of 0 to 255 to the much smaller range of 0 to 1. This can done fairly simply by dividing the raw inputs by 255:</p>
+<p></p>
+<!-- Urvanov Syntax Highlighter v2.8.33 -->
+
+		<div id="urvanov-syntax-highlighter-647f41eac9295021047377" class="urvanov-syntax-highlighter-syntax crayon-theme-classic urvanov-syntax-highlighter-font-monaco urvanov-syntax-highlighter-os-pc print-yes notranslate" data-settings=" minimize scroll-mouseover" style="margin-top: 12px; margin-bottom: 12px; font-size: 12px !important; line-height: 15px !important;">
+		
+			<div class="crayon-toolbar" data-settings=" mouseover overlay hide delay" style="font-size: 12px !important;height: 18px !important; line-height: 18px !important;">
+<span class="crayon-title"></span>
+			<div class="crayon-tools" style="font-size: 12px !important;height: 18px !important; line-height: 18px !important;">
+<div class="crayon-button urvanov-syntax-highlighter-nums-button" title="Toggle Line Numbers"><div class="urvanov-syntax-highlighter-button-icon"></div></div>
+<div class="crayon-button urvanov-syntax-highlighter-plain-button" title="Toggle Plain Code"><div class="urvanov-syntax-highlighter-button-icon"></div></div>
+<div class="crayon-button urvanov-syntax-highlighter-wrap-button" title="Toggle Line Wrap"><div class="urvanov-syntax-highlighter-button-icon"></div></div>
+<div class="crayon-button urvanov-syntax-highlighter-expand-button" title="Expand Code"><div class="urvanov-syntax-highlighter-button-icon"></div></div>
+<div class="crayon-button urvanov-syntax-highlighter-copy-button" title="Copy"><div class="urvanov-syntax-highlighter-button-icon"></div></div>
+<div class="crayon-button urvanov-syntax-highlighter-popup-button" title="Open Code In New Window"><div class="urvanov-syntax-highlighter-button-icon"></div></div>
+<span class="crayon-language">Python</span>
+</div>
+</div>
+			<div class="crayon-info" style="min-height: 16.8px !important; line-height: 16.8px !important;"></div>
+			<div class="urvanov-syntax-highlighter-plain-wrap"><textarea wrap="soft" class="urvanov-syntax-highlighter-plain print-no" data-settings="dblclick" readonly style="-moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4; font-size: 12px !important; line-height: 15px !important;">
+scaled_input = (np.asfarray(all_values[1:]) / 255.0)
+print(scaled_input.tolist())
+
+rounded_list = ['%.3f' % item for item in scaled_input.tolist()]
+print(rounded_list)</textarea></div>
+			<div class="urvanov-syntax-highlighter-main">
+				<table class="crayon-table">
+					<tr class="urvanov-syntax-highlighter-row">
+				<td class="crayon-nums " data-settings="show">
+					<div class="urvanov-syntax-highlighter-nums-content" style="font-size: 12px !important; line-height: 15px !important;">
+<div class="crayon-num" data-line="urvanov-syntax-highlighter-647f41eac9295021047377-1">1</div>
+<div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-647f41eac9295021047377-2">2</div>
+<div class="crayon-num" data-line="urvanov-syntax-highlighter-647f41eac9295021047377-3">3</div>
+<div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-647f41eac9295021047377-4">4</div>
+<div class="crayon-num" data-line="urvanov-syntax-highlighter-647f41eac9295021047377-5">5</div>
+</div>
+				</td>
+						<td class="urvanov-syntax-highlighter-code"><div class="crayon-pre" style="font-size: 12px !important; line-height: 15px !important; -moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4;">
+<div class="crayon-line" id="urvanov-syntax-highlighter-647f41eac9295021047377-1">
+<span class="crayon-v">scaled_input</span><span class="crayon-h"> </span><span class="crayon-o">=</span><span class="crayon-h"> </span><span class="crayon-sy">(</span><span class="crayon-v">np</span><span class="crayon-sy">.</span><span class="crayon-e">asfarray</span><span class="crayon-sy">(</span><span class="crayon-v">all_values</span><span class="crayon-sy">[</span><span class="crayon-cn">1</span><span class="crayon-o">:</span><span class="crayon-sy">]</span><span class="crayon-sy">)</span><span class="crayon-h"> </span><span class="crayon-o">/</span><span class="crayon-h"> </span><span class="crayon-cn">255.0</span><span class="crayon-sy">)</span>
+</div>
+<div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-647f41eac9295021047377-2">
+<span class="crayon-k ">print</span><span class="crayon-sy">(</span><span class="crayon-v">scaled_input</span><span class="crayon-sy">.</span><span class="crayon-e">tolist</span><span class="crayon-sy">(</span><span class="crayon-sy">)</span><span class="crayon-sy">)</span>
+</div>
+<div class="crayon-line" id="urvanov-syntax-highlighter-647f41eac9295021047377-3">&nbsp;</div>
+<div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-647f41eac9295021047377-4">
+<span class="crayon-v">rounded_list</span><span class="crayon-h"> </span><span class="crayon-o">=</span><span class="crayon-h"> </span><span class="crayon-sy">[</span><span class="crayon-s">'%.3f'</span><span class="crayon-h"> </span><span class="crayon-o">%</span><span class="crayon-h"> </span><span class="crayon-e">item </span><span class="crayon-st">for</span><span class="crayon-h"> </span><span class="crayon-e">item </span><span class="crayon-st">in</span><span class="crayon-h"> </span><span class="crayon-v">scaled_input</span><span class="crayon-sy">.</span><span class="crayon-e">tolist</span><span class="crayon-sy">(</span><span class="crayon-sy">)</span><span class="crayon-sy">]</span>
+</div>
+<div class="crayon-line" id="urvanov-syntax-highlighter-647f41eac9295021047377-5">
+<span class="crayon-k ">print</span><span class="crayon-sy">(</span><span class="crayon-v">rounded_list</span><span class="crayon-sy">)</span>
+</div>
+</div></td>
+					</tr>
+				</table>
+			</div>
+		</div>
+<!-- [Format Time: 0.0003 seconds] -->
+<p></p>
+<p>That output will show you the modified numbers and show you how they are scaled. This may give you a bit of concern, however. Does doing this cause us to lose any details about the image? Well, let’s generate another plot based on this scaled input and see.</p>
+<p></p>
+<!-- Urvanov Syntax Highlighter v2.8.33 -->
+
+		<div id="urvanov-syntax-highlighter-647f41eac9297563978023" class="urvanov-syntax-highlighter-syntax crayon-theme-classic urvanov-syntax-highlighter-font-monaco urvanov-syntax-highlighter-os-pc print-yes notranslate" data-settings=" minimize scroll-mouseover" style="margin-top: 12px; margin-bottom: 12px; font-size: 12px !important; line-height: 15px !important;">
+		
+			<div class="crayon-toolbar" data-settings=" mouseover overlay hide delay" style="font-size: 12px !important;height: 18px !important; line-height: 18px !important;">
+<span class="crayon-title"></span>
+			<div class="crayon-tools" style="font-size: 12px !important;height: 18px !important; line-height: 18px !important;">
+<div class="crayon-button urvanov-syntax-highlighter-nums-button" title="Toggle Line Numbers"><div class="urvanov-syntax-highlighter-button-icon"></div></div>
+<div class="crayon-button urvanov-syntax-highlighter-plain-button" title="Toggle Plain Code"><div class="urvanov-syntax-highlighter-button-icon"></div></div>
+<div class="crayon-button urvanov-syntax-highlighter-wrap-button" title="Toggle Line Wrap"><div class="urvanov-syntax-highlighter-button-icon"></div></div>
+<div class="crayon-button urvanov-syntax-highlighter-expand-button" title="Expand Code"><div class="urvanov-syntax-highlighter-button-icon"></div></div>
+<div class="crayon-button urvanov-syntax-highlighter-copy-button" title="Copy"><div class="urvanov-syntax-highlighter-button-icon"></div></div>
+<div class="crayon-button urvanov-syntax-highlighter-popup-button" title="Open Code In New Window"><div class="urvanov-syntax-highlighter-button-icon"></div></div>
+<span class="crayon-language">Python</span>
+</div>
+</div>
+			<div class="crayon-info" style="min-height: 16.8px !important; line-height: 16.8px !important;"></div>
+			<div class="urvanov-syntax-highlighter-plain-wrap"><textarea wrap="soft" class="urvanov-syntax-highlighter-plain print-no" data-settings="dblclick" readonly style="-moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4; font-size: 12px !important; line-height: 15px !important;">
+image_array = scaled_input.reshape((28, 28))
+plt.imshow(image_array, cmap='gray', interpolation='None')
+plt.show()</textarea></div>
+			<div class="urvanov-syntax-highlighter-main">
+				<table class="crayon-table">
+					<tr class="urvanov-syntax-highlighter-row">
+				<td class="crayon-nums " data-settings="show">
+					<div class="urvanov-syntax-highlighter-nums-content" style="font-size: 12px !important; line-height: 15px !important;">
+<div class="crayon-num" data-line="urvanov-syntax-highlighter-647f41eac9297563978023-1">1</div>
+<div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-647f41eac9297563978023-2">2</div>
+<div class="crayon-num" data-line="urvanov-syntax-highlighter-647f41eac9297563978023-3">3</div>
+</div>
+				</td>
+						<td class="urvanov-syntax-highlighter-code"><div class="crayon-pre" style="font-size: 12px !important; line-height: 15px !important; -moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4;">
+<div class="crayon-line" id="urvanov-syntax-highlighter-647f41eac9297563978023-1">
+<span class="crayon-v">image_array</span><span class="crayon-h"> </span><span class="crayon-o">=</span><span class="crayon-h"> </span><span class="crayon-v">scaled_input</span><span class="crayon-sy">.</span><span class="crayon-e">reshape</span><span class="crayon-sy">(</span><span class="crayon-sy">(</span><span class="crayon-cn">28</span><span class="crayon-sy">,</span><span class="crayon-h"> </span><span class="crayon-cn">28</span><span class="crayon-sy">)</span><span class="crayon-sy">)</span>
+</div>
+<div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-647f41eac9297563978023-2">
+<span class="crayon-v">plt</span><span class="crayon-sy">.</span><span class="crayon-e">imshow</span><span class="crayon-sy">(</span><span class="crayon-v">image_array</span><span class="crayon-sy">,</span><span class="crayon-h"> </span><span class="crayon-v">cmap</span><span class="crayon-o">=</span><span class="crayon-s">'gray'</span><span class="crayon-sy">,</span><span class="crayon-h"> </span><span class="crayon-v">interpolation</span><span class="crayon-o">=</span><span class="crayon-s">'None'</span><span class="crayon-sy">)</span>
+</div>
+<div class="crayon-line" id="urvanov-syntax-highlighter-647f41eac9297563978023-3">
+<span class="crayon-v">plt</span><span class="crayon-sy">.</span><span class="crayon-e">show</span><span class="crayon-sy">(</span><span class="crayon-sy">)</span>
+</div>
+</div></td>
+					</tr>
+				</table>
+			</div>
+		</div>
+<!-- [Format Time: 0.0002 seconds] -->
+<p></p>
+<p>You should see the same image generated as before. Scaling or normalizing data is a very important part of machine learning and it&#8217;s good to see that doing so causes no loss of fidelity to what we&#8217;re dealing with.</p>
+<h2>Understanding the Data Set</h2>
+<p>What you can see is that entries in this dataset might look something like this:</p>
+<p align="center"><img decoding="async" src="/files/ai_and_ml/mnist-002-numbers-clean.png"></p>
+<p>You might notice something interesting with the image I’m showing you there. In that one, the background is white while the foreground is black. However, in the plots you generated it was the reverse. Don&#8217;t worry about that but if you noticed it, that&#8217;s good.</p>
+<p>As stated before, each image has 28 &times; 28 pixels. This means you can think of each image data point as a 28 &times; 28 array, which I was able to show you above. But what you can see is that this is an array of numbers describing how dark each pixel is in the image.</p>
+<p>Let&#8217;s even take it one step further. That array can be flattened into a 28 &times; 28, or 784, dimensional vector. This means that the data set as a whole is a collection of 784-dimensional vectors. You saw that with our data set above in terms of the csv files: we had a set of rows (samples), each of which was made up of 784 columns (features).</p>
+<p>But now think of such an image where a number from 0 to 9 is part of that image, as shown in the visuals above. The vectors making up parts of the actual digit will be just a few of the total possible 784 possible vectors. In any given point in one of the images, each pixel is going to be black, white or some shade of gray. The result is that random points will statistically tend to look like noise:</p>
+<p align="center"><img decoding="async" src="/files/ai_and_ml/mnist-003-numbers-noise.png"></p>
+<p>What to take from all this is that the MNIST data points &#8212; the actual digits &#8212; are not the 784-dimensional space; they are rather embedded in such a space. The portion of that dimensional space that corresponds to anything about the digit is a subset. In machine learning, it’s common to refer to a &#8220;hypothesis space&#8221; which means a space of possibilities. Here that space has a dimension of 784.</p>
+<p>One of the better ways I&#8217;ve seen to visualize this was provided by <a href="http://colah.github.io/">Christopher Olah</a>. He invites us to think of an &#8220;MNIST cube&#8221; wherein the data points are all part of a 784-dimensional cube.</p>
+<p align="center"><img decoding="async" src="/files/ai_and_ml/mnist-004-numbers-pixels.png"></p>
+<p>A three-dimensional cube would represent, say, height, width and depth. So what do all the dimensions of this MNIST cube refer to? Each dimension, in that visualization, corresponds to a particular pixel. Olah says:</p>
+<blockquote><p>&#8220;On one side of the dimension, there are images where that pixel is white. On the other side of the dimension, there are images where it is black. In between, there are images where it is gray.&#8221;</p></blockquote>
+<p>These values will be indicating foreground and background colors. And here is where that visual discrepancy above will become important. I&#8217;ve shown you cases where the background is black and the foreground (the digit) is white. I&#8217;ve also shown you cases where the background is white and the foreground is black. Which way it is in your data set doesn&#8217;t really matter, but you <em>knowing</em> which way it is does matter because your machine learning algorithm will be making its predictions based upon a distinction between foreground and background.</p>
+<h2>Stating with Keras</h2>
+<p>I want to take you through one more exercise here, which will set us up for next coding activities. We&#8217;re actually going to throw away everything we built in this post. You may question if I&#8217;ve just wasted your time but I&#8217;ll argue that what we did in this post was useful for learning purposes. The good news is that we&#8217;re going to make things easier on ourselves. We&#8217;re going to be using Keras for the rest of these posts, so let&#8217;s get started with that.</p>
+<p>First, let&#8217;s create a script and set up some libraries that we&#8217;re going to want to use. Call the script <strong>mnist.py</strong> and then add the following to it:</p>
+<p></p>
+<!-- Urvanov Syntax Highlighter v2.8.33 -->
+
+		<div id="urvanov-syntax-highlighter-647f41eac9298140360368" class="urvanov-syntax-highlighter-syntax crayon-theme-classic urvanov-syntax-highlighter-font-monaco urvanov-syntax-highlighter-os-pc print-yes notranslate" data-settings=" minimize scroll-mouseover" style="margin-top: 12px; margin-bottom: 12px; font-size: 12px !important; line-height: 15px !important;">
+		
+			<div class="crayon-toolbar" data-settings=" mouseover overlay hide delay" style="font-size: 12px !important;height: 18px !important; line-height: 18px !important;">
+<span class="crayon-title"></span>
+			<div class="crayon-tools" style="font-size: 12px !important;height: 18px !important; line-height: 18px !important;">
+<div class="crayon-button urvanov-syntax-highlighter-nums-button" title="Toggle Line Numbers"><div class="urvanov-syntax-highlighter-button-icon"></div></div>
+<div class="crayon-button urvanov-syntax-highlighter-plain-button" title="Toggle Plain Code"><div class="urvanov-syntax-highlighter-button-icon"></div></div>
+<div class="crayon-button urvanov-syntax-highlighter-wrap-button" title="Toggle Line Wrap"><div class="urvanov-syntax-highlighter-button-icon"></div></div>
+<div class="crayon-button urvanov-syntax-highlighter-expand-button" title="Expand Code"><div class="urvanov-syntax-highlighter-button-icon"></div></div>
+<div class="crayon-button urvanov-syntax-highlighter-copy-button" title="Copy"><div class="urvanov-syntax-highlighter-button-icon"></div></div>
+<div class="crayon-button urvanov-syntax-highlighter-popup-button" title="Open Code In New Window"><div class="urvanov-syntax-highlighter-button-icon"></div></div>
+<span class="crayon-language">Python</span>
+</div>
+</div>
+			<div class="crayon-info" style="min-height: 16.8px !important; line-height: 16.8px !important;"></div>
+			<div class="urvanov-syntax-highlighter-plain-wrap"><textarea wrap="soft" class="urvanov-syntax-highlighter-plain print-no" data-settings="dblclick" readonly style="-moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4; font-size: 12px !important; line-height: 15px !important;">
+import numpy as np
+import matplotlib.pyplot as plt
+
+from keras.datasets import mnist</textarea></div>
+			<div class="urvanov-syntax-highlighter-main">
+				<table class="crayon-table">
+					<tr class="urvanov-syntax-highlighter-row">
+				<td class="crayon-nums " data-settings="show">
+					<div class="urvanov-syntax-highlighter-nums-content" style="font-size: 12px !important; line-height: 15px !important;">
+<div class="crayon-num" data-line="urvanov-syntax-highlighter-647f41eac9298140360368-1">1</div>
+<div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-647f41eac9298140360368-2">2</div>
+<div class="crayon-num" data-line="urvanov-syntax-highlighter-647f41eac9298140360368-3">3</div>
+<div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-647f41eac9298140360368-4">4</div>
+</div>
+				</td>
+						<td class="urvanov-syntax-highlighter-code"><div class="crayon-pre" style="font-size: 12px !important; line-height: 15px !important; -moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4;">
+<div class="crayon-line" id="urvanov-syntax-highlighter-647f41eac9298140360368-1">
+<span class="crayon-r">import</span><span class="crayon-h"> </span><span class="crayon-e">numpy </span><span class="crayon-st">as</span><span class="crayon-h"> </span><span class="crayon-e">np</span>
+</div>
+<div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-647f41eac9298140360368-2">
+<span class="crayon-r">import</span><span class="crayon-h"> </span><span class="crayon-v">matplotlib</span><span class="crayon-sy">.</span><span class="crayon-e">pyplot </span><span class="crayon-st">as</span><span class="crayon-h"> </span><span class="crayon-e">plt</span>
+</div>
+<div class="crayon-line" id="urvanov-syntax-highlighter-647f41eac9298140360368-3">&nbsp;</div>
+<div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-647f41eac9298140360368-4">
+<span class="crayon-st">from</span><span class="crayon-h"> </span><span class="crayon-v">keras</span><span class="crayon-sy">.</span><span class="crayon-e">datasets </span><span class="crayon-r">import</span><span class="crayon-h"> </span><span class="crayon-v">mnist</span>
+</div>
+</div></td>
+					</tr>
+				</table>
+			</div>
+		</div>
+<!-- [Format Time: 0.0002 seconds] -->
+<p></p>
+<p>Here we&#8217;re getting numpy, matplotlib, and keras in place. As mentioned, a version of the MNIST dataset comes preloaded in Keras. This data is made available via four arrays: training images, training labels, test images and test labels. So let’s make sure we load that data:</p>
+<p></p>
+<!-- Urvanov Syntax Highlighter v2.8.33 -->
+
+		<div id="urvanov-syntax-highlighter-647f41eac929a479812504" class="urvanov-syntax-highlighter-syntax crayon-theme-classic urvanov-syntax-highlighter-font-monaco urvanov-syntax-highlighter-os-pc print-yes notranslate" data-settings=" minimize scroll-mouseover" style="margin-top: 12px; margin-bottom: 12px; font-size: 12px !important; line-height: 15px !important;">
+		
+			<div class="crayon-toolbar" data-settings=" mouseover overlay hide delay" style="font-size: 12px !important;height: 18px !important; line-height: 18px !important;">
+<span class="crayon-title"></span>
+			<div class="crayon-tools" style="font-size: 12px !important;height: 18px !important; line-height: 18px !important;">
+<div class="crayon-button urvanov-syntax-highlighter-nums-button" title="Toggle Line Numbers"><div class="urvanov-syntax-highlighter-button-icon"></div></div>
+<div class="crayon-button urvanov-syntax-highlighter-plain-button" title="Toggle Plain Code"><div class="urvanov-syntax-highlighter-button-icon"></div></div>
+<div class="crayon-button urvanov-syntax-highlighter-wrap-button" title="Toggle Line Wrap"><div class="urvanov-syntax-highlighter-button-icon"></div></div>
+<div class="crayon-button urvanov-syntax-highlighter-expand-button" title="Expand Code"><div class="urvanov-syntax-highlighter-button-icon"></div></div>
+<div class="crayon-button urvanov-syntax-highlighter-copy-button" title="Copy"><div class="urvanov-syntax-highlighter-button-icon"></div></div>
+<div class="crayon-button urvanov-syntax-highlighter-popup-button" title="Open Code In New Window"><div class="urvanov-syntax-highlighter-button-icon"></div></div>
+<span class="crayon-language">Python</span>
+</div>
+</div>
+			<div class="crayon-info" style="min-height: 16.8px !important; line-height: 16.8px !important;"></div>
+			<div class="urvanov-syntax-highlighter-plain-wrap"><textarea wrap="soft" class="urvanov-syntax-highlighter-plain print-no" data-settings="dblclick" readonly style="-moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4; font-size: 12px !important; line-height: 15px !important;">
+(train_images, train_labels), (test_images, test_labels) = mnist.load_data()</textarea></div>
+			<div class="urvanov-syntax-highlighter-main">
+				<table class="crayon-table">
+					<tr class="urvanov-syntax-highlighter-row">
+				<td class="crayon-nums " data-settings="show">
+					<div class="urvanov-syntax-highlighter-nums-content" style="font-size: 12px !important; line-height: 15px !important;"><div class="crayon-num" data-line="urvanov-syntax-highlighter-647f41eac929a479812504-1">1</div></div>
+				</td>
+						<td class="urvanov-syntax-highlighter-code"><div class="crayon-pre" style="font-size: 12px !important; line-height: 15px !important; -moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4;"><div class="crayon-line" id="urvanov-syntax-highlighter-647f41eac929a479812504-1">
+<span class="crayon-sy">(</span><span class="crayon-v">train_images</span><span class="crayon-sy">,</span><span class="crayon-h"> </span><span class="crayon-v">train_labels</span><span class="crayon-sy">)</span><span class="crayon-sy">,</span><span class="crayon-h"> </span><span class="crayon-sy">(</span><span class="crayon-v">test_images</span><span class="crayon-sy">,</span><span class="crayon-h"> </span><span class="crayon-v">test_labels</span><span class="crayon-sy">)</span><span class="crayon-h"> </span><span class="crayon-o">=</span><span class="crayon-h"> </span><span class="crayon-v">mnist</span><span class="crayon-sy">.</span><span class="crayon-e">load_data</span><span class="crayon-sy">(</span><span class="crayon-sy">)</span>
+</div></div></td>
+					</tr>
+				</table>
+			</div>
+		</div>
+<!-- [Format Time: 0.0001 seconds] -->
+<p></p>
+<p>If this is your first time using the mnist dataset from Keras, when you run this script, that data set will be downloaded and you&#8217;ll see something like this:</p>
+<pre>
+Downloading data from https://s3.amazonaws.com/img-datasets/mnist.npz
+11493376/11490434 [==============================] - 2s 0us/step
+</pre>
+<h2>The Full Data Set</h2>
+<p>Let&#8217;s do a quick little exercise here just to show you how to generate information about the full data set. As a note, you might not want to do this if you&#8217;re running on Windows. Mac and Linux users will have no issues; Windows sometimes does.</p>
+<p>It&#8217;s all fine and good to look at individual samples as we did with the previous example &#8212; and we&#8217;ll have cause to do that again with the Keras data set &#8212; but let&#8217;s also see how we can get the full data set. I&#8217;m not really going to explain any of this too much because it&#8217;s a bit of a side road. For now, add the following to your script:</p>
+<p></p>
+<!-- Urvanov Syntax Highlighter v2.8.33 -->
+
+		<div id="urvanov-syntax-highlighter-647f41eac929b636663397" class="urvanov-syntax-highlighter-syntax crayon-theme-classic urvanov-syntax-highlighter-font-monaco urvanov-syntax-highlighter-os-pc print-yes notranslate" data-settings=" minimize scroll-mouseover" style="margin-top: 12px; margin-bottom: 12px; font-size: 12px !important; line-height: 15px !important;">
+		
+			<div class="crayon-toolbar" data-settings=" mouseover overlay hide delay" style="font-size: 12px !important;height: 18px !important; line-height: 18px !important;">
+<span class="crayon-title"></span>
+			<div class="crayon-tools" style="font-size: 12px !important;height: 18px !important; line-height: 18px !important;">
+<div class="crayon-button urvanov-syntax-highlighter-nums-button" title="Toggle Line Numbers"><div class="urvanov-syntax-highlighter-button-icon"></div></div>
+<div class="crayon-button urvanov-syntax-highlighter-plain-button" title="Toggle Plain Code"><div class="urvanov-syntax-highlighter-button-icon"></div></div>
+<div class="crayon-button urvanov-syntax-highlighter-wrap-button" title="Toggle Line Wrap"><div class="urvanov-syntax-highlighter-button-icon"></div></div>
+<div class="crayon-button urvanov-syntax-highlighter-expand-button" title="Expand Code"><div class="urvanov-syntax-highlighter-button-icon"></div></div>
+<div class="crayon-button urvanov-syntax-highlighter-copy-button" title="Copy"><div class="urvanov-syntax-highlighter-button-icon"></div></div>
+<div class="crayon-button urvanov-syntax-highlighter-popup-button" title="Open Code In New Window"><div class="urvanov-syntax-highlighter-button-icon"></div></div>
+<span class="crayon-language">Python</span>
+</div>
+</div>
+			<div class="crayon-info" style="min-height: 16.8px !important; line-height: 16.8px !important;"></div>
+			<div class="urvanov-syntax-highlighter-plain-wrap"><textarea wrap="soft" class="urvanov-syntax-highlighter-plain print-no" data-settings="dblclick" readonly style="-moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4; font-size: 12px !important; line-height: 15px !important;">
+import math
+from scipy.misc import imsave
+
+for (data, name) in [(train_images, "train"), (test_images, "test")]:
+    grid = math.ceil(math.sqrt(data.shape[0]))
+    width = grid * data.shape[1]
+    height = grid * data.shape[2]
+
+    images = np.empty([width, height])
+
+    for index in range(data.shape[0]):
+        i_offset = (index % grid) * data.shape[1]
+        j_offset = (index // grid) * data.shape[2]
+
+        for i in range(data.shape[1]):
+            for j in range(data.shape[2]):
+                images[i_offset + i, j_offset + j] = data[index, i, j]
+
+        imsave(name + ".png", images)</textarea></div>
+			<div class="urvanov-syntax-highlighter-main">
+				<table class="crayon-table">
+					<tr class="urvanov-syntax-highlighter-row">
+				<td class="crayon-nums " data-settings="show">
+					<div class="urvanov-syntax-highlighter-nums-content" style="font-size: 12px !important; line-height: 15px !important;">
+<div class="crayon-num" data-line="urvanov-syntax-highlighter-647f41eac929b636663397-1">1</div>
+<div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-647f41eac929b636663397-2">2</div>
+<div class="crayon-num" data-line="urvanov-syntax-highlighter-647f41eac929b636663397-3">3</div>
+<div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-647f41eac929b636663397-4">4</div>
+<div class="crayon-num" data-line="urvanov-syntax-highlighter-647f41eac929b636663397-5">5</div>
+<div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-647f41eac929b636663397-6">6</div>
+<div class="crayon-num" data-line="urvanov-syntax-highlighter-647f41eac929b636663397-7">7</div>
+<div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-647f41eac929b636663397-8">8</div>
+<div class="crayon-num" data-line="urvanov-syntax-highlighter-647f41eac929b636663397-9">9</div>
+<div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-647f41eac929b636663397-10">10</div>
+<div class="crayon-num" data-line="urvanov-syntax-highlighter-647f41eac929b636663397-11">11</div>
+<div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-647f41eac929b636663397-12">12</div>
+<div class="crayon-num" data-line="urvanov-syntax-highlighter-647f41eac929b636663397-13">13</div>
+<div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-647f41eac929b636663397-14">14</div>
+<div class="crayon-num" data-line="urvanov-syntax-highlighter-647f41eac929b636663397-15">15</div>
+<div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-647f41eac929b636663397-16">16</div>
+<div class="crayon-num" data-line="urvanov-syntax-highlighter-647f41eac929b636663397-17">17</div>
+<div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-647f41eac929b636663397-18">18</div>
+<div class="crayon-num" data-line="urvanov-syntax-highlighter-647f41eac929b636663397-19">19</div>
+</div>
+				</td>
+						<td class="urvanov-syntax-highlighter-code"><div class="crayon-pre" style="font-size: 12px !important; line-height: 15px !important; -moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4;">
+<div class="crayon-line" id="urvanov-syntax-highlighter-647f41eac929b636663397-1">
+<span class="crayon-r">import</span><span class="crayon-h"> </span><span class="crayon-k ">math</span>
+</div>
+<div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-647f41eac929b636663397-2">
+<span class="crayon-st">from</span><span class="crayon-h"> </span><span class="crayon-v">scipy</span><span class="crayon-sy">.</span><span class="crayon-e">misc </span><span class="crayon-r">import</span><span class="crayon-h"> </span><span class="crayon-e">imsave</span>
+</div>
+<div class="crayon-line" id="urvanov-syntax-highlighter-647f41eac929b636663397-3">&nbsp;</div>
+<div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-647f41eac929b636663397-4">
+<span class="crayon-st">for</span><span class="crayon-h"> </span><span class="crayon-sy">(</span><span class="crayon-v">data</span><span class="crayon-sy">,</span><span class="crayon-h"> </span><span class="crayon-v">name</span><span class="crayon-sy">)</span><span class="crayon-h"> </span><span class="crayon-st">in</span><span class="crayon-h"> </span><span class="crayon-sy">[</span><span class="crayon-sy">(</span><span class="crayon-v">train_images</span><span class="crayon-sy">,</span><span class="crayon-h"> </span><span class="crayon-s">"train"</span><span class="crayon-sy">)</span><span class="crayon-sy">,</span><span class="crayon-h"> </span><span class="crayon-sy">(</span><span class="crayon-v">test_images</span><span class="crayon-sy">,</span><span class="crayon-h"> </span><span class="crayon-s">"test"</span><span class="crayon-sy">)</span><span class="crayon-sy">]</span><span class="crayon-o">:</span>
+</div>
+<div class="crayon-line" id="urvanov-syntax-highlighter-647f41eac929b636663397-5">
+<span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-v">grid</span><span class="crayon-h"> </span><span class="crayon-o">=</span><span class="crayon-h"> </span><span class="crayon-k ">math</span><span class="crayon-sy">.</span><span class="crayon-e">ceil</span><span class="crayon-sy">(</span><span class="crayon-k ">math</span><span class="crayon-sy">.</span><span class="crayon-e">sqrt</span><span class="crayon-sy">(</span><span class="crayon-v">data</span><span class="crayon-sy">.</span><span class="crayon-v">shape</span><span class="crayon-sy">[</span><span class="crayon-cn">0</span><span class="crayon-sy">]</span><span class="crayon-sy">)</span><span class="crayon-sy">)</span>
+</div>
+<div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-647f41eac929b636663397-6">
+<span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-v">width</span><span class="crayon-h"> </span><span class="crayon-o">=</span><span class="crayon-h"> </span><span class="crayon-v">grid</span><span class="crayon-h"> </span><span class="crayon-o">*</span><span class="crayon-h"> </span><span class="crayon-v">data</span><span class="crayon-sy">.</span><span class="crayon-v">shape</span><span class="crayon-sy">[</span><span class="crayon-cn">1</span><span class="crayon-sy">]</span>
+</div>
+<div class="crayon-line" id="urvanov-syntax-highlighter-647f41eac929b636663397-7">
+<span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-v">height</span><span class="crayon-h"> </span><span class="crayon-o">=</span><span class="crayon-h"> </span><span class="crayon-v">grid</span><span class="crayon-h"> </span><span class="crayon-o">*</span><span class="crayon-h"> </span><span class="crayon-v">data</span><span class="crayon-sy">.</span><span class="crayon-v">shape</span><span class="crayon-sy">[</span><span class="crayon-cn">2</span><span class="crayon-sy">]</span>
+</div>
+<div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-647f41eac929b636663397-8">&nbsp;</div>
+<div class="crayon-line" id="urvanov-syntax-highlighter-647f41eac929b636663397-9">
+<span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-v">images</span><span class="crayon-h"> </span><span class="crayon-o">=</span><span class="crayon-h"> </span><span class="crayon-v">np</span><span class="crayon-sy">.</span><span class="crayon-e">empty</span><span class="crayon-sy">(</span><span class="crayon-sy">[</span><span class="crayon-v">width</span><span class="crayon-sy">,</span><span class="crayon-h"> </span><span class="crayon-v">height</span><span class="crayon-sy">]</span><span class="crayon-sy">)</span>
+</div>
+<div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-647f41eac929b636663397-10">&nbsp;</div>
+<div class="crayon-line" id="urvanov-syntax-highlighter-647f41eac929b636663397-11">
+<span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-st">for</span><span class="crayon-h"> </span><span class="crayon-e">index </span><span class="crayon-st">in</span><span class="crayon-h"> </span><span class="crayon-k ">range</span><span class="crayon-sy">(</span><span class="crayon-v">data</span><span class="crayon-sy">.</span><span class="crayon-v">shape</span><span class="crayon-sy">[</span><span class="crayon-cn">0</span><span class="crayon-sy">]</span><span class="crayon-sy">)</span><span class="crayon-o">:</span>
+</div>
+<div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-647f41eac929b636663397-12">
+<span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-v">i_offset</span><span class="crayon-h"> </span><span class="crayon-o">=</span><span class="crayon-h"> </span><span class="crayon-sy">(</span><span class="crayon-v">index</span><span class="crayon-h"> </span><span class="crayon-o">%</span><span class="crayon-h"> </span><span class="crayon-v">grid</span><span class="crayon-sy">)</span><span class="crayon-h"> </span><span class="crayon-o">*</span><span class="crayon-h"> </span><span class="crayon-v">data</span><span class="crayon-sy">.</span><span class="crayon-v">shape</span><span class="crayon-sy">[</span><span class="crayon-cn">1</span><span class="crayon-sy">]</span>
+</div>
+<div class="crayon-line" id="urvanov-syntax-highlighter-647f41eac929b636663397-13">
+<span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-v">j_offset</span><span class="crayon-h"> </span><span class="crayon-o">=</span><span class="crayon-h"> </span><span class="crayon-sy">(</span><span class="crayon-v">index</span><span class="crayon-h"> </span><span class="crayon-o">/</span><span class="crayon-o">/</span><span class="crayon-h"> </span><span class="crayon-v">grid</span><span class="crayon-sy">)</span><span class="crayon-h"> </span><span class="crayon-o">*</span><span class="crayon-h"> </span><span class="crayon-v">data</span><span class="crayon-sy">.</span><span class="crayon-v">shape</span><span class="crayon-sy">[</span><span class="crayon-cn">2</span><span class="crayon-sy">]</span>
+</div>
+<div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-647f41eac929b636663397-14">&nbsp;</div>
+<div class="crayon-line" id="urvanov-syntax-highlighter-647f41eac929b636663397-15">
+<span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-st">for</span><span class="crayon-h"> </span><span class="crayon-i">i</span><span class="crayon-h"> </span><span class="crayon-st">in</span><span class="crayon-h"> </span><span class="crayon-k ">range</span><span class="crayon-sy">(</span><span class="crayon-v">data</span><span class="crayon-sy">.</span><span class="crayon-v">shape</span><span class="crayon-sy">[</span><span class="crayon-cn">1</span><span class="crayon-sy">]</span><span class="crayon-sy">)</span><span class="crayon-o">:</span>
+</div>
+<div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-647f41eac929b636663397-16">
+<span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-st">for</span><span class="crayon-h"> </span><span class="crayon-i">j</span><span class="crayon-h"> </span><span class="crayon-st">in</span><span class="crayon-h"> </span><span class="crayon-k ">range</span><span class="crayon-sy">(</span><span class="crayon-v">data</span><span class="crayon-sy">.</span><span class="crayon-v">shape</span><span class="crayon-sy">[</span><span class="crayon-cn">2</span><span class="crayon-sy">]</span><span class="crayon-sy">)</span><span class="crayon-o">:</span>
+</div>
+<div class="crayon-line" id="urvanov-syntax-highlighter-647f41eac929b636663397-17">
+<span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-v">images</span><span class="crayon-sy">[</span><span class="crayon-v">i_offset</span><span class="crayon-h"> </span><span class="crayon-o">+</span><span class="crayon-h"> </span><span class="crayon-v">i</span><span class="crayon-sy">,</span><span class="crayon-h"> </span><span class="crayon-v">j_offset</span><span class="crayon-h"> </span><span class="crayon-o">+</span><span class="crayon-h"> </span><span class="crayon-v">j</span><span class="crayon-sy">]</span><span class="crayon-h"> </span><span class="crayon-o">=</span><span class="crayon-h"> </span><span class="crayon-v">data</span><span class="crayon-sy">[</span><span class="crayon-v">index</span><span class="crayon-sy">,</span><span class="crayon-h"> </span><span class="crayon-v">i</span><span class="crayon-sy">,</span><span class="crayon-h"> </span><span class="crayon-v">j</span><span class="crayon-sy">]</span>
+</div>
+<div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-647f41eac929b636663397-18">&nbsp;</div>
+<div class="crayon-line" id="urvanov-syntax-highlighter-647f41eac929b636663397-19">
+<span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-e">imsave</span><span class="crayon-sy">(</span><span class="crayon-v">name</span><span class="crayon-h"> </span><span class="crayon-o">+</span><span class="crayon-h"> </span><span class="crayon-s">".png"</span><span class="crayon-sy">,</span><span class="crayon-h"> </span><span class="crayon-v">images</span><span class="crayon-sy">)</span>
+</div>
+</div></td>
+					</tr>
+				</table>
+			</div>
+		</div>
+<!-- [Format Time: 0.0011 seconds] -->
+<p></p>
+<p>Go ahead and run that; this can take a little bit of time to run. On a Mac or Linux it can take anywhere from one to three minutes. On Windows, it&#8217;s quite likely it will not finish in any sort of reasonable time frame.</p>
+<p>There&#8217;s a lot going on here and I don&#8217;t want to get too into these weeds. Just know that the <code>data.shape</code> statements refer to the dimensionality of the data, which I&#8217;ll cover more in a future post. Basically, <code>train_images.shape[0]</code> would be 60000 while <code>test_images.shape[0]</code> would be 10000. For both training and testing, <code>.shape[1]</code> and <code>.shape[2]</code> would be 28.</p>
+<p>Essentially what this is doing is creating two files (train.png and test.png) and these files will contain a representation of the <em>entire</em> data set. That&#8217;s why it takes this script a bit of time to execute. Why do this? Because it does allow you to understand the data set in its entirety. By looking over those generated images, you can get a feel for how varying the handwritten digits are.</p>
+<p>If you&#8217;re running on Windows, you&#8217;ll likely see your image files <em>very</em> slowly building up. That was another reason I brought this up. If you are in a Windows environment, some things either won&#8217;t work well or won&#8217;t work at all when dealing with machine learning and artificial intelligence. For my posts, however, with the exception of the above, everything is operating system agnostic.</p>
+<p>Anyway, that&#8217;s all I want to do for now. This gives us the start of the script that we&#8217;ll be using for the rest of the posts in this series. But do note that the data set provided by and downloaded with Keras is essentially the same kind of data set that you and I looked at in this post. I wanted to take you through this post so that you understand something about how that data was constructed.</p>
+<h2>What We Accomplished</h2>
+<p>We did a pretty deep dive into what makes up the data that we are going to be feeding to our neural network. We also considered a neural network life cycle, the first part of which is gathering and processing your data which we focused on in this post. You were able to explore the data a bit and get a feel for how we manipulate that data (reshaping, scaling) in order to make our lives easier.</p>
+<p>In the <a href="/2018/09/demystifying-machine-learning-part-3/">next post</a>, we&#8217;re going to step back from the code again for a bit and dive a little into the math.</p>
+<div class="addtoany_share_save_container addtoany_content addtoany_content_bottom"><div class="a2a_kit a2a_kit_size_16 addtoany_list" data-a2a-url="https://testerstories.com/2018/09/demystifying-machine-learning-part-2/" data-a2a-title="Demystifying Machine Learning, Part 2">
+<a class="a2a_button_facebook" href="https://www.addtoany.com/add_to/facebook?linkurl=%2F2018%2F09%2Fdemystifying-machine-learning-part-2%2F&amp;linkname=Demystifying%20Machine%20Learning%2C%20Part%202" title="Facebook" rel="nofollow noopener" target="_blank"></a><a class="a2a_button_twitter" href="https://www.addtoany.com/add_to/twitter?linkurl=%2F2018%2F09%2Fdemystifying-machine-learning-part-2%2F&amp;linkname=Demystifying%20Machine%20Learning%2C%20Part%202" title="Twitter" rel="nofollow noopener" target="_blank"></a><a class="a2a_button_linkedin" href="https://www.addtoany.com/add_to/linkedin?linkurl=%2F2018%2F09%2Fdemystifying-machine-learning-part-2%2F&amp;linkname=Demystifying%20Machine%20Learning%2C%20Part%202" title="LinkedIn" rel="nofollow noopener" target="_blank"></a><a class="a2a_button_print" href="https://www.addtoany.com/add_to/print?linkurl=%2F2018%2F09%2Fdemystifying-machine-learning-part-2%2F&amp;linkname=Demystifying%20Machine%20Learning%2C%20Part%202" title="Print" rel="nofollow noopener" target="_blank"></a><a class="a2a_dd addtoany_share_save addtoany_share" href="https://www.addtoany.com/share"><img src="https://static.addtoany.com/buttons/favicon.png" alt="Share"></a>
+</div></div>      
+	</div>
+<!-- .entry-content -->
+	<footer class="entry-footer">       
+		<p class="written-by">This article was written by <a href="/author/administrator/">Jeff Nyman</a></p>
+<div class="author-bio">
+		
+	<h3><a href="/author/administrator/" rel="author">About  Jeff Nyman</a></h3>		
+	<img alt="" src="https://secure.gravatar.com/avatar/a3b6c2d0b2bafdb9ad9cdf782873204d?s=72&#038;d=mm&#038;r=pg" srcset="https://secure.gravatar.com/avatar/a3b6c2d0b2bafdb9ad9cdf782873204d?s=144&#038;d=mm&#038;r=pg 2x" class="avatar avatar-72 photo" height="72" width="72" decoding="async"><p class="author-description">Anything I put here is an approximation of the truth. You're getting a particular view of myself ... and it's the view I'm choosing to present to you. If you've never met me before in person, please realize I'm not the same in person as I am in writing. That's because I can only put part of myself down into words.
+
+If you have met me before in person then I'd ask you to consider that the view you've formed that way and the view you come to by reading what I say here may, in fact, both be true. I'd advise that you not automatically discard either viewpoint when they conflict or accept either as truth when they agree.</p>		
+</div>
+<!-- .author-bio -->
+	</footer><!-- .entry-footer -->
+
+	<nav class="navigation post-navigation" aria-label="Posts">
+		<h2 class="screen-reader-text">Post navigation</h2>
+		<div class="nav-links">
+<div class="nav-previous"><a href="/2018/09/demystifying-machine-learning-part-1/" rel="prev"><span class="genericon genericon-previous" aria-hidden="true"></span> <span class="screen-reader-text">Previous post:</span> <span class="post-title">Demystifying Machine Learning, Part 1</span></a></div>
+<div class="nav-next"><a href="/2018/09/demystifying-machine-learning-part-3/" rel="next"><span class="post-title">Demystifying Machine Learning, Part 3</span><span class="screen-reader-text">Next post:</span> <span class="genericon genericon-next" aria-hidden="true"></span> </a></div>
+</div>
+	</nav>
+<div id="comments" class="comments-area">
+
+
+	<h2 class="comments-title">
+3 thoughts on &ldquo;Demystifying Machine Learning, Part 2&rdquo;	</h2>
+
+
+	<ol class="comment-list">
+				<li id="comment-52456" class="comment even thread-even depth-1">
+			<article id="div-comment-52456" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img alt="" src="https://secure.gravatar.com/avatar/c3893d3c6f468e64d300d8ca9d9c729b?s=34&#038;d=mm&#038;r=pg" srcset="https://secure.gravatar.com/avatar/c3893d3c6f468e64d300d8ca9d9c729b?s=68&#038;d=mm&#038;r=pg 2x" class="avatar avatar-34 photo" height="34" width="34" decoding="async">						<b class="fn">Damian</b> <span class="says">says:</span>					</div>
+<!-- .comment-author -->
+
+					<div class="comment-metadata">
+						<a href="/2018/09/demystifying-machine-learning-part-2/#comment-52456"><time datetime="2018-09-25T10:59:34-05:00">25 September 2018 at 10:59 am</time></a>					</div>
+<!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p>Hi Jeff,</p>
+<p>these posts are fantastic, great job!</p>
+<p>I have an issue with the first script on this post. Visual Code told me that:</p>
+<pre><em>W0612: Unused variable 'i'</em>
+
+<em>W0612: Unused variable 'j'</em></pre>
+<p>when I try to run it, the terminal throws:</p>
+<pre><em>$python3 process.py</em>
+<em>Traceback (most recent call last):</em>
+<em>File "process.py", line 27, in &lt;module&gt;</em>
+<em>"train-labels.idx1-ubyte", "mnist-train-data.csv", 60000)</em>
+<em>File "process.py", line 2, in process</em>
+<em>input_images = open(image_file, "rb")</em>
+<em>FileNotFoundError: [Errno 2] No such file or directory: 'train-images.idx3-ubyte'</em></pre>
+<p>both the decompressed files and the process.py are in the same folder</p>
+<p>Thanks in advance for your help</p>
+				</div>
+<!-- .comment-content -->
+
+				<div class="reply"><a rel="nofollow" class="comment-reply-link" href="/2018/09/demystifying-machine-learning-part-2/?replytocom=52456#respond" data-commentid="52456" data-postid="3554" data-belowelement="div-comment-52456" data-respondelement="respond" data-replyto="Reply to Damian" aria-label="Reply to Damian"><span class="genericon genericon-reply" aria-hidden="true"></span>Reply</a></div>			</article><!-- .comment-body -->
+		</li>
+<!-- #comment-## -->
+		<li id="comment-52457" class="comment byuser comment-author-administrator bypostauthor odd alt thread-odd thread-alt depth-1">
+			<article id="div-comment-52457" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img alt="" src="https://secure.gravatar.com/avatar/a3b6c2d0b2bafdb9ad9cdf782873204d?s=34&#038;d=mm&#038;r=pg" srcset="https://secure.gravatar.com/avatar/a3b6c2d0b2bafdb9ad9cdf782873204d?s=68&#038;d=mm&#038;r=pg 2x" class="avatar avatar-34 photo" height="34" width="34" decoding="async">						<b class="fn">Jeff Nyman</b> <span class="says">says:</span>					</div>
+<!-- .comment-author -->
+
+					<div class="comment-metadata">
+						<a href="/2018/09/demystifying-machine-learning-part-2/#comment-52457"><time datetime="2018-09-25T11:28:07-05:00">25 September 2018 at 11:28 am</time></a>					</div>
+<!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p>The Pylint warning that Visual Code is showing is accurate as I&#8217;m not actually using the i and the j variables. Those were just to set up a loop that would read the input matrices. I could clean that up a bit.</p>
+<p>The problem is definitely with the file being found. I just ran this script on Windows and on a Mac with the decompressed files and had no issues. I know you said the decompressed files were in the same directory but just double checking: do you actually see the file <strong>train-images.idx3-ubyte</strong> in that directory?</p>
+<p>I know you probably checked that. I&#8217;m just double-checking because I&#8217;m struggling to see what the issue is. The error is unambiguous: it can&#8217;t find the file.</p>
+<p>I might be missing something very obvious that I did wrong but I&#8217;m not sure what at a glance so I just want to make sure you certainly see that particular file in the directory.</p>
+				</div>
+<!-- .comment-content -->
+
+				<div class="reply"><a rel="nofollow" class="comment-reply-link" href="/2018/09/demystifying-machine-learning-part-2/?replytocom=52457#respond" data-commentid="52457" data-postid="3554" data-belowelement="div-comment-52457" data-respondelement="respond" data-replyto="Reply to Jeff Nyman" aria-label="Reply to Jeff Nyman"><span class="genericon genericon-reply" aria-hidden="true"></span>Reply</a></div>			</article><!-- .comment-body -->
+		</li>
+<!-- #comment-## -->
+		<li id="comment-52458" class="comment even thread-even depth-1">
+			<article id="div-comment-52458" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img alt="" src="https://secure.gravatar.com/avatar/c3893d3c6f468e64d300d8ca9d9c729b?s=34&#038;d=mm&#038;r=pg" srcset="https://secure.gravatar.com/avatar/c3893d3c6f468e64d300d8ca9d9c729b?s=68&#038;d=mm&#038;r=pg 2x" class="avatar avatar-34 photo" height="34" width="34" decoding="async">						<b class="fn">Damian</b> <span class="says">says:</span>					</div>
+<!-- .comment-author -->
+
+					<div class="comment-metadata">
+						<a href="/2018/09/demystifying-machine-learning-part-2/#comment-52458"><time datetime="2018-09-25T14:57:53-05:00">25 September 2018 at 2:57 pm</time></a>					</div>
+<!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p>Yes, I&#8217;ve also just moved both the process.py and the <strong>train-images.idx3-ubyte </strong>to another folder and same issue.</p>
+<p>Just in case, I also tried running another python script (one that prints <em>hello world</em>) and worked fine.</p>
+<p>I will check with one of my developers at work tomorrow and figure out what I did wrong (I swear I copy/paste your script)</p>
+<p>Regards</p>
+<p>&nbsp;</p>
+				</div>
+<!-- .comment-content -->
+
+				<div class="reply"><a rel="nofollow" class="comment-reply-link" href="/2018/09/demystifying-machine-learning-part-2/?replytocom=52458#respond" data-commentid="52458" data-postid="3554" data-belowelement="div-comment-52458" data-respondelement="respond" data-replyto="Reply to Damian" aria-label="Reply to Damian"><span class="genericon genericon-reply" aria-hidden="true"></span>Reply</a></div>			</article><!-- .comment-body -->
+		</li>
+<!-- #comment-## -->
+	</ol>
+<!-- .comment-list -->
+
+
+
+	
+		<div id="respond" class="comment-respond">
+		<h3 id="reply-title" class="comment-reply-title">Leave a Reply <small><a rel="nofollow" id="cancel-comment-reply-link" href="/2018/09/demystifying-machine-learning-part-2/#respond" style="display:none;">Cancel reply</a></small>
+</h3>
+<form action="https://testerstories.com/wp-comments-post.php" method="post" id="commentform" class="comment-form" novalidate>
+<p class="comment-notes"><span id="email-notes">Your email address will not be published.</span> <span class="required-field-message">Required fields are marked <span class="required">*</span></span></p>
+<p class="comment-form-comment"><label for="comment">Comment <span class="required">*</span></label> <textarea id="comment" name="comment" cols="45" rows="8" maxlength="65525" required></textarea></p>
+<p class="comment-form-author"><label for="author">Name <span class="required">*</span></label> <input id="author" name="author" type="text" value="" size="30" maxlength="245" autocomplete="name" required></p>
+<p class="comment-form-email"><label for="email">Email <span class="required">*</span></label> <input id="email" name="email" type="email" value="" size="30" maxlength="100" aria-describedby="email-notes" autocomplete="email" required></p>
+<p class="comment-form-url"><label for="url">Website</label> <input id="url" name="url" type="url" value="" size="30" maxlength="200" autocomplete="url"></p>
+<p class="form-submit"><input name="submit" type="submit" id="submit" class="submit" value="Post Comment"> <input type="hidden" name="comment_post_ID" value="3554" id="comment_post_ID">
+<input type="hidden" name="comment_parent" id="comment_parent" value="0">
+</p>
+<p style="display: none;"><input type="hidden" id="akismet_comment_nonce" name="akismet_comment_nonce" value="63497cc9fe"></p>
+<p style="display: none !important;"><label>&#916;<textarea name="ak_hp_textarea" cols="45" rows="8" maxlength="100"></textarea></label><input type="hidden" id="ak_js_1" name="ak_js" value="191"><script>document.getElementById( "ak_js_1" ).setAttribute( "value", ( new Date() ).getTime() );</script></p>
+</form>	</div>
+<!-- #respond -->
+	<p class="akismet_comment_form_privacy_notice">This site uses Akismet to reduce spam. <a href="https://akismet.com/privacy/" target="_blank" rel="nofollow noopener">Learn how your comment data is processed</a>.</p>
+</div>
+<!-- #comments -->
+</article><!-- #post-## -->
+</main><!--/main-content-->
+	<aside id="sidebar-widget-area" class="sidebar-widget-area" role="complementary">
+		<a class="screen-reader-text skip-link" href="#page-footer">Skip to footer</a>
+
+		<section id="sidebar" class="widget-area sidebar">
+			<div id="text-6" class="widget widget_text">			<div class="textwidget">
+<p><a href="https://www.linkedin.com/pub/jeff-nyman/12/b32/16a"><br>
+<img decoding="async" src="https://static.licdn.com/scds/common/u/img/webpromo/btn_myprofile_160x33.png" alt="View Jeff Nyman's profile on LinkedIn" width="160" height="33" border="0"></a></p>
+</div>
+		</div>
+<div id="categories-5" class="widget widget_categories">
+<h2 class="widget-title">Topics</h2>
+			<ul>
+					<li class="cat-item cat-item-58">
+<a href="/category/agile/">Agile</a> (2)
+</li>
+	<li class="cat-item cat-item-49">
+<a href="/category/ai/">AI</a> (24)
+<ul class="children">
+	<li class="cat-item cat-item-50">
+<a href="/category/ai/machine-learning/">Machine Learning</a> (12)
+	<ul class="children">
+	<li class="cat-item cat-item-55">
+<a href="/category/ai/machine-learning/ml-series-1/">ML Series 1</a> (2)
+</li>
+	<li class="cat-item cat-item-56">
+<a href="/category/ai/machine-learning/ml-series-2/">ML Series 2</a> (4)
+</li>
+	<li class="cat-item cat-item-57">
+<a href="/category/ai/machine-learning/ml-series-3/">ML Series 3</a> (6)
+</li>
+	</ul>
+</li>
+</ul>
+</li>
+	<li class="cat-item cat-item-11">
+<a href="/category/automation/">Automation</a> (68)
+<ul class="children">
+	<li class="cat-item cat-item-41">
+<a href="/category/automation/c/">C#</a> (2)
+</li>
+	<li class="cat-item cat-item-8">
+<a href="/category/automation/capybara/">Capybara</a> (11)
+</li>
+	<li class="cat-item cat-item-9">
+<a href="/category/automation/cucumber/">Cucumber</a> (10)
+</li>
+	<li class="cat-item cat-item-31">
+<a href="/category/automation/cucumber-jvm/">Cucumber-JVM</a> (6)
+</li>
+	<li class="cat-item cat-item-42">
+<a href="/category/automation/groovy/">Groovy</a> (1)
+</li>
+	<li class="cat-item cat-item-40">
+<a href="/category/automation/java/">Java</a> (9)
+</li>
+	<li class="cat-item cat-item-10">
+<a href="/category/automation/qtp/">QTP</a> (6)
+</li>
+	<li class="cat-item cat-item-5">
+<a href="/category/automation/rspec/">RSpec</a> (4)
+</li>
+	<li class="cat-item cat-item-7">
+<a href="/category/automation/selenium/">Selenium</a> (17)
+</li>
+	<li class="cat-item cat-item-39">
+<a href="/category/automation/serenity/">Serenity</a> (8)
+</li>
+	<li class="cat-item cat-item-30">
+<a href="/category/automation/symbiont/">Symbiont</a> (11)
+</li>
+	<li class="cat-item cat-item-51">
+<a href="/category/automation/tapestry/">Tapestry</a> (6)
+</li>
+	<li class="cat-item cat-item-6">
+<a href="/category/automation/watir/">Watir</a> (4)
+</li>
+</ul>
+</li>
+	<li class="cat-item cat-item-13">
+<a href="/category/bdd/">BDD</a> (24)
+<ul class="children">
+	<li class="cat-item cat-item-23">
+<a href="/category/bdd/tdl/">TDL</a> (17)
+</li>
+</ul>
+</li>
+	<li class="cat-item cat-item-25">
+<a href="/category/career/">Career</a> (33)
+<ul class="children">
+	<li class="cat-item cat-item-53">
+<a href="/category/career/interview/">Interview</a> (10)
+</li>
+</ul>
+</li>
+	<li class="cat-item cat-item-15">
+<a href="/category/communication/">Communication</a> (16)
+</li>
+	<li class="cat-item cat-item-65">
+<a href="/category/crime-scene/">Crime Scene</a> (4)
+</li>
+	<li class="cat-item cat-item-52">
+<a href="/category/data-science/">Data Science</a> (4)
+</li>
+	<li class="cat-item cat-item-61">
+<a href="/category/development/">Development</a> (39)
+<ul class="children">
+	<li class="cat-item cat-item-36">
+<a href="/category/development/chef/">Chef</a> (2)
+</li>
+	<li class="cat-item cat-item-32">
+<a href="/category/development/inform-7/">Inform 7</a> (3)
+</li>
+	<li class="cat-item cat-item-38">
+<a href="/category/development/javascript-test-solutions/">JavaScript</a> (6)
+</li>
+	<li class="cat-item cat-item-19">
+<a href="/category/development/language-building/">Language Building</a> (9)
+	<ul class="children">
+	<li class="cat-item cat-item-20">
+<a href="/category/development/language-building/rex-and-racc/">Rex and Racc</a> (3)
+</li>
+	</ul>
+</li>
+	<li class="cat-item cat-item-48">
+<a href="/category/development/python/">Python</a> (4)
+</li>
+	<li class="cat-item cat-item-29">
+<a href="/category/development/rails/">Rails</a> (4)
+</li>
+	<li class="cat-item cat-item-21">
+<a href="/category/development/web-development/">Web Development</a> (11)
+	<ul class="children">
+	<li class="cat-item cat-item-34">
+<a href="/category/development/web-development/node-js/">Node.js</a> (5)
+</li>
+	<li class="cat-item cat-item-22">
+<a href="/category/development/web-development/sinatra/">Sinatra</a> (6)
+</li>
+	</ul>
+</li>
+</ul>
+</li>
+	<li class="cat-item cat-item-28">
+<a href="/category/dialect/">Dialect</a> (6)
+</li>
+	<li class="cat-item cat-item-45">
+<a href="/category/exploration/">Exploration</a> (14)
+<ul class="children">
+	<li class="cat-item cat-item-46">
+<a href="/category/exploration/interactive/">Interactive</a> (6)
+</li>
+</ul>
+</li>
+	<li class="cat-item cat-item-44">
+<a href="/category/indefinito/">Indefinito</a> (11)
+</li>
+	<li class="cat-item cat-item-17">
+<a href="/category/learning/">Learning</a> (11)
+</li>
+	<li class="cat-item cat-item-24">
+<a href="/category/lucid/">Lucid</a> (11)
+</li>
+	<li class="cat-item cat-item-62">
+<a href="/category/product-development/">Product Development</a> (7)
+</li>
+	<li class="cat-item cat-item-64">
+<a href="/category/product-management/">Product Management</a> (3)
+</li>
+	<li class="cat-item cat-item-3">
+<a href="/category/quality/">Quality</a> (7)
+</li>
+	<li class="cat-item cat-item-14">
+<a href="/category/quality-assurance/">Quality Assurance</a> (5)
+</li>
+	<li class="cat-item cat-item-35">
+<a href="/category/specify/">Specify</a> (2)
+</li>
+	<li class="cat-item cat-item-16">
+<a href="/category/symbiont-pg/">Symbiont-PG</a> (4)
+</li>
+	<li class="cat-item cat-item-27">
+<a href="/category/test-solutions/">Test Solutions</a> (11)
+</li>
+	<li class="cat-item cat-item-4">
+<a href="/category/testing/">Testing</a> (167)
+<ul class="children">
+	<li class="cat-item cat-item-59">
+<a href="/category/testing/contracts/">Contracts</a> (2)
+</li>
+	<li class="cat-item cat-item-63">
+<a href="/category/testing/epistemology/">Epistemology</a> (1)
+</li>
+	<li class="cat-item cat-item-67">
+<a href="/category/testing/games/">Games</a> (8)
+</li>
+	<li class="cat-item cat-item-68">
+<a href="/category/testing/history-and-science/">History and Science</a> (5)
+</li>
+	<li class="cat-item cat-item-43">
+<a href="/category/testing/modern-testing/">Modern Testing</a> (15)
+</li>
+	<li class="cat-item cat-item-54">
+<a href="/category/testing/testability/">Testability</a> (9)
+</li>
+</ul>
+</li>
+	<li class="cat-item cat-item-12">
+<a href="/category/thinking/">Thinking</a> (22)
+</li>
+	<li class="cat-item cat-item-47">
+<a href="/category/what-if/">What If</a> (1)
+</li>
+	<li class="cat-item cat-item-69">
+<a href="/category/zmachine/">Z-Machine</a> (7)
+</li>
+			</ul>
+
+			</div>
+<div id="archives-5" class="widget widget_archive">
+<h2 class="widget-title">Archives</h2>		<label class="screen-reader-text" for="archives-dropdown-5">Archives</label>
+		<select id="archives-dropdown-5" name="archive-dropdown">
+			
+			<option value="">Select Month</option>
+				<option value="https://testerstories.com/2023/06/"> June 2023 </option>
+	<option value="https://testerstories.com/2023/05/"> May 2023 </option>
+	<option value="https://testerstories.com/2023/04/"> April 2023 </option>
+	<option value="https://testerstories.com/2023/03/"> March 2023 </option>
+	<option value="https://testerstories.com/2023/02/"> February 2023 </option>
+	<option value="https://testerstories.com/2023/01/"> January 2023 </option>
+	<option value="https://testerstories.com/2022/12/"> December 2022 </option>
+	<option value="https://testerstories.com/2022/11/"> November 2022 </option>
+	<option value="https://testerstories.com/2022/10/"> October 2022 </option>
+	<option value="https://testerstories.com/2022/07/"> July 2022 </option>
+	<option value="https://testerstories.com/2022/06/"> June 2022 </option>
+	<option value="https://testerstories.com/2022/05/"> May 2022 </option>
+	<option value="https://testerstories.com/2022/03/"> March 2022 </option>
+	<option value="https://testerstories.com/2022/02/"> February 2022 </option>
+	<option value="https://testerstories.com/2022/01/"> January 2022 </option>
+	<option value="https://testerstories.com/2021/12/"> December 2021 </option>
+	<option value="https://testerstories.com/2021/10/"> October 2021 </option>
+	<option value="https://testerstories.com/2021/08/"> August 2021 </option>
+	<option value="https://testerstories.com/2021/07/"> July 2021 </option>
+	<option value="https://testerstories.com/2021/06/"> June 2021 </option>
+	<option value="https://testerstories.com/2021/05/"> May 2021 </option>
+	<option value="https://testerstories.com/2021/04/"> April 2021 </option>
+	<option value="https://testerstories.com/2021/03/"> March 2021 </option>
+	<option value="https://testerstories.com/2021/02/"> February 2021 </option>
+	<option value="https://testerstories.com/2021/01/"> January 2021 </option>
+	<option value="https://testerstories.com/2020/11/"> November 2020 </option>
+	<option value="https://testerstories.com/2020/10/"> October 2020 </option>
+	<option value="https://testerstories.com/2020/09/"> September 2020 </option>
+	<option value="https://testerstories.com/2020/07/"> July 2020 </option>
+	<option value="https://testerstories.com/2020/06/"> June 2020 </option>
+	<option value="https://testerstories.com/2020/05/"> May 2020 </option>
+	<option value="https://testerstories.com/2020/02/"> February 2020 </option>
+	<option value="https://testerstories.com/2020/01/"> January 2020 </option>
+	<option value="https://testerstories.com/2019/12/"> December 2019 </option>
+	<option value="https://testerstories.com/2019/11/"> November 2019 </option>
+	<option value="https://testerstories.com/2019/10/"> October 2019 </option>
+	<option value="https://testerstories.com/2019/09/"> September 2019 </option>
+	<option value="https://testerstories.com/2019/08/"> August 2019 </option>
+	<option value="https://testerstories.com/2019/07/"> July 2019 </option>
+	<option value="https://testerstories.com/2019/06/"> June 2019 </option>
+	<option value="https://testerstories.com/2019/05/"> May 2019 </option>
+	<option value="https://testerstories.com/2019/04/"> April 2019 </option>
+	<option value="https://testerstories.com/2019/03/"> March 2019 </option>
+	<option value="https://testerstories.com/2019/02/"> February 2019 </option>
+	<option value="https://testerstories.com/2019/01/"> January 2019 </option>
+	<option value="https://testerstories.com/2018/12/"> December 2018 </option>
+	<option value="https://testerstories.com/2018/11/"> November 2018 </option>
+	<option value="https://testerstories.com/2018/10/"> October 2018 </option>
+	<option value="https://testerstories.com/2018/09/"> September 2018 </option>
+	<option value="https://testerstories.com/2018/08/"> August 2018 </option>
+	<option value="https://testerstories.com/2018/07/"> July 2018 </option>
+	<option value="https://testerstories.com/2018/06/"> June 2018 </option>
+	<option value="https://testerstories.com/2018/05/"> May 2018 </option>
+	<option value="https://testerstories.com/2018/04/"> April 2018 </option>
+	<option value="https://testerstories.com/2018/03/"> March 2018 </option>
+	<option value="https://testerstories.com/2018/02/"> February 2018 </option>
+	<option value="https://testerstories.com/2018/01/"> January 2018 </option>
+	<option value="https://testerstories.com/2017/12/"> December 2017 </option>
+	<option value="https://testerstories.com/2017/11/"> November 2017 </option>
+	<option value="https://testerstories.com/2017/10/"> October 2017 </option>
+	<option value="https://testerstories.com/2017/09/"> September 2017 </option>
+	<option value="https://testerstories.com/2017/08/"> August 2017 </option>
+	<option value="https://testerstories.com/2017/07/"> July 2017 </option>
+	<option value="https://testerstories.com/2017/06/"> June 2017 </option>
+	<option value="https://testerstories.com/2017/05/"> May 2017 </option>
+	<option value="https://testerstories.com/2017/04/"> April 2017 </option>
+	<option value="https://testerstories.com/2017/03/"> March 2017 </option>
+	<option value="https://testerstories.com/2017/02/"> February 2017 </option>
+	<option value="https://testerstories.com/2017/01/"> January 2017 </option>
+	<option value="https://testerstories.com/2016/12/"> December 2016 </option>
+	<option value="https://testerstories.com/2016/11/"> November 2016 </option>
+	<option value="https://testerstories.com/2016/10/"> October 2016 </option>
+	<option value="https://testerstories.com/2016/09/"> September 2016 </option>
+	<option value="https://testerstories.com/2016/08/"> August 2016 </option>
+	<option value="https://testerstories.com/2016/07/"> July 2016 </option>
+	<option value="https://testerstories.com/2016/06/"> June 2016 </option>
+	<option value="https://testerstories.com/2016/04/"> April 2016 </option>
+	<option value="https://testerstories.com/2016/03/"> March 2016 </option>
+	<option value="https://testerstories.com/2016/02/"> February 2016 </option>
+	<option value="https://testerstories.com/2016/01/"> January 2016 </option>
+	<option value="https://testerstories.com/2015/12/"> December 2015 </option>
+	<option value="https://testerstories.com/2015/11/"> November 2015 </option>
+	<option value="https://testerstories.com/2015/10/"> October 2015 </option>
+	<option value="https://testerstories.com/2015/09/"> September 2015 </option>
+	<option value="https://testerstories.com/2015/08/"> August 2015 </option>
+	<option value="https://testerstories.com/2015/07/"> July 2015 </option>
+	<option value="https://testerstories.com/2015/06/"> June 2015 </option>
+	<option value="https://testerstories.com/2015/05/"> May 2015 </option>
+	<option value="https://testerstories.com/2015/04/"> April 2015 </option>
+	<option value="https://testerstories.com/2015/03/"> March 2015 </option>
+	<option value="https://testerstories.com/2015/02/"> February 2015 </option>
+	<option value="https://testerstories.com/2014/12/"> December 2014 </option>
+	<option value="https://testerstories.com/2014/11/"> November 2014 </option>
+	<option value="https://testerstories.com/2014/10/"> October 2014 </option>
+	<option value="https://testerstories.com/2014/09/"> September 2014 </option>
+	<option value="https://testerstories.com/2014/08/"> August 2014 </option>
+	<option value="https://testerstories.com/2014/07/"> July 2014 </option>
+	<option value="https://testerstories.com/2014/06/"> June 2014 </option>
+	<option value="https://testerstories.com/2014/05/"> May 2014 </option>
+	<option value="https://testerstories.com/2014/04/"> April 2014 </option>
+	<option value="https://testerstories.com/2014/03/"> March 2014 </option>
+	<option value="https://testerstories.com/2014/01/"> January 2014 </option>
+	<option value="https://testerstories.com/2013/12/"> December 2013 </option>
+	<option value="https://testerstories.com/2013/09/"> September 2013 </option>
+	<option value="https://testerstories.com/2013/08/"> August 2013 </option>
+	<option value="https://testerstories.com/2013/07/"> July 2013 </option>
+	<option value="https://testerstories.com/2013/06/"> June 2013 </option>
+	<option value="https://testerstories.com/2013/05/"> May 2013 </option>
+	<option value="https://testerstories.com/2013/03/"> March 2013 </option>
+	<option value="https://testerstories.com/2013/01/"> January 2013 </option>
+	<option value="https://testerstories.com/2012/12/"> December 2012 </option>
+	<option value="https://testerstories.com/2012/10/"> October 2012 </option>
+	<option value="https://testerstories.com/2012/09/"> September 2012 </option>
+	<option value="https://testerstories.com/2012/08/"> August 2012 </option>
+	<option value="https://testerstories.com/2012/07/"> July 2012 </option>
+	<option value="https://testerstories.com/2012/06/"> June 2012 </option>
+	<option value="https://testerstories.com/2012/05/"> May 2012 </option>
+	<option value="https://testerstories.com/2012/04/"> April 2012 </option>
+	<option value="https://testerstories.com/2012/03/"> March 2012 </option>
+	<option value="https://testerstories.com/2012/02/"> February 2012 </option>
+	<option value="https://testerstories.com/2012/01/"> January 2012 </option>
+	<option value="https://testerstories.com/2011/12/"> December 2011 </option>
+	<option value="https://testerstories.com/2011/11/"> November 2011 </option>
+	<option value="https://testerstories.com/2011/10/"> October 2011 </option>
+	<option value="https://testerstories.com/2011/09/"> September 2011 </option>
+	<option value="https://testerstories.com/2011/08/"> August 2011 </option>
+
+		</select>
+
+<script type="text/javascript">
+/* <![CDATA[ */
+(function() {
+	var dropdown = document.getElementById( "archives-dropdown-5" );
+	function onSelectChange() {
+		if ( dropdown.options[ dropdown.selectedIndex ].value !== '' ) {
+			document.location.href = this.options[ this.selectedIndex ].value;
+		}
+	}
+	dropdown.onchange = onSelectChange;
+})();
+/* ]]> */
+</script>
+			</div>
+<div id="meta-5" class="widget widget_meta">
+<h2 class="widget-title">Site</h2>
+		<ul>
+						<li><a href="/wp-login.php">Log in</a></li>
+			<li><a href="/feed/">Entries feed</a></li>
+			<li><a href="/comments/feed/">Comments feed</a></li>
+
+			<li><a href="https://wordpress.org/">WordPress.org</a></li>
+		</ul>
+
+		</div>
+<div id="text-4" class="widget widget_text">			<div class="textwidget"><a href="https://www.linkedin.com/pub/jeff-nyman/12/b32/16a">
+          <img src="https://static.licdn.com/scds/common/u/img/webpromo/btn_myprofile_160x33.png" width="160" height="33" border="0" alt="View Jeff Nyman's profile on LinkedIn"></a></div>
+		</div>
+<div id="search-3" class="widget widget_search">
+<form role="search" method="get" class="search-form" action="https://testerstories.com/">
+	<label>
+		<span class="screen-reader-text">Search for:</span>
+		<input type="search" class="search-field" placeholder="Search &hellip;" value="" name="s" title="Search for:">
+	</label>
+	<button type="submit" class="search-submit"><span class="genericon genericon-search" aria-hidden="true"></span><span class="screen-reader-text">Search</span></button>
+</form>
+</div>		</section><!-- #sidebar .widget-area -->
+
+	</aside>
+
+  
+
+<footer id="page-footer" role="contentinfo">
+	<div id="site-info" class="site-info">
+		<span class="footer-site-title"><a href="/" rel="home">Stories from a Software Tester</a></span>
+		<a href="https://wordpress.org/">Proudly powered by WordPress</a>
+	</div>
+<!--/site-info-->
+</footer> <!--/footer-->
+</div>
+<!-- #container -->
+            
+            <style type="text/css" class="darkmysite_inline_css">#darkmysite_switch_602985923 {
+        --darkmysite_switch_apple_width_height: 60px;
+        --darkmysite_switch_apple_border_radius: 7px;
+        --darkmysite_switch_apple_icon_width: 30px;
+        --darkmysite_switch_apple_light_mode_bg: #121116;
+        --darkmysite_switch_apple_dark_mode_bg: #ffffff;
+        --darkmysite_switch_apple_light_mode_icon_color: #ffffff;
+        --darkmysite_switch_apple_dark_mode_icon_color: #121116;
+        }
+
+    #darkmysite_switch_602985923 {
+        --darkmysite_switch_margin_from_top: 40px;
+        --darkmysite_switch_margin_from_bottom: 40px;
+        --darkmysite_switch_margin_from_left: 40px;
+        --darkmysite_switch_margin_from_right: 40px;
+        }</style>
+
+
+
+
+    <div id="darkmysite_switch_602985923" class="darkmysite_switch  darkmysite_bottom_right   darkmysite_switch_apple" onclick="darkmysite_switch_trigger()">
+        <span class="darkmysite_switch_icon"></span>
+            </div>
+
+            
+    <script type="text/javascript" class="darkmysite_inline_js">document.addEventListener("DOMContentLoaded", function(event) {
+            darkmysite_init_alternative_dark_mode_switch();
+        });</script>
+
+
+<script type="text/javascript" id="acuarela-script-js-extra">
+/* <![CDATA[ */
+var acuarelaScreenReaderText = {"expand":"expand child menu","collapse":"collapse child menu"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="/wp-content/themes/acuarela/js/functions.js?ver=20190802" id="acuarela-script-js"></script>
+<script type="text/javascript" src="/wp-includes/js/comment-reply.min.js?ver=6.2.2" id="comment-reply-js"></script>
+<script defer type="text/javascript" src="/wp-content/plugins/akismet/_inc/akismet-frontend.js?ver=1680871091" id="akismet-frontend-js"></script>
+</body>
+</html>
