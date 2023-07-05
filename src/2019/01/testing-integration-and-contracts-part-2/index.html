@@ -1,0 +1,2235 @@
+<!DOCTYPE html>
+<html lang="en-US">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="profile" href="http://gmpg.org/xfn/11">
+				<link rel="pingback" href="/xmlrpc.php">
+				<title>Testing, Integration, and Contracts &#8211; Part 2 &#8211; Stories from a Software Tester</title>
+<meta name="robots" content="max-image-preview:large">
+ <style type="text/css" class="darkmysite_inline_css">:root { --darkmysite_dark_mode_bg: #0f0f0f; --darkmysite_dark_mode_secondary_bg: #171717; --darkmysite_dark_mode_text_color: #bebebe; --darkmysite_dark_mode_link_color: #ffffff; --darkmysite_dark_mode_link_hover_color: #cccccc; --darkmysite_dark_mode_input_bg: #2d2d2d; --darkmysite_dark_mode_input_text_color: #bebebe; --darkmysite_dark_mode_input_placeholder_color: #989898; --darkmysite_dark_mode_border_color: #4a4a4a; --darkmysite_dark_mode_btn_bg: #2d2d2d; --darkmysite_dark_mode_btn_text_color: #bebebe; }</style> <style type="text/css" class="darkmysite_inline_css">.darkmysite_dark_mode_enabled::-webkit-scrollbar { background: #29292a !important; } .darkmysite_dark_mode_enabled::-webkit-scrollbar-track { background: #29292a !important; } .darkmysite_dark_mode_enabled::-webkit-scrollbar-thumb { background-color: #52565a !important; } .darkmysite_dark_mode_enabled::-webkit-scrollbar-corner { background-color: #52565a !important; } .darkmysite_dark_mode_enabled::-webkit-scrollbar-button { background-color: transparent !important; background-repeat: no-repeat !important; background-size: contain !important; background-position: center !important; } .darkmysite_dark_mode_enabled::-webkit-scrollbar-button:start { background-image: url(/wp-content/plugins/darkmysite/assets/img/others/scroll_arrow_up.svg) !important; } .darkmysite_dark_mode_enabled::-webkit-scrollbar-button:end { background-image: url(/wp-content/plugins/darkmysite/assets/img/others/scroll_arrow_down.svg) !important; } .darkmysite_dark_mode_enabled::-webkit-scrollbar-button:start:horizontal { background-image: url(/wp-content/plugins/darkmysite/assets/img/others/scroll_arrow_left.svg) !important; } .darkmysite_dark_mode_enabled::-webkit-scrollbar-button:end:horizontal { background-image: url(/wp-content/plugins/darkmysite/assets/img/others/scroll_arrow_right.svg) !important; }</style> <script type="text/javascript" class="darkmysite_inline_js">var darkmysite_switch_unique_id = "2013242453"; var darkmysite_is_this_admin_panel = "0"; var darkmysite_enable_default_dark_mode = "0"; var darkmysite_enable_os_aware = "1"; var darkmysite_enable_keyboard_shortcut = "1"; var darkmysite_enable_time_based_dark = "0"; var darkmysite_time_based_dark_start = "19:00"; var darkmysite_time_based_dark_stop = "07:00"; var darkmysite_alternative_dark_mode_switch = ""; var darkmysite_enable_low_image_brightness = "1"; var darkmysite_image_brightness_to = "80"; var darkmysite_enable_image_grayscale = "0"; var darkmysite_image_grayscale_to = "80"; var darkmysite_enable_bg_image_darken = "1"; var darkmysite_bg_image_darken_to = "60"; var darkmysite_enable_invert_inline_svg = "0"; var darkmysite_enable_low_video_brightness = "1"; var darkmysite_video_brightness_to = "80"; var darkmysite_enable_video_grayscale = "0"; var darkmysite_video_grayscale_to = "80"; var darkmysite_disallowed_elements = ".darkmysite_ignore, .darkmysite_ignore *, .darkmysite_switch, .darkmysite_switch *, .wp-block-button__link, .wp-block-button__link *";</script><link rel="dns-prefetch" href="//static.addtoany.com">
+<link rel="dns-prefetch" href="//fonts.googleapis.com">
+<link rel="alternate" type="application/rss+xml" title="Stories from a Software Tester &raquo; Feed" href="/feed/">
+<link rel="alternate" type="application/rss+xml" title="Stories from a Software Tester &raquo; Comments Feed" href="/comments/feed/">
+<link rel="alternate" type="application/rss+xml" title="Stories from a Software Tester &raquo; Testing, Integration, and Contracts &#8211; Part 2 Comments Feed" href="/2019/01/testing-integration-and-contracts-part-2/feed/">
+<script type="text/javascript">
+window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/14.0.0\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/14.0.0\/svg\/","svgExt":".svg","source":{"concatemoji":"\/wp-includes\/js\/wp-emoji-release.min.js?ver=6.2.2"}};
+/*! This file is auto-generated */
+!function(e,a,t){var n,r,o,i=a.createElement("canvas"),p=i.getContext&&i.getContext("2d");function s(e,t){p.clearRect(0,0,i.width,i.height),p.fillText(e,0,0);e=i.toDataURL();return p.clearRect(0,0,i.width,i.height),p.fillText(t,0,0),e===i.toDataURL()}function c(e){var t=a.createElement("script");t.src=e,t.defer=t.type="text/javascript",a.getElementsByTagName("head")[0].appendChild(t)}for(o=Array("flag","emoji"),t.supports={everything:!0,everythingExceptFlag:!0},r=0;r<o.length;r++)t.supports[o[r]]=function(e){if(p&&p.fillText)switch(p.textBaseline="top",p.font="600 32px Arial",e){case"flag":return s("🏳️‍⚧️","🏳️​⚧️")?!1:!s("🇺🇳","🇺​🇳")&&!s("🏴󠁧󠁢󠁥󠁮󠁧󠁿","🏴​󠁧​󠁢​󠁥​󠁮​󠁧​󠁿");case"emoji":return!s("🫱🏻‍🫲🏿","🫱🏻​🫲🏿")}return!1}(o[r]),t.supports.everything=t.supports.everything&&t.supports[o[r]],"flag"!==o[r]&&(t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&t.supports[o[r]]);t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&!t.supports.flag,t.DOMReady=!1,t.readyCallback=function(){t.DOMReady=!0},t.supports.everything||(n=function(){t.readyCallback()},a.addEventListener?(a.addEventListener("DOMContentLoaded",n,!1),e.addEventListener("load",n,!1)):(e.attachEvent("onload",n),a.attachEvent("onreadystatechange",function(){"complete"===a.readyState&&t.readyCallback()})),(e=t.source||{}).concatemoji?c(e.concatemoji):e.wpemoji&&e.twemoji&&(c(e.twemoji),c(e.wpemoji)))}(window,document,window._wpemojiSettings);
+</script>
+<style type="text/css">img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 0.07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}</style>
+	<link rel="stylesheet" id="urvanov_syntax_highlighter-css" href="/wp-content/plugins/urvanov-syntax-highlighter/css/min/urvanov_syntax_highlighter.min.css?ver=2.8.33" type="text/css" media="all">
+<link rel="stylesheet" id="crayon-theme-classic-css" href="/wp-content/plugins/urvanov-syntax-highlighter/themes/classic/classic.css?ver=2.8.33" type="text/css" media="all">
+<link rel="stylesheet" id="crayon-font-monaco-css" href="/wp-content/plugins/urvanov-syntax-highlighter/fonts/monaco.css?ver=2.8.33" type="text/css" media="all">
+<link rel="stylesheet" id="wp-block-library-css" href="/wp-includes/css/dist/block-library/style.min.css?ver=6.2.2" type="text/css" media="all">
+<style id="wp-block-library-theme-inline-css" type="text/css">.wp-block-audio figcaption{color:#555;font-size:13px;text-align:center}.is-dark-theme .wp-block-audio figcaption{color:hsla(0,0%,100%,.65)}.wp-block-audio{margin:0 0 1em}.wp-block-code{border:1px solid #ccc;border-radius:4px;font-family:Menlo,Consolas,monaco,monospace;padding:.8em 1em}.wp-block-embed figcaption{color:#555;font-size:13px;text-align:center}.is-dark-theme .wp-block-embed figcaption{color:hsla(0,0%,100%,.65)}.wp-block-embed{margin:0 0 1em}.blocks-gallery-caption{color:#555;font-size:13px;text-align:center}.is-dark-theme .blocks-gallery-caption{color:hsla(0,0%,100%,.65)}.wp-block-image figcaption{color:#555;font-size:13px;text-align:center}.is-dark-theme .wp-block-image figcaption{color:hsla(0,0%,100%,.65)}.wp-block-image{margin:0 0 1em}.wp-block-pullquote{border-bottom:4px solid;border-top:4px solid;color:currentColor;margin-bottom:1.75em}.wp-block-pullquote cite,.wp-block-pullquote footer,.wp-block-pullquote__citation{color:currentColor;font-size:.8125em;font-style:normal;text-transform:uppercase}.wp-block-quote{border-left:.25em solid;margin:0 0 1.75em;padding-left:1em}.wp-block-quote cite,.wp-block-quote footer{color:currentColor;font-size:.8125em;font-style:normal;position:relative}.wp-block-quote.has-text-align-right{border-left:none;border-right:.25em solid;padding-left:0;padding-right:1em}.wp-block-quote.has-text-align-center{border:none;padding-left:0}.wp-block-quote.is-large,.wp-block-quote.is-style-large,.wp-block-quote.is-style-plain{border:none}.wp-block-search .wp-block-search__label{font-weight:700}.wp-block-search__button{border:1px solid #ccc;padding:.375em .625em}:where(.wp-block-group.has-background){padding:1.25em 2.375em}.wp-block-separator.has-css-opacity{opacity:.4}.wp-block-separator{border:none;border-bottom:2px solid;margin-left:auto;margin-right:auto}.wp-block-separator.has-alpha-channel-opacity{opacity:1}.wp-block-separator:not(.is-style-wide):not(.is-style-dots){width:100px}.wp-block-separator.has-background:not(.is-style-dots){border-bottom:none;height:1px}.wp-block-separator.has-background:not(.is-style-wide):not(.is-style-dots){height:2px}.wp-block-table{margin:0 0 1em}.wp-block-table td,.wp-block-table th{word-break:normal}.wp-block-table figcaption{color:#555;font-size:13px;text-align:center}.is-dark-theme .wp-block-table figcaption{color:hsla(0,0%,100%,.65)}.wp-block-video figcaption{color:#555;font-size:13px;text-align:center}.is-dark-theme .wp-block-video figcaption{color:hsla(0,0%,100%,.65)}.wp-block-video{margin:0 0 1em}.wp-block-template-part.has-background{margin-bottom:0;margin-top:0;padding:1.25em 2.375em}</style>
+<link rel="stylesheet" id="classic-theme-styles-css" href="/wp-includes/css/classic-themes.min.css?ver=6.2.2" type="text/css" media="all">
+<style id="global-styles-inline-css" type="text/css">body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgba(6,147,227,1) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgba(252,185,0,1) 0%,rgba(255,105,0,1) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgba(255,105,0,1) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--duotone--dark-grayscale: url('#wp-duotone-dark-grayscale');--wp--preset--duotone--grayscale: url('#wp-duotone-grayscale');--wp--preset--duotone--purple-yellow: url('#wp-duotone-purple-yellow');--wp--preset--duotone--blue-red: url('#wp-duotone-blue-red');--wp--preset--duotone--midnight: url('#wp-duotone-midnight');--wp--preset--duotone--magenta-yellow: url('#wp-duotone-magenta-yellow');--wp--preset--duotone--purple-green: url('#wp-duotone-purple-green');--wp--preset--duotone--blue-orange: url('#wp-duotone-blue-orange');--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;--wp--preset--spacing--20: 0.44rem;--wp--preset--spacing--30: 0.67rem;--wp--preset--spacing--40: 1rem;--wp--preset--spacing--50: 1.5rem;--wp--preset--spacing--60: 2.25rem;--wp--preset--spacing--70: 3.38rem;--wp--preset--spacing--80: 5.06rem;--wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);--wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);--wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);--wp--preset--shadow--outlined: 6px 6px 0px -3px rgba(255, 255, 255, 1), 6px 6px rgba(0, 0, 0, 1);--wp--preset--shadow--crisp: 6px 6px 0px rgba(0, 0, 0, 1);}:where(.is-layout-flex){gap: 0.5em;}body .is-layout-flow > .alignleft{float: left;margin-inline-start: 0;margin-inline-end: 2em;}body .is-layout-flow > .alignright{float: right;margin-inline-start: 2em;margin-inline-end: 0;}body .is-layout-flow > .aligncenter{margin-left: auto !important;margin-right: auto !important;}body .is-layout-constrained > .alignleft{float: left;margin-inline-start: 0;margin-inline-end: 2em;}body .is-layout-constrained > .alignright{float: right;margin-inline-start: 2em;margin-inline-end: 0;}body .is-layout-constrained > .aligncenter{margin-left: auto !important;margin-right: auto !important;}body .is-layout-constrained > :where(:not(.alignleft):not(.alignright):not(.alignfull)){max-width: var(--wp--style--global--content-size);margin-left: auto !important;margin-right: auto !important;}body .is-layout-constrained > .alignwide{max-width: var(--wp--style--global--wide-size);}body .is-layout-flex{display: flex;}body .is-layout-flex{flex-wrap: wrap;align-items: center;}body .is-layout-flex > *{margin: 0;}:where(.wp-block-columns.is-layout-flex){gap: 2em;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
+.wp-block-navigation a:where(:not(.wp-element-button)){color: inherit;}
+:where(.wp-block-columns.is-layout-flex){gap: 2em;}
+.wp-block-pullquote{font-size: 1.5em;line-height: 1.6;}</style>
+<link rel="stylesheet" id="darkmysite-client-main-css" href="/wp-content/plugins/darkmysite/assets/css/client_main.css?ver=1.2.6" type="text/css" media="all">
+<link rel="stylesheet" id="plyr-css-css" href="/wp-content/plugins/easy-video-player/lib/plyr.css?ver=6.2.2" type="text/css" media="all">
+<link rel="stylesheet" id="acuarela-fonts-css" href="https://fonts.googleapis.com/css?family=Lato%3A300italic%2C400italic%2C700italic%2C300%2C400%2C700%7CArima+Madurai%3A700%2C800%7CInconsolata%3A400%2C700&#038;subset=latin%2Clatin-ext&#038;ver=20190802" type="text/css" media="all">
+<link rel="stylesheet" id="genericons-css" href="/wp-content/themes/acuarela/genericons/genericons.css?ver=3.4.1" type="text/css" media="all">
+<link rel="stylesheet" id="animate-css" href="/wp-content/themes/acuarela/css/animate.css?ver=3.7.2" type="text/css" media="all">
+<link rel="stylesheet" id="acuarela-style-css" href="/wp-content/themes/acuarela/style.css?ver=6.2.2" type="text/css" media="all">
+<link rel="stylesheet" id="addtoany-css" href="/wp-content/plugins/add-to-any/addtoany.min.css?ver=1.16" type="text/css" media="all">
+<script type="text/javascript" src="/wp-includes/js/jquery/jquery.min.js?ver=3.6.4" id="jquery-core-js"></script>
+<script type="text/javascript" src="/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.4.0" id="jquery-migrate-js"></script>
+<script type="text/javascript" id="urvanov_syntax_highlighter_js-js-extra">
+/* <![CDATA[ */
+var UrvanovSyntaxHighlighterSyntaxSettings = {"version":"2.8.33","is_admin":"0","ajaxurl":"\/wp-admin\/admin-ajax.php","prefix":"urvanov-syntax-highlighter-","setting":"urvanov-syntax-highlighter-setting","selected":"urvanov-syntax-highlighter-setting-selected","changed":"urvanov-syntax-highlighter-setting-changed","special":"urvanov-syntax-highlighter-setting-special","orig_value":"data-orig-value","debug":""};
+var UrvanovSyntaxHighlighterSyntaxStrings = {"copy":"Copied to the clipboard","minimize":"Click To Expand Code"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="/wp-content/plugins/urvanov-syntax-highlighter/js/min/urvanov_syntax_highlighter.min.js?ver=2.8.33" id="urvanov_syntax_highlighter_js-js"></script>
+<script type="text/javascript" id="addtoany-core-js-before">window.a2a_config=window.a2a_config||{};a2a_config.callbacks=[];a2a_config.overlays=[];a2a_config.templates={};</script>
+<script type="text/javascript" async src="https://static.addtoany.com/menu/page.js" id="addtoany-core-js"></script>
+<script type="text/javascript" async src="/wp-content/plugins/add-to-any/addtoany.min.js?ver=1.1" id="addtoany-jquery-js"></script>
+<script type="text/javascript" src="/wp-content/plugins/darkmysite/assets/js/client_main.js?ver=1.2.6" id="darkmysite-client-main-js"></script>
+<script type="text/javascript" id="plyr-js-js-extra">
+/* <![CDATA[ */
+var easy_video_player = {"plyr_iconUrl":"\/wp-content\/plugins\/easy-video-player\/lib\/plyr.svg","plyr_blankVideo":"\/wp-content\/plugins\/easy-video-player\/lib\/blank.mp4"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="/wp-content/plugins/easy-video-player/lib/plyr.js?ver=6.2.2" id="plyr-js-js"></script>
+<link rel="https://api.w.org/" href="/wp-json/">
+<link rel="alternate" type="application/json" href="/wp-json/wp/v2/posts/3636">
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="/xmlrpc.php?rsd">
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="/wp-includes/wlwmanifest.xml">
+<meta name="generator" content="WordPress 6.2.2">
+<link rel="canonical" href="/2019/01/testing-integration-and-contracts-part-2/">
+<link rel="shortlink" href="/?p=3636">
+<link rel="alternate" type="application/json+oembed" href="/wp-json/oembed/1.0/embed?url=https%3A%2F%2F%2F2019%2F01%2Ftesting-integration-and-contracts-part-2%2F">
+<link rel="alternate" type="text/xml+oembed" href="/wp-json/oembed/1.0/embed?url=https%3A%2F%2F%2F2019%2F01%2Ftesting-integration-and-contracts-part-2%2F#038;format=xml">
+<link type="text/css" rel="stylesheet" href="/wp-content/plugins/category-specific-rss-feed-menu/wp_cat_rss_style.css">
+<!--Custom Styling-->
+<style media="screen" type="text/css">.site-description { color: #222222}
+.site-title, .entry-title, .post-title, .widget-title, .posts-navigation .nav-links { font-family: Arima Madurai}
+ body { font-family: Lato}</style>
+	<style id="acuarela-header-css" type="text/css"></style>
+<style type="text/css" id="custom-background-css">body.custom-background { background-image: url("/wp-content/uploads/2020/10/low_contrast_linen.png"); background-position: left top; background-size: cover; background-repeat: no-repeat; background-attachment: fixed; }</style>
+			<style type="text/css" id="wp-custom-css">@font-face {
+  font-family: "Open Sans";
+  font-weight: 400;
+  font-style: normal;
+  src: local("Open Sans Regular"), local("OpenSans-Regular"), url("/fonts/OpenSans-Regular.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Open Sans Bold";
+  font-weight: 700;
+  font-style: normal;
+  src: local("Open Sans Bold"), local("OpenSans-Bold"), url("/fonts/OpenSans-Bold.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Open Sans Italic";
+  font-weight: 400;
+  font-style: normal;
+  src: local("Open Sans Italic"), local("OpenSans-Italic"), url("/fonts/OpenSans-Italic.woff") format("woff");
+}
+
+:root{
+	--primary: #01408e;
+	--secondary: #3c5d5c;
+	--initialLine: #ad2271;
+	--drop: #903;
+	--paraIndent: 1.25em;
+	--note: #4d5b7c;
+	--bq-color: #555555;
+	--bq-back: #ededed;
+	--sans: "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+	--mono: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
+    "Courier New", monospace;
+}
+/* For the top menu bar. */
+.site-navigation a {
+	padding: 0.9em 1.5em;
+}
+
+:where(html, body) {
+	overscroll-behavior-y: none;
+	cursor: url("/cursors/default.cur"), auto;
+}
+
+:where(p, h1, h2, h3, h4, h5, h6, blockquote, figcaption) {
+	cursor: url("/cursors/text-select.cur"), auto;
+}
+
+:where(ul, ol) {
+	margin: 1em 1em;
+	text-align: justify;
+	text-justify: inter-word;
+	cursor: url("/cursors/text-select.cur"), auto;
+}
+
+:where(aside, article) a {
+	cursor: url("/cursors/link-select.cur"), auto;
+}
+
+select, button, input,
+.wp-element-button,
+.darkmysite_switch,
+.site-title,
+.site-description {
+	cursor: url("/cursors/link-select.cur"), auto;
+}
+
+::selection {
+  color: #fff;
+  background: rgba(0, 0, 0, 0.99);
+}
+
+main,
+header {
+	font-size: 1rem;
+}
+
+main {
+	/*From here: https://fluidtypography.com/#app-get-started*/
+	/* Settings: 414-1280; 16-20; 1.6-1.3*/
+	font-size: clamp(1rem, 0.462vw + 0.88rem, 1.25rem);
+line-height: clamp(1.6rem, 0.046vw + 1.588rem, 1.625rem);
+}
+
+article {
+	font-family: var(--sans);
+	line-height: 1.6;
+  word-spacing: 0.16em;
+}
+
+h1:not(.site-title) {
+  font-size: 2.5em;
+  margin: 0.67em 0;
+  text-align: center;
+}
+
+:where(h1, h2, h3, h4) {
+	text-rendering: optimizeLegibility;
+	line-height: 1.4em;
+}
+
+article :where(h2, h3) {
+	margin-bottom: 0.7em;
+}
+
+p {
+	font-size: 1.2em;
+	text-align: justify;
+	text-justify: inter-word;
+}
+
+p:first-of-type:first-line {
+	color: var(--initialLine);
+}
+
+li {
+  margin-bottom: 0.5em;
+}
+
+/* This makes sure the first line of blockquotes are not colored since in Wordpress, a blockquote content has a paragraph tag applied to it. */
+:where(blockquote, footer, .comments-area) p:first-of-type:first-line {
+	color: inherit;
+}
+:where(p, blockquote, img, pre, ul, ol) + p:not(.note) {
+  text-indent: var(--paraIndent);
+}
+section > h3 + p::first-letter,
+section > h2 + p::first-letter,
+div.entry-content > p:not(.nostyle):first-child::first-letter {
+	color: var(--drop);
+  border-left: 2px solid var(--drop);
+  border-top: 2px solid var(--drop);
+  float: left;
+  font-family: Georgia;
+  font-size: 65px;
+  line-height: 60px;
+  padding-top: 4px;
+  padding-right: 12px;
+  padding-left: 3px;
+}
+
+:where(aside, article) a {
+	color: var(--primary);
+	text-underline-position: under;
+	text-decoration: underline 2px;
+	transition: all 0.3s linear;
+  background: linear-gradient(to right, #00d1b1 0%, #278fc6 98%);
+  background-size: 0px 2px;
+  background-repeat: no-repeat;
+  background-position: left 10%;
+  text-shadow: 0;
+}
+
+article a:hover {
+  background-size: 100% 2px;
+  color: var(--secondary);
+}
+
+article a:focus {
+  color: var(--secondary);
+}
+
+/* Handling external links to show an icon after them, but excluding links that are part of the TesterStories site. */
+
+a[href*="http"]::after,
+a[href*="https"]::after {
+  content: "";
+  width: 16px;
+  height: 16px;
+  margin-left: 4px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='currentColor' viewBox='0 0 16 16'%3E%3Cpath fill-rule='evenodd' d='M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5z'/%3E%3Cpath fill-rule='evenodd' d='M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0v-5z'/%3E%3C/svg%3E");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  display: inline-block;
+}
+
+a[href^="https://www.linkedin.com/"]::after {
+  content: none;
+}
+
+a[href^="https://testerstories.com/"]::after {
+  display: none !important;
+}
+
+img.framed {
+  --b: 10px;
+  margin: 0 auto;
+  padding: var(--b);
+  border: calc(2 * var(--b)) solid #0000;
+  border-radius: 25px;
+  outline: 1px solid #000;
+  outline-offset: calc(-1 * var(--b));
+  background: conic-gradient(from 90deg at 1px 1px, #0000 90deg, #000 0);
+}
+
+img.backframed {
+  margin: 0 auto;
+  border: 3px solid black;
+  box-shadow: -50px -50px 0 -40px #555555, 50px 50px 0 -40px #555555;
+}
+
+.note {
+  border: 1px solid rgb(107, 113, 177);
+  color: var(--note);
+  border-radius: 16px;
+  padding: 0.5em 0.8em;
+  margin: 1.9em;
+}
+
+.post {
+	background-color: white;
+}
+
+.entry-content li {
+	font-size: 1.2em;
+}
+
+.simplequote {
+	background: #fff url(/2019/01/testing-integration-and-contracts-part-2/images/box_quote.png) no-repeat;
+	padding: 5px;
+	margin-top: 20px; margin-bottom: 20px;
+	margin-left: 50px; margin-right: 50px;
+	border: 3px solid #cecece;
+	text-indent: 25px;
+}
+
+p.example {
+	padding: 1ex;
+	margin-right: 50px; margin-left: 50px;
+	border: .5ex solid #808080;
+	color: #000000;
+	line-height: 1.2;
+	text-indent: 0em;
+}
+
+#headquote blockquote {
+	text-align: left;
+	margin: 0 auto 20px auto;
+	color: #555;
+	background: #eee url(/2019/01/testing-integration-and-contracts-part-2/images/quote_top.gif) no-repeat top left;
+}
+
+#headquote blockquote {
+	width: 370px;
+	font-size: 110%;
+	letter-spacing: -1px;
+	line-height: 1.2em;
+}
+
+#headquote #quote {
+	margin-left: 40px;
+	padding: 20px 20px 10px 20px;
+	background: url(/2019/01/testing-integration-and-contracts-part-2/images/quote_bottom.gif) no-repeat right bottom;
+}
+
+#headquote #author {
+	margin: 0;
+	text-align: center;
+	padding: 0 0 10px 0;
+	color: #999;
+	font-size: 95%;
+}
+
+#headquote blockquote strong {
+	color: #000;
+	font-weight: normal;
+}
+
+/* Center images. */
+
+img {
+	display: block;
+  margin: 0 auto;
+}
+
+img.smaller {
+  width: 200px;
+}
+
+img.even-smaller {
+  width: 100px;
+}
+
+table td.code {
+  font-family: "Courier New", courier, monospace;
+  font-size: 11.5px;
+}
+
+p.box {
+	font-family: Georgia, "Times New Roman", Times, serif;
+	text-align: justify;
+	padding-top: 25px;
+	margin: 0;
+	line-height: 1.2;
+}
+
+pre.box {
+	white-space: pre-wrap;
+	background-color: white;
+	border: 1px solid;
+}
+
+p.tip {
+	padding-bottom: 10px; padding-top: 10px;
+	padding-right: 10px; padding-left: 10px;
+	border: 1px solid;
+}
+
+div.aside {
+	padding-bottom: 10px; padding-top: 10px;
+	padding-right: 10px; padding-left: 10px;
+	margin-right: 50px; margin-left: 50px;
+	border: 1px dotted;
+}
+
+div.aside pre {
+	white-space: pre-wrap;
+}
+
+pre.view {
+	font-family: "Courier New", Courier, monospace;
+        //font-size: 16px;
+	padding-bottom: 10px; padding-top: 10px;
+	padding-right: 10px; padding-left: 10px;
+	white-space: pre-wrap;
+	background: rgb(255,255,255); /* Old browsers */
+	background: -moz-linear-gradient(top,  rgba(255,255,255,1) 0%, rgba(229,229,229,1) 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,1)), color-stop(100%,rgba(229,229,229,1))); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(229,229,229,1) 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(229,229,229,1) 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(229,229,229,1) 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  rgba(255,255,255,1) 0%,rgba(229,229,229,1) 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#e5e5e5',GradientType=0 ); /* IE6-9 */
+	border: 1px solid;
+	text-align: justify;
+}
+
+pre.view .string {
+	color: #3366CC;
+}
+
+pre.view .sub {
+        color: #8333FF;
+}
+
+pre.view .comment {
+	color: #009900;
+}
+
+pre.view .highlight {
+	background-color: #FFFF00;
+	border: 1px solid;
+	border-style: dotted;
+}
+
+pre.output .highlight {
+	background-color: rgb(255,255,255);
+	color: red;
+	border: 1px solid;
+	border-style: dotted;
+}
+
+pre.output {
+	font-family: "Courier New", Courier, monospace;
+        //font-size: 16px;
+	padding-bottom: 10px; padding-top: 10px;
+	padding-right: 10px; padding-left: 10px;
+	white-space: pre-wrap;
+	background: black;
+	color: white;
+}
+
+blockquote {
+  position: relative;
+  width: 80%;
+  margin: 50px auto;
+  padding: 1.2em 30px 1.2em 55px;
+  color: var(--bq-color);
+  background-color: var(--bq-back);
+  border-left: 8px solid #78c0a8;
+  text-align: justify;
+}
+
+blockquote::before {
+  position: absolute;
+	left: 5px;
+	top: -10px;
+	/* Line height needed here to avoid the quote appearing out of place due to calculated line heights for the article. */
+	line-height: 1.6;
+	content: "\201C";
+	color: #78c0a8;
+	font-size: 4em;
+}
+
+blockquote::after {
+	content: "";
+}
+
+blockquote span {
+	display: block;
+	color: #333333;
+	font-style: normal;
+  font-weight: bold;
+  margin-top: 1em;
+}
+
+img.frame {
+  --b: 10px;
+  padding: var(--b);
+  border: calc(2 * var(--b)) solid #0000;
+  outline: 1px solid #000;
+  outline-offset: calc(-1 * var(--b));
+  border-radius: 25px;
+  background: conic-gradient(from 90deg at 1px 1px, #0000 90deg, #000 0);
+  display: block;
+  margin: auto;
+  margin-bottom: 1rem;
+}
+
+code {
+  font-size: 0.9em;
+  padding: 0.0625rem 0.5rem;
+  border-radius: 0.125rem;
+  border: 1px solid #d33a2c;
+  box-shadow: 1px 1px #d33a2c, 2px 2px #d33a2c;
+  margin: 0 0.25rem;
+  color: #d33a2c;
+  font-family: monospace;
+}
+
+pre {
+  font-family: var(--mono);
+  max-width: 100%;
+	padding: 0;
+}
+
+pre code {
+  word-spacing: normal;
+  letter-spacing: normal;
+  font-family: var(--mono);
+  padding-left: 10px;
+  color: #e9e9f4;
+  background: #282936;
+  display: block;
+  max-width: 100%;
+  overflow-x: scroll;
+  /*font-size: 0.8em;*/
+
+  border: 1px solid #282936;
+  border-radius: 10px;
+  box-shadow: 1px 1px #282936, 2px 2px #282936;
+}
+
+pre code::-webkit-scrollbar {
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+pre code::-webkit-scrollbar:vertical {
+  width: 11px;
+}
+
+pre code::-webkit-scrollbar:horizontal {
+  height: 11px;
+}
+
+pre code::-webkit-scrollbar-thumb {
+  border-radius: 8px;
+  border: 2px solid white;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+/* The div part is only needed for long-form content that is pre-formatted. */
+
+pre code div {
+	line-height: 1.5em;
+}
+
+/* This would be for prefromatted material that is not literally from a game or simulation but is meant to indicate something about the details of the game or simulation. */
+
+pre p {
+  border: 2px solid grey;
+  border-radius: 5px;
+  padding: 0.8em;
+	padding-top: 0;
+	margin: 0;
+}</style>
+			</head>
+	<body class="post-template-default single single-post postid-3636 single-format-standard custom-background wp-embed-responsive custom-background-image">
+		<svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-dark-grayscale"><fecolormatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></fecolormatrix><fecomponenttransfer color-interpolation-filters="sRGB"><fefuncr type="table" tablevalues="0 0.49803921568627"></fefuncr><fefuncg type="table" tablevalues="0 0.49803921568627"></fefuncg><fefuncb type="table" tablevalues="0 0.49803921568627"></fefuncb><fefunca type="table" tablevalues="1 1"></fefunca></fecomponenttransfer><fecomposite in2="SourceGraphic" operator="in"></fecomposite></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-grayscale"><fecolormatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></fecolormatrix><fecomponenttransfer color-interpolation-filters="sRGB"><fefuncr type="table" tablevalues="0 1"></fefuncr><fefuncg type="table" tablevalues="0 1"></fefuncg><fefuncb type="table" tablevalues="0 1"></fefuncb><fefunca type="table" tablevalues="1 1"></fefunca></fecomponenttransfer><fecomposite in2="SourceGraphic" operator="in"></fecomposite></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-purple-yellow"><fecolormatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></fecolormatrix><fecomponenttransfer color-interpolation-filters="sRGB"><fefuncr type="table" tablevalues="0.54901960784314 0.98823529411765"></fefuncr><fefuncg type="table" tablevalues="0 1"></fefuncg><fefuncb type="table" tablevalues="0.71764705882353 0.25490196078431"></fefuncb><fefunca type="table" tablevalues="1 1"></fefunca></fecomponenttransfer><fecomposite in2="SourceGraphic" operator="in"></fecomposite></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-blue-red"><fecolormatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></fecolormatrix><fecomponenttransfer color-interpolation-filters="sRGB"><fefuncr type="table" tablevalues="0 1"></fefuncr><fefuncg type="table" tablevalues="0 0.27843137254902"></fefuncg><fefuncb type="table" tablevalues="0.5921568627451 0.27843137254902"></fefuncb><fefunca type="table" tablevalues="1 1"></fefunca></fecomponenttransfer><fecomposite in2="SourceGraphic" operator="in"></fecomposite></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-midnight"><fecolormatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></fecolormatrix><fecomponenttransfer color-interpolation-filters="sRGB"><fefuncr type="table" tablevalues="0 0"></fefuncr><fefuncg type="table" tablevalues="0 0.64705882352941"></fefuncg><fefuncb type="table" tablevalues="0 1"></fefuncb><fefunca type="table" tablevalues="1 1"></fefunca></fecomponenttransfer><fecomposite in2="SourceGraphic" operator="in"></fecomposite></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-magenta-yellow"><fecolormatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></fecolormatrix><fecomponenttransfer color-interpolation-filters="sRGB"><fefuncr type="table" tablevalues="0.78039215686275 1"></fefuncr><fefuncg type="table" tablevalues="0 0.94901960784314"></fefuncg><fefuncb type="table" tablevalues="0.35294117647059 0.47058823529412"></fefuncb><fefunca type="table" tablevalues="1 1"></fefunca></fecomponenttransfer><fecomposite in2="SourceGraphic" operator="in"></fecomposite></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-purple-green"><fecolormatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></fecolormatrix><fecomponenttransfer color-interpolation-filters="sRGB"><fefuncr type="table" tablevalues="0.65098039215686 0.40392156862745"></fefuncr><fefuncg type="table" tablevalues="0 1"></fefuncg><fefuncb type="table" tablevalues="0.44705882352941 0.4"></fefuncb><fefunca type="table" tablevalues="1 1"></fefunca></fecomponenttransfer><fecomposite in2="SourceGraphic" operator="in"></fecomposite></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-blue-orange"><fecolormatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></fecolormatrix><fecomponenttransfer color-interpolation-filters="sRGB"><fefuncr type="table" tablevalues="0.098039215686275 1"></fefuncr><fefuncg type="table" tablevalues="0 0.66274509803922"></fefuncg><fefuncb type="table" tablevalues="0.84705882352941 0.41960784313725"></fefuncb><fefunca type="table" tablevalues="1 1"></fefunca></fecomponenttransfer><fecomposite in2="SourceGraphic" operator="in"></fecomposite></filter></defs></svg>		<div id="container" class="site container">
+	<header id="masthead" class="site-header animated fadeInDown" role="banner">
+
+	<a class="screen-reader-text skip-link" href="#main-content">Skip to content</a>
+	<a class="screen-reader-text skip-link" href="#sidebar-widget-area">Skip to sidebar</a>
+	<a class="screen-reader-text skip-link" href="#page-footer">Skip to footer</a>
+	<div id="site-identity" class="site-identity">
+		<a href="/" class="home-link animated fadeIn" title="Stories from a Software Tester" rel="home">
+			<div class="title-description">
+				<h1 class="site-title">Stories from a Software Tester</h1>
+				<h2 class="site-description">Twice upon a time, in another space, no distance in any direction from here &#8230;</h2>
+			</div>
+		</a> 
+
+	</div>
+<!--/site-identity-->
+
+	<nav id="nav-menu" class="site-navigation main-navigation" role="navigation" aria-label="Main Navigation">
+		<button id="nav-button" class="menu-toggle" role="button">
+			<span class="screen-reader-text">Menu</span>
+			<span class="genericon" aria-hidden="true"></span>
+		</button>
+		<ul id="primary-menu" class="primary-menu">
+<li id="menu-item-3923" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-3923"><a href="/">Home</a></li>
+<li id="menu-item-2051" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2051"><a href="/about-tester-stories/">About Tester Stories</a></li>
+<li id="menu-item-2050" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2050"><a href="/who-am-i/">Who Am I</a></li>
+<li id="menu-item-2048" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2048"><a href="/just-for-fun/">Just For Fun</a></li>
+</ul>	</nav><!--/navigation-->
+
+
+<form role="search" method="get" class="search-form" action="https://testerstories.com/">
+	<label>
+		<span class="screen-reader-text">Search for:</span>
+		<input type="search" class="search-field" placeholder="Search &hellip;" value="" name="s" title="Search for:">
+	</label>
+	<button type="submit" class="search-submit"><span class="genericon genericon-search" aria-hidden="true"></span><span class="screen-reader-text">Search</span></button>
+</form>
+</header><!--/header-->
+
+<main id="main-content" class="main-content" role="main">
+<article id="post-3636" class="post-3636 post type-post status-publish format-standard hentry category-contracts category-testing">
+<header class="entry-header">
+	<span class="entry-meta"><span class="cat-links"><span class="screen-reader-text">Published in</span><span class="genericon genericon-category" aria-hidden="true"></span><a href="/category/testing/contracts/" rel="category tag">Contracts</a><span aria-hidden="true">, </span><a href="/category/testing/" rel="category tag">Testing</a></span></span><h1 class="entry-title">Testing, Integration, and Contracts &#8211; Part 2</h1>	<span class="byline">
+	Written by <a href="/author/administrator/" class="entry-author" rel="author">Jeff Nyman</a>	</span><!-- .byline -->
+	<span class="entry-meta">
+	<span class="genericon genericon-time" aria-hidden="true"></span><a href="/2019/01/15/" rel="bookmark" class="entry-date"><time datetime="2019-01-15T07:16:48-06:00">15 January 2019</time></a>		<span class="comments-link">
+			<span class="genericon genericon-comment" aria-hidden="true"></span>
+			<a href="/2019/01/testing-integration-and-contracts-part-2/#respond">Leave a comment</a>		</span>
+		</span><!-- .entry-meta -->
+</header><!-- .entry-header -->
+
+	<div class="entry-content">
+		
+<p>This post will continue on directly from the <a href="/2019/01/testings-integration-and-contracts-part-1/">first post</a>, where I introduced you to the concepts as well as an application that can serve as a guide to some of the ideas. I highly recommend reading that first post for the context if you haven&#8217;t already.</p>
+
+
+
+<p><span id="more-3636"></span></p>
+
+
+
+<p>In this post we&#8217;ll get into writing some tests for the the Thanos React application that I showed you. As I said at the closing of the first post, my goal is to introduce contract-style thinking along with the expression of that thinking in contract-style tests. I&#8217;m saying contract-<em>style</em> tests rather than contract tests directly because here I&#8217;m just focusing on the ideas around contract-based thinking, wherein you have something that is a consumer and something that is a provider. Martin Fowler put it this way:</p>
+
+
+
+<blockquote><p>&#8220;An integration contract test is a test at the boundary of an external service verifying that it meets the contract expected by a consuming service.&#8221;</p></blockquote>
+
+
+
+<p>In fact, I would argue that an &#8220;integration contract test&#8221; can really be just shortened to &#8220;integration test&#8221; or &#8220;contract test.&#8221; Anything that integrates with something else has, even if only implicitly, a contract. Thus I wonder if the &#8220;integration/integrated&#8221; divide can be handled by referring to &#8220;contract tests&#8221; and &#8220;integrated tests.&#8221; Solving the poor naming problem may be a lost cause at this point so I won&#8217;t harp on it too much here.</p>
+
+
+
+<p>A contract is basically a set of agreements between two or more parts. In our context, a contract defines the expected behavior of a given component or service and what assumptions are reasonable to have about its usage. A few points follow from this:</p>
+
+
+
+<ul><li>These components can communicate well. Meaning, they send the correct messages, accept the correct messages, do not accept (or gracefully handle) incorrect messages.</li></ul>
+
+
+
+<ul><li>These components can communicate poorly. Meaning, they send the wrong message, accept the wrong message, don’t send any message at all (when they should), do send a message (when they shouldn’t).</li></ul>
+
+
+
+<p>If you add time to this, it can get a bit more complicated. For example, you have to consider if the components send the correct message only at the correct time; accept the correct message only at the correct time; perhaps respond correctly to a series of message within a given time duration, and so on.</p>
+
+
+
+<p>So now let&#8217;s apply some of this to the application I introduced in the first post.</p>
+
+
+
+<h2 class="wp-block-heading">Getting Set Up</h2>
+
+
+
+<p>If you want to follow along with me, clone the <a href="https://github.com/jeffnyman/thanos-react">Thanos React repo</a>. You can write the tests I provide you with here as JavaScript files within the <code>src/components</code> directory for now. If you would prefer not to code along and just get a feel for the tests, that&#8217;s perfectly fine too. All of the test code will be shown in this post. But you can also find the tests in the a top-level <code>tests</code> directory. You can simply move those into <code>src/components</code> as well.</p>
+
+
+
+<p>Regardless of how you use or build the tests, you can execute the tests by running the following command from the project root directory:</p>
+
+
+
+<pre class="wp-block-preformatted">npm test</pre>
+
+
+
+<h2 class="wp-block-heading">Coder and Tester Working Together</h2>
+
+
+
+<p>As I&#8217;ve said in another post, I do believe <a href="/2018/03/should-testers-become-developers/">testers are a type of developer</a>. So what I would like to title this section is Developers Working Together. But we still, as an industry, can&#8217;t handle some of our own distinctions. So what I&#8217;m focusing on here is someone with a speciality in test development and someone with a speciality in code development working together to determine how best to test the Thanos React application.</p>
+
+
+
+<p>I can&#8217;t stress how important I feel this bit is. Really, the entire first post has been leading up to this: the healthy interaction of test-focused specialists with those who specialize in code development. This is what modern testing looks like in some contexts and this is part &#8212; but only part! &#8212; of what it means to be a &#8220;technical tester.&#8221;</p>
+
+
+
+<p>For the purposes of keeping us focused I&#8217;m only going to settle on two areas here: the rendering of components and the props that are communicated between components. If you read the first post, I gave you a very high-level view of how React works. I&#8217;m not even going to attempt to be comprehensive here with the tests. Rather, this is just to give you some ideas about testing at an abstraction layer below the UI but still focused on quality concerns.</p>
+
+
+
+<h2 class="wp-block-heading">Testing at the Edges</h2>
+
+
+
+<p>Let&#8217;s first settle on what the unit tests here would be. I don&#8217;t expect you to have all the details but this is something that you, as a test specialist, would likely work with a developer to understand. But, for now, do you have an instinct on this? If you don&#8217;t, that&#8217;s totally fine. But do know that this instinct is something you&#8217;ll want to develop.</p>
+
+
+
+<p>Let&#8217;s go with this: anything at the &#8220;integration/integrated&#8221; divide should be something that is exposed such that it can be communicated between components. A way to frame this is as interaction tests or as collaboration tests. And, yes, here we have two more terms that the industry has thrown at us. I&#8217;ll come back to all these terms and see if we can&#8217;t wrap them up in the context of contract-style thinking and thus contract-style testing.</p>
+
+
+
+<p>For now, however, that gives us a particular edge to consider. We&#8217;ll say that private methods within any given component are basically unit tests. We can also say that the default state or internal state would likely be where we craft unit tests. That said, this internal state will likely be tested indirectly with interaction tests.</p>
+
+
+
+<p>Another thing we can probably agree on: let&#8217;s not test style attributes with our contract tests. React has a lot of logic that deals with rendering with styles, which you can see in how my <a href="https://github.com/jeffnyman/thanos-react/blob/master/src/components/displayScreen.js#L17">DisplayScreen returns a div with styling</a>.</p>
+
+
+
+<p>Finally, let&#8217;s also not test our PropTypes. You can see the <a href="https://github.com/jeffnyman/thanos-react/blob/master/src/components/displayScreen.js#L40">PropTypes for Thanos React</a>. We&#8217;re not really testing those because that would essentially be testing React rather than how our application uses React.</p>
+
+
+
+<p>So our unit edges are defined. Our end-to-end is also defined because that would be testing the whole application as it appears in your browser or on your mobile device. But what about those edges that are part of the integration/integrated arena we are talking about? Well, let&#8217;s first jump back to basics a bit.</p>
+
+
+
+<h2 class="wp-block-heading">Intersections at the Edges</h2>
+
+
+
+<p>What is most if not all test <em>execution</em> (as opposed to <em>design</em>) about? It&#8217;s basically this:</p>
+
+
+
+<pre class="wp-block-preformatted">input --&gt; action --&gt; output</pre>
+
+
+
+<p>That means, fundamentally, testing as an execution activity breaks down to state and interactions. To have an interaction implies there is some sort of collaboration going on between two distinct things. To have state implies that something can be one way at a given time and another way at a different time. And the interactions will often mediate the state.</p>
+
+
+
+<p>So how does this fit in with all those terms we talked about? We have integration tests, collaboration tests, interaction tests, and contract tests. We&#8217;re not going to settle any debates in this post and that&#8217;s not my goal. So for now take a look at a visual. This is probably one of the better ones I&#8217;ve seen out there.</p>
+
+
+
+<figure class="wp-block-image"><img decoding="async" src="/files/integration-tests.jpg" alt=""></figure>
+
+
+
+<p>It&#8217;s not mine; it comes from a discussion around <a href="https://online-training.jbrains.ca/courses/the-jbrains-experience/lectures/5600334">organizing integration tests</a>. I&#8217;m going to repeat salient points from that here and then expand on them a bit. Let&#8217;s call this a view of &#8220;integration testing.&#8221; That&#8217;s made up of two parts: collaboration and contract.</p>
+
+
+
+<p>The numbered points are broken down like this, with a slight change in terminology.</p>
+
+
+
+<ol>
+<li>The consumer (client) asks the provider (supplier) questions.</li>
+<li>The provider accepts those questions.</li>
+<li>The provider answers those questions.</li>
+<li>The consumer can understand the answers.</li>
+</ol>
+
+
+
+<p>Now here is where I expand a bit on the material I just referenced. I should note I&#8217;m basically repeating a few points I said when talking about <a href="/2016/03/conceptualizing-test-intersections/">conceptualizing test intersections</a>.</p>
+
+
+
+<p>The subject of a collaboration test is the client or the consumer. And it&#8217;s asking the following:</p>
+
+
+
+<ol>
+<li>Do I ask my collaborators the right questions?</li>
+<li>Can I handle all their responses?</li>
+</ol>
+
+
+
+<p>So the fundamental goal of these tests is figuring out an answer to this question: <em>Does the consumer ask the provider the right questions?</em> Dropping down an abstraction level, we can frame it as: <em>Does the consumer invoke the correct method on the provider in the correct context with the correct parameters?</em></p>
+
+
+
+<p>The subject of a contract test is the supplier or the provider. And it&#8217;s asking the following:</p>
+
+
+
+<ol>
+<li>Do I even try to answer the question you are asking?</li>
+<li>Can I give you the answer you might think I can?</li>
+</ol>
+
+
+
+<p>So the fundamental goal of these tests is figuring out an answer to this question: <em>Can the provider handle the question in the first place?</em> Dropping down an abstraction level we can frame it as: <em>Does the provider have a corresponding implementation that the consumer is depending on?</em></p>
+
+
+
+<p>A disconnect between how the consumer thinks the collaboration should go and how the providers themselves view it is a cause of many problems in a programmatic context like this. This manifests in three ways:</p>
+
+
+
+<ul>
+<li>The consumer asks a question that the provider can&#8217;t answer.</li>
+<li>The consumer misses checking for a response that the supplier might give.</li>
+<li>The consumer checks for a response that the supplier can&#8217;t give.</li>
+</ul>
+
+
+
+<p>I&#8217;m putting a lot on the consumer with those points and that&#8217;s part of what&#8217;s called consumer-driven contract testing, which is a term you&#8217;ll come across. The meaning is exactly what it sounds like: a focus on the consumer and its interactions above that of the provider. Even with that focus, it helps to look at both sides of the interaction.</p>
+
+
+
+<p>Considering things from the provider point of view:</p>
+
+
+
+<ul><li>For every test of the type &#8220;do you even try to answer my question&#8221;, there must be a contract test that calls that method with those parameters.</li></ul>
+
+
+
+<ul><li>For every test of the type &#8220;do you return the correct response&#8221;, there must be a contract test that expects that response.</li></ul>
+
+
+
+<p>Considering things from the consumer point of view:</p>
+
+
+
+<ul><li>For every test of the type &#8220;do I ask this question correctly&#8221;, there must be a contract test that calls a method with parameters.</li></ul>
+
+
+
+<ul><li>For every test of the type &#8220;do I handle the response correctly&#8221;, there must be a contract test for the implementation that returns that response.</li></ul>
+
+
+
+<p>Notice how this helps us start to frame our coverage and we can do this below the level of the UI, thus framing quicker feedback tests. Even more to the point, however, we can do this before coding has even begun. We can use contract-style thinking to put pressure on design, which is treating testing as a design activity.</p>
+
+
+
+<h2 class="wp-block-heading">Stop! And Assess.</h2>
+
+
+
+<p>How do you feel about what you&#8217;ve read so far? Does this make sense? You may disagree about how I&#8217;ve formulated some of this and that&#8217;s fine. But do you see how this kind of thinking starts to bridge the gap between a test specialist and a code specialist? I tried to make sure that each condition I stated above, which would be covered by a test, was capable of being framed at different abstraction levels.</p>
+
+
+
+<p>Think about what this means when we consider &#8220;edge-to-edge testing&#8221;, which code specialists tend to focus on, and &#8220;end-to-end testing&#8221;, which test specialists tend to focus on. Even more to the point notice how this takes us to where &#8220;edge-to-edge&#8221; shades into &#8220;end-to-end&#8221; and allows to ask how many of the edge-to-edge we need that would allow us to reduce our dependence on the often heavier, often more brittle and often longer running end-to-end tests.</p>
+
+
+
+<p>Regardless of our speciality we all want the tests to be something that can run quickly to give us timely feedback but also run in a way that we trust is indicative of the actual user experience. &#8220;Run quickly but still provide useful feedback&#8221; is the essential mantra and that means considering how much testing &#8220;below the UI&#8221; we can do. Fair warning: this post is not going to provide you an answer. I&#8217;ve already given you the application. I&#8217;m going to give you the tests. The conclusions will be up to you.</p>
+
+
+
+<h2 class="wp-block-heading">Writing Contract-Style Tests</h2>
+
+
+
+<p>You may feel a bit at a disadvantage here if you don&#8217;t know React. Don&#8217;t worry about that. Just follow along with the ideas. There are a couple of things that immediately jump out as far as testing in this context.</p>
+
+
+
+<ul>
+<li>We want to test that the main application component renders.</li>
+<li>We want to test that all the other components that the application component renders.</li>
+<li>We want to test any elements rendered by the component that are not dependent on the props passed to the component.</li>
+<li>If props do provide a basis path for how a given component renders or interacts, then we want to pass different props and test the behavior of the component.</li>
+</ul>
+
+
+
+<p>So what this means is we want consider, at minimum, some contract style tests for rendering and for props. There are two test files provided in the <code>tests</code> directory: <strong>displayScreen-render.test.js</strong> and <strong>displayScreen-props.test.js</strong>.</p>
+
+
+
+<p>There&#8217;s some boilerplate to set up:</p>
+
+
+<p></p>
+<!-- Urvanov Syntax Highlighter v2.8.33 -->
+
+		<div id="urvanov-syntax-highlighter-647f46c5b6702183935001" class="urvanov-syntax-highlighter-syntax crayon-theme-classic urvanov-syntax-highlighter-font-monaco urvanov-syntax-highlighter-os-pc print-yes notranslate" data-settings=" minimize scroll-mouseover" style="margin-top: 12px; margin-bottom: 12px; font-size: 12px !important; line-height: 15px !important;">
+		
+			<div class="crayon-toolbar" data-settings=" mouseover overlay hide delay" style="font-size: 12px !important;height: 18px !important; line-height: 18px !important;">
+<span class="crayon-title"></span>
+			<div class="crayon-tools" style="font-size: 12px !important;height: 18px !important; line-height: 18px !important;">
+<div class="crayon-button urvanov-syntax-highlighter-nums-button" title="Toggle Line Numbers"><div class="urvanov-syntax-highlighter-button-icon"></div></div>
+<div class="crayon-button urvanov-syntax-highlighter-plain-button" title="Toggle Plain Code"><div class="urvanov-syntax-highlighter-button-icon"></div></div>
+<div class="crayon-button urvanov-syntax-highlighter-wrap-button" title="Toggle Line Wrap"><div class="urvanov-syntax-highlighter-button-icon"></div></div>
+<div class="crayon-button urvanov-syntax-highlighter-expand-button" title="Expand Code"><div class="urvanov-syntax-highlighter-button-icon"></div></div>
+<div class="crayon-button urvanov-syntax-highlighter-copy-button" title="Copy"><div class="urvanov-syntax-highlighter-button-icon"></div></div>
+<div class="crayon-button urvanov-syntax-highlighter-popup-button" title="Open Code In New Window"><div class="urvanov-syntax-highlighter-button-icon"></div></div>
+<span class="crayon-language">JavaScript</span>
+</div>
+</div>
+			<div class="crayon-info" style="min-height: 16.8px !important; line-height: 16.8px !important;"></div>
+			<div class="urvanov-syntax-highlighter-plain-wrap"><textarea wrap="soft" class="urvanov-syntax-highlighter-plain print-no" data-settings="dblclick" readonly style="-moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4; font-size: 12px !important; line-height: 15px !important;">
+import React from 'react';
+import { configure, mount } from 'enzyme';
+import Adapter from 'enzyme-adapter-react-16';
+
+configure({ adapter: new Adapter() });
+
+import DisplayScreen from './displayScreen';
+import DisplayTimer from './displayTimer';
+import DisplayContent from "./displayContent";
+import DisplayActivate from './displayActivate';
+import Slider from './displayActivate';</textarea></div>
+			<div class="urvanov-syntax-highlighter-main">
+				<table class="crayon-table">
+					<tr class="urvanov-syntax-highlighter-row">
+				<td class="crayon-nums " data-settings="show">
+					<div class="urvanov-syntax-highlighter-nums-content" style="font-size: 12px !important; line-height: 15px !important;">
+<div class="crayon-num" data-line="urvanov-syntax-highlighter-647f46c5b6702183935001-1">1</div>
+<div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-647f46c5b6702183935001-2">2</div>
+<div class="crayon-num" data-line="urvanov-syntax-highlighter-647f46c5b6702183935001-3">3</div>
+<div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-647f46c5b6702183935001-4">4</div>
+<div class="crayon-num" data-line="urvanov-syntax-highlighter-647f46c5b6702183935001-5">5</div>
+<div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-647f46c5b6702183935001-6">6</div>
+<div class="crayon-num" data-line="urvanov-syntax-highlighter-647f46c5b6702183935001-7">7</div>
+<div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-647f46c5b6702183935001-8">8</div>
+<div class="crayon-num" data-line="urvanov-syntax-highlighter-647f46c5b6702183935001-9">9</div>
+<div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-647f46c5b6702183935001-10">10</div>
+<div class="crayon-num" data-line="urvanov-syntax-highlighter-647f46c5b6702183935001-11">11</div>
+</div>
+				</td>
+						<td class="urvanov-syntax-highlighter-code"><div class="crayon-pre" style="font-size: 12px !important; line-height: 15px !important; -moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4;">
+<div class="crayon-line" id="urvanov-syntax-highlighter-647f46c5b6702183935001-1">
+<span class="crayon-e">import </span><span class="crayon-e">React </span><span class="crayon-i">from</span><span class="crayon-h"> </span><span class="crayon-s">'react'</span><span class="crayon-sy">;</span>
+</div>
+<div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-647f46c5b6702183935001-2">
+<span class="crayon-e">import</span><span class="crayon-h"> </span><span class="crayon-sy">{</span><span class="crayon-h"> </span><span class="crayon-v">configure</span><span class="crayon-sy">,</span><span class="crayon-h"> </span><span class="crayon-i">mount</span><span class="crayon-h"> </span><span class="crayon-sy">}</span><span class="crayon-h"> </span><span class="crayon-i">from</span><span class="crayon-h"> </span><span class="crayon-s">'enzyme'</span><span class="crayon-sy">;</span>
+</div>
+<div class="crayon-line" id="urvanov-syntax-highlighter-647f46c5b6702183935001-3">
+<span class="crayon-e">import </span><span class="crayon-e">Adapter </span><span class="crayon-i">from</span><span class="crayon-h"> </span><span class="crayon-s">'enzyme-adapter-react-16'</span><span class="crayon-sy">;</span>
+</div>
+<div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-647f46c5b6702183935001-4">&nbsp;</div>
+<div class="crayon-line" id="urvanov-syntax-highlighter-647f46c5b6702183935001-5">
+<span class="crayon-e">configure</span><span class="crayon-sy">(</span><span class="crayon-sy">{</span><span class="crayon-h"> </span><span class="crayon-v">adapter</span><span class="crayon-o">:</span><span class="crayon-h"> </span><span class="crayon-r">new</span><span class="crayon-h"> </span><span class="crayon-e">Adapter</span><span class="crayon-sy">(</span><span class="crayon-sy">)</span><span class="crayon-h"> </span><span class="crayon-sy">}</span><span class="crayon-sy">)</span><span class="crayon-sy">;</span>
+</div>
+<div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-647f46c5b6702183935001-6">&nbsp;</div>
+<div class="crayon-line" id="urvanov-syntax-highlighter-647f46c5b6702183935001-7">
+<span class="crayon-e">import </span><span class="crayon-e">DisplayScreen </span><span class="crayon-i">from</span><span class="crayon-h"> </span><span class="crayon-s">'./displayScreen'</span><span class="crayon-sy">;</span>
+</div>
+<div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-647f46c5b6702183935001-8">
+<span class="crayon-e">import </span><span class="crayon-e">DisplayTimer </span><span class="crayon-i">from</span><span class="crayon-h"> </span><span class="crayon-s">'./displayTimer'</span><span class="crayon-sy">;</span>
+</div>
+<div class="crayon-line" id="urvanov-syntax-highlighter-647f46c5b6702183935001-9">
+<span class="crayon-e">import </span><span class="crayon-e">DisplayContent </span><span class="crayon-i">from</span><span class="crayon-h"> </span><span class="crayon-s">"./displayContent"</span><span class="crayon-sy">;</span>
+</div>
+<div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-647f46c5b6702183935001-10">
+<span class="crayon-e">import </span><span class="crayon-e">DisplayActivate </span><span class="crayon-i">from</span><span class="crayon-h"> </span><span class="crayon-s">'./displayActivate'</span><span class="crayon-sy">;</span>
+</div>
+<div class="crayon-line" id="urvanov-syntax-highlighter-647f46c5b6702183935001-11">
+<span class="crayon-e">import </span><span class="crayon-e">Slider </span><span class="crayon-i">from</span><span class="crayon-h"> </span><span class="crayon-s">'./displayActivate'</span><span class="crayon-sy">;</span>
+</div>
+</div></td>
+					</tr>
+				</table>
+			</div>
+		</div>
+<!-- [Format Time: 0.0003 seconds] -->
+<p></p>
+
+
+
+<p>We can also do some setup common to both:</p>
+
+
+<p></p>
+<!-- Urvanov Syntax Highlighter v2.8.33 -->
+
+		<div id="urvanov-syntax-highlighter-647f46c5b6713442766333" class="urvanov-syntax-highlighter-syntax crayon-theme-classic urvanov-syntax-highlighter-font-monaco urvanov-syntax-highlighter-os-pc print-yes notranslate" data-settings=" minimize scroll-mouseover" style="margin-top: 12px; margin-bottom: 12px; font-size: 12px !important; line-height: 15px !important;">
+		
+			<div class="crayon-toolbar" data-settings=" mouseover overlay hide delay" style="font-size: 12px !important;height: 18px !important; line-height: 18px !important;">
+<span class="crayon-title"></span>
+			<div class="crayon-tools" style="font-size: 12px !important;height: 18px !important; line-height: 18px !important;">
+<div class="crayon-button urvanov-syntax-highlighter-nums-button" title="Toggle Line Numbers"><div class="urvanov-syntax-highlighter-button-icon"></div></div>
+<div class="crayon-button urvanov-syntax-highlighter-plain-button" title="Toggle Plain Code"><div class="urvanov-syntax-highlighter-button-icon"></div></div>
+<div class="crayon-button urvanov-syntax-highlighter-wrap-button" title="Toggle Line Wrap"><div class="urvanov-syntax-highlighter-button-icon"></div></div>
+<div class="crayon-button urvanov-syntax-highlighter-expand-button" title="Expand Code"><div class="urvanov-syntax-highlighter-button-icon"></div></div>
+<div class="crayon-button urvanov-syntax-highlighter-copy-button" title="Copy"><div class="urvanov-syntax-highlighter-button-icon"></div></div>
+<div class="crayon-button urvanov-syntax-highlighter-popup-button" title="Open Code In New Window"><div class="urvanov-syntax-highlighter-button-icon"></div></div>
+<span class="crayon-language">JavaScript</span>
+</div>
+</div>
+			<div class="crayon-info" style="min-height: 16.8px !important; line-height: 16.8px !important;"></div>
+			<div class="urvanov-syntax-highlighter-plain-wrap"><textarea wrap="soft" class="urvanov-syntax-highlighter-plain print-no" data-settings="dblclick" readonly style="-moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4; font-size: 12px !important; line-height: 15px !important;">
+describe("DisplayScreen", () =&gt; {
+  let props;
+  let mountedDisplayScreen;
+
+  const displayScreen = () =&gt; {
+    if (!mountedDisplayScreen) {
+      mountedDisplayScreen = mount(
+        &lt;DisplayScreen {...props} /&gt;
+      );
+    }
+    return mountedDisplayScreen;
+  };
+});</textarea></div>
+			<div class="urvanov-syntax-highlighter-main">
+				<table class="crayon-table">
+					<tr class="urvanov-syntax-highlighter-row">
+				<td class="crayon-nums " data-settings="show">
+					<div class="urvanov-syntax-highlighter-nums-content" style="font-size: 12px !important; line-height: 15px !important;">
+<div class="crayon-num" data-line="urvanov-syntax-highlighter-647f46c5b6713442766333-1">1</div>
+<div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-647f46c5b6713442766333-2">2</div>
+<div class="crayon-num" data-line="urvanov-syntax-highlighter-647f46c5b6713442766333-3">3</div>
+<div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-647f46c5b6713442766333-4">4</div>
+<div class="crayon-num" data-line="urvanov-syntax-highlighter-647f46c5b6713442766333-5">5</div>
+<div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-647f46c5b6713442766333-6">6</div>
+<div class="crayon-num" data-line="urvanov-syntax-highlighter-647f46c5b6713442766333-7">7</div>
+<div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-647f46c5b6713442766333-8">8</div>
+<div class="crayon-num" data-line="urvanov-syntax-highlighter-647f46c5b6713442766333-9">9</div>
+<div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-647f46c5b6713442766333-10">10</div>
+<div class="crayon-num" data-line="urvanov-syntax-highlighter-647f46c5b6713442766333-11">11</div>
+<div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-647f46c5b6713442766333-12">12</div>
+<div class="crayon-num" data-line="urvanov-syntax-highlighter-647f46c5b6713442766333-13">13</div>
+</div>
+				</td>
+						<td class="urvanov-syntax-highlighter-code"><div class="crayon-pre" style="font-size: 12px !important; line-height: 15px !important; -moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4;">
+<div class="crayon-line" id="urvanov-syntax-highlighter-647f46c5b6713442766333-1">
+<span class="crayon-e">describe</span><span class="crayon-sy">(</span><span class="crayon-s">"DisplayScreen"</span><span class="crayon-sy">,</span><span class="crayon-h"> </span><span class="crayon-sy">(</span><span class="crayon-sy">)</span><span class="crayon-h"> </span><span class="crayon-o">=</span><span class="crayon-o">&gt;</span><span class="crayon-h"> </span><span class="crayon-sy">{</span>
+</div>
+<div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-647f46c5b6713442766333-2">
+<span class="crayon-h">&nbsp;&nbsp;</span><span class="crayon-e">let </span><span class="crayon-v">props</span><span class="crayon-sy">;</span>
+</div>
+<div class="crayon-line" id="urvanov-syntax-highlighter-647f46c5b6713442766333-3">
+<span class="crayon-h">&nbsp;&nbsp;</span><span class="crayon-e">let </span><span class="crayon-v">mountedDisplayScreen</span><span class="crayon-sy">;</span>
+</div>
+<div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-647f46c5b6713442766333-4">&nbsp;</div>
+<div class="crayon-line" id="urvanov-syntax-highlighter-647f46c5b6713442766333-5">
+<span class="crayon-h">&nbsp;&nbsp;</span><span class="crayon-m">const</span><span class="crayon-h"> </span><span class="crayon-v">displayScreen</span><span class="crayon-h"> </span><span class="crayon-o">=</span><span class="crayon-h"> </span><span class="crayon-sy">(</span><span class="crayon-sy">)</span><span class="crayon-h"> </span><span class="crayon-o">=</span><span class="crayon-o">&gt;</span><span class="crayon-h"> </span><span class="crayon-sy">{</span>
+</div>
+<div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-647f46c5b6713442766333-6">
+<span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-st">if</span><span class="crayon-h"> </span><span class="crayon-sy">(</span><span class="crayon-o">!</span><span class="crayon-v">mountedDisplayScreen</span><span class="crayon-sy">)</span><span class="crayon-h"> </span><span class="crayon-sy">{</span>
+</div>
+<div class="crayon-line" id="urvanov-syntax-highlighter-647f46c5b6713442766333-7">
+<span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-v">mountedDisplayScreen</span><span class="crayon-h"> </span><span class="crayon-o">=</span><span class="crayon-h"> </span><span class="crayon-e">mount</span><span class="crayon-sy">(</span>
+</div>
+<div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-647f46c5b6713442766333-8">
+<span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-o">&lt;</span><span class="crayon-e">DisplayScreen</span><span class="crayon-h"> </span><span class="crayon-sy">{</span><span class="crayon-sy">.</span><span class="crayon-sy">.</span><span class="crayon-sy">.</span><span class="crayon-v">props</span><span class="crayon-sy">}</span><span class="crayon-h"> </span><span class="crayon-o">/</span><span class="crayon-o">&gt;</span>
+</div>
+<div class="crayon-line" id="urvanov-syntax-highlighter-647f46c5b6713442766333-9">
+<span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-sy">)</span><span class="crayon-sy">;</span>
+</div>
+<div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-647f46c5b6713442766333-10">
+<span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-sy">}</span>
+</div>
+<div class="crayon-line" id="urvanov-syntax-highlighter-647f46c5b6713442766333-11">
+<span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-st">return</span><span class="crayon-h"> </span><span class="crayon-v">mountedDisplayScreen</span><span class="crayon-sy">;</span>
+</div>
+<div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-647f46c5b6713442766333-12">
+<span class="crayon-h">&nbsp;&nbsp;</span><span class="crayon-sy">}</span><span class="crayon-sy">;</span>
+</div>
+<div class="crayon-line" id="urvanov-syntax-highlighter-647f46c5b6713442766333-13">
+<span class="crayon-sy">}</span><span class="crayon-sy">)</span><span class="crayon-sy">;</span>
+</div>
+</div></td>
+					</tr>
+				</table>
+			</div>
+		</div>
+<!-- [Format Time: 0.0003 seconds] -->
+<p></p>
+
+
+
+<p>The above function uses the mountedDisplayScreen variable to mount a DisplayScreen with the current props. It can also return the DisplayScreen that has been mounted. This is really important. We&#8217;re essentially establishing the basis of our context for running our tests. That will be shown best by how we use these things before each test:</p>
+
+
+<p></p>
+<!-- Urvanov Syntax Highlighter v2.8.33 -->
+
+		<div id="urvanov-syntax-highlighter-647f46c5b6715538931007" class="urvanov-syntax-highlighter-syntax crayon-theme-classic urvanov-syntax-highlighter-font-monaco urvanov-syntax-highlighter-os-pc print-yes notranslate" data-settings=" minimize scroll-mouseover" style="margin-top: 12px; margin-bottom: 12px; font-size: 12px !important; line-height: 15px !important;">
+		
+			<div class="crayon-toolbar" data-settings=" mouseover overlay hide delay" style="font-size: 12px !important;height: 18px !important; line-height: 18px !important;">
+<span class="crayon-title"></span>
+			<div class="crayon-tools" style="font-size: 12px !important;height: 18px !important; line-height: 18px !important;">
+<div class="crayon-button urvanov-syntax-highlighter-nums-button" title="Toggle Line Numbers"><div class="urvanov-syntax-highlighter-button-icon"></div></div>
+<div class="crayon-button urvanov-syntax-highlighter-plain-button" title="Toggle Plain Code"><div class="urvanov-syntax-highlighter-button-icon"></div></div>
+<div class="crayon-button urvanov-syntax-highlighter-wrap-button" title="Toggle Line Wrap"><div class="urvanov-syntax-highlighter-button-icon"></div></div>
+<div class="crayon-button urvanov-syntax-highlighter-expand-button" title="Expand Code"><div class="urvanov-syntax-highlighter-button-icon"></div></div>
+<div class="crayon-button urvanov-syntax-highlighter-copy-button" title="Copy"><div class="urvanov-syntax-highlighter-button-icon"></div></div>
+<div class="crayon-button urvanov-syntax-highlighter-popup-button" title="Open Code In New Window"><div class="urvanov-syntax-highlighter-button-icon"></div></div>
+<span class="crayon-language">JavaScript</span>
+</div>
+</div>
+			<div class="crayon-info" style="min-height: 16.8px !important; line-height: 16.8px !important;"></div>
+			<div class="urvanov-syntax-highlighter-plain-wrap"><textarea wrap="soft" class="urvanov-syntax-highlighter-plain print-no" data-settings="dblclick" readonly style="-moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4; font-size: 12px !important; line-height: 15px !important;">
+  beforeEach(() =&amp;gt; {
+    props = {
+      displayImage: undefined,
+      displayMessage: undefined,
+      onActivate: undefined,
+    };
+
+    mountedDisplayScreen = undefined;
+  });</textarea></div>
+			<div class="urvanov-syntax-highlighter-main">
+				<table class="crayon-table">
+					<tr class="urvanov-syntax-highlighter-row">
+				<td class="crayon-nums " data-settings="show">
+					<div class="urvanov-syntax-highlighter-nums-content" style="font-size: 12px !important; line-height: 15px !important;">
+<div class="crayon-num" data-line="urvanov-syntax-highlighter-647f46c5b6715538931007-1">1</div>
+<div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-647f46c5b6715538931007-2">2</div>
+<div class="crayon-num" data-line="urvanov-syntax-highlighter-647f46c5b6715538931007-3">3</div>
+<div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-647f46c5b6715538931007-4">4</div>
+<div class="crayon-num" data-line="urvanov-syntax-highlighter-647f46c5b6715538931007-5">5</div>
+<div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-647f46c5b6715538931007-6">6</div>
+<div class="crayon-num" data-line="urvanov-syntax-highlighter-647f46c5b6715538931007-7">7</div>
+<div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-647f46c5b6715538931007-8">8</div>
+<div class="crayon-num" data-line="urvanov-syntax-highlighter-647f46c5b6715538931007-9">9</div>
+</div>
+				</td>
+						<td class="urvanov-syntax-highlighter-code"><div class="crayon-pre" style="font-size: 12px !important; line-height: 15px !important; -moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4;">
+<div class="crayon-line" id="urvanov-syntax-highlighter-647f46c5b6715538931007-1">
+<span class="crayon-h">&nbsp;&nbsp;</span><span class="crayon-e">beforeEach</span><span class="crayon-sy">(</span><span class="crayon-sy">(</span><span class="crayon-sy">)</span><span class="crayon-h"> </span><span class="crayon-o">=&amp;</span><span class="crayon-v">gt</span><span class="crayon-sy">;</span><span class="crayon-h"> </span><span class="crayon-sy">{</span>
+</div>
+<div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-647f46c5b6715538931007-2">
+<span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-v">props</span><span class="crayon-h"> </span><span class="crayon-o">=</span><span class="crayon-h"> </span><span class="crayon-sy">{</span>
+</div>
+<div class="crayon-line" id="urvanov-syntax-highlighter-647f46c5b6715538931007-3">
+<span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-v">displayImage</span><span class="crayon-o">:</span><span class="crayon-h"> </span><span class="crayon-v">undefined</span><span class="crayon-sy">,</span>
+</div>
+<div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-647f46c5b6715538931007-4">
+<span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-v">displayMessage</span><span class="crayon-o">:</span><span class="crayon-h"> </span><span class="crayon-v">undefined</span><span class="crayon-sy">,</span>
+</div>
+<div class="crayon-line" id="urvanov-syntax-highlighter-647f46c5b6715538931007-5">
+<span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-v">onActivate</span><span class="crayon-o">:</span><span class="crayon-h"> </span><span class="crayon-v">undefined</span><span class="crayon-sy">,</span>
+</div>
+<div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-647f46c5b6715538931007-6">
+<span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-sy">}</span><span class="crayon-sy">;</span>
+</div>
+<div class="crayon-line" id="urvanov-syntax-highlighter-647f46c5b6715538931007-7">&nbsp;</div>
+<div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-647f46c5b6715538931007-8">
+<span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-v">mountedDisplayScreen</span><span class="crayon-h"> </span><span class="crayon-o">=</span><span class="crayon-h"> </span><span class="crayon-v">undefined</span><span class="crayon-sy">;</span>
+</div>
+<div class="crayon-line" id="urvanov-syntax-highlighter-647f46c5b6715538931007-9">
+<span class="crayon-h">&nbsp;&nbsp;</span><span class="crayon-sy">}</span><span class="crayon-sy">)</span><span class="crayon-sy">;</span>
+</div>
+</div></td>
+					</tr>
+				</table>
+			</div>
+		</div>
+<!-- [Format Time: 0.0002 seconds] -->
+<p></p>
+
+
+<p>The props and mountedDisplayScreen always start off undefined. The above displayScreen function means that when needed by a test, a DisplayScreen will be mounted with the relevant props. We&#8217;re also not assuming any particular props for a given test thus it will be up to each test to establish what it needs.</p>
+
+
+<p>This is a critical aspect of contract-style testing: establish a minimum baseline that assumes very little about state or interaction. Leave that information to be supplied by the contract tests.</p>
+
+
+
+<h2 class="wp-block-heading">Assessing What to Test</h2>
+
+
+
+<p>Let&#8217;s step away from code for a second and just consider some contract details that we can distill from the code. Again, we&#8217;re only focusing on the DisplayScreen component here. We have some very definite test conditions which I&#8217;ll provide along with a link to the code.</p>
+
+
+
+<ul><li>If a displayImage prop was passed, then a div returned by the component should provide a CSS background-image style for that displayImage. Otherwise, it should be an empty string (which means the style should not be set). <a href="https://github.com/jeffnyman/thanos-react/blob/master/src/components/displayScreen.js#L22">Link to code.</a>
+</li></ul>
+
+
+
+<ul><li>displayImage is expected to be a string, and is optional. <a href="https://github.com/jeffnyman/thanos-react/blob/master/src/components/displayScreen.js#L41">Link to code.</a>
+</li></ul>
+
+
+
+<p>Even if you&#8217;re not where you want to be yet at reading code, take some time and checkout out the links. See if the test conditions that I mention are at least recognizable to you in the code. Continuing on …</p>
+
+
+
+<ul><li>If a displayMessage prop was passed, render that displayMessage within the DisplayContent. Otherwise, don&#8217;t render anything here (null). <a href="https://github.com/jeffnyman/thanos-react/blob/master/src/components/displayScreen.js#L28">Link to code.</a>
+</li></ul>
+
+
+
+<ul><li>displayMessage is expected to be a string, and is optional. <a href="https://github.com/jeffnyman/thanos-react/blob/master/src/components/displayScreen.js#L42">Link to code.</a>
+</li></ul>
+
+
+
+<p>Note in the first one there we actually have two test conditions because of the basis path: render DisplayContent or do not render DisplayContent. And please keep in mind that all of this describing a type of contract. This contract is operative at the level below the UI but, of course, it will ultimately be fulfilled with a UI interface.</p>
+
+
+
+<p>There are some invariants to be aware of. Invariants are always good test conditions.</p>
+
+
+
+<ul><li>A div is always rendered, which contains all components. It has a particular set of inline styles. <a href="https://github.com/jeffnyman/thanos-react/blob/master/src/components/displayScreen.js#L17">Link to code</a>.</li></ul>
+
+
+
+<ul><li>A DisplayTimer is always rendered. It does not receive any props. <a href="https://github.com/jeffnyman/thanos-react/blob/master/src/components/displayScreen.js#L26">Link to code.</a>
+</li></ul>
+
+
+
+<ul><li>A DisplayActivate is always rendered. It receives the value of the passed onActivate prop as its onSlide prop, regardless of if it was defined or not. <a href="https://github.com/jeffnyman/thanos-react/blob/master/src/components/displayScreen.js#L34">Link to code.</a>
+</li></ul>
+
+
+
+<ul><li>onActivate is expected to be a function, and is optional. <a href="https://github.com/jeffnyman/thanos-react/blob/master/src/components/displayScreen.js#L43">Link to code.</a>
+</li></ul>
+
+
+
+<p>Again, this is all about distilling information from the code that exists. But clearly these are test conditions that could have been written out before code was written. So we could have used testing as a pressure on design to suggest the code to be written in the first place by figuring out the contracts. Here we&#8217;re using testing as a pressure on design to distill the contracts we put in place.</p>
+
+
+
+<h2 class="wp-block-heading">Writing the Tests</h2>
+
+
+
+<p>Now let&#8217;s take the above and write the tests. Again, you can simply reference the code I provide here. You can also reference the tests that I did put in the <code>tests</code> directory.</p>
+
+
+
+<h3 class="wp-block-heading">Render Contracts</h3>
+
+
+
+<p>We know that DisplayScreen will be rendered and that it will display a div as part of that process. This is a contract we want to make sure is always enforced.</p>
+
+
+<p></p>
+<!-- Urvanov Syntax Highlighter v2.8.33 -->
+
+		<div id="urvanov-syntax-highlighter-647f46c5b6717601214232" class="urvanov-syntax-highlighter-syntax crayon-theme-classic urvanov-syntax-highlighter-font-monaco urvanov-syntax-highlighter-os-pc print-yes notranslate" data-settings=" minimize scroll-mouseover" style="margin-top: 12px; margin-bottom: 12px; font-size: 12px !important; line-height: 15px !important;">
+		
+			<div class="crayon-toolbar" data-settings=" mouseover overlay hide delay" style="font-size: 12px !important;height: 18px !important; line-height: 18px !important;">
+<span class="crayon-title"></span>
+			<div class="crayon-tools" style="font-size: 12px !important;height: 18px !important; line-height: 18px !important;">
+<div class="crayon-button urvanov-syntax-highlighter-nums-button" title="Toggle Line Numbers"><div class="urvanov-syntax-highlighter-button-icon"></div></div>
+<div class="crayon-button urvanov-syntax-highlighter-plain-button" title="Toggle Plain Code"><div class="urvanov-syntax-highlighter-button-icon"></div></div>
+<div class="crayon-button urvanov-syntax-highlighter-wrap-button" title="Toggle Line Wrap"><div class="urvanov-syntax-highlighter-button-icon"></div></div>
+<div class="crayon-button urvanov-syntax-highlighter-expand-button" title="Expand Code"><div class="urvanov-syntax-highlighter-button-icon"></div></div>
+<div class="crayon-button urvanov-syntax-highlighter-copy-button" title="Copy"><div class="urvanov-syntax-highlighter-button-icon"></div></div>
+<div class="crayon-button urvanov-syntax-highlighter-popup-button" title="Open Code In New Window"><div class="urvanov-syntax-highlighter-button-icon"></div></div>
+<span class="crayon-language">JavaScript</span>
+</div>
+</div>
+			<div class="crayon-info" style="min-height: 16.8px !important; line-height: 16.8px !important;"></div>
+			<div class="urvanov-syntax-highlighter-plain-wrap"><textarea wrap="soft" class="urvanov-syntax-highlighter-plain print-no" data-settings="dblclick" readonly style="-moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4; font-size: 12px !important; line-height: 15px !important;">
+  it("will always render a div", () =&amp;gt; {
+    const divs = displayScreen().find("div");     
+    expect(divs.length).toBeGreaterThan(0);
+  });</textarea></div>
+			<div class="urvanov-syntax-highlighter-main">
+				<table class="crayon-table">
+					<tr class="urvanov-syntax-highlighter-row">
+				<td class="crayon-nums " data-settings="show">
+					<div class="urvanov-syntax-highlighter-nums-content" style="font-size: 12px !important; line-height: 15px !important;">
+<div class="crayon-num" data-line="urvanov-syntax-highlighter-647f46c5b6717601214232-1">1</div>
+<div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-647f46c5b6717601214232-2">2</div>
+<div class="crayon-num" data-line="urvanov-syntax-highlighter-647f46c5b6717601214232-3">3</div>
+<div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-647f46c5b6717601214232-4">4</div>
+</div>
+				</td>
+						<td class="urvanov-syntax-highlighter-code"><div class="crayon-pre" style="font-size: 12px !important; line-height: 15px !important; -moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4;">
+<div class="crayon-line" id="urvanov-syntax-highlighter-647f46c5b6717601214232-1">
+<span class="crayon-h">&nbsp;&nbsp;</span><span class="crayon-e">it</span><span class="crayon-sy">(</span><span class="crayon-s">"will always render a div"</span><span class="crayon-sy">,</span><span class="crayon-h"> </span><span class="crayon-sy">(</span><span class="crayon-sy">)</span><span class="crayon-h"> </span><span class="crayon-o">=&amp;</span><span class="crayon-v">gt</span><span class="crayon-sy">;</span><span class="crayon-h"> </span><span class="crayon-sy">{</span>
+</div>
+<div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-647f46c5b6717601214232-2">
+<span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-m">const</span><span class="crayon-h"> </span><span class="crayon-v">divs</span><span class="crayon-h"> </span><span class="crayon-o">=</span><span class="crayon-h"> </span><span class="crayon-e">displayScreen</span><span class="crayon-sy">(</span><span class="crayon-sy">)</span><span class="crayon-sy">.</span><span class="crayon-e">find</span><span class="crayon-sy">(</span><span class="crayon-s">"div"</span><span class="crayon-sy">)</span><span class="crayon-sy">;</span><span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp; </span>
+</div>
+<div class="crayon-line" id="urvanov-syntax-highlighter-647f46c5b6717601214232-3">
+<span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-e">expect</span><span class="crayon-sy">(</span><span class="crayon-v">divs</span><span class="crayon-sy">.</span><span class="crayon-v">length</span><span class="crayon-sy">)</span><span class="crayon-sy">.</span><span class="crayon-e">toBeGreaterThan</span><span class="crayon-sy">(</span><span class="crayon-cn">0</span><span class="crayon-sy">)</span><span class="crayon-sy">;</span>
+</div>
+<div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-647f46c5b6717601214232-4">
+<span class="crayon-h">&nbsp;&nbsp;</span><span class="crayon-sy">}</span><span class="crayon-sy">)</span><span class="crayon-sy">;</span>
+</div>
+</div></td>
+					</tr>
+				</table>
+			</div>
+		</div>
+<!-- [Format Time: 0.0002 seconds] -->
+<p></p>
+
+
+
+<p>This is basically equivalent to a tester checking that the display screen actually shows up in an end-to-end test. But notice what we&#8217;ve done here: we&#8217;ve already done an integration test in the sense that we&#8217;ve checked if something that has to be rendered has in fact rendered.</p>
+
+
+
+<p>We know that DisplayScreen will render its children components, each of of which displays a div. This is a contract we want to make sure is always enforced.</p>
+
+
+<p></p>
+<!-- Urvanov Syntax Highlighter v2.8.33 -->
+
+		<div id="urvanov-syntax-highlighter-647f46c5b671b454320658" class="urvanov-syntax-highlighter-syntax crayon-theme-classic urvanov-syntax-highlighter-font-monaco urvanov-syntax-highlighter-os-pc print-yes notranslate" data-settings=" minimize scroll-mouseover" style="margin-top: 12px; margin-bottom: 12px; font-size: 12px !important; line-height: 15px !important;">
+		
+			<div class="crayon-toolbar" data-settings=" mouseover overlay hide delay" style="font-size: 12px !important;height: 18px !important; line-height: 18px !important;">
+<span class="crayon-title"></span>
+			<div class="crayon-tools" style="font-size: 12px !important;height: 18px !important; line-height: 18px !important;">
+<div class="crayon-button urvanov-syntax-highlighter-nums-button" title="Toggle Line Numbers"><div class="urvanov-syntax-highlighter-button-icon"></div></div>
+<div class="crayon-button urvanov-syntax-highlighter-plain-button" title="Toggle Plain Code"><div class="urvanov-syntax-highlighter-button-icon"></div></div>
+<div class="crayon-button urvanov-syntax-highlighter-wrap-button" title="Toggle Line Wrap"><div class="urvanov-syntax-highlighter-button-icon"></div></div>
+<div class="crayon-button urvanov-syntax-highlighter-expand-button" title="Expand Code"><div class="urvanov-syntax-highlighter-button-icon"></div></div>
+<div class="crayon-button urvanov-syntax-highlighter-copy-button" title="Copy"><div class="urvanov-syntax-highlighter-button-icon"></div></div>
+<div class="crayon-button urvanov-syntax-highlighter-popup-button" title="Open Code In New Window"><div class="urvanov-syntax-highlighter-button-icon"></div></div>
+<span class="crayon-language">JavaScript</span>
+</div>
+</div>
+			<div class="crayon-info" style="min-height: 16.8px !important; line-height: 16.8px !important;"></div>
+			<div class="urvanov-syntax-highlighter-plain-wrap"><textarea wrap="soft" class="urvanov-syntax-highlighter-plain print-no" data-settings="dblclick" readonly style="-moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4; font-size: 12px !important; line-height: 15px !important;">
+  describe("given a rendered div", () =&amp;gt; {
+    it("will contain all rendered children", () =&amp;gt; {
+      const divs = displayScreen().find("div");
+      expect(divs.length).toEqual(5);
+      expect(divs.children().length).toEqual(4);
+    });
+
+    it("will always render a `DisplayTimer`", () =&amp;gt; {
+      expect(displayScreen().find(DisplayTimer).length).toBe(1);
+    });
+
+    describe("given a rendered `DisplayContent` and props", () =&amp;gt; {
+      beforeEach(() =&amp;gt; {
+        props.displayMessage = "Testing";
+      });
+
+      it("will always render a `DisplayContent`", () =&amp;gt; {
+        expect(displayScreen().find(DisplayContent).length).toBe(1);
+      });
+    });
+
+    it("will never render a `DisplayContent` without props", () =&amp;gt; {
+      expect(displayScreen().find(DisplayContent).length).toBe(0);
+    });
+
+    it("will always render a `DisplayActivate`", () =&amp;gt; {
+      expect(displayScreen().find(DisplayActivate).length).toBe(1);
+    });
+
+    it("will always render a `Slider`", () =&amp;gt; {
+      expect(displayScreen().find(Slider).length).toBe(1);
+    });
+  });</textarea></div>
+			<div class="urvanov-syntax-highlighter-main">
+				<table class="crayon-table">
+					<tr class="urvanov-syntax-highlighter-row">
+				<td class="crayon-nums " data-settings="show">
+					<div class="urvanov-syntax-highlighter-nums-content" style="font-size: 12px !important; line-height: 15px !important;">
+<div class="crayon-num" data-line="urvanov-syntax-highlighter-647f46c5b671b454320658-1">1</div>
+<div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-647f46c5b671b454320658-2">2</div>
+<div class="crayon-num" data-line="urvanov-syntax-highlighter-647f46c5b671b454320658-3">3</div>
+<div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-647f46c5b671b454320658-4">4</div>
+<div class="crayon-num" data-line="urvanov-syntax-highlighter-647f46c5b671b454320658-5">5</div>
+<div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-647f46c5b671b454320658-6">6</div>
+<div class="crayon-num" data-line="urvanov-syntax-highlighter-647f46c5b671b454320658-7">7</div>
+<div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-647f46c5b671b454320658-8">8</div>
+<div class="crayon-num" data-line="urvanov-syntax-highlighter-647f46c5b671b454320658-9">9</div>
+<div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-647f46c5b671b454320658-10">10</div>
+<div class="crayon-num" data-line="urvanov-syntax-highlighter-647f46c5b671b454320658-11">11</div>
+<div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-647f46c5b671b454320658-12">12</div>
+<div class="crayon-num" data-line="urvanov-syntax-highlighter-647f46c5b671b454320658-13">13</div>
+<div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-647f46c5b671b454320658-14">14</div>
+<div class="crayon-num" data-line="urvanov-syntax-highlighter-647f46c5b671b454320658-15">15</div>
+<div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-647f46c5b671b454320658-16">16</div>
+<div class="crayon-num" data-line="urvanov-syntax-highlighter-647f46c5b671b454320658-17">17</div>
+<div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-647f46c5b671b454320658-18">18</div>
+<div class="crayon-num" data-line="urvanov-syntax-highlighter-647f46c5b671b454320658-19">19</div>
+<div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-647f46c5b671b454320658-20">20</div>
+<div class="crayon-num" data-line="urvanov-syntax-highlighter-647f46c5b671b454320658-21">21</div>
+<div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-647f46c5b671b454320658-22">22</div>
+<div class="crayon-num" data-line="urvanov-syntax-highlighter-647f46c5b671b454320658-23">23</div>
+<div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-647f46c5b671b454320658-24">24</div>
+<div class="crayon-num" data-line="urvanov-syntax-highlighter-647f46c5b671b454320658-25">25</div>
+<div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-647f46c5b671b454320658-26">26</div>
+<div class="crayon-num" data-line="urvanov-syntax-highlighter-647f46c5b671b454320658-27">27</div>
+<div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-647f46c5b671b454320658-28">28</div>
+<div class="crayon-num" data-line="urvanov-syntax-highlighter-647f46c5b671b454320658-29">29</div>
+<div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-647f46c5b671b454320658-30">30</div>
+<div class="crayon-num" data-line="urvanov-syntax-highlighter-647f46c5b671b454320658-31">31</div>
+<div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-647f46c5b671b454320658-32">32</div>
+<div class="crayon-num" data-line="urvanov-syntax-highlighter-647f46c5b671b454320658-33">33</div>
+</div>
+				</td>
+						<td class="urvanov-syntax-highlighter-code"><div class="crayon-pre" style="font-size: 12px !important; line-height: 15px !important; -moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4;">
+<div class="crayon-line" id="urvanov-syntax-highlighter-647f46c5b671b454320658-1">
+<span class="crayon-h">&nbsp;&nbsp;</span><span class="crayon-e">describe</span><span class="crayon-sy">(</span><span class="crayon-s">"given a rendered div"</span><span class="crayon-sy">,</span><span class="crayon-h"> </span><span class="crayon-sy">(</span><span class="crayon-sy">)</span><span class="crayon-h"> </span><span class="crayon-o">=&amp;</span><span class="crayon-v">gt</span><span class="crayon-sy">;</span><span class="crayon-h"> </span><span class="crayon-sy">{</span>
+</div>
+<div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-647f46c5b671b454320658-2">
+<span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-e">it</span><span class="crayon-sy">(</span><span class="crayon-s">"will contain all rendered children"</span><span class="crayon-sy">,</span><span class="crayon-h"> </span><span class="crayon-sy">(</span><span class="crayon-sy">)</span><span class="crayon-h"> </span><span class="crayon-o">=&amp;</span><span class="crayon-v">gt</span><span class="crayon-sy">;</span><span class="crayon-h"> </span><span class="crayon-sy">{</span>
+</div>
+<div class="crayon-line" id="urvanov-syntax-highlighter-647f46c5b671b454320658-3">
+<span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-m">const</span><span class="crayon-h"> </span><span class="crayon-v">divs</span><span class="crayon-h"> </span><span class="crayon-o">=</span><span class="crayon-h"> </span><span class="crayon-e">displayScreen</span><span class="crayon-sy">(</span><span class="crayon-sy">)</span><span class="crayon-sy">.</span><span class="crayon-e">find</span><span class="crayon-sy">(</span><span class="crayon-s">"div"</span><span class="crayon-sy">)</span><span class="crayon-sy">;</span>
+</div>
+<div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-647f46c5b671b454320658-4">
+<span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-e">expect</span><span class="crayon-sy">(</span><span class="crayon-v">divs</span><span class="crayon-sy">.</span><span class="crayon-v">length</span><span class="crayon-sy">)</span><span class="crayon-sy">.</span><span class="crayon-e">toEqual</span><span class="crayon-sy">(</span><span class="crayon-cn">5</span><span class="crayon-sy">)</span><span class="crayon-sy">;</span>
+</div>
+<div class="crayon-line" id="urvanov-syntax-highlighter-647f46c5b671b454320658-5">
+<span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-e">expect</span><span class="crayon-sy">(</span><span class="crayon-v">divs</span><span class="crayon-sy">.</span><span class="crayon-e">children</span><span class="crayon-sy">(</span><span class="crayon-sy">)</span><span class="crayon-sy">.</span><span class="crayon-v">length</span><span class="crayon-sy">)</span><span class="crayon-sy">.</span><span class="crayon-e">toEqual</span><span class="crayon-sy">(</span><span class="crayon-cn">4</span><span class="crayon-sy">)</span><span class="crayon-sy">;</span>
+</div>
+<div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-647f46c5b671b454320658-6">
+<span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-sy">}</span><span class="crayon-sy">)</span><span class="crayon-sy">;</span>
+</div>
+<div class="crayon-line" id="urvanov-syntax-highlighter-647f46c5b671b454320658-7">&nbsp;</div>
+<div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-647f46c5b671b454320658-8">
+<span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-e">it</span><span class="crayon-sy">(</span><span class="crayon-s">"will always render a `DisplayTimer`"</span><span class="crayon-sy">,</span><span class="crayon-h"> </span><span class="crayon-sy">(</span><span class="crayon-sy">)</span><span class="crayon-h"> </span><span class="crayon-o">=&amp;</span><span class="crayon-v">gt</span><span class="crayon-sy">;</span><span class="crayon-h"> </span><span class="crayon-sy">{</span>
+</div>
+<div class="crayon-line" id="urvanov-syntax-highlighter-647f46c5b671b454320658-9">
+<span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-e">expect</span><span class="crayon-sy">(</span><span class="crayon-e">displayScreen</span><span class="crayon-sy">(</span><span class="crayon-sy">)</span><span class="crayon-sy">.</span><span class="crayon-e">find</span><span class="crayon-sy">(</span><span class="crayon-v">DisplayTimer</span><span class="crayon-sy">)</span><span class="crayon-sy">.</span><span class="crayon-v">length</span><span class="crayon-sy">)</span><span class="crayon-sy">.</span><span class="crayon-e">toBe</span><span class="crayon-sy">(</span><span class="crayon-cn">1</span><span class="crayon-sy">)</span><span class="crayon-sy">;</span>
+</div>
+<div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-647f46c5b671b454320658-10">
+<span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-sy">}</span><span class="crayon-sy">)</span><span class="crayon-sy">;</span>
+</div>
+<div class="crayon-line" id="urvanov-syntax-highlighter-647f46c5b671b454320658-11">&nbsp;</div>
+<div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-647f46c5b671b454320658-12">
+<span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-e">describe</span><span class="crayon-sy">(</span><span class="crayon-s">"given a rendered `DisplayContent` and props"</span><span class="crayon-sy">,</span><span class="crayon-h"> </span><span class="crayon-sy">(</span><span class="crayon-sy">)</span><span class="crayon-h"> </span><span class="crayon-o">=&amp;</span><span class="crayon-v">gt</span><span class="crayon-sy">;</span><span class="crayon-h"> </span><span class="crayon-sy">{</span>
+</div>
+<div class="crayon-line" id="urvanov-syntax-highlighter-647f46c5b671b454320658-13">
+<span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-e">beforeEach</span><span class="crayon-sy">(</span><span class="crayon-sy">(</span><span class="crayon-sy">)</span><span class="crayon-h"> </span><span class="crayon-o">=&amp;</span><span class="crayon-v">gt</span><span class="crayon-sy">;</span><span class="crayon-h"> </span><span class="crayon-sy">{</span>
+</div>
+<div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-647f46c5b671b454320658-14">
+<span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-v">props</span><span class="crayon-sy">.</span><span class="crayon-e ">displayMessage</span><span class="crayon-h"> </span><span class="crayon-o">=</span><span class="crayon-h"> </span><span class="crayon-s">"Testing"</span><span class="crayon-sy">;</span>
+</div>
+<div class="crayon-line" id="urvanov-syntax-highlighter-647f46c5b671b454320658-15">
+<span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-sy">}</span><span class="crayon-sy">)</span><span class="crayon-sy">;</span>
+</div>
+<div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-647f46c5b671b454320658-16">&nbsp;</div>
+<div class="crayon-line" id="urvanov-syntax-highlighter-647f46c5b671b454320658-17">
+<span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-e">it</span><span class="crayon-sy">(</span><span class="crayon-s">"will always render a `DisplayContent`"</span><span class="crayon-sy">,</span><span class="crayon-h"> </span><span class="crayon-sy">(</span><span class="crayon-sy">)</span><span class="crayon-h"> </span><span class="crayon-o">=&amp;</span><span class="crayon-v">gt</span><span class="crayon-sy">;</span><span class="crayon-h"> </span><span class="crayon-sy">{</span>
+</div>
+<div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-647f46c5b671b454320658-18">
+<span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-e">expect</span><span class="crayon-sy">(</span><span class="crayon-e">displayScreen</span><span class="crayon-sy">(</span><span class="crayon-sy">)</span><span class="crayon-sy">.</span><span class="crayon-e">find</span><span class="crayon-sy">(</span><span class="crayon-v">DisplayContent</span><span class="crayon-sy">)</span><span class="crayon-sy">.</span><span class="crayon-v">length</span><span class="crayon-sy">)</span><span class="crayon-sy">.</span><span class="crayon-e">toBe</span><span class="crayon-sy">(</span><span class="crayon-cn">1</span><span class="crayon-sy">)</span><span class="crayon-sy">;</span>
+</div>
+<div class="crayon-line" id="urvanov-syntax-highlighter-647f46c5b671b454320658-19">
+<span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-sy">}</span><span class="crayon-sy">)</span><span class="crayon-sy">;</span>
+</div>
+<div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-647f46c5b671b454320658-20">
+<span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-sy">}</span><span class="crayon-sy">)</span><span class="crayon-sy">;</span>
+</div>
+<div class="crayon-line" id="urvanov-syntax-highlighter-647f46c5b671b454320658-21">&nbsp;</div>
+<div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-647f46c5b671b454320658-22">
+<span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-e">it</span><span class="crayon-sy">(</span><span class="crayon-s">"will never render a `DisplayContent` without props"</span><span class="crayon-sy">,</span><span class="crayon-h"> </span><span class="crayon-sy">(</span><span class="crayon-sy">)</span><span class="crayon-h"> </span><span class="crayon-o">=&amp;</span><span class="crayon-v">gt</span><span class="crayon-sy">;</span><span class="crayon-h"> </span><span class="crayon-sy">{</span>
+</div>
+<div class="crayon-line" id="urvanov-syntax-highlighter-647f46c5b671b454320658-23">
+<span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-e">expect</span><span class="crayon-sy">(</span><span class="crayon-e">displayScreen</span><span class="crayon-sy">(</span><span class="crayon-sy">)</span><span class="crayon-sy">.</span><span class="crayon-e">find</span><span class="crayon-sy">(</span><span class="crayon-v">DisplayContent</span><span class="crayon-sy">)</span><span class="crayon-sy">.</span><span class="crayon-v">length</span><span class="crayon-sy">)</span><span class="crayon-sy">.</span><span class="crayon-e">toBe</span><span class="crayon-sy">(</span><span class="crayon-cn">0</span><span class="crayon-sy">)</span><span class="crayon-sy">;</span>
+</div>
+<div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-647f46c5b671b454320658-24">
+<span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-sy">}</span><span class="crayon-sy">)</span><span class="crayon-sy">;</span>
+</div>
+<div class="crayon-line" id="urvanov-syntax-highlighter-647f46c5b671b454320658-25">&nbsp;</div>
+<div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-647f46c5b671b454320658-26">
+<span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-e">it</span><span class="crayon-sy">(</span><span class="crayon-s">"will always render a `DisplayActivate`"</span><span class="crayon-sy">,</span><span class="crayon-h"> </span><span class="crayon-sy">(</span><span class="crayon-sy">)</span><span class="crayon-h"> </span><span class="crayon-o">=&amp;</span><span class="crayon-v">gt</span><span class="crayon-sy">;</span><span class="crayon-h"> </span><span class="crayon-sy">{</span>
+</div>
+<div class="crayon-line" id="urvanov-syntax-highlighter-647f46c5b671b454320658-27">
+<span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-e">expect</span><span class="crayon-sy">(</span><span class="crayon-e">displayScreen</span><span class="crayon-sy">(</span><span class="crayon-sy">)</span><span class="crayon-sy">.</span><span class="crayon-e">find</span><span class="crayon-sy">(</span><span class="crayon-v">DisplayActivate</span><span class="crayon-sy">)</span><span class="crayon-sy">.</span><span class="crayon-v">length</span><span class="crayon-sy">)</span><span class="crayon-sy">.</span><span class="crayon-e">toBe</span><span class="crayon-sy">(</span><span class="crayon-cn">1</span><span class="crayon-sy">)</span><span class="crayon-sy">;</span>
+</div>
+<div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-647f46c5b671b454320658-28">
+<span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-sy">}</span><span class="crayon-sy">)</span><span class="crayon-sy">;</span>
+</div>
+<div class="crayon-line" id="urvanov-syntax-highlighter-647f46c5b671b454320658-29">&nbsp;</div>
+<div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-647f46c5b671b454320658-30">
+<span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-e">it</span><span class="crayon-sy">(</span><span class="crayon-s">"will always render a `Slider`"</span><span class="crayon-sy">,</span><span class="crayon-h"> </span><span class="crayon-sy">(</span><span class="crayon-sy">)</span><span class="crayon-h"> </span><span class="crayon-o">=&amp;</span><span class="crayon-v">gt</span><span class="crayon-sy">;</span><span class="crayon-h"> </span><span class="crayon-sy">{</span>
+</div>
+<div class="crayon-line" id="urvanov-syntax-highlighter-647f46c5b671b454320658-31">
+<span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-e">expect</span><span class="crayon-sy">(</span><span class="crayon-e">displayScreen</span><span class="crayon-sy">(</span><span class="crayon-sy">)</span><span class="crayon-sy">.</span><span class="crayon-e">find</span><span class="crayon-sy">(</span><span class="crayon-v">Slider</span><span class="crayon-sy">)</span><span class="crayon-sy">.</span><span class="crayon-v">length</span><span class="crayon-sy">)</span><span class="crayon-sy">.</span><span class="crayon-e">toBe</span><span class="crayon-sy">(</span><span class="crayon-cn">1</span><span class="crayon-sy">)</span><span class="crayon-sy">;</span>
+</div>
+<div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-647f46c5b671b454320658-32">
+<span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-sy">}</span><span class="crayon-sy">)</span><span class="crayon-sy">;</span>
+</div>
+<div class="crayon-line" id="urvanov-syntax-highlighter-647f46c5b671b454320658-33">
+<span class="crayon-h">&nbsp;&nbsp;</span><span class="crayon-sy">}</span><span class="crayon-sy">)</span><span class="crayon-sy">;</span>
+</div>
+</div></td>
+					</tr>
+				</table>
+			</div>
+		</div>
+<!-- [Format Time: 0.0009 seconds] -->
+<p></p>
+
+
+
+<p>Notice above that in the test for rendering the DisplayContent component, we pass in a prop for the displayMessage. Right below that we have a test where no prop is being passed in at all. So we handle two basis paths there.</p>
+
+
+
+<p>We know that the DisplayTimer receives no props. We can see <a href="https://github.com/jeffnyman/thanos-react/blob/master/src/components/displayScreen.js#L26">how DisplayTimer is brought in</a>. We can also see <a href="https://github.com/jeffnyman/thanos-react/blob/master/src/components/displayTimer.js#L23">what DisplayTimer renders</a>. That&#8217;s important. The DisplayTimer is designed specifically not to be overridden by any property.</p>
+
+
+<p></p>
+<!-- Urvanov Syntax Highlighter v2.8.33 -->
+
+		<div id="urvanov-syntax-highlighter-647f46c5b671c359568157" class="urvanov-syntax-highlighter-syntax crayon-theme-classic urvanov-syntax-highlighter-font-monaco urvanov-syntax-highlighter-os-pc print-yes notranslate" data-settings=" minimize scroll-mouseover" style="margin-top: 12px; margin-bottom: 12px; font-size: 12px !important; line-height: 15px !important;">
+		
+			<div class="crayon-toolbar" data-settings=" mouseover overlay hide delay" style="font-size: 12px !important;height: 18px !important; line-height: 18px !important;">
+<span class="crayon-title"></span>
+			<div class="crayon-tools" style="font-size: 12px !important;height: 18px !important; line-height: 18px !important;">
+<div class="crayon-button urvanov-syntax-highlighter-nums-button" title="Toggle Line Numbers"><div class="urvanov-syntax-highlighter-button-icon"></div></div>
+<div class="crayon-button urvanov-syntax-highlighter-plain-button" title="Toggle Plain Code"><div class="urvanov-syntax-highlighter-button-icon"></div></div>
+<div class="crayon-button urvanov-syntax-highlighter-wrap-button" title="Toggle Line Wrap"><div class="urvanov-syntax-highlighter-button-icon"></div></div>
+<div class="crayon-button urvanov-syntax-highlighter-expand-button" title="Expand Code"><div class="urvanov-syntax-highlighter-button-icon"></div></div>
+<div class="crayon-button urvanov-syntax-highlighter-copy-button" title="Copy"><div class="urvanov-syntax-highlighter-button-icon"></div></div>
+<div class="crayon-button urvanov-syntax-highlighter-popup-button" title="Open Code In New Window"><div class="urvanov-syntax-highlighter-button-icon"></div></div>
+<span class="crayon-language">JavaScript</span>
+</div>
+</div>
+			<div class="crayon-info" style="min-height: 16.8px !important; line-height: 16.8px !important;"></div>
+			<div class="urvanov-syntax-highlighter-plain-wrap"><textarea wrap="soft" class="urvanov-syntax-highlighter-plain print-no" data-settings="dblclick" readonly style="-moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4; font-size: 12px !important; line-height: 15px !important;">
+  describe("given a rendered `DisplayTimer`", () =&amp;gt; {
+    beforeEach(() =&amp;gt; {
+      props.displayMessage = "Testing";
+    });
+
+    it("will not receive any props", () =&amp;gt; {
+      const displayTimer = displayScreen().find(DisplayTimer);
+			 
+      expect(Object.keys(displayTimer.props()).length).toBe(0);
+    });
+  });</textarea></div>
+			<div class="urvanov-syntax-highlighter-main">
+				<table class="crayon-table">
+					<tr class="urvanov-syntax-highlighter-row">
+				<td class="crayon-nums " data-settings="show">
+					<div class="urvanov-syntax-highlighter-nums-content" style="font-size: 12px !important; line-height: 15px !important;">
+<div class="crayon-num" data-line="urvanov-syntax-highlighter-647f46c5b671c359568157-1">1</div>
+<div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-647f46c5b671c359568157-2">2</div>
+<div class="crayon-num" data-line="urvanov-syntax-highlighter-647f46c5b671c359568157-3">3</div>
+<div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-647f46c5b671c359568157-4">4</div>
+<div class="crayon-num" data-line="urvanov-syntax-highlighter-647f46c5b671c359568157-5">5</div>
+<div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-647f46c5b671c359568157-6">6</div>
+<div class="crayon-num" data-line="urvanov-syntax-highlighter-647f46c5b671c359568157-7">7</div>
+<div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-647f46c5b671c359568157-8">8</div>
+<div class="crayon-num" data-line="urvanov-syntax-highlighter-647f46c5b671c359568157-9">9</div>
+<div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-647f46c5b671c359568157-10">10</div>
+<div class="crayon-num" data-line="urvanov-syntax-highlighter-647f46c5b671c359568157-11">11</div>
+</div>
+				</td>
+						<td class="urvanov-syntax-highlighter-code"><div class="crayon-pre" style="font-size: 12px !important; line-height: 15px !important; -moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4;">
+<div class="crayon-line" id="urvanov-syntax-highlighter-647f46c5b671c359568157-1">
+<span class="crayon-h">&nbsp;&nbsp;</span><span class="crayon-e">describe</span><span class="crayon-sy">(</span><span class="crayon-s">"given a rendered `DisplayTimer`"</span><span class="crayon-sy">,</span><span class="crayon-h"> </span><span class="crayon-sy">(</span><span class="crayon-sy">)</span><span class="crayon-h"> </span><span class="crayon-o">=&amp;</span><span class="crayon-v">gt</span><span class="crayon-sy">;</span><span class="crayon-h"> </span><span class="crayon-sy">{</span>
+</div>
+<div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-647f46c5b671c359568157-2">
+<span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-e">beforeEach</span><span class="crayon-sy">(</span><span class="crayon-sy">(</span><span class="crayon-sy">)</span><span class="crayon-h"> </span><span class="crayon-o">=&amp;</span><span class="crayon-v">gt</span><span class="crayon-sy">;</span><span class="crayon-h"> </span><span class="crayon-sy">{</span>
+</div>
+<div class="crayon-line" id="urvanov-syntax-highlighter-647f46c5b671c359568157-3">
+<span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-v">props</span><span class="crayon-sy">.</span><span class="crayon-e ">displayMessage</span><span class="crayon-h"> </span><span class="crayon-o">=</span><span class="crayon-h"> </span><span class="crayon-s">"Testing"</span><span class="crayon-sy">;</span>
+</div>
+<div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-647f46c5b671c359568157-4">
+<span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-sy">}</span><span class="crayon-sy">)</span><span class="crayon-sy">;</span>
+</div>
+<div class="crayon-line" id="urvanov-syntax-highlighter-647f46c5b671c359568157-5">&nbsp;</div>
+<div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-647f46c5b671c359568157-6">
+<span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-e">it</span><span class="crayon-sy">(</span><span class="crayon-s">"will not receive any props"</span><span class="crayon-sy">,</span><span class="crayon-h"> </span><span class="crayon-sy">(</span><span class="crayon-sy">)</span><span class="crayon-h"> </span><span class="crayon-o">=&amp;</span><span class="crayon-v">gt</span><span class="crayon-sy">;</span><span class="crayon-h"> </span><span class="crayon-sy">{</span>
+</div>
+<div class="crayon-line" id="urvanov-syntax-highlighter-647f46c5b671c359568157-7">
+<span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-m">const</span><span class="crayon-h"> </span><span class="crayon-v">displayTimer</span><span class="crayon-h"> </span><span class="crayon-o">=</span><span class="crayon-h"> </span><span class="crayon-e">displayScreen</span><span class="crayon-sy">(</span><span class="crayon-sy">)</span><span class="crayon-sy">.</span><span class="crayon-e">find</span><span class="crayon-sy">(</span><span class="crayon-v">DisplayTimer</span><span class="crayon-sy">)</span><span class="crayon-sy">;</span>
+</div>
+<div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-647f46c5b671c359568157-8"><span class="crayon-h">			 </span></div>
+<div class="crayon-line" id="urvanov-syntax-highlighter-647f46c5b671c359568157-9">
+<span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-e">expect</span><span class="crayon-sy">(</span><span class="crayon-t">Object</span><span class="crayon-sy">.</span><span class="crayon-e">keys</span><span class="crayon-sy">(</span><span class="crayon-v">displayTimer</span><span class="crayon-sy">.</span><span class="crayon-e">props</span><span class="crayon-sy">(</span><span class="crayon-sy">)</span><span class="crayon-sy">)</span><span class="crayon-sy">.</span><span class="crayon-v">length</span><span class="crayon-sy">)</span><span class="crayon-sy">.</span><span class="crayon-e">toBe</span><span class="crayon-sy">(</span><span class="crayon-cn">0</span><span class="crayon-sy">)</span><span class="crayon-sy">;</span>
+</div>
+<div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-647f46c5b671c359568157-10">
+<span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-sy">}</span><span class="crayon-sy">)</span><span class="crayon-sy">;</span>
+</div>
+<div class="crayon-line" id="urvanov-syntax-highlighter-647f46c5b671c359568157-11">
+<span class="crayon-h">&nbsp;&nbsp;</span><span class="crayon-sy">}</span><span class="crayon-sy">)</span><span class="crayon-sy">;</span>
+</div>
+</div></td>
+					</tr>
+				</table>
+			</div>
+		</div>
+<!-- [Format Time: 0.0003 seconds] -->
+<p></p>
+
+
+
+<h3 class="wp-block-heading">Props Contracts</h3>
+
+
+
+<p>We known that an onSlide action is checked for and if found an onActivate call is made. We can see that with <a href="https://github.com/jeffnyman/thanos-react/blob/master/src/components/displayScreen.js#L34">the attributes value</a>. There are thus two contracts operative for onActivate. The behavior is different depending on which situation occurs.</p>
+
+
+<p></p>
+<!-- Urvanov Syntax Highlighter v2.8.33 -->
+
+		<div id="urvanov-syntax-highlighter-647f46c5b671f538320645" class="urvanov-syntax-highlighter-syntax crayon-theme-classic urvanov-syntax-highlighter-font-monaco urvanov-syntax-highlighter-os-pc print-yes notranslate" data-settings=" minimize scroll-mouseover" style="margin-top: 12px; margin-bottom: 12px; font-size: 12px !important; line-height: 15px !important;">
+		
+			<div class="crayon-toolbar" data-settings=" mouseover overlay hide delay" style="font-size: 12px !important;height: 18px !important; line-height: 18px !important;">
+<span class="crayon-title"></span>
+			<div class="crayon-tools" style="font-size: 12px !important;height: 18px !important; line-height: 18px !important;">
+<div class="crayon-button urvanov-syntax-highlighter-nums-button" title="Toggle Line Numbers"><div class="urvanov-syntax-highlighter-button-icon"></div></div>
+<div class="crayon-button urvanov-syntax-highlighter-plain-button" title="Toggle Plain Code"><div class="urvanov-syntax-highlighter-button-icon"></div></div>
+<div class="crayon-button urvanov-syntax-highlighter-wrap-button" title="Toggle Line Wrap"><div class="urvanov-syntax-highlighter-button-icon"></div></div>
+<div class="crayon-button urvanov-syntax-highlighter-expand-button" title="Expand Code"><div class="urvanov-syntax-highlighter-button-icon"></div></div>
+<div class="crayon-button urvanov-syntax-highlighter-copy-button" title="Copy"><div class="urvanov-syntax-highlighter-button-icon"></div></div>
+<div class="crayon-button urvanov-syntax-highlighter-popup-button" title="Open Code In New Window"><div class="urvanov-syntax-highlighter-button-icon"></div></div>
+<span class="crayon-language">JavaScript</span>
+</div>
+</div>
+			<div class="crayon-info" style="min-height: 16.8px !important; line-height: 16.8px !important;"></div>
+			<div class="urvanov-syntax-highlighter-plain-wrap"><textarea wrap="soft" class="urvanov-syntax-highlighter-plain print-no" data-settings="dblclick" readonly style="-moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4; font-size: 12px !important; line-height: 15px !important;">
+  describe("when `onActivate` is defined", () =&amp;gt; {
+    beforeEach(() =&amp;gt; {
+      props.onActivated = jest.fn();
+    });
+
+    it("sets `onSlide` prop of rendered `DisplayActivate` to value of `onActivate`", () =&amp;gt; {
+      const displayActivate = displayScreen().find(DisplayActivate);
+      expect(displayActivate.props().onSlide).toBe(props.onActivate);
+    });
+  });
+
+  describe("when `onActivate` is undefined", () =&amp;gt; {
+    it("sets `onSlide` prop of rendered `DisplayActivate` to undefined", () =&amp;gt; {
+      const displayActivate = displayScreen().find(DisplayActivate);
+      expect(displayActivate.props().onSlide).not.toBeDefined();
+    });
+  });</textarea></div>
+			<div class="urvanov-syntax-highlighter-main">
+				<table class="crayon-table">
+					<tr class="urvanov-syntax-highlighter-row">
+				<td class="crayon-nums " data-settings="show">
+					<div class="urvanov-syntax-highlighter-nums-content" style="font-size: 12px !important; line-height: 15px !important;">
+<div class="crayon-num" data-line="urvanov-syntax-highlighter-647f46c5b671f538320645-1">1</div>
+<div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-647f46c5b671f538320645-2">2</div>
+<div class="crayon-num" data-line="urvanov-syntax-highlighter-647f46c5b671f538320645-3">3</div>
+<div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-647f46c5b671f538320645-4">4</div>
+<div class="crayon-num" data-line="urvanov-syntax-highlighter-647f46c5b671f538320645-5">5</div>
+<div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-647f46c5b671f538320645-6">6</div>
+<div class="crayon-num" data-line="urvanov-syntax-highlighter-647f46c5b671f538320645-7">7</div>
+<div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-647f46c5b671f538320645-8">8</div>
+<div class="crayon-num" data-line="urvanov-syntax-highlighter-647f46c5b671f538320645-9">9</div>
+<div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-647f46c5b671f538320645-10">10</div>
+<div class="crayon-num" data-line="urvanov-syntax-highlighter-647f46c5b671f538320645-11">11</div>
+<div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-647f46c5b671f538320645-12">12</div>
+<div class="crayon-num" data-line="urvanov-syntax-highlighter-647f46c5b671f538320645-13">13</div>
+<div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-647f46c5b671f538320645-14">14</div>
+<div class="crayon-num" data-line="urvanov-syntax-highlighter-647f46c5b671f538320645-15">15</div>
+<div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-647f46c5b671f538320645-16">16</div>
+<div class="crayon-num" data-line="urvanov-syntax-highlighter-647f46c5b671f538320645-17">17</div>
+</div>
+				</td>
+						<td class="urvanov-syntax-highlighter-code"><div class="crayon-pre" style="font-size: 12px !important; line-height: 15px !important; -moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4;">
+<div class="crayon-line" id="urvanov-syntax-highlighter-647f46c5b671f538320645-1">
+<span class="crayon-h">&nbsp;&nbsp;</span><span class="crayon-e">describe</span><span class="crayon-sy">(</span><span class="crayon-s">"when `onActivate` is defined"</span><span class="crayon-sy">,</span><span class="crayon-h"> </span><span class="crayon-sy">(</span><span class="crayon-sy">)</span><span class="crayon-h"> </span><span class="crayon-o">=&amp;</span><span class="crayon-v">gt</span><span class="crayon-sy">;</span><span class="crayon-h"> </span><span class="crayon-sy">{</span>
+</div>
+<div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-647f46c5b671f538320645-2">
+<span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-e">beforeEach</span><span class="crayon-sy">(</span><span class="crayon-sy">(</span><span class="crayon-sy">)</span><span class="crayon-h"> </span><span class="crayon-o">=&amp;</span><span class="crayon-v">gt</span><span class="crayon-sy">;</span><span class="crayon-h"> </span><span class="crayon-sy">{</span>
+</div>
+<div class="crayon-line" id="urvanov-syntax-highlighter-647f46c5b671f538320645-3">
+<span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-v">props</span><span class="crayon-sy">.</span><span class="crayon-v">onActivated</span><span class="crayon-h"> </span><span class="crayon-o">=</span><span class="crayon-h"> </span><span class="crayon-v">jest</span><span class="crayon-sy">.</span><span class="crayon-e">fn</span><span class="crayon-sy">(</span><span class="crayon-sy">)</span><span class="crayon-sy">;</span>
+</div>
+<div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-647f46c5b671f538320645-4">
+<span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-sy">}</span><span class="crayon-sy">)</span><span class="crayon-sy">;</span>
+</div>
+<div class="crayon-line" id="urvanov-syntax-highlighter-647f46c5b671f538320645-5">&nbsp;</div>
+<div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-647f46c5b671f538320645-6">
+<span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-e">it</span><span class="crayon-sy">(</span><span class="crayon-s">"sets `onSlide` prop of rendered `DisplayActivate` to value of `onActivate`"</span><span class="crayon-sy">,</span><span class="crayon-h"> </span><span class="crayon-sy">(</span><span class="crayon-sy">)</span><span class="crayon-h"> </span><span class="crayon-o">=&amp;</span><span class="crayon-v">gt</span><span class="crayon-sy">;</span><span class="crayon-h"> </span><span class="crayon-sy">{</span>
+</div>
+<div class="crayon-line" id="urvanov-syntax-highlighter-647f46c5b671f538320645-7">
+<span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-m">const</span><span class="crayon-h"> </span><span class="crayon-v">displayActivate</span><span class="crayon-h"> </span><span class="crayon-o">=</span><span class="crayon-h"> </span><span class="crayon-e">displayScreen</span><span class="crayon-sy">(</span><span class="crayon-sy">)</span><span class="crayon-sy">.</span><span class="crayon-e">find</span><span class="crayon-sy">(</span><span class="crayon-v">DisplayActivate</span><span class="crayon-sy">)</span><span class="crayon-sy">;</span>
+</div>
+<div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-647f46c5b671f538320645-8">
+<span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-e">expect</span><span class="crayon-sy">(</span><span class="crayon-v">displayActivate</span><span class="crayon-sy">.</span><span class="crayon-e">props</span><span class="crayon-sy">(</span><span class="crayon-sy">)</span><span class="crayon-sy">.</span><span class="crayon-v">onSlide</span><span class="crayon-sy">)</span><span class="crayon-sy">.</span><span class="crayon-e">toBe</span><span class="crayon-sy">(</span><span class="crayon-v">props</span><span class="crayon-sy">.</span><span class="crayon-v">onActivate</span><span class="crayon-sy">)</span><span class="crayon-sy">;</span>
+</div>
+<div class="crayon-line" id="urvanov-syntax-highlighter-647f46c5b671f538320645-9">
+<span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-sy">}</span><span class="crayon-sy">)</span><span class="crayon-sy">;</span>
+</div>
+<div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-647f46c5b671f538320645-10">
+<span class="crayon-h">&nbsp;&nbsp;</span><span class="crayon-sy">}</span><span class="crayon-sy">)</span><span class="crayon-sy">;</span>
+</div>
+<div class="crayon-line" id="urvanov-syntax-highlighter-647f46c5b671f538320645-11">&nbsp;</div>
+<div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-647f46c5b671f538320645-12">
+<span class="crayon-h">&nbsp;&nbsp;</span><span class="crayon-e">describe</span><span class="crayon-sy">(</span><span class="crayon-s">"when `onActivate` is undefined"</span><span class="crayon-sy">,</span><span class="crayon-h"> </span><span class="crayon-sy">(</span><span class="crayon-sy">)</span><span class="crayon-h"> </span><span class="crayon-o">=&amp;</span><span class="crayon-v">gt</span><span class="crayon-sy">;</span><span class="crayon-h"> </span><span class="crayon-sy">{</span>
+</div>
+<div class="crayon-line" id="urvanov-syntax-highlighter-647f46c5b671f538320645-13">
+<span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-e">it</span><span class="crayon-sy">(</span><span class="crayon-s">"sets `onSlide` prop of rendered `DisplayActivate` to undefined"</span><span class="crayon-sy">,</span><span class="crayon-h"> </span><span class="crayon-sy">(</span><span class="crayon-sy">)</span><span class="crayon-h"> </span><span class="crayon-o">=&amp;</span><span class="crayon-v">gt</span><span class="crayon-sy">;</span><span class="crayon-h"> </span><span class="crayon-sy">{</span>
+</div>
+<div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-647f46c5b671f538320645-14">
+<span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-m">const</span><span class="crayon-h"> </span><span class="crayon-v">displayActivate</span><span class="crayon-h"> </span><span class="crayon-o">=</span><span class="crayon-h"> </span><span class="crayon-e">displayScreen</span><span class="crayon-sy">(</span><span class="crayon-sy">)</span><span class="crayon-sy">.</span><span class="crayon-e">find</span><span class="crayon-sy">(</span><span class="crayon-v">DisplayActivate</span><span class="crayon-sy">)</span><span class="crayon-sy">;</span>
+</div>
+<div class="crayon-line" id="urvanov-syntax-highlighter-647f46c5b671f538320645-15">
+<span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-e">expect</span><span class="crayon-sy">(</span><span class="crayon-v">displayActivate</span><span class="crayon-sy">.</span><span class="crayon-e">props</span><span class="crayon-sy">(</span><span class="crayon-sy">)</span><span class="crayon-sy">.</span><span class="crayon-v">onSlide</span><span class="crayon-sy">)</span><span class="crayon-sy">.</span><span class="crayon-st">not</span><span class="crayon-sy">.</span><span class="crayon-e">toBeDefined</span><span class="crayon-sy">(</span><span class="crayon-sy">)</span><span class="crayon-sy">;</span>
+</div>
+<div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-647f46c5b671f538320645-16">
+<span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-sy">}</span><span class="crayon-sy">)</span><span class="crayon-sy">;</span>
+</div>
+<div class="crayon-line" id="urvanov-syntax-highlighter-647f46c5b671f538320645-17">
+<span class="crayon-h">&nbsp;&nbsp;</span><span class="crayon-sy">}</span><span class="crayon-sy">)</span><span class="crayon-sy">;</span>
+</div>
+</div></td>
+					</tr>
+				</table>
+			</div>
+		</div>
+<!-- [Format Time: 0.0005 seconds] -->
+<p></p>
+
+
+
+<p>We saw this exact some context play out with our render tests, when we handled whether DisplayContent was passed a prop or was not passed a prop. Here we have a different bit of functionality but essentially the same contract.</p>
+
+
+
+<h2 class="wp-block-heading">So What Have We Learned?</h2>
+
+
+
+<p>Well, first let me say this. The most direct influence on this post, at least from the React example part, was the article <a href="https://medium.freecodecamp.org/the-right-way-to-test-react-components-548a4736ab22">The Right Way to Test React Components</a>, the example of which I repurposed a bit here. There were a few other articles that I found quite valuable and that guided me a bit. These were, in no particular order, <a href="https://alligator.io/react/testing-react-redux-with-jest-enzyme/">Testing React / Redux Apps with Jest &amp; Enzyme</a>, <a href="https://medium.com/@barberaf84/react-component-contract-driven-testing-cf7027526f81">React component contract driven testing</a> and <a href="https://medium.freecodecamp.org/components-testing-in-react-what-and-how-to-test-with-jest-and-enzyme-7c1cace99de5">Components testing in React: what and how to test with Jest and Enzyme</a>.</p>
+
+
+
+<p>I mention all that because obviously this post was heavily dependent upon React to provide an example. And I read the above article, as well as many others, because I was in a situation where I was working with code specialists to figure out how to perform contract-style testing with a React application.</p>
+
+
+
+<p>I provided a lot of links to my particular code here because I wanted to make sure that you could navigate what I was talking about at one abstraction level with the code that implemented what I was talking about at another abstraction level. This is a key skill of test specialists. This is just one concrete example of what I was talking about when I said <a href="/2016/11/the-shifting-polarities-of-testing/">testers shift between polarities</a>.</p>
+
+
+
+<p>What I wanted to show here was an example of how a code specialist and a test specialist could work together at one of the intersections of testing, which is that of contracts. Specifically, I wanted to focus on contract-style thinking and how that helps us navigate some of the semantics we have around test terminology. In a future post, I&#8217;ll cover more direct contract-style testing with the Pact tool.</p>
+
+
+
+<p>For now happy testing … and coding!</p>
+<div class="addtoany_share_save_container addtoany_content addtoany_content_bottom"><div class="a2a_kit a2a_kit_size_16 addtoany_list" data-a2a-url="https://testerstories.com/2019/01/testing-integration-and-contracts-part-2/" data-a2a-title="Testing, Integration, and Contracts – Part 2">
+<a class="a2a_button_facebook" href="https://www.addtoany.com/add_to/facebook?linkurl=%2F2019%2F01%2Ftesting-integration-and-contracts-part-2%2F&amp;linkname=Testing%2C%20Integration%2C%20and%20Contracts%20%E2%80%93%20Part%202" title="Facebook" rel="nofollow noopener" target="_blank"></a><a class="a2a_button_twitter" href="https://www.addtoany.com/add_to/twitter?linkurl=%2F2019%2F01%2Ftesting-integration-and-contracts-part-2%2F&amp;linkname=Testing%2C%20Integration%2C%20and%20Contracts%20%E2%80%93%20Part%202" title="Twitter" rel="nofollow noopener" target="_blank"></a><a class="a2a_button_linkedin" href="https://www.addtoany.com/add_to/linkedin?linkurl=%2F2019%2F01%2Ftesting-integration-and-contracts-part-2%2F&amp;linkname=Testing%2C%20Integration%2C%20and%20Contracts%20%E2%80%93%20Part%202" title="LinkedIn" rel="nofollow noopener" target="_blank"></a><a class="a2a_button_print" href="https://www.addtoany.com/add_to/print?linkurl=%2F2019%2F01%2Ftesting-integration-and-contracts-part-2%2F&amp;linkname=Testing%2C%20Integration%2C%20and%20Contracts%20%E2%80%93%20Part%202" title="Print" rel="nofollow noopener" target="_blank"></a><a class="a2a_dd addtoany_share_save addtoany_share" href="https://www.addtoany.com/share"><img src="https://static.addtoany.com/buttons/favicon.png" alt="Share"></a>
+</div></div>      
+	</div>
+<!-- .entry-content -->
+	<footer class="entry-footer">       
+		<p class="written-by">This article was written by <a href="/author/administrator/">Jeff Nyman</a></p>
+<div class="author-bio">
+		
+	<h3><a href="/author/administrator/" rel="author">About  Jeff Nyman</a></h3>		
+	<img alt="" src="https://secure.gravatar.com/avatar/a3b6c2d0b2bafdb9ad9cdf782873204d?s=72&#038;d=mm&#038;r=pg" srcset="https://secure.gravatar.com/avatar/a3b6c2d0b2bafdb9ad9cdf782873204d?s=144&#038;d=mm&#038;r=pg 2x" class="avatar avatar-72 photo" height="72" width="72" decoding="async"><p class="author-description">Anything I put here is an approximation of the truth. You're getting a particular view of myself ... and it's the view I'm choosing to present to you. If you've never met me before in person, please realize I'm not the same in person as I am in writing. That's because I can only put part of myself down into words.
+
+If you have met me before in person then I'd ask you to consider that the view you've formed that way and the view you come to by reading what I say here may, in fact, both be true. I'd advise that you not automatically discard either viewpoint when they conflict or accept either as truth when they agree.</p>		
+</div>
+<!-- .author-bio -->
+	</footer><!-- .entry-footer -->
+
+	<nav class="navigation post-navigation" aria-label="Posts">
+		<h2 class="screen-reader-text">Post navigation</h2>
+		<div class="nav-links">
+<div class="nav-previous"><a href="/2019/01/testings-integration-and-contracts-part-1/" rel="prev"><span class="genericon genericon-previous" aria-hidden="true"></span> <span class="screen-reader-text">Previous post:</span> <span class="post-title">Testing, Integration, and Contracts &#8211; Part 1</span></a></div>
+<div class="nav-next"><a href="/2019/02/is-my-bug-for-developers-or-product/" rel="next"><span class="post-title">Is My Bug for Developers or Product?</span><span class="screen-reader-text">Next post:</span> <span class="genericon genericon-next" aria-hidden="true"></span> </a></div>
+</div>
+	</nav>
+<div id="comments" class="comments-area">
+
+
+		<div id="respond" class="comment-respond">
+		<h3 id="reply-title" class="comment-reply-title">Leave a Reply <small><a rel="nofollow" id="cancel-comment-reply-link" href="/2019/01/testing-integration-and-contracts-part-2/#respond" style="display:none;">Cancel reply</a></small>
+</h3>
+<form action="https://testerstories.com/wp-comments-post.php" method="post" id="commentform" class="comment-form" novalidate>
+<p class="comment-notes"><span id="email-notes">Your email address will not be published.</span> <span class="required-field-message">Required fields are marked <span class="required">*</span></span></p>
+<p class="comment-form-comment"><label for="comment">Comment <span class="required">*</span></label> <textarea id="comment" name="comment" cols="45" rows="8" maxlength="65525" required></textarea></p>
+<p class="comment-form-author"><label for="author">Name <span class="required">*</span></label> <input id="author" name="author" type="text" value="" size="30" maxlength="245" autocomplete="name" required></p>
+<p class="comment-form-email"><label for="email">Email <span class="required">*</span></label> <input id="email" name="email" type="email" value="" size="30" maxlength="100" aria-describedby="email-notes" autocomplete="email" required></p>
+<p class="comment-form-url"><label for="url">Website</label> <input id="url" name="url" type="url" value="" size="30" maxlength="200" autocomplete="url"></p>
+<p class="form-submit"><input name="submit" type="submit" id="submit" class="submit" value="Post Comment"> <input type="hidden" name="comment_post_ID" value="3636" id="comment_post_ID">
+<input type="hidden" name="comment_parent" id="comment_parent" value="0">
+</p>
+<p style="display: none;"><input type="hidden" id="akismet_comment_nonce" name="akismet_comment_nonce" value="35fa43b40b"></p>
+<p style="display: none !important;"><label>&#916;<textarea name="ak_hp_textarea" cols="45" rows="8" maxlength="100"></textarea></label><input type="hidden" id="ak_js_1" name="ak_js" value="148"><script>document.getElementById( "ak_js_1" ).setAttribute( "value", ( new Date() ).getTime() );</script></p>
+</form>	</div>
+<!-- #respond -->
+	<p class="akismet_comment_form_privacy_notice">This site uses Akismet to reduce spam. <a href="https://akismet.com/privacy/" target="_blank" rel="nofollow noopener">Learn how your comment data is processed</a>.</p>
+</div>
+<!-- #comments -->
+</article><!-- #post-## -->
+</main><!--/main-content-->
+	<aside id="sidebar-widget-area" class="sidebar-widget-area" role="complementary">
+		<a class="screen-reader-text skip-link" href="#page-footer">Skip to footer</a>
+
+		<section id="sidebar" class="widget-area sidebar">
+			<div id="text-6" class="widget widget_text">			<div class="textwidget">
+<p><a href="https://www.linkedin.com/pub/jeff-nyman/12/b32/16a"><br>
+<img decoding="async" src="https://static.licdn.com/scds/common/u/img/webpromo/btn_myprofile_160x33.png" alt="View Jeff Nyman's profile on LinkedIn" width="160" height="33" border="0"></a></p>
+</div>
+		</div>
+<div id="categories-5" class="widget widget_categories">
+<h2 class="widget-title">Topics</h2>
+			<ul>
+					<li class="cat-item cat-item-58">
+<a href="/category/agile/">Agile</a> (2)
+</li>
+	<li class="cat-item cat-item-49">
+<a href="/category/ai/">AI</a> (24)
+<ul class="children">
+	<li class="cat-item cat-item-50">
+<a href="/category/ai/machine-learning/">Machine Learning</a> (12)
+	<ul class="children">
+	<li class="cat-item cat-item-55">
+<a href="/category/ai/machine-learning/ml-series-1/">ML Series 1</a> (2)
+</li>
+	<li class="cat-item cat-item-56">
+<a href="/category/ai/machine-learning/ml-series-2/">ML Series 2</a> (4)
+</li>
+	<li class="cat-item cat-item-57">
+<a href="/category/ai/machine-learning/ml-series-3/">ML Series 3</a> (6)
+</li>
+	</ul>
+</li>
+</ul>
+</li>
+	<li class="cat-item cat-item-11">
+<a href="/category/automation/">Automation</a> (68)
+<ul class="children">
+	<li class="cat-item cat-item-41">
+<a href="/category/automation/c/">C#</a> (2)
+</li>
+	<li class="cat-item cat-item-8">
+<a href="/category/automation/capybara/">Capybara</a> (11)
+</li>
+	<li class="cat-item cat-item-9">
+<a href="/category/automation/cucumber/">Cucumber</a> (10)
+</li>
+	<li class="cat-item cat-item-31">
+<a href="/category/automation/cucumber-jvm/">Cucumber-JVM</a> (6)
+</li>
+	<li class="cat-item cat-item-42">
+<a href="/category/automation/groovy/">Groovy</a> (1)
+</li>
+	<li class="cat-item cat-item-40">
+<a href="/category/automation/java/">Java</a> (9)
+</li>
+	<li class="cat-item cat-item-10">
+<a href="/category/automation/qtp/">QTP</a> (6)
+</li>
+	<li class="cat-item cat-item-5">
+<a href="/category/automation/rspec/">RSpec</a> (4)
+</li>
+	<li class="cat-item cat-item-7">
+<a href="/category/automation/selenium/">Selenium</a> (17)
+</li>
+	<li class="cat-item cat-item-39">
+<a href="/category/automation/serenity/">Serenity</a> (8)
+</li>
+	<li class="cat-item cat-item-30">
+<a href="/category/automation/symbiont/">Symbiont</a> (11)
+</li>
+	<li class="cat-item cat-item-51">
+<a href="/category/automation/tapestry/">Tapestry</a> (6)
+</li>
+	<li class="cat-item cat-item-6">
+<a href="/category/automation/watir/">Watir</a> (4)
+</li>
+</ul>
+</li>
+	<li class="cat-item cat-item-13">
+<a href="/category/bdd/">BDD</a> (24)
+<ul class="children">
+	<li class="cat-item cat-item-23">
+<a href="/category/bdd/tdl/">TDL</a> (17)
+</li>
+</ul>
+</li>
+	<li class="cat-item cat-item-25">
+<a href="/category/career/">Career</a> (33)
+<ul class="children">
+	<li class="cat-item cat-item-53">
+<a href="/category/career/interview/">Interview</a> (10)
+</li>
+</ul>
+</li>
+	<li class="cat-item cat-item-15">
+<a href="/category/communication/">Communication</a> (16)
+</li>
+	<li class="cat-item cat-item-65">
+<a href="/category/crime-scene/">Crime Scene</a> (4)
+</li>
+	<li class="cat-item cat-item-52">
+<a href="/category/data-science/">Data Science</a> (4)
+</li>
+	<li class="cat-item cat-item-61">
+<a href="/category/development/">Development</a> (39)
+<ul class="children">
+	<li class="cat-item cat-item-36">
+<a href="/category/development/chef/">Chef</a> (2)
+</li>
+	<li class="cat-item cat-item-32">
+<a href="/category/development/inform-7/">Inform 7</a> (3)
+</li>
+	<li class="cat-item cat-item-38">
+<a href="/category/development/javascript-test-solutions/">JavaScript</a> (6)
+</li>
+	<li class="cat-item cat-item-19">
+<a href="/category/development/language-building/">Language Building</a> (9)
+	<ul class="children">
+	<li class="cat-item cat-item-20">
+<a href="/category/development/language-building/rex-and-racc/">Rex and Racc</a> (3)
+</li>
+	</ul>
+</li>
+	<li class="cat-item cat-item-48">
+<a href="/category/development/python/">Python</a> (4)
+</li>
+	<li class="cat-item cat-item-29">
+<a href="/category/development/rails/">Rails</a> (4)
+</li>
+	<li class="cat-item cat-item-21">
+<a href="/category/development/web-development/">Web Development</a> (11)
+	<ul class="children">
+	<li class="cat-item cat-item-34">
+<a href="/category/development/web-development/node-js/">Node.js</a> (5)
+</li>
+	<li class="cat-item cat-item-22">
+<a href="/category/development/web-development/sinatra/">Sinatra</a> (6)
+</li>
+	</ul>
+</li>
+</ul>
+</li>
+	<li class="cat-item cat-item-28">
+<a href="/category/dialect/">Dialect</a> (6)
+</li>
+	<li class="cat-item cat-item-45">
+<a href="/category/exploration/">Exploration</a> (14)
+<ul class="children">
+	<li class="cat-item cat-item-46">
+<a href="/category/exploration/interactive/">Interactive</a> (6)
+</li>
+</ul>
+</li>
+	<li class="cat-item cat-item-44">
+<a href="/category/indefinito/">Indefinito</a> (11)
+</li>
+	<li class="cat-item cat-item-17">
+<a href="/category/learning/">Learning</a> (11)
+</li>
+	<li class="cat-item cat-item-24">
+<a href="/category/lucid/">Lucid</a> (11)
+</li>
+	<li class="cat-item cat-item-62">
+<a href="/category/product-development/">Product Development</a> (7)
+</li>
+	<li class="cat-item cat-item-64">
+<a href="/category/product-management/">Product Management</a> (3)
+</li>
+	<li class="cat-item cat-item-3">
+<a href="/category/quality/">Quality</a> (7)
+</li>
+	<li class="cat-item cat-item-14">
+<a href="/category/quality-assurance/">Quality Assurance</a> (5)
+</li>
+	<li class="cat-item cat-item-35">
+<a href="/category/specify/">Specify</a> (2)
+</li>
+	<li class="cat-item cat-item-16">
+<a href="/category/symbiont-pg/">Symbiont-PG</a> (4)
+</li>
+	<li class="cat-item cat-item-27">
+<a href="/category/test-solutions/">Test Solutions</a> (11)
+</li>
+	<li class="cat-item cat-item-4">
+<a href="/category/testing/">Testing</a> (167)
+<ul class="children">
+	<li class="cat-item cat-item-59">
+<a href="/category/testing/contracts/">Contracts</a> (2)
+</li>
+	<li class="cat-item cat-item-63">
+<a href="/category/testing/epistemology/">Epistemology</a> (1)
+</li>
+	<li class="cat-item cat-item-67">
+<a href="/category/testing/games/">Games</a> (8)
+</li>
+	<li class="cat-item cat-item-68">
+<a href="/category/testing/history-and-science/">History and Science</a> (5)
+</li>
+	<li class="cat-item cat-item-43">
+<a href="/category/testing/modern-testing/">Modern Testing</a> (15)
+</li>
+	<li class="cat-item cat-item-54">
+<a href="/category/testing/testability/">Testability</a> (9)
+</li>
+</ul>
+</li>
+	<li class="cat-item cat-item-12">
+<a href="/category/thinking/">Thinking</a> (22)
+</li>
+	<li class="cat-item cat-item-47">
+<a href="/category/what-if/">What If</a> (1)
+</li>
+	<li class="cat-item cat-item-69">
+<a href="/category/zmachine/">Z-Machine</a> (7)
+</li>
+			</ul>
+
+			</div>
+<div id="archives-5" class="widget widget_archive">
+<h2 class="widget-title">Archives</h2>		<label class="screen-reader-text" for="archives-dropdown-5">Archives</label>
+		<select id="archives-dropdown-5" name="archive-dropdown">
+			
+			<option value="">Select Month</option>
+				<option value="https://testerstories.com/2023/06/"> June 2023 </option>
+	<option value="https://testerstories.com/2023/05/"> May 2023 </option>
+	<option value="https://testerstories.com/2023/04/"> April 2023 </option>
+	<option value="https://testerstories.com/2023/03/"> March 2023 </option>
+	<option value="https://testerstories.com/2023/02/"> February 2023 </option>
+	<option value="https://testerstories.com/2023/01/"> January 2023 </option>
+	<option value="https://testerstories.com/2022/12/"> December 2022 </option>
+	<option value="https://testerstories.com/2022/11/"> November 2022 </option>
+	<option value="https://testerstories.com/2022/10/"> October 2022 </option>
+	<option value="https://testerstories.com/2022/07/"> July 2022 </option>
+	<option value="https://testerstories.com/2022/06/"> June 2022 </option>
+	<option value="https://testerstories.com/2022/05/"> May 2022 </option>
+	<option value="https://testerstories.com/2022/03/"> March 2022 </option>
+	<option value="https://testerstories.com/2022/02/"> February 2022 </option>
+	<option value="https://testerstories.com/2022/01/"> January 2022 </option>
+	<option value="https://testerstories.com/2021/12/"> December 2021 </option>
+	<option value="https://testerstories.com/2021/10/"> October 2021 </option>
+	<option value="https://testerstories.com/2021/08/"> August 2021 </option>
+	<option value="https://testerstories.com/2021/07/"> July 2021 </option>
+	<option value="https://testerstories.com/2021/06/"> June 2021 </option>
+	<option value="https://testerstories.com/2021/05/"> May 2021 </option>
+	<option value="https://testerstories.com/2021/04/"> April 2021 </option>
+	<option value="https://testerstories.com/2021/03/"> March 2021 </option>
+	<option value="https://testerstories.com/2021/02/"> February 2021 </option>
+	<option value="https://testerstories.com/2021/01/"> January 2021 </option>
+	<option value="https://testerstories.com/2020/11/"> November 2020 </option>
+	<option value="https://testerstories.com/2020/10/"> October 2020 </option>
+	<option value="https://testerstories.com/2020/09/"> September 2020 </option>
+	<option value="https://testerstories.com/2020/07/"> July 2020 </option>
+	<option value="https://testerstories.com/2020/06/"> June 2020 </option>
+	<option value="https://testerstories.com/2020/05/"> May 2020 </option>
+	<option value="https://testerstories.com/2020/02/"> February 2020 </option>
+	<option value="https://testerstories.com/2020/01/"> January 2020 </option>
+	<option value="https://testerstories.com/2019/12/"> December 2019 </option>
+	<option value="https://testerstories.com/2019/11/"> November 2019 </option>
+	<option value="https://testerstories.com/2019/10/"> October 2019 </option>
+	<option value="https://testerstories.com/2019/09/"> September 2019 </option>
+	<option value="https://testerstories.com/2019/08/"> August 2019 </option>
+	<option value="https://testerstories.com/2019/07/"> July 2019 </option>
+	<option value="https://testerstories.com/2019/06/"> June 2019 </option>
+	<option value="https://testerstories.com/2019/05/"> May 2019 </option>
+	<option value="https://testerstories.com/2019/04/"> April 2019 </option>
+	<option value="https://testerstories.com/2019/03/"> March 2019 </option>
+	<option value="https://testerstories.com/2019/02/"> February 2019 </option>
+	<option value="https://testerstories.com/2019/01/"> January 2019 </option>
+	<option value="https://testerstories.com/2018/12/"> December 2018 </option>
+	<option value="https://testerstories.com/2018/11/"> November 2018 </option>
+	<option value="https://testerstories.com/2018/10/"> October 2018 </option>
+	<option value="https://testerstories.com/2018/09/"> September 2018 </option>
+	<option value="https://testerstories.com/2018/08/"> August 2018 </option>
+	<option value="https://testerstories.com/2018/07/"> July 2018 </option>
+	<option value="https://testerstories.com/2018/06/"> June 2018 </option>
+	<option value="https://testerstories.com/2018/05/"> May 2018 </option>
+	<option value="https://testerstories.com/2018/04/"> April 2018 </option>
+	<option value="https://testerstories.com/2018/03/"> March 2018 </option>
+	<option value="https://testerstories.com/2018/02/"> February 2018 </option>
+	<option value="https://testerstories.com/2018/01/"> January 2018 </option>
+	<option value="https://testerstories.com/2017/12/"> December 2017 </option>
+	<option value="https://testerstories.com/2017/11/"> November 2017 </option>
+	<option value="https://testerstories.com/2017/10/"> October 2017 </option>
+	<option value="https://testerstories.com/2017/09/"> September 2017 </option>
+	<option value="https://testerstories.com/2017/08/"> August 2017 </option>
+	<option value="https://testerstories.com/2017/07/"> July 2017 </option>
+	<option value="https://testerstories.com/2017/06/"> June 2017 </option>
+	<option value="https://testerstories.com/2017/05/"> May 2017 </option>
+	<option value="https://testerstories.com/2017/04/"> April 2017 </option>
+	<option value="https://testerstories.com/2017/03/"> March 2017 </option>
+	<option value="https://testerstories.com/2017/02/"> February 2017 </option>
+	<option value="https://testerstories.com/2017/01/"> January 2017 </option>
+	<option value="https://testerstories.com/2016/12/"> December 2016 </option>
+	<option value="https://testerstories.com/2016/11/"> November 2016 </option>
+	<option value="https://testerstories.com/2016/10/"> October 2016 </option>
+	<option value="https://testerstories.com/2016/09/"> September 2016 </option>
+	<option value="https://testerstories.com/2016/08/"> August 2016 </option>
+	<option value="https://testerstories.com/2016/07/"> July 2016 </option>
+	<option value="https://testerstories.com/2016/06/"> June 2016 </option>
+	<option value="https://testerstories.com/2016/04/"> April 2016 </option>
+	<option value="https://testerstories.com/2016/03/"> March 2016 </option>
+	<option value="https://testerstories.com/2016/02/"> February 2016 </option>
+	<option value="https://testerstories.com/2016/01/"> January 2016 </option>
+	<option value="https://testerstories.com/2015/12/"> December 2015 </option>
+	<option value="https://testerstories.com/2015/11/"> November 2015 </option>
+	<option value="https://testerstories.com/2015/10/"> October 2015 </option>
+	<option value="https://testerstories.com/2015/09/"> September 2015 </option>
+	<option value="https://testerstories.com/2015/08/"> August 2015 </option>
+	<option value="https://testerstories.com/2015/07/"> July 2015 </option>
+	<option value="https://testerstories.com/2015/06/"> June 2015 </option>
+	<option value="https://testerstories.com/2015/05/"> May 2015 </option>
+	<option value="https://testerstories.com/2015/04/"> April 2015 </option>
+	<option value="https://testerstories.com/2015/03/"> March 2015 </option>
+	<option value="https://testerstories.com/2015/02/"> February 2015 </option>
+	<option value="https://testerstories.com/2014/12/"> December 2014 </option>
+	<option value="https://testerstories.com/2014/11/"> November 2014 </option>
+	<option value="https://testerstories.com/2014/10/"> October 2014 </option>
+	<option value="https://testerstories.com/2014/09/"> September 2014 </option>
+	<option value="https://testerstories.com/2014/08/"> August 2014 </option>
+	<option value="https://testerstories.com/2014/07/"> July 2014 </option>
+	<option value="https://testerstories.com/2014/06/"> June 2014 </option>
+	<option value="https://testerstories.com/2014/05/"> May 2014 </option>
+	<option value="https://testerstories.com/2014/04/"> April 2014 </option>
+	<option value="https://testerstories.com/2014/03/"> March 2014 </option>
+	<option value="https://testerstories.com/2014/01/"> January 2014 </option>
+	<option value="https://testerstories.com/2013/12/"> December 2013 </option>
+	<option value="https://testerstories.com/2013/09/"> September 2013 </option>
+	<option value="https://testerstories.com/2013/08/"> August 2013 </option>
+	<option value="https://testerstories.com/2013/07/"> July 2013 </option>
+	<option value="https://testerstories.com/2013/06/"> June 2013 </option>
+	<option value="https://testerstories.com/2013/05/"> May 2013 </option>
+	<option value="https://testerstories.com/2013/03/"> March 2013 </option>
+	<option value="https://testerstories.com/2013/01/"> January 2013 </option>
+	<option value="https://testerstories.com/2012/12/"> December 2012 </option>
+	<option value="https://testerstories.com/2012/10/"> October 2012 </option>
+	<option value="https://testerstories.com/2012/09/"> September 2012 </option>
+	<option value="https://testerstories.com/2012/08/"> August 2012 </option>
+	<option value="https://testerstories.com/2012/07/"> July 2012 </option>
+	<option value="https://testerstories.com/2012/06/"> June 2012 </option>
+	<option value="https://testerstories.com/2012/05/"> May 2012 </option>
+	<option value="https://testerstories.com/2012/04/"> April 2012 </option>
+	<option value="https://testerstories.com/2012/03/"> March 2012 </option>
+	<option value="https://testerstories.com/2012/02/"> February 2012 </option>
+	<option value="https://testerstories.com/2012/01/"> January 2012 </option>
+	<option value="https://testerstories.com/2011/12/"> December 2011 </option>
+	<option value="https://testerstories.com/2011/11/"> November 2011 </option>
+	<option value="https://testerstories.com/2011/10/"> October 2011 </option>
+	<option value="https://testerstories.com/2011/09/"> September 2011 </option>
+	<option value="https://testerstories.com/2011/08/"> August 2011 </option>
+
+		</select>
+
+<script type="text/javascript">
+/* <![CDATA[ */
+(function() {
+	var dropdown = document.getElementById( "archives-dropdown-5" );
+	function onSelectChange() {
+		if ( dropdown.options[ dropdown.selectedIndex ].value !== '' ) {
+			document.location.href = this.options[ this.selectedIndex ].value;
+		}
+	}
+	dropdown.onchange = onSelectChange;
+})();
+/* ]]> */
+</script>
+			</div>
+<div id="meta-5" class="widget widget_meta">
+<h2 class="widget-title">Site</h2>
+		<ul>
+						<li><a href="/wp-login.php">Log in</a></li>
+			<li><a href="/feed/">Entries feed</a></li>
+			<li><a href="/comments/feed/">Comments feed</a></li>
+
+			<li><a href="https://wordpress.org/">WordPress.org</a></li>
+		</ul>
+
+		</div>
+<div id="text-4" class="widget widget_text">			<div class="textwidget"><a href="https://www.linkedin.com/pub/jeff-nyman/12/b32/16a">
+          <img src="https://static.licdn.com/scds/common/u/img/webpromo/btn_myprofile_160x33.png" width="160" height="33" border="0" alt="View Jeff Nyman's profile on LinkedIn"></a></div>
+		</div>
+<div id="search-3" class="widget widget_search">
+<form role="search" method="get" class="search-form" action="https://testerstories.com/">
+	<label>
+		<span class="screen-reader-text">Search for:</span>
+		<input type="search" class="search-field" placeholder="Search &hellip;" value="" name="s" title="Search for:">
+	</label>
+	<button type="submit" class="search-submit"><span class="genericon genericon-search" aria-hidden="true"></span><span class="screen-reader-text">Search</span></button>
+</form>
+</div>		</section><!-- #sidebar .widget-area -->
+
+	</aside>
+
+  
+
+<footer id="page-footer" role="contentinfo">
+	<div id="site-info" class="site-info">
+		<span class="footer-site-title"><a href="/" rel="home">Stories from a Software Tester</a></span>
+		<a href="https://wordpress.org/">Proudly powered by WordPress</a>
+	</div>
+<!--/site-info-->
+</footer> <!--/footer-->
+</div>
+<!-- #container -->
+            
+            <style type="text/css" class="darkmysite_inline_css">#darkmysite_switch_2013242453 {
+        --darkmysite_switch_apple_width_height: 60px;
+        --darkmysite_switch_apple_border_radius: 7px;
+        --darkmysite_switch_apple_icon_width: 30px;
+        --darkmysite_switch_apple_light_mode_bg: #121116;
+        --darkmysite_switch_apple_dark_mode_bg: #ffffff;
+        --darkmysite_switch_apple_light_mode_icon_color: #ffffff;
+        --darkmysite_switch_apple_dark_mode_icon_color: #121116;
+        }
+
+    #darkmysite_switch_2013242453 {
+        --darkmysite_switch_margin_from_top: 40px;
+        --darkmysite_switch_margin_from_bottom: 40px;
+        --darkmysite_switch_margin_from_left: 40px;
+        --darkmysite_switch_margin_from_right: 40px;
+        }</style>
+
+
+
+
+    <div id="darkmysite_switch_2013242453" class="darkmysite_switch  darkmysite_bottom_right   darkmysite_switch_apple" onclick="darkmysite_switch_trigger()">
+        <span class="darkmysite_switch_icon"></span>
+            </div>
+
+            
+    <script type="text/javascript" class="darkmysite_inline_js">document.addEventListener("DOMContentLoaded", function(event) {
+            darkmysite_init_alternative_dark_mode_switch();
+        });</script>
+
+
+<script type="text/javascript" id="acuarela-script-js-extra">
+/* <![CDATA[ */
+var acuarelaScreenReaderText = {"expand":"expand child menu","collapse":"collapse child menu"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="/wp-content/themes/acuarela/js/functions.js?ver=20190802" id="acuarela-script-js"></script>
+<script type="text/javascript" src="/wp-includes/js/comment-reply.min.js?ver=6.2.2" id="comment-reply-js"></script>
+<script defer type="text/javascript" src="/wp-content/plugins/akismet/_inc/akismet-frontend.js?ver=1680871091" id="akismet-frontend-js"></script>
+</body>
+</html>
