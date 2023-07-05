@@ -1,0 +1,2411 @@
+<!DOCTYPE html>
+<html lang="en-US">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="profile" href="http://gmpg.org/xfn/11">
+				<link rel="pingback" href="/xmlrpc.php">
+				<title>Human Test Design, Automated Test Execution &#8211; Stories from a Software Tester</title>
+<meta name="robots" content="max-image-preview:large">
+ <style type="text/css" class="darkmysite_inline_css">:root { --darkmysite_dark_mode_bg: #0f0f0f; --darkmysite_dark_mode_secondary_bg: #171717; --darkmysite_dark_mode_text_color: #bebebe; --darkmysite_dark_mode_link_color: #ffffff; --darkmysite_dark_mode_link_hover_color: #cccccc; --darkmysite_dark_mode_input_bg: #2d2d2d; --darkmysite_dark_mode_input_text_color: #bebebe; --darkmysite_dark_mode_input_placeholder_color: #989898; --darkmysite_dark_mode_border_color: #4a4a4a; --darkmysite_dark_mode_btn_bg: #2d2d2d; --darkmysite_dark_mode_btn_text_color: #bebebe; }</style> <style type="text/css" class="darkmysite_inline_css">.darkmysite_dark_mode_enabled::-webkit-scrollbar { background: #29292a !important; } .darkmysite_dark_mode_enabled::-webkit-scrollbar-track { background: #29292a !important; } .darkmysite_dark_mode_enabled::-webkit-scrollbar-thumb { background-color: #52565a !important; } .darkmysite_dark_mode_enabled::-webkit-scrollbar-corner { background-color: #52565a !important; } .darkmysite_dark_mode_enabled::-webkit-scrollbar-button { background-color: transparent !important; background-repeat: no-repeat !important; background-size: contain !important; background-position: center !important; } .darkmysite_dark_mode_enabled::-webkit-scrollbar-button:start { background-image: url(/wp-content/plugins/darkmysite/assets/img/others/scroll_arrow_up.svg) !important; } .darkmysite_dark_mode_enabled::-webkit-scrollbar-button:end { background-image: url(/wp-content/plugins/darkmysite/assets/img/others/scroll_arrow_down.svg) !important; } .darkmysite_dark_mode_enabled::-webkit-scrollbar-button:start:horizontal { background-image: url(/wp-content/plugins/darkmysite/assets/img/others/scroll_arrow_left.svg) !important; } .darkmysite_dark_mode_enabled::-webkit-scrollbar-button:end:horizontal { background-image: url(/wp-content/plugins/darkmysite/assets/img/others/scroll_arrow_right.svg) !important; }</style> <script type="text/javascript" class="darkmysite_inline_js">var darkmysite_switch_unique_id = "1806356306"; var darkmysite_is_this_admin_panel = "0"; var darkmysite_enable_default_dark_mode = "0"; var darkmysite_enable_os_aware = "1"; var darkmysite_enable_keyboard_shortcut = "1"; var darkmysite_enable_time_based_dark = "0"; var darkmysite_time_based_dark_start = "19:00"; var darkmysite_time_based_dark_stop = "07:00"; var darkmysite_alternative_dark_mode_switch = ""; var darkmysite_enable_low_image_brightness = "1"; var darkmysite_image_brightness_to = "80"; var darkmysite_enable_image_grayscale = "0"; var darkmysite_image_grayscale_to = "80"; var darkmysite_enable_bg_image_darken = "1"; var darkmysite_bg_image_darken_to = "60"; var darkmysite_enable_invert_inline_svg = "0"; var darkmysite_enable_low_video_brightness = "1"; var darkmysite_video_brightness_to = "80"; var darkmysite_enable_video_grayscale = "0"; var darkmysite_video_grayscale_to = "80"; var darkmysite_disallowed_elements = ".darkmysite_ignore, .darkmysite_ignore *, .darkmysite_switch, .darkmysite_switch *, .wp-block-button__link, .wp-block-button__link *";</script><link rel="dns-prefetch" href="//static.addtoany.com">
+<link rel="dns-prefetch" href="//fonts.googleapis.com">
+<link rel="alternate" type="application/rss+xml" title="Stories from a Software Tester &raquo; Feed" href="/feed/">
+<link rel="alternate" type="application/rss+xml" title="Stories from a Software Tester &raquo; Comments Feed" href="/comments/feed/">
+<link rel="alternate" type="application/rss+xml" title="Stories from a Software Tester &raquo; Human Test Design, Automated Test Execution Comments Feed" href="/2019/07/human-test-design-automated-test-execution/feed/">
+<script type="text/javascript">
+window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/14.0.0\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/14.0.0\/svg\/","svgExt":".svg","source":{"concatemoji":"\/wp-includes\/js\/wp-emoji-release.min.js?ver=6.2.2"}};
+/*! This file is auto-generated */
+!function(e,a,t){var n,r,o,i=a.createElement("canvas"),p=i.getContext&&i.getContext("2d");function s(e,t){p.clearRect(0,0,i.width,i.height),p.fillText(e,0,0);e=i.toDataURL();return p.clearRect(0,0,i.width,i.height),p.fillText(t,0,0),e===i.toDataURL()}function c(e){var t=a.createElement("script");t.src=e,t.defer=t.type="text/javascript",a.getElementsByTagName("head")[0].appendChild(t)}for(o=Array("flag","emoji"),t.supports={everything:!0,everythingExceptFlag:!0},r=0;r<o.length;r++)t.supports[o[r]]=function(e){if(p&&p.fillText)switch(p.textBaseline="top",p.font="600 32px Arial",e){case"flag":return s("🏳️‍⚧️","🏳️​⚧️")?!1:!s("🇺🇳","🇺​🇳")&&!s("🏴󠁧󠁢󠁥󠁮󠁧󠁿","🏴​󠁧​󠁢​󠁥​󠁮​󠁧​󠁿");case"emoji":return!s("🫱🏻‍🫲🏿","🫱🏻​🫲🏿")}return!1}(o[r]),t.supports.everything=t.supports.everything&&t.supports[o[r]],"flag"!==o[r]&&(t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&t.supports[o[r]]);t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&!t.supports.flag,t.DOMReady=!1,t.readyCallback=function(){t.DOMReady=!0},t.supports.everything||(n=function(){t.readyCallback()},a.addEventListener?(a.addEventListener("DOMContentLoaded",n,!1),e.addEventListener("load",n,!1)):(e.attachEvent("onload",n),a.attachEvent("onreadystatechange",function(){"complete"===a.readyState&&t.readyCallback()})),(e=t.source||{}).concatemoji?c(e.concatemoji):e.wpemoji&&e.twemoji&&(c(e.twemoji),c(e.wpemoji)))}(window,document,window._wpemojiSettings);
+</script>
+<style type="text/css">img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 0.07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}</style>
+	<link rel="stylesheet" id="urvanov_syntax_highlighter-css" href="/wp-content/plugins/urvanov-syntax-highlighter/css/min/urvanov_syntax_highlighter.min.css?ver=2.8.33" type="text/css" media="all">
+<link rel="stylesheet" id="crayon-theme-classic-css" href="/wp-content/plugins/urvanov-syntax-highlighter/themes/classic/classic.css?ver=2.8.33" type="text/css" media="all">
+<link rel="stylesheet" id="crayon-font-monaco-css" href="/wp-content/plugins/urvanov-syntax-highlighter/fonts/monaco.css?ver=2.8.33" type="text/css" media="all">
+<link rel="stylesheet" id="wp-block-library-css" href="/wp-includes/css/dist/block-library/style.min.css?ver=6.2.2" type="text/css" media="all">
+<style id="wp-block-library-theme-inline-css" type="text/css">.wp-block-audio figcaption{color:#555;font-size:13px;text-align:center}.is-dark-theme .wp-block-audio figcaption{color:hsla(0,0%,100%,.65)}.wp-block-audio{margin:0 0 1em}.wp-block-code{border:1px solid #ccc;border-radius:4px;font-family:Menlo,Consolas,monaco,monospace;padding:.8em 1em}.wp-block-embed figcaption{color:#555;font-size:13px;text-align:center}.is-dark-theme .wp-block-embed figcaption{color:hsla(0,0%,100%,.65)}.wp-block-embed{margin:0 0 1em}.blocks-gallery-caption{color:#555;font-size:13px;text-align:center}.is-dark-theme .blocks-gallery-caption{color:hsla(0,0%,100%,.65)}.wp-block-image figcaption{color:#555;font-size:13px;text-align:center}.is-dark-theme .wp-block-image figcaption{color:hsla(0,0%,100%,.65)}.wp-block-image{margin:0 0 1em}.wp-block-pullquote{border-bottom:4px solid;border-top:4px solid;color:currentColor;margin-bottom:1.75em}.wp-block-pullquote cite,.wp-block-pullquote footer,.wp-block-pullquote__citation{color:currentColor;font-size:.8125em;font-style:normal;text-transform:uppercase}.wp-block-quote{border-left:.25em solid;margin:0 0 1.75em;padding-left:1em}.wp-block-quote cite,.wp-block-quote footer{color:currentColor;font-size:.8125em;font-style:normal;position:relative}.wp-block-quote.has-text-align-right{border-left:none;border-right:.25em solid;padding-left:0;padding-right:1em}.wp-block-quote.has-text-align-center{border:none;padding-left:0}.wp-block-quote.is-large,.wp-block-quote.is-style-large,.wp-block-quote.is-style-plain{border:none}.wp-block-search .wp-block-search__label{font-weight:700}.wp-block-search__button{border:1px solid #ccc;padding:.375em .625em}:where(.wp-block-group.has-background){padding:1.25em 2.375em}.wp-block-separator.has-css-opacity{opacity:.4}.wp-block-separator{border:none;border-bottom:2px solid;margin-left:auto;margin-right:auto}.wp-block-separator.has-alpha-channel-opacity{opacity:1}.wp-block-separator:not(.is-style-wide):not(.is-style-dots){width:100px}.wp-block-separator.has-background:not(.is-style-dots){border-bottom:none;height:1px}.wp-block-separator.has-background:not(.is-style-wide):not(.is-style-dots){height:2px}.wp-block-table{margin:0 0 1em}.wp-block-table td,.wp-block-table th{word-break:normal}.wp-block-table figcaption{color:#555;font-size:13px;text-align:center}.is-dark-theme .wp-block-table figcaption{color:hsla(0,0%,100%,.65)}.wp-block-video figcaption{color:#555;font-size:13px;text-align:center}.is-dark-theme .wp-block-video figcaption{color:hsla(0,0%,100%,.65)}.wp-block-video{margin:0 0 1em}.wp-block-template-part.has-background{margin-bottom:0;margin-top:0;padding:1.25em 2.375em}</style>
+<link rel="stylesheet" id="classic-theme-styles-css" href="/wp-includes/css/classic-themes.min.css?ver=6.2.2" type="text/css" media="all">
+<style id="global-styles-inline-css" type="text/css">body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgba(6,147,227,1) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgba(252,185,0,1) 0%,rgba(255,105,0,1) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgba(255,105,0,1) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--duotone--dark-grayscale: url('#wp-duotone-dark-grayscale');--wp--preset--duotone--grayscale: url('#wp-duotone-grayscale');--wp--preset--duotone--purple-yellow: url('#wp-duotone-purple-yellow');--wp--preset--duotone--blue-red: url('#wp-duotone-blue-red');--wp--preset--duotone--midnight: url('#wp-duotone-midnight');--wp--preset--duotone--magenta-yellow: url('#wp-duotone-magenta-yellow');--wp--preset--duotone--purple-green: url('#wp-duotone-purple-green');--wp--preset--duotone--blue-orange: url('#wp-duotone-blue-orange');--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;--wp--preset--spacing--20: 0.44rem;--wp--preset--spacing--30: 0.67rem;--wp--preset--spacing--40: 1rem;--wp--preset--spacing--50: 1.5rem;--wp--preset--spacing--60: 2.25rem;--wp--preset--spacing--70: 3.38rem;--wp--preset--spacing--80: 5.06rem;--wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);--wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);--wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);--wp--preset--shadow--outlined: 6px 6px 0px -3px rgba(255, 255, 255, 1), 6px 6px rgba(0, 0, 0, 1);--wp--preset--shadow--crisp: 6px 6px 0px rgba(0, 0, 0, 1);}:where(.is-layout-flex){gap: 0.5em;}body .is-layout-flow > .alignleft{float: left;margin-inline-start: 0;margin-inline-end: 2em;}body .is-layout-flow > .alignright{float: right;margin-inline-start: 2em;margin-inline-end: 0;}body .is-layout-flow > .aligncenter{margin-left: auto !important;margin-right: auto !important;}body .is-layout-constrained > .alignleft{float: left;margin-inline-start: 0;margin-inline-end: 2em;}body .is-layout-constrained > .alignright{float: right;margin-inline-start: 2em;margin-inline-end: 0;}body .is-layout-constrained > .aligncenter{margin-left: auto !important;margin-right: auto !important;}body .is-layout-constrained > :where(:not(.alignleft):not(.alignright):not(.alignfull)){max-width: var(--wp--style--global--content-size);margin-left: auto !important;margin-right: auto !important;}body .is-layout-constrained > .alignwide{max-width: var(--wp--style--global--wide-size);}body .is-layout-flex{display: flex;}body .is-layout-flex{flex-wrap: wrap;align-items: center;}body .is-layout-flex > *{margin: 0;}:where(.wp-block-columns.is-layout-flex){gap: 2em;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
+.wp-block-navigation a:where(:not(.wp-element-button)){color: inherit;}
+:where(.wp-block-columns.is-layout-flex){gap: 2em;}
+.wp-block-pullquote{font-size: 1.5em;line-height: 1.6;}</style>
+<link rel="stylesheet" id="darkmysite-client-main-css" href="/wp-content/plugins/darkmysite/assets/css/client_main.css?ver=1.2.6" type="text/css" media="all">
+<link rel="stylesheet" id="plyr-css-css" href="/wp-content/plugins/easy-video-player/lib/plyr.css?ver=6.2.2" type="text/css" media="all">
+<link rel="stylesheet" id="acuarela-fonts-css" href="https://fonts.googleapis.com/css?family=Lato%3A300italic%2C400italic%2C700italic%2C300%2C400%2C700%7CArima+Madurai%3A700%2C800%7CInconsolata%3A400%2C700&#038;subset=latin%2Clatin-ext&#038;ver=20190802" type="text/css" media="all">
+<link rel="stylesheet" id="genericons-css" href="/wp-content/themes/acuarela/genericons/genericons.css?ver=3.4.1" type="text/css" media="all">
+<link rel="stylesheet" id="animate-css" href="/wp-content/themes/acuarela/css/animate.css?ver=3.7.2" type="text/css" media="all">
+<link rel="stylesheet" id="acuarela-style-css" href="/wp-content/themes/acuarela/style.css?ver=6.2.2" type="text/css" media="all">
+<link rel="stylesheet" id="addtoany-css" href="/wp-content/plugins/add-to-any/addtoany.min.css?ver=1.16" type="text/css" media="all">
+<script type="text/javascript" src="/wp-includes/js/jquery/jquery.min.js?ver=3.6.4" id="jquery-core-js"></script>
+<script type="text/javascript" src="/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.4.0" id="jquery-migrate-js"></script>
+<script type="text/javascript" id="urvanov_syntax_highlighter_js-js-extra">
+/* <![CDATA[ */
+var UrvanovSyntaxHighlighterSyntaxSettings = {"version":"2.8.33","is_admin":"0","ajaxurl":"\/wp-admin\/admin-ajax.php","prefix":"urvanov-syntax-highlighter-","setting":"urvanov-syntax-highlighter-setting","selected":"urvanov-syntax-highlighter-setting-selected","changed":"urvanov-syntax-highlighter-setting-changed","special":"urvanov-syntax-highlighter-setting-special","orig_value":"data-orig-value","debug":""};
+var UrvanovSyntaxHighlighterSyntaxStrings = {"copy":"Copied to the clipboard","minimize":"Click To Expand Code"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="/wp-content/plugins/urvanov-syntax-highlighter/js/min/urvanov_syntax_highlighter.min.js?ver=2.8.33" id="urvanov_syntax_highlighter_js-js"></script>
+<script type="text/javascript" id="addtoany-core-js-before">window.a2a_config=window.a2a_config||{};a2a_config.callbacks=[];a2a_config.overlays=[];a2a_config.templates={};</script>
+<script type="text/javascript" async src="https://static.addtoany.com/menu/page.js" id="addtoany-core-js"></script>
+<script type="text/javascript" async src="/wp-content/plugins/add-to-any/addtoany.min.js?ver=1.1" id="addtoany-jquery-js"></script>
+<script type="text/javascript" src="/wp-content/plugins/darkmysite/assets/js/client_main.js?ver=1.2.6" id="darkmysite-client-main-js"></script>
+<script type="text/javascript" id="plyr-js-js-extra">
+/* <![CDATA[ */
+var easy_video_player = {"plyr_iconUrl":"\/wp-content\/plugins\/easy-video-player\/lib\/plyr.svg","plyr_blankVideo":"\/wp-content\/plugins\/easy-video-player\/lib\/blank.mp4"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="/wp-content/plugins/easy-video-player/lib/plyr.js?ver=6.2.2" id="plyr-js-js"></script>
+<link rel="https://api.w.org/" href="/wp-json/">
+<link rel="alternate" type="application/json" href="/wp-json/wp/v2/posts/3740">
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="/xmlrpc.php?rsd">
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="/wp-includes/wlwmanifest.xml">
+<meta name="generator" content="WordPress 6.2.2">
+<link rel="canonical" href="/2019/07/human-test-design-automated-test-execution/">
+<link rel="shortlink" href="/?p=3740">
+<link rel="alternate" type="application/json+oembed" href="/wp-json/oembed/1.0/embed?url=https%3A%2F%2F%2F2019%2F07%2Fhuman-test-design-automated-test-execution%2F">
+<link rel="alternate" type="text/xml+oembed" href="/wp-json/oembed/1.0/embed?url=https%3A%2F%2F%2F2019%2F07%2Fhuman-test-design-automated-test-execution%2F#038;format=xml">
+<link type="text/css" rel="stylesheet" href="/wp-content/plugins/category-specific-rss-feed-menu/wp_cat_rss_style.css">
+<!--Custom Styling-->
+<style media="screen" type="text/css">.site-description { color: #222222}
+.site-title, .entry-title, .post-title, .widget-title, .posts-navigation .nav-links { font-family: Arima Madurai}
+ body { font-family: Lato}</style>
+	<style id="acuarela-header-css" type="text/css"></style>
+<style type="text/css" id="custom-background-css">body.custom-background { background-image: url("/wp-content/uploads/2020/10/low_contrast_linen.png"); background-position: left top; background-size: cover; background-repeat: no-repeat; background-attachment: fixed; }</style>
+			<style type="text/css" id="wp-custom-css">@font-face {
+  font-family: "Open Sans";
+  font-weight: 400;
+  font-style: normal;
+  src: local("Open Sans Regular"), local("OpenSans-Regular"), url("/fonts/OpenSans-Regular.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Open Sans Bold";
+  font-weight: 700;
+  font-style: normal;
+  src: local("Open Sans Bold"), local("OpenSans-Bold"), url("/fonts/OpenSans-Bold.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Open Sans Italic";
+  font-weight: 400;
+  font-style: normal;
+  src: local("Open Sans Italic"), local("OpenSans-Italic"), url("/fonts/OpenSans-Italic.woff") format("woff");
+}
+
+:root{
+	--primary: #01408e;
+	--secondary: #3c5d5c;
+	--initialLine: #ad2271;
+	--drop: #903;
+	--paraIndent: 1.25em;
+	--note: #4d5b7c;
+	--bq-color: #555555;
+	--bq-back: #ededed;
+	--sans: "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+	--mono: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
+    "Courier New", monospace;
+}
+/* For the top menu bar. */
+.site-navigation a {
+	padding: 0.9em 1.5em;
+}
+
+:where(html, body) {
+	overscroll-behavior-y: none;
+	cursor: url("/cursors/default.cur"), auto;
+}
+
+:where(p, h1, h2, h3, h4, h5, h6, blockquote, figcaption) {
+	cursor: url("/cursors/text-select.cur"), auto;
+}
+
+:where(ul, ol) {
+	margin: 1em 1em;
+	text-align: justify;
+	text-justify: inter-word;
+	cursor: url("/cursors/text-select.cur"), auto;
+}
+
+:where(aside, article) a {
+	cursor: url("/cursors/link-select.cur"), auto;
+}
+
+select, button, input,
+.wp-element-button,
+.darkmysite_switch,
+.site-title,
+.site-description {
+	cursor: url("/cursors/link-select.cur"), auto;
+}
+
+::selection {
+  color: #fff;
+  background: rgba(0, 0, 0, 0.99);
+}
+
+main,
+header {
+	font-size: 1rem;
+}
+
+main {
+	/*From here: https://fluidtypography.com/#app-get-started*/
+	/* Settings: 414-1280; 16-20; 1.6-1.3*/
+	font-size: clamp(1rem, 0.462vw + 0.88rem, 1.25rem);
+line-height: clamp(1.6rem, 0.046vw + 1.588rem, 1.625rem);
+}
+
+article {
+	font-family: var(--sans);
+	line-height: 1.6;
+  word-spacing: 0.16em;
+}
+
+h1:not(.site-title) {
+  font-size: 2.5em;
+  margin: 0.67em 0;
+  text-align: center;
+}
+
+:where(h1, h2, h3, h4) {
+	text-rendering: optimizeLegibility;
+	line-height: 1.4em;
+}
+
+article :where(h2, h3) {
+	margin-bottom: 0.7em;
+}
+
+p {
+	font-size: 1.2em;
+	text-align: justify;
+	text-justify: inter-word;
+}
+
+p:first-of-type:first-line {
+	color: var(--initialLine);
+}
+
+li {
+  margin-bottom: 0.5em;
+}
+
+/* This makes sure the first line of blockquotes are not colored since in Wordpress, a blockquote content has a paragraph tag applied to it. */
+:where(blockquote, footer, .comments-area) p:first-of-type:first-line {
+	color: inherit;
+}
+:where(p, blockquote, img, pre, ul, ol) + p:not(.note) {
+  text-indent: var(--paraIndent);
+}
+section > h3 + p::first-letter,
+section > h2 + p::first-letter,
+div.entry-content > p:not(.nostyle):first-child::first-letter {
+	color: var(--drop);
+  border-left: 2px solid var(--drop);
+  border-top: 2px solid var(--drop);
+  float: left;
+  font-family: Georgia;
+  font-size: 65px;
+  line-height: 60px;
+  padding-top: 4px;
+  padding-right: 12px;
+  padding-left: 3px;
+}
+
+:where(aside, article) a {
+	color: var(--primary);
+	text-underline-position: under;
+	text-decoration: underline 2px;
+	transition: all 0.3s linear;
+  background: linear-gradient(to right, #00d1b1 0%, #278fc6 98%);
+  background-size: 0px 2px;
+  background-repeat: no-repeat;
+  background-position: left 10%;
+  text-shadow: 0;
+}
+
+article a:hover {
+  background-size: 100% 2px;
+  color: var(--secondary);
+}
+
+article a:focus {
+  color: var(--secondary);
+}
+
+/* Handling external links to show an icon after them, but excluding links that are part of the TesterStories site. */
+
+a[href*="http"]::after,
+a[href*="https"]::after {
+  content: "";
+  width: 16px;
+  height: 16px;
+  margin-left: 4px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='currentColor' viewBox='0 0 16 16'%3E%3Cpath fill-rule='evenodd' d='M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5z'/%3E%3Cpath fill-rule='evenodd' d='M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0v-5z'/%3E%3C/svg%3E");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  display: inline-block;
+}
+
+a[href^="https://www.linkedin.com/"]::after {
+  content: none;
+}
+
+a[href^="https://testerstories.com/"]::after {
+  display: none !important;
+}
+
+img.framed {
+  --b: 10px;
+  margin: 0 auto;
+  padding: var(--b);
+  border: calc(2 * var(--b)) solid #0000;
+  border-radius: 25px;
+  outline: 1px solid #000;
+  outline-offset: calc(-1 * var(--b));
+  background: conic-gradient(from 90deg at 1px 1px, #0000 90deg, #000 0);
+}
+
+img.backframed {
+  margin: 0 auto;
+  border: 3px solid black;
+  box-shadow: -50px -50px 0 -40px #555555, 50px 50px 0 -40px #555555;
+}
+
+.note {
+  border: 1px solid rgb(107, 113, 177);
+  color: var(--note);
+  border-radius: 16px;
+  padding: 0.5em 0.8em;
+  margin: 1.9em;
+}
+
+.post {
+	background-color: white;
+}
+
+.entry-content li {
+	font-size: 1.2em;
+}
+
+.simplequote {
+	background: #fff url(/2019/07/human-test-design-automated-test-execution/images/box_quote.png) no-repeat;
+	padding: 5px;
+	margin-top: 20px; margin-bottom: 20px;
+	margin-left: 50px; margin-right: 50px;
+	border: 3px solid #cecece;
+	text-indent: 25px;
+}
+
+p.example {
+	padding: 1ex;
+	margin-right: 50px; margin-left: 50px;
+	border: .5ex solid #808080;
+	color: #000000;
+	line-height: 1.2;
+	text-indent: 0em;
+}
+
+#headquote blockquote {
+	text-align: left;
+	margin: 0 auto 20px auto;
+	color: #555;
+	background: #eee url(/2019/07/human-test-design-automated-test-execution/images/quote_top.gif) no-repeat top left;
+}
+
+#headquote blockquote {
+	width: 370px;
+	font-size: 110%;
+	letter-spacing: -1px;
+	line-height: 1.2em;
+}
+
+#headquote #quote {
+	margin-left: 40px;
+	padding: 20px 20px 10px 20px;
+	background: url(/2019/07/human-test-design-automated-test-execution/images/quote_bottom.gif) no-repeat right bottom;
+}
+
+#headquote #author {
+	margin: 0;
+	text-align: center;
+	padding: 0 0 10px 0;
+	color: #999;
+	font-size: 95%;
+}
+
+#headquote blockquote strong {
+	color: #000;
+	font-weight: normal;
+}
+
+/* Center images. */
+
+img {
+	display: block;
+  margin: 0 auto;
+}
+
+img.smaller {
+  width: 200px;
+}
+
+img.even-smaller {
+  width: 100px;
+}
+
+table td.code {
+  font-family: "Courier New", courier, monospace;
+  font-size: 11.5px;
+}
+
+p.box {
+	font-family: Georgia, "Times New Roman", Times, serif;
+	text-align: justify;
+	padding-top: 25px;
+	margin: 0;
+	line-height: 1.2;
+}
+
+pre.box {
+	white-space: pre-wrap;
+	background-color: white;
+	border: 1px solid;
+}
+
+p.tip {
+	padding-bottom: 10px; padding-top: 10px;
+	padding-right: 10px; padding-left: 10px;
+	border: 1px solid;
+}
+
+div.aside {
+	padding-bottom: 10px; padding-top: 10px;
+	padding-right: 10px; padding-left: 10px;
+	margin-right: 50px; margin-left: 50px;
+	border: 1px dotted;
+}
+
+div.aside pre {
+	white-space: pre-wrap;
+}
+
+pre.view {
+	font-family: "Courier New", Courier, monospace;
+        //font-size: 16px;
+	padding-bottom: 10px; padding-top: 10px;
+	padding-right: 10px; padding-left: 10px;
+	white-space: pre-wrap;
+	background: rgb(255,255,255); /* Old browsers */
+	background: -moz-linear-gradient(top,  rgba(255,255,255,1) 0%, rgba(229,229,229,1) 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,1)), color-stop(100%,rgba(229,229,229,1))); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(229,229,229,1) 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(229,229,229,1) 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(229,229,229,1) 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  rgba(255,255,255,1) 0%,rgba(229,229,229,1) 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#e5e5e5',GradientType=0 ); /* IE6-9 */
+	border: 1px solid;
+	text-align: justify;
+}
+
+pre.view .string {
+	color: #3366CC;
+}
+
+pre.view .sub {
+        color: #8333FF;
+}
+
+pre.view .comment {
+	color: #009900;
+}
+
+pre.view .highlight {
+	background-color: #FFFF00;
+	border: 1px solid;
+	border-style: dotted;
+}
+
+pre.output .highlight {
+	background-color: rgb(255,255,255);
+	color: red;
+	border: 1px solid;
+	border-style: dotted;
+}
+
+pre.output {
+	font-family: "Courier New", Courier, monospace;
+        //font-size: 16px;
+	padding-bottom: 10px; padding-top: 10px;
+	padding-right: 10px; padding-left: 10px;
+	white-space: pre-wrap;
+	background: black;
+	color: white;
+}
+
+blockquote {
+  position: relative;
+  width: 80%;
+  margin: 50px auto;
+  padding: 1.2em 30px 1.2em 55px;
+  color: var(--bq-color);
+  background-color: var(--bq-back);
+  border-left: 8px solid #78c0a8;
+  text-align: justify;
+}
+
+blockquote::before {
+  position: absolute;
+	left: 5px;
+	top: -10px;
+	/* Line height needed here to avoid the quote appearing out of place due to calculated line heights for the article. */
+	line-height: 1.6;
+	content: "\201C";
+	color: #78c0a8;
+	font-size: 4em;
+}
+
+blockquote::after {
+	content: "";
+}
+
+blockquote span {
+	display: block;
+	color: #333333;
+	font-style: normal;
+  font-weight: bold;
+  margin-top: 1em;
+}
+
+img.frame {
+  --b: 10px;
+  padding: var(--b);
+  border: calc(2 * var(--b)) solid #0000;
+  outline: 1px solid #000;
+  outline-offset: calc(-1 * var(--b));
+  border-radius: 25px;
+  background: conic-gradient(from 90deg at 1px 1px, #0000 90deg, #000 0);
+  display: block;
+  margin: auto;
+  margin-bottom: 1rem;
+}
+
+code {
+  font-size: 0.9em;
+  padding: 0.0625rem 0.5rem;
+  border-radius: 0.125rem;
+  border: 1px solid #d33a2c;
+  box-shadow: 1px 1px #d33a2c, 2px 2px #d33a2c;
+  margin: 0 0.25rem;
+  color: #d33a2c;
+  font-family: monospace;
+}
+
+pre {
+  font-family: var(--mono);
+  max-width: 100%;
+	padding: 0;
+}
+
+pre code {
+  word-spacing: normal;
+  letter-spacing: normal;
+  font-family: var(--mono);
+  padding-left: 10px;
+  color: #e9e9f4;
+  background: #282936;
+  display: block;
+  max-width: 100%;
+  overflow-x: scroll;
+  /*font-size: 0.8em;*/
+
+  border: 1px solid #282936;
+  border-radius: 10px;
+  box-shadow: 1px 1px #282936, 2px 2px #282936;
+}
+
+pre code::-webkit-scrollbar {
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+pre code::-webkit-scrollbar:vertical {
+  width: 11px;
+}
+
+pre code::-webkit-scrollbar:horizontal {
+  height: 11px;
+}
+
+pre code::-webkit-scrollbar-thumb {
+  border-radius: 8px;
+  border: 2px solid white;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+/* The div part is only needed for long-form content that is pre-formatted. */
+
+pre code div {
+	line-height: 1.5em;
+}
+
+/* This would be for prefromatted material that is not literally from a game or simulation but is meant to indicate something about the details of the game or simulation. */
+
+pre p {
+  border: 2px solid grey;
+  border-radius: 5px;
+  padding: 0.8em;
+	padding-top: 0;
+	margin: 0;
+}</style>
+			</head>
+	<body class="post-template-default single single-post postid-3740 single-format-standard custom-background wp-embed-responsive custom-background-image">
+		<svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-dark-grayscale"><fecolormatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></fecolormatrix><fecomponenttransfer color-interpolation-filters="sRGB"><fefuncr type="table" tablevalues="0 0.49803921568627"></fefuncr><fefuncg type="table" tablevalues="0 0.49803921568627"></fefuncg><fefuncb type="table" tablevalues="0 0.49803921568627"></fefuncb><fefunca type="table" tablevalues="1 1"></fefunca></fecomponenttransfer><fecomposite in2="SourceGraphic" operator="in"></fecomposite></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-grayscale"><fecolormatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></fecolormatrix><fecomponenttransfer color-interpolation-filters="sRGB"><fefuncr type="table" tablevalues="0 1"></fefuncr><fefuncg type="table" tablevalues="0 1"></fefuncg><fefuncb type="table" tablevalues="0 1"></fefuncb><fefunca type="table" tablevalues="1 1"></fefunca></fecomponenttransfer><fecomposite in2="SourceGraphic" operator="in"></fecomposite></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-purple-yellow"><fecolormatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></fecolormatrix><fecomponenttransfer color-interpolation-filters="sRGB"><fefuncr type="table" tablevalues="0.54901960784314 0.98823529411765"></fefuncr><fefuncg type="table" tablevalues="0 1"></fefuncg><fefuncb type="table" tablevalues="0.71764705882353 0.25490196078431"></fefuncb><fefunca type="table" tablevalues="1 1"></fefunca></fecomponenttransfer><fecomposite in2="SourceGraphic" operator="in"></fecomposite></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-blue-red"><fecolormatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></fecolormatrix><fecomponenttransfer color-interpolation-filters="sRGB"><fefuncr type="table" tablevalues="0 1"></fefuncr><fefuncg type="table" tablevalues="0 0.27843137254902"></fefuncg><fefuncb type="table" tablevalues="0.5921568627451 0.27843137254902"></fefuncb><fefunca type="table" tablevalues="1 1"></fefunca></fecomponenttransfer><fecomposite in2="SourceGraphic" operator="in"></fecomposite></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-midnight"><fecolormatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></fecolormatrix><fecomponenttransfer color-interpolation-filters="sRGB"><fefuncr type="table" tablevalues="0 0"></fefuncr><fefuncg type="table" tablevalues="0 0.64705882352941"></fefuncg><fefuncb type="table" tablevalues="0 1"></fefuncb><fefunca type="table" tablevalues="1 1"></fefunca></fecomponenttransfer><fecomposite in2="SourceGraphic" operator="in"></fecomposite></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-magenta-yellow"><fecolormatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></fecolormatrix><fecomponenttransfer color-interpolation-filters="sRGB"><fefuncr type="table" tablevalues="0.78039215686275 1"></fefuncr><fefuncg type="table" tablevalues="0 0.94901960784314"></fefuncg><fefuncb type="table" tablevalues="0.35294117647059 0.47058823529412"></fefuncb><fefunca type="table" tablevalues="1 1"></fefunca></fecomponenttransfer><fecomposite in2="SourceGraphic" operator="in"></fecomposite></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-purple-green"><fecolormatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></fecolormatrix><fecomponenttransfer color-interpolation-filters="sRGB"><fefuncr type="table" tablevalues="0.65098039215686 0.40392156862745"></fefuncr><fefuncg type="table" tablevalues="0 1"></fefuncg><fefuncb type="table" tablevalues="0.44705882352941 0.4"></fefuncb><fefunca type="table" tablevalues="1 1"></fefunca></fecomponenttransfer><fecomposite in2="SourceGraphic" operator="in"></fecomposite></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-blue-orange"><fecolormatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></fecolormatrix><fecomponenttransfer color-interpolation-filters="sRGB"><fefuncr type="table" tablevalues="0.098039215686275 1"></fefuncr><fefuncg type="table" tablevalues="0 0.66274509803922"></fefuncg><fefuncb type="table" tablevalues="0.84705882352941 0.41960784313725"></fefuncb><fefunca type="table" tablevalues="1 1"></fefunca></fecomponenttransfer><fecomposite in2="SourceGraphic" operator="in"></fecomposite></filter></defs></svg>		<div id="container" class="site container">
+	<header id="masthead" class="site-header animated fadeInDown" role="banner">
+
+	<a class="screen-reader-text skip-link" href="#main-content">Skip to content</a>
+	<a class="screen-reader-text skip-link" href="#sidebar-widget-area">Skip to sidebar</a>
+	<a class="screen-reader-text skip-link" href="#page-footer">Skip to footer</a>
+	<div id="site-identity" class="site-identity">
+		<a href="/" class="home-link animated fadeIn" title="Stories from a Software Tester" rel="home">
+			<div class="title-description">
+				<h1 class="site-title">Stories from a Software Tester</h1>
+				<h2 class="site-description">Twice upon a time, in another space, no distance in any direction from here &#8230;</h2>
+			</div>
+		</a> 
+
+	</div>
+<!--/site-identity-->
+
+	<nav id="nav-menu" class="site-navigation main-navigation" role="navigation" aria-label="Main Navigation">
+		<button id="nav-button" class="menu-toggle" role="button">
+			<span class="screen-reader-text">Menu</span>
+			<span class="genericon" aria-hidden="true"></span>
+		</button>
+		<ul id="primary-menu" class="primary-menu">
+<li id="menu-item-3923" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-3923"><a href="/">Home</a></li>
+<li id="menu-item-2051" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2051"><a href="/about-tester-stories/">About Tester Stories</a></li>
+<li id="menu-item-2050" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2050"><a href="/who-am-i/">Who Am I</a></li>
+<li id="menu-item-2048" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2048"><a href="/just-for-fun/">Just For Fun</a></li>
+</ul>	</nav><!--/navigation-->
+
+
+<form role="search" method="get" class="search-form" action="https://testerstories.com/">
+	<label>
+		<span class="screen-reader-text">Search for:</span>
+		<input type="search" class="search-field" placeholder="Search &hellip;" value="" name="s" title="Search for:">
+	</label>
+	<button type="submit" class="search-submit"><span class="genericon genericon-search" aria-hidden="true"></span><span class="screen-reader-text">Search</span></button>
+</form>
+</header><!--/header-->
+
+<main id="main-content" class="main-content" role="main">
+<article id="post-3740" class="post-3740 post type-post status-publish format-standard hentry category-automation category-bdd category-tdl">
+<header class="entry-header">
+	<span class="entry-meta"><span class="cat-links"><span class="screen-reader-text">Published in</span><span class="genericon genericon-category" aria-hidden="true"></span><a href="/category/automation/" rel="category tag">Automation</a><span aria-hidden="true">, </span><a href="/category/bdd/" rel="category tag">BDD</a><span aria-hidden="true">, </span><a href="/category/bdd/tdl/" rel="category tag">TDL</a></span></span><h1 class="entry-title">Human Test Design, Automated Test Execution</h1>	<span class="byline">
+	Written by <a href="/author/administrator/" class="entry-author" rel="author">Jeff Nyman</a>	</span><!-- .byline -->
+	<span class="entry-meta">
+	<span class="genericon genericon-time" aria-hidden="true"></span><a href="/2019/07/16/" rel="bookmark" class="entry-date"><time datetime="2019-07-16T17:08:04-05:00">16 July 2019</time></a>		<span class="comments-link">
+			<span class="genericon genericon-comment" aria-hidden="true"></span>
+			<a href="/2019/07/human-test-design-automated-test-execution/#respond">Leave a comment</a>		</span>
+		</span><!-- .entry-meta -->
+</header><!-- .entry-header -->
+
+	<div class="entry-content">
+		
+<p>One of the obstacles to covering the gap between principles of testing and the practice of testing is the mechanics of writing tests. This is particularly the case if you work in a business domain with a lot of complex business rules. This is even more particularly the case if you want to use automation. So let&#8217;s dig in to this a bit with a case study.</p>
+
+
+
+<p><span id="more-3740"></span></p>
+
+
+
+<p>This post is going to focus on some implementation to make the ideas I&#8217;m talking about immediately practical. There is a bit of conceptual follow-up that I&#8217;ll provide in a separate post.</p>
+
+
+
+<p>There are a few truisms to be aware of.</p>
+
+
+
+<ol>
+<li>You will be working in some business domain.</li>
+<li>You will likely be using domain-relevant data for testing.</li>
+<li>You will likely have domain-relevant contexts that use the data.</li>
+<li>You will likely want to encode some knowledge as tests.</li>
+<li>You will likely want to use automation to support testing.</li>
+</ol>
+
+
+
+<p>As I worked on a particular project, I found I had a way to wrap up all of those ideas in a somewhat concise example and it&#8217;s that example that I&#8217;ll be sharing here as my case study.</p>
+
+
+
+<p>Of particular importance for me here is exploring the test data context. I find contexts are often the areas that testers struggle with the most. I&#8217;m also hoping to provide a slightly wider view of what automation can do and provide. As such, this post is specifically going to look at how data contexts are specified as part of a model that humans and automation can make sense of.</p>
+
+
+
+<h2 class="wp-block-heading">Domain Context</h2>
+
+
+
+<p>The examples I show here will be for a clinical trial application that I helped a team work with.</p>
+
+
+
+<p>This is generalizable, however. I just recently helped a company do what I present here with insurance products, in terms of rules around claims, policy serving, policy aging and claims accounting. Further back, I also helped a company do this with hedge fund products, in terms of profit/loss volatility, valuation engines, and investment fee structures.</p>
+
+
+
+<p>In the context of the clinical trials, I will focus on one of the more simple entities in the application, which was a study. A clinical study involves a particular area of research around an indication and a therapeutic area.</p>
+
+
+
+<p>An &#8220;indication&#8221; for a clinical trial refers to a valid reason to use a certain test, medication, procedure, or surgery. A &#8220;therapeutic area&#8221; refers to the type of disease or situation that would be treated by the tests, medications, procedures or surgeries. A clinical trial <em>study</em> is distinct from a clinical trial <em>plan</em> in that that study indicates the &#8220;what&#8221; whereas the plan indicates the &#8220;how.&#8221;</p>
+
+
+
+<p>To support this work, I did two things:</p>
+
+
+
+<ul><li>I worked with the team to come up with a TDL (Test Description Language) that essentially was encoding the requirements as tests. Specifically, as scenarios that served as examples of successful interactions with a feature such that we could determine if the feature was delivering value.</li></ul>
+
+
+
+<ul><li>I worked with the team to come up with a DSL (Domain Specific Language) as part of an automation framework. This framework would consume the scenarios just mentioned. As part of that, however, the framework was required to create its own data conditions, based on the test data context, as well as verify if the necessary conditions were already in place.</li></ul>
+
+
+
+<p>I&#8217;m going to show you a series of test specification statements that provide a context for getting a study in place as part of a test. With each example, I have indicated if the example is valid or invalid. After that, I&#8217;ll explain <em>why</em> each is valid or invalid. This is at the TDL level. I will also cover how these statements work behind the scenes. This is at the DSL level. Of import will be how the <em>automation</em> knew if the examples were valid or invalid.</p>
+
+
+
+<p>First, let&#8217;s take a look at the scenarios.</p>
+
+
+
+<h2 class="wp-block-heading">Scenarios</h2>
+
+
+
+<p>The scenario titles here are meant to be pedagogical and not what were used in the actual project. I want you to understand why each scenario is different.</p>
+
+
+
+<h3 class="wp-block-heading">Spec Example #1 [VALID]</h3>
+
+
+<pre style="white-space: pre-wrap; background-color: white; border: 1px solid;">Scenario: A study with minimal information
+  Given a study
+</pre>
+
+
+<h3 class="wp-block-heading">Spec Example #2 [INVALID]</h3>
+
+
+<pre style="white-space: pre-wrap; background-color: white; border: 1px solid;" class="">Scenario: A study, no conditions, specific phase that is ambiguous
+  Given a phase I study
+</pre>
+
+
+<h3 class="wp-block-heading">Spec Example #3 [INVALID]</h3>
+
+
+<pre style="white-space: pre-wrap; background-color: white; border: 1px solid;">Scenario: A study, no conditions, generic phase
+  Given a study with any phase
+</pre>
+
+
+<h3 class="wp-block-heading">Spec Example #4 [VALID]</h3>
+
+
+<pre style="white-space: pre-wrap; background-color: white; border: 1px solid;">Scenario: A study, no conditions, specific phase
+  Given a phase III study
+</pre>
+
+
+<h3 class="wp-block-heading">Spec Example #5 [VALID]</h3>
+
+
+<pre style="white-space: pre-wrap; background-color: white; border: 1px solid;">Scenario: A study, no conditions, generic phase
+  Given a late stage study
+</pre>
+
+
+<h3 class="wp-block-heading">Spec Example #6 [VALID]</h3>
+
+
+<pre style="white-space: pre-wrap; background-color: white; border: 1px solid;">Scenario: A study, with conditions, specific phase
+  Given a phase II study with
+    | Therapeutic Area | Mental Disorders Behavior Modification |
+    | Indication       | Personality Disorders                  |
+</pre>
+
+
+<h3 class="wp-block-heading">Spec Example #7 [INVALID]</h3>
+
+
+<pre style="white-space: pre-wrap; background-color: white; border: 1px solid;">Scenario: A study, with conditions, generic phase
+  Given a late stage study with
+    | Therapeutic Area | Mental Disorders Behavior Modification |
+    | Indication       | Personality Disorders                  |
+</pre>
+
+
+<p>Looking at those you might wonder what makes some valid and invalid. Feel free to speculate a bit but I&#8217;m going to go over that so don&#8217;t worry about it overly much.</p>
+
+
+
+<h2 class="wp-block-heading">The Domain Model</h2>
+
+
+
+<p>What I really want to show, however, is how your automation can help provide a litmus test that tells you, as a test writer, that the above are valid or invalid. This is something that isn&#8217;t touted much in test writing circles but it is a way that automation can be broadened to provide a bit of a model.</p>
+
+
+
+<p>Or, put more accurately, it&#8217;s how automation can be used to encode a model of a business domain and then recognize certain test statements as being valid or invalid in the context of that domain.</p>
+
+
+
+<p>In the oft-stated &#8220;testing vs. checking&#8221; debates, I would say that what I just described would be the actual &#8220;checking&#8221; (akin to &#8220;linting&#8221;) that automation does. Here it would be checking that the statements, as written, correspond to a model that the automation has in place, similar to how an experimenter in many situations would make sure that the basis of their experiment is valid or invalid.</p>
+
+
+
+<p>Where I differ with the &#8220;checker&#8221; crowd is that <em>the automated execution itself is still very much testing</em>; it&#8217;s just rote testing that is being performed by a machine and not a human. Yes, you can argue all you want that machines don&#8217;t test and all that. Or you can work to sound relevant in your career by showing the dividing line where human testing and automated testing intersect a bit.</p>
+
+
+
+<p>That&#8217;s a key point for me. You have testers out there bemoaning the use of too much automation &#8212; and they&#8217;re usually right. You have other testers out there claiming that automation isn&#8217;t used well enough &#8212; and they&#8217;re also usually right.</p>
+
+
+
+<p>Here I want to give one definition of what &#8220;well enough&#8221; might look like given that I don&#8217;t want my automation to rule out human thinking but I also do want it to encode that thinking (particularly about the domain) as tests.</p>
+
+
+
+<p>Those are good discussions to be having. They are focused around the idea of design and people of various specialties can get behind those discussions more than they can or will around whether a &#8220;test&#8221; is really a &#8220;check.&#8221;</p>
+
+
+
+<h2 class="wp-block-heading">The Abstraction</h2>
+
+
+
+<p>Behind the scenes, all of the above test statements would lead to the following action being executed:</p>
+
+
+
+<!-- Urvanov Syntax Highlighter v2.8.33 -->
+
+		<div id="urvanov-syntax-highlighter-647f3f7d7d3ff742949328" class="urvanov-syntax-highlighter-syntax crayon-theme-classic urvanov-syntax-highlighter-font-monaco urvanov-syntax-highlighter-os-pc print-yes notranslate" data-settings=" minimize scroll-mouseover" style="margin-top: 12px; margin-bottom: 12px; font-size: 12px !important; line-height: 15px !important;">
+		
+			<div class="crayon-toolbar" data-settings=" mouseover overlay hide delay" style="font-size: 12px !important;height: 18px !important; line-height: 18px !important;">
+<span class="crayon-title"></span>
+			<div class="crayon-tools" style="font-size: 12px !important;height: 18px !important; line-height: 18px !important;">
+<div class="crayon-button urvanov-syntax-highlighter-nums-button" title="Toggle Line Numbers"><div class="urvanov-syntax-highlighter-button-icon"></div></div>
+<div class="crayon-button urvanov-syntax-highlighter-plain-button" title="Toggle Plain Code"><div class="urvanov-syntax-highlighter-button-icon"></div></div>
+<div class="crayon-button urvanov-syntax-highlighter-wrap-button" title="Toggle Line Wrap"><div class="urvanov-syntax-highlighter-button-icon"></div></div>
+<div class="crayon-button urvanov-syntax-highlighter-expand-button" title="Expand Code"><div class="urvanov-syntax-highlighter-button-icon"></div></div>
+<div class="crayon-button urvanov-syntax-highlighter-copy-button" title="Copy"><div class="urvanov-syntax-highlighter-button-icon"></div></div>
+<div class="crayon-button urvanov-syntax-highlighter-popup-button" title="Open Code In New Window"><div class="urvanov-syntax-highlighter-button-icon"></div></div>
+<span class="crayon-language">Ruby</span>
+</div>
+</div>
+			<div class="crayon-info" style="min-height: 16.8px !important; line-height: 16.8px !important;"></div>
+			<div class="urvanov-syntax-highlighter-plain-wrap"><textarea wrap="soft" class="urvanov-syntax-highlighter-plain print-no" data-settings="dblclick" readonly style="-moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4; font-size: 12px !important; line-height: 15px !important;">
+on(Study).create()</textarea></div>
+			<div class="urvanov-syntax-highlighter-main">
+				<table class="crayon-table">
+					<tr class="urvanov-syntax-highlighter-row">
+				<td class="crayon-nums " data-settings="show">
+					<div class="urvanov-syntax-highlighter-nums-content" style="font-size: 12px !important; line-height: 15px !important;"><div class="crayon-num" data-line="urvanov-syntax-highlighter-647f3f7d7d3ff742949328-1">1</div></div>
+				</td>
+						<td class="urvanov-syntax-highlighter-code"><div class="crayon-pre" style="font-size: 12px !important; line-height: 15px !important; -moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4;"><div class="crayon-line" id="urvanov-syntax-highlighter-647f3f7d7d3ff742949328-1">
+<span class="crayon-e">on</span><span class="crayon-sy">(</span><span class="crayon-v">Study</span><span class="crayon-sy">)</span><span class="crayon-sy">.</span><span class="crayon-e">create</span><span class="crayon-sy">(</span><span class="crayon-sy">)</span>
+</div></div></td>
+					</tr>
+				</table>
+			</div>
+		</div>
+<!-- [Format Time: 0.0010 seconds] -->
+
+
+
+
+<p>This is an example of the DSL. This is using a very simple context factory pattern.</p>
+
+
+
+<p>To briefly explain, there is an <code>on()</code> method that is created as part of a context factory. That method takes a particular definition as an argument. In this case, the definition is called <code>Study</code>.</p>
+
+
+
+<p>In the project, there was a <code>Study</code> class as part of our set of definitions that our automation relied on. For a web app this might be a page object, for a mobile app this might be a screen object, for an API this might be a service object, and so forth.</p>
+
+
+
+<p>There was also a <code>create</code> action (i.e., method) on that class. This class could be instantiated dynamically at runtime if a specification mentions that it needs to work with a study. And that would happen if the test statements indicated as such, which they do in the TDL that I showed above.</p>
+
+
+
+<p>I’m not going to show you too much code beyond that which looks like the above but do note that the signature of the <code>create</code> action would be this:</p>
+
+
+
+<!-- Urvanov Syntax Highlighter v2.8.33 -->
+
+		<div id="urvanov-syntax-highlighter-647f3f7d7d40d301113450" class="urvanov-syntax-highlighter-syntax crayon-theme-classic urvanov-syntax-highlighter-font-monaco urvanov-syntax-highlighter-os-pc print-yes notranslate" data-settings=" minimize scroll-mouseover" style="margin-top: 12px; margin-bottom: 12px; font-size: 12px !important; line-height: 15px !important;">
+		
+			<div class="crayon-toolbar" data-settings=" mouseover overlay hide delay" style="font-size: 12px !important;height: 18px !important; line-height: 18px !important;">
+<span class="crayon-title"></span>
+			<div class="crayon-tools" style="font-size: 12px !important;height: 18px !important; line-height: 18px !important;">
+<div class="crayon-button urvanov-syntax-highlighter-nums-button" title="Toggle Line Numbers"><div class="urvanov-syntax-highlighter-button-icon"></div></div>
+<div class="crayon-button urvanov-syntax-highlighter-plain-button" title="Toggle Plain Code"><div class="urvanov-syntax-highlighter-button-icon"></div></div>
+<div class="crayon-button urvanov-syntax-highlighter-wrap-button" title="Toggle Line Wrap"><div class="urvanov-syntax-highlighter-button-icon"></div></div>
+<div class="crayon-button urvanov-syntax-highlighter-expand-button" title="Expand Code"><div class="urvanov-syntax-highlighter-button-icon"></div></div>
+<div class="crayon-button urvanov-syntax-highlighter-copy-button" title="Copy"><div class="urvanov-syntax-highlighter-button-icon"></div></div>
+<div class="crayon-button urvanov-syntax-highlighter-popup-button" title="Open Code In New Window"><div class="urvanov-syntax-highlighter-button-icon"></div></div>
+<span class="crayon-language">Ruby</span>
+</div>
+</div>
+			<div class="crayon-info" style="min-height: 16.8px !important; line-height: 16.8px !important;"></div>
+			<div class="urvanov-syntax-highlighter-plain-wrap"><textarea wrap="soft" class="urvanov-syntax-highlighter-plain print-no" data-settings="dblclick" readonly style="-moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4; font-size: 12px !important; line-height: 15px !important;">
+create(type="adhoc", conditions="", who="clinical administrator")</textarea></div>
+			<div class="urvanov-syntax-highlighter-main">
+				<table class="crayon-table">
+					<tr class="urvanov-syntax-highlighter-row">
+				<td class="crayon-nums " data-settings="show">
+					<div class="urvanov-syntax-highlighter-nums-content" style="font-size: 12px !important; line-height: 15px !important;"><div class="crayon-num" data-line="urvanov-syntax-highlighter-647f3f7d7d40d301113450-1">1</div></div>
+				</td>
+						<td class="urvanov-syntax-highlighter-code"><div class="crayon-pre" style="font-size: 12px !important; line-height: 15px !important; -moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4;"><div class="crayon-line" id="urvanov-syntax-highlighter-647f3f7d7d40d301113450-1">
+<span class="crayon-e">create</span><span class="crayon-sy">(</span><span class="crayon-v">type</span><span class="crayon-o">=</span><span class="crayon-s">"adhoc"</span><span class="crayon-sy">,</span><span class="crayon-h"> </span><span class="crayon-v">conditions</span><span class="crayon-o">=</span><span class="crayon-s">""</span><span class="crayon-sy">,</span><span class="crayon-h"> </span><span class="crayon-v">who</span><span class="crayon-o">=</span><span class="crayon-s">"clinical administrator"</span><span class="crayon-sy">)</span>
+</div></div></td>
+					</tr>
+				</table>
+			</div>
+		</div>
+<!-- [Format Time: 0.0001 seconds] -->
+
+
+
+
+<p>You can see here that the ‘type’ (as in the specific type of study) will default to “adhoc”, the conditions will always default to nothing, and the ‘who’ (as in what user is doing the action) will default to “clinical administrator”.</p>
+
+
+
+<p>The notion of a ‘type’ can differ based on the entity. How I designed this was to be the most logical way to break up the “type of entity” that is being specified. So in the case of a study in a clinical trial context, the most common way to discuss the type was by what&#8217;s called the &#8220;phase&#8221; of the clinical trial. For a clinical trial plan &#8212; which differs from a study &#8212; the notion of a type would be different.</p>
+
+
+
+<p>The conditions are what let you set or override specific data conditions relevant to whatever entity you are creating; in this case, again, that&#8217;s a study. You would use conditions when you want to provide for data that differs from what you would get by default.</p>
+
+
+
+<p>All test data was pulled from a template-based system that allowed for more specific conditions to override more generic ones. So, for example, I had a <em>study.yml</em> file where default data is pulled from and that file looked like this:</p>
+
+
+
+<!-- Urvanov Syntax Highlighter v2.8.33 -->
+
+		<div id="urvanov-syntax-highlighter-647f3f7d7d40f142271630" class="urvanov-syntax-highlighter-syntax crayon-theme-classic urvanov-syntax-highlighter-font-monaco urvanov-syntax-highlighter-os-pc print-yes notranslate" data-settings=" minimize scroll-mouseover" style="margin-top: 12px; margin-bottom: 12px; font-size: 12px !important; line-height: 15px !important;">
+		
+			<div class="crayon-toolbar" data-settings=" mouseover overlay hide delay" style="font-size: 12px !important;height: 18px !important; line-height: 18px !important;">
+<span class="crayon-title"></span>
+			<div class="crayon-tools" style="font-size: 12px !important;height: 18px !important; line-height: 18px !important;">
+<div class="crayon-button urvanov-syntax-highlighter-nums-button" title="Toggle Line Numbers"><div class="urvanov-syntax-highlighter-button-icon"></div></div>
+<div class="crayon-button urvanov-syntax-highlighter-plain-button" title="Toggle Plain Code"><div class="urvanov-syntax-highlighter-button-icon"></div></div>
+<div class="crayon-button urvanov-syntax-highlighter-wrap-button" title="Toggle Line Wrap"><div class="urvanov-syntax-highlighter-button-icon"></div></div>
+<div class="crayon-button urvanov-syntax-highlighter-expand-button" title="Expand Code"><div class="urvanov-syntax-highlighter-button-icon"></div></div>
+<div class="crayon-button urvanov-syntax-highlighter-copy-button" title="Copy"><div class="urvanov-syntax-highlighter-button-icon"></div></div>
+<div class="crayon-button urvanov-syntax-highlighter-popup-button" title="Open Code In New Window"><div class="urvanov-syntax-highlighter-button-icon"></div></div>
+</div>
+</div>
+			<div class="crayon-info" style="min-height: 16.8px !important; line-height: 16.8px !important;"></div>
+			<div class="urvanov-syntax-highlighter-plain-wrap"><textarea wrap="soft" class="urvanov-syntax-highlighter-plain print-no" data-settings="dblclick" readonly style="-moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4; font-size: 12px !important; line-height: 15px !important;">
+study:
+  name: Lucid Study
+  protocol: Lucid Protocol
+  product: ((random))
+  phase: ((random))
+  therapeuticArea: ((random))
+  indication: ((random))
+  sponsor: ((config))
+  status: Planning
+  billingCode: AUTOTEST
+  description: Default study for lucid test specifications.</textarea></div>
+			<div class="urvanov-syntax-highlighter-main">
+				<table class="crayon-table">
+					<tr class="urvanov-syntax-highlighter-row">
+				<td class="crayon-nums " data-settings="show">
+					<div class="urvanov-syntax-highlighter-nums-content" style="font-size: 12px !important; line-height: 15px !important;">
+<div class="crayon-num" data-line="urvanov-syntax-highlighter-647f3f7d7d40f142271630-1">1</div>
+<div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-647f3f7d7d40f142271630-2">2</div>
+<div class="crayon-num" data-line="urvanov-syntax-highlighter-647f3f7d7d40f142271630-3">3</div>
+<div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-647f3f7d7d40f142271630-4">4</div>
+<div class="crayon-num" data-line="urvanov-syntax-highlighter-647f3f7d7d40f142271630-5">5</div>
+<div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-647f3f7d7d40f142271630-6">6</div>
+<div class="crayon-num" data-line="urvanov-syntax-highlighter-647f3f7d7d40f142271630-7">7</div>
+<div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-647f3f7d7d40f142271630-8">8</div>
+<div class="crayon-num" data-line="urvanov-syntax-highlighter-647f3f7d7d40f142271630-9">9</div>
+<div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-647f3f7d7d40f142271630-10">10</div>
+<div class="crayon-num" data-line="urvanov-syntax-highlighter-647f3f7d7d40f142271630-11">11</div>
+</div>
+				</td>
+						<td class="urvanov-syntax-highlighter-code"><div class="crayon-pre" style="font-size: 12px !important; line-height: 15px !important; -moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4;">
+<div class="crayon-line" id="urvanov-syntax-highlighter-647f3f7d7d40f142271630-1">
+<span class="crayon-v">study</span><span class="crayon-o">:</span>
+</div>
+<div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-647f3f7d7d40f142271630-2">
+<span class="crayon-h">&nbsp;&nbsp;</span><span class="crayon-v">name</span><span class="crayon-o">:</span><span class="crayon-h"> </span><span class="crayon-e">Lucid </span><span class="crayon-e">Study</span>
+</div>
+<div class="crayon-line" id="urvanov-syntax-highlighter-647f3f7d7d40f142271630-3">
+<span class="crayon-e">&nbsp;&nbsp;</span><span class="crayon-v">protocol</span><span class="crayon-o">:</span><span class="crayon-h"> </span><span class="crayon-e">Lucid </span><span class="crayon-e">Protocol</span>
+</div>
+<div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-647f3f7d7d40f142271630-4">
+<span class="crayon-e">&nbsp;&nbsp;</span><span class="crayon-v">product</span><span class="crayon-o">:</span><span class="crayon-h"> </span><span class="crayon-sy">(</span><span class="crayon-sy">(</span><span class="crayon-v">random</span><span class="crayon-sy">)</span><span class="crayon-sy">)</span>
+</div>
+<div class="crayon-line" id="urvanov-syntax-highlighter-647f3f7d7d40f142271630-5">
+<span class="crayon-h">&nbsp;&nbsp;</span><span class="crayon-v">phase</span><span class="crayon-o">:</span><span class="crayon-h"> </span><span class="crayon-sy">(</span><span class="crayon-sy">(</span><span class="crayon-v">random</span><span class="crayon-sy">)</span><span class="crayon-sy">)</span>
+</div>
+<div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-647f3f7d7d40f142271630-6">
+<span class="crayon-h">&nbsp;&nbsp;</span><span class="crayon-v">therapeuticArea</span><span class="crayon-o">:</span><span class="crayon-h"> </span><span class="crayon-sy">(</span><span class="crayon-sy">(</span><span class="crayon-v">random</span><span class="crayon-sy">)</span><span class="crayon-sy">)</span>
+</div>
+<div class="crayon-line" id="urvanov-syntax-highlighter-647f3f7d7d40f142271630-7">
+<span class="crayon-h">&nbsp;&nbsp;</span><span class="crayon-v">indication</span><span class="crayon-o">:</span><span class="crayon-h"> </span><span class="crayon-sy">(</span><span class="crayon-sy">(</span><span class="crayon-v">random</span><span class="crayon-sy">)</span><span class="crayon-sy">)</span>
+</div>
+<div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-647f3f7d7d40f142271630-8">
+<span class="crayon-h">&nbsp;&nbsp;</span><span class="crayon-v">sponsor</span><span class="crayon-o">:</span><span class="crayon-h"> </span><span class="crayon-sy">(</span><span class="crayon-sy">(</span><span class="crayon-v">config</span><span class="crayon-sy">)</span><span class="crayon-sy">)</span>
+</div>
+<div class="crayon-line" id="urvanov-syntax-highlighter-647f3f7d7d40f142271630-9">
+<span class="crayon-h">&nbsp;&nbsp;</span><span class="crayon-v">status</span><span class="crayon-o">:</span><span class="crayon-h"> </span><span class="crayon-e">Planning</span>
+</div>
+<div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-647f3f7d7d40f142271630-10">
+<span class="crayon-e">&nbsp;&nbsp;</span><span class="crayon-v">billingCode</span><span class="crayon-o">:</span><span class="crayon-h"> </span><span class="crayon-e">AUTOTEST</span>
+</div>
+<div class="crayon-line" id="urvanov-syntax-highlighter-647f3f7d7d40f142271630-11">
+<span class="crayon-e">&nbsp;&nbsp;</span><span class="crayon-v">description</span><span class="crayon-o">:</span><span class="crayon-h"> </span><span class="crayon-st">Default</span><span class="crayon-h"> </span><span class="crayon-e">study </span><span class="crayon-st">for</span><span class="crayon-h"> </span><span class="crayon-e">lucid </span><span class="crayon-e">test </span><span class="crayon-v">specifications</span><span class="crayon-sy">.</span>
+</div>
+</div></td>
+					</tr>
+				</table>
+			</div>
+		</div>
+<!-- [Format Time: 0.0007 seconds] -->
+
+
+
+
+<p>That template, as you can see, can contain literal values or descriptive values. A literal value is exactly what will be used in a given context. A descriptive value was between <code>(( ))</code> characters and describes how a value will be used or generated. So <code>((ignore))</code> means the value will not be used whereas <code>((random))</code> means a random value from a given set will be selected.</p>
+
+
+
+<p>I&#8217;m not going to be showing all those implementation details but you can imagine a set of data stored in an array and a given random value would be pulled from that array. Say, a random indication, for example. But if a specific indication was specified in the test, then that would be used instead, overriding the default template.</p>
+
+
+
+<h2 class="wp-block-heading">Where TDL and DSL Meet</h2>
+
+
+
+<p>Okay, so given that you now have some context of how the DSL works, let&#8217;s look at our individual spec statements. Here I&#8217;ll show you the TDL along with the DSL I just described. I will do this in the context of each of the spec examples I mentioned earlier.</p>
+
+
+
+<h3 class="wp-block-heading">Spec Example #1 [VALID]</h3>
+
+
+
+<pre style="white-space: pre-wrap; background-color: white; border: 1px solid;">TDL
+Scenario: A study with minimal information
+  Given a study
+
+DSL
+on(Study).create
+</pre>
+
+
+
+<p>What this does is simply create an “ad hoc” study, meaning a study “for the moment.”</p>
+
+
+
+<p>Note: Some testers use “ad hoc” as if it was synonymous with either ‘exploratory’ or ‘random’. That is not what ad hoc testing means and likewise it’s not what ad hoc means in this case.</p>
+
+
+
+<p>Here is the data that would get used in this situation:</p>
+
+
+
+<!-- Urvanov Syntax Highlighter v2.8.33 -->
+
+		<div id="urvanov-syntax-highlighter-647f3f7d7d413422150334" class="urvanov-syntax-highlighter-syntax crayon-theme-classic urvanov-syntax-highlighter-font-monaco urvanov-syntax-highlighter-os-pc print-yes notranslate" data-settings=" minimize scroll-mouseover" style="margin-top: 12px; margin-bottom: 12px; font-size: 12px !important; line-height: 15px !important;">
+		
+			<div class="crayon-toolbar" data-settings=" mouseover overlay hide delay" style="font-size: 12px !important;height: 18px !important; line-height: 18px !important;">
+<span class="crayon-title"></span>
+			<div class="crayon-tools" style="font-size: 12px !important;height: 18px !important; line-height: 18px !important;">
+<div class="crayon-button urvanov-syntax-highlighter-nums-button" title="Toggle Line Numbers"><div class="urvanov-syntax-highlighter-button-icon"></div></div>
+<div class="crayon-button urvanov-syntax-highlighter-plain-button" title="Toggle Plain Code"><div class="urvanov-syntax-highlighter-button-icon"></div></div>
+<div class="crayon-button urvanov-syntax-highlighter-wrap-button" title="Toggle Line Wrap"><div class="urvanov-syntax-highlighter-button-icon"></div></div>
+<div class="crayon-button urvanov-syntax-highlighter-expand-button" title="Expand Code"><div class="urvanov-syntax-highlighter-button-icon"></div></div>
+<div class="crayon-button urvanov-syntax-highlighter-copy-button" title="Copy"><div class="urvanov-syntax-highlighter-button-icon"></div></div>
+<div class="crayon-button urvanov-syntax-highlighter-popup-button" title="Open Code In New Window"><div class="urvanov-syntax-highlighter-button-icon"></div></div>
+</div>
+</div>
+			<div class="crayon-info" style="min-height: 16.8px !important; line-height: 16.8px !important;"></div>
+			<div class="urvanov-syntax-highlighter-plain-wrap"><textarea wrap="soft" class="urvanov-syntax-highlighter-plain print-no" data-settings="dblclick" readonly style="-moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4; font-size: 12px !important; line-height: 15px !important;">
+{
+  "name"="Lucid Study",
+  "protocol"="Lucid Protocol",
+  "product"="((random))",
+  "phase"="((random))",
+  "therapeuticArea"="((random))",
+  "indication"="((random))",
+  "sponsor"="((config))",
+  "status"="Planning",
+  "billingCode"="AUTOTEST",
+  "description"="Default study for lucid test specifications."
+}</textarea></div>
+			<div class="urvanov-syntax-highlighter-main">
+				<table class="crayon-table">
+					<tr class="urvanov-syntax-highlighter-row">
+				<td class="crayon-nums " data-settings="show">
+					<div class="urvanov-syntax-highlighter-nums-content" style="font-size: 12px !important; line-height: 15px !important;">
+<div class="crayon-num" data-line="urvanov-syntax-highlighter-647f3f7d7d413422150334-1">1</div>
+<div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-647f3f7d7d413422150334-2">2</div>
+<div class="crayon-num" data-line="urvanov-syntax-highlighter-647f3f7d7d413422150334-3">3</div>
+<div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-647f3f7d7d413422150334-4">4</div>
+<div class="crayon-num" data-line="urvanov-syntax-highlighter-647f3f7d7d413422150334-5">5</div>
+<div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-647f3f7d7d413422150334-6">6</div>
+<div class="crayon-num" data-line="urvanov-syntax-highlighter-647f3f7d7d413422150334-7">7</div>
+<div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-647f3f7d7d413422150334-8">8</div>
+<div class="crayon-num" data-line="urvanov-syntax-highlighter-647f3f7d7d413422150334-9">9</div>
+<div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-647f3f7d7d413422150334-10">10</div>
+<div class="crayon-num" data-line="urvanov-syntax-highlighter-647f3f7d7d413422150334-11">11</div>
+<div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-647f3f7d7d413422150334-12">12</div>
+</div>
+				</td>
+						<td class="urvanov-syntax-highlighter-code"><div class="crayon-pre" style="font-size: 12px !important; line-height: 15px !important; -moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4;">
+<div class="crayon-line" id="urvanov-syntax-highlighter-647f3f7d7d413422150334-1"><span class="crayon-sy">{</span></div>
+<div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-647f3f7d7d413422150334-2">
+<span class="crayon-h">&nbsp;&nbsp;</span><span class="crayon-s">"name"</span><span class="crayon-o">=</span><span class="crayon-s">"Lucid Study"</span><span class="crayon-sy">,</span>
+</div>
+<div class="crayon-line" id="urvanov-syntax-highlighter-647f3f7d7d413422150334-3">
+<span class="crayon-h">&nbsp;&nbsp;</span><span class="crayon-s">"protocol"</span><span class="crayon-o">=</span><span class="crayon-s">"Lucid Protocol"</span><span class="crayon-sy">,</span>
+</div>
+<div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-647f3f7d7d413422150334-4">
+<span class="crayon-h">&nbsp;&nbsp;</span><span class="crayon-s">"product"</span><span class="crayon-o">=</span><span class="crayon-s">"((random))"</span><span class="crayon-sy">,</span>
+</div>
+<div class="crayon-line" id="urvanov-syntax-highlighter-647f3f7d7d413422150334-5">
+<span class="crayon-h">&nbsp;&nbsp;</span><span class="crayon-s">"phase"</span><span class="crayon-o">=</span><span class="crayon-s">"((random))"</span><span class="crayon-sy">,</span>
+</div>
+<div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-647f3f7d7d413422150334-6">
+<span class="crayon-h">&nbsp;&nbsp;</span><span class="crayon-s">"therapeuticArea"</span><span class="crayon-o">=</span><span class="crayon-s">"((random))"</span><span class="crayon-sy">,</span>
+</div>
+<div class="crayon-line" id="urvanov-syntax-highlighter-647f3f7d7d413422150334-7">
+<span class="crayon-h">&nbsp;&nbsp;</span><span class="crayon-s">"indication"</span><span class="crayon-o">=</span><span class="crayon-s">"((random))"</span><span class="crayon-sy">,</span>
+</div>
+<div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-647f3f7d7d413422150334-8">
+<span class="crayon-h">&nbsp;&nbsp;</span><span class="crayon-s">"sponsor"</span><span class="crayon-o">=</span><span class="crayon-s">"((config))"</span><span class="crayon-sy">,</span>
+</div>
+<div class="crayon-line" id="urvanov-syntax-highlighter-647f3f7d7d413422150334-9">
+<span class="crayon-h">&nbsp;&nbsp;</span><span class="crayon-s">"status"</span><span class="crayon-o">=</span><span class="crayon-s">"Planning"</span><span class="crayon-sy">,</span>
+</div>
+<div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-647f3f7d7d413422150334-10">
+<span class="crayon-h">&nbsp;&nbsp;</span><span class="crayon-s">"billingCode"</span><span class="crayon-o">=</span><span class="crayon-s">"AUTOTEST"</span><span class="crayon-sy">,</span>
+</div>
+<div class="crayon-line" id="urvanov-syntax-highlighter-647f3f7d7d413422150334-11">
+<span class="crayon-h">&nbsp;&nbsp;</span><span class="crayon-s">"description"</span><span class="crayon-o">=</span><span class="crayon-s">"Default study for lucid test specifications."</span>
+</div>
+<div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-647f3f7d7d413422150334-12"><span class="crayon-sy">}</span></div>
+</div></td>
+					</tr>
+				</table>
+			</div>
+		</div>
+<!-- [Format Time: 0.0002 seconds] -->
+
+
+
+
+<p>That’s a hash (of the <em>study.yml</em> I showed you earlier) that contains a key-value pair for each field that was on the study screen in the application. What this is telling you is that the name text field will be set to “Lucid Study” and the therapeutic area (which was a drop down) will be set to a random value, and the sponsor field will be set a configured value, and so on.</p>
+
+
+
+<p>Note that fields are handled in order. So, for example, with the above data set a random phase for the study would be selected. Only after that is done would a random therapeutic area be selected. And only after that is done would a random indication be selected.</p>
+
+
+
+<p>And that matters because in clinical trials, and as it was in the application, a phase must be specified, and only then can a therapeutic area be chosen. And only when both of those are in place can an indication be chosen.</p>
+
+
+
+<p>That’s how the above works in terms of making sure no invalid values can be used with a randomized set of data. Each <code>((random))</code> will be choosing one value based on the choices that were made available to it by the previous one. This is essentially providing contextual knowledge &#8212; and note that no &#8220;Automation AI&#8221; was needed.</p>
+
+
+
+<h3 class="wp-block-heading">Spec Example #2 [INVALID]</h3>
+
+
+
+<p>While the first example was very generic (“a study”), Spec Example #2 contains a bit more specificity:</p>
+
+
+
+<pre style="white-space: pre-wrap; background-color: white; border: 1px solid;">TSL
+Scenario: A study, no conditions, specific phase that is ambiguous
+  Given a phase I study
+
+DSL
+on(Study).create("phase I")
+</pre>
+
+
+
+<p>This specification would not, in fact, execute. Were you to try this, the following error condition would result:</p>
+
+
+
+<pre>Phase I ambiguously refers to two different types of Phase I studies.
+(Errors::NotSpecificEnoughDataError)
+</pre>
+
+
+
+<p>This error would be generated by the automation well before the automation attempted execution. And this error is intentional.</p>
+
+
+
+<p>The reason for this error is because, in the application, there were two phase I study types and what is available with one is not necessarily available with another. In this case, there was no way for the automation model to determine which phase I you meant. Notice the same would apply for a human tester.</p>
+
+
+
+<p>As a note, it would have been possible to write the DSL portion as:</p>
+
+
+
+<!-- Urvanov Syntax Highlighter v2.8.33 -->
+
+		<div id="urvanov-syntax-highlighter-647f3f7d7d415792225914" class="urvanov-syntax-highlighter-syntax crayon-theme-classic urvanov-syntax-highlighter-font-monaco urvanov-syntax-highlighter-os-pc print-yes notranslate" data-settings=" minimize scroll-mouseover" style="margin-top: 12px; margin-bottom: 12px; font-size: 12px !important; line-height: 15px !important;">
+		
+			<div class="crayon-toolbar" data-settings=" mouseover overlay hide delay" style="font-size: 12px !important;height: 18px !important; line-height: 18px !important;">
+<span class="crayon-title"></span>
+			<div class="crayon-tools" style="font-size: 12px !important;height: 18px !important; line-height: 18px !important;">
+<div class="crayon-button urvanov-syntax-highlighter-nums-button" title="Toggle Line Numbers"><div class="urvanov-syntax-highlighter-button-icon"></div></div>
+<div class="crayon-button urvanov-syntax-highlighter-plain-button" title="Toggle Plain Code"><div class="urvanov-syntax-highlighter-button-icon"></div></div>
+<div class="crayon-button urvanov-syntax-highlighter-wrap-button" title="Toggle Line Wrap"><div class="urvanov-syntax-highlighter-button-icon"></div></div>
+<div class="crayon-button urvanov-syntax-highlighter-expand-button" title="Expand Code"><div class="urvanov-syntax-highlighter-button-icon"></div></div>
+<div class="crayon-button urvanov-syntax-highlighter-copy-button" title="Copy"><div class="urvanov-syntax-highlighter-button-icon"></div></div>
+<div class="crayon-button urvanov-syntax-highlighter-popup-button" title="Open Code In New Window"><div class="urvanov-syntax-highlighter-button-icon"></div></div>
+<span class="crayon-language">Ruby</span>
+</div>
+</div>
+			<div class="crayon-info" style="min-height: 16.8px !important; line-height: 16.8px !important;"></div>
+			<div class="urvanov-syntax-highlighter-plain-wrap"><textarea wrap="soft" class="urvanov-syntax-highlighter-plain print-no" data-settings="dblclick" readonly style="-moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4; font-size: 12px !important; line-height: 15px !important;">
+on(Study).create("phase I (Oncology/Vaccines)")</textarea></div>
+			<div class="urvanov-syntax-highlighter-main">
+				<table class="crayon-table">
+					<tr class="urvanov-syntax-highlighter-row">
+				<td class="crayon-nums " data-settings="show">
+					<div class="urvanov-syntax-highlighter-nums-content" style="font-size: 12px !important; line-height: 15px !important;"><div class="crayon-num" data-line="urvanov-syntax-highlighter-647f3f7d7d415792225914-1">1</div></div>
+				</td>
+						<td class="urvanov-syntax-highlighter-code"><div class="crayon-pre" style="font-size: 12px !important; line-height: 15px !important; -moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4;"><div class="crayon-line" id="urvanov-syntax-highlighter-647f3f7d7d415792225914-1">
+<span class="crayon-e">on</span><span class="crayon-sy">(</span><span class="crayon-v">Study</span><span class="crayon-sy">)</span><span class="crayon-sy">.</span><span class="crayon-e">create</span><span class="crayon-sy">(</span><span class="crayon-s">"phase I (Oncology/Vaccines)"</span><span class="crayon-sy">)</span>
+</div></div></td>
+					</tr>
+				</table>
+			</div>
+		</div>
+<!-- [Format Time: 0.0001 seconds] -->
+
+
+
+
+<p>That would have specified one of the two phase I study types. However, that would mean the specification statement and the test definition statement were (potentially) inconsistent. Rather than making the change above, the specification statement should be changed instead to:</p>
+
+
+
+<pre style="white-space: pre-wrap; background-color: white; border: 1px solid;">Given a phase I (Oncology/Vaccines) study
+</pre>
+
+
+
+<p>This is an important point. The test definition should not be making assumptions about what the test specification says or meant to say. The test definition will simply take what is said and use that to begin execution.</p>
+
+
+
+<h3 class="wp-block-heading">Spec Example #3 [INVALID]</h3>
+
+
+
+<p>This example is meant to show how the framework prevents free-form language that is not domain specific.</p>
+
+
+
+<pre style="white-space: pre-wrap; background-color: white; border: 1px solid;">TDL
+Scenario: A study, no conditions, generic phase
+  Given a study with any phase
+
+DSL
+on(Study).create("any phase")
+</pre>
+
+
+
+<p>This does not work and will lead to the following error:</p>
+
+
+
+<pre>Your domain context ('any phase') is not valid for a study.
+(Errors::InvalidDataConditionError)
+</pre>
+
+
+
+<p>As with example #2, this error is intentional and would be generated before execution.</p>
+
+
+
+<p>Semantically, there would be nothing wrong with handling this phrasing. It would certainly be possible to accommodate this and allow the phase to be randomly chosen. From a domain language perspective, however, we should aim for operationally specificity to the extent that it makes sense for us to do so.</p>
+
+
+
+<p>Note that another approach here would have been to avoid having a matching test definition at all. However, doing that would then have simply caused a message saying that the test definition should be created. That could lead someone to believe that the definition should in fact exist, it&#8217;s just that someone hasn’t gotten around to defining it.</p>
+
+
+
+<p>Instead what happens is that the phrase is supported from the TDL but the DSL kicks in to indicate that this phrasing was considered and was found to be invalid.</p>
+
+
+
+<p>This is a way to help people start talking (and writing) more in a way that makes sense for test execution but notice how it also forces us to consider test design.</p>
+
+
+
+<h3 class="wp-block-heading">Spec Example #4 [VALID]</h3>
+
+
+
+<p>This one is fairly simple and is very much like spec example #2 in structure:</p>
+
+
+
+<pre style="white-space: pre-wrap; background-color: white; border: 1px solid;">TDL
+Scenario: A study, no conditions, specific phase
+  Given a phase III study
+
+DSL
+on(Study).create("phase III")
+</pre>
+
+
+
+<p>This would work for any specifically defined phase: “phase II”, “phase IV no IND”, and so forth. Note, however, that the framework did know what phases are valid in the application. So if you typed a name in the specification that didn&#8217;t exist, you would get the same error you saw in spec example #3.</p>
+
+
+
+<p>Think back to spec example #1. In that case, an adhoc study was created. Something fairly similar happens here. The following data will be used:</p>
+
+
+
+<!-- Urvanov Syntax Highlighter v2.8.33 -->
+
+		<div id="urvanov-syntax-highlighter-647f3f7d7d419858713967" class="urvanov-syntax-highlighter-syntax crayon-theme-classic urvanov-syntax-highlighter-font-monaco urvanov-syntax-highlighter-os-pc print-yes notranslate" data-settings=" minimize scroll-mouseover" style="margin-top: 12px; margin-bottom: 12px; font-size: 12px !important; line-height: 15px !important;">
+		
+			<div class="crayon-toolbar" data-settings=" mouseover overlay hide delay" style="font-size: 12px !important;height: 18px !important; line-height: 18px !important;">
+<span class="crayon-title"></span>
+			<div class="crayon-tools" style="font-size: 12px !important;height: 18px !important; line-height: 18px !important;">
+<div class="crayon-button urvanov-syntax-highlighter-nums-button" title="Toggle Line Numbers"><div class="urvanov-syntax-highlighter-button-icon"></div></div>
+<div class="crayon-button urvanov-syntax-highlighter-plain-button" title="Toggle Plain Code"><div class="urvanov-syntax-highlighter-button-icon"></div></div>
+<div class="crayon-button urvanov-syntax-highlighter-wrap-button" title="Toggle Line Wrap"><div class="urvanov-syntax-highlighter-button-icon"></div></div>
+<div class="crayon-button urvanov-syntax-highlighter-expand-button" title="Expand Code"><div class="urvanov-syntax-highlighter-button-icon"></div></div>
+<div class="crayon-button urvanov-syntax-highlighter-copy-button" title="Copy"><div class="urvanov-syntax-highlighter-button-icon"></div></div>
+<div class="crayon-button urvanov-syntax-highlighter-popup-button" title="Open Code In New Window"><div class="urvanov-syntax-highlighter-button-icon"></div></div>
+</div>
+</div>
+			<div class="crayon-info" style="min-height: 16.8px !important; line-height: 16.8px !important;"></div>
+			<div class="urvanov-syntax-highlighter-plain-wrap"><textarea wrap="soft" class="urvanov-syntax-highlighter-plain print-no" data-settings="dblclick" readonly style="-moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4; font-size: 12px !important; line-height: 15px !important;">
+{
+  "name"="Lucid Study",
+  "protocol"="Lucid Protocol",
+  "product"="((random))",
+  "phase"="III",
+  "therapeuticArea"="((random))",
+  "indication"="((random))",
+  "sponsor"="((config))",
+  "status"="Planning",
+  "billingCode"="AUTOTEST",
+  "description"="Default study for lucid test specifications."
+}</textarea></div>
+			<div class="urvanov-syntax-highlighter-main">
+				<table class="crayon-table">
+					<tr class="urvanov-syntax-highlighter-row">
+				<td class="crayon-nums " data-settings="show">
+					<div class="urvanov-syntax-highlighter-nums-content" style="font-size: 12px !important; line-height: 15px !important;">
+<div class="crayon-num" data-line="urvanov-syntax-highlighter-647f3f7d7d419858713967-1">1</div>
+<div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-647f3f7d7d419858713967-2">2</div>
+<div class="crayon-num" data-line="urvanov-syntax-highlighter-647f3f7d7d419858713967-3">3</div>
+<div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-647f3f7d7d419858713967-4">4</div>
+<div class="crayon-num" data-line="urvanov-syntax-highlighter-647f3f7d7d419858713967-5">5</div>
+<div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-647f3f7d7d419858713967-6">6</div>
+<div class="crayon-num" data-line="urvanov-syntax-highlighter-647f3f7d7d419858713967-7">7</div>
+<div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-647f3f7d7d419858713967-8">8</div>
+<div class="crayon-num" data-line="urvanov-syntax-highlighter-647f3f7d7d419858713967-9">9</div>
+<div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-647f3f7d7d419858713967-10">10</div>
+<div class="crayon-num" data-line="urvanov-syntax-highlighter-647f3f7d7d419858713967-11">11</div>
+<div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-647f3f7d7d419858713967-12">12</div>
+</div>
+				</td>
+						<td class="urvanov-syntax-highlighter-code"><div class="crayon-pre" style="font-size: 12px !important; line-height: 15px !important; -moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4;">
+<div class="crayon-line" id="urvanov-syntax-highlighter-647f3f7d7d419858713967-1"><span class="crayon-sy">{</span></div>
+<div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-647f3f7d7d419858713967-2">
+<span class="crayon-h">&nbsp;&nbsp;</span><span class="crayon-s">"name"</span><span class="crayon-o">=</span><span class="crayon-s">"Lucid Study"</span><span class="crayon-sy">,</span>
+</div>
+<div class="crayon-line" id="urvanov-syntax-highlighter-647f3f7d7d419858713967-3">
+<span class="crayon-h">&nbsp;&nbsp;</span><span class="crayon-s">"protocol"</span><span class="crayon-o">=</span><span class="crayon-s">"Lucid Protocol"</span><span class="crayon-sy">,</span>
+</div>
+<div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-647f3f7d7d419858713967-4">
+<span class="crayon-h">&nbsp;&nbsp;</span><span class="crayon-s">"product"</span><span class="crayon-o">=</span><span class="crayon-s">"((random))"</span><span class="crayon-sy">,</span>
+</div>
+<div class="crayon-line" id="urvanov-syntax-highlighter-647f3f7d7d419858713967-5">
+<span class="crayon-h">&nbsp;&nbsp;</span><span class="crayon-s">"phase"</span><span class="crayon-o">=</span><span class="crayon-s">"III"</span><span class="crayon-sy">,</span>
+</div>
+<div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-647f3f7d7d419858713967-6">
+<span class="crayon-h">&nbsp;&nbsp;</span><span class="crayon-s">"therapeuticArea"</span><span class="crayon-o">=</span><span class="crayon-s">"((random))"</span><span class="crayon-sy">,</span>
+</div>
+<div class="crayon-line" id="urvanov-syntax-highlighter-647f3f7d7d419858713967-7">
+<span class="crayon-h">&nbsp;&nbsp;</span><span class="crayon-s">"indication"</span><span class="crayon-o">=</span><span class="crayon-s">"((random))"</span><span class="crayon-sy">,</span>
+</div>
+<div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-647f3f7d7d419858713967-8">
+<span class="crayon-h">&nbsp;&nbsp;</span><span class="crayon-s">"sponsor"</span><span class="crayon-o">=</span><span class="crayon-s">"((config))"</span><span class="crayon-sy">,</span>
+</div>
+<div class="crayon-line" id="urvanov-syntax-highlighter-647f3f7d7d419858713967-9">
+<span class="crayon-h">&nbsp;&nbsp;</span><span class="crayon-s">"status"</span><span class="crayon-o">=</span><span class="crayon-s">"Planning"</span><span class="crayon-sy">,</span>
+</div>
+<div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-647f3f7d7d419858713967-10">
+<span class="crayon-h">&nbsp;&nbsp;</span><span class="crayon-s">"billingCode"</span><span class="crayon-o">=</span><span class="crayon-s">"AUTOTEST"</span><span class="crayon-sy">,</span>
+</div>
+<div class="crayon-line" id="urvanov-syntax-highlighter-647f3f7d7d419858713967-11">
+<span class="crayon-h">&nbsp;&nbsp;</span><span class="crayon-s">"description"</span><span class="crayon-o">=</span><span class="crayon-s">"Default study for lucid test specifications."</span>
+</div>
+<div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-647f3f7d7d419858713967-12"><span class="crayon-sy">}</span></div>
+</div></td>
+					</tr>
+				</table>
+			</div>
+		</div>
+<!-- [Format Time: 0.0002 seconds] -->
+
+
+
+
+<p>The only difference here is that with spec example #1 the phase was random. Here, since a specific phase was specified, that is the phase that will be used. Otherwise, though, the data is still ad hoc data.</p>
+
+
+
+<p>Note that we could allow for synonym phrasings. For example we could allow “phase III” to be called “phase 3”. Currently, with the framework as I wrote it, if you used “phase 3” you will get the error you saw in spec example #3. The reason that the framework was very specific like this is because it was ‘taught’ to recognize domain words and key phrases.</p>
+
+
+
+<h3 class="wp-block-heading">Spec Example #5 [VALID]</h3>
+
+
+
+<p>Where example #4 was a specific phase, this specification relies on a generic phrase.</p>
+
+
+
+<pre style="white-space: pre-wrap; background-color: white; border: 1px solid;">TDL
+Scenario: A study, no conditions, generic phase
+  Given a late stage study
+
+DSL
+on(Study).create("late stage")
+</pre>
+
+
+
+<p>In this case the descriptive phrase “late stage” is translated into one of the phases that the company designated late stage – essentially, any stage that is not “phase I (Healthy Volunteers)”. In terms of what specific stage is picked, it will be a random draw. So, as an example, here is one possible data set that would be generated:</p>
+
+
+
+<!-- Urvanov Syntax Highlighter v2.8.33 -->
+
+		<div id="urvanov-syntax-highlighter-647f3f7d7d41d717621427" class="urvanov-syntax-highlighter-syntax crayon-theme-classic urvanov-syntax-highlighter-font-monaco urvanov-syntax-highlighter-os-pc print-yes notranslate" data-settings=" minimize scroll-mouseover" style="margin-top: 12px; margin-bottom: 12px; font-size: 12px !important; line-height: 15px !important;">
+		
+			<div class="crayon-toolbar" data-settings=" mouseover overlay hide delay" style="font-size: 12px !important;height: 18px !important; line-height: 18px !important;">
+<span class="crayon-title"></span>
+			<div class="crayon-tools" style="font-size: 12px !important;height: 18px !important; line-height: 18px !important;">
+<div class="crayon-button urvanov-syntax-highlighter-nums-button" title="Toggle Line Numbers"><div class="urvanov-syntax-highlighter-button-icon"></div></div>
+<div class="crayon-button urvanov-syntax-highlighter-plain-button" title="Toggle Plain Code"><div class="urvanov-syntax-highlighter-button-icon"></div></div>
+<div class="crayon-button urvanov-syntax-highlighter-wrap-button" title="Toggle Line Wrap"><div class="urvanov-syntax-highlighter-button-icon"></div></div>
+<div class="crayon-button urvanov-syntax-highlighter-expand-button" title="Expand Code"><div class="urvanov-syntax-highlighter-button-icon"></div></div>
+<div class="crayon-button urvanov-syntax-highlighter-copy-button" title="Copy"><div class="urvanov-syntax-highlighter-button-icon"></div></div>
+<div class="crayon-button urvanov-syntax-highlighter-popup-button" title="Open Code In New Window"><div class="urvanov-syntax-highlighter-button-icon"></div></div>
+</div>
+</div>
+			<div class="crayon-info" style="min-height: 16.8px !important; line-height: 16.8px !important;"></div>
+			<div class="urvanov-syntax-highlighter-plain-wrap"><textarea wrap="soft" class="urvanov-syntax-highlighter-plain print-no" data-settings="dblclick" readonly style="-moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4; font-size: 12px !important; line-height: 15px !important;">
+{
+  "name"="Lucid Study",
+  "protocol"="Lucid Protocol",
+  "product"="((random))",
+  "phase"="IV with IND",
+  "therapeuticArea"="((random))",
+  "indication"="((random))",
+  "sponsor"="((config))",
+  "status"="Planning",
+  "billingCode"="AUTOTEST",
+  "description"="Default study for lucid test specifications."
+}</textarea></div>
+			<div class="urvanov-syntax-highlighter-main">
+				<table class="crayon-table">
+					<tr class="urvanov-syntax-highlighter-row">
+				<td class="crayon-nums " data-settings="show">
+					<div class="urvanov-syntax-highlighter-nums-content" style="font-size: 12px !important; line-height: 15px !important;">
+<div class="crayon-num" data-line="urvanov-syntax-highlighter-647f3f7d7d41d717621427-1">1</div>
+<div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-647f3f7d7d41d717621427-2">2</div>
+<div class="crayon-num" data-line="urvanov-syntax-highlighter-647f3f7d7d41d717621427-3">3</div>
+<div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-647f3f7d7d41d717621427-4">4</div>
+<div class="crayon-num" data-line="urvanov-syntax-highlighter-647f3f7d7d41d717621427-5">5</div>
+<div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-647f3f7d7d41d717621427-6">6</div>
+<div class="crayon-num" data-line="urvanov-syntax-highlighter-647f3f7d7d41d717621427-7">7</div>
+<div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-647f3f7d7d41d717621427-8">8</div>
+<div class="crayon-num" data-line="urvanov-syntax-highlighter-647f3f7d7d41d717621427-9">9</div>
+<div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-647f3f7d7d41d717621427-10">10</div>
+<div class="crayon-num" data-line="urvanov-syntax-highlighter-647f3f7d7d41d717621427-11">11</div>
+<div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-647f3f7d7d41d717621427-12">12</div>
+</div>
+				</td>
+						<td class="urvanov-syntax-highlighter-code"><div class="crayon-pre" style="font-size: 12px !important; line-height: 15px !important; -moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4;">
+<div class="crayon-line" id="urvanov-syntax-highlighter-647f3f7d7d41d717621427-1"><span class="crayon-sy">{</span></div>
+<div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-647f3f7d7d41d717621427-2">
+<span class="crayon-h">&nbsp;&nbsp;</span><span class="crayon-s">"name"</span><span class="crayon-o">=</span><span class="crayon-s">"Lucid Study"</span><span class="crayon-sy">,</span>
+</div>
+<div class="crayon-line" id="urvanov-syntax-highlighter-647f3f7d7d41d717621427-3">
+<span class="crayon-h">&nbsp;&nbsp;</span><span class="crayon-s">"protocol"</span><span class="crayon-o">=</span><span class="crayon-s">"Lucid Protocol"</span><span class="crayon-sy">,</span>
+</div>
+<div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-647f3f7d7d41d717621427-4">
+<span class="crayon-h">&nbsp;&nbsp;</span><span class="crayon-s">"product"</span><span class="crayon-o">=</span><span class="crayon-s">"((random))"</span><span class="crayon-sy">,</span>
+</div>
+<div class="crayon-line" id="urvanov-syntax-highlighter-647f3f7d7d41d717621427-5">
+<span class="crayon-h">&nbsp;&nbsp;</span><span class="crayon-s">"phase"</span><span class="crayon-o">=</span><span class="crayon-s">"IV with IND"</span><span class="crayon-sy">,</span>
+</div>
+<div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-647f3f7d7d41d717621427-6">
+<span class="crayon-h">&nbsp;&nbsp;</span><span class="crayon-s">"therapeuticArea"</span><span class="crayon-o">=</span><span class="crayon-s">"((random))"</span><span class="crayon-sy">,</span>
+</div>
+<div class="crayon-line" id="urvanov-syntax-highlighter-647f3f7d7d41d717621427-7">
+<span class="crayon-h">&nbsp;&nbsp;</span><span class="crayon-s">"indication"</span><span class="crayon-o">=</span><span class="crayon-s">"((random))"</span><span class="crayon-sy">,</span>
+</div>
+<div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-647f3f7d7d41d717621427-8">
+<span class="crayon-h">&nbsp;&nbsp;</span><span class="crayon-s">"sponsor"</span><span class="crayon-o">=</span><span class="crayon-s">"((config))"</span><span class="crayon-sy">,</span>
+</div>
+<div class="crayon-line" id="urvanov-syntax-highlighter-647f3f7d7d41d717621427-9">
+<span class="crayon-h">&nbsp;&nbsp;</span><span class="crayon-s">"status"</span><span class="crayon-o">=</span><span class="crayon-s">"Planning"</span><span class="crayon-sy">,</span>
+</div>
+<div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-647f3f7d7d41d717621427-10">
+<span class="crayon-h">&nbsp;&nbsp;</span><span class="crayon-s">"billingCode"</span><span class="crayon-o">=</span><span class="crayon-s">"AUTOTEST"</span><span class="crayon-sy">,</span>
+</div>
+<div class="crayon-line" id="urvanov-syntax-highlighter-647f3f7d7d41d717621427-11">
+<span class="crayon-h">&nbsp;&nbsp;</span><span class="crayon-s">"description"</span><span class="crayon-o">=</span><span class="crayon-s">"Default study for lucid test specifications."</span>
+</div>
+<div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-647f3f7d7d41d717621427-12"><span class="crayon-sy">}</span></div>
+</div></td>
+					</tr>
+				</table>
+			</div>
+		</div>
+<!-- [Format Time: 0.0002 seconds] -->
+
+
+
+
+<p>Here the phase chosen was “IV with IND.”</p>
+
+
+
+<p>I should note that this example could also be attempted using “early stage” as the descriptive phrase. In that case, this acts as a synonym for “phase I (Healthy Volunteers)” because those two terms in the domain were considered synonymous and the team wanted that reflected in the model.</p>
+
+
+
+<p>In spec example #4, I said we have to be careful with synonym phrasings and that’s still true but, again, in the business domain the phrase “early stage” was in fact another way of saying “phase I (Healthy Volunteers)” and the two were used often enough to justify this.</p>
+
+
+
+<h3 class="wp-block-heading">Spec Example #6 [VALID]</h3>
+
+
+
+<p>This example is one that uses a specification format known as a data table.</p>
+
+
+
+<pre style="white-space: pre-wrap; background-color: white; border: 1px solid;">TDL
+Scenario: A study, with conditions, specific phase
+  Given a phase II study with
+    | Therapeutic Area | Mental Disorders Behavior Modification |
+    | Indication       | Personality Disorders                  |
+
+DSL
+on(Study).create("phase II", conditions)
+</pre>
+
+
+
+<p>In this case, a specific phase is being specified. What is also being specified is a set of conditions on the study that is being created: a specific therapeutic area and a specific indication.</p>
+
+
+
+<p>So what will happen here is that a phase II study will be chosen and then, in place of the ad hoc values that would otherwise be used, the specific values from the specification will be used. The data set will look like this:</p>
+
+
+
+<!-- Urvanov Syntax Highlighter v2.8.33 -->
+
+		<div id="urvanov-syntax-highlighter-647f3f7d7d420493044689" class="urvanov-syntax-highlighter-syntax crayon-theme-classic urvanov-syntax-highlighter-font-monaco urvanov-syntax-highlighter-os-pc print-yes notranslate" data-settings=" minimize scroll-mouseover" style="margin-top: 12px; margin-bottom: 12px; font-size: 12px !important; line-height: 15px !important;">
+		
+			<div class="crayon-toolbar" data-settings=" mouseover overlay hide delay" style="font-size: 12px !important;height: 18px !important; line-height: 18px !important;">
+<span class="crayon-title"></span>
+			<div class="crayon-tools" style="font-size: 12px !important;height: 18px !important; line-height: 18px !important;">
+<div class="crayon-button urvanov-syntax-highlighter-nums-button" title="Toggle Line Numbers"><div class="urvanov-syntax-highlighter-button-icon"></div></div>
+<div class="crayon-button urvanov-syntax-highlighter-plain-button" title="Toggle Plain Code"><div class="urvanov-syntax-highlighter-button-icon"></div></div>
+<div class="crayon-button urvanov-syntax-highlighter-wrap-button" title="Toggle Line Wrap"><div class="urvanov-syntax-highlighter-button-icon"></div></div>
+<div class="crayon-button urvanov-syntax-highlighter-expand-button" title="Expand Code"><div class="urvanov-syntax-highlighter-button-icon"></div></div>
+<div class="crayon-button urvanov-syntax-highlighter-copy-button" title="Copy"><div class="urvanov-syntax-highlighter-button-icon"></div></div>
+<div class="crayon-button urvanov-syntax-highlighter-popup-button" title="Open Code In New Window"><div class="urvanov-syntax-highlighter-button-icon"></div></div>
+</div>
+</div>
+			<div class="crayon-info" style="min-height: 16.8px !important; line-height: 16.8px !important;"></div>
+			<div class="urvanov-syntax-highlighter-plain-wrap"><textarea wrap="soft" class="urvanov-syntax-highlighter-plain print-no" data-settings="dblclick" readonly style="-moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4; font-size: 12px !important; line-height: 15px !important;">
+{
+  "name"="Lucid Study",
+  "protocol"="Lucid Protocol",
+  "product"="((random))",
+  "phase"="II",
+  "therapeuticArea"="Mental Disorders Behavior Modification",
+  "indication"="Personality Disorders",
+  "sponsor"="((config))",
+  "status"="Planning",
+  "billingCode"="AUTOTEST",
+  "description"="Default study for lucid test specifications."
+}</textarea></div>
+			<div class="urvanov-syntax-highlighter-main">
+				<table class="crayon-table">
+					<tr class="urvanov-syntax-highlighter-row">
+				<td class="crayon-nums " data-settings="show">
+					<div class="urvanov-syntax-highlighter-nums-content" style="font-size: 12px !important; line-height: 15px !important;">
+<div class="crayon-num" data-line="urvanov-syntax-highlighter-647f3f7d7d420493044689-1">1</div>
+<div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-647f3f7d7d420493044689-2">2</div>
+<div class="crayon-num" data-line="urvanov-syntax-highlighter-647f3f7d7d420493044689-3">3</div>
+<div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-647f3f7d7d420493044689-4">4</div>
+<div class="crayon-num" data-line="urvanov-syntax-highlighter-647f3f7d7d420493044689-5">5</div>
+<div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-647f3f7d7d420493044689-6">6</div>
+<div class="crayon-num" data-line="urvanov-syntax-highlighter-647f3f7d7d420493044689-7">7</div>
+<div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-647f3f7d7d420493044689-8">8</div>
+<div class="crayon-num" data-line="urvanov-syntax-highlighter-647f3f7d7d420493044689-9">9</div>
+<div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-647f3f7d7d420493044689-10">10</div>
+<div class="crayon-num" data-line="urvanov-syntax-highlighter-647f3f7d7d420493044689-11">11</div>
+<div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-647f3f7d7d420493044689-12">12</div>
+</div>
+				</td>
+						<td class="urvanov-syntax-highlighter-code"><div class="crayon-pre" style="font-size: 12px !important; line-height: 15px !important; -moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4;">
+<div class="crayon-line" id="urvanov-syntax-highlighter-647f3f7d7d420493044689-1"><span class="crayon-sy">{</span></div>
+<div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-647f3f7d7d420493044689-2">
+<span class="crayon-h">&nbsp;&nbsp;</span><span class="crayon-s">"name"</span><span class="crayon-o">=</span><span class="crayon-s">"Lucid Study"</span><span class="crayon-sy">,</span>
+</div>
+<div class="crayon-line" id="urvanov-syntax-highlighter-647f3f7d7d420493044689-3">
+<span class="crayon-h">&nbsp;&nbsp;</span><span class="crayon-s">"protocol"</span><span class="crayon-o">=</span><span class="crayon-s">"Lucid Protocol"</span><span class="crayon-sy">,</span>
+</div>
+<div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-647f3f7d7d420493044689-4">
+<span class="crayon-h">&nbsp;&nbsp;</span><span class="crayon-s">"product"</span><span class="crayon-o">=</span><span class="crayon-s">"((random))"</span><span class="crayon-sy">,</span>
+</div>
+<div class="crayon-line" id="urvanov-syntax-highlighter-647f3f7d7d420493044689-5">
+<span class="crayon-h">&nbsp;&nbsp;</span><span class="crayon-s">"phase"</span><span class="crayon-o">=</span><span class="crayon-s">"II"</span><span class="crayon-sy">,</span>
+</div>
+<div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-647f3f7d7d420493044689-6">
+<span class="crayon-h">&nbsp;&nbsp;</span><span class="crayon-s">"therapeuticArea"</span><span class="crayon-o">=</span><span class="crayon-s">"Mental Disorders Behavior Modification"</span><span class="crayon-sy">,</span>
+</div>
+<div class="crayon-line" id="urvanov-syntax-highlighter-647f3f7d7d420493044689-7">
+<span class="crayon-h">&nbsp;&nbsp;</span><span class="crayon-s">"indication"</span><span class="crayon-o">=</span><span class="crayon-s">"Personality Disorders"</span><span class="crayon-sy">,</span>
+</div>
+<div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-647f3f7d7d420493044689-8">
+<span class="crayon-h">&nbsp;&nbsp;</span><span class="crayon-s">"sponsor"</span><span class="crayon-o">=</span><span class="crayon-s">"((config))"</span><span class="crayon-sy">,</span>
+</div>
+<div class="crayon-line" id="urvanov-syntax-highlighter-647f3f7d7d420493044689-9">
+<span class="crayon-h">&nbsp;&nbsp;</span><span class="crayon-s">"status"</span><span class="crayon-o">=</span><span class="crayon-s">"Planning"</span><span class="crayon-sy">,</span>
+</div>
+<div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-647f3f7d7d420493044689-10">
+<span class="crayon-h">&nbsp;&nbsp;</span><span class="crayon-s">"billingCode"</span><span class="crayon-o">=</span><span class="crayon-s">"AUTOTEST"</span><span class="crayon-sy">,</span>
+</div>
+<div class="crayon-line" id="urvanov-syntax-highlighter-647f3f7d7d420493044689-11">
+<span class="crayon-h">&nbsp;&nbsp;</span><span class="crayon-s">"description"</span><span class="crayon-o">=</span><span class="crayon-s">"Default study for lucid test specifications."</span>
+</div>
+<div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-647f3f7d7d420493044689-12"><span class="crayon-sy">}</span></div>
+</div></td>
+					</tr>
+				</table>
+			</div>
+		</div>
+<!-- [Format Time: 0.0002 seconds] -->
+
+
+
+
+<p>Notice here how therapeutic area and indication – which would normally be random from the ad hoc default data – are given specific values.</p>
+
+
+
+<h3 class="wp-block-heading">Spec Example #7 [INVALID]</h3>
+
+
+
+<p>This one is very similar to what you saw in example #6 and is arguably a harder situation to parse and test for.</p>
+
+
+
+<pre style="white-space: pre-wrap; background-color: white; border: 1px solid;">TDL
+Scenario: A study, with conditions, specific phase
+  Given a late stage study with
+    | Therapeutic Area | Mental Disorders Behavior Modification |
+    | Indication       | Personality Disorders                  |
+
+DSL
+on(Study).create("late stage", conditions)
+</pre>
+
+
+
+<p>Here the only difference is that you are specifying a late stage study with conditions. However, this phrasing would lead to the following error:</p>
+
+
+
+<pre>The data context specified can lead to invalid data sets.
+(Errors::PossibleDataContextError)
+</pre>
+
+
+
+<p>The reason this is in error is because “late stage” can include “phase I (Oncology\Vaccines)&#8221; and that would not work if the data did not match up. That can be a little confusing if you don&#8217;t know the domain. But with the above example, the particular therapeutic area and indication chosen are <em>not valid</em> for a “phase I (Oncology\Vaccines)” study but they would be valid for any other late stage study.</p>
+
+
+
+<p>So rather than build in a lot of conditional logic to support how the current domain was implemented in the application I was helping test, the framework simply looks for situations that could potentially lead to invalid data conditions and doesn&#8217;t allow them to be part of the test design.</p>
+
+
+
+<h2 class="wp-block-heading">Test Definition Matchers</h2>
+
+
+
+<p>With the above examples you saw lot of statements like this:</p>
+
+
+
+<ul>
+<li><code>on(Study).create("phase I")</code></li>
+<li><code>on(Study).create("phase III")</code></li>
+<li><code>on(Study).create("late stage")</code></li>
+</ul>
+
+
+
+<p>That seems like a lot of information that has to be hard coded and thus potentially fragile if there are changes. In fact, this is handled via some generic code templates as part of the framework. Specifically, all of the above phrases (and the valid variations that you can probably think of) were handled by these test definition matchers:</p>
+
+
+
+<!-- Urvanov Syntax Highlighter v2.8.33 -->
+
+		<div id="urvanov-syntax-highlighter-647f3f7d7d422967688005" class="urvanov-syntax-highlighter-syntax crayon-theme-classic urvanov-syntax-highlighter-font-monaco urvanov-syntax-highlighter-os-pc print-yes notranslate" data-settings=" minimize scroll-mouseover" style="margin-top: 12px; margin-bottom: 12px; font-size: 12px !important; line-height: 15px !important;">
+		
+			<div class="crayon-toolbar" data-settings=" mouseover overlay hide delay" style="font-size: 12px !important;height: 18px !important; line-height: 18px !important;">
+<span class="crayon-title"></span>
+			<div class="crayon-tools" style="font-size: 12px !important;height: 18px !important; line-height: 18px !important;">
+<div class="crayon-button urvanov-syntax-highlighter-nums-button" title="Toggle Line Numbers"><div class="urvanov-syntax-highlighter-button-icon"></div></div>
+<div class="crayon-button urvanov-syntax-highlighter-plain-button" title="Toggle Plain Code"><div class="urvanov-syntax-highlighter-button-icon"></div></div>
+<div class="crayon-button urvanov-syntax-highlighter-wrap-button" title="Toggle Line Wrap"><div class="urvanov-syntax-highlighter-button-icon"></div></div>
+<div class="crayon-button urvanov-syntax-highlighter-expand-button" title="Expand Code"><div class="urvanov-syntax-highlighter-button-icon"></div></div>
+<div class="crayon-button urvanov-syntax-highlighter-copy-button" title="Copy"><div class="urvanov-syntax-highlighter-button-icon"></div></div>
+<div class="crayon-button urvanov-syntax-highlighter-popup-button" title="Open Code In New Window"><div class="urvanov-syntax-highlighter-button-icon"></div></div>
+<span class="crayon-language">Ruby</span>
+</div>
+</div>
+			<div class="crayon-info" style="min-height: 16.8px !important; line-height: 16.8px !important;"></div>
+			<div class="urvanov-syntax-highlighter-plain-wrap"><textarea wrap="soft" class="urvanov-syntax-highlighter-plain print-no" data-settings="dblclick" readonly style="-moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4; font-size: 12px !important; line-height: 15px !important;">
+Given (/^a study with (.*)$/) do |expression|
+  on(Study).create(expression)
+end
+
+Given (/^a (.*) study with$/) do |type, conditions|
+  on(Study).create(type, conditions)
+end
+
+Given (/^a study$/) do
+  on(Study).create
+end
+
+Given (/^a (.*)? study$/) do |type|
+  on(Study).create(type)
+end</textarea></div>
+			<div class="urvanov-syntax-highlighter-main">
+				<table class="crayon-table">
+					<tr class="urvanov-syntax-highlighter-row">
+				<td class="crayon-nums " data-settings="show">
+					<div class="urvanov-syntax-highlighter-nums-content" style="font-size: 12px !important; line-height: 15px !important;">
+<div class="crayon-num" data-line="urvanov-syntax-highlighter-647f3f7d7d422967688005-1">1</div>
+<div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-647f3f7d7d422967688005-2">2</div>
+<div class="crayon-num" data-line="urvanov-syntax-highlighter-647f3f7d7d422967688005-3">3</div>
+<div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-647f3f7d7d422967688005-4">4</div>
+<div class="crayon-num" data-line="urvanov-syntax-highlighter-647f3f7d7d422967688005-5">5</div>
+<div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-647f3f7d7d422967688005-6">6</div>
+<div class="crayon-num" data-line="urvanov-syntax-highlighter-647f3f7d7d422967688005-7">7</div>
+<div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-647f3f7d7d422967688005-8">8</div>
+<div class="crayon-num" data-line="urvanov-syntax-highlighter-647f3f7d7d422967688005-9">9</div>
+<div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-647f3f7d7d422967688005-10">10</div>
+<div class="crayon-num" data-line="urvanov-syntax-highlighter-647f3f7d7d422967688005-11">11</div>
+<div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-647f3f7d7d422967688005-12">12</div>
+<div class="crayon-num" data-line="urvanov-syntax-highlighter-647f3f7d7d422967688005-13">13</div>
+<div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-647f3f7d7d422967688005-14">14</div>
+<div class="crayon-num" data-line="urvanov-syntax-highlighter-647f3f7d7d422967688005-15">15</div>
+</div>
+				</td>
+						<td class="urvanov-syntax-highlighter-code"><div class="crayon-pre" style="font-size: 12px !important; line-height: 15px !important; -moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4;">
+<div class="crayon-line" id="urvanov-syntax-highlighter-647f3f7d7d422967688005-1">
+<span class="crayon-e">Given</span><span class="crayon-h"> </span><span class="crayon-sy">(</span><span class="crayon-o">/</span><span class="crayon-o">^</span><span class="crayon-i">a</span><span class="crayon-h"> </span><span class="crayon-i">study</span><span class="crayon-h"> </span><span class="crayon-e">with</span><span class="crayon-h"> </span><span class="crayon-sy">(</span><span class="crayon-sy">.</span><span class="crayon-o">*</span><span class="crayon-sy">)</span><span class="crayon-sy">$</span><span class="crayon-o">/</span><span class="crayon-sy">)</span><span class="crayon-h"> </span><span class="crayon-st">do</span><span class="crayon-h"> </span><span class="crayon-o">|</span><span class="crayon-v">expression</span><span class="crayon-o">|</span>
+</div>
+<div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-647f3f7d7d422967688005-2">
+<span class="crayon-h">&nbsp;&nbsp;</span><span class="crayon-e">on</span><span class="crayon-sy">(</span><span class="crayon-v">Study</span><span class="crayon-sy">)</span><span class="crayon-sy">.</span><span class="crayon-e">create</span><span class="crayon-sy">(</span><span class="crayon-v">expression</span><span class="crayon-sy">)</span>
+</div>
+<div class="crayon-line" id="urvanov-syntax-highlighter-647f3f7d7d422967688005-3"><span class="crayon-st">end</span></div>
+<div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-647f3f7d7d422967688005-4">&nbsp;</div>
+<div class="crayon-line" id="urvanov-syntax-highlighter-647f3f7d7d422967688005-5">
+<span class="crayon-e">Given</span><span class="crayon-h"> </span><span class="crayon-sy">(</span><span class="crayon-o">/</span><span class="crayon-o">^</span><span class="crayon-e">a</span><span class="crayon-h"> </span><span class="crayon-sy">(</span><span class="crayon-sy">.</span><span class="crayon-o">*</span><span class="crayon-sy">)</span><span class="crayon-h"> </span><span class="crayon-i">study</span><span class="crayon-h"> </span><span class="crayon-v">with</span><span class="crayon-sy">$</span><span class="crayon-o">/</span><span class="crayon-sy">)</span><span class="crayon-h"> </span><span class="crayon-st">do</span><span class="crayon-h"> </span><span class="crayon-o">|</span><span class="crayon-v">type</span><span class="crayon-sy">,</span><span class="crayon-h"> </span><span class="crayon-v">conditions</span><span class="crayon-o">|</span>
+</div>
+<div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-647f3f7d7d422967688005-6">
+<span class="crayon-h">&nbsp;&nbsp;</span><span class="crayon-e">on</span><span class="crayon-sy">(</span><span class="crayon-v">Study</span><span class="crayon-sy">)</span><span class="crayon-sy">.</span><span class="crayon-e">create</span><span class="crayon-sy">(</span><span class="crayon-v">type</span><span class="crayon-sy">,</span><span class="crayon-h"> </span><span class="crayon-v">conditions</span><span class="crayon-sy">)</span>
+</div>
+<div class="crayon-line" id="urvanov-syntax-highlighter-647f3f7d7d422967688005-7"><span class="crayon-st">end</span></div>
+<div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-647f3f7d7d422967688005-8">&nbsp;</div>
+<div class="crayon-line" id="urvanov-syntax-highlighter-647f3f7d7d422967688005-9">
+<span class="crayon-e">Given</span><span class="crayon-h"> </span><span class="crayon-sy">(</span><span class="crayon-o">/</span><span class="crayon-o">^</span><span class="crayon-i">a</span><span class="crayon-h"> </span><span class="crayon-v">study</span><span class="crayon-sy">$</span><span class="crayon-o">/</span><span class="crayon-sy">)</span><span class="crayon-h"> </span><span class="crayon-st">do</span>
+</div>
+<div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-647f3f7d7d422967688005-10">
+<span class="crayon-h">&nbsp;&nbsp;</span><span class="crayon-e">on</span><span class="crayon-sy">(</span><span class="crayon-v">Study</span><span class="crayon-sy">)</span><span class="crayon-sy">.</span><span class="crayon-i">create</span>
+</div>
+<div class="crayon-line" id="urvanov-syntax-highlighter-647f3f7d7d422967688005-11"><span class="crayon-st">end</span></div>
+<div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-647f3f7d7d422967688005-12">&nbsp;</div>
+<div class="crayon-line" id="urvanov-syntax-highlighter-647f3f7d7d422967688005-13">
+<span class="crayon-e">Given</span><span class="crayon-h"> </span><span class="crayon-sy">(</span><span class="crayon-o">/</span><span class="crayon-o">^</span><span class="crayon-e">a</span><span class="crayon-h"> </span><span class="crayon-sy">(</span><span class="crayon-sy">.</span><span class="crayon-o">*</span><span class="crayon-sy">)</span><span class="crayon-sy">?</span><span class="crayon-h"> </span><span class="crayon-v">study</span><span class="crayon-sy">$</span><span class="crayon-o">/</span><span class="crayon-sy">)</span><span class="crayon-h"> </span><span class="crayon-st">do</span><span class="crayon-h"> </span><span class="crayon-o">|</span><span class="crayon-v">type</span><span class="crayon-o">|</span>
+</div>
+<div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-647f3f7d7d422967688005-14">
+<span class="crayon-h">&nbsp;&nbsp;</span><span class="crayon-e">on</span><span class="crayon-sy">(</span><span class="crayon-v">Study</span><span class="crayon-sy">)</span><span class="crayon-sy">.</span><span class="crayon-e">create</span><span class="crayon-sy">(</span><span class="crayon-v">type</span><span class="crayon-sy">)</span>
+</div>
+<div class="crayon-line" id="urvanov-syntax-highlighter-647f3f7d7d422967688005-15"><span class="crayon-st">end</span></div>
+</div></td>
+					</tr>
+				</table>
+			</div>
+		</div>
+<!-- [Format Time: 0.0004 seconds] -->
+
+
+
+
+<p>If you&#8217;ve used tools like Cucumber before, this will be very familiar.</p>
+
+
+
+<p>You can see here that regular expressions are used in some cases to allow for generic matches that will recognize specific situations. In other cases, literal phrases are matched. There is a very fine line to be drawn when using regular expressions like this.</p>
+
+
+
+<p>In fact, I am actually not a fan of regular expressions in this context because they can get quite unwieldy and lead to a lot of problems when you have natural language matched against a structured language. However, there are some guidelines that the framework used to allow regular expressions and the above is largely what I  wanted to support and not much beyond that.</p>
+
+
+
+<p>I say that because I believe the matchers should still be readable. The above regular expressions are essentially serving as simple placeholders and I believe that the surrounding literal text gives enough clues as to what the regular expressions are placeholders for.</p>
+
+
+
+<p>This is the area that I was the least comfortable with at the time the project finished but, in discussing with the team, it did seem like a responsible balance between having too many test definition matchers and having just a few matchers that could match just about any combination of phrases you could think of.</p>
+
+
+
+<h2 class="wp-block-heading">Code Design</h2>
+
+
+
+<p>One thing I haven&#8217;t shown as much is the behind the scenes code from the automation side and a lot of that has to do with non-disclosure agreements. Even without seeing that code, I will say that just as with test design, code design matters in an automation context as much as it matters in a non-automation context. There were a few principles that I was able to follow with the above code:</p>
+
+
+
+<ul>
+<li>Embrace small code.</li>
+<li>Abstraction encourages clarity.</li>
+<li>No computation is too small to be put into a helper function.</li>
+<li>No expression is too simple to be given a name.</li>
+<li>Small code is more easily seen to be obviously correct.</li>
+</ul>
+
+
+
+<p>A few other principles fell out of those:</p>
+
+
+
+<ul>
+<li>We often have to trade elegance of design for practicality of implementation.</li>
+<li>Embrace brevity, but do not sacrifice readability. Concise, not terse.</li>
+<li>Prefer elegance over efficiency where efficiency is less than critical.</li>
+</ul>
+
+
+
+<p>These were all aspects that I discussed with the team, both developers and testers.</p>
+
+
+
+<h2 class="wp-block-heading">Test Design and Execution Meet</h2>
+
+
+
+<p>As I talked about in a few places above, test design and test execution were linked up. The knowledge about the domain was encoded. Note that even if the automation wasn&#8217;t run against the application, the automation could be run against the specification itself, triggering the errors I mentioned above.</p>
+
+
+
+<p>What I&#8217;m talking about there is a very different thing than just the &#8220;dry run&#8221; executions you might do with tools like Cucumber or RSpec to see if you are missing code matchers.</p>
+
+
+
+<p>So there are two levels of automation that can be considered here but note that all of that automation is doing nothing less than encoding the domain model <em>that was thought about by humans</em>.</p>
+
+
+
+<h2 class="wp-block-heading">The Human Is Present</h2>
+
+
+
+<p>Yes, there was a lot about automation here.</p>
+
+
+
+<p>But humans had to explore how to talk about the domain and what assumptions should and should not be considered safe. Humans had to think about what default data looked like and what initial set of ad hoc data made sense to serve as a template. Humans had to consider the nature of the ubiquitous language that focused on business intent rather than code implementation.</p>
+
+
+
+<p>This type of framework also encourages thinking about design: the design of testing (as activity), the design of tests (as artifacts), and the design of code (that supports execution of the artifacts and supports the activity).</p>
+
+
+
+<p>Further, all explorations made by the delivery team were capable of being encoded fairly quickly as scripts. This is important. Exploration is a core aspect of testing. But scripts can also be important once we are sure the exploration has yielded fruit. This is particular true if you are in an environment, as I was, that required test artifacts for compliance purposes. So having a way to quickly adapt exploration into scripts is helpful.</p>
+
+
+
+<p>With that I&#8217;ll close this post. I hope this case study was useful to you in thinking about how your own human test design can be situated within the context of technology in the form of automated test execution.</p>
+<div class="addtoany_share_save_container addtoany_content addtoany_content_bottom"><div class="a2a_kit a2a_kit_size_16 addtoany_list" data-a2a-url="https://testerstories.com/2019/07/human-test-design-automated-test-execution/" data-a2a-title="Human Test Design, Automated Test Execution">
+<a class="a2a_button_facebook" href="https://www.addtoany.com/add_to/facebook?linkurl=%2F2019%2F07%2Fhuman-test-design-automated-test-execution%2F&amp;linkname=Human%20Test%20Design%2C%20Automated%20Test%20Execution" title="Facebook" rel="nofollow noopener" target="_blank"></a><a class="a2a_button_twitter" href="https://www.addtoany.com/add_to/twitter?linkurl=%2F2019%2F07%2Fhuman-test-design-automated-test-execution%2F&amp;linkname=Human%20Test%20Design%2C%20Automated%20Test%20Execution" title="Twitter" rel="nofollow noopener" target="_blank"></a><a class="a2a_button_linkedin" href="https://www.addtoany.com/add_to/linkedin?linkurl=%2F2019%2F07%2Fhuman-test-design-automated-test-execution%2F&amp;linkname=Human%20Test%20Design%2C%20Automated%20Test%20Execution" title="LinkedIn" rel="nofollow noopener" target="_blank"></a><a class="a2a_button_print" href="https://www.addtoany.com/add_to/print?linkurl=%2F2019%2F07%2Fhuman-test-design-automated-test-execution%2F&amp;linkname=Human%20Test%20Design%2C%20Automated%20Test%20Execution" title="Print" rel="nofollow noopener" target="_blank"></a><a class="a2a_dd addtoany_share_save addtoany_share" href="https://www.addtoany.com/share"><img src="https://static.addtoany.com/buttons/favicon.png" alt="Share"></a>
+</div></div>      
+	</div>
+<!-- .entry-content -->
+	<footer class="entry-footer">       
+		<p class="written-by">This article was written by <a href="/author/administrator/">Jeff Nyman</a></p>
+<div class="author-bio">
+		
+	<h3><a href="/author/administrator/" rel="author">About  Jeff Nyman</a></h3>		
+	<img alt="" src="https://secure.gravatar.com/avatar/a3b6c2d0b2bafdb9ad9cdf782873204d?s=72&#038;d=mm&#038;r=pg" srcset="https://secure.gravatar.com/avatar/a3b6c2d0b2bafdb9ad9cdf782873204d?s=144&#038;d=mm&#038;r=pg 2x" class="avatar avatar-72 photo" height="72" width="72" decoding="async"><p class="author-description">Anything I put here is an approximation of the truth. You're getting a particular view of myself ... and it's the view I'm choosing to present to you. If you've never met me before in person, please realize I'm not the same in person as I am in writing. That's because I can only put part of myself down into words.
+
+If you have met me before in person then I'd ask you to consider that the view you've formed that way and the view you come to by reading what I say here may, in fact, both be true. I'd advise that you not automatically discard either viewpoint when they conflict or accept either as truth when they agree.</p>		
+</div>
+<!-- .author-bio -->
+	</footer><!-- .entry-footer -->
+
+	<nav class="navigation post-navigation" aria-label="Posts">
+		<h2 class="screen-reader-text">Post navigation</h2>
+		<div class="nav-links">
+<div class="nav-previous"><a href="/2019/07/should-testers-own-quality/" rel="prev"><span class="genericon genericon-previous" aria-hidden="true"></span> <span class="screen-reader-text">Previous post:</span> <span class="post-title">Should Testers Own Quality?</span></a></div>
+<div class="nav-next"><a href="/2019/07/tests-human-readable-machine-expressive/" rel="next"><span class="post-title">Tests &#8211; Human Readable, Machine Expressive</span><span class="screen-reader-text">Next post:</span> <span class="genericon genericon-next" aria-hidden="true"></span> </a></div>
+</div>
+	</nav>
+<div id="comments" class="comments-area">
+
+
+		<div id="respond" class="comment-respond">
+		<h3 id="reply-title" class="comment-reply-title">Leave a Reply <small><a rel="nofollow" id="cancel-comment-reply-link" href="/2019/07/human-test-design-automated-test-execution/#respond" style="display:none;">Cancel reply</a></small>
+</h3>
+<form action="https://testerstories.com/wp-comments-post.php" method="post" id="commentform" class="comment-form" novalidate>
+<p class="comment-notes"><span id="email-notes">Your email address will not be published.</span> <span class="required-field-message">Required fields are marked <span class="required">*</span></span></p>
+<p class="comment-form-comment"><label for="comment">Comment <span class="required">*</span></label> <textarea id="comment" name="comment" cols="45" rows="8" maxlength="65525" required></textarea></p>
+<p class="comment-form-author"><label for="author">Name <span class="required">*</span></label> <input id="author" name="author" type="text" value="" size="30" maxlength="245" autocomplete="name" required></p>
+<p class="comment-form-email"><label for="email">Email <span class="required">*</span></label> <input id="email" name="email" type="email" value="" size="30" maxlength="100" aria-describedby="email-notes" autocomplete="email" required></p>
+<p class="comment-form-url"><label for="url">Website</label> <input id="url" name="url" type="url" value="" size="30" maxlength="200" autocomplete="url"></p>
+<p class="form-submit"><input name="submit" type="submit" id="submit" class="submit" value="Post Comment"> <input type="hidden" name="comment_post_ID" value="3740" id="comment_post_ID">
+<input type="hidden" name="comment_parent" id="comment_parent" value="0">
+</p>
+<p style="display: none;"><input type="hidden" id="akismet_comment_nonce" name="akismet_comment_nonce" value="042aa40817"></p>
+<p style="display: none !important;"><label>&#916;<textarea name="ak_hp_textarea" cols="45" rows="8" maxlength="100"></textarea></label><input type="hidden" id="ak_js_1" name="ak_js" value="43"><script>document.getElementById( "ak_js_1" ).setAttribute( "value", ( new Date() ).getTime() );</script></p>
+</form>	</div>
+<!-- #respond -->
+	<p class="akismet_comment_form_privacy_notice">This site uses Akismet to reduce spam. <a href="https://akismet.com/privacy/" target="_blank" rel="nofollow noopener">Learn how your comment data is processed</a>.</p>
+</div>
+<!-- #comments -->
+</article><!-- #post-## -->
+</main><!--/main-content-->
+	<aside id="sidebar-widget-area" class="sidebar-widget-area" role="complementary">
+		<a class="screen-reader-text skip-link" href="#page-footer">Skip to footer</a>
+
+		<section id="sidebar" class="widget-area sidebar">
+			<div id="text-6" class="widget widget_text">			<div class="textwidget">
+<p><a href="https://www.linkedin.com/pub/jeff-nyman/12/b32/16a"><br>
+<img decoding="async" src="https://static.licdn.com/scds/common/u/img/webpromo/btn_myprofile_160x33.png" alt="View Jeff Nyman's profile on LinkedIn" width="160" height="33" border="0"></a></p>
+</div>
+		</div>
+<div id="categories-5" class="widget widget_categories">
+<h2 class="widget-title">Topics</h2>
+			<ul>
+					<li class="cat-item cat-item-58">
+<a href="/category/agile/">Agile</a> (2)
+</li>
+	<li class="cat-item cat-item-49">
+<a href="/category/ai/">AI</a> (24)
+<ul class="children">
+	<li class="cat-item cat-item-50">
+<a href="/category/ai/machine-learning/">Machine Learning</a> (12)
+	<ul class="children">
+	<li class="cat-item cat-item-55">
+<a href="/category/ai/machine-learning/ml-series-1/">ML Series 1</a> (2)
+</li>
+	<li class="cat-item cat-item-56">
+<a href="/category/ai/machine-learning/ml-series-2/">ML Series 2</a> (4)
+</li>
+	<li class="cat-item cat-item-57">
+<a href="/category/ai/machine-learning/ml-series-3/">ML Series 3</a> (6)
+</li>
+	</ul>
+</li>
+</ul>
+</li>
+	<li class="cat-item cat-item-11">
+<a href="/category/automation/">Automation</a> (68)
+<ul class="children">
+	<li class="cat-item cat-item-41">
+<a href="/category/automation/c/">C#</a> (2)
+</li>
+	<li class="cat-item cat-item-8">
+<a href="/category/automation/capybara/">Capybara</a> (11)
+</li>
+	<li class="cat-item cat-item-9">
+<a href="/category/automation/cucumber/">Cucumber</a> (10)
+</li>
+	<li class="cat-item cat-item-31">
+<a href="/category/automation/cucumber-jvm/">Cucumber-JVM</a> (6)
+</li>
+	<li class="cat-item cat-item-42">
+<a href="/category/automation/groovy/">Groovy</a> (1)
+</li>
+	<li class="cat-item cat-item-40">
+<a href="/category/automation/java/">Java</a> (9)
+</li>
+	<li class="cat-item cat-item-10">
+<a href="/category/automation/qtp/">QTP</a> (6)
+</li>
+	<li class="cat-item cat-item-5">
+<a href="/category/automation/rspec/">RSpec</a> (4)
+</li>
+	<li class="cat-item cat-item-7">
+<a href="/category/automation/selenium/">Selenium</a> (17)
+</li>
+	<li class="cat-item cat-item-39">
+<a href="/category/automation/serenity/">Serenity</a> (8)
+</li>
+	<li class="cat-item cat-item-30">
+<a href="/category/automation/symbiont/">Symbiont</a> (11)
+</li>
+	<li class="cat-item cat-item-51">
+<a href="/category/automation/tapestry/">Tapestry</a> (6)
+</li>
+	<li class="cat-item cat-item-6">
+<a href="/category/automation/watir/">Watir</a> (4)
+</li>
+</ul>
+</li>
+	<li class="cat-item cat-item-13">
+<a href="/category/bdd/">BDD</a> (24)
+<ul class="children">
+	<li class="cat-item cat-item-23">
+<a href="/category/bdd/tdl/">TDL</a> (17)
+</li>
+</ul>
+</li>
+	<li class="cat-item cat-item-25">
+<a href="/category/career/">Career</a> (33)
+<ul class="children">
+	<li class="cat-item cat-item-53">
+<a href="/category/career/interview/">Interview</a> (10)
+</li>
+</ul>
+</li>
+	<li class="cat-item cat-item-15">
+<a href="/category/communication/">Communication</a> (16)
+</li>
+	<li class="cat-item cat-item-65">
+<a href="/category/crime-scene/">Crime Scene</a> (4)
+</li>
+	<li class="cat-item cat-item-52">
+<a href="/category/data-science/">Data Science</a> (4)
+</li>
+	<li class="cat-item cat-item-61">
+<a href="/category/development/">Development</a> (39)
+<ul class="children">
+	<li class="cat-item cat-item-36">
+<a href="/category/development/chef/">Chef</a> (2)
+</li>
+	<li class="cat-item cat-item-32">
+<a href="/category/development/inform-7/">Inform 7</a> (3)
+</li>
+	<li class="cat-item cat-item-38">
+<a href="/category/development/javascript-test-solutions/">JavaScript</a> (6)
+</li>
+	<li class="cat-item cat-item-19">
+<a href="/category/development/language-building/">Language Building</a> (9)
+	<ul class="children">
+	<li class="cat-item cat-item-20">
+<a href="/category/development/language-building/rex-and-racc/">Rex and Racc</a> (3)
+</li>
+	</ul>
+</li>
+	<li class="cat-item cat-item-48">
+<a href="/category/development/python/">Python</a> (4)
+</li>
+	<li class="cat-item cat-item-29">
+<a href="/category/development/rails/">Rails</a> (4)
+</li>
+	<li class="cat-item cat-item-21">
+<a href="/category/development/web-development/">Web Development</a> (11)
+	<ul class="children">
+	<li class="cat-item cat-item-34">
+<a href="/category/development/web-development/node-js/">Node.js</a> (5)
+</li>
+	<li class="cat-item cat-item-22">
+<a href="/category/development/web-development/sinatra/">Sinatra</a> (6)
+</li>
+	</ul>
+</li>
+</ul>
+</li>
+	<li class="cat-item cat-item-28">
+<a href="/category/dialect/">Dialect</a> (6)
+</li>
+	<li class="cat-item cat-item-45">
+<a href="/category/exploration/">Exploration</a> (14)
+<ul class="children">
+	<li class="cat-item cat-item-46">
+<a href="/category/exploration/interactive/">Interactive</a> (6)
+</li>
+</ul>
+</li>
+	<li class="cat-item cat-item-44">
+<a href="/category/indefinito/">Indefinito</a> (11)
+</li>
+	<li class="cat-item cat-item-17">
+<a href="/category/learning/">Learning</a> (11)
+</li>
+	<li class="cat-item cat-item-24">
+<a href="/category/lucid/">Lucid</a> (11)
+</li>
+	<li class="cat-item cat-item-62">
+<a href="/category/product-development/">Product Development</a> (7)
+</li>
+	<li class="cat-item cat-item-64">
+<a href="/category/product-management/">Product Management</a> (3)
+</li>
+	<li class="cat-item cat-item-3">
+<a href="/category/quality/">Quality</a> (7)
+</li>
+	<li class="cat-item cat-item-14">
+<a href="/category/quality-assurance/">Quality Assurance</a> (5)
+</li>
+	<li class="cat-item cat-item-35">
+<a href="/category/specify/">Specify</a> (2)
+</li>
+	<li class="cat-item cat-item-16">
+<a href="/category/symbiont-pg/">Symbiont-PG</a> (4)
+</li>
+	<li class="cat-item cat-item-27">
+<a href="/category/test-solutions/">Test Solutions</a> (11)
+</li>
+	<li class="cat-item cat-item-4">
+<a href="/category/testing/">Testing</a> (167)
+<ul class="children">
+	<li class="cat-item cat-item-59">
+<a href="/category/testing/contracts/">Contracts</a> (2)
+</li>
+	<li class="cat-item cat-item-63">
+<a href="/category/testing/epistemology/">Epistemology</a> (1)
+</li>
+	<li class="cat-item cat-item-67">
+<a href="/category/testing/games/">Games</a> (8)
+</li>
+	<li class="cat-item cat-item-68">
+<a href="/category/testing/history-and-science/">History and Science</a> (5)
+</li>
+	<li class="cat-item cat-item-43">
+<a href="/category/testing/modern-testing/">Modern Testing</a> (15)
+</li>
+	<li class="cat-item cat-item-54">
+<a href="/category/testing/testability/">Testability</a> (9)
+</li>
+</ul>
+</li>
+	<li class="cat-item cat-item-12">
+<a href="/category/thinking/">Thinking</a> (22)
+</li>
+	<li class="cat-item cat-item-47">
+<a href="/category/what-if/">What If</a> (1)
+</li>
+	<li class="cat-item cat-item-69">
+<a href="/category/zmachine/">Z-Machine</a> (7)
+</li>
+			</ul>
+
+			</div>
+<div id="archives-5" class="widget widget_archive">
+<h2 class="widget-title">Archives</h2>		<label class="screen-reader-text" for="archives-dropdown-5">Archives</label>
+		<select id="archives-dropdown-5" name="archive-dropdown">
+			
+			<option value="">Select Month</option>
+				<option value="https://testerstories.com/2023/06/"> June 2023 </option>
+	<option value="https://testerstories.com/2023/05/"> May 2023 </option>
+	<option value="https://testerstories.com/2023/04/"> April 2023 </option>
+	<option value="https://testerstories.com/2023/03/"> March 2023 </option>
+	<option value="https://testerstories.com/2023/02/"> February 2023 </option>
+	<option value="https://testerstories.com/2023/01/"> January 2023 </option>
+	<option value="https://testerstories.com/2022/12/"> December 2022 </option>
+	<option value="https://testerstories.com/2022/11/"> November 2022 </option>
+	<option value="https://testerstories.com/2022/10/"> October 2022 </option>
+	<option value="https://testerstories.com/2022/07/"> July 2022 </option>
+	<option value="https://testerstories.com/2022/06/"> June 2022 </option>
+	<option value="https://testerstories.com/2022/05/"> May 2022 </option>
+	<option value="https://testerstories.com/2022/03/"> March 2022 </option>
+	<option value="https://testerstories.com/2022/02/"> February 2022 </option>
+	<option value="https://testerstories.com/2022/01/"> January 2022 </option>
+	<option value="https://testerstories.com/2021/12/"> December 2021 </option>
+	<option value="https://testerstories.com/2021/10/"> October 2021 </option>
+	<option value="https://testerstories.com/2021/08/"> August 2021 </option>
+	<option value="https://testerstories.com/2021/07/"> July 2021 </option>
+	<option value="https://testerstories.com/2021/06/"> June 2021 </option>
+	<option value="https://testerstories.com/2021/05/"> May 2021 </option>
+	<option value="https://testerstories.com/2021/04/"> April 2021 </option>
+	<option value="https://testerstories.com/2021/03/"> March 2021 </option>
+	<option value="https://testerstories.com/2021/02/"> February 2021 </option>
+	<option value="https://testerstories.com/2021/01/"> January 2021 </option>
+	<option value="https://testerstories.com/2020/11/"> November 2020 </option>
+	<option value="https://testerstories.com/2020/10/"> October 2020 </option>
+	<option value="https://testerstories.com/2020/09/"> September 2020 </option>
+	<option value="https://testerstories.com/2020/07/"> July 2020 </option>
+	<option value="https://testerstories.com/2020/06/"> June 2020 </option>
+	<option value="https://testerstories.com/2020/05/"> May 2020 </option>
+	<option value="https://testerstories.com/2020/02/"> February 2020 </option>
+	<option value="https://testerstories.com/2020/01/"> January 2020 </option>
+	<option value="https://testerstories.com/2019/12/"> December 2019 </option>
+	<option value="https://testerstories.com/2019/11/"> November 2019 </option>
+	<option value="https://testerstories.com/2019/10/"> October 2019 </option>
+	<option value="https://testerstories.com/2019/09/"> September 2019 </option>
+	<option value="https://testerstories.com/2019/08/"> August 2019 </option>
+	<option value="https://testerstories.com/2019/07/"> July 2019 </option>
+	<option value="https://testerstories.com/2019/06/"> June 2019 </option>
+	<option value="https://testerstories.com/2019/05/"> May 2019 </option>
+	<option value="https://testerstories.com/2019/04/"> April 2019 </option>
+	<option value="https://testerstories.com/2019/03/"> March 2019 </option>
+	<option value="https://testerstories.com/2019/02/"> February 2019 </option>
+	<option value="https://testerstories.com/2019/01/"> January 2019 </option>
+	<option value="https://testerstories.com/2018/12/"> December 2018 </option>
+	<option value="https://testerstories.com/2018/11/"> November 2018 </option>
+	<option value="https://testerstories.com/2018/10/"> October 2018 </option>
+	<option value="https://testerstories.com/2018/09/"> September 2018 </option>
+	<option value="https://testerstories.com/2018/08/"> August 2018 </option>
+	<option value="https://testerstories.com/2018/07/"> July 2018 </option>
+	<option value="https://testerstories.com/2018/06/"> June 2018 </option>
+	<option value="https://testerstories.com/2018/05/"> May 2018 </option>
+	<option value="https://testerstories.com/2018/04/"> April 2018 </option>
+	<option value="https://testerstories.com/2018/03/"> March 2018 </option>
+	<option value="https://testerstories.com/2018/02/"> February 2018 </option>
+	<option value="https://testerstories.com/2018/01/"> January 2018 </option>
+	<option value="https://testerstories.com/2017/12/"> December 2017 </option>
+	<option value="https://testerstories.com/2017/11/"> November 2017 </option>
+	<option value="https://testerstories.com/2017/10/"> October 2017 </option>
+	<option value="https://testerstories.com/2017/09/"> September 2017 </option>
+	<option value="https://testerstories.com/2017/08/"> August 2017 </option>
+	<option value="https://testerstories.com/2017/07/"> July 2017 </option>
+	<option value="https://testerstories.com/2017/06/"> June 2017 </option>
+	<option value="https://testerstories.com/2017/05/"> May 2017 </option>
+	<option value="https://testerstories.com/2017/04/"> April 2017 </option>
+	<option value="https://testerstories.com/2017/03/"> March 2017 </option>
+	<option value="https://testerstories.com/2017/02/"> February 2017 </option>
+	<option value="https://testerstories.com/2017/01/"> January 2017 </option>
+	<option value="https://testerstories.com/2016/12/"> December 2016 </option>
+	<option value="https://testerstories.com/2016/11/"> November 2016 </option>
+	<option value="https://testerstories.com/2016/10/"> October 2016 </option>
+	<option value="https://testerstories.com/2016/09/"> September 2016 </option>
+	<option value="https://testerstories.com/2016/08/"> August 2016 </option>
+	<option value="https://testerstories.com/2016/07/"> July 2016 </option>
+	<option value="https://testerstories.com/2016/06/"> June 2016 </option>
+	<option value="https://testerstories.com/2016/04/"> April 2016 </option>
+	<option value="https://testerstories.com/2016/03/"> March 2016 </option>
+	<option value="https://testerstories.com/2016/02/"> February 2016 </option>
+	<option value="https://testerstories.com/2016/01/"> January 2016 </option>
+	<option value="https://testerstories.com/2015/12/"> December 2015 </option>
+	<option value="https://testerstories.com/2015/11/"> November 2015 </option>
+	<option value="https://testerstories.com/2015/10/"> October 2015 </option>
+	<option value="https://testerstories.com/2015/09/"> September 2015 </option>
+	<option value="https://testerstories.com/2015/08/"> August 2015 </option>
+	<option value="https://testerstories.com/2015/07/"> July 2015 </option>
+	<option value="https://testerstories.com/2015/06/"> June 2015 </option>
+	<option value="https://testerstories.com/2015/05/"> May 2015 </option>
+	<option value="https://testerstories.com/2015/04/"> April 2015 </option>
+	<option value="https://testerstories.com/2015/03/"> March 2015 </option>
+	<option value="https://testerstories.com/2015/02/"> February 2015 </option>
+	<option value="https://testerstories.com/2014/12/"> December 2014 </option>
+	<option value="https://testerstories.com/2014/11/"> November 2014 </option>
+	<option value="https://testerstories.com/2014/10/"> October 2014 </option>
+	<option value="https://testerstories.com/2014/09/"> September 2014 </option>
+	<option value="https://testerstories.com/2014/08/"> August 2014 </option>
+	<option value="https://testerstories.com/2014/07/"> July 2014 </option>
+	<option value="https://testerstories.com/2014/06/"> June 2014 </option>
+	<option value="https://testerstories.com/2014/05/"> May 2014 </option>
+	<option value="https://testerstories.com/2014/04/"> April 2014 </option>
+	<option value="https://testerstories.com/2014/03/"> March 2014 </option>
+	<option value="https://testerstories.com/2014/01/"> January 2014 </option>
+	<option value="https://testerstories.com/2013/12/"> December 2013 </option>
+	<option value="https://testerstories.com/2013/09/"> September 2013 </option>
+	<option value="https://testerstories.com/2013/08/"> August 2013 </option>
+	<option value="https://testerstories.com/2013/07/"> July 2013 </option>
+	<option value="https://testerstories.com/2013/06/"> June 2013 </option>
+	<option value="https://testerstories.com/2013/05/"> May 2013 </option>
+	<option value="https://testerstories.com/2013/03/"> March 2013 </option>
+	<option value="https://testerstories.com/2013/01/"> January 2013 </option>
+	<option value="https://testerstories.com/2012/12/"> December 2012 </option>
+	<option value="https://testerstories.com/2012/10/"> October 2012 </option>
+	<option value="https://testerstories.com/2012/09/"> September 2012 </option>
+	<option value="https://testerstories.com/2012/08/"> August 2012 </option>
+	<option value="https://testerstories.com/2012/07/"> July 2012 </option>
+	<option value="https://testerstories.com/2012/06/"> June 2012 </option>
+	<option value="https://testerstories.com/2012/05/"> May 2012 </option>
+	<option value="https://testerstories.com/2012/04/"> April 2012 </option>
+	<option value="https://testerstories.com/2012/03/"> March 2012 </option>
+	<option value="https://testerstories.com/2012/02/"> February 2012 </option>
+	<option value="https://testerstories.com/2012/01/"> January 2012 </option>
+	<option value="https://testerstories.com/2011/12/"> December 2011 </option>
+	<option value="https://testerstories.com/2011/11/"> November 2011 </option>
+	<option value="https://testerstories.com/2011/10/"> October 2011 </option>
+	<option value="https://testerstories.com/2011/09/"> September 2011 </option>
+	<option value="https://testerstories.com/2011/08/"> August 2011 </option>
+
+		</select>
+
+<script type="text/javascript">
+/* <![CDATA[ */
+(function() {
+	var dropdown = document.getElementById( "archives-dropdown-5" );
+	function onSelectChange() {
+		if ( dropdown.options[ dropdown.selectedIndex ].value !== '' ) {
+			document.location.href = this.options[ this.selectedIndex ].value;
+		}
+	}
+	dropdown.onchange = onSelectChange;
+})();
+/* ]]> */
+</script>
+			</div>
+<div id="meta-5" class="widget widget_meta">
+<h2 class="widget-title">Site</h2>
+		<ul>
+						<li><a href="/wp-login.php">Log in</a></li>
+			<li><a href="/feed/">Entries feed</a></li>
+			<li><a href="/comments/feed/">Comments feed</a></li>
+
+			<li><a href="https://wordpress.org/">WordPress.org</a></li>
+		</ul>
+
+		</div>
+<div id="text-4" class="widget widget_text">			<div class="textwidget"><a href="https://www.linkedin.com/pub/jeff-nyman/12/b32/16a">
+          <img src="https://static.licdn.com/scds/common/u/img/webpromo/btn_myprofile_160x33.png" width="160" height="33" border="0" alt="View Jeff Nyman's profile on LinkedIn"></a></div>
+		</div>
+<div id="search-3" class="widget widget_search">
+<form role="search" method="get" class="search-form" action="https://testerstories.com/">
+	<label>
+		<span class="screen-reader-text">Search for:</span>
+		<input type="search" class="search-field" placeholder="Search &hellip;" value="" name="s" title="Search for:">
+	</label>
+	<button type="submit" class="search-submit"><span class="genericon genericon-search" aria-hidden="true"></span><span class="screen-reader-text">Search</span></button>
+</form>
+</div>		</section><!-- #sidebar .widget-area -->
+
+	</aside>
+
+  
+
+<footer id="page-footer" role="contentinfo">
+	<div id="site-info" class="site-info">
+		<span class="footer-site-title"><a href="/" rel="home">Stories from a Software Tester</a></span>
+		<a href="https://wordpress.org/">Proudly powered by WordPress</a>
+	</div>
+<!--/site-info-->
+</footer> <!--/footer-->
+</div>
+<!-- #container -->
+            
+            <style type="text/css" class="darkmysite_inline_css">#darkmysite_switch_1806356306 {
+        --darkmysite_switch_apple_width_height: 60px;
+        --darkmysite_switch_apple_border_radius: 7px;
+        --darkmysite_switch_apple_icon_width: 30px;
+        --darkmysite_switch_apple_light_mode_bg: #121116;
+        --darkmysite_switch_apple_dark_mode_bg: #ffffff;
+        --darkmysite_switch_apple_light_mode_icon_color: #ffffff;
+        --darkmysite_switch_apple_dark_mode_icon_color: #121116;
+        }
+
+    #darkmysite_switch_1806356306 {
+        --darkmysite_switch_margin_from_top: 40px;
+        --darkmysite_switch_margin_from_bottom: 40px;
+        --darkmysite_switch_margin_from_left: 40px;
+        --darkmysite_switch_margin_from_right: 40px;
+        }</style>
+
+
+
+
+    <div id="darkmysite_switch_1806356306" class="darkmysite_switch  darkmysite_bottom_right   darkmysite_switch_apple" onclick="darkmysite_switch_trigger()">
+        <span class="darkmysite_switch_icon"></span>
+            </div>
+
+            
+    <script type="text/javascript" class="darkmysite_inline_js">document.addEventListener("DOMContentLoaded", function(event) {
+            darkmysite_init_alternative_dark_mode_switch();
+        });</script>
+
+
+<script type="text/javascript" id="acuarela-script-js-extra">
+/* <![CDATA[ */
+var acuarelaScreenReaderText = {"expand":"expand child menu","collapse":"collapse child menu"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="/wp-content/themes/acuarela/js/functions.js?ver=20190802" id="acuarela-script-js"></script>
+<script type="text/javascript" src="/wp-includes/js/comment-reply.min.js?ver=6.2.2" id="comment-reply-js"></script>
+<script defer type="text/javascript" src="/wp-content/plugins/akismet/_inc/akismet-frontend.js?ver=1680871091" id="akismet-frontend-js"></script>
+</body>
+</html>
