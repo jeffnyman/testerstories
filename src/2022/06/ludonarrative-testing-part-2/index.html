@@ -1,0 +1,1303 @@
+<!DOCTYPE html>
+<html lang="en-US">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="profile" href="http://gmpg.org/xfn/11">
+				<link rel="pingback" href="/xmlrpc.php">
+				<title>Ludonarrative Testing, Part 2 &#8211; Stories from a Software Tester</title>
+<meta name="robots" content="max-image-preview:large">
+ <style type="text/css" class="darkmysite_inline_css">:root { --darkmysite_dark_mode_bg: #0f0f0f; --darkmysite_dark_mode_secondary_bg: #171717; --darkmysite_dark_mode_text_color: #bebebe; --darkmysite_dark_mode_link_color: #ffffff; --darkmysite_dark_mode_link_hover_color: #cccccc; --darkmysite_dark_mode_input_bg: #2d2d2d; --darkmysite_dark_mode_input_text_color: #bebebe; --darkmysite_dark_mode_input_placeholder_color: #989898; --darkmysite_dark_mode_border_color: #4a4a4a; --darkmysite_dark_mode_btn_bg: #2d2d2d; --darkmysite_dark_mode_btn_text_color: #bebebe; }</style> <style type="text/css" class="darkmysite_inline_css">.darkmysite_dark_mode_enabled::-webkit-scrollbar { background: #29292a !important; } .darkmysite_dark_mode_enabled::-webkit-scrollbar-track { background: #29292a !important; } .darkmysite_dark_mode_enabled::-webkit-scrollbar-thumb { background-color: #52565a !important; } .darkmysite_dark_mode_enabled::-webkit-scrollbar-corner { background-color: #52565a !important; } .darkmysite_dark_mode_enabled::-webkit-scrollbar-button { background-color: transparent !important; background-repeat: no-repeat !important; background-size: contain !important; background-position: center !important; } .darkmysite_dark_mode_enabled::-webkit-scrollbar-button:start { background-image: url(/wp-content/plugins/darkmysite/assets/img/others/scroll_arrow_up.svg) !important; } .darkmysite_dark_mode_enabled::-webkit-scrollbar-button:end { background-image: url(/wp-content/plugins/darkmysite/assets/img/others/scroll_arrow_down.svg) !important; } .darkmysite_dark_mode_enabled::-webkit-scrollbar-button:start:horizontal { background-image: url(/wp-content/plugins/darkmysite/assets/img/others/scroll_arrow_left.svg) !important; } .darkmysite_dark_mode_enabled::-webkit-scrollbar-button:end:horizontal { background-image: url(/wp-content/plugins/darkmysite/assets/img/others/scroll_arrow_right.svg) !important; }</style> <script type="text/javascript" class="darkmysite_inline_js">var darkmysite_switch_unique_id = "1273761959"; var darkmysite_is_this_admin_panel = "0"; var darkmysite_enable_default_dark_mode = "0"; var darkmysite_enable_os_aware = "1"; var darkmysite_enable_keyboard_shortcut = "1"; var darkmysite_enable_time_based_dark = "0"; var darkmysite_time_based_dark_start = "19:00"; var darkmysite_time_based_dark_stop = "07:00"; var darkmysite_alternative_dark_mode_switch = ""; var darkmysite_enable_low_image_brightness = "1"; var darkmysite_image_brightness_to = "80"; var darkmysite_enable_image_grayscale = "0"; var darkmysite_image_grayscale_to = "80"; var darkmysite_enable_bg_image_darken = "1"; var darkmysite_bg_image_darken_to = "60"; var darkmysite_enable_invert_inline_svg = "0"; var darkmysite_enable_low_video_brightness = "1"; var darkmysite_video_brightness_to = "80"; var darkmysite_enable_video_grayscale = "0"; var darkmysite_video_grayscale_to = "80"; var darkmysite_disallowed_elements = ".darkmysite_ignore, .darkmysite_ignore *, .darkmysite_switch, .darkmysite_switch *, .wp-block-button__link, .wp-block-button__link *";</script><link rel="dns-prefetch" href="//static.addtoany.com">
+<link rel="dns-prefetch" href="//fonts.googleapis.com">
+<link rel="alternate" type="application/rss+xml" title="Stories from a Software Tester &raquo; Feed" href="/feed/">
+<link rel="alternate" type="application/rss+xml" title="Stories from a Software Tester &raquo; Comments Feed" href="/comments/feed/">
+<link rel="alternate" type="application/rss+xml" title="Stories from a Software Tester &raquo; Ludonarrative Testing, Part 2 Comments Feed" href="/2022/06/ludonarrative-testing-part-2/feed/">
+<script type="text/javascript">
+window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/14.0.0\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/14.0.0\/svg\/","svgExt":".svg","source":{"concatemoji":"\/wp-includes\/js\/wp-emoji-release.min.js?ver=6.2.2"}};
+/*! This file is auto-generated */
+!function(e,a,t){var n,r,o,i=a.createElement("canvas"),p=i.getContext&&i.getContext("2d");function s(e,t){p.clearRect(0,0,i.width,i.height),p.fillText(e,0,0);e=i.toDataURL();return p.clearRect(0,0,i.width,i.height),p.fillText(t,0,0),e===i.toDataURL()}function c(e){var t=a.createElement("script");t.src=e,t.defer=t.type="text/javascript",a.getElementsByTagName("head")[0].appendChild(t)}for(o=Array("flag","emoji"),t.supports={everything:!0,everythingExceptFlag:!0},r=0;r<o.length;r++)t.supports[o[r]]=function(e){if(p&&p.fillText)switch(p.textBaseline="top",p.font="600 32px Arial",e){case"flag":return s("🏳️‍⚧️","🏳️​⚧️")?!1:!s("🇺🇳","🇺​🇳")&&!s("🏴󠁧󠁢󠁥󠁮󠁧󠁿","🏴​󠁧​󠁢​󠁥​󠁮​󠁧​󠁿");case"emoji":return!s("🫱🏻‍🫲🏿","🫱🏻​🫲🏿")}return!1}(o[r]),t.supports.everything=t.supports.everything&&t.supports[o[r]],"flag"!==o[r]&&(t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&t.supports[o[r]]);t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&!t.supports.flag,t.DOMReady=!1,t.readyCallback=function(){t.DOMReady=!0},t.supports.everything||(n=function(){t.readyCallback()},a.addEventListener?(a.addEventListener("DOMContentLoaded",n,!1),e.addEventListener("load",n,!1)):(e.attachEvent("onload",n),a.attachEvent("onreadystatechange",function(){"complete"===a.readyState&&t.readyCallback()})),(e=t.source||{}).concatemoji?c(e.concatemoji):e.wpemoji&&e.twemoji&&(c(e.twemoji),c(e.wpemoji)))}(window,document,window._wpemojiSettings);
+</script>
+<style type="text/css">img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 0.07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}</style>
+	<link rel="stylesheet" id="urvanov_syntax_highlighter-css" href="/wp-content/plugins/urvanov-syntax-highlighter/css/min/urvanov_syntax_highlighter.min.css?ver=2.8.33" type="text/css" media="all">
+<link rel="stylesheet" id="wp-block-library-css" href="/wp-includes/css/dist/block-library/style.min.css?ver=6.2.2" type="text/css" media="all">
+<style id="wp-block-library-theme-inline-css" type="text/css">.wp-block-audio figcaption{color:#555;font-size:13px;text-align:center}.is-dark-theme .wp-block-audio figcaption{color:hsla(0,0%,100%,.65)}.wp-block-audio{margin:0 0 1em}.wp-block-code{border:1px solid #ccc;border-radius:4px;font-family:Menlo,Consolas,monaco,monospace;padding:.8em 1em}.wp-block-embed figcaption{color:#555;font-size:13px;text-align:center}.is-dark-theme .wp-block-embed figcaption{color:hsla(0,0%,100%,.65)}.wp-block-embed{margin:0 0 1em}.blocks-gallery-caption{color:#555;font-size:13px;text-align:center}.is-dark-theme .blocks-gallery-caption{color:hsla(0,0%,100%,.65)}.wp-block-image figcaption{color:#555;font-size:13px;text-align:center}.is-dark-theme .wp-block-image figcaption{color:hsla(0,0%,100%,.65)}.wp-block-image{margin:0 0 1em}.wp-block-pullquote{border-bottom:4px solid;border-top:4px solid;color:currentColor;margin-bottom:1.75em}.wp-block-pullquote cite,.wp-block-pullquote footer,.wp-block-pullquote__citation{color:currentColor;font-size:.8125em;font-style:normal;text-transform:uppercase}.wp-block-quote{border-left:.25em solid;margin:0 0 1.75em;padding-left:1em}.wp-block-quote cite,.wp-block-quote footer{color:currentColor;font-size:.8125em;font-style:normal;position:relative}.wp-block-quote.has-text-align-right{border-left:none;border-right:.25em solid;padding-left:0;padding-right:1em}.wp-block-quote.has-text-align-center{border:none;padding-left:0}.wp-block-quote.is-large,.wp-block-quote.is-style-large,.wp-block-quote.is-style-plain{border:none}.wp-block-search .wp-block-search__label{font-weight:700}.wp-block-search__button{border:1px solid #ccc;padding:.375em .625em}:where(.wp-block-group.has-background){padding:1.25em 2.375em}.wp-block-separator.has-css-opacity{opacity:.4}.wp-block-separator{border:none;border-bottom:2px solid;margin-left:auto;margin-right:auto}.wp-block-separator.has-alpha-channel-opacity{opacity:1}.wp-block-separator:not(.is-style-wide):not(.is-style-dots){width:100px}.wp-block-separator.has-background:not(.is-style-dots){border-bottom:none;height:1px}.wp-block-separator.has-background:not(.is-style-wide):not(.is-style-dots){height:2px}.wp-block-table{margin:0 0 1em}.wp-block-table td,.wp-block-table th{word-break:normal}.wp-block-table figcaption{color:#555;font-size:13px;text-align:center}.is-dark-theme .wp-block-table figcaption{color:hsla(0,0%,100%,.65)}.wp-block-video figcaption{color:#555;font-size:13px;text-align:center}.is-dark-theme .wp-block-video figcaption{color:hsla(0,0%,100%,.65)}.wp-block-video{margin:0 0 1em}.wp-block-template-part.has-background{margin-bottom:0;margin-top:0;padding:1.25em 2.375em}</style>
+<link rel="stylesheet" id="classic-theme-styles-css" href="/wp-includes/css/classic-themes.min.css?ver=6.2.2" type="text/css" media="all">
+<style id="global-styles-inline-css" type="text/css">body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgba(6,147,227,1) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgba(252,185,0,1) 0%,rgba(255,105,0,1) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgba(255,105,0,1) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--duotone--dark-grayscale: url('#wp-duotone-dark-grayscale');--wp--preset--duotone--grayscale: url('#wp-duotone-grayscale');--wp--preset--duotone--purple-yellow: url('#wp-duotone-purple-yellow');--wp--preset--duotone--blue-red: url('#wp-duotone-blue-red');--wp--preset--duotone--midnight: url('#wp-duotone-midnight');--wp--preset--duotone--magenta-yellow: url('#wp-duotone-magenta-yellow');--wp--preset--duotone--purple-green: url('#wp-duotone-purple-green');--wp--preset--duotone--blue-orange: url('#wp-duotone-blue-orange');--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;--wp--preset--spacing--20: 0.44rem;--wp--preset--spacing--30: 0.67rem;--wp--preset--spacing--40: 1rem;--wp--preset--spacing--50: 1.5rem;--wp--preset--spacing--60: 2.25rem;--wp--preset--spacing--70: 3.38rem;--wp--preset--spacing--80: 5.06rem;--wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);--wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);--wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);--wp--preset--shadow--outlined: 6px 6px 0px -3px rgba(255, 255, 255, 1), 6px 6px rgba(0, 0, 0, 1);--wp--preset--shadow--crisp: 6px 6px 0px rgba(0, 0, 0, 1);}:where(.is-layout-flex){gap: 0.5em;}body .is-layout-flow > .alignleft{float: left;margin-inline-start: 0;margin-inline-end: 2em;}body .is-layout-flow > .alignright{float: right;margin-inline-start: 2em;margin-inline-end: 0;}body .is-layout-flow > .aligncenter{margin-left: auto !important;margin-right: auto !important;}body .is-layout-constrained > .alignleft{float: left;margin-inline-start: 0;margin-inline-end: 2em;}body .is-layout-constrained > .alignright{float: right;margin-inline-start: 2em;margin-inline-end: 0;}body .is-layout-constrained > .aligncenter{margin-left: auto !important;margin-right: auto !important;}body .is-layout-constrained > :where(:not(.alignleft):not(.alignright):not(.alignfull)){max-width: var(--wp--style--global--content-size);margin-left: auto !important;margin-right: auto !important;}body .is-layout-constrained > .alignwide{max-width: var(--wp--style--global--wide-size);}body .is-layout-flex{display: flex;}body .is-layout-flex{flex-wrap: wrap;align-items: center;}body .is-layout-flex > *{margin: 0;}:where(.wp-block-columns.is-layout-flex){gap: 2em;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
+.wp-block-navigation a:where(:not(.wp-element-button)){color: inherit;}
+:where(.wp-block-columns.is-layout-flex){gap: 2em;}
+.wp-block-pullquote{font-size: 1.5em;line-height: 1.6;}</style>
+<link rel="stylesheet" id="darkmysite-client-main-css" href="/wp-content/plugins/darkmysite/assets/css/client_main.css?ver=1.2.6" type="text/css" media="all">
+<link rel="stylesheet" id="plyr-css-css" href="/wp-content/plugins/easy-video-player/lib/plyr.css?ver=6.2.2" type="text/css" media="all">
+<link rel="stylesheet" id="acuarela-fonts-css" href="https://fonts.googleapis.com/css?family=Lato%3A300italic%2C400italic%2C700italic%2C300%2C400%2C700%7CArima+Madurai%3A700%2C800%7CInconsolata%3A400%2C700&#038;subset=latin%2Clatin-ext&#038;ver=20190802" type="text/css" media="all">
+<link rel="stylesheet" id="genericons-css" href="/wp-content/themes/acuarela/genericons/genericons.css?ver=3.4.1" type="text/css" media="all">
+<link rel="stylesheet" id="animate-css" href="/wp-content/themes/acuarela/css/animate.css?ver=3.7.2" type="text/css" media="all">
+<link rel="stylesheet" id="acuarela-style-css" href="/wp-content/themes/acuarela/style.css?ver=6.2.2" type="text/css" media="all">
+<link rel="stylesheet" id="addtoany-css" href="/wp-content/plugins/add-to-any/addtoany.min.css?ver=1.16" type="text/css" media="all">
+<script type="text/javascript" src="/wp-includes/js/jquery/jquery.min.js?ver=3.6.4" id="jquery-core-js"></script>
+<script type="text/javascript" src="/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.4.0" id="jquery-migrate-js"></script>
+<script type="text/javascript" id="urvanov_syntax_highlighter_js-js-extra">
+/* <![CDATA[ */
+var UrvanovSyntaxHighlighterSyntaxSettings = {"version":"2.8.33","is_admin":"0","ajaxurl":"\/wp-admin\/admin-ajax.php","prefix":"urvanov-syntax-highlighter-","setting":"urvanov-syntax-highlighter-setting","selected":"urvanov-syntax-highlighter-setting-selected","changed":"urvanov-syntax-highlighter-setting-changed","special":"urvanov-syntax-highlighter-setting-special","orig_value":"data-orig-value","debug":""};
+var UrvanovSyntaxHighlighterSyntaxStrings = {"copy":"Copied to the clipboard","minimize":"Click To Expand Code"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="/wp-content/plugins/urvanov-syntax-highlighter/js/min/urvanov_syntax_highlighter.min.js?ver=2.8.33" id="urvanov_syntax_highlighter_js-js"></script>
+<script type="text/javascript" id="addtoany-core-js-before">window.a2a_config=window.a2a_config||{};a2a_config.callbacks=[];a2a_config.overlays=[];a2a_config.templates={};</script>
+<script type="text/javascript" async src="https://static.addtoany.com/menu/page.js" id="addtoany-core-js"></script>
+<script type="text/javascript" async src="/wp-content/plugins/add-to-any/addtoany.min.js?ver=1.1" id="addtoany-jquery-js"></script>
+<script type="text/javascript" src="/wp-content/plugins/darkmysite/assets/js/client_main.js?ver=1.2.6" id="darkmysite-client-main-js"></script>
+<script type="text/javascript" id="plyr-js-js-extra">
+/* <![CDATA[ */
+var easy_video_player = {"plyr_iconUrl":"\/wp-content\/plugins\/easy-video-player\/lib\/plyr.svg","plyr_blankVideo":"\/wp-content\/plugins\/easy-video-player\/lib\/blank.mp4"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="/wp-content/plugins/easy-video-player/lib/plyr.js?ver=6.2.2" id="plyr-js-js"></script>
+<link rel="https://api.w.org/" href="/wp-json/">
+<link rel="alternate" type="application/json" href="/wp-json/wp/v2/posts/4292">
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="/xmlrpc.php?rsd">
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="/wp-includes/wlwmanifest.xml">
+<meta name="generator" content="WordPress 6.2.2">
+<link rel="canonical" href="/2022/06/ludonarrative-testing-part-2/">
+<link rel="shortlink" href="/?p=4292">
+<link rel="alternate" type="application/json+oembed" href="/wp-json/oembed/1.0/embed?url=https%3A%2F%2F%2F2022%2F06%2Fludonarrative-testing-part-2%2F">
+<link rel="alternate" type="text/xml+oembed" href="/wp-json/oembed/1.0/embed?url=https%3A%2F%2F%2F2022%2F06%2Fludonarrative-testing-part-2%2F#038;format=xml">
+<link type="text/css" rel="stylesheet" href="/wp-content/plugins/category-specific-rss-feed-menu/wp_cat_rss_style.css">
+<!--Custom Styling-->
+<style media="screen" type="text/css">.site-description { color: #222222}
+.site-title, .entry-title, .post-title, .widget-title, .posts-navigation .nav-links { font-family: Arima Madurai}
+ body { font-family: Lato}</style>
+	<style id="acuarela-header-css" type="text/css"></style>
+<style type="text/css" id="custom-background-css">body.custom-background { background-image: url("/wp-content/uploads/2020/10/low_contrast_linen.png"); background-position: left top; background-size: cover; background-repeat: no-repeat; background-attachment: fixed; }</style>
+			<style type="text/css" id="wp-custom-css">@font-face {
+  font-family: "Open Sans";
+  font-weight: 400;
+  font-style: normal;
+  src: local("Open Sans Regular"), local("OpenSans-Regular"), url("/fonts/OpenSans-Regular.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Open Sans Bold";
+  font-weight: 700;
+  font-style: normal;
+  src: local("Open Sans Bold"), local("OpenSans-Bold"), url("/fonts/OpenSans-Bold.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Open Sans Italic";
+  font-weight: 400;
+  font-style: normal;
+  src: local("Open Sans Italic"), local("OpenSans-Italic"), url("/fonts/OpenSans-Italic.woff") format("woff");
+}
+
+:root{
+	--primary: #01408e;
+	--secondary: #3c5d5c;
+	--initialLine: #ad2271;
+	--drop: #903;
+	--paraIndent: 1.25em;
+	--note: #4d5b7c;
+	--bq-color: #555555;
+	--bq-back: #ededed;
+	--sans: "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+	--mono: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
+    "Courier New", monospace;
+}
+/* For the top menu bar. */
+.site-navigation a {
+	padding: 0.9em 1.5em;
+}
+
+:where(html, body) {
+	overscroll-behavior-y: none;
+	cursor: url("/cursors/default.cur"), auto;
+}
+
+:where(p, h1, h2, h3, h4, h5, h6, blockquote, figcaption) {
+	cursor: url("/cursors/text-select.cur"), auto;
+}
+
+:where(ul, ol) {
+	margin: 1em 1em;
+	text-align: justify;
+	text-justify: inter-word;
+	cursor: url("/cursors/text-select.cur"), auto;
+}
+
+:where(aside, article) a {
+	cursor: url("/cursors/link-select.cur"), auto;
+}
+
+select, button, input,
+.wp-element-button,
+.darkmysite_switch,
+.site-title,
+.site-description {
+	cursor: url("/cursors/link-select.cur"), auto;
+}
+
+::selection {
+  color: #fff;
+  background: rgba(0, 0, 0, 0.99);
+}
+
+main,
+header {
+	font-size: 1rem;
+}
+
+main {
+	/*From here: https://fluidtypography.com/#app-get-started*/
+	/* Settings: 414-1280; 16-20; 1.6-1.3*/
+	font-size: clamp(1rem, 0.462vw + 0.88rem, 1.25rem);
+line-height: clamp(1.6rem, 0.046vw + 1.588rem, 1.625rem);
+}
+
+article {
+	font-family: var(--sans);
+	line-height: 1.6;
+  word-spacing: 0.16em;
+}
+
+h1:not(.site-title) {
+  font-size: 2.5em;
+  margin: 0.67em 0;
+  text-align: center;
+}
+
+:where(h1, h2, h3, h4) {
+	text-rendering: optimizeLegibility;
+	line-height: 1.4em;
+}
+
+article :where(h2, h3) {
+	margin-bottom: 0.7em;
+}
+
+p {
+	font-size: 1.2em;
+	text-align: justify;
+	text-justify: inter-word;
+}
+
+p:first-of-type:first-line {
+	color: var(--initialLine);
+}
+
+li {
+  margin-bottom: 0.5em;
+}
+
+/* This makes sure the first line of blockquotes are not colored since in Wordpress, a blockquote content has a paragraph tag applied to it. */
+:where(blockquote, footer, .comments-area) p:first-of-type:first-line {
+	color: inherit;
+}
+:where(p, blockquote, img, pre, ul, ol) + p:not(.note) {
+  text-indent: var(--paraIndent);
+}
+section > h3 + p::first-letter,
+section > h2 + p::first-letter,
+div.entry-content > p:not(.nostyle):first-child::first-letter {
+	color: var(--drop);
+  border-left: 2px solid var(--drop);
+  border-top: 2px solid var(--drop);
+  float: left;
+  font-family: Georgia;
+  font-size: 65px;
+  line-height: 60px;
+  padding-top: 4px;
+  padding-right: 12px;
+  padding-left: 3px;
+}
+
+:where(aside, article) a {
+	color: var(--primary);
+	text-underline-position: under;
+	text-decoration: underline 2px;
+	transition: all 0.3s linear;
+  background: linear-gradient(to right, #00d1b1 0%, #278fc6 98%);
+  background-size: 0px 2px;
+  background-repeat: no-repeat;
+  background-position: left 10%;
+  text-shadow: 0;
+}
+
+article a:hover {
+  background-size: 100% 2px;
+  color: var(--secondary);
+}
+
+article a:focus {
+  color: var(--secondary);
+}
+
+/* Handling external links to show an icon after them, but excluding links that are part of the TesterStories site. */
+
+a[href*="http"]::after,
+a[href*="https"]::after {
+  content: "";
+  width: 16px;
+  height: 16px;
+  margin-left: 4px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='currentColor' viewBox='0 0 16 16'%3E%3Cpath fill-rule='evenodd' d='M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5z'/%3E%3Cpath fill-rule='evenodd' d='M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0v-5z'/%3E%3C/svg%3E");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  display: inline-block;
+}
+
+a[href^="https://www.linkedin.com/"]::after {
+  content: none;
+}
+
+a[href^="https://testerstories.com/"]::after {
+  display: none !important;
+}
+
+img.framed {
+  --b: 10px;
+  margin: 0 auto;
+  padding: var(--b);
+  border: calc(2 * var(--b)) solid #0000;
+  border-radius: 25px;
+  outline: 1px solid #000;
+  outline-offset: calc(-1 * var(--b));
+  background: conic-gradient(from 90deg at 1px 1px, #0000 90deg, #000 0);
+}
+
+img.backframed {
+  margin: 0 auto;
+  border: 3px solid black;
+  box-shadow: -50px -50px 0 -40px #555555, 50px 50px 0 -40px #555555;
+}
+
+.note {
+  border: 1px solid rgb(107, 113, 177);
+  color: var(--note);
+  border-radius: 16px;
+  padding: 0.5em 0.8em;
+  margin: 1.9em;
+}
+
+.post {
+	background-color: white;
+}
+
+.entry-content li {
+	font-size: 1.2em;
+}
+
+.simplequote {
+	background: #fff url(/2022/06/ludonarrative-testing-part-2/images/box_quote.png) no-repeat;
+	padding: 5px;
+	margin-top: 20px; margin-bottom: 20px;
+	margin-left: 50px; margin-right: 50px;
+	border: 3px solid #cecece;
+	text-indent: 25px;
+}
+
+p.example {
+	padding: 1ex;
+	margin-right: 50px; margin-left: 50px;
+	border: .5ex solid #808080;
+	color: #000000;
+	line-height: 1.2;
+	text-indent: 0em;
+}
+
+#headquote blockquote {
+	text-align: left;
+	margin: 0 auto 20px auto;
+	color: #555;
+	background: #eee url(/2022/06/ludonarrative-testing-part-2/images/quote_top.gif) no-repeat top left;
+}
+
+#headquote blockquote {
+	width: 370px;
+	font-size: 110%;
+	letter-spacing: -1px;
+	line-height: 1.2em;
+}
+
+#headquote #quote {
+	margin-left: 40px;
+	padding: 20px 20px 10px 20px;
+	background: url(/2022/06/ludonarrative-testing-part-2/images/quote_bottom.gif) no-repeat right bottom;
+}
+
+#headquote #author {
+	margin: 0;
+	text-align: center;
+	padding: 0 0 10px 0;
+	color: #999;
+	font-size: 95%;
+}
+
+#headquote blockquote strong {
+	color: #000;
+	font-weight: normal;
+}
+
+/* Center images. */
+
+img {
+	display: block;
+  margin: 0 auto;
+}
+
+img.smaller {
+  width: 200px;
+}
+
+img.even-smaller {
+  width: 100px;
+}
+
+table td.code {
+  font-family: "Courier New", courier, monospace;
+  font-size: 11.5px;
+}
+
+p.box {
+	font-family: Georgia, "Times New Roman", Times, serif;
+	text-align: justify;
+	padding-top: 25px;
+	margin: 0;
+	line-height: 1.2;
+}
+
+pre.box {
+	white-space: pre-wrap;
+	background-color: white;
+	border: 1px solid;
+}
+
+p.tip {
+	padding-bottom: 10px; padding-top: 10px;
+	padding-right: 10px; padding-left: 10px;
+	border: 1px solid;
+}
+
+div.aside {
+	padding-bottom: 10px; padding-top: 10px;
+	padding-right: 10px; padding-left: 10px;
+	margin-right: 50px; margin-left: 50px;
+	border: 1px dotted;
+}
+
+div.aside pre {
+	white-space: pre-wrap;
+}
+
+pre.view {
+	font-family: "Courier New", Courier, monospace;
+        //font-size: 16px;
+	padding-bottom: 10px; padding-top: 10px;
+	padding-right: 10px; padding-left: 10px;
+	white-space: pre-wrap;
+	background: rgb(255,255,255); /* Old browsers */
+	background: -moz-linear-gradient(top,  rgba(255,255,255,1) 0%, rgba(229,229,229,1) 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,1)), color-stop(100%,rgba(229,229,229,1))); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(229,229,229,1) 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(229,229,229,1) 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(229,229,229,1) 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  rgba(255,255,255,1) 0%,rgba(229,229,229,1) 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#e5e5e5',GradientType=0 ); /* IE6-9 */
+	border: 1px solid;
+	text-align: justify;
+}
+
+pre.view .string {
+	color: #3366CC;
+}
+
+pre.view .sub {
+        color: #8333FF;
+}
+
+pre.view .comment {
+	color: #009900;
+}
+
+pre.view .highlight {
+	background-color: #FFFF00;
+	border: 1px solid;
+	border-style: dotted;
+}
+
+pre.output .highlight {
+	background-color: rgb(255,255,255);
+	color: red;
+	border: 1px solid;
+	border-style: dotted;
+}
+
+pre.output {
+	font-family: "Courier New", Courier, monospace;
+        //font-size: 16px;
+	padding-bottom: 10px; padding-top: 10px;
+	padding-right: 10px; padding-left: 10px;
+	white-space: pre-wrap;
+	background: black;
+	color: white;
+}
+
+blockquote {
+  position: relative;
+  width: 80%;
+  margin: 50px auto;
+  padding: 1.2em 30px 1.2em 55px;
+  color: var(--bq-color);
+  background-color: var(--bq-back);
+  border-left: 8px solid #78c0a8;
+  text-align: justify;
+}
+
+blockquote::before {
+  position: absolute;
+	left: 5px;
+	top: -10px;
+	/* Line height needed here to avoid the quote appearing out of place due to calculated line heights for the article. */
+	line-height: 1.6;
+	content: "\201C";
+	color: #78c0a8;
+	font-size: 4em;
+}
+
+blockquote::after {
+	content: "";
+}
+
+blockquote span {
+	display: block;
+	color: #333333;
+	font-style: normal;
+  font-weight: bold;
+  margin-top: 1em;
+}
+
+img.frame {
+  --b: 10px;
+  padding: var(--b);
+  border: calc(2 * var(--b)) solid #0000;
+  outline: 1px solid #000;
+  outline-offset: calc(-1 * var(--b));
+  border-radius: 25px;
+  background: conic-gradient(from 90deg at 1px 1px, #0000 90deg, #000 0);
+  display: block;
+  margin: auto;
+  margin-bottom: 1rem;
+}
+
+code {
+  font-size: 0.9em;
+  padding: 0.0625rem 0.5rem;
+  border-radius: 0.125rem;
+  border: 1px solid #d33a2c;
+  box-shadow: 1px 1px #d33a2c, 2px 2px #d33a2c;
+  margin: 0 0.25rem;
+  color: #d33a2c;
+  font-family: monospace;
+}
+
+pre {
+  font-family: var(--mono);
+  max-width: 100%;
+	padding: 0;
+}
+
+pre code {
+  word-spacing: normal;
+  letter-spacing: normal;
+  font-family: var(--mono);
+  padding-left: 10px;
+  color: #e9e9f4;
+  background: #282936;
+  display: block;
+  max-width: 100%;
+  overflow-x: scroll;
+  /*font-size: 0.8em;*/
+
+  border: 1px solid #282936;
+  border-radius: 10px;
+  box-shadow: 1px 1px #282936, 2px 2px #282936;
+}
+
+pre code::-webkit-scrollbar {
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+pre code::-webkit-scrollbar:vertical {
+  width: 11px;
+}
+
+pre code::-webkit-scrollbar:horizontal {
+  height: 11px;
+}
+
+pre code::-webkit-scrollbar-thumb {
+  border-radius: 8px;
+  border: 2px solid white;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+/* The div part is only needed for long-form content that is pre-formatted. */
+
+pre code div {
+	line-height: 1.5em;
+}
+
+/* This would be for prefromatted material that is not literally from a game or simulation but is meant to indicate something about the details of the game or simulation. */
+
+pre p {
+  border: 2px solid grey;
+  border-radius: 5px;
+  padding: 0.8em;
+	padding-top: 0;
+	margin: 0;
+}</style>
+			</head>
+	<body class="post-template-default single single-post postid-4292 single-format-standard custom-background wp-embed-responsive custom-background-image">
+		<svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-dark-grayscale"><fecolormatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></fecolormatrix><fecomponenttransfer color-interpolation-filters="sRGB"><fefuncr type="table" tablevalues="0 0.49803921568627"></fefuncr><fefuncg type="table" tablevalues="0 0.49803921568627"></fefuncg><fefuncb type="table" tablevalues="0 0.49803921568627"></fefuncb><fefunca type="table" tablevalues="1 1"></fefunca></fecomponenttransfer><fecomposite in2="SourceGraphic" operator="in"></fecomposite></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-grayscale"><fecolormatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></fecolormatrix><fecomponenttransfer color-interpolation-filters="sRGB"><fefuncr type="table" tablevalues="0 1"></fefuncr><fefuncg type="table" tablevalues="0 1"></fefuncg><fefuncb type="table" tablevalues="0 1"></fefuncb><fefunca type="table" tablevalues="1 1"></fefunca></fecomponenttransfer><fecomposite in2="SourceGraphic" operator="in"></fecomposite></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-purple-yellow"><fecolormatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></fecolormatrix><fecomponenttransfer color-interpolation-filters="sRGB"><fefuncr type="table" tablevalues="0.54901960784314 0.98823529411765"></fefuncr><fefuncg type="table" tablevalues="0 1"></fefuncg><fefuncb type="table" tablevalues="0.71764705882353 0.25490196078431"></fefuncb><fefunca type="table" tablevalues="1 1"></fefunca></fecomponenttransfer><fecomposite in2="SourceGraphic" operator="in"></fecomposite></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-blue-red"><fecolormatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></fecolormatrix><fecomponenttransfer color-interpolation-filters="sRGB"><fefuncr type="table" tablevalues="0 1"></fefuncr><fefuncg type="table" tablevalues="0 0.27843137254902"></fefuncg><fefuncb type="table" tablevalues="0.5921568627451 0.27843137254902"></fefuncb><fefunca type="table" tablevalues="1 1"></fefunca></fecomponenttransfer><fecomposite in2="SourceGraphic" operator="in"></fecomposite></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-midnight"><fecolormatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></fecolormatrix><fecomponenttransfer color-interpolation-filters="sRGB"><fefuncr type="table" tablevalues="0 0"></fefuncr><fefuncg type="table" tablevalues="0 0.64705882352941"></fefuncg><fefuncb type="table" tablevalues="0 1"></fefuncb><fefunca type="table" tablevalues="1 1"></fefunca></fecomponenttransfer><fecomposite in2="SourceGraphic" operator="in"></fecomposite></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-magenta-yellow"><fecolormatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></fecolormatrix><fecomponenttransfer color-interpolation-filters="sRGB"><fefuncr type="table" tablevalues="0.78039215686275 1"></fefuncr><fefuncg type="table" tablevalues="0 0.94901960784314"></fefuncg><fefuncb type="table" tablevalues="0.35294117647059 0.47058823529412"></fefuncb><fefunca type="table" tablevalues="1 1"></fefunca></fecomponenttransfer><fecomposite in2="SourceGraphic" operator="in"></fecomposite></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-purple-green"><fecolormatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></fecolormatrix><fecomponenttransfer color-interpolation-filters="sRGB"><fefuncr type="table" tablevalues="0.65098039215686 0.40392156862745"></fefuncr><fefuncg type="table" tablevalues="0 1"></fefuncg><fefuncb type="table" tablevalues="0.44705882352941 0.4"></fefuncb><fefunca type="table" tablevalues="1 1"></fefunca></fecomponenttransfer><fecomposite in2="SourceGraphic" operator="in"></fecomposite></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-blue-orange"><fecolormatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></fecolormatrix><fecomponenttransfer color-interpolation-filters="sRGB"><fefuncr type="table" tablevalues="0.098039215686275 1"></fefuncr><fefuncg type="table" tablevalues="0 0.66274509803922"></fefuncg><fefuncb type="table" tablevalues="0.84705882352941 0.41960784313725"></fefuncb><fefunca type="table" tablevalues="1 1"></fefunca></fecomponenttransfer><fecomposite in2="SourceGraphic" operator="in"></fecomposite></filter></defs></svg>		<div id="container" class="site container">
+	<header id="masthead" class="site-header animated fadeInDown" role="banner">
+
+	<a class="screen-reader-text skip-link" href="#main-content">Skip to content</a>
+	<a class="screen-reader-text skip-link" href="#sidebar-widget-area">Skip to sidebar</a>
+	<a class="screen-reader-text skip-link" href="#page-footer">Skip to footer</a>
+	<div id="site-identity" class="site-identity">
+		<a href="/" class="home-link animated fadeIn" title="Stories from a Software Tester" rel="home">
+			<div class="title-description">
+				<h1 class="site-title">Stories from a Software Tester</h1>
+				<h2 class="site-description">Twice upon a time, in another space, no distance in any direction from here &#8230;</h2>
+			</div>
+		</a> 
+
+	</div>
+<!--/site-identity-->
+
+	<nav id="nav-menu" class="site-navigation main-navigation" role="navigation" aria-label="Main Navigation">
+		<button id="nav-button" class="menu-toggle" role="button">
+			<span class="screen-reader-text">Menu</span>
+			<span class="genericon" aria-hidden="true"></span>
+		</button>
+		<ul id="primary-menu" class="primary-menu">
+<li id="menu-item-3923" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-3923"><a href="/">Home</a></li>
+<li id="menu-item-2051" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2051"><a href="/about-tester-stories/">About Tester Stories</a></li>
+<li id="menu-item-2050" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2050"><a href="/who-am-i/">Who Am I</a></li>
+<li id="menu-item-2048" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2048"><a href="/just-for-fun/">Just For Fun</a></li>
+</ul>	</nav><!--/navigation-->
+
+
+<form role="search" method="get" class="search-form" action="https://testerstories.com/">
+	<label>
+		<span class="screen-reader-text">Search for:</span>
+		<input type="search" class="search-field" placeholder="Search &hellip;" value="" name="s" title="Search for:">
+	</label>
+	<button type="submit" class="search-submit"><span class="genericon genericon-search" aria-hidden="true"></span><span class="screen-reader-text">Search</span></button>
+</form>
+</header><!--/header-->
+
+<main id="main-content" class="main-content" role="main">
+<article id="post-4292" class="post-4292 post type-post status-publish format-standard hentry category-games category-testing">
+<header class="entry-header">
+	<span class="entry-meta"><span class="cat-links"><span class="screen-reader-text">Published in</span><span class="genericon genericon-category" aria-hidden="true"></span><a href="/category/testing/games/" rel="category tag">Games</a><span aria-hidden="true">, </span><a href="/category/testing/" rel="category tag">Testing</a></span></span><h1 class="entry-title">Ludonarrative Testing, Part 2</h1>	<span class="byline">
+	Written by <a href="/author/administrator/" class="entry-author" rel="author">Jeff Nyman</a>	</span><!-- .byline -->
+	<span class="entry-meta">
+	<span class="genericon genericon-time" aria-hidden="true"></span><a href="/2022/06/22/" rel="bookmark" class="entry-date"><time datetime="2022-06-22T17:39:48-05:00">22 June 2022</time></a>		<span class="comments-link">
+			<span class="genericon genericon-comment" aria-hidden="true"></span>
+			<a href="/2022/06/ludonarrative-testing-part-2/#respond">Leave a comment</a>		</span>
+		</span><!-- .entry-meta -->
+</header><!-- .entry-header -->
+
+	<div class="entry-content">
+		<p>Continuing on from the <a href="/2022/06/ludonarrative-testing-part-1/">first part</a>, I want to continue to give testers a look into a very specific, and often undocumented, form of testing in the context of games, which is the idea of ludonarrative. This has the benefit of also showing how quality can be very much a function of viewpoint.</p>
+<p><span id="more-4292"></span></p>
+<p>I&#8217;m always on the fence with these posts because I know the contents may only be interesting to a relatively small group of people. Thus these are, I know, self-indulgent posts. Along those lines, I should note this will likely be a longer post so I can make the point across an array of games.</p>
+<p>Now, those cautionary notes being said, I will remind of something I&#8217;ve brought up before. <strong>Epistemology</strong> is about the way we know things. (Think &#8220;theory of knowledge.&#8221;) <strong>Ontology</strong> is about what things are. (Think &#8220;theory of being.&#8221;) <strong>Ontogeny</strong> is about the history of changes that preserve the integrity of something. (Think &#8220;theory of identity.&#8221;)</p>
+<p>I wrote a little about these concepts in the context of games when I talked about <a href="/2020/11/the-theseus-of-testing/">The Theseus of Testing</a>. This very much has relevance to what I&#8217;m writing about in game testing. With games we have to think about the ontologies &#8212; what games are and, within that, the typologies of games. That also takes us into the typologies of users, where in this case users means players. We have to consider the ontogenetic aspects of games, such as how games have evolved. And then, of course, there&#8217;s the internal epistemological aspects of how we can begin to understand games so that we can play them.</p>
+<p>With that said, let&#8217;s get into the broad topic.</p>
+<h1>Ludonarrative</h1>
+<p align="center">
+<img decoding="async" src="/files/ludo/ludonarrative.jpeg">
+</p>
+<p>Credit for the above image goes to Oskar Permerup. I recommend <a href="https://medium.com/@ludocriticism/god-of-wars-the-stranger-ludonarrative-of-a-boss-fight-8167a9835cb2">&#8220;God of War’s The Stranger: Ludonarrative of a Boss Fight&#8221;</a> for a good example of the kind of thinking going on in this space. In fact, if you do some searching, you will find a lot of good information on ludonarrative and this is because video games have proven to be a quite good vehicle for delivering compelling narratives.</p>
+<p>One of the most common queries in Google for games is &#8220;Does [GAME X] have a story?&#8221; or &#8220;Does [GAME X] have a <em>good</em> story?&#8221; Clearly players have started to place much more emphasis on story-driven components of games. Thus have game publishers and game developers found themselves with a certain pressure to deliver experiences that successfully merge compelling story and engaging gameplay.</p>
+<h1>The Challenge of Narrative Testing</h1>
+<p>This can be a huge challenge to develop. It can be an even harder challenge to test. After all, even in general terms, how do you formally talk about the quality of an interactive narrative? Unlike literature and film, video games put an emphasis on player agency. Agency is understood as the freedom a player has to make different choices within a game and how much (or how little) those choices impact the game itself.</p>
+<p>Just in the context of game mechanics, that&#8217;s pretty easy: that gets into the affordances and constraints that the game mechanics allow that foster game dynamics. But what about story? Imagine if in a movie someone in the audience had agency to choose how the story should play out, essentially overriding the screenwriter, director, and actors. Clearly it would be impossible to guarantee that the story planned for is the one told.</p>
+<p>So we get into the fascinating intersection of story, setting, and gameplay. We get into the construction of a fictional context as a functioning, <em>player-controlled</em> narrative. A key quality question in game development studios is: how do you allow players a broad enough scope of agency within the context of reconstructing a narrative?</p>
+<p>So we&#8217;re not just testing that the game &#8220;works.&#8221; We&#8217;re not just testing that if I hit a given button, the character swings their sword. Or if that sword intersects with an enemy, then it does a specific number of damage. That&#8217;s part of game testing, for sure. But not ludonarrative testing.</p>
+<p>Well, okay, so what, <em>exactly</em>, are we testing for in this context? And how do we know we accomplished it? Or that we failed to do so? Well, to be a game tester in this context, you need to look at how the narrative of a video game is facilitated by its gameplay. You get into story and narrative experience testing.</p>
+<h1>Testing at the Intersection</h1>
+<p>In a different context, I previously talked about the <a href="/2016/03/the-intersections-of-testing/">the intersections of testing</a>. Now we can look at another intersection.</p>
+<p>The convergence of narrative and gameplay has led to an interesting dynamic where there can be resonance or dissonance between the gameplay and the story being told in the game. And this points the way towards a very specific measure of quality that many game players come to have, albeit not always consciously.</p>
+<p>This makes testing for this particular quality very difficult because failures in this context are not often of the type where you can say &#8220;The game is broken&#8221; or &#8220;Game mechanics x and y don&#8217;t work.&#8221; Instead you end up with games that have a slowly degrading feel of immersion and engagement. Thus the perception of quality degrades. Yet even to the gamer who this happens to, they often can&#8217;t point to exactly why.</p>
+<h1>Narratology and Ludology
+</h1>
+<p>There are two broad approaches taken to analyzing video games in this context, which are narratology and ludology. As a test specialist within a game testing context, it&#8217;s important to be aware of these terms and the craft and discipline behind them.</p>
+<ul>
+<li>
+<strong>Narratology</strong> is concerned with narrative structures of something, like films and video games, and understanding how those structures influence the audience.</li>
+</ul>
+<ul>
+<li>
+<strong>Ludology</strong> focuses on the <em>ludic</em> structure of games, by which is meant the design of a game, the mechanics, and so on. Essentially how the game plays <em>as a game</em> and how that gameplay influences players.</li>
+</ul>
+<p>Now, that latter point should immediately get a tester thinking. There is an interesting aspect of objective and subjective elements to consider here. How a given game plays is objective in terms of its mechanics. But how those mechanics influence the player is very subjective.</p>
+<p>For our purposes, the major point to understand is that the combination of ludology and narratology that provides the idea of ludic narrative or simply ludonarrative.</p>
+<h1>Let&#8217;s Dig Into Some Games</h1>
+<p>A challenge I have in this post is that it&#8217;s hard to describe how to test for this since, by definition, I have to provide you examples of games where the decisions have already been made &#8212; for better or worse &#8212; and thus I have to give away what testing would hopefully find, rather than challenging you to find it for yourself. Thus all of this can seem extremely theoretical so I&#8217;m hoping you&#8217;ll use my case studies here for bootstrapping your own thoughts and investigations.</p>
+<p>Let&#8217;s start with the game that really kickstarted a lot of this discussion around ludonarrative.</p>
+<h2>
+<em>BioShock:</em> In the Service of Dystopia</h2>
+<p align="center">
+<img decoding="async" src="/files/ludo/bioshock.jpg" alt="BioShock cover photo">
+</p>
+<p>Clint Hocking coined a term back in 2007 called <strong>ludonarrative dissonance</strong> in an article titled <a href="https://clicknothing.typepad.com/click_nothing/2007/10/ludonarrative-d.html">Ludonarrative Dissonance in Bioshock</a>. If you haven&#8217;t read that article yet, I urge you to hold off for a second until I make a point below. For now, I can say that the concept Hocking was introducing was essentially about when the narrative elements and the ludic elements are in conflict with each other.</p>
+<p>Ken Levine, creator of <em>BioShock</em>, said that one of the goals for the development team was to build a game where &#8220;players were not an observer of narrative, but a participant.&#8221; So did they succeed? Arguably, yes, but Hocking felt that the game suffered &#8220;from a powerful dissonance between what it is about as a game, and what it is about as a story.&#8221; That being said, Hocking never really discusses his thoughts around ludology or narratology at all and so the idea of some dissonance was potentially ill-defined.</p>
+<p>Okay, so let&#8217;s talk about <em>BioShock</em> for a bit. If you were testing the game, how would you be on the lookout for what Hocking found and perhaps have prevented it? Or, alternatively, decided that such dissonance was either not present or not a problem even if it was?</p>
+<p>Well, first let me give you some context. The game takes place in an underwater city called Rapture that was built upon a Randian Objectivist philosophy that puts emphasis almost entirely on free will and self-interest. Randian Objectivism is essentially the idea that there is no greater moral goal than achieving your own happiness; altruism, ultimately, is destructive.</p>
+<p>In the game, the player is eventually tasked with helping a character known as Atlas who offers to help the player escape the city. Part of this requires helping Atlas against who is set up as the main antagonist, Andrew Ryan, the creator of Rapture. Atlas wants to essentially destroy all of what Ryan has created. Atlas will help the player escape Rapture but the cost is that the player must help Atlas against Ryan.</p>
+<p>All gameplay mechanics take place in that narrative context.</p>
+<p>In terms of specific gameplay mechanics, let&#8217;s take one particular context. You have your option to exercise <em>your</em> free will and self-interest by either choosing to rescue or harvest children that are known as Little Sisters.</p>
+<p align="center">
+<img decoding="async" src="/files/ludo/harvest-or-rescue.png" alt="BioShock choice of harvest or rescue Little Sisters">
+</p>
+<p>Yeah, nothing creepy about those kids at all. Harvesting the kids means you are able to upgrade one of your weapon elements, called plasmids, quite a bit more quickly. The downside is that the kid gets killed in the process.</p>
+<p>Okay, so, you&#8217;re testing the game. You are looking at things from a ludonarrative perspective. Just from the context I&#8217;ve given you, can you spot the dissonance aspect? Don&#8217;t worry if you can&#8217;t, but think about what I describe about the overall goal of the game and what I just mentioned as one of the mechanics.</p>
+<h2>Harvest or Rescue?</h2>
+<p>Certainly harvesting the kids would be acting in your own self-interest. You get better upgrades much quicker and this allows many of the challenges, which get progressively tougher, to be overcome a bit easier. In fact, if we want to rationalize, we could argue that it&#8217;s not clear that &#8220;rescuing&#8221; them is doing much for them as it leaves them to wander around in a degrading city full of killers.</p>
+<p>But aiding Atlas in his quest to destroy Rapture, which he perceives as a dystopia (and which it arguably is), is the only way the story can progress. Meaning, you have to <em>reject</em> the notion of self-interest by essentially destroying one man&#8217;s vision of the apotheosis in a self-interested society.</p>
+<p><em>That</em> was Hocking&#8217;s problem with the game: in his view, <em>BioShock</em>&#8216;s story can undermine its premise.</p>
+<p>Mikael Hansson and Stefan Karlsson described Hocking&#8217;s term as:</p>
+<blockquote><p>
+A perceived disconnect by the player, brought on by inconsistencies between actions required of the player, through a game&#8217;s ludology, and a narrative story portrayed within the fiction context.
+</p></blockquote>
+<p>That&#8217;s from their thesis &#8220;A Matter of Perspective: A Qualitative study of Player-presence in First-person Video Games&#8221; written in 2016.</p>
+<p>You must help Atlas overthrow Ryan and destroy Rapture. This is perfectly reasonable and makes sense &#8230; <em>if</em> the player is choosing to reject the Objectivist undertones and, in the context described above, rescue the Little Sisters. But this works out less well if the player wants to act out of their own self-interest and harvest the kids.</p>
+<p>But .. wait. The producers of the game, after hearing the above &#8220;bug report,&#8221; say: &#8220;What if the player is like most people and does different things that might seem contradictory? Maybe they want to help Ryan but also harvest the kids. It&#8217;s their choice, after all.&#8221;</p>
+<p>Okay, let&#8217;s go with that. Since the player can act totally self-interested in one case &#8212; essentially being a child murderer &#8212; why can&#8217;t the player act out of that same self-interest and simply not help Atlas? Or, even better, join Andrew Ryan in his vision?</p>
+<p>Alexander Tankersley, in his article <a href="https://gamearchive.as.ua.edu/ludonarrative-dissonance-a-case-for-bridging-the-gap-between-narrative-and-gameplay/">Ludonarrative Dissonance: a case for bridging the gap between narrative and gameplay</a> brings this up very well with a flowchart that shows the central dilemma.</p>
+<p align="center">
+<img decoding="async" src="/files/ludo/bioshock-flowchart-001.png" alt="BioShock flowchart for the choice of harvest or rescue Little Sisters">
+</p>
+<p>If the player goes down the right-hand path (rescue / altruism), the following occurs:</p>
+<p align="center">
+<img decoding="async" src="/files/ludo/bioshock-flowchart-002.png" alt="BioShock choice of acting in harmony with narrative">
+</p>
+<p>This means you have what we might call <em>ludonarrative resonance</em> or, at the very least, <em>ludonarrative consistency</em>. However, if the player goes down the left-hand path (harvest / self-interest), the following occurs:</p>
+<p align="center">
+<img decoding="async" src="/files/ludo/bioshock-flowchart-003.png" alt="BioShock choice of acting dissonantly with narrative">
+</p>
+<p>Here we have the dissonance.</p>
+<h2>Player Choice?</h2>
+<p>If you do happen to be a player who wants to be self-interested and agrees with Andrew Ryan and his vision for society &#8230; well, at some point, you&#8217;re just going to have to accept that the game will push you in a certain direction that the narrative wants you to follow. You can&#8217;t subvert the narrative.</p>
+<p>And if that really bothers you then the best you can do is simply choose to stop playing. This is what Hocking was essentially arguing: that while the gameplay and setting of <em>BioShock</em> forced players to take sides in regards to Randian Objectivism, the proceedings of the plot completely undermined this by revealing that the player character’s “choices” were very limited.</p>
+<p>While the game&#8217;s central theme regarding the destructive power of greed was conveyed in its setting and in gameplay through the choice to harvest or rescue the kids, the player never has the option to act out of self-interest in regards to the central plot itself.</p>
+<p>Thus this means I could go around the game being a child-murderer, looking out only for myself. But, in the end, I have to reject a society that encourages this very thing and, in fact, help tear that society down.</p>
+<p>The key point to understand here is that &#8212; just like in life &#8212; your beliefs and your actions are either lining up or not lining up. When they don&#8217;t line up, the contention is that you end up with dissonance.</p>
+<p>So the overall idea is that a game can provide one context through its story and narrative but then seem to undermine that through how the game is actually played. Is this a quality problem, though? Well, it depends. To some players, not at all. To others, very much so.</p>
+<p>Certainly we know that most players, if they are paying attention, do become aware, sometimes only subconsciously, that there&#8217;s a gap in what they&#8217;re being presented with (as a story) and how they can interact with that story (as part of gameplay).</p>
+<p>Ludonarrative testing is about finding if such a gap exists and, if so, to what extent and under what conditions. And then determining if it really matters.</p>
+<h2>Check Assumptions</h2>
+<p>But ask yourself: do you agree with the dissonance aspect of <em>BioShock</em> that Hocking and others have brought up? The narrative and the gameplay <em>can</em> be at odds. But <em>must</em> they be? After all, player agency is allowing them the choice of what action to take with the kids.</p>
+<p>But player agency does not stretch to allowing the player to decide to support Ryan over Atlas. This is because, of course, part of the goal of the game&#8217;s narrative was to present a view <em>against</em> Objectivism, at least in a Randian context.</p>
+<p>So, from a narrative testing standpoint, you could argue that the game reaches that goal. You are presented routinely with the horrors of Ryan&#8217;s experiment. Thus the game is essentially trying to align you with the viewpoint that Ryan must be stopped, Rapture must be destroyed, and, ultimately, Randian Objectivism is a bad philosophy because of what it leads to.</p>
+<p>If the player <em>chooses</em> to have a disconnect between supporting that end goal (reject self-interest) but also harvest the kids (embrace self-interest) &#8212; well, that&#8217;s their <em>choice</em>. They have created their own disconnect. But the player is offered no choice in terms of embrace Objectivism or reject Objectivism.</p>
+<p>Lyz Reblin-Renshaw, in her essay <em>Ludonarrative Synchronicity in the &#8220;BioShock&#8221; Trilogy</em> said:</p>
+<blockquote class="quote-box"><p>
+[BioShock is] a postmodern exploration of agency, simultaneously critiquing how players interact with and are affected by video games, but also falls prey to very critiques it illuminates. These moments, when the player realizes their passivity, their inability to fully control the game&#8217;s narrative, that their choices do not matter, are failures to retain ludonarrative synchronicity.
+</p></blockquote>
+<p>And this here is a key thing for the testing aspect. It&#8217;s not just about dissonance or resonance. It can also be about this idea of synchronicity.</p>
+<p>This kind of testing is less about merely making sure the gameplay and story make logical “sense” and is more about ensuring that all of the interactive moments serve the greater vision of what the game is trying to say as part of its story. This means that this isn&#8217;t just a simple matter of checking for a &#8220;good story&#8217; or being on the look out for plot holes. Those <em>are</em> aspects of game testing but go well beyond what I&#8217;ll talk about here.</p>
+<p>What I just described is the unique power of games as a storytelling medium, offering complete immersion through implicating us, the players, in the actions of the player character. We&#8217;ll come back to that with another game later on in this post when I talk about <em>Spec Ops: The Line</em>.</p>
+<p>What this does is bring up an interesting aspect that game developers and testers have had to recognize.</p>
+<h1>Narrative as a Mechanic?</h1>
+<p><strong>Mechanics</strong> are the <em>ludus</em> of a game; essentially, the set of rules and system of constraints of play. <strong>Dynamics</strong> refer to the overall &#8220;behavior&#8221; of the game. Specifically this means the actual events and phenomena that occur as the game is played via its mechanics. A key point of these definitions is to understand that a game&#8217;s dynamics will emerge from its mechanics.</p>
+<p>Where does that leave narrative? Well, Raph Koster points out in one of his posts an interesting take on the idea that narrative itself is a mechanic: <a href="https://www.raphkoster.com/2012/01/20/narrative-is-not-a-game-mechanic/">Narrative Is Not A Game Mechanic</a>. This is a fair point. Let&#8217;s consider this bit from Koster&#8217;s point of view:</p>
+<blockquote class="quote-box"><p>
+In a game grammar model, you always have a black box model, and you select something to input into the system. The system is going to give you <em>feedback</em> as to what effect resulted from your action. The game is in figuring out what the rules are for the black box. Not in a rigorous way, mind you &mdash; you tend to arrive instead at a mental model that gives you a <em>heuristic</em> as to how to approach the black box.
+</p></blockquote>
+<p>The &#8220;heuristic&#8221; part there is interesting to me. Heuristics are strategies we come up with &#8212; essentially, rules of thumb &#8212; based on our past experiences. We have past experiences with certain games that guide our rules of thumb in other games. But we also have past experiences with narratives, either from dealing with people, reading books, watching movies and so on. These two heuristic modes &#8212; narrative and gameplay &#8212; can get fairly complicated.</p>
+<p>We can refer to &#8220;gameplay&#8221; as any action in the game that occurs by way of interaction between the player and the game. That can exist entirely outside of narrative. What narrative can do is contextualize an action or set of actions. Defined simply, a narrative is just the description of a series of events.</p>
+<p>There&#8217;s a core conceptual point here, however, which is that at its most atomic level, virtually <em>any</em> textual or visual component of a game can carry a sort of narrative with it, telling you <em>something</em> about its context and history. This came up a bit in the previous post when I talked about the architectonic and geologic aspects of <em>Elden Ring</em>.</p>
+<p>By this logic, you don&#8217;t necessarily use narrative to improve the ludic elements of a game but simply to situate those elements and provide context. It&#8217;s this context that many the harvest/rescue dichotomy of <em>BioShock</em> in.</p>
+<p>Interestingly, Walt Williams in his GDC Talk <a href="https://www.gamedeveloper.com/design/video-i-spec-ops-the-line-i-contextualizes-violence-through-story">We Are Not Heroes: Contextualising Violence Through Narrative</a> points out that the converse of the above can be true as well. The mechanics of a game can be a narrative element in and of themselves. Williams talks about that in the context of the game <em>Spec Ops: The Line</em>.</p>
+<p>We&#8217;ll look at that game in a moment but let&#8217;s take one intervening example.</p>
+<h1>
+<em>Uncharted</em>: Charting the Path to Character Change</h1>
+<p>In an instance of tongue-in-cheek on this whole concept, some developers at least recognize the ludonarrative discrepancy that can exist. <em>Uncharted 4: A Thief&#8217;s End</em> very unambiguously acknowledged this dissonance criticism that was routinely leveled at their own franchise with a trophy called &#8220;Ludonarrative Dissonance&#8221; that is awarded to the player for killing one thousand enemies.</p>
+<p align="center">
+<img decoding="async" src="/files/ludo/uncharted_dissonance.jpg" alt="Ludonarrative Dissoance achievement in Uncharted 4">
+</p>
+<p>The basis of this criticism is that Nathan Drake, the protagonist of the game, is often portrayed in the cut scenes as a generally good person. I mean, look how sensitive this guy seems.</p>
+<p align="center">
+<img decoding="async" src="/files/ludo/ludonarrative-uncharted4-nathan-drake-niceguy-001.jpg">
+</p>
+<p>Look how conflicted he is.</p>
+<p align="center">
+<img decoding="async" src="/files/ludo/ludonarrative-uncharted4-nathan-drake-niceguy-002.jpg">
+</p>
+<p>What a guy, right? Yet here&#8217;s our guy through how we play him:</p>
+<p align="center">
+<img decoding="async" src="/files/ludo/ludonarrative-nathan-drake-shooting.jpg">
+</p>
+<p>Throughout the games, Drake is quite easily able to kill people and apparently not really suffer at all in terms of his personality <em>as displayed in game</em>. This would appear to make Drake a psychopath of the highest order.</p>
+<p>The person who the game tells us Nathan Drake is and the person who the game forces Nathan Drake to act as (via the player) are very disconnected. This comes up very starkly in <em>Uncharted 4</em> which tries to portray Nathan Drake’s internal struggle with his glory-seeking ways and his obsession with chasing glory and what this path has led him to. What doesn&#8217;t seem to be brought up at all is that this obsession and lifestyle has led to the need to kill hundreds and hundreds of people.</p>
+<p>Bruce Straley, the director of <em>Uncharted 2</em> and <em>Uncharted 4</em>, refers to the people Drake kills in terms of &#8220;the threat is a video game threat.&#8221; By that he means the enemies Drake has to mow down are basically just there to throw obstacles at the player to keep the player engaged with the gameplay. Straley contrasted this with <em>The Last of Us</em>, which he also directed, where he says:</p>
+<blockquote class="quote-box"><p>
+They [the characters and enemies in the game] had their own compass of values that they were driven by, or directed by, which meant they were capable of killing you for a bottle of water and a pair of shoes, because that meant another day of survival in that world that we created.
+</p></blockquote>
+<p>Here Straley is referring to the lead character Joel.</p>
+<p align="center">
+<img decoding="async" src="/files/ludo/joel-last-of-us.jpg">
+</p>
+<p>Now, let&#8217;s say you&#8217;re a ludonarrative tester that has to give feedback on how to perhaps close the disconnect in <em>Uncharted</em>. What might you say?</p>
+<p>Well, one answer: have a character arc that shows evolution. There&#8217;s no real arc for Nathan Drake that takes account of his mass-murdering actions.</p>
+<p>Contrast this with Joel who knows and admits he is morally corrupt and brings up his very murderous past. Nathan Drake, on the other hand, either doesn&#8217;t seem to care about it or actually blows it off. Which one seems more a psychopath in those cases? Joel has a journey from going from bad to &#8230; if not good, at least less bad. Nathan Drake has no such arc. So as a ludonarrative tester one of the key questions you are looking to answer is: how does the character change or evolve?</p>
+<p>This intervening game takes us very much into our next game.</p>
+<h1>
+<em>SpecOps: The Line</em> &#8211; Am I Crazy?</h1>
+<p align="center">
+<img decoding="async" src="/files/ludo/specops-the-line-title.jpg">
+</p>
+<p>A lot has been written about that game and how the narrative and gameplay co-exist. Consider Flora Eloise&#8217;s <a href="https://epiloguegaming.com/is-spec-ops-the-line-more-than-a-military-shooter/">Is &#8216;Spec Ops: The Line&#8217; More Than A Military Shooter?</a> or George Sutherland Howard&#8217;s <a href="https://www.gamedeveloper.com/audio/you-want-some-gum-how-spec-ops-the-line-condemned-video-game-violence-by-embracing-it">You Want Some Gum? How Spec Ops: The Line Condemned Video Game Violence by Embracing It</a>.</p>
+<p>Let&#8217;s consider this game in a bit more detail since it services as a good counter-point to <em>BioShock</em>. It also is a good example where ludonarrative testing was done and was a key part of the development process.</p>
+<h2>Narrative Coherence and Consonance</h2>
+<p>Players engage with <em>Spec Ops: The Line</em> as Captain Martin Walker. Walker is sent on a mission to Dubai after the city has been devastated by sandstorms. On the surface, the game is nothing more than a third-person-focused shooter game. The game mechanics have you traversing various indoor and outdoor environments racking up quite the body count of enemies that engage you along the way.</p>
+<p>Here, unlike with <em>Uncharted 4</em> the dissonance doesn&#8217;t kick in just because you are killing a lot of enemies. However, within that standard gameplay environment, a particular kind of subversive story plays out.</p>
+<p><strong>Spoiler Alert:</strong> I necessarily have to spoil a key aspect of the story. If you prefer not to read this, I would say stop now and skip to the section &#8220;The Future of Ludonarrative Testing&#8221;.</p>
+<p>The game&#8217;s most iconic moment is known as &#8220;the white phosphorous attack.&#8221; Walker&#8217;s team is hopelessly outnumbered and outgunned so this mission gives you a chance to use the chemical known as phosphorus in a mortar strike on an entrenched enemy position. Except &#8230; it turns out the group was not enemies but, rather, a bunch of civilians sheltering from all the carnage around them.</p>
+<p align="center">
+<img decoding="async" src="/files/ludo/specops-mission-001.jpg" alt="Spec Ops walking through the aftermath of the phosphorous attack">
+</p>
+<p>The player has to go through the aftermath of this action with Walker. And the reactions of Walker are quite obvious. First there is abject surprise and the hint of denying what&#8217;s being seen.</p>
+<p align="center">
+<img decoding="async" src="/files/ludo/specops-mission-002.jpg" alt="Spec Ops reaction to phosphorous attack">
+</p>
+<p>But the reality persists and Walker comes to the realization that he&#8217;s committed an atrocity.</p>
+<p align="center">
+<img decoding="async" src="/files/ludo/specops-mission-003.jpg" alt="Spec Ops shame at the phosphorous attack">
+</p>
+<p>Much of the story that plays out in the game after this event is about the psychological ramifications of this exact moment. We, as players, just went from shooting and killing lots of people &#8212; presumably justified since they were shooting at us &#8212; to committing a war crime.</p>
+<p>Does this lead to ludonarrative dissonance? Quality and test discussions said that it&#8217;s arguable that it doesn&#8217;t for two reasons: the context that occurs <em>before</em> this mission and what actions the player chooses to take <em>after</em> this mission.</p>
+<p><strong>More Spoiler Alerts:</strong> I necessarily have to spoil more of the story at this point.</p>
+<p>Prior to the phosphorous mission, everything that Walker and his team encounters seems questionable. A reconnaissance mission turns into a rescue mission that turns into a hostile firefight situation with massive civilian casualties and some uncertain involvement from a prior American military team. Walker has to change the mission parameters more than once to accommodate an uncertain situation. The player is often given choices as to how that plays out, making the player complicit in how far things are taken.</p>
+<p>After the phosphorous mission, Walker can start to become unhinged and, from a narrative standpoint, clearly needs to understand the reason for all of the chaos around him. Clearly finding the cause of the chaos will solve the problem, right? And solving the problem will, at the very least, perhaps justify actions taken along the way. Won&#8217;t it?</p>
+<p>Walker has to find and kill Colonel Konrad, who seems to be behind much of everything, and thus the story is finding the villain. But Walker seems intent on proving there is a villain even when he&#8217;s not sure. And if Konrad is, in fact, a villain, then what is Walker at this point? It eventually becomes clear that the orders you, playing as Walker, are receiving from your commanding officer are, in fact, invented by Walker&#8217;s own developing dissociative disorder, which he&#8217;s using as a way of justifying and explaining the ever increasing horror of his actions.</p>
+<p>The game clearly uses the mechanics/dynamics of the game &#8212; confront just about everything you see; find a villain, even if you have to make one up, and persist in the mission even when it&#8217;s clear the mission is entirely lost &#8212; to tell a story that is anti-war in the wider extent but by showing you what war does to people. Even if you, as the player, choose to play as a &#8220;typical shooter&#8221; there is no way you can avoid being part of the context that Walker is operating within.</p>
+<p>But unlike <em>BioShock</em>, to some extent, you can try to minimize casualties and thus influence the kind of story this is becoming.</p>
+<p>Also unlike <em>BioShock</em>, there are four possible endings. In one of them Walker can basically kill himself! And that final choice highlights an important point about <em>Spec-Ops: The Line</em>: it stands as a challenge to what the idea of ludonarrative dissonance as a concept can be used to achieve in terms of a storytelling aspect. The game deliberately can make the player feel uneasy and out of sync with what the game wants them to do and the way they&#8217;re doing it.</p>
+<p>The reason this game is such an exquisite experience is because the team used story and narrative experience testing to chronicle how the narrative would be situated within the gameplay. And how the gameplay mechanics would augment the narrative, turning that narrative into a mechanic.</p>
+<p>I very much encourage game testers in particular to look at the differences between <em>BioShock</em> and <em>Spec Ops: The Line</em>. They both serve as excellent bookends to a lot of other games that, between those two, can cover a wide spectrum of what&#8217;s possible.</p>
+<h1>The Future of Ludonarrative Testing</h1>
+<p>At its core, ludonarrative dissonance is the idea that when a game tells the player one thing through its story and environment, and then contradicts it though gameplay, it becomes possible for the qualities of immersion and engagement to degrade. As the dissonance becomes increasingly noticeable, the player becomes ever more aware that there is a quality gap. It’s a sensation that can undermine any gaming experience, whether we’re actively aware of it or not.</p>
+<p>The challenge here is that it&#8217;s very difficult to create a game in which every action actually affects the overall narrative outcome. Rather, developers will allow actions to influence the game on a smaller scale, while leaving the grand scheme relatively unaffected. This enables them to give the player a hopefully broad enough scope of agency while also accomplishing what’s in the best interest of the story they are trying to tell.</p>
+<p>For a game to perfectly correlate gameplay to the narrative, the developers would need to give up a great deal of the power that they have over the story. They would have to put the story in the hands of the player. This would be a shift form providing a pre-visualized experience and instead providing the means for <em>some</em> experience to occur. Rather than focusing on telling a particular story, the developers would have to give the player the means to make a story themselves.</p>
+<p>But those are incredibly tricky challenges to pull off, not just technically but also from an artistic standpoint. The quality aspects come somewhere in the middle and the testing for this, thus, has a mandate to find that middle and determine if it&#8217;s being met.</p>
+<p>To be sure, this is an area that game studios are exploring a bit. A good example, in fact, is the game I started the first post with, <em>Elden Ring</em> as well as its spiritual predecessors in the <em>Soulsborne</em> series of games.</p>
+<p>In the <a href="/2022/07/ludonarrative-testing-part-3/">third post</a> in this series, I&#8217;ll return to <em>Elden Ring</em> and dig more into what the future of ludonarrative might look like including how game testing has to evolve to support this changing nature of our gaming and narrative experiences.</p>
+<div class="addtoany_share_save_container addtoany_content addtoany_content_bottom"><div class="a2a_kit a2a_kit_size_16 addtoany_list" data-a2a-url="https://testerstories.com/2022/06/ludonarrative-testing-part-2/" data-a2a-title="Ludonarrative Testing, Part 2">
+<a class="a2a_button_facebook" href="https://www.addtoany.com/add_to/facebook?linkurl=%2F2022%2F06%2Fludonarrative-testing-part-2%2F&amp;linkname=Ludonarrative%20Testing%2C%20Part%202" title="Facebook" rel="nofollow noopener" target="_blank"></a><a class="a2a_button_twitter" href="https://www.addtoany.com/add_to/twitter?linkurl=%2F2022%2F06%2Fludonarrative-testing-part-2%2F&amp;linkname=Ludonarrative%20Testing%2C%20Part%202" title="Twitter" rel="nofollow noopener" target="_blank"></a><a class="a2a_button_linkedin" href="https://www.addtoany.com/add_to/linkedin?linkurl=%2F2022%2F06%2Fludonarrative-testing-part-2%2F&amp;linkname=Ludonarrative%20Testing%2C%20Part%202" title="LinkedIn" rel="nofollow noopener" target="_blank"></a><a class="a2a_button_print" href="https://www.addtoany.com/add_to/print?linkurl=%2F2022%2F06%2Fludonarrative-testing-part-2%2F&amp;linkname=Ludonarrative%20Testing%2C%20Part%202" title="Print" rel="nofollow noopener" target="_blank"></a><a class="a2a_dd addtoany_share_save addtoany_share" href="https://www.addtoany.com/share"><img src="https://static.addtoany.com/buttons/favicon.png" alt="Share"></a>
+</div></div>      
+	</div>
+<!-- .entry-content -->
+	<footer class="entry-footer">       
+		<p class="written-by">This article was written by <a href="/author/administrator/">Jeff Nyman</a></p>
+<div class="author-bio">
+		
+	<h3><a href="/author/administrator/" rel="author">About  Jeff Nyman</a></h3>		
+	<img alt="" src="https://secure.gravatar.com/avatar/a3b6c2d0b2bafdb9ad9cdf782873204d?s=72&#038;d=mm&#038;r=pg" srcset="https://secure.gravatar.com/avatar/a3b6c2d0b2bafdb9ad9cdf782873204d?s=144&#038;d=mm&#038;r=pg 2x" class="avatar avatar-72 photo" height="72" width="72" decoding="async"><p class="author-description">Anything I put here is an approximation of the truth. You're getting a particular view of myself ... and it's the view I'm choosing to present to you. If you've never met me before in person, please realize I'm not the same in person as I am in writing. That's because I can only put part of myself down into words.
+
+If you have met me before in person then I'd ask you to consider that the view you've formed that way and the view you come to by reading what I say here may, in fact, both be true. I'd advise that you not automatically discard either viewpoint when they conflict or accept either as truth when they agree.</p>		
+</div>
+<!-- .author-bio -->
+	</footer><!-- .entry-footer -->
+
+	<nav class="navigation post-navigation" aria-label="Posts">
+		<h2 class="screen-reader-text">Post navigation</h2>
+		<div class="nav-links">
+<div class="nav-previous"><a href="/2022/06/ludonarrative-testing-part-1/" rel="prev"><span class="genericon genericon-previous" aria-hidden="true"></span> <span class="screen-reader-text">Previous post:</span> <span class="post-title">Ludonarrative Testing, Part 1</span></a></div>
+<div class="nav-next"><a href="/2022/07/ludonarrative-testing-part-3/" rel="next"><span class="post-title">Ludonarrative Testing, Part 3</span><span class="screen-reader-text">Next post:</span> <span class="genericon genericon-next" aria-hidden="true"></span> </a></div>
+</div>
+	</nav>
+<div id="comments" class="comments-area">
+
+
+		<div id="respond" class="comment-respond">
+		<h3 id="reply-title" class="comment-reply-title">Leave a Reply <small><a rel="nofollow" id="cancel-comment-reply-link" href="/2022/06/ludonarrative-testing-part-2/#respond" style="display:none;">Cancel reply</a></small>
+</h3>
+<form action="https://testerstories.com/wp-comments-post.php" method="post" id="commentform" class="comment-form" novalidate>
+<p class="comment-notes"><span id="email-notes">Your email address will not be published.</span> <span class="required-field-message">Required fields are marked <span class="required">*</span></span></p>
+<p class="comment-form-comment"><label for="comment">Comment <span class="required">*</span></label> <textarea id="comment" name="comment" cols="45" rows="8" maxlength="65525" required></textarea></p>
+<p class="comment-form-author"><label for="author">Name <span class="required">*</span></label> <input id="author" name="author" type="text" value="" size="30" maxlength="245" autocomplete="name" required></p>
+<p class="comment-form-email"><label for="email">Email <span class="required">*</span></label> <input id="email" name="email" type="email" value="" size="30" maxlength="100" aria-describedby="email-notes" autocomplete="email" required></p>
+<p class="comment-form-url"><label for="url">Website</label> <input id="url" name="url" type="url" value="" size="30" maxlength="200" autocomplete="url"></p>
+<p class="form-submit"><input name="submit" type="submit" id="submit" class="submit" value="Post Comment"> <input type="hidden" name="comment_post_ID" value="4292" id="comment_post_ID">
+<input type="hidden" name="comment_parent" id="comment_parent" value="0">
+</p>
+<p style="display: none;"><input type="hidden" id="akismet_comment_nonce" name="akismet_comment_nonce" value="8be665705a"></p>
+<p style="display: none !important;"><label>&#916;<textarea name="ak_hp_textarea" cols="45" rows="8" maxlength="100"></textarea></label><input type="hidden" id="ak_js_1" name="ak_js" value="63"><script>document.getElementById( "ak_js_1" ).setAttribute( "value", ( new Date() ).getTime() );</script></p>
+</form>	</div>
+<!-- #respond -->
+	<p class="akismet_comment_form_privacy_notice">This site uses Akismet to reduce spam. <a href="https://akismet.com/privacy/" target="_blank" rel="nofollow noopener">Learn how your comment data is processed</a>.</p>
+</div>
+<!-- #comments -->
+</article><!-- #post-## -->
+</main><!--/main-content-->
+	<aside id="sidebar-widget-area" class="sidebar-widget-area" role="complementary">
+		<a class="screen-reader-text skip-link" href="#page-footer">Skip to footer</a>
+
+		<section id="sidebar" class="widget-area sidebar">
+			<div id="text-6" class="widget widget_text">			<div class="textwidget">
+<p><a href="https://www.linkedin.com/pub/jeff-nyman/12/b32/16a"><br>
+<img decoding="async" src="https://static.licdn.com/scds/common/u/img/webpromo/btn_myprofile_160x33.png" alt="View Jeff Nyman's profile on LinkedIn" width="160" height="33" border="0"></a></p>
+</div>
+		</div>
+<div id="categories-5" class="widget widget_categories">
+<h2 class="widget-title">Topics</h2>
+			<ul>
+					<li class="cat-item cat-item-58">
+<a href="/category/agile/">Agile</a> (2)
+</li>
+	<li class="cat-item cat-item-49">
+<a href="/category/ai/">AI</a> (24)
+<ul class="children">
+	<li class="cat-item cat-item-50">
+<a href="/category/ai/machine-learning/">Machine Learning</a> (12)
+	<ul class="children">
+	<li class="cat-item cat-item-55">
+<a href="/category/ai/machine-learning/ml-series-1/">ML Series 1</a> (2)
+</li>
+	<li class="cat-item cat-item-56">
+<a href="/category/ai/machine-learning/ml-series-2/">ML Series 2</a> (4)
+</li>
+	<li class="cat-item cat-item-57">
+<a href="/category/ai/machine-learning/ml-series-3/">ML Series 3</a> (6)
+</li>
+	</ul>
+</li>
+</ul>
+</li>
+	<li class="cat-item cat-item-11">
+<a href="/category/automation/">Automation</a> (68)
+<ul class="children">
+	<li class="cat-item cat-item-41">
+<a href="/category/automation/c/">C#</a> (2)
+</li>
+	<li class="cat-item cat-item-8">
+<a href="/category/automation/capybara/">Capybara</a> (11)
+</li>
+	<li class="cat-item cat-item-9">
+<a href="/category/automation/cucumber/">Cucumber</a> (10)
+</li>
+	<li class="cat-item cat-item-31">
+<a href="/category/automation/cucumber-jvm/">Cucumber-JVM</a> (6)
+</li>
+	<li class="cat-item cat-item-42">
+<a href="/category/automation/groovy/">Groovy</a> (1)
+</li>
+	<li class="cat-item cat-item-40">
+<a href="/category/automation/java/">Java</a> (9)
+</li>
+	<li class="cat-item cat-item-10">
+<a href="/category/automation/qtp/">QTP</a> (6)
+</li>
+	<li class="cat-item cat-item-5">
+<a href="/category/automation/rspec/">RSpec</a> (4)
+</li>
+	<li class="cat-item cat-item-7">
+<a href="/category/automation/selenium/">Selenium</a> (17)
+</li>
+	<li class="cat-item cat-item-39">
+<a href="/category/automation/serenity/">Serenity</a> (8)
+</li>
+	<li class="cat-item cat-item-30">
+<a href="/category/automation/symbiont/">Symbiont</a> (11)
+</li>
+	<li class="cat-item cat-item-51">
+<a href="/category/automation/tapestry/">Tapestry</a> (6)
+</li>
+	<li class="cat-item cat-item-6">
+<a href="/category/automation/watir/">Watir</a> (4)
+</li>
+</ul>
+</li>
+	<li class="cat-item cat-item-13">
+<a href="/category/bdd/">BDD</a> (24)
+<ul class="children">
+	<li class="cat-item cat-item-23">
+<a href="/category/bdd/tdl/">TDL</a> (17)
+</li>
+</ul>
+</li>
+	<li class="cat-item cat-item-25">
+<a href="/category/career/">Career</a> (33)
+<ul class="children">
+	<li class="cat-item cat-item-53">
+<a href="/category/career/interview/">Interview</a> (10)
+</li>
+</ul>
+</li>
+	<li class="cat-item cat-item-15">
+<a href="/category/communication/">Communication</a> (16)
+</li>
+	<li class="cat-item cat-item-65">
+<a href="/category/crime-scene/">Crime Scene</a> (4)
+</li>
+	<li class="cat-item cat-item-52">
+<a href="/category/data-science/">Data Science</a> (4)
+</li>
+	<li class="cat-item cat-item-61">
+<a href="/category/development/">Development</a> (39)
+<ul class="children">
+	<li class="cat-item cat-item-36">
+<a href="/category/development/chef/">Chef</a> (2)
+</li>
+	<li class="cat-item cat-item-32">
+<a href="/category/development/inform-7/">Inform 7</a> (3)
+</li>
+	<li class="cat-item cat-item-38">
+<a href="/category/development/javascript-test-solutions/">JavaScript</a> (6)
+</li>
+	<li class="cat-item cat-item-19">
+<a href="/category/development/language-building/">Language Building</a> (9)
+	<ul class="children">
+	<li class="cat-item cat-item-20">
+<a href="/category/development/language-building/rex-and-racc/">Rex and Racc</a> (3)
+</li>
+	</ul>
+</li>
+	<li class="cat-item cat-item-48">
+<a href="/category/development/python/">Python</a> (4)
+</li>
+	<li class="cat-item cat-item-29">
+<a href="/category/development/rails/">Rails</a> (4)
+</li>
+	<li class="cat-item cat-item-21">
+<a href="/category/development/web-development/">Web Development</a> (11)
+	<ul class="children">
+	<li class="cat-item cat-item-34">
+<a href="/category/development/web-development/node-js/">Node.js</a> (5)
+</li>
+	<li class="cat-item cat-item-22">
+<a href="/category/development/web-development/sinatra/">Sinatra</a> (6)
+</li>
+	</ul>
+</li>
+</ul>
+</li>
+	<li class="cat-item cat-item-28">
+<a href="/category/dialect/">Dialect</a> (6)
+</li>
+	<li class="cat-item cat-item-45">
+<a href="/category/exploration/">Exploration</a> (14)
+<ul class="children">
+	<li class="cat-item cat-item-46">
+<a href="/category/exploration/interactive/">Interactive</a> (6)
+</li>
+</ul>
+</li>
+	<li class="cat-item cat-item-44">
+<a href="/category/indefinito/">Indefinito</a> (11)
+</li>
+	<li class="cat-item cat-item-17">
+<a href="/category/learning/">Learning</a> (11)
+</li>
+	<li class="cat-item cat-item-24">
+<a href="/category/lucid/">Lucid</a> (11)
+</li>
+	<li class="cat-item cat-item-62">
+<a href="/category/product-development/">Product Development</a> (7)
+</li>
+	<li class="cat-item cat-item-64">
+<a href="/category/product-management/">Product Management</a> (3)
+</li>
+	<li class="cat-item cat-item-3">
+<a href="/category/quality/">Quality</a> (7)
+</li>
+	<li class="cat-item cat-item-14">
+<a href="/category/quality-assurance/">Quality Assurance</a> (5)
+</li>
+	<li class="cat-item cat-item-35">
+<a href="/category/specify/">Specify</a> (2)
+</li>
+	<li class="cat-item cat-item-16">
+<a href="/category/symbiont-pg/">Symbiont-PG</a> (4)
+</li>
+	<li class="cat-item cat-item-27">
+<a href="/category/test-solutions/">Test Solutions</a> (11)
+</li>
+	<li class="cat-item cat-item-4">
+<a href="/category/testing/">Testing</a> (167)
+<ul class="children">
+	<li class="cat-item cat-item-59">
+<a href="/category/testing/contracts/">Contracts</a> (2)
+</li>
+	<li class="cat-item cat-item-63">
+<a href="/category/testing/epistemology/">Epistemology</a> (1)
+</li>
+	<li class="cat-item cat-item-67">
+<a href="/category/testing/games/">Games</a> (8)
+</li>
+	<li class="cat-item cat-item-68">
+<a href="/category/testing/history-and-science/">History and Science</a> (5)
+</li>
+	<li class="cat-item cat-item-43">
+<a href="/category/testing/modern-testing/">Modern Testing</a> (15)
+</li>
+	<li class="cat-item cat-item-54">
+<a href="/category/testing/testability/">Testability</a> (9)
+</li>
+</ul>
+</li>
+	<li class="cat-item cat-item-12">
+<a href="/category/thinking/">Thinking</a> (22)
+</li>
+	<li class="cat-item cat-item-47">
+<a href="/category/what-if/">What If</a> (1)
+</li>
+	<li class="cat-item cat-item-69">
+<a href="/category/zmachine/">Z-Machine</a> (7)
+</li>
+			</ul>
+
+			</div>
+<div id="archives-5" class="widget widget_archive">
+<h2 class="widget-title">Archives</h2>		<label class="screen-reader-text" for="archives-dropdown-5">Archives</label>
+		<select id="archives-dropdown-5" name="archive-dropdown">
+			
+			<option value="">Select Month</option>
+				<option value="https://testerstories.com/2023/06/"> June 2023 </option>
+	<option value="https://testerstories.com/2023/05/"> May 2023 </option>
+	<option value="https://testerstories.com/2023/04/"> April 2023 </option>
+	<option value="https://testerstories.com/2023/03/"> March 2023 </option>
+	<option value="https://testerstories.com/2023/02/"> February 2023 </option>
+	<option value="https://testerstories.com/2023/01/"> January 2023 </option>
+	<option value="https://testerstories.com/2022/12/"> December 2022 </option>
+	<option value="https://testerstories.com/2022/11/"> November 2022 </option>
+	<option value="https://testerstories.com/2022/10/"> October 2022 </option>
+	<option value="https://testerstories.com/2022/07/"> July 2022 </option>
+	<option value="https://testerstories.com/2022/06/"> June 2022 </option>
+	<option value="https://testerstories.com/2022/05/"> May 2022 </option>
+	<option value="https://testerstories.com/2022/03/"> March 2022 </option>
+	<option value="https://testerstories.com/2022/02/"> February 2022 </option>
+	<option value="https://testerstories.com/2022/01/"> January 2022 </option>
+	<option value="https://testerstories.com/2021/12/"> December 2021 </option>
+	<option value="https://testerstories.com/2021/10/"> October 2021 </option>
+	<option value="https://testerstories.com/2021/08/"> August 2021 </option>
+	<option value="https://testerstories.com/2021/07/"> July 2021 </option>
+	<option value="https://testerstories.com/2021/06/"> June 2021 </option>
+	<option value="https://testerstories.com/2021/05/"> May 2021 </option>
+	<option value="https://testerstories.com/2021/04/"> April 2021 </option>
+	<option value="https://testerstories.com/2021/03/"> March 2021 </option>
+	<option value="https://testerstories.com/2021/02/"> February 2021 </option>
+	<option value="https://testerstories.com/2021/01/"> January 2021 </option>
+	<option value="https://testerstories.com/2020/11/"> November 2020 </option>
+	<option value="https://testerstories.com/2020/10/"> October 2020 </option>
+	<option value="https://testerstories.com/2020/09/"> September 2020 </option>
+	<option value="https://testerstories.com/2020/07/"> July 2020 </option>
+	<option value="https://testerstories.com/2020/06/"> June 2020 </option>
+	<option value="https://testerstories.com/2020/05/"> May 2020 </option>
+	<option value="https://testerstories.com/2020/02/"> February 2020 </option>
+	<option value="https://testerstories.com/2020/01/"> January 2020 </option>
+	<option value="https://testerstories.com/2019/12/"> December 2019 </option>
+	<option value="https://testerstories.com/2019/11/"> November 2019 </option>
+	<option value="https://testerstories.com/2019/10/"> October 2019 </option>
+	<option value="https://testerstories.com/2019/09/"> September 2019 </option>
+	<option value="https://testerstories.com/2019/08/"> August 2019 </option>
+	<option value="https://testerstories.com/2019/07/"> July 2019 </option>
+	<option value="https://testerstories.com/2019/06/"> June 2019 </option>
+	<option value="https://testerstories.com/2019/05/"> May 2019 </option>
+	<option value="https://testerstories.com/2019/04/"> April 2019 </option>
+	<option value="https://testerstories.com/2019/03/"> March 2019 </option>
+	<option value="https://testerstories.com/2019/02/"> February 2019 </option>
+	<option value="https://testerstories.com/2019/01/"> January 2019 </option>
+	<option value="https://testerstories.com/2018/12/"> December 2018 </option>
+	<option value="https://testerstories.com/2018/11/"> November 2018 </option>
+	<option value="https://testerstories.com/2018/10/"> October 2018 </option>
+	<option value="https://testerstories.com/2018/09/"> September 2018 </option>
+	<option value="https://testerstories.com/2018/08/"> August 2018 </option>
+	<option value="https://testerstories.com/2018/07/"> July 2018 </option>
+	<option value="https://testerstories.com/2018/06/"> June 2018 </option>
+	<option value="https://testerstories.com/2018/05/"> May 2018 </option>
+	<option value="https://testerstories.com/2018/04/"> April 2018 </option>
+	<option value="https://testerstories.com/2018/03/"> March 2018 </option>
+	<option value="https://testerstories.com/2018/02/"> February 2018 </option>
+	<option value="https://testerstories.com/2018/01/"> January 2018 </option>
+	<option value="https://testerstories.com/2017/12/"> December 2017 </option>
+	<option value="https://testerstories.com/2017/11/"> November 2017 </option>
+	<option value="https://testerstories.com/2017/10/"> October 2017 </option>
+	<option value="https://testerstories.com/2017/09/"> September 2017 </option>
+	<option value="https://testerstories.com/2017/08/"> August 2017 </option>
+	<option value="https://testerstories.com/2017/07/"> July 2017 </option>
+	<option value="https://testerstories.com/2017/06/"> June 2017 </option>
+	<option value="https://testerstories.com/2017/05/"> May 2017 </option>
+	<option value="https://testerstories.com/2017/04/"> April 2017 </option>
+	<option value="https://testerstories.com/2017/03/"> March 2017 </option>
+	<option value="https://testerstories.com/2017/02/"> February 2017 </option>
+	<option value="https://testerstories.com/2017/01/"> January 2017 </option>
+	<option value="https://testerstories.com/2016/12/"> December 2016 </option>
+	<option value="https://testerstories.com/2016/11/"> November 2016 </option>
+	<option value="https://testerstories.com/2016/10/"> October 2016 </option>
+	<option value="https://testerstories.com/2016/09/"> September 2016 </option>
+	<option value="https://testerstories.com/2016/08/"> August 2016 </option>
+	<option value="https://testerstories.com/2016/07/"> July 2016 </option>
+	<option value="https://testerstories.com/2016/06/"> June 2016 </option>
+	<option value="https://testerstories.com/2016/04/"> April 2016 </option>
+	<option value="https://testerstories.com/2016/03/"> March 2016 </option>
+	<option value="https://testerstories.com/2016/02/"> February 2016 </option>
+	<option value="https://testerstories.com/2016/01/"> January 2016 </option>
+	<option value="https://testerstories.com/2015/12/"> December 2015 </option>
+	<option value="https://testerstories.com/2015/11/"> November 2015 </option>
+	<option value="https://testerstories.com/2015/10/"> October 2015 </option>
+	<option value="https://testerstories.com/2015/09/"> September 2015 </option>
+	<option value="https://testerstories.com/2015/08/"> August 2015 </option>
+	<option value="https://testerstories.com/2015/07/"> July 2015 </option>
+	<option value="https://testerstories.com/2015/06/"> June 2015 </option>
+	<option value="https://testerstories.com/2015/05/"> May 2015 </option>
+	<option value="https://testerstories.com/2015/04/"> April 2015 </option>
+	<option value="https://testerstories.com/2015/03/"> March 2015 </option>
+	<option value="https://testerstories.com/2015/02/"> February 2015 </option>
+	<option value="https://testerstories.com/2014/12/"> December 2014 </option>
+	<option value="https://testerstories.com/2014/11/"> November 2014 </option>
+	<option value="https://testerstories.com/2014/10/"> October 2014 </option>
+	<option value="https://testerstories.com/2014/09/"> September 2014 </option>
+	<option value="https://testerstories.com/2014/08/"> August 2014 </option>
+	<option value="https://testerstories.com/2014/07/"> July 2014 </option>
+	<option value="https://testerstories.com/2014/06/"> June 2014 </option>
+	<option value="https://testerstories.com/2014/05/"> May 2014 </option>
+	<option value="https://testerstories.com/2014/04/"> April 2014 </option>
+	<option value="https://testerstories.com/2014/03/"> March 2014 </option>
+	<option value="https://testerstories.com/2014/01/"> January 2014 </option>
+	<option value="https://testerstories.com/2013/12/"> December 2013 </option>
+	<option value="https://testerstories.com/2013/09/"> September 2013 </option>
+	<option value="https://testerstories.com/2013/08/"> August 2013 </option>
+	<option value="https://testerstories.com/2013/07/"> July 2013 </option>
+	<option value="https://testerstories.com/2013/06/"> June 2013 </option>
+	<option value="https://testerstories.com/2013/05/"> May 2013 </option>
+	<option value="https://testerstories.com/2013/03/"> March 2013 </option>
+	<option value="https://testerstories.com/2013/01/"> January 2013 </option>
+	<option value="https://testerstories.com/2012/12/"> December 2012 </option>
+	<option value="https://testerstories.com/2012/10/"> October 2012 </option>
+	<option value="https://testerstories.com/2012/09/"> September 2012 </option>
+	<option value="https://testerstories.com/2012/08/"> August 2012 </option>
+	<option value="https://testerstories.com/2012/07/"> July 2012 </option>
+	<option value="https://testerstories.com/2012/06/"> June 2012 </option>
+	<option value="https://testerstories.com/2012/05/"> May 2012 </option>
+	<option value="https://testerstories.com/2012/04/"> April 2012 </option>
+	<option value="https://testerstories.com/2012/03/"> March 2012 </option>
+	<option value="https://testerstories.com/2012/02/"> February 2012 </option>
+	<option value="https://testerstories.com/2012/01/"> January 2012 </option>
+	<option value="https://testerstories.com/2011/12/"> December 2011 </option>
+	<option value="https://testerstories.com/2011/11/"> November 2011 </option>
+	<option value="https://testerstories.com/2011/10/"> October 2011 </option>
+	<option value="https://testerstories.com/2011/09/"> September 2011 </option>
+	<option value="https://testerstories.com/2011/08/"> August 2011 </option>
+
+		</select>
+
+<script type="text/javascript">
+/* <![CDATA[ */
+(function() {
+	var dropdown = document.getElementById( "archives-dropdown-5" );
+	function onSelectChange() {
+		if ( dropdown.options[ dropdown.selectedIndex ].value !== '' ) {
+			document.location.href = this.options[ this.selectedIndex ].value;
+		}
+	}
+	dropdown.onchange = onSelectChange;
+})();
+/* ]]> */
+</script>
+			</div>
+<div id="meta-5" class="widget widget_meta">
+<h2 class="widget-title">Site</h2>
+		<ul>
+						<li><a href="/wp-login.php">Log in</a></li>
+			<li><a href="/feed/">Entries feed</a></li>
+			<li><a href="/comments/feed/">Comments feed</a></li>
+
+			<li><a href="https://wordpress.org/">WordPress.org</a></li>
+		</ul>
+
+		</div>
+<div id="text-4" class="widget widget_text">			<div class="textwidget"><a href="https://www.linkedin.com/pub/jeff-nyman/12/b32/16a">
+          <img src="https://static.licdn.com/scds/common/u/img/webpromo/btn_myprofile_160x33.png" width="160" height="33" border="0" alt="View Jeff Nyman's profile on LinkedIn"></a></div>
+		</div>
+<div id="search-3" class="widget widget_search">
+<form role="search" method="get" class="search-form" action="https://testerstories.com/">
+	<label>
+		<span class="screen-reader-text">Search for:</span>
+		<input type="search" class="search-field" placeholder="Search &hellip;" value="" name="s" title="Search for:">
+	</label>
+	<button type="submit" class="search-submit"><span class="genericon genericon-search" aria-hidden="true"></span><span class="screen-reader-text">Search</span></button>
+</form>
+</div>		</section><!-- #sidebar .widget-area -->
+
+	</aside>
+
+  
+
+<footer id="page-footer" role="contentinfo">
+	<div id="site-info" class="site-info">
+		<span class="footer-site-title"><a href="/" rel="home">Stories from a Software Tester</a></span>
+		<a href="https://wordpress.org/">Proudly powered by WordPress</a>
+	</div>
+<!--/site-info-->
+</footer> <!--/footer-->
+</div>
+<!-- #container -->
+            
+            <style type="text/css" class="darkmysite_inline_css">#darkmysite_switch_1273761959 {
+        --darkmysite_switch_apple_width_height: 60px;
+        --darkmysite_switch_apple_border_radius: 7px;
+        --darkmysite_switch_apple_icon_width: 30px;
+        --darkmysite_switch_apple_light_mode_bg: #121116;
+        --darkmysite_switch_apple_dark_mode_bg: #ffffff;
+        --darkmysite_switch_apple_light_mode_icon_color: #ffffff;
+        --darkmysite_switch_apple_dark_mode_icon_color: #121116;
+        }
+
+    #darkmysite_switch_1273761959 {
+        --darkmysite_switch_margin_from_top: 40px;
+        --darkmysite_switch_margin_from_bottom: 40px;
+        --darkmysite_switch_margin_from_left: 40px;
+        --darkmysite_switch_margin_from_right: 40px;
+        }</style>
+
+
+
+
+    <div id="darkmysite_switch_1273761959" class="darkmysite_switch  darkmysite_bottom_right   darkmysite_switch_apple" onclick="darkmysite_switch_trigger()">
+        <span class="darkmysite_switch_icon"></span>
+            </div>
+
+            
+    <script type="text/javascript" class="darkmysite_inline_js">document.addEventListener("DOMContentLoaded", function(event) {
+            darkmysite_init_alternative_dark_mode_switch();
+        });</script>
+
+
+<script type="text/javascript" id="acuarela-script-js-extra">
+/* <![CDATA[ */
+var acuarelaScreenReaderText = {"expand":"expand child menu","collapse":"collapse child menu"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="/wp-content/themes/acuarela/js/functions.js?ver=20190802" id="acuarela-script-js"></script>
+<script type="text/javascript" src="/wp-includes/js/comment-reply.min.js?ver=6.2.2" id="comment-reply-js"></script>
+<script defer type="text/javascript" src="/wp-content/plugins/akismet/_inc/akismet-frontend.js?ver=1680871091" id="akismet-frontend-js"></script>
+</body>
+</html>
