@@ -1,0 +1,1491 @@
+<!DOCTYPE html>
+<html lang="en-US">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="profile" href="http://gmpg.org/xfn/11">
+				<link rel="pingback" href="/xmlrpc.php">
+				<title>Ludonarrative Testing, Part 3 &#8211; Stories from a Software Tester</title>
+<meta name="robots" content="max-image-preview:large">
+ <style type="text/css" class="darkmysite_inline_css">:root { --darkmysite_dark_mode_bg: #0f0f0f; --darkmysite_dark_mode_secondary_bg: #171717; --darkmysite_dark_mode_text_color: #bebebe; --darkmysite_dark_mode_link_color: #ffffff; --darkmysite_dark_mode_link_hover_color: #cccccc; --darkmysite_dark_mode_input_bg: #2d2d2d; --darkmysite_dark_mode_input_text_color: #bebebe; --darkmysite_dark_mode_input_placeholder_color: #989898; --darkmysite_dark_mode_border_color: #4a4a4a; --darkmysite_dark_mode_btn_bg: #2d2d2d; --darkmysite_dark_mode_btn_text_color: #bebebe; }</style> <style type="text/css" class="darkmysite_inline_css">.darkmysite_dark_mode_enabled::-webkit-scrollbar { background: #29292a !important; } .darkmysite_dark_mode_enabled::-webkit-scrollbar-track { background: #29292a !important; } .darkmysite_dark_mode_enabled::-webkit-scrollbar-thumb { background-color: #52565a !important; } .darkmysite_dark_mode_enabled::-webkit-scrollbar-corner { background-color: #52565a !important; } .darkmysite_dark_mode_enabled::-webkit-scrollbar-button { background-color: transparent !important; background-repeat: no-repeat !important; background-size: contain !important; background-position: center !important; } .darkmysite_dark_mode_enabled::-webkit-scrollbar-button:start { background-image: url(/wp-content/plugins/darkmysite/assets/img/others/scroll_arrow_up.svg) !important; } .darkmysite_dark_mode_enabled::-webkit-scrollbar-button:end { background-image: url(/wp-content/plugins/darkmysite/assets/img/others/scroll_arrow_down.svg) !important; } .darkmysite_dark_mode_enabled::-webkit-scrollbar-button:start:horizontal { background-image: url(/wp-content/plugins/darkmysite/assets/img/others/scroll_arrow_left.svg) !important; } .darkmysite_dark_mode_enabled::-webkit-scrollbar-button:end:horizontal { background-image: url(/wp-content/plugins/darkmysite/assets/img/others/scroll_arrow_right.svg) !important; }</style> <script type="text/javascript" class="darkmysite_inline_js">var darkmysite_switch_unique_id = "1771364252"; var darkmysite_is_this_admin_panel = "0"; var darkmysite_enable_default_dark_mode = "0"; var darkmysite_enable_os_aware = "1"; var darkmysite_enable_keyboard_shortcut = "1"; var darkmysite_enable_time_based_dark = "0"; var darkmysite_time_based_dark_start = "19:00"; var darkmysite_time_based_dark_stop = "07:00"; var darkmysite_alternative_dark_mode_switch = ""; var darkmysite_enable_low_image_brightness = "1"; var darkmysite_image_brightness_to = "80"; var darkmysite_enable_image_grayscale = "0"; var darkmysite_image_grayscale_to = "80"; var darkmysite_enable_bg_image_darken = "1"; var darkmysite_bg_image_darken_to = "60"; var darkmysite_enable_invert_inline_svg = "0"; var darkmysite_enable_low_video_brightness = "1"; var darkmysite_video_brightness_to = "80"; var darkmysite_enable_video_grayscale = "0"; var darkmysite_video_grayscale_to = "80"; var darkmysite_disallowed_elements = ".darkmysite_ignore, .darkmysite_ignore *, .darkmysite_switch, .darkmysite_switch *, .wp-block-button__link, .wp-block-button__link *";</script><link rel="dns-prefetch" href="//static.addtoany.com">
+<link rel="dns-prefetch" href="//fonts.googleapis.com">
+<link rel="alternate" type="application/rss+xml" title="Stories from a Software Tester &raquo; Feed" href="/feed/">
+<link rel="alternate" type="application/rss+xml" title="Stories from a Software Tester &raquo; Comments Feed" href="/comments/feed/">
+<link rel="alternate" type="application/rss+xml" title="Stories from a Software Tester &raquo; Ludonarrative Testing, Part 3 Comments Feed" href="/2022/07/ludonarrative-testing-part-3/feed/">
+<script type="text/javascript">
+window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/14.0.0\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/14.0.0\/svg\/","svgExt":".svg","source":{"concatemoji":"\/wp-includes\/js\/wp-emoji-release.min.js?ver=6.2.2"}};
+/*! This file is auto-generated */
+!function(e,a,t){var n,r,o,i=a.createElement("canvas"),p=i.getContext&&i.getContext("2d");function s(e,t){p.clearRect(0,0,i.width,i.height),p.fillText(e,0,0);e=i.toDataURL();return p.clearRect(0,0,i.width,i.height),p.fillText(t,0,0),e===i.toDataURL()}function c(e){var t=a.createElement("script");t.src=e,t.defer=t.type="text/javascript",a.getElementsByTagName("head")[0].appendChild(t)}for(o=Array("flag","emoji"),t.supports={everything:!0,everythingExceptFlag:!0},r=0;r<o.length;r++)t.supports[o[r]]=function(e){if(p&&p.fillText)switch(p.textBaseline="top",p.font="600 32px Arial",e){case"flag":return s("🏳️‍⚧️","🏳️​⚧️")?!1:!s("🇺🇳","🇺​🇳")&&!s("🏴󠁧󠁢󠁥󠁮󠁧󠁿","🏴​󠁧​󠁢​󠁥​󠁮​󠁧​󠁿");case"emoji":return!s("🫱🏻‍🫲🏿","🫱🏻​🫲🏿")}return!1}(o[r]),t.supports.everything=t.supports.everything&&t.supports[o[r]],"flag"!==o[r]&&(t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&t.supports[o[r]]);t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&!t.supports.flag,t.DOMReady=!1,t.readyCallback=function(){t.DOMReady=!0},t.supports.everything||(n=function(){t.readyCallback()},a.addEventListener?(a.addEventListener("DOMContentLoaded",n,!1),e.addEventListener("load",n,!1)):(e.attachEvent("onload",n),a.attachEvent("onreadystatechange",function(){"complete"===a.readyState&&t.readyCallback()})),(e=t.source||{}).concatemoji?c(e.concatemoji):e.wpemoji&&e.twemoji&&(c(e.twemoji),c(e.wpemoji)))}(window,document,window._wpemojiSettings);
+</script>
+<style type="text/css">img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 0.07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}</style>
+	<link rel="stylesheet" id="urvanov_syntax_highlighter-css" href="/wp-content/plugins/urvanov-syntax-highlighter/css/min/urvanov_syntax_highlighter.min.css?ver=2.8.33" type="text/css" media="all">
+<link rel="stylesheet" id="wp-block-library-css" href="/wp-includes/css/dist/block-library/style.min.css?ver=6.2.2" type="text/css" media="all">
+<style id="wp-block-library-theme-inline-css" type="text/css">.wp-block-audio figcaption{color:#555;font-size:13px;text-align:center}.is-dark-theme .wp-block-audio figcaption{color:hsla(0,0%,100%,.65)}.wp-block-audio{margin:0 0 1em}.wp-block-code{border:1px solid #ccc;border-radius:4px;font-family:Menlo,Consolas,monaco,monospace;padding:.8em 1em}.wp-block-embed figcaption{color:#555;font-size:13px;text-align:center}.is-dark-theme .wp-block-embed figcaption{color:hsla(0,0%,100%,.65)}.wp-block-embed{margin:0 0 1em}.blocks-gallery-caption{color:#555;font-size:13px;text-align:center}.is-dark-theme .blocks-gallery-caption{color:hsla(0,0%,100%,.65)}.wp-block-image figcaption{color:#555;font-size:13px;text-align:center}.is-dark-theme .wp-block-image figcaption{color:hsla(0,0%,100%,.65)}.wp-block-image{margin:0 0 1em}.wp-block-pullquote{border-bottom:4px solid;border-top:4px solid;color:currentColor;margin-bottom:1.75em}.wp-block-pullquote cite,.wp-block-pullquote footer,.wp-block-pullquote__citation{color:currentColor;font-size:.8125em;font-style:normal;text-transform:uppercase}.wp-block-quote{border-left:.25em solid;margin:0 0 1.75em;padding-left:1em}.wp-block-quote cite,.wp-block-quote footer{color:currentColor;font-size:.8125em;font-style:normal;position:relative}.wp-block-quote.has-text-align-right{border-left:none;border-right:.25em solid;padding-left:0;padding-right:1em}.wp-block-quote.has-text-align-center{border:none;padding-left:0}.wp-block-quote.is-large,.wp-block-quote.is-style-large,.wp-block-quote.is-style-plain{border:none}.wp-block-search .wp-block-search__label{font-weight:700}.wp-block-search__button{border:1px solid #ccc;padding:.375em .625em}:where(.wp-block-group.has-background){padding:1.25em 2.375em}.wp-block-separator.has-css-opacity{opacity:.4}.wp-block-separator{border:none;border-bottom:2px solid;margin-left:auto;margin-right:auto}.wp-block-separator.has-alpha-channel-opacity{opacity:1}.wp-block-separator:not(.is-style-wide):not(.is-style-dots){width:100px}.wp-block-separator.has-background:not(.is-style-dots){border-bottom:none;height:1px}.wp-block-separator.has-background:not(.is-style-wide):not(.is-style-dots){height:2px}.wp-block-table{margin:0 0 1em}.wp-block-table td,.wp-block-table th{word-break:normal}.wp-block-table figcaption{color:#555;font-size:13px;text-align:center}.is-dark-theme .wp-block-table figcaption{color:hsla(0,0%,100%,.65)}.wp-block-video figcaption{color:#555;font-size:13px;text-align:center}.is-dark-theme .wp-block-video figcaption{color:hsla(0,0%,100%,.65)}.wp-block-video{margin:0 0 1em}.wp-block-template-part.has-background{margin-bottom:0;margin-top:0;padding:1.25em 2.375em}</style>
+<link rel="stylesheet" id="classic-theme-styles-css" href="/wp-includes/css/classic-themes.min.css?ver=6.2.2" type="text/css" media="all">
+<style id="global-styles-inline-css" type="text/css">body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgba(6,147,227,1) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgba(252,185,0,1) 0%,rgba(255,105,0,1) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgba(255,105,0,1) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--duotone--dark-grayscale: url('#wp-duotone-dark-grayscale');--wp--preset--duotone--grayscale: url('#wp-duotone-grayscale');--wp--preset--duotone--purple-yellow: url('#wp-duotone-purple-yellow');--wp--preset--duotone--blue-red: url('#wp-duotone-blue-red');--wp--preset--duotone--midnight: url('#wp-duotone-midnight');--wp--preset--duotone--magenta-yellow: url('#wp-duotone-magenta-yellow');--wp--preset--duotone--purple-green: url('#wp-duotone-purple-green');--wp--preset--duotone--blue-orange: url('#wp-duotone-blue-orange');--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;--wp--preset--spacing--20: 0.44rem;--wp--preset--spacing--30: 0.67rem;--wp--preset--spacing--40: 1rem;--wp--preset--spacing--50: 1.5rem;--wp--preset--spacing--60: 2.25rem;--wp--preset--spacing--70: 3.38rem;--wp--preset--spacing--80: 5.06rem;--wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);--wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);--wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);--wp--preset--shadow--outlined: 6px 6px 0px -3px rgba(255, 255, 255, 1), 6px 6px rgba(0, 0, 0, 1);--wp--preset--shadow--crisp: 6px 6px 0px rgba(0, 0, 0, 1);}:where(.is-layout-flex){gap: 0.5em;}body .is-layout-flow > .alignleft{float: left;margin-inline-start: 0;margin-inline-end: 2em;}body .is-layout-flow > .alignright{float: right;margin-inline-start: 2em;margin-inline-end: 0;}body .is-layout-flow > .aligncenter{margin-left: auto !important;margin-right: auto !important;}body .is-layout-constrained > .alignleft{float: left;margin-inline-start: 0;margin-inline-end: 2em;}body .is-layout-constrained > .alignright{float: right;margin-inline-start: 2em;margin-inline-end: 0;}body .is-layout-constrained > .aligncenter{margin-left: auto !important;margin-right: auto !important;}body .is-layout-constrained > :where(:not(.alignleft):not(.alignright):not(.alignfull)){max-width: var(--wp--style--global--content-size);margin-left: auto !important;margin-right: auto !important;}body .is-layout-constrained > .alignwide{max-width: var(--wp--style--global--wide-size);}body .is-layout-flex{display: flex;}body .is-layout-flex{flex-wrap: wrap;align-items: center;}body .is-layout-flex > *{margin: 0;}:where(.wp-block-columns.is-layout-flex){gap: 2em;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
+.wp-block-navigation a:where(:not(.wp-element-button)){color: inherit;}
+:where(.wp-block-columns.is-layout-flex){gap: 2em;}
+.wp-block-pullquote{font-size: 1.5em;line-height: 1.6;}</style>
+<link rel="stylesheet" id="darkmysite-client-main-css" href="/wp-content/plugins/darkmysite/assets/css/client_main.css?ver=1.2.6" type="text/css" media="all">
+<link rel="stylesheet" id="plyr-css-css" href="/wp-content/plugins/easy-video-player/lib/plyr.css?ver=6.2.2" type="text/css" media="all">
+<link rel="stylesheet" id="acuarela-fonts-css" href="https://fonts.googleapis.com/css?family=Lato%3A300italic%2C400italic%2C700italic%2C300%2C400%2C700%7CArima+Madurai%3A700%2C800%7CInconsolata%3A400%2C700&#038;subset=latin%2Clatin-ext&#038;ver=20190802" type="text/css" media="all">
+<link rel="stylesheet" id="genericons-css" href="/wp-content/themes/acuarela/genericons/genericons.css?ver=3.4.1" type="text/css" media="all">
+<link rel="stylesheet" id="animate-css" href="/wp-content/themes/acuarela/css/animate.css?ver=3.7.2" type="text/css" media="all">
+<link rel="stylesheet" id="acuarela-style-css" href="/wp-content/themes/acuarela/style.css?ver=6.2.2" type="text/css" media="all">
+<link rel="stylesheet" id="addtoany-css" href="/wp-content/plugins/add-to-any/addtoany.min.css?ver=1.16" type="text/css" media="all">
+<script type="text/javascript" src="/wp-includes/js/jquery/jquery.min.js?ver=3.6.4" id="jquery-core-js"></script>
+<script type="text/javascript" src="/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.4.0" id="jquery-migrate-js"></script>
+<script type="text/javascript" id="urvanov_syntax_highlighter_js-js-extra">
+/* <![CDATA[ */
+var UrvanovSyntaxHighlighterSyntaxSettings = {"version":"2.8.33","is_admin":"0","ajaxurl":"\/wp-admin\/admin-ajax.php","prefix":"urvanov-syntax-highlighter-","setting":"urvanov-syntax-highlighter-setting","selected":"urvanov-syntax-highlighter-setting-selected","changed":"urvanov-syntax-highlighter-setting-changed","special":"urvanov-syntax-highlighter-setting-special","orig_value":"data-orig-value","debug":""};
+var UrvanovSyntaxHighlighterSyntaxStrings = {"copy":"Copied to the clipboard","minimize":"Click To Expand Code"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="/wp-content/plugins/urvanov-syntax-highlighter/js/min/urvanov_syntax_highlighter.min.js?ver=2.8.33" id="urvanov_syntax_highlighter_js-js"></script>
+<script type="text/javascript" id="addtoany-core-js-before">window.a2a_config=window.a2a_config||{};a2a_config.callbacks=[];a2a_config.overlays=[];a2a_config.templates={};</script>
+<script type="text/javascript" async src="https://static.addtoany.com/menu/page.js" id="addtoany-core-js"></script>
+<script type="text/javascript" async src="/wp-content/plugins/add-to-any/addtoany.min.js?ver=1.1" id="addtoany-jquery-js"></script>
+<script type="text/javascript" src="/wp-content/plugins/darkmysite/assets/js/client_main.js?ver=1.2.6" id="darkmysite-client-main-js"></script>
+<script type="text/javascript" id="plyr-js-js-extra">
+/* <![CDATA[ */
+var easy_video_player = {"plyr_iconUrl":"\/wp-content\/plugins\/easy-video-player\/lib\/plyr.svg","plyr_blankVideo":"\/wp-content\/plugins\/easy-video-player\/lib\/blank.mp4"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="/wp-content/plugins/easy-video-player/lib/plyr.js?ver=6.2.2" id="plyr-js-js"></script>
+<link rel="https://api.w.org/" href="/wp-json/">
+<link rel="alternate" type="application/json" href="/wp-json/wp/v2/posts/4326">
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="/xmlrpc.php?rsd">
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="/wp-includes/wlwmanifest.xml">
+<meta name="generator" content="WordPress 6.2.2">
+<link rel="canonical" href="/2022/07/ludonarrative-testing-part-3/">
+<link rel="shortlink" href="/?p=4326">
+<link rel="alternate" type="application/json+oembed" href="/wp-json/oembed/1.0/embed?url=https%3A%2F%2F%2F2022%2F07%2Fludonarrative-testing-part-3%2F">
+<link rel="alternate" type="text/xml+oembed" href="/wp-json/oembed/1.0/embed?url=https%3A%2F%2F%2F2022%2F07%2Fludonarrative-testing-part-3%2F#038;format=xml">
+<link type="text/css" rel="stylesheet" href="/wp-content/plugins/category-specific-rss-feed-menu/wp_cat_rss_style.css">
+<!--Custom Styling-->
+<style media="screen" type="text/css">.site-description { color: #222222}
+.site-title, .entry-title, .post-title, .widget-title, .posts-navigation .nav-links { font-family: Arima Madurai}
+ body { font-family: Lato}</style>
+	<style id="acuarela-header-css" type="text/css"></style>
+<style type="text/css" id="custom-background-css">body.custom-background { background-image: url("/wp-content/uploads/2020/10/low_contrast_linen.png"); background-position: left top; background-size: cover; background-repeat: no-repeat; background-attachment: fixed; }</style>
+			<style type="text/css" id="wp-custom-css">@font-face {
+  font-family: "Open Sans";
+  font-weight: 400;
+  font-style: normal;
+  src: local("Open Sans Regular"), local("OpenSans-Regular"), url("/fonts/OpenSans-Regular.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Open Sans Bold";
+  font-weight: 700;
+  font-style: normal;
+  src: local("Open Sans Bold"), local("OpenSans-Bold"), url("/fonts/OpenSans-Bold.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Open Sans Italic";
+  font-weight: 400;
+  font-style: normal;
+  src: local("Open Sans Italic"), local("OpenSans-Italic"), url("/fonts/OpenSans-Italic.woff") format("woff");
+}
+
+:root{
+	--primary: #01408e;
+	--secondary: #3c5d5c;
+	--initialLine: #ad2271;
+	--drop: #903;
+	--paraIndent: 1.25em;
+	--note: #4d5b7c;
+	--bq-color: #555555;
+	--bq-back: #ededed;
+	--sans: "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+	--mono: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
+    "Courier New", monospace;
+}
+/* For the top menu bar. */
+.site-navigation a {
+	padding: 0.9em 1.5em;
+}
+
+:where(html, body) {
+	overscroll-behavior-y: none;
+	cursor: url("/cursors/default.cur"), auto;
+}
+
+:where(p, h1, h2, h3, h4, h5, h6, blockquote, figcaption) {
+	cursor: url("/cursors/text-select.cur"), auto;
+}
+
+:where(ul, ol) {
+	margin: 1em 1em;
+	text-align: justify;
+	text-justify: inter-word;
+	cursor: url("/cursors/text-select.cur"), auto;
+}
+
+:where(aside, article) a {
+	cursor: url("/cursors/link-select.cur"), auto;
+}
+
+select, button, input,
+.wp-element-button,
+.darkmysite_switch,
+.site-title,
+.site-description {
+	cursor: url("/cursors/link-select.cur"), auto;
+}
+
+::selection {
+  color: #fff;
+  background: rgba(0, 0, 0, 0.99);
+}
+
+main,
+header {
+	font-size: 1rem;
+}
+
+main {
+	/*From here: https://fluidtypography.com/#app-get-started*/
+	/* Settings: 414-1280; 16-20; 1.6-1.3*/
+	font-size: clamp(1rem, 0.462vw + 0.88rem, 1.25rem);
+line-height: clamp(1.6rem, 0.046vw + 1.588rem, 1.625rem);
+}
+
+article {
+	font-family: var(--sans);
+	line-height: 1.6;
+  word-spacing: 0.16em;
+}
+
+h1:not(.site-title) {
+  font-size: 2.5em;
+  margin: 0.67em 0;
+  text-align: center;
+}
+
+:where(h1, h2, h3, h4) {
+	text-rendering: optimizeLegibility;
+	line-height: 1.4em;
+}
+
+article :where(h2, h3) {
+	margin-bottom: 0.7em;
+}
+
+p {
+	font-size: 1.2em;
+	text-align: justify;
+	text-justify: inter-word;
+}
+
+p:first-of-type:first-line {
+	color: var(--initialLine);
+}
+
+li {
+  margin-bottom: 0.5em;
+}
+
+/* This makes sure the first line of blockquotes are not colored since in Wordpress, a blockquote content has a paragraph tag applied to it. */
+:where(blockquote, footer, .comments-area) p:first-of-type:first-line {
+	color: inherit;
+}
+:where(p, blockquote, img, pre, ul, ol) + p:not(.note) {
+  text-indent: var(--paraIndent);
+}
+section > h3 + p::first-letter,
+section > h2 + p::first-letter,
+div.entry-content > p:not(.nostyle):first-child::first-letter {
+	color: var(--drop);
+  border-left: 2px solid var(--drop);
+  border-top: 2px solid var(--drop);
+  float: left;
+  font-family: Georgia;
+  font-size: 65px;
+  line-height: 60px;
+  padding-top: 4px;
+  padding-right: 12px;
+  padding-left: 3px;
+}
+
+:where(aside, article) a {
+	color: var(--primary);
+	text-underline-position: under;
+	text-decoration: underline 2px;
+	transition: all 0.3s linear;
+  background: linear-gradient(to right, #00d1b1 0%, #278fc6 98%);
+  background-size: 0px 2px;
+  background-repeat: no-repeat;
+  background-position: left 10%;
+  text-shadow: 0;
+}
+
+article a:hover {
+  background-size: 100% 2px;
+  color: var(--secondary);
+}
+
+article a:focus {
+  color: var(--secondary);
+}
+
+/* Handling external links to show an icon after them, but excluding links that are part of the TesterStories site. */
+
+a[href*="http"]::after,
+a[href*="https"]::after {
+  content: "";
+  width: 16px;
+  height: 16px;
+  margin-left: 4px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='currentColor' viewBox='0 0 16 16'%3E%3Cpath fill-rule='evenodd' d='M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5z'/%3E%3Cpath fill-rule='evenodd' d='M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0v-5z'/%3E%3C/svg%3E");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  display: inline-block;
+}
+
+a[href^="https://www.linkedin.com/"]::after {
+  content: none;
+}
+
+a[href^="https://testerstories.com/"]::after {
+  display: none !important;
+}
+
+img.framed {
+  --b: 10px;
+  margin: 0 auto;
+  padding: var(--b);
+  border: calc(2 * var(--b)) solid #0000;
+  border-radius: 25px;
+  outline: 1px solid #000;
+  outline-offset: calc(-1 * var(--b));
+  background: conic-gradient(from 90deg at 1px 1px, #0000 90deg, #000 0);
+}
+
+img.backframed {
+  margin: 0 auto;
+  border: 3px solid black;
+  box-shadow: -50px -50px 0 -40px #555555, 50px 50px 0 -40px #555555;
+}
+
+.note {
+  border: 1px solid rgb(107, 113, 177);
+  color: var(--note);
+  border-radius: 16px;
+  padding: 0.5em 0.8em;
+  margin: 1.9em;
+}
+
+.post {
+	background-color: white;
+}
+
+.entry-content li {
+	font-size: 1.2em;
+}
+
+.simplequote {
+	background: #fff url(/2022/07/ludonarrative-testing-part-3/images/box_quote.png) no-repeat;
+	padding: 5px;
+	margin-top: 20px; margin-bottom: 20px;
+	margin-left: 50px; margin-right: 50px;
+	border: 3px solid #cecece;
+	text-indent: 25px;
+}
+
+p.example {
+	padding: 1ex;
+	margin-right: 50px; margin-left: 50px;
+	border: .5ex solid #808080;
+	color: #000000;
+	line-height: 1.2;
+	text-indent: 0em;
+}
+
+#headquote blockquote {
+	text-align: left;
+	margin: 0 auto 20px auto;
+	color: #555;
+	background: #eee url(/2022/07/ludonarrative-testing-part-3/images/quote_top.gif) no-repeat top left;
+}
+
+#headquote blockquote {
+	width: 370px;
+	font-size: 110%;
+	letter-spacing: -1px;
+	line-height: 1.2em;
+}
+
+#headquote #quote {
+	margin-left: 40px;
+	padding: 20px 20px 10px 20px;
+	background: url(/2022/07/ludonarrative-testing-part-3/images/quote_bottom.gif) no-repeat right bottom;
+}
+
+#headquote #author {
+	margin: 0;
+	text-align: center;
+	padding: 0 0 10px 0;
+	color: #999;
+	font-size: 95%;
+}
+
+#headquote blockquote strong {
+	color: #000;
+	font-weight: normal;
+}
+
+/* Center images. */
+
+img {
+	display: block;
+  margin: 0 auto;
+}
+
+img.smaller {
+  width: 200px;
+}
+
+img.even-smaller {
+  width: 100px;
+}
+
+table td.code {
+  font-family: "Courier New", courier, monospace;
+  font-size: 11.5px;
+}
+
+p.box {
+	font-family: Georgia, "Times New Roman", Times, serif;
+	text-align: justify;
+	padding-top: 25px;
+	margin: 0;
+	line-height: 1.2;
+}
+
+pre.box {
+	white-space: pre-wrap;
+	background-color: white;
+	border: 1px solid;
+}
+
+p.tip {
+	padding-bottom: 10px; padding-top: 10px;
+	padding-right: 10px; padding-left: 10px;
+	border: 1px solid;
+}
+
+div.aside {
+	padding-bottom: 10px; padding-top: 10px;
+	padding-right: 10px; padding-left: 10px;
+	margin-right: 50px; margin-left: 50px;
+	border: 1px dotted;
+}
+
+div.aside pre {
+	white-space: pre-wrap;
+}
+
+pre.view {
+	font-family: "Courier New", Courier, monospace;
+        //font-size: 16px;
+	padding-bottom: 10px; padding-top: 10px;
+	padding-right: 10px; padding-left: 10px;
+	white-space: pre-wrap;
+	background: rgb(255,255,255); /* Old browsers */
+	background: -moz-linear-gradient(top,  rgba(255,255,255,1) 0%, rgba(229,229,229,1) 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,1)), color-stop(100%,rgba(229,229,229,1))); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(229,229,229,1) 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(229,229,229,1) 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(229,229,229,1) 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  rgba(255,255,255,1) 0%,rgba(229,229,229,1) 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#e5e5e5',GradientType=0 ); /* IE6-9 */
+	border: 1px solid;
+	text-align: justify;
+}
+
+pre.view .string {
+	color: #3366CC;
+}
+
+pre.view .sub {
+        color: #8333FF;
+}
+
+pre.view .comment {
+	color: #009900;
+}
+
+pre.view .highlight {
+	background-color: #FFFF00;
+	border: 1px solid;
+	border-style: dotted;
+}
+
+pre.output .highlight {
+	background-color: rgb(255,255,255);
+	color: red;
+	border: 1px solid;
+	border-style: dotted;
+}
+
+pre.output {
+	font-family: "Courier New", Courier, monospace;
+        //font-size: 16px;
+	padding-bottom: 10px; padding-top: 10px;
+	padding-right: 10px; padding-left: 10px;
+	white-space: pre-wrap;
+	background: black;
+	color: white;
+}
+
+blockquote {
+  position: relative;
+  width: 80%;
+  margin: 50px auto;
+  padding: 1.2em 30px 1.2em 55px;
+  color: var(--bq-color);
+  background-color: var(--bq-back);
+  border-left: 8px solid #78c0a8;
+  text-align: justify;
+}
+
+blockquote::before {
+  position: absolute;
+	left: 5px;
+	top: -10px;
+	/* Line height needed here to avoid the quote appearing out of place due to calculated line heights for the article. */
+	line-height: 1.6;
+	content: "\201C";
+	color: #78c0a8;
+	font-size: 4em;
+}
+
+blockquote::after {
+	content: "";
+}
+
+blockquote span {
+	display: block;
+	color: #333333;
+	font-style: normal;
+  font-weight: bold;
+  margin-top: 1em;
+}
+
+img.frame {
+  --b: 10px;
+  padding: var(--b);
+  border: calc(2 * var(--b)) solid #0000;
+  outline: 1px solid #000;
+  outline-offset: calc(-1 * var(--b));
+  border-radius: 25px;
+  background: conic-gradient(from 90deg at 1px 1px, #0000 90deg, #000 0);
+  display: block;
+  margin: auto;
+  margin-bottom: 1rem;
+}
+
+code {
+  font-size: 0.9em;
+  padding: 0.0625rem 0.5rem;
+  border-radius: 0.125rem;
+  border: 1px solid #d33a2c;
+  box-shadow: 1px 1px #d33a2c, 2px 2px #d33a2c;
+  margin: 0 0.25rem;
+  color: #d33a2c;
+  font-family: monospace;
+}
+
+pre {
+  font-family: var(--mono);
+  max-width: 100%;
+	padding: 0;
+}
+
+pre code {
+  word-spacing: normal;
+  letter-spacing: normal;
+  font-family: var(--mono);
+  padding-left: 10px;
+  color: #e9e9f4;
+  background: #282936;
+  display: block;
+  max-width: 100%;
+  overflow-x: scroll;
+  /*font-size: 0.8em;*/
+
+  border: 1px solid #282936;
+  border-radius: 10px;
+  box-shadow: 1px 1px #282936, 2px 2px #282936;
+}
+
+pre code::-webkit-scrollbar {
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+pre code::-webkit-scrollbar:vertical {
+  width: 11px;
+}
+
+pre code::-webkit-scrollbar:horizontal {
+  height: 11px;
+}
+
+pre code::-webkit-scrollbar-thumb {
+  border-radius: 8px;
+  border: 2px solid white;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+/* The div part is only needed for long-form content that is pre-formatted. */
+
+pre code div {
+	line-height: 1.5em;
+}
+
+/* This would be for prefromatted material that is not literally from a game or simulation but is meant to indicate something about the details of the game or simulation. */
+
+pre p {
+  border: 2px solid grey;
+  border-radius: 5px;
+  padding: 0.8em;
+	padding-top: 0;
+	margin: 0;
+}</style>
+			</head>
+	<body class="post-template-default single single-post postid-4326 single-format-standard custom-background wp-embed-responsive custom-background-image">
+		<svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-dark-grayscale"><fecolormatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></fecolormatrix><fecomponenttransfer color-interpolation-filters="sRGB"><fefuncr type="table" tablevalues="0 0.49803921568627"></fefuncr><fefuncg type="table" tablevalues="0 0.49803921568627"></fefuncg><fefuncb type="table" tablevalues="0 0.49803921568627"></fefuncb><fefunca type="table" tablevalues="1 1"></fefunca></fecomponenttransfer><fecomposite in2="SourceGraphic" operator="in"></fecomposite></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-grayscale"><fecolormatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></fecolormatrix><fecomponenttransfer color-interpolation-filters="sRGB"><fefuncr type="table" tablevalues="0 1"></fefuncr><fefuncg type="table" tablevalues="0 1"></fefuncg><fefuncb type="table" tablevalues="0 1"></fefuncb><fefunca type="table" tablevalues="1 1"></fefunca></fecomponenttransfer><fecomposite in2="SourceGraphic" operator="in"></fecomposite></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-purple-yellow"><fecolormatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></fecolormatrix><fecomponenttransfer color-interpolation-filters="sRGB"><fefuncr type="table" tablevalues="0.54901960784314 0.98823529411765"></fefuncr><fefuncg type="table" tablevalues="0 1"></fefuncg><fefuncb type="table" tablevalues="0.71764705882353 0.25490196078431"></fefuncb><fefunca type="table" tablevalues="1 1"></fefunca></fecomponenttransfer><fecomposite in2="SourceGraphic" operator="in"></fecomposite></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-blue-red"><fecolormatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></fecolormatrix><fecomponenttransfer color-interpolation-filters="sRGB"><fefuncr type="table" tablevalues="0 1"></fefuncr><fefuncg type="table" tablevalues="0 0.27843137254902"></fefuncg><fefuncb type="table" tablevalues="0.5921568627451 0.27843137254902"></fefuncb><fefunca type="table" tablevalues="1 1"></fefunca></fecomponenttransfer><fecomposite in2="SourceGraphic" operator="in"></fecomposite></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-midnight"><fecolormatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></fecolormatrix><fecomponenttransfer color-interpolation-filters="sRGB"><fefuncr type="table" tablevalues="0 0"></fefuncr><fefuncg type="table" tablevalues="0 0.64705882352941"></fefuncg><fefuncb type="table" tablevalues="0 1"></fefuncb><fefunca type="table" tablevalues="1 1"></fefunca></fecomponenttransfer><fecomposite in2="SourceGraphic" operator="in"></fecomposite></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-magenta-yellow"><fecolormatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></fecolormatrix><fecomponenttransfer color-interpolation-filters="sRGB"><fefuncr type="table" tablevalues="0.78039215686275 1"></fefuncr><fefuncg type="table" tablevalues="0 0.94901960784314"></fefuncg><fefuncb type="table" tablevalues="0.35294117647059 0.47058823529412"></fefuncb><fefunca type="table" tablevalues="1 1"></fefunca></fecomponenttransfer><fecomposite in2="SourceGraphic" operator="in"></fecomposite></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-purple-green"><fecolormatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></fecolormatrix><fecomponenttransfer color-interpolation-filters="sRGB"><fefuncr type="table" tablevalues="0.65098039215686 0.40392156862745"></fefuncr><fefuncg type="table" tablevalues="0 1"></fefuncg><fefuncb type="table" tablevalues="0.44705882352941 0.4"></fefuncb><fefunca type="table" tablevalues="1 1"></fefunca></fecomponenttransfer><fecomposite in2="SourceGraphic" operator="in"></fecomposite></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-blue-orange"><fecolormatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></fecolormatrix><fecomponenttransfer color-interpolation-filters="sRGB"><fefuncr type="table" tablevalues="0.098039215686275 1"></fefuncr><fefuncg type="table" tablevalues="0 0.66274509803922"></fefuncg><fefuncb type="table" tablevalues="0.84705882352941 0.41960784313725"></fefuncb><fefunca type="table" tablevalues="1 1"></fefunca></fecomponenttransfer><fecomposite in2="SourceGraphic" operator="in"></fecomposite></filter></defs></svg>		<div id="container" class="site container">
+	<header id="masthead" class="site-header animated fadeInDown" role="banner">
+
+	<a class="screen-reader-text skip-link" href="#main-content">Skip to content</a>
+	<a class="screen-reader-text skip-link" href="#sidebar-widget-area">Skip to sidebar</a>
+	<a class="screen-reader-text skip-link" href="#page-footer">Skip to footer</a>
+	<div id="site-identity" class="site-identity">
+		<a href="/" class="home-link animated fadeIn" title="Stories from a Software Tester" rel="home">
+			<div class="title-description">
+				<h1 class="site-title">Stories from a Software Tester</h1>
+				<h2 class="site-description">Twice upon a time, in another space, no distance in any direction from here &#8230;</h2>
+			</div>
+		</a> 
+
+	</div>
+<!--/site-identity-->
+
+	<nav id="nav-menu" class="site-navigation main-navigation" role="navigation" aria-label="Main Navigation">
+		<button id="nav-button" class="menu-toggle" role="button">
+			<span class="screen-reader-text">Menu</span>
+			<span class="genericon" aria-hidden="true"></span>
+		</button>
+		<ul id="primary-menu" class="primary-menu">
+<li id="menu-item-3923" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-3923"><a href="/">Home</a></li>
+<li id="menu-item-2051" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2051"><a href="/about-tester-stories/">About Tester Stories</a></li>
+<li id="menu-item-2050" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2050"><a href="/who-am-i/">Who Am I</a></li>
+<li id="menu-item-2048" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2048"><a href="/just-for-fun/">Just For Fun</a></li>
+</ul>	</nav><!--/navigation-->
+
+
+<form role="search" method="get" class="search-form" action="https://testerstories.com/">
+	<label>
+		<span class="screen-reader-text">Search for:</span>
+		<input type="search" class="search-field" placeholder="Search &hellip;" value="" name="s" title="Search for:">
+	</label>
+	<button type="submit" class="search-submit"><span class="genericon genericon-search" aria-hidden="true"></span><span class="screen-reader-text">Search</span></button>
+</form>
+</header><!--/header-->
+
+<main id="main-content" class="main-content" role="main">
+<article id="post-4326" class="post-4326 post type-post status-publish format-standard hentry category-games category-testing">
+<header class="entry-header">
+	<span class="entry-meta"><span class="cat-links"><span class="screen-reader-text">Published in</span><span class="genericon genericon-category" aria-hidden="true"></span><a href="/category/testing/games/" rel="category tag">Games</a><span aria-hidden="true">, </span><a href="/category/testing/" rel="category tag">Testing</a></span></span><h1 class="entry-title">Ludonarrative Testing, Part 3</h1>	<span class="byline">
+	Written by <a href="/author/administrator/" class="entry-author" rel="author">Jeff Nyman</a>	</span><!-- .byline -->
+	<span class="entry-meta">
+	<span class="genericon genericon-time" aria-hidden="true"></span><a href="/2022/07/01/" rel="bookmark" class="entry-date"><time datetime="2022-07-01T15:52:21-05:00">1 July 2022</time></a>		<span class="comments-link">
+			<span class="genericon genericon-comment" aria-hidden="true"></span>
+			<a href="/2022/07/ludonarrative-testing-part-3/#respond">Leave a comment</a>		</span>
+		</span><!-- .entry-meta -->
+</header><!-- .entry-header -->
+
+	<div class="entry-content">
+		<p>In the <a href="/2022/06/ludonarrative-testing-part-2/">second post</a> of this series I looked at a couple of games to drill in the idea of ludonarrative and what it means. Here I want to go back to a game I started with in the first post, <em>Elden Ring</em>, and take a much deeper look at the mechanics and the narratives from a ludonarrative testing standpoint.</p>
+<p><span id="more-4326"></span></p>
+<p>In these posts it&#8217;s probably fairly clear that I really can&#8217;t explore the concept of this testing with you directly because so much of it would rely on us having a shared experience of having played the games in question. Given that reality, my focus is instead on showing you an aspect of testing you might not be familiar with at all. As I said in my <a href="/2016/10/testing-is-like/">&#8220;Testing is Like &#8230;&#8221;</a> article:</p>
+<blockquote><p>I want testers to start looking at testing as a discipline that has a broad-focus, wide-angle lens.</p></blockquote>
+<p>Game testing is certainly one context of that and ludonarrative testing is a fun example of how that wide-angle lens is applied in that context.</p>
+<h1>Ludonarrative Recap</h1>
+<p>Ludonarrative is the intersection of narrative and gameplay. More specifically, it&#8217;s the intersection of story, setting, and gameplay. The concept is operationalized when game studios provide a fictional context as a functioning, player-controlled narrative that requires a series of game mechanics to further the narrative.</p>
+<p>In terms of testing for the quality of this approach, a key question being asked is: how do we allow players a broad enough scope of agency within the context of constructing the narrative we want to tell? Put a little more succinctly, but also more broadly: how do we map narrative theory to gameplay techniques? And then, of course, how do we test whether we have achieved a successful outcome that has the best chance of appealing to the broadest possible audience?</p>
+<p>As I talked about in previous posts, sometimes the story and the gameplay reinforce each other and there is ludonarrative resonance. When the two don&#8217;t reinforce each other, however, this can undermine the narrative and gameplay components of the experience and we get ludonarrative dissonance. Depending on how much that matters to the player, this can, in turn, undermine their perception of quality of the experience they are getting.</p>
+<h1>Back to the Ring</h1>
+<p align="center">
+<img decoding="async" src="/files/ludo/eldenring-title-landscape.jpg" style="border-radius: 10px">
+</p>
+<p>So let&#8217;s get back to <em>Elden Ring</em>. This time I&#8217;ll dig into a few of the ludic and narrative aspects to at least give you an idea of how testing played out in the context of the game development. For those who have not played the game at all, I&#8217;ll do my best to provide enough context for each point I bring up.</p>
+<h2>Prepare to Die (Often)</h2>
+<p>I&#8217;ll start with one of the most obvious ludic elements that the game throws at you. One thing you learn right away is that you have to detach your ego (and thus how well or poorly you&#8217;re playing) from character death. Very early on &#8212; in fact, right at the start of the game &#8212; you are confronted with the &#8220;tutorial boss.&#8221;</p>
+<p align="center">
+<img decoding="async" src="/files/ludo/eldenring-tutorial-boss.jpg">
+</p>
+<p>You are specifically meant to die to this monstrosity. It <em>is</em> possible to beat him but, even if you do, you will still die via other, scripted means.</p>
+<p>This is the ludic aspect of the game reinforcing something to you: death is crucial in this game. It&#8217;s how you learn. And the game, via its ludic aspects, is teaching you something right away: you are likely going to die to strong enemies. So try to get past the idea of that being frustrating and instead use your (many) impending deaths as a learning experience.</p>
+<p>With that said, stepping into your tester mindset, but also just your game player mindset, what does this actually mean? How do you approach this? Keep in mind, approaching this as a player is not entirely distinct from approaching it as a tester. Let&#8217;s give some specific context. Here you go facing off against Margit the Fell Omen:</p>
+<p align="center">
+<img decoding="async" src="/files/ludo/eldenring-battling-margit.jpg">
+</p>
+<p>He&#8217;s got the big ol&#8217; stick that looks like it could pack a wallop, not to mention that glowing hammer he seems to be wielding. So, again, how do you approach this? Take a second and think about it. If you&#8217;ve played these style of games, think about what it <em>means</em> to play them. If you haven&#8217;t played these style of games, just think about how you might approach an encounter of this sort as a tester solely from the standpoint of an application that takes in inputs and returns outputs.</p>
+<p>Here&#8217;s a video to show a fight with this guy in action.</p>
+<p class="margin-bottom: 10px">
+
+    </p>
+<div>        
+    <video id="plyr647f3e426e4c0" controls>
+       <source src="/files/ludo/margit-battle.mp4" type="video/mp4">
+    </video>
+    </div>    <script>const evplayerplyr647f3e426e4c0 = new Plyr(document.getElementById('plyr647f3e426e4c0'));
+        evplayerplyr647f3e426e4c0.ratio = '16:9';
+        evplayerplyr647f3e426e4c0.iconUrl = '/wp-content/plugins/easy-video-player/lib/plyr.svg';
+        evplayerplyr647f3e426e4c0.blankVideo = '/wp-content/plugins/easy-video-player/lib/blank.mp4';</script>
+
+<h3>Explore and Observe</h3>
+<p>What (hopefully) happens is that you realize there is benefit to going into a boss fight, like the one with Margit, without necessarily a plan at all to do damage and certainly not to necessarily win the fight. Rather you just go into the encounter, knowing he&#8217;s likely going to mop up the floor with you. But before he does so, make sure you move around enough, forcing the boss to chase you and use his weapons. Why? This shows some of the moveset that he has.</p>
+<p>Think of this like a tester on a non-game application and exploring it. What are you doing in that case? You&#8217;re sort of just going in and learning what the application does. You are applying inputs and looking for the outputs you get. And, along the way, you are making judgments about the quality of the experience. Well, that&#8217;s <em>exactly</em> what the above fight is showing.</p>
+<p>If you watch the video, look at those attacks! Margit swings that stick pretty wide and far given his size. He flicks those glowing knives at you. He can do leap attacks that have different follows in terms of how he attacks once he lands. He also has some combo moves.</p>
+<p>Now, as a player and a tester, while all this is going on you have to consider that you are dealing damage, taking damage, shielding (to mitigate damage) or dodging (to avoid damage). This means there is the concept of &#8220;hit boxes&#8221;, which are the areas where Margit can hit you and cause you damage. It looks a little like this, considering a character holding a weapon:</p>
+<p align="center">
+<img decoding="async" src="/files/ludo/game-hitbox.jpg">
+</p>
+<p>More generally, a hitbox is just a two or three dimensional shape that a game use to determine when real-time collisions have occurred, such as that between Margit&#8217;s stick and your fragile little body or your sword and Margit&#8217;s less fragile body.</p>
+<h3>Be Aware of Quality Impactors</h3>
+<p>There are also what are called &#8220;i-frames&#8221; by which is meant &#8220;invulnerability frames&#8221; or &#8220;invincibility frames.&#8221; These refer to a short period of time &#8212; literally just one frame of animation &#8212; where damage cannot be incurred. This can mean a couple of things. One has to do with dodge rolls where, if you time the roll correctly, an enemy attack won&#8217;t damage you even if they hit within your hitbox. In another context, an i-frame refers to how players can briefly avoid suffering the same or similar consequence to an attack after already having been damaged by that same attack.</p>
+<p>These are ludic aspects that can impact the quality of the experience &#8212; or degrade that quality if the mechanics and dynamics are not working.</p>
+<p>Look at the video at around 2:15 to 2:17. Specifically at 2:16, does it look like damage should have been taken there? Or do you feel it was a perfectly executed dodge? Now imagine that you have to test for this. And you have to test for this for all weapons Margit may use. And the way that he may use them. Does he pierce? Slash? Slam? And now do that for all other enemies in the game. Further, you have to do that for the player&#8217;s attacks against the enemies as well.</p>
+<h3>Broaden the Idea of Qualities</h3>
+<p>What we&#8217;re getting into here is the ludic aspect of combat and how challenging it is but also how fair it is. &#8220;Challenging&#8221; and &#8220;fair&#8221; become qualities in this context. Those kinds of qualities are what you&#8217;re testing for in particular but, as a player, you&#8217;re also looking for. It&#8217;s how you determine if the game is playing fair with you and thus whether you trust it to deliver a fair, albeit punishing, experience.</p>
+<p>By the way, Margit is an early game boss. As such he&#8217;s considered a relatively easy encounter.</p>
+<p>One of the much potentially harder bosses is known as Malenia. She, like many of the harder bosses, has what&#8217;s called a &#8220;Phase 2&#8221; form. Meaning you defeat her once and she converts into a new form with a new moveset. If you want a video of that kind of fight, feel free to check it out!</p>
+<p class="margin-bottom: 10px">
+
+    </p>
+<div>        
+    <video id="plyr647f3e426e531" controls>
+       <source src="/files/ludo/malenia-fight.mp4" type="video/mp4">
+    </video>
+    </div>    <script>const evplayerplyr647f3e426e531 = new Plyr(document.getElementById('plyr647f3e426e531'));
+        evplayerplyr647f3e426e531.ratio = '16:9';
+        evplayerplyr647f3e426e531.iconUrl = '/wp-content/plugins/easy-video-player/lib/plyr.svg';
+        evplayerplyr647f3e426e531.blankVideo = '/wp-content/plugins/easy-video-player/lib/blank.mp4';</script>
+
+<p>The little white ghost-like figure in the battle is actually a &#8220;co-operator summon.&#8221; This is an NPC that you can essentially have help you with the fight which, as you can imagine, adds another dimension to fight mechanics. This too can impact how challenging and fair things seem. After all, if you can summon an NPC and just sit back and watch them demolish the enemy: well, that won&#8217;t be very challenging, will it?</p>
+<h3>The Narratively Consistent Death</h3>
+<p>So, yeah, prepare to die here and there. But narratively your death, as an aspect of the game, also works. It&#8217;s not just like you&#8217;re given some arbitrary number of &#8220;lives&#8221; that allow you to keep replaying, akin to how arcade-style games worked.</p>
+<p>Death itself is actually baked into the world narrative of the game. Your character is a &#8220;Tarnished&#8221; that has effectively been resurrected from the dead. And because you are &#8220;touched by Grace&#8221; (where &#8220;grace&#8221;  in this context can sort of be thought of as the guidance of a higher deity), you can constantly be resurrected any time you die. Thus the game has a built in conceit that explains death and thus situates &#8220;player failure&#8221; into the core mechanics.</p>
+<p>This is similar to the <em>Assassin&#8217;s Creed</em> games in many ways. In those games, you are someone in the future who is looking at the memories of someone in the past. Clearly if you, acting as that person in the past, die, the Animus (which is controlling your access to the memories in the game) simply resets and says you &#8220;desynchronized&#8221; from the ancestor you are viewing. Thus is death built in as a mechanic that makes sense and is narratively explained.</p>
+<p><em>BioShock</em>, by contrast, had its &#8220;Vita Chambers&#8221; and while those chambers are where you resurrected after death, it was entirely unclear that this game mechanic was situated very well from a narrative standpoint. Not least of which is that nobody else in the game seems to reanimate this way when you defeat them.</p>
+<h2>Prepare to Study</h2>
+<p>Another thing <em>Elden Ring</em> tries to show you quickly, from its ludic underpinnings, is that it does not reward traditional styles of play. Don&#8217;t just rush in to encounters, <em>Call of Duty</em> style. In games like <em>Call of Duty</em> you can just sort of wade into a situation, bullets spraying all over the place, counting on being a sponge for damage, using med packs here and there, and bulldozing your way through.</p>
+<p>In <em>Elden Ring</em>, however, if you just go in with swords swinging and magic spells flinging, you will rapidly deplete your resources. Here&#8217;s a view of my resources during a combat session:</p>
+<p align="center">
+<img decoding="async" src="/files/ludo/eldenring-combat.jpg">
+</p>
+<p>My top bar (red) is my health points (HP), and I&#8217;m doing okay but I&#8217;ve lost quite a bit. My middle bar (blue) is my focus points (FP) and I&#8217;ve lost some there too. The bottom bar (which you can barely see is green) is my stamina bar of which I just depleted my last amount of it. Stamina actually regenerates on its own but the HP and FP do not. You <em>can</em> replenish those HP and FP resources via flasks you carry but those are limited. The only way to <em>fully</em> replenish everything comes at the cost of reviving literally every single enemy you defeated.</p>
+<p>What the game teaches you is that you have to balance the amount of focus points you can use &#8212; and thus the amount of spells you can cast or skills you can activate &#8212; leveling up all of the stats that are required to build some of the better weapons for casting or melee. Here &#8220;stats&#8221; refers to numbers that essentially reflect various aspects of your weapons or your armor. We&#8217;ll get into that in a bit since this is a huge ludic aspect of these games.</p>
+<p>You do all this while at the same time finding the skills, spells and incantations in the game that are going to use the least amount of focus points and thus are the most efficient for your character. Likewise you will find armor or shields that help mitigate loss to your health points. Both of these serve you well when you&#8217;re fighting this dragon pretty early on:</p>
+<p align="center">
+<img decoding="async" src="/files/ludo/eldenring-dragon-agheel-combat.jpg">
+</p>
+<p>From the top left where the resources stuff is situated, notice that I&#8217;ve taken some hits to my HP but the dragon has taken more. And that&#8217;s the key: you have to manage your resources such that you can last through a fight. Ultimately you have to get the enemy&#8217;s HP down to zero before they do the same to you. Sounds simple, right? But resource management as well as movement in the environment &#8212; both by you and the enemy &#8212; conspire to make this an interesting problem to test.</p>
+<p>I say that because everything has to be balanced to some extent. The level of damage that dragon above can do to me has to depend on various factors, such as my attributes that I&#8217;ve leveled up, armor that I&#8217;m wearing, buffs that I have active, and so on. Testing these encounters means you have to understand how damage is dealt and under what conditions damage is mitigated or negated. I&#8217;ll come back to this topic in a bit.</p>
+<h3>Test Approach for &#8230; Studying?</h3>
+<p>What the ludic aspects teach you &#8212; as a player &#8212; is that patience and timing are the best tools you have in combat. Studying your enemy is crucial. The enemies all behave and attack very differently from one another. The general advice for a player is observe the attacks of enemies and get a feel for their rhythm and behaviors. Here was the test approach for testers on the game:</p>
+<pre>
+All enemies have a set number of attacks. So pay attention to:
+
+* how long it takes them to wind up an attack
+* how many times they attack in a row
+* how long they pause in between attacks
+</pre>
+<p align="center">
+<img decoding="async" src="/files/ludo/eldenring-combat-weak-enemy.jpg">
+</p>
+<p>Here is more of the test approach:</p>
+<pre>
+* You need to be looking for gaps.
+* Get in, cause a little bit of damage, before moving away again.
+* Make sure you know how your stamina decreases.
+* This is particularly the case when using one or two dodge rolls.
+</pre>
+<p>It was crucial that if players are being asked to operate in this manner that the game actually give them the feedback they need in order to have the best chance of figuring out how to get better at the game. It&#8217;s a truism that even the weakest enemy can obliterate you in seconds if you just charge in and don&#8217;t observe and learn things like how long it takes an enemy to wind up an attack and how they use their weapon. That solider in the image above, for example, can attack not just with his sword but also the torch he&#8217;s carrying.</p>
+<h3>Look for Quality Degraders</h3>
+<p>A challenge with games like this is that they will sometimes use &#8220;input reading.&#8221; But what is that? Well, input reading is a very contentious issue with these kinds of games. The idea is that input reading occurs when an enemy counters a move that the player does at the <em>exact</em> moment that the player hits a button on their controller or keyboard. Now think about what that means. Truly think about this for a second. Why might this be a quality problem?</p>
+<p>First, maybe take a look at the following video and see what you think.</p>
+<p class="margin-bottom: 10px">
+
+    </p>
+<div>        
+    <video id="plyr647f3e426e570" controls>
+       <source src="/files/ludo/input-reading.mp4" type="video/mp4">
+    </video>
+    </div>    <script>const evplayerplyr647f3e426e570 = new Plyr(document.getElementById('plyr647f3e426e570'));
+        evplayerplyr647f3e426e570.ratio = '16:9';
+        evplayerplyr647f3e426e570.iconUrl = '/wp-content/plugins/easy-video-player/lib/plyr.svg';
+        evplayerplyr647f3e426e570.blankVideo = '/wp-content/plugins/easy-video-player/lib/blank.mp4';</script>
+
+<p>What that amply demonstrates is input reading. But can you spot that? It&#8217;s tricky, right? If you don&#8217;t have the context for how test with this sort of situation being operative, it can be very hard to spot it or even know that it&#8217;s a thing.</p>
+<p>Obviously I could spend a whole lot of time here explaining how to spot this and how it impacts the experience, depending on how graded the input reading is, but consider this: a human player has to watch what&#8217;s happening on screen and react to some kind of movement or animation. Taken in real time, there are severe limits on what a human can react to. But input reading is done by the CPU. A very distinctly non-human sort of thing. The CPU opponent, the enemy you are fighting, knows every every single thing that happens on every single frame of animation. It isn&#8217;t trying to react to figure out the game state, it quite literally <em>is</em> the game state.</p>
+<p>Do you see the possible problem here?</p>
+<p>Input reading can lead to the CPU opponent doing blatantly unfair things that no human opponent could ever do. Now, you might argue, &#8220;Well, the game enemies aren&#8217;t human opponents.&#8221; No, they&#8217;re not. But they still have to operate within rules, right? Those rules guide how combat can happen. If the enemy can, in effect, &#8220;read your intention&#8221; rather than what you actually do, that would seem to give a very unfair advantage to those enemies. I&#8217;ll remind here that &#8220;fairness&#8221; is one of the qualities we look for.</p>
+<p>There <em>are</em> ways in which input reading can be an interesting mechanic in ludic terms. But it&#8217;s a balance and it&#8217;s a balance that effective testing can make sure benefits the gameplay and the player.</p>
+<h3>Look for Ludonarrative Consistency</h3>
+<p>A lot of what I talked about above provides a ludonarrative component that is a bit under the surface. The enemies you fight, beyond just being an enemy, are part of this living world. These enemies all are designed to look and respond very specifically based on how they are supposed to have developed in this world. There&#8217;s a reason you have, say, the Lesser Kindred of Rot:</p>
+<p align="center">
+<img decoding="async" src="/files/ludo/eldenring-lesser-kindred.jpg">
+</p>
+<p>I think they&#8217;re kind of cute. Your mileage may vary.</p>
+<p>And the Basilisk:</p>
+<p align="center">
+<img decoding="async" src="/files/ludo/eldenring-basilisk.jpg">
+</p>
+<p>A face only a mother could love, am I right?</p>
+<p>And let&#8217;s not forget the Finger Creeper:</p>
+<p align="center">
+<img decoding="async" src="/files/ludo/eldenring-fingercreeper.jpg">
+</p>
+<p>These things all evolved &#8212; maybe devolved is a better word &#8212; in this world and have to make sense within their regions of it. So not only do these creatures have to make sense (ludically) in terms of how they seem to attack, given how they are biologically constructed but these also have to make sense (narratively) within the regions they are found.</p>
+<p>Notice there two aspects: one is about the design in the first place, thus this is testing as a design activity. Specifically, working with the designers to understand the land you will be going through and the creatures that will be found there. There is also the notion of how these enemies, given their biology and size, will move and fight.</p>
+<p>Then there is actually seeing how it all works, which is the testing as an execution activity. You first test the basic combat mechanics, usually with a simple framed skeleton of the actor:</p>
+<p align="center">
+<img decoding="async" src="/files/ludo/combat-basic-mesh.jpg">
+</p>
+<p>Then the design team starts to put in wireframes that put in the bare sketch of the environment in which the ludic elements of combat takes place:</p>
+<p align="center">
+<img decoding="async" src="/files/ludo/eldenring-wireframe.jpg">
+</p>
+<p>Here you can see a mechanic of the player (lower) fighting some enemy (higher) and some damage being delivered to both as a result of an encounter. Eventually the designers implement the meshes and place the encounter in an actual context:</p>
+<p align="center">
+<img decoding="async" src="/files/ludo/eldenring-mesh-combat.jpg">
+</p>
+<h2>Presentation of Game Elements</h2>
+<p>Up to this point, I&#8217;ve looked at some areas above where <em>Elden Ring</em> shines. But let&#8217;s look at a few others where maybe the shine isn&#8217;t so bright.</p>
+<h3>Get Buffed</h3>
+<p>One of these areas is the idea of the &#8220;buff bar.&#8221; The general status indicators for the character (health, focus, and so on) can have a bunch of icons underneath them:</p>
+<p align="center">
+<img decoding="async" src="/files/ludo/eldenring-buffbar.jpg">
+</p>
+<p>What are those things? How would you, as a tester acting in the personae of a player, expect the player to find out that information? How will you check it for accuracy?</p>
+<p>Well, in terms of what those icons represent, don&#8217;t count on the game to tell you. It won&#8217;t.</p>
+<p>Now, to be sure, some of this comes from observation. You might put on some armor or wield some weapon that has an effect and that effect shows up like one of the icons above. But you have to notice that this happens and then you have to figure out what it means. What most players do is just go to the game&#8217;s wiki and hope the information is found there, case in point being the <a href="https://eldenring.wiki.fextralife.com/Status+Effects" target="_blank" rel="noopener">Status Effects</a> area.</p>
+<p>Needless to say, you could argue that this is very lazy design and potentially value threatening to many players. FromSoftware (the game developer), however, does not think so. They feel that this obtuseness around some of these ludic aspects is, in fact, what generates a collaborative community, such as the one that created the wiki pages. So this is a good example of where FromSoftware valued something a little differently than the testers.</p>
+<h3>Stats: Calculate or Trust?</h3>
+<p>A game like this is heavy on stats, which are reflected as numbers that reflect things like your strength, dexterity, intelligence and so on. This means players are often encouraged to figure out what stats matter and what don&#8217;t, particularly in terms of the weapons or armor they are using. This also means it&#8217;s crucial that they feel the stats are consistent so they build up an understanding.</p>
+<p>Let&#8217;s look at an example that came up during testing.</p>
+<p>For this example, note that any armor you can wear is segmented into head, chest, legs and arms. All of that armor, if you have it equipped, will provide some stats. So here&#8217;s what the equipment (armor) looks like for an Vagabond class with their fully equipped starting armor:</p>
+<p align="center">
+<img decoding="async" src="/files/ludo/all-armor-with-stats.jpg">
+</p>
+<p>A key part of your armor is the damage negation it does. Meaning if an enemy lays down the hurt on you, the damage negation part is how much of that damage you <em>don&#8217;t</em> suffer from. My damage negation when all of the above armor is equipped looks like this:</p>
+<p align="center">
+<img decoding="async" src="/files/ludo/total-stats.jpg">
+</p>
+<p>You can check the Damage Negation (Physical) for each bit of armor that you have equipped. For example, here&#8217;s the helm:</p>
+<p align="center">
+<img decoding="async" src="/files/ludo/vagabond-helm-full-stats.jpg">
+</p>
+<p>For all the armor equipped above, the total stats for Physical damage negation will be shown as this:</p>
+<pre>
+Helm:      4.6
+Armor:     13.5
+Gauntlets: 3.3
+Greaves:   7.4
+</pre>
+<p>Adding those up, you get: 28.8. Hmm. Do you see a problem there?</p>
+<p>Looking at the Defense/Dmg Negation visual above for <em>all</em> of my armor, I see Physical is given as &#8220;79 / 26.107&#8221;. But I&#8217;m getting 28.8. Hmm. Bug or just something I&#8217;m not considering? Well, the description for &#8220;Physical&#8221; in the game help text says:</p>
+<blockquote><p>
+<em>&#8220;Your defense power and damage negation against standard physical attacks. The former is calculated via attributes, while the latter is calculated via defensive gear and any additional effects.&#8221;</em>
+</p></blockquote>
+<p>So, as a player, perhaps I assume the &#8220;79&#8221; is the total it can be? And the &#8220;26.107&#8221; is what it currently is.</p>
+<p>It seems the dip from 28.8 to 26.107 (difference of 2.69) must be calculated based on &#8230; something. What you might not be sure of is what that &#8220;something&#8221; actually is.</p>
+<p>Likewise, Damage Negation (Strike) for each of the armor pieces is the following:</p>
+<pre>
+Helm:      3.6
+Armor:     11.4
+Gauntlets: 2.8
+Greaves:   5.8
+</pre>
+<p>Adding those up: 23.6. However, looking at the Defense/Dmg Negation in the above image, we see Strike is &#8220;79 / 21.796&#8221;. So maybe this stuff isn&#8217;t meant to be added up like that. Yet, contrast this with something like, say, Immunity. Here is my total:</p>
+<p align="center">
+<img decoding="async" src="/files/ludo/vagabond-resistances.jpg">
+</p>
+<p>For the Vagabond, all of my armor gives the following for Immunity:</p>
+<pre>
+Helm:      14
+Armor:     35
+Gauntlets: 12
+Greaves:   20
+</pre>
+<p>That equals 81 and, sure enough, that&#8217;s what I see: &#8220;173 / 81&#8221;.</p>
+<p>So it seems we&#8217;re missing some part of the calculation for the Physical damage as well as the so-called &#8220;VS&#8221; stats. Would you agree?</p>
+<p>In fact, are you even sure what the &#8220;VS&#8221; stands for? It&#8217;s interesting how many gamers actually play the game and don&#8217;t think to even question what that means.</p>
+<p>As a tester what can we do here? How do I get my data conditions into a state so that I can try things out and observe? Specifically, I have my stats that are the data conditions and I have the equipping or removal of armor to change the stat allocation for damage negation. Thus that&#8217;s my test condition.</p>
+<p>I remove all armor from my Vagabond and I get all damage negation down to 0.0.</p>
+<p align="center">
+<img decoding="async" src="/files/ludo/stats-when-naked.jpg">
+</p>
+<p>The 79 remains as the first number. So that 79 is the case even with wearing nothing. Thus it&#8217;s not the total possible, as we might have assumed. Rather, it has to do entirely with the <em>current</em> attributes of the player. That number can increase if the attributes change, but will not change at all based on equipped armor.</p>
+<p>So let&#8217;s apply a test condition of equipping our helm and see what happens. With just the helm on, the following is the case:</p>
+<p align="center">
+<img decoding="async" src="/files/ludo/stats-with-just-helm.jpg">
+</p>
+<p>Here that is in text to make it a little easier to parse:</p>
+<pre>
+79 / 4.600 (Physical)
+79 / 3.600 (VS Strike)
+79 / 4.200 (VS Slash)
+79 / 4.000 (VS Pierce)
+</pre>
+<p>And if you look at the helm (which is the starting Vagabond Knight Helm) you see, as shown earlier the following stats on it:</p>
+<pre>
+4.6 (Physical)
+3.6 (VS Strike)
+4.2 (VS Slash)
+4.0 (VS Pierce)
+</pre>
+<p>Here&#8217;s a visual just to make sure you see this from the game context:</p>
+<p align="center">
+<img decoding="async" src="/files/ludo/vagabond-helm-full-stats.jpg">
+</p>
+<p>Okay, so that all makes sense and is consistent. The numbers clearly add up.</p>
+<p>Now let&#8217;s add the default Vagabond Knight Gauntlets. So at this point my Vagabond will be just wearing the Helm and Gauntlets. The following is now the case for my damage negation stats:</p>
+<pre>
+79 / 7.748 (Physical)
+79 / 6.299 (VS Strike)
+79 / 7.170 (VS Slash)
+79 / 6.784 (VS Pierce)
+</pre>
+<p>And the stats for the Gauntlets are:</p>
+<pre>
+3.3 (Physical)
+2.8 (VS Strike)
+3.1 (VS Slash)
+2.9 (VS Pierce)
+</pre>
+<p>Okay, so if I add up the Helm + Gauntlet stats, the totals are:</p>
+<pre>
+7.89 = 4.6 + 3.3 (Physical)
+6.40 = 3.6 + 2.8 (VS Strike)
+7.30 = 4.2 + 3.1 (VS Slash)
+6.90 = 4.0 + 2.9 (VS Pierce)
+</pre>
+<p>So now it&#8217;s not really adding up correctly again.</p>
+<p>It&#8217;s not a massive difference, granted. Let&#8217;s add in the greaves (Vagabond Knight Greaves), I now have:</p>
+<pre>
+79 / 14.575 (Physical)
+79 / 11.734 (VS Strike)
+79 / 13.482 (VS Slash)
+79 / 12.843 (VS Pierce)
+</pre>
+<p>The stats for the Greaves are:</p>
+<p align="center">
+<img decoding="async" src="/files/ludo/stats-for-greaves.jpg">
+</p>
+<p>Once again, in text:</p>
+<pre>
+7.4 (Physical)
+5.8 (VS Strike)
+6.8 (VS Slash)
+6.5 (VS Pierce)
+</pre>
+<p>Okay, so let&#8217;s add all that up:</p>
+<pre>
+4.6 + 3.3 + 7.4 = 15.3 (Physical)
+3.6 + 2.8 + 5.8 = 12.2 (VS Strike)
+4.2 + 3.1 + 6.8 = 14.1 (VS Slash)
+4.0 + 2.9 + 6.5 = 13.4 (VS Pierce)
+</pre>
+<p>Putting on your tester hat, and based solely on the calculations above, what are you noticing?</p>
+<p>Clearly the more armor I add, the more the discrepancy grows. With just Helm and Gauntlets, the difference is just 0.14. Add on the Greaves and the difference jumps to 0.72. And if you were to add on the chest armor (Vagabond Knight Armor), your difference jumps to 2.6.</p>
+<p>Well, what&#8217;s the one thing that&#8217;s changing here? The armor I&#8217;m actually equipping, right? That was my test condition. And, wouldn&#8217;t you know it, the game does have the concept of an equip load.</p>
+<p>Here&#8217;s what my equip load is with no armor:</p>
+<p align="center">
+<img decoding="async" src="/files/ludo/equip-load-no-armor.jpg">
+</p>
+<p>And here it is with just the helm:</p>
+<p align="center">
+<img decoding="async" src="/files/ludo/equip-load-with-just-helm.jpg">
+</p>
+<p>And that number goes up the more armor I equip.</p>
+<p>So, as a tester, I&#8217;m wondering if thus equipment load has something to do with the discrepancy.</p>
+<p>But then this would suggest that the more armor I have on, my damage negation is getting lower than what it &#8220;should be,&#8221; at least based on an additive concept. And, as a tester (not to mention a player), I&#8217;m not sure that makes sense without more context.</p>
+<p>Incidentally, don&#8217;t count on that context: the game doesn&#8217;t supply it. It has to do with underlying calculations that are not exposed to the player.</p>
+<p>By the way, as a tester (or even as a player), has it become clearer what &#8220;VS&#8221; means?</p>
+<p>It means &#8220;versus&#8221; and thus the “VS” stats show you your defense and negation against (or versus) the different types of physical damage, since it can vary depending on the specific attack.</p>
+<p>What that list is showing you is that there are four different types of physical damage, which are standard, strike, slash, and pierce. Standard is the most common type and is the default value used when no other type is relevant. So the “VS” is &#8220;versus your standard defense.&#8221; As an example, your standard physical negation is 26.1% versus your strike physical negation of 21.7%.</p>
+<p>You could be forgiven for thinking this isn&#8217;t necessarily obvious. This is clearly a very ludic concern but this is another area where FromSoftware feels its best to leave some vagueness for the players to figure out.</p>
+<p>Let&#8217;s delve a bit more into where the narrative starts to intersect again.</p>
+<h2>Drip Feed of Lore</h2>
+<p>Players will read obscure text on items that have a small percentage of dropping from a given enemy or that drop from enemies they may never encounter.</p>
+<p align="center">
+<img decoding="async" src="/files/ludo/fingerprint-helm-elden-ring.jpg">
+</p>
+<p>Players will not really be presented with that information unless they (a) happen to get that item and (b) they happen to read it. Players quickly learn they have to read the descriptions of <em>all</em> items they pick up on the off chance that it might contain some nugget of information that relates to the wider lore and thus narrative of the game.</p>
+<p>Case in point, a character you come across, Kenneth Haight, is actually pretty interesting.</p>
+<p align="center">
+<img decoding="async" src="/files/ludo/kenneth-haight.jpg">
+</p>
+<p>He talks about a key person:</p>
+<blockquote><p>
+&#8220;Honestly, Godrick’s no more than a jumped up country bumpkin. Lord? Don’t make me laugh. First he hid himself amongst the womenfolk to flee the capital, then hid from Radahn in that castle… Then he insulted Malenia, lost to her in battle, only to lick her boots rather than die like a man. Has he no shame, the big girl’s blouse? And to think, he’s the blood of Godfrey! Last of the golden lineage, though you almost wouldn’t know it to look at him. I almost feel sorry for the chap the more I think of it.&#8221;
+</p></blockquote>
+<p>The problem is: he never repeats this line of dialogue. Granted, that would make sense as most people would not repeat something verbatim like that. But, in a game context, it means you have one chance to get that little bit of lore, at least from Kenneth&#8217;s perspective.</p>
+<p>Kenneth is one of the many characters that offers you the chance to undertake a quest. However, quests here aren’t an equal exchange necessarily. By which I mean you don’t always get a reward at the end. In fact, partaking in a quest, much less finishing it, doesn&#8217;t always result in any benefit for your own character or their situation. As another example, one character you encounter is Iron Fist Alexander.</p>
+<p align="center">
+<img decoding="async" src="/files/ludo/iron-fist-alexander-elden-ring.jpg">
+</p>
+<p>Yes, he <em>is</em> a giant talking pot.</p>
+<p>You actually meet him at various points in your questing and, on one of those points, he will offer to help you in a major fight. Yet nothing is really changed here because he shows up at that fight regardless. This is because the fight is particularly important to him, regardless of how much or how little the fight itself actually matters to your character and, thus, to you.</p>
+<p>As you&#8217;ve seen, just about everything in this game is about uncertainty, mostly around: will I survive the next encounter? That&#8217;s a very ludic aspect. That uncertainty carries over into quests and questlines and thus the ludic aspect translates to the narrative aspect.</p>
+<p>And, I should note, this is intentional design. As you play &#8212; in fact you&#8217;ll probably need multiple playthroughs to see this &#8212; You will find that the characters move along trajectories that you may or may not be entirely certain of. Sometimes those trajectories seem to change from playthrough to playthrough. Once dialogue options are played out, you might not hear from that character again. Is that by design or did you just not trigger the right set of circumstances in the right amount of time? The game will not tell you either way.</p>
+<p>But to FromSoftware this is reflecting a quality: specifically replayability. From a testing standpoint, it was crucial to understand that FromSoftware&#8217;s design team valued this quality over many others. Thus obtuse mechanics, hard to find lore, and questionable stats were seen to be lures to keep players coming back.</p>
+<h3>Purposely Opaque Design vs Just Being Opaque</h3>
+<p>This is a key quality barometer of the experience of the game that comes up for many players and this is shown no more so in the fact that many people who decided to play <em>Elden Ring</em> were not players of the previous <em>Dark Souls</em> games and thus were not necessarily already sold on these concepts. When you have a game like <em>Elden Ring</em> which, given its size, can easily consume one hundred hours on a single playthrough, the idea of replayability has to be considered a bit differently.</p>
+<p>This is something FromSoftware, at least in my opinion, simply didn&#8217;t take into account well enough.</p>
+<p>The problem here, of course, is the lack of clarity of intent. Players won’t know if a given NPC is important, or indeed essential, to completing the game. They won&#8217;t know if something they did or didn&#8217;t do has locked them out of a questline entirely. As with the stats and the buffs and the confusion therefrom, <em>Elden Ring</em>&#8216;s design team &#8220;solves&#8221; this problem by enabling a community. The idea is you are supposed to go look things up on the subreddit or watch some YouTube playthrough or through the community-driven wiki.</p>
+<p>That works &#8212; if all that information ends up being accurate. But, as many players will attest, there is a lot of completely false information out there about quest triggers and narrative progression.</p>
+<p>With that understood, is this good design, fostering a collaborative community? Or is it just a lazy style to writing quests? Either point of view can be true but I would argue <em>Elden Ring</em> does display a great deal of ludonarrative consistency and harmony here in terms of its questlines matching its style of presentation for everything else. Meaning, the way the game introduces and treats ludic aspects very much matches how it treats narrative aspects.</p>
+<p>For those who read the first post, you&#8217;ll remember that I brought up Renna the Witch and the complications thereof. The challenge here, not just with Renna but any NPC, is the logic of the game has been constructed such that certain plot points, or narrative beats, will only happen if you do certain things at certain times. This might involve, for example, resting at a particular site of grace point multiple times. Or happening upon an NPC before you get too far in the game.</p>
+<p>As a tester, what would be your suggestion for fixing this kind of problem?</p>
+<p>Clearly one thing you could do is make sure that any important (i.e., quest-giving) characters appear at multiple locations. In the case of Renna, having her appear at various points of grace could work. Or, alternatively, clue the player in a bit better as to how and when (and under what conditions) characters are available or where they are available. A gameplay that adapts to what the player is doing would have, again in my opinion, served the game much better here.</p>
+<h2>The Roleplay Aspect</h2>
+<p>A lot of players like to role play their characters in these games, particularly giving them backstories when the game itself doesn&#8217;t. This adds an extra level of immersion and it&#8217;s truly impressive what people will do in order to construct a persona out of the bits of lore they can manage to figure out.</p>
+<p>As a player of the game you will likely come to realize that your class or background is not playing any role in the narrative that plays out. But look at this cast of characters:</p>
+<p align="center">
+<img decoding="async" src="/files/ludo/eldenring-classes.jpg">
+</p>
+<p>Yet, whether you pick the entirely blind prophet, the wretch with the wardrobe malfunctions, or the oddly-placed Samurai &#8212; nothing really matters in terms of that choice and the narrative.</p>
+<p>Consider as just one point of reference the Confessor. These characters are said to be agents of the Church who serve something called the &#8220;Two Fingers&#8221;, which ends up being a crucial entity in the narrative. Yet, in playing a Confessor, it would certainly seem as if your character has never heard about the Two Fingers and is entirely oblivious to the context. To take another example, as the Prisoner class, you never find out what you actually did. You never find out who put you in prison. Which calls into question why it matters to have a character called the Prisoner.</p>
+<p>All of this is another good example of ludonarrative in gaming and how it does or doesn&#8217;t work. In the case of <em>Elden Ring</em>, the trick is that your character, regardless of class, is a descendant of Tarnished people who were banished from the land. You basically died at some point in that faraway place and have now been resurrected and brought back to the homeland of your ancestors. Ludically, as we&#8217;ve seen, the game builds in a reason for why you can keep dying. And perhaps it even gives you a reason as to why you would bother on what is clearly a multi-suicidal quest.</p>
+<p>What the game narrative doesn&#8217;t do is really suggest if your character remembers anything of their past life. Do they know what the Golden Order is? The Two Fingers? Grace? The Greater Will? These are all concepts that characters in the game talk to you as if you know.</p>
+<p>Putting on our testing hat, what could we do here? Clearly one area is finding all the bits of dialogue that clearly assume your character knows something that you, the player, does not.</p>
+<p>Equally clearly we could then encourage the design team to give the player character the ability to ask questions. These would be dialogue options, something like: &#8220;Two Fingers? Wait, what&#8217;s that?&#8221; This ability is already in the game. Witness this conversation between you and a character named Rodericka:</p>
+<p align="center">
+<img decoding="async" src="/files/ludo/eldenring-roderika.jpg">
+</p>
+<p>What this lack of narrative dialogue options does, of course, is make it largely impossible to effectively roleplay because you don&#8217;t even know what you don&#8217;t know. Any dialogue later might contradict what YOU as player think YOU as character remember. And you can&#8217;t ask the incredibly obvious questions that <em>anyone</em> in your character&#8217;s shoes would be asking. So narratively this game, like most FromSoftware games, is a bit of a narrative mess and roleplaying is a bit of an odd duck because you&#8217;re too constrained in what you can ask or learn about.</p>
+<p>Ludonarratively, you&#8217;re stuck with the old trope of amnesia. After all, you were dead and brought back to life. This may have led to some gaps in your memory of how your life was lived. So maybe your Confessor character that I mentioned above doesn&#8217;t really remember the Church or the Two Fingers at all, which would allow for dialogue options such as: &#8220;Two Fingers? Golden Order? I feel like I should know those terms but I don&#8217;t. What are they?&#8221; This would then allow information to be conveyed to the player.</p>
+<p>A worse element here is that being effectively a zombie with amnesia means that, realistically, your characters would have zero reason or motivation to necessarily embark on what is obviously a horrendously long and peril-filled quest to supposedly find bits of an &#8220;Elden Ring&#8221; (that you might not even remember) to become an &#8220;Elden Lord&#8221; (which might mean nothing to you). You, as player, of course have that motivation: you bought a game you want to play. But that&#8217;s not a motivation that translates to your in game character.</p>
+<p>In short, there&#8217;s a lot of lore and there&#8217;s some narrative but it&#8217;s disconnected from your player character because none of it really matters at all in your progression. Is that a quality problem? Well, that very much depends on the player.</p>
+<h2>The Ologies Matter in Testing</h2>
+<p>I mentioned in the previous post about ontologies. That comes up front and center here for a lot of the issues described above, particularly the narrative ones, because the developers had to decide what kind of game <em>Elden Ring</em> was going to be.</p>
+<p>The decision was that the game was going to take their normal, relatively linear <em>Souls</em>-style games and apply them in an open world. What this did, however, was make it very likely that players would not do things in a certain &#8220;planned&#8221; order. Certain encounters, expected to come very early in the game, may actually come quite a bit later depending on what the player decides to do or where they go to explore.</p>
+<p>As you can imagine, this was a big focus for testing on the game. You had to essentially follow some aspects of the game where it was clearly leading you to do certain things in a certain immediate order. But then you had to try out a whole bunch of exploration and see what the ramifications were for the quests and the narrative.</p>
+<p>What was found in that testing is that <em>Elden Ring</em> consistently undermines its own narrative and I think this is an example of FromSoftware finding their footing as their ontology changed: from a relatively linear, closed world to an open world. What they failed to consider was the epistemology (how players are learning the information) and the ontogeny (how the world might change based on the unpredictable nature of exploration). Those things had to change along with the ontology but that wasn&#8217;t what happened.</p>
+<p>All that said, while perhaps the narrative elements have been a bit undermined, the pure ludic elements have likely been very much reinforced in the experiment to take a <em>Soulds</em>-style game to the open world.</p>
+<h1>So where did we end up?</h1>
+<p>Well, I hope you see that game testing is a very rewarding aspect of the overall testing discipline. Perhaps ironically, testing games is actually not always a lot of fun. Setting up all of the various conditions of a game world can be very cumbersome and error prone. Trying every single possible attack stance with every possible piece of weapon and armor against every possible enemy is extremely challenging, to say the least. Further, this is a case where automation can only take you so far &#8212; and not very far at that.</p>
+<p>Between these posts, my post on <a href="/2021/06/testing-at-the-horizons-of-quality/"><em>Horizon: Zero Dawn</em></a>, and one of my posts on <a href="/2013/08/testing-games-is-hard/"><em>Star Wars: The Old Republic</em></a>, I hope I&#8217;ve at least contributed a bit to widening people&#8217;s perceptions of testing and how it plays a crucial role in one of the widest reaching entertainment mediums we have today.</p>
+<div class="addtoany_share_save_container addtoany_content addtoany_content_bottom"><div class="a2a_kit a2a_kit_size_16 addtoany_list" data-a2a-url="https://testerstories.com/2022/07/ludonarrative-testing-part-3/" data-a2a-title="Ludonarrative Testing, Part 3">
+<a class="a2a_button_facebook" href="https://www.addtoany.com/add_to/facebook?linkurl=%2F2022%2F07%2Fludonarrative-testing-part-3%2F&amp;linkname=Ludonarrative%20Testing%2C%20Part%203" title="Facebook" rel="nofollow noopener" target="_blank"></a><a class="a2a_button_twitter" href="https://www.addtoany.com/add_to/twitter?linkurl=%2F2022%2F07%2Fludonarrative-testing-part-3%2F&amp;linkname=Ludonarrative%20Testing%2C%20Part%203" title="Twitter" rel="nofollow noopener" target="_blank"></a><a class="a2a_button_linkedin" href="https://www.addtoany.com/add_to/linkedin?linkurl=%2F2022%2F07%2Fludonarrative-testing-part-3%2F&amp;linkname=Ludonarrative%20Testing%2C%20Part%203" title="LinkedIn" rel="nofollow noopener" target="_blank"></a><a class="a2a_button_print" href="https://www.addtoany.com/add_to/print?linkurl=%2F2022%2F07%2Fludonarrative-testing-part-3%2F&amp;linkname=Ludonarrative%20Testing%2C%20Part%203" title="Print" rel="nofollow noopener" target="_blank"></a><a class="a2a_dd addtoany_share_save addtoany_share" href="https://www.addtoany.com/share"><img src="https://static.addtoany.com/buttons/favicon.png" alt="Share"></a>
+</div></div>      
+	</div>
+<!-- .entry-content -->
+	<footer class="entry-footer">       
+		<p class="written-by">This article was written by <a href="/author/administrator/">Jeff Nyman</a></p>
+<div class="author-bio">
+		
+	<h3><a href="/author/administrator/" rel="author">About  Jeff Nyman</a></h3>		
+	<img alt="" src="https://secure.gravatar.com/avatar/a3b6c2d0b2bafdb9ad9cdf782873204d?s=72&#038;d=mm&#038;r=pg" srcset="https://secure.gravatar.com/avatar/a3b6c2d0b2bafdb9ad9cdf782873204d?s=144&#038;d=mm&#038;r=pg 2x" class="avatar avatar-72 photo" height="72" width="72" decoding="async"><p class="author-description">Anything I put here is an approximation of the truth. You're getting a particular view of myself ... and it's the view I'm choosing to present to you. If you've never met me before in person, please realize I'm not the same in person as I am in writing. That's because I can only put part of myself down into words.
+
+If you have met me before in person then I'd ask you to consider that the view you've formed that way and the view you come to by reading what I say here may, in fact, both be true. I'd advise that you not automatically discard either viewpoint when they conflict or accept either as truth when they agree.</p>		
+</div>
+<!-- .author-bio -->
+	</footer><!-- .entry-footer -->
+
+	<nav class="navigation post-navigation" aria-label="Posts">
+		<h2 class="screen-reader-text">Post navigation</h2>
+		<div class="nav-links">
+<div class="nav-previous"><a href="/2022/06/ludonarrative-testing-part-2/" rel="prev"><span class="genericon genericon-previous" aria-hidden="true"></span> <span class="screen-reader-text">Previous post:</span> <span class="post-title">Ludonarrative Testing, Part 2</span></a></div>
+<div class="nav-next"><a href="/2022/10/testers-we-need-a-narrative/" rel="next"><span class="post-title">Testers, We Need a Narrative</span><span class="screen-reader-text">Next post:</span> <span class="genericon genericon-next" aria-hidden="true"></span> </a></div>
+</div>
+	</nav>
+<div id="comments" class="comments-area">
+
+
+		<div id="respond" class="comment-respond">
+		<h3 id="reply-title" class="comment-reply-title">Leave a Reply <small><a rel="nofollow" id="cancel-comment-reply-link" href="/2022/07/ludonarrative-testing-part-3/#respond" style="display:none;">Cancel reply</a></small>
+</h3>
+<form action="https://testerstories.com/wp-comments-post.php" method="post" id="commentform" class="comment-form" novalidate>
+<p class="comment-notes"><span id="email-notes">Your email address will not be published.</span> <span class="required-field-message">Required fields are marked <span class="required">*</span></span></p>
+<p class="comment-form-comment"><label for="comment">Comment <span class="required">*</span></label> <textarea id="comment" name="comment" cols="45" rows="8" maxlength="65525" required></textarea></p>
+<p class="comment-form-author"><label for="author">Name <span class="required">*</span></label> <input id="author" name="author" type="text" value="" size="30" maxlength="245" autocomplete="name" required></p>
+<p class="comment-form-email"><label for="email">Email <span class="required">*</span></label> <input id="email" name="email" type="email" value="" size="30" maxlength="100" aria-describedby="email-notes" autocomplete="email" required></p>
+<p class="comment-form-url"><label for="url">Website</label> <input id="url" name="url" type="url" value="" size="30" maxlength="200" autocomplete="url"></p>
+<p class="form-submit"><input name="submit" type="submit" id="submit" class="submit" value="Post Comment"> <input type="hidden" name="comment_post_ID" value="4326" id="comment_post_ID">
+<input type="hidden" name="comment_parent" id="comment_parent" value="0">
+</p>
+<p style="display: none;"><input type="hidden" id="akismet_comment_nonce" name="akismet_comment_nonce" value="f30f753982"></p>
+<p style="display: none !important;"><label>&#916;<textarea name="ak_hp_textarea" cols="45" rows="8" maxlength="100"></textarea></label><input type="hidden" id="ak_js_1" name="ak_js" value="156"><script>document.getElementById( "ak_js_1" ).setAttribute( "value", ( new Date() ).getTime() );</script></p>
+</form>	</div>
+<!-- #respond -->
+	<p class="akismet_comment_form_privacy_notice">This site uses Akismet to reduce spam. <a href="https://akismet.com/privacy/" target="_blank" rel="nofollow noopener">Learn how your comment data is processed</a>.</p>
+</div>
+<!-- #comments -->
+</article><!-- #post-## -->
+</main><!--/main-content-->
+	<aside id="sidebar-widget-area" class="sidebar-widget-area" role="complementary">
+		<a class="screen-reader-text skip-link" href="#page-footer">Skip to footer</a>
+
+		<section id="sidebar" class="widget-area sidebar">
+			<div id="text-6" class="widget widget_text">			<div class="textwidget">
+<p><a href="https://www.linkedin.com/pub/jeff-nyman/12/b32/16a"><br>
+<img decoding="async" src="https://static.licdn.com/scds/common/u/img/webpromo/btn_myprofile_160x33.png" alt="View Jeff Nyman's profile on LinkedIn" width="160" height="33" border="0"></a></p>
+</div>
+		</div>
+<div id="categories-5" class="widget widget_categories">
+<h2 class="widget-title">Topics</h2>
+			<ul>
+					<li class="cat-item cat-item-58">
+<a href="/category/agile/">Agile</a> (2)
+</li>
+	<li class="cat-item cat-item-49">
+<a href="/category/ai/">AI</a> (24)
+<ul class="children">
+	<li class="cat-item cat-item-50">
+<a href="/category/ai/machine-learning/">Machine Learning</a> (12)
+	<ul class="children">
+	<li class="cat-item cat-item-55">
+<a href="/category/ai/machine-learning/ml-series-1/">ML Series 1</a> (2)
+</li>
+	<li class="cat-item cat-item-56">
+<a href="/category/ai/machine-learning/ml-series-2/">ML Series 2</a> (4)
+</li>
+	<li class="cat-item cat-item-57">
+<a href="/category/ai/machine-learning/ml-series-3/">ML Series 3</a> (6)
+</li>
+	</ul>
+</li>
+</ul>
+</li>
+	<li class="cat-item cat-item-11">
+<a href="/category/automation/">Automation</a> (68)
+<ul class="children">
+	<li class="cat-item cat-item-41">
+<a href="/category/automation/c/">C#</a> (2)
+</li>
+	<li class="cat-item cat-item-8">
+<a href="/category/automation/capybara/">Capybara</a> (11)
+</li>
+	<li class="cat-item cat-item-9">
+<a href="/category/automation/cucumber/">Cucumber</a> (10)
+</li>
+	<li class="cat-item cat-item-31">
+<a href="/category/automation/cucumber-jvm/">Cucumber-JVM</a> (6)
+</li>
+	<li class="cat-item cat-item-42">
+<a href="/category/automation/groovy/">Groovy</a> (1)
+</li>
+	<li class="cat-item cat-item-40">
+<a href="/category/automation/java/">Java</a> (9)
+</li>
+	<li class="cat-item cat-item-10">
+<a href="/category/automation/qtp/">QTP</a> (6)
+</li>
+	<li class="cat-item cat-item-5">
+<a href="/category/automation/rspec/">RSpec</a> (4)
+</li>
+	<li class="cat-item cat-item-7">
+<a href="/category/automation/selenium/">Selenium</a> (17)
+</li>
+	<li class="cat-item cat-item-39">
+<a href="/category/automation/serenity/">Serenity</a> (8)
+</li>
+	<li class="cat-item cat-item-30">
+<a href="/category/automation/symbiont/">Symbiont</a> (11)
+</li>
+	<li class="cat-item cat-item-51">
+<a href="/category/automation/tapestry/">Tapestry</a> (6)
+</li>
+	<li class="cat-item cat-item-6">
+<a href="/category/automation/watir/">Watir</a> (4)
+</li>
+</ul>
+</li>
+	<li class="cat-item cat-item-13">
+<a href="/category/bdd/">BDD</a> (24)
+<ul class="children">
+	<li class="cat-item cat-item-23">
+<a href="/category/bdd/tdl/">TDL</a> (17)
+</li>
+</ul>
+</li>
+	<li class="cat-item cat-item-25">
+<a href="/category/career/">Career</a> (33)
+<ul class="children">
+	<li class="cat-item cat-item-53">
+<a href="/category/career/interview/">Interview</a> (10)
+</li>
+</ul>
+</li>
+	<li class="cat-item cat-item-15">
+<a href="/category/communication/">Communication</a> (16)
+</li>
+	<li class="cat-item cat-item-65">
+<a href="/category/crime-scene/">Crime Scene</a> (4)
+</li>
+	<li class="cat-item cat-item-52">
+<a href="/category/data-science/">Data Science</a> (4)
+</li>
+	<li class="cat-item cat-item-61">
+<a href="/category/development/">Development</a> (39)
+<ul class="children">
+	<li class="cat-item cat-item-36">
+<a href="/category/development/chef/">Chef</a> (2)
+</li>
+	<li class="cat-item cat-item-32">
+<a href="/category/development/inform-7/">Inform 7</a> (3)
+</li>
+	<li class="cat-item cat-item-38">
+<a href="/category/development/javascript-test-solutions/">JavaScript</a> (6)
+</li>
+	<li class="cat-item cat-item-19">
+<a href="/category/development/language-building/">Language Building</a> (9)
+	<ul class="children">
+	<li class="cat-item cat-item-20">
+<a href="/category/development/language-building/rex-and-racc/">Rex and Racc</a> (3)
+</li>
+	</ul>
+</li>
+	<li class="cat-item cat-item-48">
+<a href="/category/development/python/">Python</a> (4)
+</li>
+	<li class="cat-item cat-item-29">
+<a href="/category/development/rails/">Rails</a> (4)
+</li>
+	<li class="cat-item cat-item-21">
+<a href="/category/development/web-development/">Web Development</a> (11)
+	<ul class="children">
+	<li class="cat-item cat-item-34">
+<a href="/category/development/web-development/node-js/">Node.js</a> (5)
+</li>
+	<li class="cat-item cat-item-22">
+<a href="/category/development/web-development/sinatra/">Sinatra</a> (6)
+</li>
+	</ul>
+</li>
+</ul>
+</li>
+	<li class="cat-item cat-item-28">
+<a href="/category/dialect/">Dialect</a> (6)
+</li>
+	<li class="cat-item cat-item-45">
+<a href="/category/exploration/">Exploration</a> (14)
+<ul class="children">
+	<li class="cat-item cat-item-46">
+<a href="/category/exploration/interactive/">Interactive</a> (6)
+</li>
+</ul>
+</li>
+	<li class="cat-item cat-item-44">
+<a href="/category/indefinito/">Indefinito</a> (11)
+</li>
+	<li class="cat-item cat-item-17">
+<a href="/category/learning/">Learning</a> (11)
+</li>
+	<li class="cat-item cat-item-24">
+<a href="/category/lucid/">Lucid</a> (11)
+</li>
+	<li class="cat-item cat-item-62">
+<a href="/category/product-development/">Product Development</a> (7)
+</li>
+	<li class="cat-item cat-item-64">
+<a href="/category/product-management/">Product Management</a> (3)
+</li>
+	<li class="cat-item cat-item-3">
+<a href="/category/quality/">Quality</a> (7)
+</li>
+	<li class="cat-item cat-item-14">
+<a href="/category/quality-assurance/">Quality Assurance</a> (5)
+</li>
+	<li class="cat-item cat-item-35">
+<a href="/category/specify/">Specify</a> (2)
+</li>
+	<li class="cat-item cat-item-16">
+<a href="/category/symbiont-pg/">Symbiont-PG</a> (4)
+</li>
+	<li class="cat-item cat-item-27">
+<a href="/category/test-solutions/">Test Solutions</a> (11)
+</li>
+	<li class="cat-item cat-item-4">
+<a href="/category/testing/">Testing</a> (167)
+<ul class="children">
+	<li class="cat-item cat-item-59">
+<a href="/category/testing/contracts/">Contracts</a> (2)
+</li>
+	<li class="cat-item cat-item-63">
+<a href="/category/testing/epistemology/">Epistemology</a> (1)
+</li>
+	<li class="cat-item cat-item-67">
+<a href="/category/testing/games/">Games</a> (8)
+</li>
+	<li class="cat-item cat-item-68">
+<a href="/category/testing/history-and-science/">History and Science</a> (5)
+</li>
+	<li class="cat-item cat-item-43">
+<a href="/category/testing/modern-testing/">Modern Testing</a> (15)
+</li>
+	<li class="cat-item cat-item-54">
+<a href="/category/testing/testability/">Testability</a> (9)
+</li>
+</ul>
+</li>
+	<li class="cat-item cat-item-12">
+<a href="/category/thinking/">Thinking</a> (22)
+</li>
+	<li class="cat-item cat-item-47">
+<a href="/category/what-if/">What If</a> (1)
+</li>
+	<li class="cat-item cat-item-69">
+<a href="/category/zmachine/">Z-Machine</a> (7)
+</li>
+			</ul>
+
+			</div>
+<div id="archives-5" class="widget widget_archive">
+<h2 class="widget-title">Archives</h2>		<label class="screen-reader-text" for="archives-dropdown-5">Archives</label>
+		<select id="archives-dropdown-5" name="archive-dropdown">
+			
+			<option value="">Select Month</option>
+				<option value="https://testerstories.com/2023/06/"> June 2023 </option>
+	<option value="https://testerstories.com/2023/05/"> May 2023 </option>
+	<option value="https://testerstories.com/2023/04/"> April 2023 </option>
+	<option value="https://testerstories.com/2023/03/"> March 2023 </option>
+	<option value="https://testerstories.com/2023/02/"> February 2023 </option>
+	<option value="https://testerstories.com/2023/01/"> January 2023 </option>
+	<option value="https://testerstories.com/2022/12/"> December 2022 </option>
+	<option value="https://testerstories.com/2022/11/"> November 2022 </option>
+	<option value="https://testerstories.com/2022/10/"> October 2022 </option>
+	<option value="https://testerstories.com/2022/07/"> July 2022 </option>
+	<option value="https://testerstories.com/2022/06/"> June 2022 </option>
+	<option value="https://testerstories.com/2022/05/"> May 2022 </option>
+	<option value="https://testerstories.com/2022/03/"> March 2022 </option>
+	<option value="https://testerstories.com/2022/02/"> February 2022 </option>
+	<option value="https://testerstories.com/2022/01/"> January 2022 </option>
+	<option value="https://testerstories.com/2021/12/"> December 2021 </option>
+	<option value="https://testerstories.com/2021/10/"> October 2021 </option>
+	<option value="https://testerstories.com/2021/08/"> August 2021 </option>
+	<option value="https://testerstories.com/2021/07/"> July 2021 </option>
+	<option value="https://testerstories.com/2021/06/"> June 2021 </option>
+	<option value="https://testerstories.com/2021/05/"> May 2021 </option>
+	<option value="https://testerstories.com/2021/04/"> April 2021 </option>
+	<option value="https://testerstories.com/2021/03/"> March 2021 </option>
+	<option value="https://testerstories.com/2021/02/"> February 2021 </option>
+	<option value="https://testerstories.com/2021/01/"> January 2021 </option>
+	<option value="https://testerstories.com/2020/11/"> November 2020 </option>
+	<option value="https://testerstories.com/2020/10/"> October 2020 </option>
+	<option value="https://testerstories.com/2020/09/"> September 2020 </option>
+	<option value="https://testerstories.com/2020/07/"> July 2020 </option>
+	<option value="https://testerstories.com/2020/06/"> June 2020 </option>
+	<option value="https://testerstories.com/2020/05/"> May 2020 </option>
+	<option value="https://testerstories.com/2020/02/"> February 2020 </option>
+	<option value="https://testerstories.com/2020/01/"> January 2020 </option>
+	<option value="https://testerstories.com/2019/12/"> December 2019 </option>
+	<option value="https://testerstories.com/2019/11/"> November 2019 </option>
+	<option value="https://testerstories.com/2019/10/"> October 2019 </option>
+	<option value="https://testerstories.com/2019/09/"> September 2019 </option>
+	<option value="https://testerstories.com/2019/08/"> August 2019 </option>
+	<option value="https://testerstories.com/2019/07/"> July 2019 </option>
+	<option value="https://testerstories.com/2019/06/"> June 2019 </option>
+	<option value="https://testerstories.com/2019/05/"> May 2019 </option>
+	<option value="https://testerstories.com/2019/04/"> April 2019 </option>
+	<option value="https://testerstories.com/2019/03/"> March 2019 </option>
+	<option value="https://testerstories.com/2019/02/"> February 2019 </option>
+	<option value="https://testerstories.com/2019/01/"> January 2019 </option>
+	<option value="https://testerstories.com/2018/12/"> December 2018 </option>
+	<option value="https://testerstories.com/2018/11/"> November 2018 </option>
+	<option value="https://testerstories.com/2018/10/"> October 2018 </option>
+	<option value="https://testerstories.com/2018/09/"> September 2018 </option>
+	<option value="https://testerstories.com/2018/08/"> August 2018 </option>
+	<option value="https://testerstories.com/2018/07/"> July 2018 </option>
+	<option value="https://testerstories.com/2018/06/"> June 2018 </option>
+	<option value="https://testerstories.com/2018/05/"> May 2018 </option>
+	<option value="https://testerstories.com/2018/04/"> April 2018 </option>
+	<option value="https://testerstories.com/2018/03/"> March 2018 </option>
+	<option value="https://testerstories.com/2018/02/"> February 2018 </option>
+	<option value="https://testerstories.com/2018/01/"> January 2018 </option>
+	<option value="https://testerstories.com/2017/12/"> December 2017 </option>
+	<option value="https://testerstories.com/2017/11/"> November 2017 </option>
+	<option value="https://testerstories.com/2017/10/"> October 2017 </option>
+	<option value="https://testerstories.com/2017/09/"> September 2017 </option>
+	<option value="https://testerstories.com/2017/08/"> August 2017 </option>
+	<option value="https://testerstories.com/2017/07/"> July 2017 </option>
+	<option value="https://testerstories.com/2017/06/"> June 2017 </option>
+	<option value="https://testerstories.com/2017/05/"> May 2017 </option>
+	<option value="https://testerstories.com/2017/04/"> April 2017 </option>
+	<option value="https://testerstories.com/2017/03/"> March 2017 </option>
+	<option value="https://testerstories.com/2017/02/"> February 2017 </option>
+	<option value="https://testerstories.com/2017/01/"> January 2017 </option>
+	<option value="https://testerstories.com/2016/12/"> December 2016 </option>
+	<option value="https://testerstories.com/2016/11/"> November 2016 </option>
+	<option value="https://testerstories.com/2016/10/"> October 2016 </option>
+	<option value="https://testerstories.com/2016/09/"> September 2016 </option>
+	<option value="https://testerstories.com/2016/08/"> August 2016 </option>
+	<option value="https://testerstories.com/2016/07/"> July 2016 </option>
+	<option value="https://testerstories.com/2016/06/"> June 2016 </option>
+	<option value="https://testerstories.com/2016/04/"> April 2016 </option>
+	<option value="https://testerstories.com/2016/03/"> March 2016 </option>
+	<option value="https://testerstories.com/2016/02/"> February 2016 </option>
+	<option value="https://testerstories.com/2016/01/"> January 2016 </option>
+	<option value="https://testerstories.com/2015/12/"> December 2015 </option>
+	<option value="https://testerstories.com/2015/11/"> November 2015 </option>
+	<option value="https://testerstories.com/2015/10/"> October 2015 </option>
+	<option value="https://testerstories.com/2015/09/"> September 2015 </option>
+	<option value="https://testerstories.com/2015/08/"> August 2015 </option>
+	<option value="https://testerstories.com/2015/07/"> July 2015 </option>
+	<option value="https://testerstories.com/2015/06/"> June 2015 </option>
+	<option value="https://testerstories.com/2015/05/"> May 2015 </option>
+	<option value="https://testerstories.com/2015/04/"> April 2015 </option>
+	<option value="https://testerstories.com/2015/03/"> March 2015 </option>
+	<option value="https://testerstories.com/2015/02/"> February 2015 </option>
+	<option value="https://testerstories.com/2014/12/"> December 2014 </option>
+	<option value="https://testerstories.com/2014/11/"> November 2014 </option>
+	<option value="https://testerstories.com/2014/10/"> October 2014 </option>
+	<option value="https://testerstories.com/2014/09/"> September 2014 </option>
+	<option value="https://testerstories.com/2014/08/"> August 2014 </option>
+	<option value="https://testerstories.com/2014/07/"> July 2014 </option>
+	<option value="https://testerstories.com/2014/06/"> June 2014 </option>
+	<option value="https://testerstories.com/2014/05/"> May 2014 </option>
+	<option value="https://testerstories.com/2014/04/"> April 2014 </option>
+	<option value="https://testerstories.com/2014/03/"> March 2014 </option>
+	<option value="https://testerstories.com/2014/01/"> January 2014 </option>
+	<option value="https://testerstories.com/2013/12/"> December 2013 </option>
+	<option value="https://testerstories.com/2013/09/"> September 2013 </option>
+	<option value="https://testerstories.com/2013/08/"> August 2013 </option>
+	<option value="https://testerstories.com/2013/07/"> July 2013 </option>
+	<option value="https://testerstories.com/2013/06/"> June 2013 </option>
+	<option value="https://testerstories.com/2013/05/"> May 2013 </option>
+	<option value="https://testerstories.com/2013/03/"> March 2013 </option>
+	<option value="https://testerstories.com/2013/01/"> January 2013 </option>
+	<option value="https://testerstories.com/2012/12/"> December 2012 </option>
+	<option value="https://testerstories.com/2012/10/"> October 2012 </option>
+	<option value="https://testerstories.com/2012/09/"> September 2012 </option>
+	<option value="https://testerstories.com/2012/08/"> August 2012 </option>
+	<option value="https://testerstories.com/2012/07/"> July 2012 </option>
+	<option value="https://testerstories.com/2012/06/"> June 2012 </option>
+	<option value="https://testerstories.com/2012/05/"> May 2012 </option>
+	<option value="https://testerstories.com/2012/04/"> April 2012 </option>
+	<option value="https://testerstories.com/2012/03/"> March 2012 </option>
+	<option value="https://testerstories.com/2012/02/"> February 2012 </option>
+	<option value="https://testerstories.com/2012/01/"> January 2012 </option>
+	<option value="https://testerstories.com/2011/12/"> December 2011 </option>
+	<option value="https://testerstories.com/2011/11/"> November 2011 </option>
+	<option value="https://testerstories.com/2011/10/"> October 2011 </option>
+	<option value="https://testerstories.com/2011/09/"> September 2011 </option>
+	<option value="https://testerstories.com/2011/08/"> August 2011 </option>
+
+		</select>
+
+<script type="text/javascript">
+/* <![CDATA[ */
+(function() {
+	var dropdown = document.getElementById( "archives-dropdown-5" );
+	function onSelectChange() {
+		if ( dropdown.options[ dropdown.selectedIndex ].value !== '' ) {
+			document.location.href = this.options[ this.selectedIndex ].value;
+		}
+	}
+	dropdown.onchange = onSelectChange;
+})();
+/* ]]> */
+</script>
+			</div>
+<div id="meta-5" class="widget widget_meta">
+<h2 class="widget-title">Site</h2>
+		<ul>
+						<li><a href="/wp-login.php">Log in</a></li>
+			<li><a href="/feed/">Entries feed</a></li>
+			<li><a href="/comments/feed/">Comments feed</a></li>
+
+			<li><a href="https://wordpress.org/">WordPress.org</a></li>
+		</ul>
+
+		</div>
+<div id="text-4" class="widget widget_text">			<div class="textwidget"><a href="https://www.linkedin.com/pub/jeff-nyman/12/b32/16a">
+          <img src="https://static.licdn.com/scds/common/u/img/webpromo/btn_myprofile_160x33.png" width="160" height="33" border="0" alt="View Jeff Nyman's profile on LinkedIn"></a></div>
+		</div>
+<div id="search-3" class="widget widget_search">
+<form role="search" method="get" class="search-form" action="https://testerstories.com/">
+	<label>
+		<span class="screen-reader-text">Search for:</span>
+		<input type="search" class="search-field" placeholder="Search &hellip;" value="" name="s" title="Search for:">
+	</label>
+	<button type="submit" class="search-submit"><span class="genericon genericon-search" aria-hidden="true"></span><span class="screen-reader-text">Search</span></button>
+</form>
+</div>		</section><!-- #sidebar .widget-area -->
+
+	</aside>
+
+  
+
+<footer id="page-footer" role="contentinfo">
+	<div id="site-info" class="site-info">
+		<span class="footer-site-title"><a href="/" rel="home">Stories from a Software Tester</a></span>
+		<a href="https://wordpress.org/">Proudly powered by WordPress</a>
+	</div>
+<!--/site-info-->
+</footer> <!--/footer-->
+</div>
+<!-- #container -->
+            
+            <style type="text/css" class="darkmysite_inline_css">#darkmysite_switch_1771364252 {
+        --darkmysite_switch_apple_width_height: 60px;
+        --darkmysite_switch_apple_border_radius: 7px;
+        --darkmysite_switch_apple_icon_width: 30px;
+        --darkmysite_switch_apple_light_mode_bg: #121116;
+        --darkmysite_switch_apple_dark_mode_bg: #ffffff;
+        --darkmysite_switch_apple_light_mode_icon_color: #ffffff;
+        --darkmysite_switch_apple_dark_mode_icon_color: #121116;
+        }
+
+    #darkmysite_switch_1771364252 {
+        --darkmysite_switch_margin_from_top: 40px;
+        --darkmysite_switch_margin_from_bottom: 40px;
+        --darkmysite_switch_margin_from_left: 40px;
+        --darkmysite_switch_margin_from_right: 40px;
+        }</style>
+
+
+
+
+    <div id="darkmysite_switch_1771364252" class="darkmysite_switch  darkmysite_bottom_right   darkmysite_switch_apple" onclick="darkmysite_switch_trigger()">
+        <span class="darkmysite_switch_icon"></span>
+            </div>
+
+            
+    <script type="text/javascript" class="darkmysite_inline_js">document.addEventListener("DOMContentLoaded", function(event) {
+            darkmysite_init_alternative_dark_mode_switch();
+        });</script>
+
+
+<script type="text/javascript" id="acuarela-script-js-extra">
+/* <![CDATA[ */
+var acuarelaScreenReaderText = {"expand":"expand child menu","collapse":"collapse child menu"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="/wp-content/themes/acuarela/js/functions.js?ver=20190802" id="acuarela-script-js"></script>
+<script type="text/javascript" src="/wp-includes/js/comment-reply.min.js?ver=6.2.2" id="comment-reply-js"></script>
+<script defer type="text/javascript" src="/wp-content/plugins/akismet/_inc/akismet-frontend.js?ver=1680871091" id="akismet-frontend-js"></script>
+</body>
+</html>
