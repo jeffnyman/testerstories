@@ -1,0 +1,1341 @@
+<!DOCTYPE html>
+<html lang="en-US">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="profile" href="http://gmpg.org/xfn/11">
+				<link rel="pingback" href="/xmlrpc.php">
+				<title>The Emic and Etic in Testing &#8211; Stories from a Software Tester</title>
+<meta name="robots" content="max-image-preview:large">
+ <style type="text/css" class="darkmysite_inline_css">:root { --darkmysite_dark_mode_bg: #0f0f0f; --darkmysite_dark_mode_secondary_bg: #171717; --darkmysite_dark_mode_text_color: #bebebe; --darkmysite_dark_mode_link_color: #ffffff; --darkmysite_dark_mode_link_hover_color: #cccccc; --darkmysite_dark_mode_input_bg: #2d2d2d; --darkmysite_dark_mode_input_text_color: #bebebe; --darkmysite_dark_mode_input_placeholder_color: #989898; --darkmysite_dark_mode_border_color: #4a4a4a; --darkmysite_dark_mode_btn_bg: #2d2d2d; --darkmysite_dark_mode_btn_text_color: #bebebe; }</style> <style type="text/css" class="darkmysite_inline_css">.darkmysite_dark_mode_enabled::-webkit-scrollbar { background: #29292a !important; } .darkmysite_dark_mode_enabled::-webkit-scrollbar-track { background: #29292a !important; } .darkmysite_dark_mode_enabled::-webkit-scrollbar-thumb { background-color: #52565a !important; } .darkmysite_dark_mode_enabled::-webkit-scrollbar-corner { background-color: #52565a !important; } .darkmysite_dark_mode_enabled::-webkit-scrollbar-button { background-color: transparent !important; background-repeat: no-repeat !important; background-size: contain !important; background-position: center !important; } .darkmysite_dark_mode_enabled::-webkit-scrollbar-button:start { background-image: url(/wp-content/plugins/darkmysite/assets/img/others/scroll_arrow_up.svg) !important; } .darkmysite_dark_mode_enabled::-webkit-scrollbar-button:end { background-image: url(/wp-content/plugins/darkmysite/assets/img/others/scroll_arrow_down.svg) !important; } .darkmysite_dark_mode_enabled::-webkit-scrollbar-button:start:horizontal { background-image: url(/wp-content/plugins/darkmysite/assets/img/others/scroll_arrow_left.svg) !important; } .darkmysite_dark_mode_enabled::-webkit-scrollbar-button:end:horizontal { background-image: url(/wp-content/plugins/darkmysite/assets/img/others/scroll_arrow_right.svg) !important; }</style> <script type="text/javascript" class="darkmysite_inline_js">var darkmysite_switch_unique_id = "352893142"; var darkmysite_is_this_admin_panel = "0"; var darkmysite_enable_default_dark_mode = "0"; var darkmysite_enable_os_aware = "1"; var darkmysite_enable_keyboard_shortcut = "1"; var darkmysite_enable_time_based_dark = "0"; var darkmysite_time_based_dark_start = "19:00"; var darkmysite_time_based_dark_stop = "07:00"; var darkmysite_alternative_dark_mode_switch = ""; var darkmysite_enable_low_image_brightness = "1"; var darkmysite_image_brightness_to = "80"; var darkmysite_enable_image_grayscale = "0"; var darkmysite_image_grayscale_to = "80"; var darkmysite_enable_bg_image_darken = "1"; var darkmysite_bg_image_darken_to = "60"; var darkmysite_enable_invert_inline_svg = "0"; var darkmysite_enable_low_video_brightness = "1"; var darkmysite_video_brightness_to = "80"; var darkmysite_enable_video_grayscale = "0"; var darkmysite_video_grayscale_to = "80"; var darkmysite_disallowed_elements = ".darkmysite_ignore, .darkmysite_ignore *, .darkmysite_switch, .darkmysite_switch *, .wp-block-button__link, .wp-block-button__link *";</script><link rel="dns-prefetch" href="//static.addtoany.com">
+<link rel="dns-prefetch" href="//fonts.googleapis.com">
+<link rel="alternate" type="application/rss+xml" title="Stories from a Software Tester &raquo; Feed" href="/feed/">
+<link rel="alternate" type="application/rss+xml" title="Stories from a Software Tester &raquo; Comments Feed" href="/comments/feed/">
+<link rel="alternate" type="application/rss+xml" title="Stories from a Software Tester &raquo; The Emic and Etic in Testing Comments Feed" href="/2023/01/the-emic-and-etic-in-testing/feed/">
+<script type="text/javascript">
+window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/14.0.0\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/14.0.0\/svg\/","svgExt":".svg","source":{"concatemoji":"\/wp-includes\/js\/wp-emoji-release.min.js?ver=6.2.2"}};
+/*! This file is auto-generated */
+!function(e,a,t){var n,r,o,i=a.createElement("canvas"),p=i.getContext&&i.getContext("2d");function s(e,t){p.clearRect(0,0,i.width,i.height),p.fillText(e,0,0);e=i.toDataURL();return p.clearRect(0,0,i.width,i.height),p.fillText(t,0,0),e===i.toDataURL()}function c(e){var t=a.createElement("script");t.src=e,t.defer=t.type="text/javascript",a.getElementsByTagName("head")[0].appendChild(t)}for(o=Array("flag","emoji"),t.supports={everything:!0,everythingExceptFlag:!0},r=0;r<o.length;r++)t.supports[o[r]]=function(e){if(p&&p.fillText)switch(p.textBaseline="top",p.font="600 32px Arial",e){case"flag":return s("🏳️‍⚧️","🏳️​⚧️")?!1:!s("🇺🇳","🇺​🇳")&&!s("🏴󠁧󠁢󠁥󠁮󠁧󠁿","🏴​󠁧​󠁢​󠁥​󠁮​󠁧​󠁿");case"emoji":return!s("🫱🏻‍🫲🏿","🫱🏻​🫲🏿")}return!1}(o[r]),t.supports.everything=t.supports.everything&&t.supports[o[r]],"flag"!==o[r]&&(t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&t.supports[o[r]]);t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&!t.supports.flag,t.DOMReady=!1,t.readyCallback=function(){t.DOMReady=!0},t.supports.everything||(n=function(){t.readyCallback()},a.addEventListener?(a.addEventListener("DOMContentLoaded",n,!1),e.addEventListener("load",n,!1)):(e.attachEvent("onload",n),a.attachEvent("onreadystatechange",function(){"complete"===a.readyState&&t.readyCallback()})),(e=t.source||{}).concatemoji?c(e.concatemoji):e.wpemoji&&e.twemoji&&(c(e.twemoji),c(e.wpemoji)))}(window,document,window._wpemojiSettings);
+</script>
+<style type="text/css">img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 0.07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}</style>
+	<link rel="stylesheet" id="urvanov_syntax_highlighter-css" href="/wp-content/plugins/urvanov-syntax-highlighter/css/min/urvanov_syntax_highlighter.min.css?ver=2.8.33" type="text/css" media="all">
+<link rel="stylesheet" id="wp-block-library-css" href="/wp-includes/css/dist/block-library/style.min.css?ver=6.2.2" type="text/css" media="all">
+<style id="wp-block-library-theme-inline-css" type="text/css">.wp-block-audio figcaption{color:#555;font-size:13px;text-align:center}.is-dark-theme .wp-block-audio figcaption{color:hsla(0,0%,100%,.65)}.wp-block-audio{margin:0 0 1em}.wp-block-code{border:1px solid #ccc;border-radius:4px;font-family:Menlo,Consolas,monaco,monospace;padding:.8em 1em}.wp-block-embed figcaption{color:#555;font-size:13px;text-align:center}.is-dark-theme .wp-block-embed figcaption{color:hsla(0,0%,100%,.65)}.wp-block-embed{margin:0 0 1em}.blocks-gallery-caption{color:#555;font-size:13px;text-align:center}.is-dark-theme .blocks-gallery-caption{color:hsla(0,0%,100%,.65)}.wp-block-image figcaption{color:#555;font-size:13px;text-align:center}.is-dark-theme .wp-block-image figcaption{color:hsla(0,0%,100%,.65)}.wp-block-image{margin:0 0 1em}.wp-block-pullquote{border-bottom:4px solid;border-top:4px solid;color:currentColor;margin-bottom:1.75em}.wp-block-pullquote cite,.wp-block-pullquote footer,.wp-block-pullquote__citation{color:currentColor;font-size:.8125em;font-style:normal;text-transform:uppercase}.wp-block-quote{border-left:.25em solid;margin:0 0 1.75em;padding-left:1em}.wp-block-quote cite,.wp-block-quote footer{color:currentColor;font-size:.8125em;font-style:normal;position:relative}.wp-block-quote.has-text-align-right{border-left:none;border-right:.25em solid;padding-left:0;padding-right:1em}.wp-block-quote.has-text-align-center{border:none;padding-left:0}.wp-block-quote.is-large,.wp-block-quote.is-style-large,.wp-block-quote.is-style-plain{border:none}.wp-block-search .wp-block-search__label{font-weight:700}.wp-block-search__button{border:1px solid #ccc;padding:.375em .625em}:where(.wp-block-group.has-background){padding:1.25em 2.375em}.wp-block-separator.has-css-opacity{opacity:.4}.wp-block-separator{border:none;border-bottom:2px solid;margin-left:auto;margin-right:auto}.wp-block-separator.has-alpha-channel-opacity{opacity:1}.wp-block-separator:not(.is-style-wide):not(.is-style-dots){width:100px}.wp-block-separator.has-background:not(.is-style-dots){border-bottom:none;height:1px}.wp-block-separator.has-background:not(.is-style-wide):not(.is-style-dots){height:2px}.wp-block-table{margin:0 0 1em}.wp-block-table td,.wp-block-table th{word-break:normal}.wp-block-table figcaption{color:#555;font-size:13px;text-align:center}.is-dark-theme .wp-block-table figcaption{color:hsla(0,0%,100%,.65)}.wp-block-video figcaption{color:#555;font-size:13px;text-align:center}.is-dark-theme .wp-block-video figcaption{color:hsla(0,0%,100%,.65)}.wp-block-video{margin:0 0 1em}.wp-block-template-part.has-background{margin-bottom:0;margin-top:0;padding:1.25em 2.375em}</style>
+<link rel="stylesheet" id="classic-theme-styles-css" href="/wp-includes/css/classic-themes.min.css?ver=6.2.2" type="text/css" media="all">
+<style id="global-styles-inline-css" type="text/css">body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgba(6,147,227,1) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgba(252,185,0,1) 0%,rgba(255,105,0,1) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgba(255,105,0,1) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--duotone--dark-grayscale: url('#wp-duotone-dark-grayscale');--wp--preset--duotone--grayscale: url('#wp-duotone-grayscale');--wp--preset--duotone--purple-yellow: url('#wp-duotone-purple-yellow');--wp--preset--duotone--blue-red: url('#wp-duotone-blue-red');--wp--preset--duotone--midnight: url('#wp-duotone-midnight');--wp--preset--duotone--magenta-yellow: url('#wp-duotone-magenta-yellow');--wp--preset--duotone--purple-green: url('#wp-duotone-purple-green');--wp--preset--duotone--blue-orange: url('#wp-duotone-blue-orange');--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;--wp--preset--spacing--20: 0.44rem;--wp--preset--spacing--30: 0.67rem;--wp--preset--spacing--40: 1rem;--wp--preset--spacing--50: 1.5rem;--wp--preset--spacing--60: 2.25rem;--wp--preset--spacing--70: 3.38rem;--wp--preset--spacing--80: 5.06rem;--wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);--wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);--wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);--wp--preset--shadow--outlined: 6px 6px 0px -3px rgba(255, 255, 255, 1), 6px 6px rgba(0, 0, 0, 1);--wp--preset--shadow--crisp: 6px 6px 0px rgba(0, 0, 0, 1);}:where(.is-layout-flex){gap: 0.5em;}body .is-layout-flow > .alignleft{float: left;margin-inline-start: 0;margin-inline-end: 2em;}body .is-layout-flow > .alignright{float: right;margin-inline-start: 2em;margin-inline-end: 0;}body .is-layout-flow > .aligncenter{margin-left: auto !important;margin-right: auto !important;}body .is-layout-constrained > .alignleft{float: left;margin-inline-start: 0;margin-inline-end: 2em;}body .is-layout-constrained > .alignright{float: right;margin-inline-start: 2em;margin-inline-end: 0;}body .is-layout-constrained > .aligncenter{margin-left: auto !important;margin-right: auto !important;}body .is-layout-constrained > :where(:not(.alignleft):not(.alignright):not(.alignfull)){max-width: var(--wp--style--global--content-size);margin-left: auto !important;margin-right: auto !important;}body .is-layout-constrained > .alignwide{max-width: var(--wp--style--global--wide-size);}body .is-layout-flex{display: flex;}body .is-layout-flex{flex-wrap: wrap;align-items: center;}body .is-layout-flex > *{margin: 0;}:where(.wp-block-columns.is-layout-flex){gap: 2em;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
+.wp-block-navigation a:where(:not(.wp-element-button)){color: inherit;}
+:where(.wp-block-columns.is-layout-flex){gap: 2em;}
+.wp-block-pullquote{font-size: 1.5em;line-height: 1.6;}</style>
+<link rel="stylesheet" id="darkmysite-client-main-css" href="/wp-content/plugins/darkmysite/assets/css/client_main.css?ver=1.2.6" type="text/css" media="all">
+<link rel="stylesheet" id="plyr-css-css" href="/wp-content/plugins/easy-video-player/lib/plyr.css?ver=6.2.2" type="text/css" media="all">
+<link rel="stylesheet" id="acuarela-fonts-css" href="https://fonts.googleapis.com/css?family=Lato%3A300italic%2C400italic%2C700italic%2C300%2C400%2C700%7CArima+Madurai%3A700%2C800%7CInconsolata%3A400%2C700&#038;subset=latin%2Clatin-ext&#038;ver=20190802" type="text/css" media="all">
+<link rel="stylesheet" id="genericons-css" href="/wp-content/themes/acuarela/genericons/genericons.css?ver=3.4.1" type="text/css" media="all">
+<link rel="stylesheet" id="animate-css" href="/wp-content/themes/acuarela/css/animate.css?ver=3.7.2" type="text/css" media="all">
+<link rel="stylesheet" id="acuarela-style-css" href="/wp-content/themes/acuarela/style.css?ver=6.2.2" type="text/css" media="all">
+<link rel="stylesheet" id="addtoany-css" href="/wp-content/plugins/add-to-any/addtoany.min.css?ver=1.16" type="text/css" media="all">
+<script type="text/javascript" src="/wp-includes/js/jquery/jquery.min.js?ver=3.6.4" id="jquery-core-js"></script>
+<script type="text/javascript" src="/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.4.0" id="jquery-migrate-js"></script>
+<script type="text/javascript" id="urvanov_syntax_highlighter_js-js-extra">
+/* <![CDATA[ */
+var UrvanovSyntaxHighlighterSyntaxSettings = {"version":"2.8.33","is_admin":"0","ajaxurl":"\/wp-admin\/admin-ajax.php","prefix":"urvanov-syntax-highlighter-","setting":"urvanov-syntax-highlighter-setting","selected":"urvanov-syntax-highlighter-setting-selected","changed":"urvanov-syntax-highlighter-setting-changed","special":"urvanov-syntax-highlighter-setting-special","orig_value":"data-orig-value","debug":""};
+var UrvanovSyntaxHighlighterSyntaxStrings = {"copy":"Copied to the clipboard","minimize":"Click To Expand Code"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="/wp-content/plugins/urvanov-syntax-highlighter/js/min/urvanov_syntax_highlighter.min.js?ver=2.8.33" id="urvanov_syntax_highlighter_js-js"></script>
+<script type="text/javascript" id="addtoany-core-js-before">window.a2a_config=window.a2a_config||{};a2a_config.callbacks=[];a2a_config.overlays=[];a2a_config.templates={};</script>
+<script type="text/javascript" async src="https://static.addtoany.com/menu/page.js" id="addtoany-core-js"></script>
+<script type="text/javascript" async src="/wp-content/plugins/add-to-any/addtoany.min.js?ver=1.1" id="addtoany-jquery-js"></script>
+<script type="text/javascript" src="/wp-content/plugins/darkmysite/assets/js/client_main.js?ver=1.2.6" id="darkmysite-client-main-js"></script>
+<script type="text/javascript" id="plyr-js-js-extra">
+/* <![CDATA[ */
+var easy_video_player = {"plyr_iconUrl":"\/wp-content\/plugins\/easy-video-player\/lib\/plyr.svg","plyr_blankVideo":"\/wp-content\/plugins\/easy-video-player\/lib\/blank.mp4"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="/wp-content/plugins/easy-video-player/lib/plyr.js?ver=6.2.2" id="plyr-js-js"></script>
+<link rel="https://api.w.org/" href="/wp-json/">
+<link rel="alternate" type="application/json" href="/wp-json/wp/v2/posts/4568">
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="/xmlrpc.php?rsd">
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="/wp-includes/wlwmanifest.xml">
+<meta name="generator" content="WordPress 6.2.2">
+<link rel="canonical" href="/2023/01/the-emic-and-etic-in-testing/">
+<link rel="shortlink" href="/?p=4568">
+<link rel="alternate" type="application/json+oembed" href="/wp-json/oembed/1.0/embed?url=https%3A%2F%2F%2F2023%2F01%2Fthe-emic-and-etic-in-testing%2F">
+<link rel="alternate" type="text/xml+oembed" href="/wp-json/oembed/1.0/embed?url=https%3A%2F%2F%2F2023%2F01%2Fthe-emic-and-etic-in-testing%2F#038;format=xml">
+<link type="text/css" rel="stylesheet" href="/wp-content/plugins/category-specific-rss-feed-menu/wp_cat_rss_style.css">
+<!--Custom Styling-->
+<style media="screen" type="text/css">.site-description { color: #222222}
+.site-title, .entry-title, .post-title, .widget-title, .posts-navigation .nav-links { font-family: Arima Madurai}
+ body { font-family: Lato}</style>
+	<style id="acuarela-header-css" type="text/css"></style>
+<style type="text/css" id="custom-background-css">body.custom-background { background-image: url("/wp-content/uploads/2020/10/low_contrast_linen.png"); background-position: left top; background-size: cover; background-repeat: no-repeat; background-attachment: fixed; }</style>
+			<style type="text/css" id="wp-custom-css">@font-face {
+  font-family: "Open Sans";
+  font-weight: 400;
+  font-style: normal;
+  src: local("Open Sans Regular"), local("OpenSans-Regular"), url("/fonts/OpenSans-Regular.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Open Sans Bold";
+  font-weight: 700;
+  font-style: normal;
+  src: local("Open Sans Bold"), local("OpenSans-Bold"), url("/fonts/OpenSans-Bold.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Open Sans Italic";
+  font-weight: 400;
+  font-style: normal;
+  src: local("Open Sans Italic"), local("OpenSans-Italic"), url("/fonts/OpenSans-Italic.woff") format("woff");
+}
+
+:root{
+	--primary: #01408e;
+	--secondary: #3c5d5c;
+	--initialLine: #ad2271;
+	--drop: #903;
+	--paraIndent: 1.25em;
+	--note: #4d5b7c;
+	--bq-color: #555555;
+	--bq-back: #ededed;
+	--sans: "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+	--mono: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
+    "Courier New", monospace;
+}
+/* For the top menu bar. */
+.site-navigation a {
+	padding: 0.9em 1.5em;
+}
+
+:where(html, body) {
+	overscroll-behavior-y: none;
+	cursor: url("/cursors/default.cur"), auto;
+}
+
+:where(p, h1, h2, h3, h4, h5, h6, blockquote, figcaption) {
+	cursor: url("/cursors/text-select.cur"), auto;
+}
+
+:where(ul, ol) {
+	margin: 1em 1em;
+	text-align: justify;
+	text-justify: inter-word;
+	cursor: url("/cursors/text-select.cur"), auto;
+}
+
+:where(aside, article) a {
+	cursor: url("/cursors/link-select.cur"), auto;
+}
+
+select, button, input,
+.wp-element-button,
+.darkmysite_switch,
+.site-title,
+.site-description {
+	cursor: url("/cursors/link-select.cur"), auto;
+}
+
+::selection {
+  color: #fff;
+  background: rgba(0, 0, 0, 0.99);
+}
+
+main,
+header {
+	font-size: 1rem;
+}
+
+main {
+	/*From here: https://fluidtypography.com/#app-get-started*/
+	/* Settings: 414-1280; 16-20; 1.6-1.3*/
+	font-size: clamp(1rem, 0.462vw + 0.88rem, 1.25rem);
+line-height: clamp(1.6rem, 0.046vw + 1.588rem, 1.625rem);
+}
+
+article {
+	font-family: var(--sans);
+	line-height: 1.6;
+  word-spacing: 0.16em;
+}
+
+h1:not(.site-title) {
+  font-size: 2.5em;
+  margin: 0.67em 0;
+  text-align: center;
+}
+
+:where(h1, h2, h3, h4) {
+	text-rendering: optimizeLegibility;
+	line-height: 1.4em;
+}
+
+article :where(h2, h3) {
+	margin-bottom: 0.7em;
+}
+
+p {
+	font-size: 1.2em;
+	text-align: justify;
+	text-justify: inter-word;
+}
+
+p:first-of-type:first-line {
+	color: var(--initialLine);
+}
+
+li {
+  margin-bottom: 0.5em;
+}
+
+/* This makes sure the first line of blockquotes are not colored since in Wordpress, a blockquote content has a paragraph tag applied to it. */
+:where(blockquote, footer, .comments-area) p:first-of-type:first-line {
+	color: inherit;
+}
+:where(p, blockquote, img, pre, ul, ol) + p:not(.note) {
+  text-indent: var(--paraIndent);
+}
+section > h3 + p::first-letter,
+section > h2 + p::first-letter,
+div.entry-content > p:not(.nostyle):first-child::first-letter {
+	color: var(--drop);
+  border-left: 2px solid var(--drop);
+  border-top: 2px solid var(--drop);
+  float: left;
+  font-family: Georgia;
+  font-size: 65px;
+  line-height: 60px;
+  padding-top: 4px;
+  padding-right: 12px;
+  padding-left: 3px;
+}
+
+:where(aside, article) a {
+	color: var(--primary);
+	text-underline-position: under;
+	text-decoration: underline 2px;
+	transition: all 0.3s linear;
+  background: linear-gradient(to right, #00d1b1 0%, #278fc6 98%);
+  background-size: 0px 2px;
+  background-repeat: no-repeat;
+  background-position: left 10%;
+  text-shadow: 0;
+}
+
+article a:hover {
+  background-size: 100% 2px;
+  color: var(--secondary);
+}
+
+article a:focus {
+  color: var(--secondary);
+}
+
+/* Handling external links to show an icon after them, but excluding links that are part of the TesterStories site. */
+
+a[href*="http"]::after,
+a[href*="https"]::after {
+  content: "";
+  width: 16px;
+  height: 16px;
+  margin-left: 4px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='currentColor' viewBox='0 0 16 16'%3E%3Cpath fill-rule='evenodd' d='M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5z'/%3E%3Cpath fill-rule='evenodd' d='M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0v-5z'/%3E%3C/svg%3E");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  display: inline-block;
+}
+
+a[href^="https://www.linkedin.com/"]::after {
+  content: none;
+}
+
+a[href^="https://testerstories.com/"]::after {
+  display: none !important;
+}
+
+img.framed {
+  --b: 10px;
+  margin: 0 auto;
+  padding: var(--b);
+  border: calc(2 * var(--b)) solid #0000;
+  border-radius: 25px;
+  outline: 1px solid #000;
+  outline-offset: calc(-1 * var(--b));
+  background: conic-gradient(from 90deg at 1px 1px, #0000 90deg, #000 0);
+}
+
+img.backframed {
+  margin: 0 auto;
+  border: 3px solid black;
+  box-shadow: -50px -50px 0 -40px #555555, 50px 50px 0 -40px #555555;
+}
+
+.note {
+  border: 1px solid rgb(107, 113, 177);
+  color: var(--note);
+  border-radius: 16px;
+  padding: 0.5em 0.8em;
+  margin: 1.9em;
+}
+
+.post {
+	background-color: white;
+}
+
+.entry-content li {
+	font-size: 1.2em;
+}
+
+.simplequote {
+	background: #fff url(/2023/01/the-emic-and-etic-in-testing/images/box_quote.png) no-repeat;
+	padding: 5px;
+	margin-top: 20px; margin-bottom: 20px;
+	margin-left: 50px; margin-right: 50px;
+	border: 3px solid #cecece;
+	text-indent: 25px;
+}
+
+p.example {
+	padding: 1ex;
+	margin-right: 50px; margin-left: 50px;
+	border: .5ex solid #808080;
+	color: #000000;
+	line-height: 1.2;
+	text-indent: 0em;
+}
+
+#headquote blockquote {
+	text-align: left;
+	margin: 0 auto 20px auto;
+	color: #555;
+	background: #eee url(/2023/01/the-emic-and-etic-in-testing/images/quote_top.gif) no-repeat top left;
+}
+
+#headquote blockquote {
+	width: 370px;
+	font-size: 110%;
+	letter-spacing: -1px;
+	line-height: 1.2em;
+}
+
+#headquote #quote {
+	margin-left: 40px;
+	padding: 20px 20px 10px 20px;
+	background: url(/2023/01/the-emic-and-etic-in-testing/images/quote_bottom.gif) no-repeat right bottom;
+}
+
+#headquote #author {
+	margin: 0;
+	text-align: center;
+	padding: 0 0 10px 0;
+	color: #999;
+	font-size: 95%;
+}
+
+#headquote blockquote strong {
+	color: #000;
+	font-weight: normal;
+}
+
+/* Center images. */
+
+img {
+	display: block;
+  margin: 0 auto;
+}
+
+img.smaller {
+  width: 200px;
+}
+
+img.even-smaller {
+  width: 100px;
+}
+
+table td.code {
+  font-family: "Courier New", courier, monospace;
+  font-size: 11.5px;
+}
+
+p.box {
+	font-family: Georgia, "Times New Roman", Times, serif;
+	text-align: justify;
+	padding-top: 25px;
+	margin: 0;
+	line-height: 1.2;
+}
+
+pre.box {
+	white-space: pre-wrap;
+	background-color: white;
+	border: 1px solid;
+}
+
+p.tip {
+	padding-bottom: 10px; padding-top: 10px;
+	padding-right: 10px; padding-left: 10px;
+	border: 1px solid;
+}
+
+div.aside {
+	padding-bottom: 10px; padding-top: 10px;
+	padding-right: 10px; padding-left: 10px;
+	margin-right: 50px; margin-left: 50px;
+	border: 1px dotted;
+}
+
+div.aside pre {
+	white-space: pre-wrap;
+}
+
+pre.view {
+	font-family: "Courier New", Courier, monospace;
+        //font-size: 16px;
+	padding-bottom: 10px; padding-top: 10px;
+	padding-right: 10px; padding-left: 10px;
+	white-space: pre-wrap;
+	background: rgb(255,255,255); /* Old browsers */
+	background: -moz-linear-gradient(top,  rgba(255,255,255,1) 0%, rgba(229,229,229,1) 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,1)), color-stop(100%,rgba(229,229,229,1))); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(229,229,229,1) 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(229,229,229,1) 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(229,229,229,1) 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  rgba(255,255,255,1) 0%,rgba(229,229,229,1) 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#e5e5e5',GradientType=0 ); /* IE6-9 */
+	border: 1px solid;
+	text-align: justify;
+}
+
+pre.view .string {
+	color: #3366CC;
+}
+
+pre.view .sub {
+        color: #8333FF;
+}
+
+pre.view .comment {
+	color: #009900;
+}
+
+pre.view .highlight {
+	background-color: #FFFF00;
+	border: 1px solid;
+	border-style: dotted;
+}
+
+pre.output .highlight {
+	background-color: rgb(255,255,255);
+	color: red;
+	border: 1px solid;
+	border-style: dotted;
+}
+
+pre.output {
+	font-family: "Courier New", Courier, monospace;
+        //font-size: 16px;
+	padding-bottom: 10px; padding-top: 10px;
+	padding-right: 10px; padding-left: 10px;
+	white-space: pre-wrap;
+	background: black;
+	color: white;
+}
+
+blockquote {
+  position: relative;
+  width: 80%;
+  margin: 50px auto;
+  padding: 1.2em 30px 1.2em 55px;
+  color: var(--bq-color);
+  background-color: var(--bq-back);
+  border-left: 8px solid #78c0a8;
+  text-align: justify;
+}
+
+blockquote::before {
+  position: absolute;
+	left: 5px;
+	top: -10px;
+	/* Line height needed here to avoid the quote appearing out of place due to calculated line heights for the article. */
+	line-height: 1.6;
+	content: "\201C";
+	color: #78c0a8;
+	font-size: 4em;
+}
+
+blockquote::after {
+	content: "";
+}
+
+blockquote span {
+	display: block;
+	color: #333333;
+	font-style: normal;
+  font-weight: bold;
+  margin-top: 1em;
+}
+
+img.frame {
+  --b: 10px;
+  padding: var(--b);
+  border: calc(2 * var(--b)) solid #0000;
+  outline: 1px solid #000;
+  outline-offset: calc(-1 * var(--b));
+  border-radius: 25px;
+  background: conic-gradient(from 90deg at 1px 1px, #0000 90deg, #000 0);
+  display: block;
+  margin: auto;
+  margin-bottom: 1rem;
+}
+
+code {
+  font-size: 0.9em;
+  padding: 0.0625rem 0.5rem;
+  border-radius: 0.125rem;
+  border: 1px solid #d33a2c;
+  box-shadow: 1px 1px #d33a2c, 2px 2px #d33a2c;
+  margin: 0 0.25rem;
+  color: #d33a2c;
+  font-family: monospace;
+}
+
+pre {
+  font-family: var(--mono);
+  max-width: 100%;
+	padding: 0;
+}
+
+pre code {
+  word-spacing: normal;
+  letter-spacing: normal;
+  font-family: var(--mono);
+  padding-left: 10px;
+  color: #e9e9f4;
+  background: #282936;
+  display: block;
+  max-width: 100%;
+  overflow-x: scroll;
+  /*font-size: 0.8em;*/
+
+  border: 1px solid #282936;
+  border-radius: 10px;
+  box-shadow: 1px 1px #282936, 2px 2px #282936;
+}
+
+pre code::-webkit-scrollbar {
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+pre code::-webkit-scrollbar:vertical {
+  width: 11px;
+}
+
+pre code::-webkit-scrollbar:horizontal {
+  height: 11px;
+}
+
+pre code::-webkit-scrollbar-thumb {
+  border-radius: 8px;
+  border: 2px solid white;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+/* The div part is only needed for long-form content that is pre-formatted. */
+
+pre code div {
+	line-height: 1.5em;
+}
+
+/* This would be for prefromatted material that is not literally from a game or simulation but is meant to indicate something about the details of the game or simulation. */
+
+pre p {
+  border: 2px solid grey;
+  border-radius: 5px;
+  padding: 0.8em;
+	padding-top: 0;
+	margin: 0;
+}</style>
+			</head>
+	<body class="post-template-default single single-post postid-4568 single-format-standard custom-background wp-embed-responsive custom-background-image">
+		<svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-dark-grayscale"><fecolormatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></fecolormatrix><fecomponenttransfer color-interpolation-filters="sRGB"><fefuncr type="table" tablevalues="0 0.49803921568627"></fefuncr><fefuncg type="table" tablevalues="0 0.49803921568627"></fefuncg><fefuncb type="table" tablevalues="0 0.49803921568627"></fefuncb><fefunca type="table" tablevalues="1 1"></fefunca></fecomponenttransfer><fecomposite in2="SourceGraphic" operator="in"></fecomposite></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-grayscale"><fecolormatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></fecolormatrix><fecomponenttransfer color-interpolation-filters="sRGB"><fefuncr type="table" tablevalues="0 1"></fefuncr><fefuncg type="table" tablevalues="0 1"></fefuncg><fefuncb type="table" tablevalues="0 1"></fefuncb><fefunca type="table" tablevalues="1 1"></fefunca></fecomponenttransfer><fecomposite in2="SourceGraphic" operator="in"></fecomposite></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-purple-yellow"><fecolormatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></fecolormatrix><fecomponenttransfer color-interpolation-filters="sRGB"><fefuncr type="table" tablevalues="0.54901960784314 0.98823529411765"></fefuncr><fefuncg type="table" tablevalues="0 1"></fefuncg><fefuncb type="table" tablevalues="0.71764705882353 0.25490196078431"></fefuncb><fefunca type="table" tablevalues="1 1"></fefunca></fecomponenttransfer><fecomposite in2="SourceGraphic" operator="in"></fecomposite></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-blue-red"><fecolormatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></fecolormatrix><fecomponenttransfer color-interpolation-filters="sRGB"><fefuncr type="table" tablevalues="0 1"></fefuncr><fefuncg type="table" tablevalues="0 0.27843137254902"></fefuncg><fefuncb type="table" tablevalues="0.5921568627451 0.27843137254902"></fefuncb><fefunca type="table" tablevalues="1 1"></fefunca></fecomponenttransfer><fecomposite in2="SourceGraphic" operator="in"></fecomposite></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-midnight"><fecolormatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></fecolormatrix><fecomponenttransfer color-interpolation-filters="sRGB"><fefuncr type="table" tablevalues="0 0"></fefuncr><fefuncg type="table" tablevalues="0 0.64705882352941"></fefuncg><fefuncb type="table" tablevalues="0 1"></fefuncb><fefunca type="table" tablevalues="1 1"></fefunca></fecomponenttransfer><fecomposite in2="SourceGraphic" operator="in"></fecomposite></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-magenta-yellow"><fecolormatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></fecolormatrix><fecomponenttransfer color-interpolation-filters="sRGB"><fefuncr type="table" tablevalues="0.78039215686275 1"></fefuncr><fefuncg type="table" tablevalues="0 0.94901960784314"></fefuncg><fefuncb type="table" tablevalues="0.35294117647059 0.47058823529412"></fefuncb><fefunca type="table" tablevalues="1 1"></fefunca></fecomponenttransfer><fecomposite in2="SourceGraphic" operator="in"></fecomposite></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-purple-green"><fecolormatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></fecolormatrix><fecomponenttransfer color-interpolation-filters="sRGB"><fefuncr type="table" tablevalues="0.65098039215686 0.40392156862745"></fefuncr><fefuncg type="table" tablevalues="0 1"></fefuncg><fefuncb type="table" tablevalues="0.44705882352941 0.4"></fefuncb><fefunca type="table" tablevalues="1 1"></fefunca></fecomponenttransfer><fecomposite in2="SourceGraphic" operator="in"></fecomposite></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-blue-orange"><fecolormatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></fecolormatrix><fecomponenttransfer color-interpolation-filters="sRGB"><fefuncr type="table" tablevalues="0.098039215686275 1"></fefuncr><fefuncg type="table" tablevalues="0 0.66274509803922"></fefuncg><fefuncb type="table" tablevalues="0.84705882352941 0.41960784313725"></fefuncb><fefunca type="table" tablevalues="1 1"></fefunca></fecomponenttransfer><fecomposite in2="SourceGraphic" operator="in"></fecomposite></filter></defs></svg>		<div id="container" class="site container">
+	<header id="masthead" class="site-header animated fadeInDown" role="banner">
+
+	<a class="screen-reader-text skip-link" href="#main-content">Skip to content</a>
+	<a class="screen-reader-text skip-link" href="#sidebar-widget-area">Skip to sidebar</a>
+	<a class="screen-reader-text skip-link" href="#page-footer">Skip to footer</a>
+	<div id="site-identity" class="site-identity">
+		<a href="/" class="home-link animated fadeIn" title="Stories from a Software Tester" rel="home">
+			<div class="title-description">
+				<h1 class="site-title">Stories from a Software Tester</h1>
+				<h2 class="site-description">Twice upon a time, in another space, no distance in any direction from here &#8230;</h2>
+			</div>
+		</a> 
+
+	</div>
+<!--/site-identity-->
+
+	<nav id="nav-menu" class="site-navigation main-navigation" role="navigation" aria-label="Main Navigation">
+		<button id="nav-button" class="menu-toggle" role="button">
+			<span class="screen-reader-text">Menu</span>
+			<span class="genericon" aria-hidden="true"></span>
+		</button>
+		<ul id="primary-menu" class="primary-menu">
+<li id="menu-item-3923" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-3923"><a href="/">Home</a></li>
+<li id="menu-item-2051" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2051"><a href="/about-tester-stories/">About Tester Stories</a></li>
+<li id="menu-item-2050" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2050"><a href="/who-am-i/">Who Am I</a></li>
+<li id="menu-item-2048" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2048"><a href="/just-for-fun/">Just For Fun</a></li>
+</ul>	</nav><!--/navigation-->
+
+
+<form role="search" method="get" class="search-form" action="https://testerstories.com/">
+	<label>
+		<span class="screen-reader-text">Search for:</span>
+		<input type="search" class="search-field" placeholder="Search &hellip;" value="" name="s" title="Search for:">
+	</label>
+	<button type="submit" class="search-submit"><span class="genericon genericon-search" aria-hidden="true"></span><span class="screen-reader-text">Search</span></button>
+</form>
+</header><!--/header-->
+
+<main id="main-content" class="main-content" role="main">
+<article id="post-4568" class="post-4568 post type-post status-publish format-standard hentry category-communication category-testing">
+<header class="entry-header">
+	<span class="entry-meta"><span class="cat-links"><span class="screen-reader-text">Published in</span><span class="genericon genericon-category" aria-hidden="true"></span><a href="/category/communication/" rel="category tag">Communication</a><span aria-hidden="true">, </span><a href="/category/testing/" rel="category tag">Testing</a></span></span><h1 class="entry-title">The Emic and Etic in Testing</h1>	<span class="byline">
+	Written by <a href="/author/administrator/" class="entry-author" rel="author">Jeff Nyman</a>	</span><!-- .byline -->
+	<span class="entry-meta">
+	<span class="genericon genericon-time" aria-hidden="true"></span><a href="/2023/01/12/" rel="bookmark" class="entry-date"><time datetime="2023-01-12T09:37:47-06:00">12 January 2023</time></a>		<span class="comments-link">
+			<span class="genericon genericon-comment" aria-hidden="true"></span>
+			<a href="/2023/01/the-emic-and-etic-in-testing/#respond">Leave a comment</a>		</span>
+		</span><!-- .entry-meta -->
+</header><!-- .entry-header -->
+
+	<div class="entry-content">
+		<p>There&#8217;s an interesting cultural effect happening within the broader testing community. I&#8217;ve written about this before, where my thesis, if such it can be called, has been that a broad swath of testers are using ill-formed arguments and counter-productive narratives in an attempt to shift the thinking of an industry that they perceive devalues testers above all else. This has led to a needlessly combative approach to many discussions. In this post I want to approach this through a couple of parallel lenses: that of game studies, linguistics, and anthropology. That will lead us to insider (emic) and outsider (etic) polarities. It&#8217;s those polarities that I believe many testers are not adequately shifting between.</p>
+<p><span id="more-4568"></span></p>
+<p align="center">
+<img decoding="async" style="border-radius: 50%; border: 1px solid black;" src="/files/emic-etic-reality.png">
+</p>
+<p>A couple of prefatory remarks here. Firstly, I&#8217;ve talked about the broad concept of <a href="/2016/11/the-shifting-polarities-of-testing/">shifting polarities</a> before so what I say here is hopefully in line with that. Secondly, as with all such heavily opinionated posts, it never hurts to start with saying that I entirely realize that all this is, in fact, opinion. I believe I have a good basis in empirical fact for forming these opinions. But, nevertheless, opinions these remain.</p>
+<h2>The &#8220;Camps&#8221; Around &#8220;Culture Wars&#8221;</h2>
+<p>Before digging in, I want to preface this even further with an interesting bit I read from the book <em>Seeking God in Science: An Atheist Defends Intelligent Design</em> by Bradley Monton. The author mentions that &#8220;the battle over intelligent design is like a war between two camps.&#8221; I somewhat see this in testing, as well, with testers either in a &#8220;war&#8221; with developers (or development managers or decision makers of various kinds) or at &#8220;war&#8221; with each other.</p>
+<p>Please note the quoted &#8220;war&#8221; as the goal isn&#8217;t to be melodramatic here. But I would ask you to keep in mind that idea of &#8220;war between two camps&#8221; for a moment. In his book, Monton recounts the words of an intelligent design opponent who was given a draft of the book for review:</p>
+<blockquote><p>
+Unfortunately in this debate a position between two sides, which you seem to adopt, is hardly tenable. It is a cultural war whose outcome will have immense consequences, so a book, to be useful, must unequivocally take a side and defend it vigorously. A position of supposed impartiality (which is hardly possible) necessarily serves one side despite the author’s intention to remain unbiased.
+</p></blockquote>
+<p>Notice the &#8220;cultural war&#8221; reference there? Any time people feel they are in a &#8220;cultural war,&#8221; that tends to harden the defensive lines and augment the offense against anything perceived to be threatening to the culture.</p>
+<p align="center">
+<img decoding="async" src="/files/camps-in-debate.png">
+</p>
+<p>As Monton states in response to that critique:</p>
+<blockquote><p>
+I think part of the truth is that it’s overly simplistic to think that there are just two sides to the intelligent design debate; there are many different positions that one can take, and I’m taking one position out of the many.
+</p></blockquote>
+<p>Exactly so. Being able to look at many different positions &#8212; at varying contexts that may lead to a way of thinking and terminology used in that way of thinking &#8212; is pretty crucial. But it requires not hardening into camps of binary interpretation.</p>
+<p>So this &#8220;cultural war&#8221; reference and the idea of taking sides in &#8220;camps&#8221; plays out in the context I mentioned above regarding testing. I often feel like a growing segment of testers are being taught that they&#8217;re in a culture war and they are thus reacting against threats to the culture. My opinion is that this reactive nature is actually causing a wider industry to not listen to such testers at all, thus compromising their mission from the start. And to the extent that this spreads wider, the impact on specialist testing in the technology industry as a whole is potentially quite dramatic.</p>
+<p><strong>A short version of this whole narrative I&#8217;m going to share with you in this post:</strong> I agree with many testers that the testing specialty is potentially in danger in our industry. Where I disagree is that I feel this danger is, in many cases, self-inflicted and is due in large part to how a growing vocal segment of the testing community is framing its messages to the wider industry.</p>
+<h2>The Rise of Dichotomies</h2>
+<p>The first context I&#8217;ll draw a parallel with here is that of various digital humanities scholars approaching video games from the perspective of story (narratologists) or of play (ludologists). I&#8217;ve actually started talking about these ideas in a new blog with my post <a href="https://ludichistorian.com/blog/2023/01/02/starting-a-ludic-history/">&#8220;Starting a Ludic History.&#8221;</a> If curious, and if you want a source besides myself in this post, you can see this played out in books like <em>The Composition of Video Games: Narrative, Aesthetics, Rhetoric and Play</em>, <em>The Play Versus Story Divide in Game Studies</em> and <em>Storytelling in Video Games: The Art of the Digital Narrative</em>.</p>
+<p align="center">
+<img decoding="async" src="/files/game-studies-in-debate.png">
+</p>
+<ul>
+<li>
+<strong>For the ludologists</strong>, the position they take is that digital games are an entirely new medium. The relationship between a player and the games they play represents a new form of human activity. As such, the ludologists believe that there really are no antecedents to this and scholars should concentrate on game mechanics and the game/human interface above all else.</li>
+</ul>
+<ul>
+<li>
+<strong>For the narratologists</strong>, the position they take is that digital games are really just one more evolutionary step in storytelling that extends back to the start of our species. The antecedents here have been systematized in the notions of drama all the way back to Aristotle and all the way up to current novelists, screenwriters and filmmakers.</li>
+</ul>
+<p>So, somewhat simplistically, the ludic approach advocates a split of game studies away from previous forms of storytelling while the narrative approach sees a new format of previously existing forms of storytelling. What I really want you to take from this is that we have not just an <strong>ontological</strong> position being staked out but an <strong>epistemological</strong> position as well. I covered this a bit in my post on <a href="/2020/11/the-theseus-of-testing/">&#8220;The Theseus of Testing&#8221;</a> and in my ideas around the <a href="/2020/10/the-basis-of-testing/">basis of testing</a>.</p>
+<p align="center">
+<img decoding="async" src="/files/epist-ontol.png">
+</p>
+<p>In this game studies context, you can probably see the &#8220;camps&#8221; that formed here and you can probably imagine that some participants on both sides felt a &#8220;cultural war&#8221; was being waged around the true ambit of gaming or narrative, depending on whatever position they hitched their conceptual wagons to. In fact, Henry Jenkins, in his article “Game Design as Narrative Architecture”, from March 2009, said:</p>
+<blockquote><p>
+A blood feud [has] threatened to erupt between self-proclaimed Ludologists, who wanted to see the focus shift onto the mechanics of game play, and the Narratologists, who were interested in studying games alongside other storytelling media.
+</p></blockquote>
+<p>Note the idea of a &#8220;blood feud&#8221;, keeping in line with the theme of opposing camps or viewpoints. Related to this overall context, I really like something that Jesper Juul said:</p>
+<blockquote><p>
+Video game studies have so far been a jumble of disagreements and discussions with no clear outcomes, but this need not be a problem. The discussions have often taken the form of simple dichotomies, and though they are unresolved, they remain focal points in the study of games. The most important conflicts here are games versus players, rules versus fiction, games versus stories, games versus broader culture, and game ontology versus game aesthetics.
+</p></blockquote>
+<p>That&#8217;s from his book <em>Half-Real: Video Games Between Real Rules and Fictional Worlds</em>. Why is that relevant? It&#8217;s the focus on <strong>dichotomies</strong> that interested me and, unlike Juul, I do see some problems there. Hardened dichotomies often come up in so-called &#8220;culture wars&#8221; where we have different &#8220;camps&#8221; of people. Certainly we&#8217;ve seen how well that works out historically; even recent history offers many examples for us to ponder.</p>
+<p align="center">
+<img decoding="async" src="/files/culture-clash-war.png">
+</p>
+<p>This doesn&#8217;t mean what&#8217;s being fought over is wrong. What&#8217;s being fought over can be very justified. But we can&#8217;t overlook the fact that it&#8217;s being <em>fought</em> over. And often by sides that are talking past each other, not with each other. Insiders and outsiders on both sides and who is considered which is, of course, relative.</p>
+<p>So consider that just within testing itself we have these dichotomies as well: &#8220;tests versus checks&#8221;, &#8220;write tests versus perform tests&#8221;, &#8220;automated testing versus manual testing&#8221; and so on. These are the weaponized phrases that testers are often using to combat the perceived threat to the testing culture. These dichotomies lead to a potential <strong>insider/outsider misalignment</strong> that, when persisted, leads to grievous schisms within a discipline but also conceptual chasms to other intersecting disciplines. That &#8220;insider/outsider&#8221; bit is going to explain the title of this post, so stick with me here.</p>
+<h2>Talking Amongst the Insiders</h2>
+<p>One thing I&#8217;ve argued is that testers are great at talking to themselves, repeating points to each other that they already agree with. They are much less good at talking to non-testers, at least in my experience. My evidence for that: discussions on various social media platforms. Further evidence: history. Specifically, history within the technology industry. Yet further evidence: the correlation between the rise in stridency of certain tester arguments, particularly since roughly 2009, coupled with a decrease in interest in testing <em>as a specialty</em> but not a decrease in testing <em>as a practice</em>. By that latter point what I mean is, I&#8217;ve certainly seen continued interest in testing as a practice in the industry. But often it&#8217;s focused more on how developers can do the testing. Or how tooling can do the testing. But I&#8217;ve seen less interest in testing as a specialty practiced by skilled practitioners.</p>
+<p>Let&#8217;s step back to the game studies part for a second.</p>
+<ul>
+<li>
+<strong>From the narratologist standpoint</strong>, they are generally hoping that the practitioners and evangelizers of the ludic approach &#8212; designed as it is to support claims of a complete departure of digital games from previous narrative media &#8212; will at least attempt to learn from previous debates that followed a very similar pattern, where something was claimed to be entirely new.</li>
+</ul>
+<ul>
+<li>
+<strong>From the ludologist standpoint</strong>, the same hope exists except in the other direction. They hope that narratologists will learn from past debates where something was assumed to be just one more thing in a long line of pre-existing things when, in fact, it was something entirely new that only had superficial resemblance to what came before.</li>
+</ul>
+<p>This is something I&#8217;ve long asked testers to do: learn from what has and has not worked in the past, in terms of &#8220;debates&#8221; or &#8220;discussions&#8221; around how testing is framed in the wider industry. I did this most recently in my <a href="/2023/01/a-history-of-automated-testing/">automation history</a> post as well as in my call for a <a href="/2022/10/testers-we-need-a-narrative/">new narrative</a>.</p>
+<p>From the game studies example, what&#8217;s important to understand from the context here is that the narrative approaches had much more resonance to &#8220;outsiders&#8221; to the game studies discipline. The narrative approach was something familiar that they could understand and relate to and thus engage with. Ludic approaches didn&#8217;t have that same effect and, in fact, often turned away many outsiders.</p>
+<p>And when I say &#8220;turned away&#8221; it wasn&#8217;t because of some simplistic reason such as &#8220;Those outsiders are just unwilling to engage with the nuances.&#8221; No, instead, it was largely because ludic evangelizers always seemed to be framing dichotomies and telling everyone that everything they knew was wrong. But if and when the narrative approach was used as a hook, then the ludic approaches could more easily be communicated and potentially more readily received.</p>
+<p>The problem was that insiders to the discipline were really attaching themselves to the ludic side of the dichotomy, even when it was clear that not only did these conceptions not frame themselves well with the outsiders, but the arguments often seemed either delusional or simply irrelevant to those outsiders. You would see things like: &#8220;Oh, that stuff you see in the game that seems to tell a story around certain characters in a setting with events happening relevant to a guiding plot? Yeah, that&#8217;s not narrative. In fact, calling that narrative is wrong. You&#8217;re silly for doing so.&#8221;</p>
+<p>Key takeaway here: a &#8220;ludic approach&#8221; achieved popularity among scholars of digital games (insiders) but a &#8220;narrative approach&#8221; translated outside the discipline better. It&#8217;s definitely interesting to learn about why that is but that&#8217;s not going to be my focus since, ultimately, my focus here isn&#8217;t game studies. The &#8220;insider/outsider&#8221; aspect is a part of my focus.</p>
+<p align="center">
+<img decoding="async" src="/files/insider-outsider.png">
+</p>
+<p>So keep in mind what we potentially have: established &#8220;camps&#8221; that have framed &#8220;dichotomies&#8221; and those dichotomies led to various insider and outsider perceptions, where the insiders often felt threatened by the outsiders and thus a &#8220;culture war&#8221; was necessary. (Maybe even a &#8220;blood feud&#8221; here and there.)</p>
+<h2>Emic versus Etic</h2>
+<p>Okay, let&#8217;s finally get to the terms that are in the title of this post. The context here is that, in the mid 1950s, a linguist at the University of Michigan named Kenneth Pike came up with a new kind of terminology in an attempt to understand the relationship between the languages he studied and the cultures that actually used those languages.</p>
+<p>For Pike the problem he found was that non-native speakers (listeners) of a foreign language often could not determine sound variations that, to native speakers, carried cultural meaning. Pike decided to use the terms “etic” and “emic” around language units. So there were units of cultural expression that were obvious to an outsider (etic) and units understood only from within the culture (emic). Incidentally, Pike derived these terms from phon<strong>etics</strong>, which refer to the sounds of a language, and phon<strong>emics</strong>, which refer to the meanings of those sounds. If you want to read up on Pike&#8217;s thoughts, I recommend his <em>Language in Relation to a Unified Theory of the Structure of Human Behavior</em>. Make sure to get the second edition, published in 1967.</p>
+<p>In doing all this, Pike hoped to do what game studies scholars do and presumably what testing scholars do: find patterns of meaning. Consider that a ludologist might look for translatable similarities between games or the actions taken within games. A narratologist might look for equally similar translatable narrative structures, such as characters, settings and events. Both groups are attempting to do what Pike was also attempting to do around patterns, of which he said:</p>
+<blockquote><p>
+No pattern can occur in isolation, autonomous from a larger kind of context or set of assumptions, and still be meaningful to human beings. Patterns require larger contexts, with relevance to more inclusive patterns, if they are themselves to be meaningful to us. The total autonomy of parts of knowledge does not exist.
+</p></blockquote>
+<p>That quote is from Pike&#8217;s <em>Talk, Thought, and Thing: The Emic Road Toward Conscious Knowledge</em> from 1993. I didn&#8217;t have these ideas in mind when I wrote my <a href="/2016/10/testing-is-like/">&#8220;Testing Is Like &#8230;&#8221;</a> post but it&#8217;s certainly part of what I was articulating there. Patterns of thought that I saw in testing, I saw reflected in many other disciplines. Thus was the pattern in testing situated within a larger context.</p>
+<p>In Pike&#8217;s conception, the emic perspective became the insider’s perspective, and could only be understood by direct action on the part of the user of a language. In contrast, the etic perspective was the outsider’s perspective. Crucially, it was Pike&#8217;s contention that <em>both</em> perspectives were inherently necessary for efficient social science and effective understanding.</p>
+<p align="center">
+<img decoding="async" src="/files/emic-etic-insider-outsider.png">
+</p>
+<p>So, in the game studies context, consider Pike&#8217;s contention in relation to the idea that <em>both</em> ludic <em>and</em> narrative approaches might be fully required in order to truly come up with an understanding of how to craft experiences with digital games. However &#8212; and this is a crucial point &#8212; to achieve that requires <strong>talking with the outsiders in a way they&#8217;ll understand and respond to but also in a way that the insiders don&#8217;t feel compromises what they very much believe</strong>.</p>
+<h2>Applied To Testing</h2>
+<p>Consider how this might tie into testing discussions that you see in our industry. Testers routinely say things like &#8220;developers just don&#8217;t get it&#8221; or &#8220;development managers just don&#8217;t get it&#8221; or &#8220;those making hiring decisions just don&#8217;t get it&#8221; and so on. You&#8217;ll notice these testers rarely, if ever, question if perhaps they are simply not framing an insider message in a way that an outsider can respond to. It&#8217;s generally the case that it&#8217;s always about somebody else &#8220;not getting it.&#8221;</p>
+<p><em>That</em> right there has been one of my sticking points with many of my fellow specialist testers: being able to craft an insider (emic) message in way that an outsider (etic) reception can be encouraged and facilitated. Note that this requires understanding that sometimes the outsiders might have a better framing. The goal here should be making sure that any such framing, regardless of directional orientation, is operationally useful in terms of making sure testing, as a specialty by skilled practitioners, is valued within the industry and not seen as just some sophist discipline practiced by fractious groups of people whose only interest is in telling you how every word you use is being used in the wrong way and how everything you think is probably totally inaccurate.</p>
+<p>You know what that sounds like, right? It&#8217;s sounds like a conspiracist thinker. &#8220;Everything you think you know is wrong! Even the way you speak is wrong! But I have the right words that will lift the veil from your eyes. I have the right way to think about things such that you are no longer deluded and duped by the Industry.&#8221; And if you don&#8217;t think many testers sound <em>exactly</em> that way to many outsiders to the discipline, then you probably aren&#8217;t paying attention or not talking to enough honest outsiders.</p>
+<p>In not having a good and solid way to frame the insider view to the outsider view, as well as a lack of framing the empirical evidence for why certain distinctions make sense to promote, I believe the utility of testing &#8212; again as a specialty practiced by skilled practitioners &#8212; is at risk. I would say the risk is certain in the larger context of the industry and perhaps technology culture in general. This was also happening in game studies, by the way, although the discipline seems to be course correcting a bit in recent years.</p>
+<p>I also <em>do</em> think testing can become at risk even <em>amongst testers themselves</em> because I do believe there is an <a href="/2021/12/the-ethical-mandate-for-mistake-specialists/">ethical mandate to being a mistake specialist</a>. Part of that ethical mandate is to allow an insider framing to be situated to an outsider but also to allow outsider view to inform the insider views. We need people to care about this stuff as much as we do and if we compromise our ability to do that, I do believe we have a bit of an ethical dilemma. Note: ethical dilemma, not moral dilemma. Again, I don&#8217;t want to go for melodrama here.</p>
+<p align="center">
+<img decoding="async" src="/files/emic-etic-approach.png">
+</p>
+<p>Pike wanted to have these insider/outsider discussions in a way that was actually useful. The problem was that, as he (accurately) perceived it, these discussions only happened intermittently and transiently and then, largely, faded away. While Pike’s ideas were adopted in both linguistics, and eventually anthropology, they were really only discussed in any substance for about three decades. That may sound like a long time but it&#8217;s worth noting that those discussions were had with a visibly increasing lack of substance and a visibly decreasing interest.</p>
+<p>I certainly have seen something similar in the testing industry, where ideas, at least from testers, have started to lack operational substance &#8212; although perhaps gaining some sort of philosophical substance &#8212; and thus there has been decreasing interest from a wider industry. One example of that in action is how developers have been most often front-and-center in what are considered, by hiring managers and decision makers, to be useful testing innovations and experiments.</p>
+<h2>Comprehension and Relevance</h2>
+<p>So what happened with Pike&#8217;s terms? Well, as I said, they were used in anthropology and it was actually there, as opposed to linguistics, that the terms had their greatest influence. That being said, it&#8217;s worth noting that they were almost universally misunderstood, at least in terms of Pike’s original meaning. In anthropology the terms emic and etic were eventually dispensed with in favor of, simply, calling these the “insider’s” and “outsider’s” view. Okay, but why is that a problem? Isn&#8217;t that what they were? Yes, but, as Pike noted, there was a tendency to assume a dichotomy between the emic and etic when framed in this way when, in fact, in his own words, they “do not constitute a rigid dichotomy of bits of data, but often present the same data from two points of view.”</p>
+<p>So in the game studies context, for example, to understand a ludic view of a game you have to play it. You need to be what&#8217;s called a “participant-observer” in anthropological terms. However, to take a wider view, it&#8217;s sometimes easier to look for larger — narrative-based — cues that can be examined from game to game as a &#8220;nonparticipant-observer.&#8221; Yet, in both cases, <em>the object of study remains constant and it&#8217;s only the perspective of the observer that has changed</em>.</p>
+<p>This is the same idea as being able to perceive work at <strong>critical distance</strong>. The idea here is the ability to change perspectives, to have an <a href="/2015/08/the-intuition-for-abstraction/">intuition for abstraction</a> as I&#8217;ve talked about it before, from one mindset (actually doing something) to another mindset (think about what it means to do that something).</p>
+<p>I&#8217;ve found modern testers are often not being encouraged to look at the perspective of the observer being changed. Thus do we get the <a href="/2017/09/testing-fundamentalism/">fundamentalists</a> and the <a href="/2022/11/when-testing-questioned-orthodoxy/">orthodoxy</a>. So here we might equate the developer, or development manager or product manager, with a &#8220;nonparticipant observer.&#8221; Culturally speaking, it&#8217;s worth noting that this gets really tricky in our industry because developers <em>are</em> called upon to act as testers in limited contexts. So developers move between &#8220;participant-observer&#8221; and &#8220;nonparticipant-observer&#8221; modes. Testers have to do likewise, such as when they engage with automation.</p>
+<p>Pike, later in his career, offered a specific view.</p>
+<blockquote><p>
+[An] emic unit, in my view, is a physical or mental item or system treated by insiders as relevant to their system of behavior and as the same emic unit in spite of etic variability.
+</p></blockquote>
+<p>That comes from his essay “The Emics and Etics of Pike and Harris&#8221; published in <em>Emics and Etics: The Insider/Outsider Debate</em> in 1990. (The &#8220;Harris&#8221; there refers to Marvin Harris who debated Pike quite a bit on these ideas.) Regarding this particular idea, Matthew Kapell, who also looks at the work of Pike in the context of digital games, says the following in <em>The Play Versus Story Divide in Game Studies</em>:</p>
+<blockquote><p>
+The classic example of what Pike meant comes from Chinese, but the American example may be somewhat more fruitful here. Where a person from Oregon might say “gah-rahge” to express the structure they park their car in, a person from Boston might pronounce the same word as “gare-ege.” But all speakers of American English hear the same emic category while an external listener may have trouble in realizing they are hearing the same word pronounced in two different dialects.
+</p></blockquote>
+<p>So testers have to realize that while they try to make a distinction between, say, a &#8220;test&#8221; and a &#8220;check&#8221; &#8212; and let&#8217;s call that an insider view &#8212; many others will simply hear the same idea being spoken of but with a different word. So we have a bit of an inversion from the above example: we have an etic perception of one term &#8220;test&#8221; being called two things (&#8220;test&#8221; and check&#8221;) while the emic perception is that these are two entirely different things. What gets compromised is &#8220;translation to the outside.&#8221; In Pike&#8217;s words, he would say etic comprehension is compromised.</p>
+<p>Outsider people may &#8212; and do, I assure you &#8212; wonder why we have to use some existing word (&#8220;check&#8221;) and set it up in opposition to &#8220;test&#8221; and then claim that this is somehow meaningful. It may be meaningful! But you can&#8217;t just expect outsiders to take your word for it. And even if they take your word for it, what change in mindset or behavior actually occurs as a result of making this change? Because it&#8217;s <em>that</em> latter question that people are really going to be concerned with.</p>
+<p>So it&#8217;s not just comprehension here between insider/outsider. It&#8217;s also demonstrable relevance. This has a nice corollary in how we frame this for children as they learn to consume stories.</p>
+<p align="center">
+<img decoding="async" src="/files/compre-relevance-child.png">
+</p>
+<p>In this same context, you&#8217;ll hear testers say &#8220;you don&#8217;t write a test, you perform a test.&#8221; And what they singularly fail to anticipate is the outsider who says, at minimum, &#8220;Why can&#8217;t I do both?&#8221; And who probably also says: &#8220;How is helping us get things done in a better way?&#8221; This occurs similarly with a newer bit of tester-speak I&#8217;ve heard more and more recently, which is saying &#8220;I&#8217;ve shown you something <em>can</em> work but not that it <em>will</em> work.&#8221;</p>
+<p>Imagine you&#8217;re getting, say, your car fixed because of faulty brakes. And your mechanic said something like that to you. &#8220;Well, I&#8217;ve seen that the new brakes I&#8217;ve installed can work, but I&#8217;m not saying they will.&#8221; There may be some overall philosophical logic to this statement of course &#8212; that there are no certainties in life &#8212; but most intelligent people know that and so they don&#8217;t want that philosophy thrown at them when they&#8217;re looking for something a bit more empirical.</p>
+<p>So outsider comprehension isn&#8217;t the only goal. The goal is also, presumably, to have the outsider (etic) perspective come to align with the insider (emic) perspective, at least insofar as perceived relevance.</p>
+<p><em>That</em> has largely failed to happen in the testing context within the technology industry. Many testers will argue that this is because of testers &#8212; like me, perhaps! &#8212; who won&#8217;t toe the line and join in promoting the categories and also because other &#8220;outsiders&#8221; just aren&#8217;t interested in listening. My contention is different: I feel that people don&#8217;t listen because the terms, and the rationale behind them, just don&#8217;t resonate.</p>
+<p>The wider industry I keep mentioning, admittedly, tends to be a technocracy and it values economies of scale when it comes to various decisions, including how best to test that something works. This inevitably leads to a recipe of assuming automation is the appropriate way to handle many situations. Testers saying &#8220;But that tool only checks, doesn&#8217;t test&#8221; is an emic perspective. It has very little (perceived) etic utility. The same applies when testers move that abstraction a bit and say &#8220;you don&#8217;t write a test, you perform a test.&#8221; Likewise, many testers fight against the term &#8220;manual testing&#8221; &#8212; and for good reasons in a lot of cases &#8212; but often predicated upon the idea that somehow those they are trying to convince don&#8217;t understand that the term &#8220;manual testing&#8221; means &#8220;human testing.&#8221; But those people often do get that. What they doubt is the &#8220;human testing&#8221; has enough economy of scale.</p>
+<p>And <em>that</em> doubt is the discussion to be having with people who may value testing but who currently feel testing would provide scalable value if automated. Telling them tools &#8220;check&#8221; but don&#8217;t &#8220;test&#8221; doesn&#8217;t really do much. That can seem meaningless to outsiders, at best, or obstructionist, at worst.</p>
+<p>I&#8217;m picking on just a few of the dichotomies that testers have promoted and I don&#8217;t want to risk a caricature of the views. It&#8217;s very possible for many testers to expand on the &#8220;test / check&#8221; distinction. The challenge is I rarely see them doing so in a way that sways outsiders. It&#8217;s very possible for testers to back up the &#8220;can work but not necessarily will work&#8221; with examples of the testing they&#8217;ve done to surface potential risks but, if you can do the latter, you don&#8217;t really need the former phrasing at all.</p>
+<p>I also want to point out Michael Bolton&#8217;s <a href="https://developsense.com/blog/2021/08/alternatives-to-manual-testing-experiential-attended-exploratory">Alternatives to “Manual Testing”: Experiential, Interactive, Exploratory</a> article which, in my view, provides a very reasoned and reasonable way to frame testing for outsiders. Even with those distinctions, you have to be prepared for outsiders who actually see more complication to testing by introducing more words because many of them are dealing with testers who they just heard rattling off some of the phrases I&#8217;ve mentioned.</p>
+<h2>Framing For the Outsider</h2>
+<p>Again I want to note a core historical fact here: the emic and etic categories first offered by Pike were useful ways to examine other languages and cultures. Yet when adopted by certain scholars, these concepts were turned into a rigid dichotomy. That rigid dichotomy radically decreased the usefulness of the terms. &#8220;Turning things into a rigid dichotomy&#8221; is exactly what I see a lot of testers doing all the time. And the wider industry is responding by devaluing testers who they see as contributing no real operational value, except yet one more debate over terminology.</p>
+<p>That said, yes, semantics <em>do</em> matter. I&#8217;ve talked about the harm of the <a href="/2018/08/testers-and-the-just-semantics-dismissal/">&#8220;just semantics&#8221; dismissal</a> before. But semantics always start as an insider (emic) perspective that has to be translated to an outsider (etic) perspective.</p>
+<p>Another thing I want you to get out of this is that the discussion that circled around Pike’s categories followed exceptionally similar lines of argument as the discussions that now take place around the ludic and narrative ideas in games studies and, I would argue, those around testing distinctions. In the end, these discussions ended up with the effect that the terms would be jettisoned from both linguistics and anthropology because they were perceived to have no value. There are many cautionary reasons as to why that happened, which would be too long to recount here. Many ludologists and narratologists have worked hard so that the same does not happen in games studies. By which I mean there was a time where it seemed the terms &#8220;ludology&#8221; and &#8220;narratology&#8221; would be jettisoned because they were perceived to obfuscate more than clarify.</p>
+<p>If testers truly want their distinctions to be operationally useful and culturally relevant outside of themselves &#8212; meaning they don&#8217;t want terms like, say, &#8220;test&#8221; and &#8220;check&#8221; jettisoned &#8212; then I would argue those testers have to learn from this history to make sure the same doesn&#8217;t happen in our discipline as well. I would argue this is even more so the case with Bolton&#8217;s reasoned terminology distinctions around exploratory, experiential, transformative and so on. This is too important a discussion for testers to not be having.</p>
+<p>Having these discussions is often best done when informed by a lot of the history, such as that which I&#8217;ve tried to recount in various posts on this blog. As I&#8217;ve argued, most recently in my previously mentioned &#8220;history of automation&#8221; post, however, I&#8217;m not entirely convinced test specialists even know about much of this history such that they can draw lessons from it. That&#8217;s a large part of why I wrote my <a href="/category/testing/history-and-science/">&#8220;History and Science&#8221;</a> series and why so much of my work on this blog has been to provide a wider-angle lens around how so much intellectual history could, and should, inform testing.</p>
+<p>The downside, of course, is that on that very point, I&#8217;ve always risked seeming quite irrelevant as I discuss a whole lot of stuff that someone could very easily argue does nothing to be operationally useful for traversing the insider/outsider divide. I&#8217;m fully well aware of this and it would be a delicious irony, for this post in particular, if that were true. Thankfully, I have some reasons for believing that isn&#8217;t entirely true but it&#8217;s certainly something that&#8217;s always on my mind with every such post.</p>
+<h2>Maintaining a Critical Distance</h2>
+<p>One focal point of Pike&#8217;s argument for his emic category &#8212; which he referred to as &#8220;knowledge of a local culture&#8221; &#8212; was an attempt to understand, in Pike&#8217;s words, &#8220;how to act without necessarily knowing how to analyze [one’s] action.&#8221; By this Pike said:</p>
+<blockquote><p>
+When I act, I act as an insider; but to know, in detail, how I act &#8230; I must secure help from an outside disciplinary system. To use emics of &#8230; behavior I must act like an insider; to analyze my own acts, I must look at &#8230; material as an outsider.&#8221;
+</p></blockquote>
+<p>This, again, is that critical distance I brought up before. I feel testers have to really put themselves in the shoes of &#8220;outsiders&#8221; and ask what those people are thinking when they hear a tester say this:</p>
+<blockquote><p>
+There is no such as manual testing! You don&#8217;t write a test, you perform a test! Automation cannot test, it can only check! It can work but it may not work!
+</p></blockquote>
+<p>Consider that in contrast to Michael Bolton&#8217;s words in his previously mentioned post:</p>
+<blockquote><p>
+If you want to understand important things about testing, you’ll want to consider some things that commonly get swept a carpet with the words “manual testing” repeatedly printed on it. Considering those things might require naming some aspects of testing that you haven’t named before.
+</p></blockquote>
+<p>I know which one hooks me more. I would further frame Michael&#8217;s thought by saying &#8220;manual testing&#8221; is one of those <a href="/2017/07/unpacking-the-suitcase-words/">suitcase words</a> I&#8217;ve talked about. It has to be unpacked. Michael&#8217;s statements are an invitation to participate and learn. What I hear from many testers, by contrast, is exhortations of how reality isn&#8217;t what you think it is. Framing matters.</p>
+<p>Even if the outsider is willing to engage with those simple exhortative talking points, what I most often find is the testers trotting out those phrases can&#8217;t actually show what operationally changes, either in behavior or mindset, if one adopts the talking points. What most testers sound like is they are quoting someone else &#8212; which they often are &#8212; but without really knowing what to actually do with that information once it&#8217;s been stated. So an outsider might then ask things like this:</p>
+<ul>
+<li>&#8220;Okay, but how does what you just said help you work with my developers more closely to put in place better testing, particularly at the code level?&#8221;</li>
+</ul>
+<ul>
+<li>&#8220;How does what you just said help us get around our current problem of extremely poorly defined requirements and user stories?&#8221;</li>
+</ul>
+<ul>
+<li>&#8220;How exactly does what you just said translate to helping us with our significant regression problem?&#8221;</li>
+</ul>
+<ul>
+<li>&#8220;How does this help me with the divide we have between whether testers should do all testing or developers should do some testing? Or maybe even if developers should do all testing? Or maybe the product team should do the testing?&#8221;</li>
+</ul>
+<p>You&#8217;ll also get much more specific focused responses from outsiders, like:</p>
+<ul>
+<li>&#8220;How does this help us understand the way to situate testing in our machine learning applications?&#8221;</li>
+</ul>
+<ul>
+<li>&#8220;How does all this help us figure out how to build automation that does maintain good test principles?&#8221;</li>
+</ul>
+<ul>
+<li>&#8220;How does what you are saying translate into helping us figure out better testability overall?&#8221;</li>
+</ul>
+<p>On those points, I&#8217;ve tried to frame answers to those via the following:</p>
+<ul>
+<li><a href="/category/ai/machine-learning/ml-series-2/">The tester role in machine learning series</a></li>
+<li><a href="/category/automation/tapestry/">Design around an open source automation tool</a></li>
+<li><a href="/category/testing/testability/">Ode to testability series</a></li>
+</ul>
+<p>Was I relevant in all that? I don&#8217;t know. I hope so! Feedback suggests I wasn&#8217;t entirely irrelevant. But the point is that this wider context was required, at least in my view, to bridge the insider/outsider divides that sometimes existed between my discipline and the pressures of the industry on developers, product teams, or decision makers. They didn&#8217;t need phrases or even terminology distinctions. That wasn&#8217;t what was compromising their view of testing. What was compromising their view of testing was the lack of an extended context that showed testing with some operational specificity around what they were dealing with day to day.</p>
+<p><strong>So if I was writing a thesis, my conclusion might be:</strong> I believe testers are more emically-centered and simply talk to each other about their talking points. These talking points don&#8217;t translate well to a wider industry that is not as predisposed to the current group-think of testers. I think testers need to be more etically-centered and, thus, translatable to the wider industry.</p>
+<h2>Historical Matters Can Guide Us</h2>
+<p>Okay, so where are we here? Well, the emic/etic discussions were important. Or, rather, should have been.</p>
+<p>For linguists and anthropologists more generally, however, the debate was initially important, then marginalized, and then reduced to a simple dichotomy. Either one was an “insider” — a person born to a culture and language tradition — or one was an “outsider” — a person trying to understand from the outside what the language and culture were all about.</p>
+<p align="center">
+<img decoding="async" src="/files/outsider-looking-in.png">
+</p>
+<p>For two or three generations, students in both fields were taught of the emic and etic as opposing perspectives. An anthropological linguist named Dell Hymes noted that: “much of their popularity [as terms], has indeed been due to their being assimilated to a dichotomy.” If curious, you can check out Hymes&#8217; essay “Emics, Etics, and Openess: An Ecumenical Approach” in the previously referenced <em>Emics and Etics: The Insider/Outsider Debate</em>. The upshot is that the discussions were not had or, rather, were had in very simplified, non-extended forms. Thus the discussions were ultimately deemed to lack utility, and thus value, and so, because of that, the concepts and terms of the discussions were easily reduced to simplified terms, and then marginalized, and now largely forgotten.</p>
+<p>Yikes! So, wait, didn&#8217;t all that hurt the discipline a bit? Didn&#8217;t the practitioners who engaged in all this &#8220;useless&#8221; discussion suffer some serious blowback? No, not really. Yet I argue the opposite will, or at least can, happen for testers and I&#8217;ve already seen plenty of evidence of that happening. In fact, so have testers. They too see an industry devaluing testers (as skilled practitioners of a discipline) and testing (as a specialized discipline). They simply ascribe different reasons for that devaluating than I do, as I stated earlier.</p>
+<p>But, hold on, why is is that all this didn&#8217;t hurt linguistics/anthropology but may hurt testing? Well, both linguistics and anthropology had centuries of disciplinary, and cross-disciplinary, history to sustain them when this particular discussion evaporated. Testing, at least in the software and hardware context, does not have that kind of institutional bedrock to rest on.</p>
+<p>In the game studies context I mentioned, each scholar in game studies have learned to use the perspective of the ludic to uncover further meaning of the narrative, or the opposite and use the story to elucidate the significance of the mechanics of gameplay. Thus did the insiders and the outsiders learn to talk in a way that was comprehensible and relevant to each. But that almost didn&#8217;t happen. Such studies around &#8220;ludic&#8221; and &#8220;narrative&#8221; almost suffered the same fate as &#8220;emic&#8221; and &#8220;etic&#8221; in linguistics and anthropology.</p>
+<p>And that would have been a problem because game studies, at least in terms of digital games, is a similarly very young field much like technology-focused testing. Hymes put it this way:</p>
+<blockquote><p>
+When the issues of “emic” and “etic” are treated as <em>passé</em>, they appear to me to treat the craft of anthropology [and linguistics] as <em>passé</em> &#8230;. Let me conclude by saying that these matters are not matters of anthropology and linguistics alone &#8230;. The craft of linguistic ethnography, of patient attention and discovery, of teasing out of pattern, of willingness to watch, listen, and be surprised, expressed a respect for local knowledge and local systems &#8230; and it must respect the narrative structures of others, the speech act constellations of others, the historically, experientially derived values and norms of others.
+</p></blockquote>
+<p>That comes from the same essay I mentioned previously. What Hymes hoped to offer the emic/etic debate in anthropology and linguistics is something that Matthew Kapell, Johansen Quijano, and Amy Green, as well as many others, have attempted to do in digital games studies. It&#8217;s something I&#8217;ve hoped to do in the testing arena and what I certainly feel practitioners like Michael Bolton hope to do as well. I certainly don&#8217;t want the craft of testing in a technology context to ever become <em>passé</em>.</p>
+<p>With all this, of course, it could be argued that Pikes, Harris and Hymes, failed. The discussion essentially withered on the vine. In fact, an anthropologist named Marshall Sahlins described the outcome for his discipline distinctly, noting that:</p>
+<blockquote><p>
+[Anthropologists] have become the working-class of the Cultural Studies movement &#8230; relegated to the status of ethnographic proles in the academic division of labor.
+</p></blockquote>
+<p>That comes from Sahlins&#8217; book <em>Waiting for Foucault, Still</em> published in 2002. Read &#8220;proles&#8221; as a worker or a member of the blue-collar working class. Someone employed at a mill or a factory was considered a prole. Shades of perhaps &#8220;manual labor&#8221; there? Could se take Sahlins&#8217; statement and rephrase it as a concern:</p>
+<p><em>&#8220;Testers have become the working-class of the hardware and software industry &#8230; relegated to the status of technological proles in the division of labor.&#8221;</em></p>
+<p>I certainly hope not. And, again, I&#8217;ll point out that there was a danger that games studies scholars would occupy a similar position in the larger world of digital media studies. As Matthew Kapell said in <em>The Play Versus Story Divide</em> when he saw that concern on the horizon:</p>
+<blockquote>
+<p>
+Without a more thorough and ongoing debate among practitioners the one major paradigmatic argument that has fueled the emergence of the field may evaporate as the emic and etic debate did only a generation ago in anthropology and linguistics. And, without some debate to hang on to there will be little for scholars in other fields (our own outsiders) to see when they stop by to understand exactly what it is that digital game scholars are doing. They will find only chaos when they visit.</p>
+<p>If that happens we will only be talking to ourselves.
+</p>
+</blockquote>
+<p>Exactly! Talking to ourselves.</p>
+<p align="center">
+<img decoding="async" src="/files/social-impact-echo-wars.png">
+</p>
+<p>That is entirely what I think a broad industry of testers have done and are doing. They have solidified around certain talking points that they reinforce to each other, convincing themselves ever more, but while doing little to nothing to convince a wider industry. It&#8217;s the very definition of a self-imposed echo chamber where group-think stands a good chance of settling in and where so-called &#8220;cults of personality&#8221; start to emerge. And, as history has shown us, most &#8220;culture wars&#8221; tend to be fought around certain cults of personality.</p>
+<p>Now, again, you might say: &#8220;Well, how bad can it be? After all, anthropology and linguistics still exist even after all that.&#8221; But, again, each of those disciplines had long histories behind them, and significant institutional momentum. Testing, in our context, does not. Well, it actually does but it doesn&#8217;t get treated that way. Testing itself has a very long pedigree. See my post on <a href="/2022/03/the-testing-pedigree/">The Testing Pedigree</a>. But in a technology context like the one most of us are dealing with, it does not.</p>
+<p>Discussions around testing, right now and, I would argue, since about 2009 or so, have proceeded in far too combative of a process, wherein relatively few people are trying to control the narrative. That usually happens when people believe they are in a &#8220;cultural war&#8221; as I mentioned at the start of this post. I&#8217;ve tried to show one concern of that in how we didn&#8217;t resist the lull of automation. I&#8217;ve tried to show that in how we haven&#8217;t really fought orthodoxy very well. I&#8217;ll turn to Kapell again here on his thoughts on game studies:</p>
+<blockquote>
+<p>
+Mature fields of inquiry &#8230; welcome competing ideas and work to further their paradigms. Mature disciplines also eventually agree on central themes based on the ideas presented, not the individuals presenting them.</p>
+<p>It is, frankly, time for game studies to grow up.
+</p>
+</blockquote>
+<p>Exactly that. That pretty much mirrors what I said in my pedigree post:</p>
+<blockquote><p>
+Our discipline has an incredibly rich pedigree that can inform us. Let&#8217;s start acting like it.
+</p></blockquote>
+<p>And what I hope I&#8217;ve clarified in this post is that &#8220;acting like it&#8221; means, in part, finding a way for the emic to resonate with the etic; for the view of the insiders to foster comprehension and promote relevance among the outsiders.</p>
+<p>If we do that, perhaps we won&#8217;t really have to worry so much about who is an insider or an outsider.</p>
+<p>That feels like a nice world to live in.</p>
+<div class="addtoany_share_save_container addtoany_content addtoany_content_bottom"><div class="a2a_kit a2a_kit_size_16 addtoany_list" data-a2a-url="https://testerstories.com/2023/01/the-emic-and-etic-in-testing/" data-a2a-title="The Emic and Etic in Testing">
+<a class="a2a_button_facebook" href="https://www.addtoany.com/add_to/facebook?linkurl=%2F2023%2F01%2Fthe-emic-and-etic-in-testing%2F&amp;linkname=The%20Emic%20and%20Etic%20in%20Testing" title="Facebook" rel="nofollow noopener" target="_blank"></a><a class="a2a_button_twitter" href="https://www.addtoany.com/add_to/twitter?linkurl=%2F2023%2F01%2Fthe-emic-and-etic-in-testing%2F&amp;linkname=The%20Emic%20and%20Etic%20in%20Testing" title="Twitter" rel="nofollow noopener" target="_blank"></a><a class="a2a_button_linkedin" href="https://www.addtoany.com/add_to/linkedin?linkurl=%2F2023%2F01%2Fthe-emic-and-etic-in-testing%2F&amp;linkname=The%20Emic%20and%20Etic%20in%20Testing" title="LinkedIn" rel="nofollow noopener" target="_blank"></a><a class="a2a_button_print" href="https://www.addtoany.com/add_to/print?linkurl=%2F2023%2F01%2Fthe-emic-and-etic-in-testing%2F&amp;linkname=The%20Emic%20and%20Etic%20in%20Testing" title="Print" rel="nofollow noopener" target="_blank"></a><a class="a2a_dd addtoany_share_save addtoany_share" href="https://www.addtoany.com/share"><img src="https://static.addtoany.com/buttons/favicon.png" alt="Share"></a>
+</div></div>      
+	</div>
+<!-- .entry-content -->
+	<footer class="entry-footer">       
+		<p class="written-by">This article was written by <a href="/author/administrator/">Jeff Nyman</a></p>
+<div class="author-bio">
+		
+	<h3><a href="/author/administrator/" rel="author">About  Jeff Nyman</a></h3>		
+	<img alt="" src="https://secure.gravatar.com/avatar/a3b6c2d0b2bafdb9ad9cdf782873204d?s=72&#038;d=mm&#038;r=pg" srcset="https://secure.gravatar.com/avatar/a3b6c2d0b2bafdb9ad9cdf782873204d?s=144&#038;d=mm&#038;r=pg 2x" class="avatar avatar-72 photo" height="72" width="72" decoding="async"><p class="author-description">Anything I put here is an approximation of the truth. You're getting a particular view of myself ... and it's the view I'm choosing to present to you. If you've never met me before in person, please realize I'm not the same in person as I am in writing. That's because I can only put part of myself down into words.
+
+If you have met me before in person then I'd ask you to consider that the view you've formed that way and the view you come to by reading what I say here may, in fact, both be true. I'd advise that you not automatically discard either viewpoint when they conflict or accept either as truth when they agree.</p>		
+</div>
+<!-- .author-bio -->
+	</footer><!-- .entry-footer -->
+
+	<nav class="navigation post-navigation" aria-label="Posts">
+		<h2 class="screen-reader-text">Post navigation</h2>
+		<div class="nav-links">
+<div class="nav-previous"><a href="/2023/01/a-history-of-automated-testing/" rel="prev"><span class="genericon genericon-previous" aria-hidden="true"></span> <span class="screen-reader-text">Previous post:</span> <span class="post-title">A History of Automated Testing</span></a></div>
+<div class="nav-next"><a href="/2023/02/exploring-bug-chaining-and-causal-models/" rel="next"><span class="post-title">Exploring, Bug Chaining and Causal Models</span><span class="screen-reader-text">Next post:</span> <span class="genericon genericon-next" aria-hidden="true"></span> </a></div>
+</div>
+	</nav>
+<div id="comments" class="comments-area">
+
+
+		<div id="respond" class="comment-respond">
+		<h3 id="reply-title" class="comment-reply-title">Leave a Reply <small><a rel="nofollow" id="cancel-comment-reply-link" href="/2023/01/the-emic-and-etic-in-testing/#respond" style="display:none;">Cancel reply</a></small>
+</h3>
+<form action="https://testerstories.com/wp-comments-post.php" method="post" id="commentform" class="comment-form" novalidate>
+<p class="comment-notes"><span id="email-notes">Your email address will not be published.</span> <span class="required-field-message">Required fields are marked <span class="required">*</span></span></p>
+<p class="comment-form-comment"><label for="comment">Comment <span class="required">*</span></label> <textarea id="comment" name="comment" cols="45" rows="8" maxlength="65525" required></textarea></p>
+<p class="comment-form-author"><label for="author">Name <span class="required">*</span></label> <input id="author" name="author" type="text" value="" size="30" maxlength="245" autocomplete="name" required></p>
+<p class="comment-form-email"><label for="email">Email <span class="required">*</span></label> <input id="email" name="email" type="email" value="" size="30" maxlength="100" aria-describedby="email-notes" autocomplete="email" required></p>
+<p class="comment-form-url"><label for="url">Website</label> <input id="url" name="url" type="url" value="" size="30" maxlength="200" autocomplete="url"></p>
+<p class="form-submit"><input name="submit" type="submit" id="submit" class="submit" value="Post Comment"> <input type="hidden" name="comment_post_ID" value="4568" id="comment_post_ID">
+<input type="hidden" name="comment_parent" id="comment_parent" value="0">
+</p>
+<p style="display: none;"><input type="hidden" id="akismet_comment_nonce" name="akismet_comment_nonce" value="7687f9e189"></p>
+<p style="display: none !important;"><label>&#916;<textarea name="ak_hp_textarea" cols="45" rows="8" maxlength="100"></textarea></label><input type="hidden" id="ak_js_1" name="ak_js" value="74"><script>document.getElementById( "ak_js_1" ).setAttribute( "value", ( new Date() ).getTime() );</script></p>
+</form>	</div>
+<!-- #respond -->
+	<p class="akismet_comment_form_privacy_notice">This site uses Akismet to reduce spam. <a href="https://akismet.com/privacy/" target="_blank" rel="nofollow noopener">Learn how your comment data is processed</a>.</p>
+</div>
+<!-- #comments -->
+</article><!-- #post-## -->
+</main><!--/main-content-->
+	<aside id="sidebar-widget-area" class="sidebar-widget-area" role="complementary">
+		<a class="screen-reader-text skip-link" href="#page-footer">Skip to footer</a>
+
+		<section id="sidebar" class="widget-area sidebar">
+			<div id="text-6" class="widget widget_text">			<div class="textwidget">
+<p><a href="https://www.linkedin.com/pub/jeff-nyman/12/b32/16a"><br>
+<img decoding="async" src="https://static.licdn.com/scds/common/u/img/webpromo/btn_myprofile_160x33.png" alt="View Jeff Nyman's profile on LinkedIn" width="160" height="33" border="0"></a></p>
+</div>
+		</div>
+<div id="categories-5" class="widget widget_categories">
+<h2 class="widget-title">Topics</h2>
+			<ul>
+					<li class="cat-item cat-item-58">
+<a href="/category/agile/">Agile</a> (2)
+</li>
+	<li class="cat-item cat-item-49">
+<a href="/category/ai/">AI</a> (24)
+<ul class="children">
+	<li class="cat-item cat-item-50">
+<a href="/category/ai/machine-learning/">Machine Learning</a> (12)
+	<ul class="children">
+	<li class="cat-item cat-item-55">
+<a href="/category/ai/machine-learning/ml-series-1/">ML Series 1</a> (2)
+</li>
+	<li class="cat-item cat-item-56">
+<a href="/category/ai/machine-learning/ml-series-2/">ML Series 2</a> (4)
+</li>
+	<li class="cat-item cat-item-57">
+<a href="/category/ai/machine-learning/ml-series-3/">ML Series 3</a> (6)
+</li>
+	</ul>
+</li>
+</ul>
+</li>
+	<li class="cat-item cat-item-11">
+<a href="/category/automation/">Automation</a> (68)
+<ul class="children">
+	<li class="cat-item cat-item-41">
+<a href="/category/automation/c/">C#</a> (2)
+</li>
+	<li class="cat-item cat-item-8">
+<a href="/category/automation/capybara/">Capybara</a> (11)
+</li>
+	<li class="cat-item cat-item-9">
+<a href="/category/automation/cucumber/">Cucumber</a> (10)
+</li>
+	<li class="cat-item cat-item-31">
+<a href="/category/automation/cucumber-jvm/">Cucumber-JVM</a> (6)
+</li>
+	<li class="cat-item cat-item-42">
+<a href="/category/automation/groovy/">Groovy</a> (1)
+</li>
+	<li class="cat-item cat-item-40">
+<a href="/category/automation/java/">Java</a> (9)
+</li>
+	<li class="cat-item cat-item-10">
+<a href="/category/automation/qtp/">QTP</a> (6)
+</li>
+	<li class="cat-item cat-item-5">
+<a href="/category/automation/rspec/">RSpec</a> (4)
+</li>
+	<li class="cat-item cat-item-7">
+<a href="/category/automation/selenium/">Selenium</a> (17)
+</li>
+	<li class="cat-item cat-item-39">
+<a href="/category/automation/serenity/">Serenity</a> (8)
+</li>
+	<li class="cat-item cat-item-30">
+<a href="/category/automation/symbiont/">Symbiont</a> (11)
+</li>
+	<li class="cat-item cat-item-51">
+<a href="/category/automation/tapestry/">Tapestry</a> (6)
+</li>
+	<li class="cat-item cat-item-6">
+<a href="/category/automation/watir/">Watir</a> (4)
+</li>
+</ul>
+</li>
+	<li class="cat-item cat-item-13">
+<a href="/category/bdd/">BDD</a> (24)
+<ul class="children">
+	<li class="cat-item cat-item-23">
+<a href="/category/bdd/tdl/">TDL</a> (17)
+</li>
+</ul>
+</li>
+	<li class="cat-item cat-item-25">
+<a href="/category/career/">Career</a> (33)
+<ul class="children">
+	<li class="cat-item cat-item-53">
+<a href="/category/career/interview/">Interview</a> (10)
+</li>
+</ul>
+</li>
+	<li class="cat-item cat-item-15">
+<a href="/category/communication/">Communication</a> (16)
+</li>
+	<li class="cat-item cat-item-65">
+<a href="/category/crime-scene/">Crime Scene</a> (4)
+</li>
+	<li class="cat-item cat-item-52">
+<a href="/category/data-science/">Data Science</a> (4)
+</li>
+	<li class="cat-item cat-item-61">
+<a href="/category/development/">Development</a> (39)
+<ul class="children">
+	<li class="cat-item cat-item-36">
+<a href="/category/development/chef/">Chef</a> (2)
+</li>
+	<li class="cat-item cat-item-32">
+<a href="/category/development/inform-7/">Inform 7</a> (3)
+</li>
+	<li class="cat-item cat-item-38">
+<a href="/category/development/javascript-test-solutions/">JavaScript</a> (6)
+</li>
+	<li class="cat-item cat-item-19">
+<a href="/category/development/language-building/">Language Building</a> (9)
+	<ul class="children">
+	<li class="cat-item cat-item-20">
+<a href="/category/development/language-building/rex-and-racc/">Rex and Racc</a> (3)
+</li>
+	</ul>
+</li>
+	<li class="cat-item cat-item-48">
+<a href="/category/development/python/">Python</a> (4)
+</li>
+	<li class="cat-item cat-item-29">
+<a href="/category/development/rails/">Rails</a> (4)
+</li>
+	<li class="cat-item cat-item-21">
+<a href="/category/development/web-development/">Web Development</a> (11)
+	<ul class="children">
+	<li class="cat-item cat-item-34">
+<a href="/category/development/web-development/node-js/">Node.js</a> (5)
+</li>
+	<li class="cat-item cat-item-22">
+<a href="/category/development/web-development/sinatra/">Sinatra</a> (6)
+</li>
+	</ul>
+</li>
+</ul>
+</li>
+	<li class="cat-item cat-item-28">
+<a href="/category/dialect/">Dialect</a> (6)
+</li>
+	<li class="cat-item cat-item-45">
+<a href="/category/exploration/">Exploration</a> (14)
+<ul class="children">
+	<li class="cat-item cat-item-46">
+<a href="/category/exploration/interactive/">Interactive</a> (6)
+</li>
+</ul>
+</li>
+	<li class="cat-item cat-item-44">
+<a href="/category/indefinito/">Indefinito</a> (11)
+</li>
+	<li class="cat-item cat-item-17">
+<a href="/category/learning/">Learning</a> (11)
+</li>
+	<li class="cat-item cat-item-24">
+<a href="/category/lucid/">Lucid</a> (11)
+</li>
+	<li class="cat-item cat-item-62">
+<a href="/category/product-development/">Product Development</a> (7)
+</li>
+	<li class="cat-item cat-item-64">
+<a href="/category/product-management/">Product Management</a> (3)
+</li>
+	<li class="cat-item cat-item-3">
+<a href="/category/quality/">Quality</a> (7)
+</li>
+	<li class="cat-item cat-item-14">
+<a href="/category/quality-assurance/">Quality Assurance</a> (5)
+</li>
+	<li class="cat-item cat-item-35">
+<a href="/category/specify/">Specify</a> (2)
+</li>
+	<li class="cat-item cat-item-16">
+<a href="/category/symbiont-pg/">Symbiont-PG</a> (4)
+</li>
+	<li class="cat-item cat-item-27">
+<a href="/category/test-solutions/">Test Solutions</a> (11)
+</li>
+	<li class="cat-item cat-item-4">
+<a href="/category/testing/">Testing</a> (167)
+<ul class="children">
+	<li class="cat-item cat-item-59">
+<a href="/category/testing/contracts/">Contracts</a> (2)
+</li>
+	<li class="cat-item cat-item-63">
+<a href="/category/testing/epistemology/">Epistemology</a> (1)
+</li>
+	<li class="cat-item cat-item-67">
+<a href="/category/testing/games/">Games</a> (8)
+</li>
+	<li class="cat-item cat-item-68">
+<a href="/category/testing/history-and-science/">History and Science</a> (5)
+</li>
+	<li class="cat-item cat-item-43">
+<a href="/category/testing/modern-testing/">Modern Testing</a> (15)
+</li>
+	<li class="cat-item cat-item-54">
+<a href="/category/testing/testability/">Testability</a> (9)
+</li>
+</ul>
+</li>
+	<li class="cat-item cat-item-12">
+<a href="/category/thinking/">Thinking</a> (22)
+</li>
+	<li class="cat-item cat-item-47">
+<a href="/category/what-if/">What If</a> (1)
+</li>
+	<li class="cat-item cat-item-69">
+<a href="/category/zmachine/">Z-Machine</a> (7)
+</li>
+			</ul>
+
+			</div>
+<div id="archives-5" class="widget widget_archive">
+<h2 class="widget-title">Archives</h2>		<label class="screen-reader-text" for="archives-dropdown-5">Archives</label>
+		<select id="archives-dropdown-5" name="archive-dropdown">
+			
+			<option value="">Select Month</option>
+				<option value="https://testerstories.com/2023/06/"> June 2023 </option>
+	<option value="https://testerstories.com/2023/05/"> May 2023 </option>
+	<option value="https://testerstories.com/2023/04/"> April 2023 </option>
+	<option value="https://testerstories.com/2023/03/"> March 2023 </option>
+	<option value="https://testerstories.com/2023/02/"> February 2023 </option>
+	<option value="https://testerstories.com/2023/01/"> January 2023 </option>
+	<option value="https://testerstories.com/2022/12/"> December 2022 </option>
+	<option value="https://testerstories.com/2022/11/"> November 2022 </option>
+	<option value="https://testerstories.com/2022/10/"> October 2022 </option>
+	<option value="https://testerstories.com/2022/07/"> July 2022 </option>
+	<option value="https://testerstories.com/2022/06/"> June 2022 </option>
+	<option value="https://testerstories.com/2022/05/"> May 2022 </option>
+	<option value="https://testerstories.com/2022/03/"> March 2022 </option>
+	<option value="https://testerstories.com/2022/02/"> February 2022 </option>
+	<option value="https://testerstories.com/2022/01/"> January 2022 </option>
+	<option value="https://testerstories.com/2021/12/"> December 2021 </option>
+	<option value="https://testerstories.com/2021/10/"> October 2021 </option>
+	<option value="https://testerstories.com/2021/08/"> August 2021 </option>
+	<option value="https://testerstories.com/2021/07/"> July 2021 </option>
+	<option value="https://testerstories.com/2021/06/"> June 2021 </option>
+	<option value="https://testerstories.com/2021/05/"> May 2021 </option>
+	<option value="https://testerstories.com/2021/04/"> April 2021 </option>
+	<option value="https://testerstories.com/2021/03/"> March 2021 </option>
+	<option value="https://testerstories.com/2021/02/"> February 2021 </option>
+	<option value="https://testerstories.com/2021/01/"> January 2021 </option>
+	<option value="https://testerstories.com/2020/11/"> November 2020 </option>
+	<option value="https://testerstories.com/2020/10/"> October 2020 </option>
+	<option value="https://testerstories.com/2020/09/"> September 2020 </option>
+	<option value="https://testerstories.com/2020/07/"> July 2020 </option>
+	<option value="https://testerstories.com/2020/06/"> June 2020 </option>
+	<option value="https://testerstories.com/2020/05/"> May 2020 </option>
+	<option value="https://testerstories.com/2020/02/"> February 2020 </option>
+	<option value="https://testerstories.com/2020/01/"> January 2020 </option>
+	<option value="https://testerstories.com/2019/12/"> December 2019 </option>
+	<option value="https://testerstories.com/2019/11/"> November 2019 </option>
+	<option value="https://testerstories.com/2019/10/"> October 2019 </option>
+	<option value="https://testerstories.com/2019/09/"> September 2019 </option>
+	<option value="https://testerstories.com/2019/08/"> August 2019 </option>
+	<option value="https://testerstories.com/2019/07/"> July 2019 </option>
+	<option value="https://testerstories.com/2019/06/"> June 2019 </option>
+	<option value="https://testerstories.com/2019/05/"> May 2019 </option>
+	<option value="https://testerstories.com/2019/04/"> April 2019 </option>
+	<option value="https://testerstories.com/2019/03/"> March 2019 </option>
+	<option value="https://testerstories.com/2019/02/"> February 2019 </option>
+	<option value="https://testerstories.com/2019/01/"> January 2019 </option>
+	<option value="https://testerstories.com/2018/12/"> December 2018 </option>
+	<option value="https://testerstories.com/2018/11/"> November 2018 </option>
+	<option value="https://testerstories.com/2018/10/"> October 2018 </option>
+	<option value="https://testerstories.com/2018/09/"> September 2018 </option>
+	<option value="https://testerstories.com/2018/08/"> August 2018 </option>
+	<option value="https://testerstories.com/2018/07/"> July 2018 </option>
+	<option value="https://testerstories.com/2018/06/"> June 2018 </option>
+	<option value="https://testerstories.com/2018/05/"> May 2018 </option>
+	<option value="https://testerstories.com/2018/04/"> April 2018 </option>
+	<option value="https://testerstories.com/2018/03/"> March 2018 </option>
+	<option value="https://testerstories.com/2018/02/"> February 2018 </option>
+	<option value="https://testerstories.com/2018/01/"> January 2018 </option>
+	<option value="https://testerstories.com/2017/12/"> December 2017 </option>
+	<option value="https://testerstories.com/2017/11/"> November 2017 </option>
+	<option value="https://testerstories.com/2017/10/"> October 2017 </option>
+	<option value="https://testerstories.com/2017/09/"> September 2017 </option>
+	<option value="https://testerstories.com/2017/08/"> August 2017 </option>
+	<option value="https://testerstories.com/2017/07/"> July 2017 </option>
+	<option value="https://testerstories.com/2017/06/"> June 2017 </option>
+	<option value="https://testerstories.com/2017/05/"> May 2017 </option>
+	<option value="https://testerstories.com/2017/04/"> April 2017 </option>
+	<option value="https://testerstories.com/2017/03/"> March 2017 </option>
+	<option value="https://testerstories.com/2017/02/"> February 2017 </option>
+	<option value="https://testerstories.com/2017/01/"> January 2017 </option>
+	<option value="https://testerstories.com/2016/12/"> December 2016 </option>
+	<option value="https://testerstories.com/2016/11/"> November 2016 </option>
+	<option value="https://testerstories.com/2016/10/"> October 2016 </option>
+	<option value="https://testerstories.com/2016/09/"> September 2016 </option>
+	<option value="https://testerstories.com/2016/08/"> August 2016 </option>
+	<option value="https://testerstories.com/2016/07/"> July 2016 </option>
+	<option value="https://testerstories.com/2016/06/"> June 2016 </option>
+	<option value="https://testerstories.com/2016/04/"> April 2016 </option>
+	<option value="https://testerstories.com/2016/03/"> March 2016 </option>
+	<option value="https://testerstories.com/2016/02/"> February 2016 </option>
+	<option value="https://testerstories.com/2016/01/"> January 2016 </option>
+	<option value="https://testerstories.com/2015/12/"> December 2015 </option>
+	<option value="https://testerstories.com/2015/11/"> November 2015 </option>
+	<option value="https://testerstories.com/2015/10/"> October 2015 </option>
+	<option value="https://testerstories.com/2015/09/"> September 2015 </option>
+	<option value="https://testerstories.com/2015/08/"> August 2015 </option>
+	<option value="https://testerstories.com/2015/07/"> July 2015 </option>
+	<option value="https://testerstories.com/2015/06/"> June 2015 </option>
+	<option value="https://testerstories.com/2015/05/"> May 2015 </option>
+	<option value="https://testerstories.com/2015/04/"> April 2015 </option>
+	<option value="https://testerstories.com/2015/03/"> March 2015 </option>
+	<option value="https://testerstories.com/2015/02/"> February 2015 </option>
+	<option value="https://testerstories.com/2014/12/"> December 2014 </option>
+	<option value="https://testerstories.com/2014/11/"> November 2014 </option>
+	<option value="https://testerstories.com/2014/10/"> October 2014 </option>
+	<option value="https://testerstories.com/2014/09/"> September 2014 </option>
+	<option value="https://testerstories.com/2014/08/"> August 2014 </option>
+	<option value="https://testerstories.com/2014/07/"> July 2014 </option>
+	<option value="https://testerstories.com/2014/06/"> June 2014 </option>
+	<option value="https://testerstories.com/2014/05/"> May 2014 </option>
+	<option value="https://testerstories.com/2014/04/"> April 2014 </option>
+	<option value="https://testerstories.com/2014/03/"> March 2014 </option>
+	<option value="https://testerstories.com/2014/01/"> January 2014 </option>
+	<option value="https://testerstories.com/2013/12/"> December 2013 </option>
+	<option value="https://testerstories.com/2013/09/"> September 2013 </option>
+	<option value="https://testerstories.com/2013/08/"> August 2013 </option>
+	<option value="https://testerstories.com/2013/07/"> July 2013 </option>
+	<option value="https://testerstories.com/2013/06/"> June 2013 </option>
+	<option value="https://testerstories.com/2013/05/"> May 2013 </option>
+	<option value="https://testerstories.com/2013/03/"> March 2013 </option>
+	<option value="https://testerstories.com/2013/01/"> January 2013 </option>
+	<option value="https://testerstories.com/2012/12/"> December 2012 </option>
+	<option value="https://testerstories.com/2012/10/"> October 2012 </option>
+	<option value="https://testerstories.com/2012/09/"> September 2012 </option>
+	<option value="https://testerstories.com/2012/08/"> August 2012 </option>
+	<option value="https://testerstories.com/2012/07/"> July 2012 </option>
+	<option value="https://testerstories.com/2012/06/"> June 2012 </option>
+	<option value="https://testerstories.com/2012/05/"> May 2012 </option>
+	<option value="https://testerstories.com/2012/04/"> April 2012 </option>
+	<option value="https://testerstories.com/2012/03/"> March 2012 </option>
+	<option value="https://testerstories.com/2012/02/"> February 2012 </option>
+	<option value="https://testerstories.com/2012/01/"> January 2012 </option>
+	<option value="https://testerstories.com/2011/12/"> December 2011 </option>
+	<option value="https://testerstories.com/2011/11/"> November 2011 </option>
+	<option value="https://testerstories.com/2011/10/"> October 2011 </option>
+	<option value="https://testerstories.com/2011/09/"> September 2011 </option>
+	<option value="https://testerstories.com/2011/08/"> August 2011 </option>
+
+		</select>
+
+<script type="text/javascript">
+/* <![CDATA[ */
+(function() {
+	var dropdown = document.getElementById( "archives-dropdown-5" );
+	function onSelectChange() {
+		if ( dropdown.options[ dropdown.selectedIndex ].value !== '' ) {
+			document.location.href = this.options[ this.selectedIndex ].value;
+		}
+	}
+	dropdown.onchange = onSelectChange;
+})();
+/* ]]> */
+</script>
+			</div>
+<div id="meta-5" class="widget widget_meta">
+<h2 class="widget-title">Site</h2>
+		<ul>
+						<li><a href="/wp-login.php">Log in</a></li>
+			<li><a href="/feed/">Entries feed</a></li>
+			<li><a href="/comments/feed/">Comments feed</a></li>
+
+			<li><a href="https://wordpress.org/">WordPress.org</a></li>
+		</ul>
+
+		</div>
+<div id="text-4" class="widget widget_text">			<div class="textwidget"><a href="https://www.linkedin.com/pub/jeff-nyman/12/b32/16a">
+          <img src="https://static.licdn.com/scds/common/u/img/webpromo/btn_myprofile_160x33.png" width="160" height="33" border="0" alt="View Jeff Nyman's profile on LinkedIn"></a></div>
+		</div>
+<div id="search-3" class="widget widget_search">
+<form role="search" method="get" class="search-form" action="https://testerstories.com/">
+	<label>
+		<span class="screen-reader-text">Search for:</span>
+		<input type="search" class="search-field" placeholder="Search &hellip;" value="" name="s" title="Search for:">
+	</label>
+	<button type="submit" class="search-submit"><span class="genericon genericon-search" aria-hidden="true"></span><span class="screen-reader-text">Search</span></button>
+</form>
+</div>		</section><!-- #sidebar .widget-area -->
+
+	</aside>
+
+  
+
+<footer id="page-footer" role="contentinfo">
+	<div id="site-info" class="site-info">
+		<span class="footer-site-title"><a href="/" rel="home">Stories from a Software Tester</a></span>
+		<a href="https://wordpress.org/">Proudly powered by WordPress</a>
+	</div>
+<!--/site-info-->
+</footer> <!--/footer-->
+</div>
+<!-- #container -->
+            
+            <style type="text/css" class="darkmysite_inline_css">#darkmysite_switch_352893142 {
+        --darkmysite_switch_apple_width_height: 60px;
+        --darkmysite_switch_apple_border_radius: 7px;
+        --darkmysite_switch_apple_icon_width: 30px;
+        --darkmysite_switch_apple_light_mode_bg: #121116;
+        --darkmysite_switch_apple_dark_mode_bg: #ffffff;
+        --darkmysite_switch_apple_light_mode_icon_color: #ffffff;
+        --darkmysite_switch_apple_dark_mode_icon_color: #121116;
+        }
+
+    #darkmysite_switch_352893142 {
+        --darkmysite_switch_margin_from_top: 40px;
+        --darkmysite_switch_margin_from_bottom: 40px;
+        --darkmysite_switch_margin_from_left: 40px;
+        --darkmysite_switch_margin_from_right: 40px;
+        }</style>
+
+
+
+
+    <div id="darkmysite_switch_352893142" class="darkmysite_switch  darkmysite_bottom_right   darkmysite_switch_apple" onclick="darkmysite_switch_trigger()">
+        <span class="darkmysite_switch_icon"></span>
+            </div>
+
+            
+    <script type="text/javascript" class="darkmysite_inline_js">document.addEventListener("DOMContentLoaded", function(event) {
+            darkmysite_init_alternative_dark_mode_switch();
+        });</script>
+
+
+<script type="text/javascript" id="acuarela-script-js-extra">
+/* <![CDATA[ */
+var acuarelaScreenReaderText = {"expand":"expand child menu","collapse":"collapse child menu"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="/wp-content/themes/acuarela/js/functions.js?ver=20190802" id="acuarela-script-js"></script>
+<script type="text/javascript" src="/wp-includes/js/comment-reply.min.js?ver=6.2.2" id="comment-reply-js"></script>
+<script defer type="text/javascript" src="/wp-content/plugins/akismet/_inc/akismet-frontend.js?ver=1680871091" id="akismet-frontend-js"></script>
+</body>
+</html>
