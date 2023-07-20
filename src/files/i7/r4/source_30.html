@@ -1,0 +1,167 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+  <title>Jeff Nyman - Omnia Autem Probate — 32 of 33</title>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+  <meta name="author" content="Jeff Nyman">
+  <meta name="description" content="A page for the game Omnia Autem Probate by Jeff Nyman.">
+  <link rel="stylesheet" href="/files/i7/r4/style.css" type="text/css" media="all">
+ </head>
+
+<body>
+
+<div class="container">
+
+<div class="sourcecoverimage">
+	<span><a href="/files/i7/r4/Cover.png"><img src="/files/i7/r4/Small Cover.png" border="1"></a></span>
+</div>
+
+<div class="sourceintroduction">
+	<h1>
+		<span>Omnia Autem Probate</span> <span class="pagination">— 32 of 33</span>
+	</h1>
+	<h2>
+		<span>Jeff Nyman</span>
+	</h2>
+	<div class="sourcebibliography">
+		<span>Release 4</span>
+	</div>
+</div>
+
+<div class="links">
+<ul>
+<li><a href="/files/i7/r4/index.html">Home page</a></li>
+<li><a href="/files/i7/r4/source.html">Beginning</a></li>
+<li><a href="/files/i7/r4/source_29.html">Previous</a></li>
+<li><a href="/files/i7/r4/source_31.html">Next</a></li>
+</ul>
+</div>
+
+<div class="source">
+<p class="indent0"><span class="heading">Section - Buying the Bag</span></p>
+<p class="indent0"><span class="comment">[ ==============================================]</span></p>
+<p class="indent0"><span class="comment">[ handle 'give credit card to woman' ]</span></p>
+<p class="indent0">Instead of giving a currency that is plastic to the aged woman:</p>
+<p class="indent1">say &quot;<span class="quote">'I ain’t Harrod’s, dearie. Thirty p.'</span>&quot;</p>
+<p class="indent0"><span class="comment">[ Check that giving credit card provides the appropriate response. ]</span></p>
+<p class="indent0">Test buy-credit with &quot;<span class="quote">give credit card to woman</span>&quot; in Broad Walk.</p>
+<p class="indent0"><span class="comment">[ handle 'give twenty-dollar bill to woman' ]</span></p>
+<p class="indent0">Instead of giving a currency that is paper to the aged woman:</p>
+<p class="indent1">say &quot;<span class="quote">'I only take local currency, luv.'</span>&quot;</p>
+<p class="indent0"><span class="comment">[ Check that giving twenty-dollar bill provides the appropriate response. ]</span></p>
+<p class="indent0">Test buy-bill with &quot;<span class="quote">give twenty-dollar bill to woman</span>&quot; in Broad Walk.</p>
+<p class="indent0">Test bad-buy with &quot;<span class="quote">buy bag with camera</span>&quot; in Broad Walk.</p>
+<p class="indent0">Test bad-seller with &quot;<span class="quote">buy bag from pigeons</span>&quot; in Broad Walk.</p>
+<p class="indent0"><span class="comment">[ ==============================================]</span></p>
+<p class="indent0"><span class="comment">[ handle 'buy bags with fifty pence' ]</span></p>
+<p class="indent0"><span class="comment">[ redirects to buying the singular bag from the woman ]</span></p>
+<p class="indent0">Instead of buying some bags of crumbs with currency: </p>
+<p class="indent1">try buying the bag of bird crumbs from the aged woman.</p>
+<p class="indent0">Test buy-with-plural with &quot;<span class="quote">actions / buy bags with fifty pence</span>&quot; in Broad Walk.</p>
+<p class="indent0"><span class="comment">[ handle 'buy bags from woman' ]</span></p>
+<p class="indent0"><span class="comment">[ redirects to buying the singular bag from the woman ]</span></p>
+<p class="indent0">Instead of buying some bags of crumbs from the aged woman:</p>
+<p class="indent1">try buying the bag of bird crumbs from the aged woman.</p>
+<p class="indent0">Test buy-from-plural with &quot;<span class="quote">actions / buy bags from woman</span>&quot; in Broad Walk.</p>
+<p class="indent0"><span class="comment">[ ==============================================]</span></p>
+<p class="indent0"><span class="comment">[ handle 'buy bag with fifty pence' ]</span></p>
+<p class="indent0"><span class="comment">[ redirects to buying the singular bag from the woman ]</span></p>
+<p class="indent0">Instead of buying the bag of bird crumbs with currency:</p>
+<p class="indent1">try buying the bag of bird crumbs from the aged woman.</p>
+<p class="indent0">Test buy-bag-with with &quot;<span class="quote">actions / buy bag with fifty pence</span>&quot; in Broad Walk.</p>
+<p class="indent0"><span class="comment">[ ==============================================]</span></p>
+<p class="indent0"><span class="comment">[ handle 'buy bag from woman' ]</span></p>
+<p class="indent0"><span class="comment">[ buying actions are delegated to here ]</span></p>
+<p class="indent0"><span class="comment">[ this redirects all actions to giving the woman a type of currency ]</span></p>
+<p class="indent0">Instead of buying the bag of bird crumbs from the aged woman:</p>
+<p class="indent1">if the player does not enclose a currency:</p>
+<p class="indent2">say &quot;<span class="quote">You don't have anything to pay her with.</span>&quot;;</p>
+<p class="indent1">if the player encloses a currency that is a coin (called the item):</p>
+<p class="indent2">try giving the item to the aged woman instead;</p>
+<p class="indent1">if the player encloses a currency that is plastic (called the item):</p>
+<p class="indent2">try giving the item to the aged woman instead;</p>
+<p class="indent1">if the player encloses a currency that is paper (called the item):</p>
+<p class="indent2">try giving the item to the aged woman instead.</p>
+<p class="indent0"><span class="comment">[ Check that when carrying no currency at all, the first condition above is operative. ]</span></p>
+<p class="indent0">Test no-currency-buy with &quot;<span class="quote">take all from pocket / drop all / north / buy bag from woman</span>&quot;.</p>
+<p class="indent0"><span class="comment">[ Check that when carrying no coin, the third condition above is operative. ]</span></p>
+<p class="indent0"><span class="comment">[ This should fire off buying with the credit card. ]</span></p>
+<p class="indent0">Test no-coin-buy with &quot;<span class="quote">take fifty pence / drop it / north / buy bag from woman</span>&quot;.</p>
+<p class="indent0"><span class="comment">[ Check that when carrying only the twenty dollars, the fourth condition above is operative. ]</span></p>
+<p class="indent0">Test only-paper-buy with &quot;<span class="quote">take fifty pence and credit card / drop all / north / buy bag from woman</span>&quot;.</p>
+<p class="indent0"><span class="comment">[ Check that 'give coin to woman' disambiguates when both coins are in play. ]</span></p>
+<p class="indent0">Test proper-coin with &quot;<span class="quote">give coin to woman</span>&quot; in Broad Walk.</p>
+<p class="indent0"><span class="comment">[ ==============================================]</span></p>
+<p class="indent0"><span class="comment">[ handle 'give fifty pence to woman' ]</span></p>
+<p class="indent0"><span class="comment">[ handles any attempt to give a coin to the woman ]</span></p>
+<p class="indent0"><span class="comment">[ diffentiates which coin is being dealt with ]</span></p>
+<p class="indent0">Instead of giving a currency that is a coin (called the item) to the aged woman:</p>
+<p class="indent1">unless the item is the small coin:</p>
+<p class="indent2">now the item is off-stage;</p>
+<p class="indent2">now the aged woman is compensated;</p>
+<p class="indent2">now the aged woman is providing a paid for product;</p>
+<p class="indent2">say &quot;<span class="quote">'Bless yer,' coos the bird woman, taking [</span><span class="substitution">the item</span><span class="quote">] with a practiced snatch. 'Twenty p’s the change.' She holds out a bag of crumbs and a small coin for you.</span>&quot;;</p>
+<p class="indent1">otherwise:</p>
+<p class="indent2">say &quot;<span class="quote">'Thirty p, not a farthing less.'</span>&quot;</p>
+<p class="indent0">Test coin-buy with &quot;<span class="quote">give fifty pence to woman</span>&quot; in Broad Walk.</p>
+<p class="indent0"><span class="comment">[ ==============================================]</span></p>
+<p class="indent0"><span class="comment">[ handle when both coins are operative at the same time ]</span></p>
+<p class="indent0"><span class="comment">[ will not ask about which coin when &quot;give coin to woman&quot; is used ]</span></p>
+<p class="indent0"><span class="comment">[ will not ask about which coin when &quot;take coin&quot; is used and both are in play ]</span></p>
+<p class="indent0"><span class="comment">[ but these suggest that maybe the small coin should not be in the game world until it is needed ]</span></p>
+<p class="indent0">Does the player mean giving the small coin to:</p>
+<p class="indent1">if the player encloses the seven-sided coin, it is very unlikely.</p>
+<p class="indent0">Does the player mean buying something with the small coin:</p>
+<p class="indent1">if the player encloses the seven-sided coin, it is very unlikely.</p>
+<p class="indent0">Does the player mean taking the small coin:</p>
+<p class="indent1">if the seven-sided coin is off-stage:</p>
+<p class="indent2">it is very likely;</p>
+<p class="indent1">otherwise:</p>
+<p class="indent2">it is very unlikely.</p>
+<p class="indent0"><span class="comment">[ ==============================================]</span></p>
+<p class="indent0"><span class="comment">[ handle 'take bags of crumbs' ]</span></p>
+<p class="indent0">Instead of taking some bags of crumbs:</p>
+<p class="indent1">try taking the bag of bird crumbs.</p>
+<p class="indent1"></p>
+<p class="indent0">Test take-bags with &quot;<span class="quote">actions / take bags of crumbs</span>&quot; in Broad Walk.</p>
+<p class="indent1"></p>
+<p class="indent0"><span class="comment">[ handle 'take bag of crumbs' ]</span></p>
+<p class="indent0"><span class="comment">[ taking the bag before purchase and after purchase are different conditions ]</span></p>
+<p class="indent0">Instead of taking the bag of bird crumbs:</p>
+<p class="indent1"><span class="comment">[if the aged woman is compensated:]</span></p>
+<p class="indent1">if Giving the Bag has happened and Giving the Bag has not ended:</p>
+<p class="indent2">if the player does not enclose the bag of bird crumbs:</p>
+<p class="indent3">now the player carries the bag of bird crumbs;</p>
+<p class="indent3">say &quot;<span class="quote">You grab the bag of crumbs from the woman.</span>&quot;;</p>
+<p class="indent2">otherwise:</p>
+<p class="indent3">say &quot;<span class="quote">The woman chuckles. 'It's one per purchase, dearie.'</span>&quot;;</p>
+<p class="indent1">otherwise:</p>
+<p class="indent2">say &quot;<span class="quote">The woman slaps your hand away. 'No touchin[</span><span class="substitution">'</span><span class="quote">] the merchandise!'</span>&quot;</p>
+<p class="indent0"><span class="comment">[ handle 'take small coin' ]</span></p>
+<p class="indent0"><span class="comment">[ taking the small coin before purchase and after purchase are different conditions ]</span></p>
+<p class="indent0">Instead of taking the small coin:</p>
+<p class="indent1"><span class="comment">[if the aged woman is compensated:]</span></p>
+<p class="indent1">if Giving the Bag has happened and Giving the Bag has not ended:</p>
+<p class="indent2">if the player does not enclose the small coin:</p>
+<p class="indent3">now the player carries the small coin;</p>
+<p class="indent3">say &quot;<span class="quote">You grab your change from the woman.</span>&quot;;</p>
+<p class="indent2">otherwise:</p>
+<p class="indent3">say &quot;<span class="quote">The woman looks suspicously at you. 'I already gave your change. Best git to steppin[</span><span class="substitution">'</span><span class="quote">].'</span>&quot;;</p>
+<p class="indent1">otherwise:</p>
+<p class="indent2">say &quot;<span class="quote">Trying to rob the woman would not be your best move.</span>&quot;</p>
+<p class="indent0"><span class="comment">[ handle 'give bag to woman' ]</span></p>
+<p class="indent0"><span class="comment">[ we don't want the player to give back the purchase ]</span></p>
+<p class="indent0">Instead of giving the bag of bird crumbs to the aged woman:</p>
+<p class="indent1">say &quot;<span class="quote">The bird woman shakes her head. 'Keep it, dearie.'</span>&quot;</p>
+<p class="indent0"><span class="comment">[ ==============================================]</span></p>
+</div>
+
+<div class="notes">
+
+</div>
+
+</div>
+
+</body>
+
+</html>

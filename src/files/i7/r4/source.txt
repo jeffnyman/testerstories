@@ -1,0 +1,467 @@
+"Omnia Autem Probate" by Jeff Nyman
+
+The story headline is "An Interactive Exploratory Test".
+The story genre is "Fantasy".
+The release number is 4.
+The story description is "This is the Omnia Autem Probate -- loosely, 'Test all the Things' -- version of a popular game called 'Trinity', written by Brian Moriarty in 1986, published by Infocom.
+
+The goal of this project is to use interactive fiction as a means to promote test exploration and experimentation. This project was created as a playground for discussing topics about exploratory testing with testers and developers, to better develop intuitions regarding the complexity of testing a problem space.
+
+Being such, this 'game' is not a faithful reproduction of 'Trinity' but, rather, uses that game as the basis for providing a series of graduated, and hopefully fun, challenges. This project is being done in connection with a series of posts on Exploring Testing with Interactive Fiction."
+
+Include TesterStories by Jeff Nyman.
+Include Prose Inventory by Jeff Nyman.
+
+Volume - Story Mechanics
+
+Book - Rules
+
+[
+Handles a bug.
+See: http://www.intfiction.org/forum/viewtopic.php?f=7&t=21118
+And: http://inform7.com/mantis/view.php?id=1969
+]
+The exclude indirect possessions from take all rule is not listed in the for deciding whether all includes rulebook.
+Rule for deciding whether all includes things enclosed by the person reaching while taking or taking off: it does not.
+
+
+Book - Kinds
+
+A currency is a kind of thing.
+
+The prevailing wind is a direction that varies.
+The prevailing wind is east.
+
+Book - Properties
+
+A person can be compensated.
+A person can be providing a paid for product.
+
+A currency can be monetary.
+A currency is always monetary.
+
+A currency is either a coin, paper or plastic.
+
+Book - Actions
+
+Part - Buying
+
+Buying it from is an action applying to two things.
+Understand "buy [something] from [someone]" as buying it from.
+Understand "purchase [something] from [someone]" as buying it from.
+
+Buying it with is an action applying to two things.
+Understand "buy [something] with [something]" as buying it with.
+Understand "purchase [something] with [something]" as buying it with.
+
+Check buying it with:
+	if the second noun is not currency:
+		say "[The second noun] will likely not serve as payment." instead.
+
+Check buying it from:
+	if the second noun is an animal:
+		say "You're kidding, right?" instead;
+	if the second noun is not the aged woman:
+		say "[The second noun] [don't] appear to be selling anything." instead.
+
+Report buying it from:
+	say "[The noun] [are] not for sale."
+
+Report buying it with:
+	say "[The noun] [are] not for sale."
+
+Understand "buy [something]" as a mistake ("That's a bit vague. Try 'buy [the noun] from [a random person that is not the player]' or, if it's clear who will be the subject of the action, try 'buy [the noun] with [a random thing that is currency]'.")
+
+
+Volume - Story Presentation
+
+Volume - Story World
+
+Book - Kensington Gardens
+
+Part - Locations
+
+Chapter - Palace Gate
+
+Palace Gate is a room. "A tide of perambulators surges north along the crowded Broad Walk. Shaded glades stretch away to the northeast, and a hint of color marks the western edge of the Flower Walk."
+
+Chapter - Broad Walk
+
+Broad Walk is a room. "A brooding statue of Queen Victoria faces east, where the waters of the Round Pond sparkle in the afternoon sun. Your eyes follow the crowded Broad Walk north and south until its borders are lost amid the bustle of perambulators. Small paths curve northeast and southeast, between the trees."
+
+Section - Bird Woman
+
+A person called the aged woman is in the Broad Walk.
+
+To say purchase-state:
+	if (the aged woman encloses the small coin) and (the aged woman encloses the bag of bird crumbs):
+		say "She's waiting for you to take the bag you purchased and your change" instead;
+	if (the aged woman encloses the small coin) and (the player encloses the bag of bird crumbs):
+		say "She's waiting for you to take your change" instead;
+	if (the aged woman encloses the bag of bird crumbs) and (the player encloses the small coin):
+		say "She's waiting for you to take your bag" instead.
+
+The initial appearance of the aged woman is "[if Broad Walk is unvisited]A cloud of pigeons fills the air! They circle overhead and congregate around a nearby bench, where an aged woman is selling bags of crumbs[otherwise][appearance break]An aged woman is selling crumbs nearby[end if]."
+
+The description of the aged woman is "[if the aged woman is providing a paid for product][purchase-state].[otherwise]You get the feeling that she's been selling crumbs on this same bench, year after year, since well before you were born. Her face is lined with care for her feathered charges, who perch on her round shoulders without fear."
+
+Section - Bird Feed
+
+The aged woman carries some bags of crumbs.
+The description of the bags of crumbs is "The bags are full of bread crumbs."
+
+The aged woman carries a container called the bag of bird crumbs.
+The description of the bag of crumbs is "It looks as if the bag of crumbs is open."
+In the bag of bird crumbs are some crumbs.
+The description of the crumbs is "[if the player encloses the crumbs][description of the bags of crumbs][otherwise]The bread crumbs look old and stale. There are several handfuls left in the bag of crumbs[end if]."
+The crumbs are edible.
+
+Rule for deciding the concealed possessions of the bag of bird crumbs:
+	if the particular possession is the red ruby, yes;
+	otherwise no.
+
+Section - Small Coin
+
+The aged woman carries currency called a small coin.
+The small coin is coin.
+The description of the small coin is "It's standard British currency, worth twenty pence."
+Understand "change" as the small coin.
+
+Section - Red Ruby
+
+A red ruby is in the bag of bird crumbs.
+The description of the red ruby is "Its finely cut edges sparkle with crimson fire."
+
+Section - Pigeons
+
+Some pigeons are animals in the Broad Walk.
+The description of the pigeons is "They stare back at you hungrily."
+
+Instead of taking the pigeons:
+	say "The pigeons deftly avoid you."
+
+Section - Statue of Queen Victoria
+
+A statue of Queen Victoria is in Broad Walk.
+The statue of Queen Victoria is scenery.
+The description of the statue of Queen Victoria is "She wasn't much to look at."
+
+Section - Locale Description
+
+Before listing nondescript items of Broad Walk:
+	if the pigeons are marked for listing:
+		now the pigeons are not marked for listing.
+
+Section - Context
+
+Every turn when the player is in Broad Walk:
+	unless the aged woman is providing a paid for product:
+		if a random chance of 65 in 100 succeeds:
+			say "[one of]'Thirty p! Thirty p a bag!' cries the bird woman.[or]'Feed the birds! Thirty p!' Her voice quavers with heartbreak.[or]'Feed the hungry birds!' hollers the bird woman.[or]'Thirty p for the starving birds!' calls the bird woman.[or]'Feed the birds!' yells the bird woman.[or]'Thirty p!'[at random]"
+
+Chapter - Black Lion Gate
+
+Black Lion Gate is a room. "Nannies and tourists hurry through the Lancaster Gate to join the perambulators rolling south down the Broad Walk. Less crowded paths wind east along an iron fence, and southeast between the trees."
+
+Chapter - Flower Walk
+
+Flower Walk is a room. "Gaily colored flower beds line the walks bending north and west, filling the air with a gentle fragrance. A little path leads northeast, between the trees.[paragraph break]The spires of the Albert Memorial are all too visible to the south. Passing tourists hoot with laughter at the dreadful sight; nannies hide their faces and roll quickly away."
+
+Section - Albert Memorial
+
+The Albert Memorial is in Flower Walk.
+The Albert Memorial is scenery.
+The description of the Albert Memorial is "Your London guide book warned you that the Albert Memorial was ugly, but nothing could have prepared you for this embarrassing spectacle."
+
+Chapter - Lancaster Walk
+
+Lancaster Walk is a room. "An impressive sculpture of a horse and rider dominates this bustling intersection. The Walk continues north and south; lesser paths curve off in many directions.[paragraph break]A broad field of grass, meticulously manicured, extends to the east. Beyond it you can see the Long Water glittering between the trees."
+
+Section - Physical Energy Sculpture
+
+A sculpture is in Lancaster Walk.
+The sculpture is scenery.
+The description of the sculpture is "According to the plaque, the sculpture is called [italic type]Physical Energy[roman type]."
+
+Chapter - Lancaster Gate
+
+Lancaster Gate is a room. "A crooked old tree shades the perambulators as they roll south down the Lancaster Walk. Shady paths lead west along an iron fence, and southwest between the trees."
+
+Chapter - Inverness Terrace
+
+Inverness Terrace is a room. "Crowded walkways lead east and west along an iron fence. Narrow paths wander south into the Gardens."
+
+Chapter - Round Pond
+
+Round Pond is a room. "Ducks and swans bob on the sparkling surface of the Round Pond. They share the water with an impressive fleet of toy boats, directed by the excited shouts of children. Crowded paths radiate from the Pond in many directions."
+
+Chapter - The Wabe
+
+The Wabe is a room. "This grassy clearing is only twenty feet across, and perfectly circular. Paths wander off in many directions through the surrounding thicket."
+
+Chapter - Long Water
+
+Long Water is a room. "You're on a shady path that winds along the western shore of the Long Water. Looking south, you can see the graceful arch of a bridge, and beyond it the cool expanse of the river Serpentine."
+
+Part - Connections
+
+Black Lion Gate is north of Broad Walk.
+Lancaster Gate is north of Lancaster Walk.
+
+Broad Walk is north of Palace Gate.
+Broad Walk is north of Palace Gate.
+Flower Walk is east of Palace Gate.
+Lancaster Walk is north of Flower Walk.
+
+Long Water is east of Lancaster Walk.
+
+Inverness Terrace is east of Black Lion Gate and west of Lancaster Gate.
+Inverness Terrace is northeast of Broad Walk and northwest of Lancaster Walk.
+
+Round Pond is east of Broad Walk and west of Lancaster Walk.
+Round Pond is southeast of Black Lion Gate and southwest of Lancaster Gate.
+
+The Wabe is south of Round Pond, northeast of Palace Gate, and northwest of Flower Walk.
+The Wabe is southeast of Broad Walk and southwest of Lancaster Walk.
+
+Part - Regions
+
+Kensington Gardens is a region.
+
+The Gates are a region.
+Palace Gate, Black Lion Gate, and Lancaster Gate are in the Gates.
+
+The Walks are a region.
+Broad Walk, Flower Walk, and Lancaster Walk are in the Walks.
+
+The Sites are a region.
+Inverness Terrace, Round Pond, the Wabe and Long Water are in the Sites.
+
+The Gates are in Kensington Gardens.
+The Walks are in Kensington Gardens.
+The Sites are in Kensington Gardens.
+
+Section - Backdrops
+
+The trees are a backdrop.
+The trees are in Kensington Gardens.
+The description of the trees is "The surrounding trees sway in the brisk east wind."
+
+Book - Protagonist
+
+Part - Items
+
+The player wears a vacation outfit.
+A container called your pocket is part of the vacation outfit.
+
+The player carries a camera.
+
+Currency called a credit card is in your pocket.
+The credit card is plastic.
+The description of the credit card is "The credit card is embossed with the usual codes. It expires tomorrow."
+
+Currency called a twenty-dollar bill is in your pocket.
+The twenty-dollar bill is paper.
+The description of the twenty-dollar bill is "This is just some money that you didn't convert to local currency."
+Understand "bill" as the twenty-dollar bill.
+
+Currency called a seven-sided coin is in your pocket.
+The seven-sided coin is coin.
+The description of the seven-sided coin is "It’s standard British currency, worth fifty pence."
+Understand "fifty-pence" and "fifty pence" as the seven-sided coin.
+
+Volume - Story Plotting
+
+Book - Scenes
+
+Part - Wind Change
+
+Eastward Wind is a scene.
+Eastward Wind begins when play begins.
+Eastward Wind ends when the prevailing wind is west.
+
+Chapter - Getting the Bag
+
+Giving the Bag is a scene.
+[ ------------------- ]
+Giving the Bag begins when the aged woman is providing a paid for product.
+Giving the Bag ends when the aged woman is providing a paid for product for exactly six turns.
+
+Every turn during Giving the Bag:
+	if the player is in the location of the aged woman:
+		if (the aged woman encloses the small coin) and (the aged woman encloses the bag of bird crumbs):
+			say "[one of]'Take yer bag and change, guv'ner!'[or][run paragraph on][stopping]";
+		if (the aged woman encloses the small coin) and (the player encloses the bag of bird crumbs):
+			say "[one of]'You be wantin['] your change, then, right?'[or][run paragraph on][stopping]";
+		if (the aged woman encloses the bag of bird crumbs) and (the player encloses the small coin):
+			say "[one of]The woman tugs your sleeve impatiently. 'Take yer bag, guv'ner! Ain't got all day!'[or][run paragraph on][stopping]"
+
+[Every turn during Giving the Bag:
+	unless the player has the bag of bird crumbs:
+		 if the player is in the location of the aged woman:
+			say "[one of][run paragraph on][or]'Take yer bag and change, guv'ner!'[or]The bird woman tugs your sleeve impatiently. 'Take yer bag, guv'ner! Ain't got all day!'[or]'You don't take it, I be keeping it.'[or][run paragraph on][stopping]"]
+
+When Giving the Bag ends:
+	now the aged woman is not compensated;
+	now the aged woman is not providing a paid for product;
+	if the player is in the location of the aged woman:
+		if (the player does not have the bag of bird crumbs) and (the player does not have the small coin):
+			say "'Want to be wastin['] me time and yer money, ain't no concern of mine.' With that being said, the woman pockets your change and places your purchased bag back in her collection." instead;
+		if the player does not have the bag of bird crumbs:
+			say "The woman shrugs and puts your purchased bag away. 'Keep it myself,' she mutters." instead;
+		if the player does not have the small coin:
+			say "The woman, deciding you don't want your change, pockets it. Any objections you have are stifled by the glare she gives you." instead.
+	
+
+Section - Buying the Bag
+
+[ ==============================================]
+
+[ handle 'give credit card to woman' ]
+Instead of giving a currency that is plastic to the aged woman:
+	say "'I ain’t Harrod’s, dearie. Thirty p.'"
+
+[ Check that giving credit card provides the appropriate response. ]
+Test buy-credit with "give credit card to woman" in Broad Walk.
+
+[ handle 'give twenty-dollar bill to woman' ]
+Instead of giving a currency that is paper to the aged woman:
+	say "'I only take local currency, luv.'"
+
+[ Check that giving twenty-dollar bill provides the appropriate response. ]
+Test buy-bill with "give twenty-dollar bill to woman" in Broad Walk.
+
+Test bad-buy with "buy bag with camera" in Broad Walk.
+Test bad-seller with "buy bag from pigeons" in Broad Walk.
+
+[ ==============================================]
+
+[ handle 'buy bags with fifty pence' ]
+[ redirects to buying the singular bag from the woman ]
+Instead of buying some bags of crumbs with currency:	
+	try buying the bag of bird crumbs from the aged woman.
+
+Test buy-with-plural with "actions / buy bags with fifty pence" in Broad Walk.
+
+[ handle 'buy bags from woman' ]
+[ redirects to buying the singular bag from the woman ]
+Instead of buying some bags of crumbs from the aged woman:
+	try buying the bag of bird crumbs from the aged woman.
+
+Test buy-from-plural with "actions / buy bags from woman" in Broad Walk.
+
+[ ==============================================]
+
+[ handle 'buy bag with fifty pence' ]
+[ redirects to buying the singular bag from the woman ]
+Instead of buying the bag of bird crumbs with currency:
+	try buying the bag of bird crumbs from the aged woman.
+
+Test buy-bag-with with "actions / buy bag with fifty pence" in Broad Walk.
+
+[ ==============================================]
+
+[ handle 'buy bag from woman' ]
+[ buying actions are delegated to here ]
+[ this redirects all actions to giving the woman a type of currency ]
+Instead of buying the bag of bird crumbs from the aged woman:
+	if the player does not enclose a currency:
+		say "You don't have anything to pay her with.";
+	if the player encloses a currency that is a coin (called the item):
+		try giving the item to the aged woman instead;
+	if the player encloses a currency that is plastic (called the item):
+		try giving the item to the aged woman instead;
+	if the player encloses a currency that is paper (called the item):
+		try giving the item to the aged woman instead.
+
+[ Check that when carrying no currency at all, the first condition above is operative. ]
+Test no-currency-buy with "take all from pocket / drop all / north / buy bag from woman".
+
+[ Check that when carrying no coin, the third condition above is operative. ]
+[ This should fire off buying with the credit card. ]
+Test no-coin-buy with "take fifty pence / drop it / north / buy bag from woman".
+
+[ Check that when carrying only the twenty dollars, the fourth condition above is operative. ]
+Test only-paper-buy with "take fifty pence and credit card / drop all / north / buy bag from woman".
+
+[ Check that 'give coin to woman' disambiguates when both coins are in play. ]
+Test proper-coin with "give coin to woman" in Broad Walk.
+
+[ ==============================================]
+
+[ handle 'give fifty pence to woman' ]
+[ handles any attempt to give a coin to the woman ]
+[ diffentiates which coin is being dealt with ]
+Instead of giving a currency that is a coin (called the item) to the aged woman:
+	unless the item is the small coin:
+		now the item is off-stage;
+		now the aged woman is compensated;
+		now the aged woman is providing a paid for product;
+		say "'Bless yer,' coos the bird woman, taking [the item] with a practiced snatch. 'Twenty p’s the change.' She holds out a bag of crumbs and a small coin for you.";
+	otherwise:
+		say "'Thirty p, not a farthing less.'"
+
+Test coin-buy with "give fifty pence to woman" in Broad Walk.
+
+[ ==============================================]
+
+[ handle when both coins are operative at the same time ]
+[ will not ask about which coin when "give coin to woman" is used ]
+[ will not ask about which coin when "take coin" is used and both are in play ]
+[ but these suggest that maybe the small coin should not be in the game world until it is needed ]
+Does the player mean giving the small coin to:
+	if the player encloses the seven-sided coin, it is very unlikely.
+
+Does the player mean buying something with the small coin:
+	if the player encloses the seven-sided coin, it is very unlikely.
+
+Does the player mean taking the small coin:
+	if the seven-sided coin is off-stage:
+		it is very likely;
+	otherwise:
+		it is very unlikely.
+
+[ ==============================================]
+
+[ handle 'take bags of crumbs' ]
+Instead of taking some bags of crumbs:
+	try taking the bag of bird crumbs.
+	
+Test take-bags with "actions / take bags of crumbs" in Broad Walk.
+	
+[ handle 'take bag of crumbs' ]
+[ taking the bag before purchase and after purchase are different conditions ]
+Instead of taking the bag of bird crumbs:
+	[if the aged woman is compensated:]
+	if Giving the Bag has happened and Giving the Bag has not ended:
+		if the player does not enclose the bag of bird crumbs:
+			now the player carries the bag of bird crumbs;
+			say "You grab the bag of crumbs from the woman.";
+		otherwise:
+			say "The woman chuckles. 'It's one per purchase, dearie.'";
+	otherwise:
+		say "The woman slaps your hand away. 'No touchin['] the merchandise!'"
+
+[ handle 'take small coin' ]
+[ taking the small coin before purchase and after purchase are different conditions ]
+Instead of taking the small coin:
+	[if the aged woman is compensated:]
+	if Giving the Bag has happened and Giving the Bag has not ended:
+		if the player does not enclose the small coin:
+			now the player carries the small coin;
+			say "You grab your change from the woman.";
+		otherwise:
+			say "The woman looks suspicously at you. 'I already gave your change. Best git to steppin['].'";
+	otherwise:
+		say "Trying to rob the woman would not be your best move."
+
+[ handle 'give bag to woman' ]
+[ we don't want the player to give back the purchase ]
+Instead of giving the bag of bird crumbs to the aged woman:
+	say "The bird woman shakes her head. 'Keep it, dearie.'"
+
+[ ==============================================]
+
+Chapter - Getting the Ruby
+
+Ruby Exposed is a scene.

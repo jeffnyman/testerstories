@@ -1,0 +1,8 @@
+Solution to "Omnia Autem Probate" by Jeff Nyman
+
+NORTH
+LOOK AT THE WOMAN
+BUY BAG FROM WOMAN
+TAKE THE BAG
+LOOK AT THE WOMAN
+TAKE THE CHANGE

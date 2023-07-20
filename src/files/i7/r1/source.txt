@@ -1,0 +1,125 @@
+"Omnia Autem Probate" by Jeff Nyman
+
+The story headline is "An Interactive Exploratory Test".
+The story genre is "Fantasy".
+The story description is "This is the Omnia Autem Probate -- loosely, 'Test all the Things' -- version of a popular game called 'Trinity', written by Brian Moriarty in 1986, published by Infocom.
+
+The goal of this project is to use interactive fiction as a means to promote test exploration and experimentation. This project was created as a playground for discussing topics about exploratory testing with testers and developers, to better develop intuitions regarding the complexity of testing a problem space.
+
+Being such, this 'game' is not a faithful reproduction of 'Trinity' but, rather, uses that game as the basis for providing a series of graduated, and hopefully fun, challenges. This project is being done in connection with a series of posts on Exploring Testing with Interactive Fiction."
+
+Include TesterStories by Jeff Nyman.
+
+Volume - Story Mechanics
+
+Volume - Story Presentation
+
+Volume - Story World
+
+Book - Kensington Gardens
+
+Part - Locations
+
+Chapter - Palace Gate
+
+Palace Gate is a room. "A tide of perambulators surges north along the crowded Broad Walk. Shaded glades stretch away to the northeast, and a hint of color marks the western edge of the Flower Walk."
+
+Chapter - Broad Walk
+
+Broad Walk is a room. "A brooding statue of Queen Victoria faces east, where the waters of the Round Pond sparkle in the afternoon sun. Your eyes follow the crowded Broad Walk north and south until its borders are lost amid the bustle of perambulators. Small paths curve northeast and southeast, between the trees."
+
+Section - Statue of Queen Victoria
+
+A statue of Queen Victoria is in Broad Walk.
+The statue of Queen Victoria is scenery.
+The description of the statue of Queen Victoria is "She wasn't much to look at."
+
+Chapter - Black Lion Gate
+
+Black Lion Gate is a room. "Nannies and tourists hurry through the Lancaster Gate to join the perambulators rolling south down the Broad Walk. Less crowded paths wind east along an iron fence, and southeast bewteen thre trees."
+
+Chapter - Flower Walk
+
+Flower Walk is a room. "Gaily colored flower beds line the walks bending north and west, filling the air with a gentle fragrance. A little path leads northeast, between the trees.[paragraph break]The spires of the Albert Memorial are all too visible to the south. Passing tourists hoot with laughter at the dreadful sight; nannies hide their faces and roll quickly away."
+
+Section - Albert Memorial
+
+The Albert Memorial is in Flower Walk.
+The Albert Memorial is scenery.
+The description of the Albert Memorial is "Your London guide book warned you that the Albert Memorial was ugly, but nothing could have prepared you for this embarrassing spectacle."
+
+Chapter - Lancaster Walk
+
+Lancaster Walk is a room. "An impressive sculpture of a horse and rider dominates this bustling intersection. The Walk continues north and south; lesser paths curve off in many directions.[paragraph break]A broad field of grass, meticulously manicured, extends to the east. Beyond it you can see the Long Water glittering between the trees."
+
+Section - Physical Energy Sculpture
+
+A sculpture is in Lancaster Walk.
+The sculpture is scenery.
+The description of the sculpture is "According to the plaque, the sculpture is called [italic type]Physical Energy[roman type]."
+
+Chapter - Lancaster Gate
+
+Lancaster Gate is a room. "A crooked old tree shades the perambulators as they roll south down the Lancaster Walk. Shady paths lead west along an iron fence, and southwest between the trees."
+
+Chapter - Inverness Terrace
+
+Inverness Terrace is a room. "Crowded walkways lead east and west along an iron fence. Narrow paths wander south into the Gardens."
+
+Chapter - Round Pond
+
+Round Pond is a room. "Ducks and swans bob on the sparkling surface of the Round Pond. They share the water with an impressive fleet of toy boats, directed by the excited shouts of children. Crowded paths radiate from the Pond in many directions."
+
+Chapter - The Wabe
+
+The Wabe is a room. "This grassy clearing is only twenty feet across, and perfectly circular. Paths wander off in many directions through the surrounding thicket."
+
+Chapter - Long Water
+
+Long Water is a room. "You're on a shady path that winds along the western shore of the Long Water. Looking south, you can see the graceful arch of a bridge, and beyond it the cool expanse of the river Serpentine."
+
+Part - Connections
+
+Black Lion Gate is north of Broad Walk.
+Lancaster Gate is north of Lancaster Walk.
+
+Broad Walk is north of Palace Gate.
+Broad Walk is north of Palace Gate.
+Flower Walk is east of Palace Gate.
+Lancaster Walk is north of Flower Walk.
+
+Long Water is east of Lancaster Walk.
+
+Inverness Terrace is east of Black Lion Gate and west of Lancaster Gate.
+Inverness Terrace is northeast of Broad Walk and northwest of Lancaster Walk.
+
+Round Pond is east of Broad Walk and west of Lancaster Walk.
+Round Pond is southeast of Black Lion Gate and southwest of Lancaster Gate.
+
+The Wabe is south of Round Pond, northeast of Palace Gate, and northwest of Flower Walk.
+The Wabe is southeast of Broad Walk and southwest of Lancaster Walk.
+
+Part - Regions
+
+Kensington Gardens is a region.
+
+The Gates are a region.
+Palace Gate, Black Lion Gate, and Lancaster Gate are in the Gates.
+
+The Walks are a region.
+Broad Walk, Flower Walk, and Lancaster Walk are in the Walks.
+
+The Sites are a region.
+Inverness Terrace, Round Pond, the Wabe and Long Water are in the Sites.
+
+The Gates are in Kensington Gardens.
+The Walks are in Kensington Gardens.
+The Sites are in Kensington Gardens.
+
+Book - Protagonist
+
+Part - Items
+
+The player carries a camera.
+
+Volume - Story Plotting

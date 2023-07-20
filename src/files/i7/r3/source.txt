@@ -1,0 +1,222 @@
+"Omnia Autem Probate" by Jeff Nyman
+
+The story headline is "An Interactive Exploratory Test".
+The story genre is "Fantasy".
+The release number is 3.
+The story description is "This is the Omnia Autem Probate -- loosely, 'Test all the Things' -- version of a popular game called 'Trinity', written by Brian Moriarty in 1986, published by Infocom.
+
+The goal of this project is to use interactive fiction as a means to promote test exploration and experimentation. This project was created as a playground for discussing topics about exploratory testing with testers and developers, to better develop intuitions regarding the complexity of testing a problem space.
+
+Being such, this 'game' is not a faithful reproduction of 'Trinity' but, rather, uses that game as the basis for providing a series of graduated, and hopefully fun, challenges. This project is being done in connection with a series of posts on Exploring Testing with Interactive Fiction."
+
+Include TesterStories by Jeff Nyman.
+
+Volume - Story Mechanics
+
+Book - Kinds
+
+A currency is a kind of thing.
+
+The prevailing wind is a direction that varies.
+The prevailing wind is east.
+
+Book - Properties
+
+A person can be compensated.
+A person can be providing a paid for product.
+
+A currency can be monetary.
+A currency is always monetary.
+
+A currency is either a coin, paper or plastic.
+
+Volume - Story Presentation
+
+Volume - Story World
+
+Book - Kensington Gardens
+
+Part - Locations
+
+Chapter - Palace Gate
+
+Palace Gate is a room. "A tide of perambulators surges north along the crowded Broad Walk. Shaded glades stretch away to the northeast, and a hint of color marks the western edge of the Flower Walk."
+
+Chapter - Broad Walk
+
+Broad Walk is a room. "A brooding statue of Queen Victoria faces east, where the waters of the Round Pond sparkle in the afternoon sun. Your eyes follow the crowded Broad Walk north and south until its borders are lost amid the bustle of perambulators. Small paths curve northeast and southeast, between the trees."
+
+Section - Bird Woman
+
+A person called the aged woman is in the Broad Walk.
+
+The initial appearance of the aged woman is "[if Broad Walk is unvisited]A cloud of pigeons fills the air! They circle overhead and congregate around a nearby bench, where an aged woman is selling bags of crumbs[otherwise][appearance break]An aged woman is selling crumbs nearby[end if]."
+
+The description of the aged woman is "You get the feeling that she's been selling crumbs on this same bench, year after year, since well before you were born. Her face is lined with care for her feathered charges, who perch on her round shoulders without fear."
+
+Section - Bird Feed
+
+The aged woman carries some bags of crumbs.
+The description of the bags of crumbs is "The bags are full of bread crumbs."
+
+The aged woman carries a container called the bag of bird crumbs.
+The description of the bag of crumbs is "It looks as if the bag of crumbs is open."
+In the bag of bird crumbs are some crumbs.
+The description of the crumbs is "[if the player encloses the crumbs][description of the bags of crumbs][otherwise]The bread crumbs look old and stale. There are several handfuls left in the bag of crumbs[end if]."
+The crumbs are edible.
+
+Section - Small Coin
+
+The aged woman carries currency called a small coin.
+The small coin is coin.
+The description of the small coin is "It's standard British currency, worth twenty pence."
+Understand "change" as the small coin.
+
+Section - Red Ruby
+
+A red ruby is in the bag of bird crumbs.
+The description of the red ruby is "Its finely cut edges sparkle with crimson fire."
+
+Section - Pigeons
+
+Some pigeons are animals in the Broad Walk.
+The description of the pigeons is "They stare back at you hungrily."
+
+Section - Statue of Queen Victoria
+
+A statue of Queen Victoria is in Broad Walk.
+The statue of Queen Victoria is scenery.
+The description of the statue of Queen Victoria is "She wasn't much to look at."
+
+Section - Context
+
+Every turn when the player is in Broad Walk:
+	if a random chance of 65 in 100 succeeds:
+		say "[one of]'Thirty p! Thirty p a bag!' cries the bird woman.[or]'Feed the birds! Thirty p!' Her voice quavers with heartbreak.[or]'Feed the hungry birds!' hollers the bird woman.[or]'Thirty p for the starving birds!' calls the bird woman.[or]'Feed the birds!' yells the bird woman.[or]'Thirty p!'[at random]"
+
+Chapter - Black Lion Gate
+
+Black Lion Gate is a room. "Nannies and tourists hurry through the Lancaster Gate to join the perambulators rolling south down the Broad Walk. Less crowded paths wind east along an iron fence, and southeast between the trees."
+
+Chapter - Flower Walk
+
+Flower Walk is a room. "Gaily colored flower beds line the walks bending north and west, filling the air with a gentle fragrance. A little path leads northeast, between the trees.[paragraph break]The spires of the Albert Memorial are all too visible to the south. Passing tourists hoot with laughter at the dreadful sight; nannies hide their faces and roll quickly away."
+
+Section - Albert Memorial
+
+The Albert Memorial is in Flower Walk.
+The Albert Memorial is scenery.
+The description of the Albert Memorial is "Your London guide book warned you that the Albert Memorial was ugly, but nothing could have prepared you for this embarrassing spectacle."
+
+Chapter - Lancaster Walk
+
+Lancaster Walk is a room. "An impressive sculpture of a horse and rider dominates this bustling intersection. The Walk continues north and south; lesser paths curve off in many directions.[paragraph break]A broad field of grass, meticulously manicured, extends to the east. Beyond it you can see the Long Water glittering between the trees."
+
+Section - Physical Energy Sculpture
+
+A sculpture is in Lancaster Walk.
+The sculpture is scenery.
+The description of the sculpture is "According to the plaque, the sculpture is called [italic type]Physical Energy[roman type]."
+
+Chapter - Lancaster Gate
+
+Lancaster Gate is a room. "A crooked old tree shades the perambulators as they roll south down the Lancaster Walk. Shady paths lead west along an iron fence, and southwest between the trees."
+
+Chapter - Inverness Terrace
+
+Inverness Terrace is a room. "Crowded walkways lead east and west along an iron fence. Narrow paths wander south into the Gardens."
+
+Chapter - Round Pond
+
+Round Pond is a room. "Ducks and swans bob on the sparkling surface of the Round Pond. They share the water with an impressive fleet of toy boats, directed by the excited shouts of children. Crowded paths radiate from the Pond in many directions."
+
+Chapter - The Wabe
+
+The Wabe is a room. "This grassy clearing is only twenty feet across, and perfectly circular. Paths wander off in many directions through the surrounding thicket."
+
+Chapter - Long Water
+
+Long Water is a room. "You're on a shady path that winds along the western shore of the Long Water. Looking south, you can see the graceful arch of a bridge, and beyond it the cool expanse of the river Serpentine."
+
+Part - Connections
+
+Black Lion Gate is north of Broad Walk.
+Lancaster Gate is north of Lancaster Walk.
+
+Broad Walk is north of Palace Gate.
+Broad Walk is north of Palace Gate.
+Flower Walk is east of Palace Gate.
+Lancaster Walk is north of Flower Walk.
+
+Long Water is east of Lancaster Walk.
+
+Inverness Terrace is east of Black Lion Gate and west of Lancaster Gate.
+Inverness Terrace is northeast of Broad Walk and northwest of Lancaster Walk.
+
+Round Pond is east of Broad Walk and west of Lancaster Walk.
+Round Pond is southeast of Black Lion Gate and southwest of Lancaster Gate.
+
+The Wabe is south of Round Pond, northeast of Palace Gate, and northwest of Flower Walk.
+The Wabe is southeast of Broad Walk and southwest of Lancaster Walk.
+
+Part - Regions
+
+Kensington Gardens is a region.
+
+The Gates are a region.
+Palace Gate, Black Lion Gate, and Lancaster Gate are in the Gates.
+
+The Walks are a region.
+Broad Walk, Flower Walk, and Lancaster Walk are in the Walks.
+
+The Sites are a region.
+Inverness Terrace, Round Pond, the Wabe and Long Water are in the Sites.
+
+The Gates are in Kensington Gardens.
+The Walks are in Kensington Gardens.
+The Sites are in Kensington Gardens.
+
+Section - Backdrops
+
+The trees are a backdrop.
+The trees are in Kensington Gardens.
+The description of the trees is "The surrounding trees sway in the brisk east wind."
+
+Book - Protagonist
+
+Part - Items
+
+The player wears a vacation outfit.
+A container called your pocket is part of the vacation outfit.
+
+Currency called a credit card is in your pocket.
+The credit card is plastic.
+The description of the credit card is "The credit card is embossed with the usual codes. It expires tomorrow."
+
+Currency called a twenty-dollar bill is in your pocket.
+The twenty-dollar bill is paper.
+The description of the twenty-dollar bill is "This is just some money that you didn't convert to local currency."
+
+Currency called a seven-sided coin is in your pocket.
+The seven-sided coin is coin.
+The description of the seven-sided coin is "It’s standard British currency, worth fifty pence."
+
+Volume - Story Plotting
+
+Book - Scenes
+
+Part - Wind Change
+
+Eastward Wind is a scene.
+Eastward Wind begins when play begins.
+Eastward Wind ends when the prevailing wind is west.
+
+Chapter - Getting the Bag
+
+Giving the Bag is a scene.
+
+Chapter - Getting the Ruby
+
+Ruby Exposed is a scene.
+
+
